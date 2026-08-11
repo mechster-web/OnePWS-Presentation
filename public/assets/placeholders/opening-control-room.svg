@@ -1,0 +1,49 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#07080A"/>
+  <path d="M0 0H1920V1080H0V0Z" fill="url(#roomGradient)"/>
+  <path d="M0 805H1920" stroke="#252A31" stroke-width="2"/>
+  <path d="M0 900H1920" stroke="#1B2027"/>
+  <path d="M220 805L420 575H1500L1720 805H220Z" fill="#0B0D10" stroke="#222832"/>
+  <path d="M520 250H1430V570H520V250Z" fill="#101319" stroke="#252B34"/>
+  <path d="M560 290H830V395H560V290Z" fill="#080A0D" stroke="#2B3038"/>
+  <path d="M860 290H1090V395H860V290Z" fill="#080A0D" stroke="#2B3038"/>
+  <path d="M1120 290H1390V395H1120V290Z" fill="#080A0D" stroke="#2B3038"/>
+  <path d="M560 420H760V520H560V420Z" fill="#080A0D" stroke="#2B3038"/>
+  <path d="M790 420H1160V520H790V420Z" fill="#080A0D" stroke="#2B3038"/>
+  <path d="M1190 420H1390V520H1190V420Z" fill="#080A0D" stroke="#2B3038"/>
+  <g opacity="0.42">
+    <path d="M590 330H790" stroke="#D8A34A" stroke-opacity="0.42"/>
+    <path d="M900 330H1050" stroke="#D8A34A" stroke-opacity="0.28"/>
+    <path d="M1165 330H1355" stroke="#D8A34A" stroke-opacity="0.34"/>
+    <path d="M600 470H720" stroke="#D8A34A" stroke-opacity="0.24"/>
+    <path d="M840 470H1110" stroke="#D8A34A" stroke-opacity="0.3"/>
+    <path d="M1230 470H1350" stroke="#D8A34A" stroke-opacity="0.22"/>
+  </g>
+  <path d="M610 680H1325V782H610V680Z" fill="#0E1116" stroke="#252B34"/>
+  <path d="M690 640H1245V692H690V640Z" fill="#101319" stroke="#252B34"/>
+  <path d="M730 640V692M850 640V692M970 640V692M1090 640V692M1210 640V692" stroke="#252B34"/>
+  <path d="M690 720H1245" stroke="#D8A34A" stroke-opacity="0.24"/>
+  <path d="M210 790H1710" stroke="#D8A34A" stroke-opacity="0.16"/>
+  <path d="M350 215H1570" stroke="#272D35"/>
+  <path d="M470 175H1450" stroke="#D8A34A" stroke-opacity="0.13"/>
+  <path d="M530 120H1390" stroke="#20262E"/>
+  <g opacity="0.32">
+    <path d="M460 805L730 575" stroke="#252B34"/>
+    <path d="M700 805L840 575" stroke="#252B34"/>
+    <path d="M960 805V575" stroke="#252B34"/>
+    <path d="M1220 805L1080 575" stroke="#252B34"/>
+    <path d="M1460 805L1190 575" stroke="#252B34"/>
+  </g>
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#vignette)"/>
+  <defs>
+    <radialGradient id="roomGradient" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1110 420) rotate(111.695) scale(740 1180)">
+      <stop stop-color="#20242B"/>
+      <stop offset="0.36" stop-color="#101319"/>
+      <stop offset="1" stop-color="#07080A"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(960 540) rotate(90) scale(610 1020)">
+      <stop offset="0.34" stop-color="#090A0C" stop-opacity="0"/>
+      <stop offset="1" stop-color="#040506" stop-opacity="0.78"/>
+    </radialGradient>
+  </defs>
+</svg>

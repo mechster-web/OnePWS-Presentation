@@ -1,0 +1,15 @@
+# Product Interaction Matrix
+
+Date: 2026-08-05
+
+| Product | Reveal | Callouts | State change | Exploded view | Materials | Configuration | Comparison | Operator view | Room view | Technical detail | Presenter support | Autoplay support | Accessibility fallback |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Control-room console system | Edge-light and full-product reveal | Fine leader-line module labels | Task-state selector | Conceptual only | Material lens placeholder | Limited outcome choices | Future approved comparison | Branch to sightline/reach | Branch to ecosystem | Existing layers plus claim boundary | Reveal, hide/show detail, branch | Limited module sequence | Buttons and text descriptions |
+| Adaptive sit-stand operator console | Task-state highlight | Sit-stand module callout | Seated/standing conceptual states | No | No | Adjustability choice only | Future | Yes | Yes | Confirmation-required specs | Select state, show technical | One state change | Button alternative, no drag |
+| Automatic articulated monitor arm | Monitor alignment concept | Monitor module callout | Monitor cluster alignment | Conceptual mechanism only | No | Monitor layout choice | Future | Yes | Yes | Confirmation-required load/movement specs | Open monitor module | Timed highlight | Button alternative |
+| Intelligent operator chair | Chair-to-console reveal | Chair module callout | Relationship to task state | No | Future upholstery detail | Profile/config future | Future | Yes | No | Confirmation-required model/upholstery/certification | Open chair module | Timed highlight | Text summary; no medical claims |
+| Cable and equipment integration | Cable path appears | Cable module callout | Open/closed conceptual state | Conceptual layer | No | Service access future | Organised/unmanaged future | Indirect | Yes | Confirmation-required cable/electrical data | Show path, technical layer | Timed path highlight | Text path summary |
+| Materials and finishes | Material lens | Material module callout | Light/dark future | No | Placeholder only | Finish family disabled until approved | Future | No | Yes | Material data required | Show lens, claim boundary | Brief lens reveal | Labels, not colour-only |
+| Modular construction | Conceptual layers | Modular module callout | Reassemble future | Conceptual layer only | Future | Module choices future | Future | No | Yes | True product architecture required | Show layers cautiously | Step layers | Structured component list |
+| Console configuration | Product choice preview | Configuration module callout | Choice outcome language | No | Future | Limited supported/unsupported choices | Future | Yes | Yes | Supported options require catalogue data | Quick configuration | One choice sequence | Disabled unsupported choices labelled |
+| Product in room | Pullback branch | Room-context module callout | Room context state | No | Environment finish future | Future | Future | Yes | Yes | Existing room/chapter detail | Open room branch | Product-to-room highlight | Existing navigation branch |

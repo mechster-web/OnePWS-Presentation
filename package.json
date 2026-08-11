@@ -1,0 +1,57 @@
+{
+  "name": "onepws-control-room-interactive-presentation",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "productName": "OnePWS Control Room Presentation",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "desktop:preview": "npm run build && electron .",
+    "dist:win": "npm run build && electron-builder --win dir --x64",
+    "dist:win:portable": "npm run build && electron-builder --win portable --x64",
+    "typecheck": "tsc -b",
+    "generate:pptx": "node scripts/generate-onepws-pptx.mjs"
+  },
+  "build": {
+    "appId": "com.onepws.controlroom.presentation",
+    "productName": "OnePWS Control Room Presentation",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "target": "dir"
+    },
+    "win": {
+      "target": "dir",
+      "artifactName": "OnePWS-Control-Room-Presentation-${version}-Windows.exe"
+    }
+  },
+  "dependencies": {
+    "@google/model-viewer": "^4.3.1",
+    "@vitejs/plugin-react": "^5.0.0",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.468.0",
+    "pptxgenjs": "^4.0.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "autoprefixer": "^10.4.20",
+    "electron": "^43.3.0",
+    "electron-builder": "^26.15.3",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~5.9.2",
+    "vite": "^7.0.6"
+  }
+}

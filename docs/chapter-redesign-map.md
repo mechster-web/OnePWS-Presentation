@@ -1,0 +1,29 @@
+# Chapter Redesign Map
+
+| Chapter ID | Current title | Current layout | Proposed scene type | Proposed interaction | Proposed visual behaviour | Proposed transition | Memory moment | Priority | Notes |
+|---|---|---|---|---|---|---|---|---|---|
+| opening-cover | OnePWS Control Room Capability | Opening media/copy | cinematic-opening | guided-continue | Six-stage system awakening into journey selection | fade-through-black to spatial-pan | Yes | 1 | Opening sequence implemented as an internal staged experience. |
+| mission-critical-environments | Control Rooms Are Mission-Critical | Default image/copy | immersive-environment | guided-continue | Customer feels inside a continuous operations room | spatial-dolly | No | 2 | Raise stakes before company positioning. |
+| onepws-positioning | OnePWS Positioning | Default image/copy | system-connection | step-through | Capability layers connect into one operating system | layer-reveal | No | 2 | Avoid static three-column explanation. |
+| journey-roadmap | Guided Capability Journey | Default image/copy | customer-choice | branching-choice | Journey map behaves like selectable routes | light-sweep | No | 1 | Make customer feel in control early. |
+| company-at-a-glance | OnePWS At A Glance | Bespoke credibility scene | evidence-proof | hotspot-discovery | Proof wall with expandable facts | data-scan | No | 3 | Keep concise in main flow. |
+| group-and-growth | Group Strength and Growth | Default image/copy | data-story | step-through | Timeline or growth signal, not company-history slide | quiet-fade | No | 4 | Condense visually without deleting content. |
+| mission-control-definition | What Defines a Mission-Critical Control Room | Default image/copy | operator-perspective | guided-continue | Operator viewpoint establishes decision environment | spatial-dolly | No | 2 | Current image fallback map has stale ID. |
+| operator-challenges | Operator Challenges | Default image/copy | problem-solution | hotspot-discovery | Pressure points appear around operator scenario | match-cut | No | 1 | Should feel felt, not listed. |
+| poor-design-risk | Operational Risks of Poor Design | Default image/copy | before-after | comparison-scrub | Poor design versus planned room contrast | match-cut | No | 2 | Strong candidate for surprise interaction. |
+| human-centred-philosophy | Human-Centred Philosophy | Default image/copy | operator-perspective | step-through | Sightline, task and room relationships orbit operator | spatial-dolly | No | 2 | Bridge problem to solution. |
+| complete-ecosystem | One Environment. Connected Intelligence. | Bespoke connected scene | panoramic-room | hotspot-discovery | Full-room exploration with meaningful hotspots | spatial-dolly | Yes | 1 | Major showroom memory moment. |
+| console-portfolio | Control-Room Console Portfolio | Default image/copy | product-hero | orbit-explore | Console family becomes inspectable product hero | match-cut | No | 2 | Keep details optional. |
+| intelligent-features | Intelligent Features | Default image/copy | feature-orbit | orbit-explore | Features orbit around operator, supervisor and room states | data-scan | No | 1 | Natural home for advanced hotspots later. |
+| incident-response | When Every Second Matters. | Bespoke simulation | voice-guided | simulation-control | Scenario timeline with operator/customer control | blackout-reset | Yes | 1 | Peak interaction; keep conceptual disclaimers. |
+| ergonomic-methodology | ISO 11064 and Ergonomic Study | Default image/copy | process-sequence | step-through | Methodology becomes guided engineering sequence | layer-reveal | No | 3 | Make deliverables tangible. |
+| sightline-comfort | Sightlines, Reach and Comfort | Default image/copy | interactive-hotspot | hotspot-discovery | Geometry overlays and comfort zones | spatial-dolly | No | 2 | Best chapter for spatial overlays. |
+| design-build-approach | Integrated Design-Build Approach | Default image/copy | process-sequence | step-through | Discovery-to-delivery path with expandable phases | data-scan | No | 3 | Keep scope clear. |
+| architectural-systems | Architectural and Environmental Systems | Default image/copy | product-exploded-view | hotspot-discovery | Room envelope separates into infrastructure layers | layer-reveal | No | 2 | Candidate for exploded architectural visual. |
+| delivery-methodology | Engineering and Project Methodology | Default image/copy | process-sequence | step-through | Timeline with gates, FAT/SAT and handover milestones | data-scan | No | 4 | Condense visually. |
+| manufacturing-quality | Manufacturing and Quality | Default image/copy | evidence-proof | hotspot-discovery | Manufacturing proof wall and source-backed details | data-scan | No | 4 | Avoid unsupported machine/supplier claims. |
+| certification-overview | International Certifications | Default image/copy | comparison | step-through | Certification categories as inspectable proof matrix | quiet-fade | No | 4 | Condense visually. |
+| project-portfolio | Project Credentials | Bespoke project scene | spatial-journey | hotspot-discovery | Customer travels through selected project proof | layer-reveal | Yes | 1 | Major credibility memory moment. |
+| customer-presence | Customers and Global Presence | Default image/copy | data-story | step-through | Curated customer reach with optional logo wall | quiet-fade | No | 4 | Confirm logo rights. |
+| why-onepws | Why OnePWS | Default image/copy | system-connection | guided-continue | Buying case assembles into one accountable capability | spatial-dolly | No | 2 | Avoid recap fatigue. |
+| next-steps-closing | The Future Starts Here | Default image/copy | cinematic-closing | guided-continue | Close into consultation path and concept process | blackout-reset | Yes | 1 | End with action, not generic thanks. |

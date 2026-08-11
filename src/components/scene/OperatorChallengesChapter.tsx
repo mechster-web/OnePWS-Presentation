@@ -1,0 +1,315 @@
+import { motion } from "framer-motion";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Expand,
+  Headphones,
+  Map,
+} from "lucide-react";
+import { useState } from "react";
+import { getVoiceover } from "../../content/voiceovers";
+import type { Chapter } from "../../data/contentTypes";
+import { useFullscreen } from "../../hooks/useFullscreen";
+import { usePresentation } from "../../state/PresentationProvider";
+import { useVoiceover } from "../../voiceover/VoiceoverProvider";
+
+type Props = {
+  chapter: Chapter;
+};
+
+type ChallengeChoice = {
+  id: string;
+  index: string;
+  title: string;
+  detail: string;
+  response: string;
+};
+
+const fallbackChoice: ChallengeChoice = {
+  id: "too-much-monitor",
+  index: "01",
+  title: "Too much to monitor",
+  detail: "Critical information competes for attention.",
+  response:
+    "When information, equipment and the environment are not aligned, the operator must work harder to understand the situation and respond.",
+};
+
+const choices: ChallengeChoice[] = [
+  fallbackChoice,
+  {
+    id: "too-far-reach",
+    index: "02",
+    title: "Too far to reach",
+    detail: "Frequently used controls demand unnecessary movement.",
+    response: "Frequently used controls should remain accessible without repeated stretching or repositioning.",
+  },
+  {
+    id: "static-posture",
+    index: "03",
+    title: "Too long in one posture",
+    detail: "Static working positions increase physical strain.",
+    response: "Static working positions can increase physical strain during long operational shifts.",
+  },
+  {
+    id: "too-many-distractions",
+    index: "04",
+    title: "Too many distractions",
+    detail: "Lighting, noise and visual clutter reduce focus.",
+    response: "The environment should reduce visual, acoustic and physical distractions when clarity matters most.",
+  },
+  {
+    id: "difficult-coordinate",
+    index: "05",
+    title: "Too difficult to coordinate",
+    detail: "People and information do not come together quickly enough.",
+    response: "People and information should come together quickly when situations escalate.",
+  },
+];
+
+const riskChoices: ChallengeChoice[] = [
+  {
+    id: "missed-information",
+    index: "01",
+    title: "Missed information",
+    detail: "Critical details can be overlooked or recognised too late.",
+    response: "Poor visibility increases the chance that important information is missed, delayed or misunderstood.",
+  },
+  {
+    id: "slower-response",
+    index: "02",
+    title: "Slower response",
+    detail: "Poor access and fragmented systems delay action.",
+    response: "Poor access and fragmented systems can slow the movement from awareness to action.",
+  },
+  {
+    id: "operator-fatigue",
+    index: "03",
+    title: "Operator fatigue",
+    detail: "Static posture, repeated reach and visual strain increase effort over time.",
+    response: "Static posture, repeated reach and visual strain increase operator effort over time.",
+  },
+  {
+    id: "coordination-gaps",
+    index: "04",
+    title: "Coordination gaps",
+    detail: "People and information do not come together quickly enough.",
+    response: "When escalation paths are unclear, teams may take longer to coordinate the right response.",
+  },
+  {
+    id: "reduced-continuity",
+    index: "05",
+    title: "Reduced continuity",
+    detail: "Difficult maintenance and inflexible infrastructure disrupt long-term operations.",
+    response: "Difficult maintenance and inflexible infrastructure can interrupt continuity and limit future adaptation.",
+  },
+];
+
+export function OperatorChallengesChapter({ chapter }: Props) {
+  const { dispatch, state } = usePresentation();
+  const { toggleFullscreen } = useFullscreen();
+  const voiceover = useVoiceover();
+  const chapterVoiceover = getVoiceover("chapter", chapter.id);
+  const isRiskScene = chapter.id === "poor-design-risk";
+  const sceneChoices = isRiskScene ? riskChoices : choices;
+  const [selectedId, setSelectedId] = useState(fallbackChoice.id);
+  const selected = sceneChoices.find((choice) => choice.id === selectedId) ?? sceneChoices[0];
+  const motionDuration = state.reducedMotion ? 0.01 : 0.72;
+  const processEase = [0.16, 1, 0.3, 1] as const;
+  const orchestrationDelay = state.reducedMotion ? 0 : 0.08;
+
+  return (
+    <article className="relative h-full w-full overflow-hidden bg-white text-control-text">
+      <div className="absolute inset-0 bg-[linear-gradient(116deg,#ffffff_0%,#fbfcfd_48%,#edf3f7_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgb(16_18_22/0.026)_1px,transparent_1px),linear-gradient(90deg,rgb(16_18_22/0.026)_1px,transparent_1px)] bg-[length:5.5rem_5.5rem] opacity-55" />
+
+      <motion.div
+        animate={{ opacity: 1, scale: 1 }}
+        className="absolute inset-0 z-0 overflow-hidden"
+        initial={state.reducedMotion ? false : { opacity: 0, scale: 1.015 }}
+        transition={{ duration: motionDuration + 0.2, delay: 0.06, ease: processEase }}
+      >
+        <img
+          alt="Operator workstation in a mission-critical control room"
+          className="h-full w-full object-cover object-[72%_50%]"
+          draggable={false}
+          src="/assets/source-pdf/p31_059_2078x1168.jpg"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgb(255_255_255/0.98)_0%,rgb(255_255_255/0.93)_27%,rgb(255_255_255/0.66)_44%,rgb(255_255_255/0.22)_64%,rgb(255_255_255/0.06)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgb(255_255_255/0.78)_0%,rgb(255_255_255/0.16)_26%,rgb(255_255_255/0.08)_60%,rgb(255_255_255/0.84)_100%)]" />
+        {!state.reducedMotion ? (
+          <>
+            <motion.div
+              animate={{ opacity: [0, 0.4, 0], x: ["-18%", "55%", "112%"] }}
+              className="absolute top-[19vh] h-px w-[42vw] bg-[linear-gradient(90deg,transparent,rgb(207_31_43/0.5),transparent)]"
+              initial={{ opacity: 0, x: "-18%" }}
+              transition={{ duration: 3.6, delay: 0.72, ease: "easeInOut" }}
+            />
+            <motion.div
+              animate={{ opacity: [0, 0.16, 0.08], scaleX: [0.82, 1.06, 1] }}
+              className="absolute left-[29vw] top-[48vh] h-[20vh] w-[38vw] origin-left rounded-full bg-[radial-gradient(circle,rgb(207_31_43/0.18)_0%,transparent_64%)] blur-3xl"
+              initial={{ opacity: 0, scaleX: 0.82 }}
+              transition={{ duration: 2.8, delay: 0.92, ease: processEase }}
+            />
+          </>
+        ) : null}
+      </motion.div>
+
+      <section className="absolute inset-0 z-20 px-[3.55vw] py-[3.15vh]">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-[10.2vh] bg-white/82 backdrop-blur-[2px]" />
+
+        <motion.div
+          animate={{ opacity: 1, y: 0 }}
+          className="absolute left-[3.55vw] top-[16.5vh] w-[min(51vw,58rem)]"
+          initial={state.reducedMotion ? false : { opacity: 0, y: 16 }}
+          transition={{ duration: motionDuration, ease: processEase }}
+        >
+          <p className="text-[clamp(0.72rem,0.78vw,0.9rem)] font-bold uppercase tracking-[0.22em] text-control-warm">
+            {chapter.eyebrow}
+          </p>
+          <h1 className="mt-[2vh] max-w-[17ch] text-balance text-[clamp(2.48rem,3.48vw,4.55rem)] font-extrabold leading-[0.95] tracking-normal text-control-text">
+            {chapter.headline}
+          </h1>
+          <p className="mt-[1.65vh] max-w-[41rem] text-[clamp(0.88rem,0.96vw,1.08rem)] leading-[1.32] text-control-soft">
+            {chapter.supportingMessage}
+          </p>
+        </motion.div>
+
+        <motion.div
+          animate={{ opacity: 1, y: 0 }}
+          className="absolute left-[3.55vw] top-[61.2vh] w-[min(69vw,84rem)]"
+          initial={state.reducedMotion ? false : { opacity: 0, y: 16 }}
+          transition={{ duration: motionDuration, delay: 0.2, ease: processEase }}
+        >
+          <div className="mb-[1.05vh] flex items-center gap-5">
+            <p className="shrink-0 text-[clamp(0.68rem,0.75vw,0.86rem)] font-bold uppercase tracking-[0.28em] text-control-warm">
+              {isRiskScene ? "Select a risk to see how it affects operations." : "Select the challenge that affects your operation most."}
+            </p>
+            <div className="relative h-px flex-1 overflow-hidden bg-slate-300">
+              <motion.div
+                animate={{ scaleX: 1 }}
+                className="absolute inset-y-0 left-0 w-full origin-left bg-control-warm"
+                initial={state.reducedMotion ? false : { scaleX: 0 }}
+                transition={{ duration: 1.15, delay: orchestrationDelay + 0.48, ease: processEase }}
+              />
+            </div>
+          </div>
+          <div className="grid grid-cols-5 gap-[1vw]">
+            {sceneChoices.map((choice, index) => {
+              const isSelected = choice.id === selected.id;
+
+              return (
+                <motion.button
+                  animate={{ opacity: 1, y: 0 }}
+                  aria-pressed={isSelected}
+                  className={`group relative flex h-[clamp(7.15rem,12.4vh,8.65rem)] flex-col overflow-hidden rounded-[0.42rem] border px-[clamp(0.78rem,0.88vw,1rem)] py-[clamp(0.58rem,0.72vh,0.8rem)] text-left shadow-[0_0.9rem_2rem_rgb(15_23_42/0.06)] backdrop-blur-xl transition-colors ${
+                    isSelected
+                      ? "border-control-warm bg-white/88 shadow-[0_1rem_2.4rem_rgb(207_31_43/0.20)]"
+                      : "border-slate-300/90 bg-white/72 hover:border-control-warm/50"
+                  }`}
+                  initial={state.reducedMotion ? false : { opacity: 0, y: 10 }}
+                  key={choice.id}
+                  onClick={() => setSelectedId(choice.id)}
+                  transition={{ duration: motionDuration, delay: 0.26 + index * 0.055, ease: processEase }}
+                  type="button"
+                  whileHover={state.reducedMotion ? undefined : { y: -4, transition: { duration: 0.28, ease: processEase } }}
+                >
+                  {!state.reducedMotion ? (
+                    <motion.span
+                      aria-hidden="true"
+                      animate={{ scaleX: isSelected ? 1 : 0 }}
+                      className="absolute left-0 top-0 h-px w-full origin-left bg-control-warm/80"
+                      initial={false}
+                      transition={{ duration: 0.46, ease: processEase }}
+                    />
+                  ) : null}
+                  <span className="block text-[clamp(0.95rem,1.08vw,1.24rem)] font-extrabold tracking-[0.05em] text-control-warm">
+                    {choice.index}
+                  </span>
+                  <span className="mt-[0.48vh] block text-[clamp(0.72rem,0.8vw,0.92rem)] font-extrabold leading-tight text-control-text">
+                    {choice.title}
+                  </span>
+                  <span className="mt-[0.45vh] block h-px w-8 bg-control-warm/70" />
+                  <span className="mt-[0.45vh] block overflow-hidden text-[clamp(0.52rem,0.56vw,0.64rem)] leading-[1.2] text-control-soft [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">
+                    {choice.detail}
+                  </span>
+                  {isSelected ? <span className="absolute inset-x-0 bottom-0 h-1 bg-control-warm" /> : null}
+                </motion.button>
+              );
+            })}
+          </div>
+        </motion.div>
+
+        <motion.div
+          animate={{ opacity: 1, y: 0 }}
+          className="absolute bottom-[calc(12.3vh-23px)] left-[3.55vw] grid h-[clamp(4.7rem,7.5vh,5.7rem)] w-[min(69vw,84rem)] overflow-hidden rounded-[0.45rem] border border-slate-300/90 bg-white/84 shadow-[0_1rem_2.2rem_rgb(15_23_42/0.08)] backdrop-blur-xl"
+          initial={state.reducedMotion ? false : { opacity: 0, y: 12 }}
+          transition={{ duration: motionDuration, delay: 0.54, ease: processEase }}
+        >
+          {!state.reducedMotion ? (
+            <motion.div
+              aria-hidden="true"
+              animate={{ x: ["-32%", "132%"], opacity: [0, 0.4, 0] }}
+              className="pointer-events-none absolute inset-y-0 w-[28%] bg-[linear-gradient(90deg,transparent,rgb(255_255_255/0.9),transparent)]"
+              initial={{ x: "-32%", opacity: 0 }}
+              transition={{ duration: 1.25, delay: 0.84, ease: "easeInOut" }}
+            />
+          ) : null}
+          <div className="grid grid-cols-[minmax(12rem,0.34fr)_1fr]">
+            <div className="flex items-center border-r border-slate-300 px-[1.25vw]">
+              <div className="border-l-2 border-control-warm pl-[0.9vw]">
+                <p className="text-[clamp(0.78rem,0.9vw,1.02rem)] font-extrabold leading-tight text-control-text">
+                  {isRiskScene ? "Operational impact" : "How this affects the operator"}
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col justify-center px-[1.35vw]">
+              <motion.p
+                animate={{ opacity: 1, y: 0 }}
+                className="text-[clamp(0.88rem,1.02vw,1.18rem)] font-bold leading-[1.24] text-control-text"
+                initial={state.reducedMotion ? false : { opacity: 0, y: 8 }}
+                key={selected.id}
+                transition={{ duration: 0.42, ease: processEase }}
+              >
+                {selected.response}
+              </motion.p>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          animate={{ opacity: 1, y: 0 }}
+          className="pws-scene-control-dock absolute bottom-[2.45vh] left-[3.55vw] justify-start"
+          initial={state.reducedMotion ? false : { opacity: 0, y: 10 }}
+          transition={{ duration: motionDuration, delay: 0.72, ease: processEase }}
+        >
+          <button aria-label="Previous scene" className="pws-scene-control" onClick={() => dispatch({ type: "PREVIOUS_CHAPTER" })} title="Previous" type="button">
+            <ChevronLeft aria-hidden="true" size={20} />
+          </button>
+          <button aria-label="Continue to next scene" className="pws-scene-control pws-scene-control-primary" onClick={() => dispatch({ type: "NEXT_CHAPTER" })} title="Continue" type="button">
+            <ChevronRight aria-hidden="true" size={20} />
+          </button>
+          <button aria-label="Open experience map" className="pws-scene-control" onClick={() => dispatch({ type: "SET_OVERLAY", overlay: { type: "chapterMap" } })} title="Experience Map" type="button">
+            <Map aria-hidden="true" size={20} />
+          </button>
+          {chapterVoiceover ? (
+            <button
+              aria-label={chapterVoiceover.src ? "Play narration" : "Show narration status"}
+              className="pws-scene-control"
+              onClick={() => {
+                dispatch({ type: "UNLOCK_AUDIO" });
+                voiceover.play(chapterVoiceover);
+              }}
+              title="Narration"
+              type="button"
+            >
+              <Headphones aria-hidden="true" size={20} />
+            </button>
+          ) : null}
+          <button aria-label="Toggle fullscreen" className="pws-scene-control" onClick={() => void toggleFullscreen()} title="Fullscreen" type="button">
+            <Expand aria-hidden="true" size={20} />
+          </button>
+        </motion.div>
+      </section>
+    </article>
+  );
+}

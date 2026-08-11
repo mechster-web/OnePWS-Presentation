@@ -1,0 +1,19 @@
+{
+  "name": "OnePWS Control Room Capability Presentation",
+  "short_name": "OnePWS",
+  "description": "Offline-capable interactive OnePWS control-room capability presentation.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "fullscreen",
+  "background_color": "#050506",
+  "theme_color": "#050506",
+  "orientation": "landscape",
+  "icons": [
+    {
+      "src": "/assets/icons/pwa-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

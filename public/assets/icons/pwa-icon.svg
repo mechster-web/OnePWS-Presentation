@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Control room presentation icon">
+  <rect width="512" height="512" fill="#090a0c"/>
+  <rect x="80" y="118" width="352" height="150" fill="#15181e" stroke="#3a404a" stroke-width="10"/>
+  <path d="M110 156h292M110 197h292M110 238h292" stroke="#d8a34a" stroke-width="8" opacity=".75"/>
+  <rect x="132" y="312" width="248" height="52" fill="#11141a" stroke="#d8a34a" stroke-width="8"/>
+  <path d="M174 390h164" stroke="#3a404a" stroke-width="14" stroke-linecap="round"/>
+</svg>
