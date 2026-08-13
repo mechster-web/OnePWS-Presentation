@@ -10,16 +10,15 @@ export function PresentationViewport({
   return (
     <section
       className={`relative z-10 grid place-items-center overflow-hidden ${
-        presenterPreview ? "h-full w-full p-3" : "h-dvh w-dvw p-3"
+        presenterPreview ? "h-full w-full" : "h-dvh w-dvw"
       }`}
     >
       <div
         aria-label="OnePWS interactive presentation stage"
-        className={`relative overflow-hidden border border-control-line/70 bg-control-deep/95 shadow-control ${
+        className={`relative overflow-hidden bg-control-deep/95 ${
           presenterPreview ? "presenter-stage-preview" : "presentation-stage"
         }`}
       >
-        <div className="pointer-events-none absolute inset-4 border border-control-line/35" />
         {children}
       </div>
     </section>

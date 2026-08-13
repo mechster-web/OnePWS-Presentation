@@ -156,13 +156,13 @@ export function ArchitecturalSystemsReferenceScene({ chapter }: { chapter: Chapt
             <div className="absolute left-0 top-[1.3vh] grid grid-cols-[0.28rem_minmax(0,1fr)] gap-[1.45vw]">
               <span className="h-[14.4vh] w-[3px] bg-control-warm" />
               <div>
-                <h1 className="text-[clamp(2rem,2.72vw,3.78rem)] font-black leading-[1.03] tracking-normal text-control-text">
+                <h1 className="text-[clamp(2rem,2.72vw,3.78rem)] font-bold leading-[1.03] tracking-normal text-control-text md:text-[2vw]">
                   <span className="block">Architectural and</span>
                   <span className="block">Environmental</span>
                   <span className="block text-control-warm">Systems.</span>
                 </h1>
                 <div className="mt-[1.45vh] h-[2px] w-[2rem] bg-control-warm" />
-                <p className="mt-[2vh] max-w-[18rem] text-[clamp(0.72rem,0.82vw,0.94rem)] font-medium leading-[1.55] text-slate-800">
+                <p className="mt-[2vh] max-w-[18rem] text-[clamp(0.72rem,0.82vw,0.94rem)] font-medium leading-[1.55] text-slate-800 md:text-[0.8vw]">
                   A control room is more than what you see. It's the integration of architecture, infrastructure and environment designed to enhance performance, safety and sustainability.
                 </p>
               </div>
@@ -172,7 +172,7 @@ export function ArchitecturalSystemsReferenceScene({ chapter }: { chapter: Chapt
                 <span className="grid h-[3.9rem] w-[3.9rem] place-items-center rounded-full border border-slate-200 bg-white/56 text-control-warm shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_0.8rem_1.8rem_rgb(15_23_42/0.08)]">
                   <Network aria-hidden="true" size={34} strokeWidth={1.55} />
                 </span>
-                <p className="text-[clamp(0.86rem,1vw,1.16rem)] font-black leading-[1.45] text-control-text">
+                <p className="text-[clamp(0.86rem,1vw,1.16rem)] font-semibold leading-[1.45] text-control-text">
                   All systems.<br />One ecosystem.<br /><span className="text-control-warm">Seamlessly connected.</span>
                 </p>
               </div>
@@ -191,7 +191,7 @@ export function ArchitecturalSystemsReferenceScene({ chapter }: { chapter: Chapt
             </section>
 
             <section className="relative min-h-0">
-              <h2 className="text-[clamp(0.78rem,0.92vw,1.06rem)] font-black uppercase tracking-normal text-control-text">Architecture & Infrastructure Systems</h2>
+              <h2 className="text-[clamp(0.78rem,0.92vw,1.06rem)] font-semibold uppercase tracking-normal text-control-text">Architecture & Infrastructure Systems</h2>
               <div className="mt-[0.8vh] h-[2px] w-[2rem] bg-control-warm" />
               <div className="mt-[1vh] grid h-[calc(100%-2.5rem)] grid-cols-7 gap-[0.65vw]">
                 {systemCards.map((system) => (
@@ -203,7 +203,7 @@ export function ArchitecturalSystemsReferenceScene({ chapter }: { chapter: Chapt
             <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.75vw] py-[0.75vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <div className="grid h-full grid-cols-[6.2rem_repeat(6,minmax(0,1fr))] items-center">
                 <div className="pr-[0.8vw]">
-                  <h2 className="text-[clamp(0.58rem,0.68vw,0.78rem)] font-black uppercase leading-tight text-control-text">Why It Matters</h2>
+                  <h2 className="text-[clamp(0.58rem,0.68vw,0.78rem)] font-semibold uppercase leading-tight text-control-text">Why It Matters</h2>
                   <div className="mt-[0.7vh] h-[2px] w-[1.5rem] bg-control-warm" />
                 </div>
                 {whyItems.map((item, index) => (
@@ -249,7 +249,7 @@ function HeroFeature({ item, index }: { item: Feature; index: number }) {
   return (
     <div className={`grid min-w-0 grid-cols-[2.7rem_minmax(0,1fr)] items-center gap-[0.55vw] px-[0.8vw] ${index ? "border-l border-slate-200/90" : ""}`}>
       <Icon aria-hidden="true" className={index === 0 ? "text-control-warm" : "text-control-text"} size={27} strokeWidth={1.55} />
-      <strong className="text-[clamp(0.5rem,0.58vw,0.67rem)] font-black leading-tight text-control-text">{item.title}</strong>
+      <strong className="text-[clamp(0.5rem,0.58vw,0.67rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
     </div>
   );
 }
@@ -266,7 +266,7 @@ function SystemCardView({ item }: { item: SystemCard }) {
         <Icon aria-hidden="true" size={18} strokeWidth={1.6} />
       </span>
       <div className="px-[0.58vw] pb-[0.65vh] pt-[1.35rem]">
-        <h3 className="text-[clamp(0.46rem,0.54vw,0.62rem)] font-black leading-tight text-control-text">{item.title}</h3>
+        <h3 className="text-[clamp(0.46rem,0.54vw,0.62rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
         <ul className="mt-[0.45vh] space-y-[0.18vh] text-[clamp(0.37rem,0.43vw,0.5rem)] font-medium leading-[1.14] text-slate-800">
           {item.bullets.map((bullet) => (
             <li key={bullet}>• {bullet}</li>
@@ -280,7 +280,7 @@ function SystemCardView({ item }: { item: SystemCard }) {
 function DetailPanel({ title, intro, items }: { title: string; intro?: string; items: DetailItem[] }) {
   return (
     <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.25vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-      <h2 className="text-[clamp(0.72rem,0.84vw,0.98rem)] font-black uppercase tracking-normal text-control-text">{title}</h2>
+      <h2 className="text-[clamp(0.72rem,0.84vw,0.98rem)] font-semibold uppercase tracking-normal text-control-text">{title}</h2>
       <div className="mt-[0.65vh] h-[2px] w-[2rem] bg-control-warm" />
       {intro ? <p className="mt-[1vh] text-[clamp(0.5rem,0.58vw,0.68rem)] font-medium leading-[1.28] text-slate-800">{intro}</p> : null}
       <div className="mt-[0.9vh] grid gap-[0.35vh]">
@@ -300,7 +300,7 @@ function DetailRow({ item, index }: { item: DetailItem; index: number }) {
         <Icon aria-hidden="true" size={19} strokeWidth={1.55} />
       </span>
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.49rem,0.57vw,0.66rem)] font-black leading-tight text-control-text">{item.title}</strong>
+        <strong className="block text-[clamp(0.49rem,0.57vw,0.66rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
         <span className="mt-0.5 block text-[clamp(0.43rem,0.5vw,0.58rem)] font-medium leading-[1.18] text-slate-800">{item.description}</span>
       </span>
     </div>
@@ -313,9 +313,11 @@ function WhyCell({ item, index }: { item: DetailItem; index: number }) {
     <div className={`grid min-w-0 grid-cols-[2rem_minmax(0,1fr)] items-center gap-[0.45vw] px-[0.62vw] ${index ? "border-l border-slate-200/90" : ""}`}>
       <Icon aria-hidden="true" className={index === 0 ? "text-control-warm" : "text-control-text"} size={22} strokeWidth={1.55} />
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.43rem,0.5vw,0.58rem)] font-black leading-tight text-control-text">{item.title}</strong>
+        <strong className="block text-[clamp(0.43rem,0.5vw,0.58rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
         <span className="mt-0.5 block text-[clamp(0.36rem,0.42vw,0.49rem)] font-medium leading-[1.08] text-slate-800">{item.description}</span>
       </span>
     </div>
   );
 }
+
+

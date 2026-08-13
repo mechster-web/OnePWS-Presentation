@@ -2,8 +2,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useState } from "react";
 import type { SceneComponentProps } from "../../experience/scenes/SceneTypes";
 import { usePresentation } from "../../state/PresentationProvider";
-import { getVoiceover } from "../../content/voiceovers";
-import { useVoiceover } from "../../voiceover/VoiceoverProvider";
 import { sceneTransition, transitionAnimate, transitionInitial } from "../../design-system/motionLanguage";
 import { getAsset } from "../../content/assetManifest";
 import { openingAssets, openingJourneyOptions, type OpeningStageId } from "./openingConfig";
@@ -12,7 +10,6 @@ import type { CustomerPathSelection } from "../../content/customerPaths";
 import { preloadOpeningAssets } from "./openingPreload";
 import { recordOpeningEvent } from "./openingAnalytics";
 import { useOpeningDirector } from "./OpeningDirector";
-import { OpeningControls } from "./OpeningControls";
 import { OpeningProgress } from "./OpeningProgress";
 import { SystemAwakeningScene } from "./SystemAwakeningScene";
 import { HumanChallengeScene } from "./HumanChallengeScene";
@@ -24,8 +21,6 @@ import { OpeningVideoScene } from "./OpeningVideoScene";
 
 export function OpeningExperienceScene({ chapter }: SceneComponentProps) {
   const { dispatch, state } = usePresentation();
-  const voiceover = useVoiceover();
-  const chapterVoiceover = getVoiceover("chapter", chapter.id);
   const openingVideo = getAsset(openingAssets.video);
   const [videoOpeningActive, setVideoOpeningActive] = useState(() => Boolean(openingVideo?.src) && !state.reducedMotion);
   const director = useOpeningDirector({
@@ -91,16 +86,6 @@ export function OpeningExperienceScene({ chapter }: SceneComponentProps) {
     window.addEventListener("keydown", handleOpeningKey, true);
     return () => window.removeEventListener("keydown", handleOpeningKey, true);
   }, [director, shouldShowVideoOpening, state.activeOverlay, state.chapterId]);
-
-  function enableNarration() {
-    dispatch({ type: "UNLOCK_AUDIO" });
-    if (!state.narrationEnabled) {
-      dispatch({ type: "TOGGLE_NARRATION" });
-    }
-    if (chapterVoiceover) {
-      voiceover.play(chapterVoiceover);
-    }
-  }
 
   function selectJourney(index: number) {
     const journey = openingJourneyOptions[index];
@@ -171,14 +156,6 @@ export function OpeningExperienceScene({ chapter }: SceneComponentProps) {
         sequence={director.sequence}
         visible={showProgress}
       />
-      <OpeningControls
-        onChapterMap={() => dispatch({ type: "SET_OVERLAY", overlay: { type: "chapterMap" } })}
-        onNarration={enableNarration}
-        onReplay={director.replay}
-        onSkip={director.skipToJourney}
-        skipAvailable={director.skipAvailable}
-      />
-
       {state.mode === "presenter" ? (
         <div className="absolute left-[var(--stage-safe-x)] top-[calc(var(--stage-safe-y)+2.2rem)] z-[36] text-xs uppercase tracking-[0.2em] text-white/58">
           Presenter opening stage: {director.currentStage.replace(/-/g, " ")}

@@ -28,6 +28,7 @@ import {
   LockKeyhole,
   Map,
   Monitor,
+  Quote,
   Radio,
   Server,
   Siren,
@@ -553,19 +554,19 @@ function RoomRecognizesYouScene({ chapter }: { chapter: Chapter }) {
         <div className="absolute inset-x-0 top-0 bottom-[15.15vh] grid grid-cols-[minmax(17.5rem,0.43fr)_minmax(42rem,1.13fr)_minmax(18rem,0.44fr)] gap-[1.05vw]">
           <motion.aside animate={{ opacity: 1, y: 0 }} className="relative min-h-0" initial={false} transition={{ duration: 0.72, ease }}>
             <div className="absolute left-[0.2vw] top-[2.4vh]">
-              <h1 className="text-[clamp(2.5rem,3.35vw,4.7rem)] font-black leading-[1.02] tracking-normal text-control-text">
+              <h1 className="text-[clamp(2.5rem,3.35vw,4.7rem)] font-bold leading-[1.02] tracking-normal text-control-text md:text-[2.5vw]">
                 <span className="block">The Room</span>
                 <span className="block text-control-warm">Recognizes</span>
                 <span className="block">You.</span>
               </h1>
               <div className="mt-[1.2vh] h-[2px] w-[2rem] bg-control-warm" />
-              <p className="mt-[1.5vh] max-w-[18rem] text-[clamp(0.78rem,0.9vw,1.02rem)] font-medium leading-[1.48] text-slate-800">
+              <p className="mt-[1.5vh] max-w-[18rem] text-[clamp(0.78rem,0.9vw,1.02rem)] font-medium leading-[1.48] text-slate-800 md:text-[0.8vw]">
                 The moment you enter, the control room identifies you and prepares your workspace exactly the way you like it.
               </p>
             </div>
 
             <section className="absolute inset-x-0 top-[35vh] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.15vw] py-[1.55vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.72rem,0.84vw,0.98rem)] font-black uppercase tracking-normal text-control-warm">No Cards. No Passwords. No Delays.</h2>
+              <h2 className="text-[clamp(0.72rem,0.84vw,0.98rem)] font-semibold uppercase tracking-normal text-control-warm">No Cards. No Passwords. No Delays.</h2>
               <div className="mt-[2.1vh] grid grid-cols-3">
                 {securityItems.map((item, index) => (
                   <SecurityCell index={index} item={item} key={item.title} />
@@ -582,7 +583,7 @@ function RoomRecognizesYouScene({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.4vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.72rem,0.84vw,0.98rem)] font-black uppercase tracking-normal text-control-text">Your Experience. Ready Before You Sit.</h2>
+              <h2 className="text-[clamp(0.72rem,0.84vw,0.98rem)] font-semibold uppercase tracking-normal text-control-text">Your Experience. Ready Before You Sit.</h2>
               <div className="mt-[1.6vh] grid grid-cols-[repeat(6,minmax(0,1fr))] items-start">
                 {experienceSteps.map((item, index) => (
                   <ExperienceStep index={index} item={item} key={item.title} />
@@ -598,11 +599,11 @@ function RoomRecognizesYouScene({ chapter }: { chapter: Chapter }) {
               ))}
             </section>
             <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.45vw] py-[2.2vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <p className="text-[clamp(2rem,3vw,3.4rem)] font-black leading-none text-control-warm">"</p>
-              <p className="-mt-2 max-w-[17rem] text-[clamp(0.82rem,0.95vw,1.08rem)] font-medium leading-[1.34] text-slate-800">
+              <Quote aria-hidden="true" className="text-control-warm" size={38} strokeWidth={1.55} />
+              <p className="mt-[0.25vh] max-w-[17rem] text-[clamp(0.82rem,0.95vw,1.08rem)] font-medium leading-[1.34] text-slate-800">
                 The shift doesn't begin after login.
               </p>
-              <p className="mt-[1vh] max-w-[15rem] text-[clamp(0.9rem,1.05vw,1.2rem)] font-black leading-[1.25] text-control-warm">
+              <p className="mt-[1vh] max-w-[15rem] text-[clamp(0.9rem,1.05vw,1.2rem)] font-semibold leading-[1.25] text-control-warm">
                 It begins the moment you enter.
               </p>
               <span className="pointer-events-none absolute bottom-0 right-0 h-[6.5rem] w-[6.5rem] opacity-10 [background-image:radial-gradient(circle,rgb(37_99_235/0.65)_1px,transparent_1px)] [background-size:7px_7px]" />
@@ -614,7 +615,7 @@ function RoomRecognizesYouScene({ chapter }: { chapter: Chapter }) {
         <motion.section animate={{ opacity: 1, y: 0 }} className="absolute inset-x-0 bottom-[6.2vh] h-[7.7vh] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.05vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]" initial={false} transition={{ duration: 0.72, delay: 0.18, ease }}>
           <div className="grid h-full grid-cols-[8rem_repeat(5,minmax(0,1fr))] items-center">
             <div className="pr-[1vw]">
-              <h2 className="text-[clamp(0.6rem,0.7vw,0.82rem)] font-black uppercase leading-tight text-control-text">What This Means for You</h2>
+              <h2 className="text-[clamp(0.6rem,0.7vw,0.82rem)] font-semibold uppercase leading-tight text-control-text">What This Means for You</h2>
               <div className="mt-[0.7vh] h-[2px] w-[1.8rem] bg-control-warm" />
             </div>
             {outcomeItems.map((item, index) => (
@@ -668,13 +669,13 @@ function ConsoleUnderstandsTaskScene({ chapter }: { chapter: Chapter }) {
         <div className="absolute inset-x-0 top-0 bottom-[18.2vh] grid grid-cols-[minmax(17rem,0.43fr)_minmax(43rem,1.1fr)_minmax(18rem,0.44fr)] gap-[1.05vw]">
           <motion.aside animate={{ opacity: 1, y: 0 }} className="relative min-h-0" initial={false} transition={{ duration: 0.72, ease }}>
             <div className="absolute left-[0.2vw] top-[1vh]">
-              <h1 className="text-[clamp(2.25rem,3.1vw,4.4rem)] font-black leading-[1.05] tracking-normal text-control-text">
+              <h1 className="text-[clamp(2.25rem,3.1vw,4.4rem)] font-bold leading-[1.05] tracking-normal text-control-text md:text-[2.5vw]">
                 <span className="block">The Console</span>
                 <span className="block text-control-warm">Understands</span>
                 <span className="block">the Task.</span>
               </h1>
               <div className="mt-[1.35vh] h-[2px] w-[2rem] bg-control-warm" />
-              <p className="mt-[1.5vh] max-w-[19rem] text-[clamp(0.78rem,0.9vw,1.02rem)] font-medium leading-[1.48] text-slate-800">
+              <p className="mt-[1.5vh] max-w-[19rem] text-[clamp(0.78rem,0.9vw,1.02rem)] font-medium leading-[1.48] text-slate-800 md:text-[0.8vw]">
                 Task modes bring the right controls, displays and guidance forward without making the operator rebuild the workspace.
               </p>
             </div>
@@ -684,7 +685,7 @@ function ConsoleUnderstandsTaskScene({ chapter }: { chapter: Chapter }) {
                 <BrainCircuit aria-hidden="true" size={36} strokeWidth={1.45} />
               </span>
               <span className="min-w-0">
-                <strong className="block text-[clamp(0.68rem,0.78vw,0.9rem)] font-black leading-tight text-control-text">Smart Context Awareness</strong>
+                <strong className="block text-[clamp(0.68rem,0.78vw,0.9rem)] font-semibold leading-tight text-control-text">Smart Context Awareness</strong>
                 <span className="mt-1 block text-[clamp(0.56rem,0.66vw,0.77rem)] font-medium leading-[1.3] text-slate-800">
                   Reads activity, priority and system state so each mode starts with the right operating context.
                 </span>
@@ -692,7 +693,7 @@ function ConsoleUnderstandsTaskScene({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="absolute inset-x-0 bottom-0 overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.35vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.62rem,0.72vw,0.84rem)] font-black uppercase leading-tight text-control-warm">It Understands:</h2>
+              <h2 className="text-[clamp(0.62rem,0.72vw,0.84rem)] font-semibold uppercase leading-tight text-control-warm">It Understands:</h2>
               <div className="mt-[1.25vh] grid grid-cols-3 gap-y-[1.05vh]">
                 {consoleUnderstandsItems.map((item, index) => (
                   <MiniUnderstandingCell index={index} item={item} key={item.title} />
@@ -703,7 +704,7 @@ function ConsoleUnderstandsTaskScene({ chapter }: { chapter: Chapter }) {
 
           <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[20.6vh_minmax(0,1fr)_16.5vh] gap-[1.05vh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.1vw] py-[1.35vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.72rem,0.84vw,0.98rem)] font-black uppercase tracking-normal text-control-text">One Console. Multiple Modes.</h2>
+              <h2 className="text-[clamp(0.72rem,0.84vw,0.98rem)] font-semibold uppercase tracking-normal text-control-text">One Console. Multiple Modes.</h2>
               <div className="mt-[1vh] h-[2px] w-[1.8rem] bg-control-warm" />
               <div className="mt-[1.35vh] grid grid-cols-4">
                 {consoleModeItems.map((item, index) => (
@@ -718,7 +719,7 @@ function ConsoleUnderstandsTaskScene({ chapter }: { chapter: Chapter }) {
               <div className="absolute bottom-[8%] left-[51%] h-[8.3rem] w-[12rem] rounded-[0.4rem] border border-cyan-300/28 bg-slate-950/62 p-[0.7rem] shadow-[0_0_2.2rem_rgb(37_99_235/0.28)] backdrop-blur-md">
                 <div className="grid grid-cols-3 gap-1">
                   {["Context", "Priority", "Display", "Comms", "SOP", "Alerts"].map((label, index) => (
-                    <span className={`rounded border px-1 py-1 text-center text-[0.48rem] font-black uppercase ${index === 1 ? "border-control-warm/70 bg-control-warm/22 text-red-100" : "border-cyan-300/25 bg-cyan-300/10 text-cyan-100"}`} key={label}>
+                    <span className={`rounded border px-1 py-1 text-center text-[0.48rem] font-semibold uppercase ${index === 1 ? "border-control-warm/70 bg-control-warm/22 text-red-100" : "border-cyan-300/25 bg-cyan-300/10 text-cyan-100"}`} key={label}>
                       {label}
                     </span>
                   ))}
@@ -727,7 +728,7 @@ function ConsoleUnderstandsTaskScene({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.1vw] py-[1.25vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.68rem,0.8vw,0.94rem)] font-black uppercase tracking-normal text-control-text">The Console Adapts Automatically</h2>
+              <h2 className="text-[clamp(0.68rem,0.8vw,0.94rem)] font-semibold uppercase tracking-normal text-control-text">The Console Adapts Automatically</h2>
               <div className="mt-[1.15vh] grid grid-cols-5 items-start">
                 {consoleAdaptSteps.map((item, index) => (
                   <ConsoleAdaptStep index={index} item={item} key={item.title} />
@@ -739,7 +740,7 @@ function ConsoleUnderstandsTaskScene({ chapter }: { chapter: Chapter }) {
           <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-cols-[0.42fr_0.58fr] gap-[0.8vw]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-slate-950 px-[1vw] py-[1.65vh] text-white shadow-[0_1rem_2.5rem_rgb(15_23_42/0.12)]">
               <p className="text-[clamp(0.58rem,0.66vw,0.76rem)] font-medium uppercase tracking-normal text-slate-200">Good Evening,</p>
-              <p className="mt-2 text-[clamp(0.95rem,1.15vw,1.35rem)] font-black">ARJUN</p>
+              <p className="mt-2 text-[clamp(0.95rem,1.15vw,1.35rem)] font-semibold">ARJUN</p>
               <div className="mt-[3vh] flex items-center justify-between text-[0.62rem] text-slate-300">
                 <span>Today's Summary</span>
                 <span>x</span>
@@ -753,14 +754,14 @@ function ConsoleUnderstandsTaskScene({ chapter }: { chapter: Chapter }) {
                 ].map(([label, value, color]) => (
                   <div className="flex items-center justify-between gap-2 text-[clamp(0.52rem,0.62vw,0.72rem)] font-medium" key={label}>
                     <span className="min-w-0 truncate text-slate-200">{label}</span>
-                    <span className={`grid h-[1.25rem] w-[1.25rem] place-items-center rounded-full ${color} text-[0.55rem] font-black text-white`}>{value}</span>
+                    <span className={`grid h-[1.25rem] w-[1.25rem] place-items-center rounded-full ${color} text-[0.55rem] font-semibold text-white`}>{value}</span>
                   </div>
                 ))}
               </div>
             </section>
 
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.45vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.62rem,0.72vw,0.84rem)] font-black uppercase leading-tight text-control-warm">Benefits</h2>
+              <h2 className="text-[clamp(0.62rem,0.72vw,0.84rem)] font-semibold uppercase leading-tight text-control-warm">Benefits</h2>
               <div className="mt-[1vh] h-[2px] w-[1.7rem] bg-control-warm" />
               <div className="mt-[1.25vh] divide-y divide-slate-200/90">
                 {consoleBenefits.map((item) => (
@@ -774,7 +775,7 @@ function ConsoleUnderstandsTaskScene({ chapter }: { chapter: Chapter }) {
         <motion.section animate={{ opacity: 1, y: 0 }} className="absolute inset-x-0 bottom-[6.2vh] h-[10.7vh] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.05vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]" initial={false} transition={{ duration: 0.72, delay: 0.18, ease }}>
           <div className="grid h-full grid-cols-[14rem_repeat(5,minmax(0,1fr))] items-center gap-[0.75vw]">
             <div>
-              <h2 className="text-[clamp(0.6rem,0.7vw,0.82rem)] font-black uppercase leading-[1.35] text-control-text">Example Transition:<br />From Monitor to Incident Mode</h2>
+              <h2 className="text-[clamp(0.6rem,0.7vw,0.82rem)] font-semibold uppercase leading-[1.35] text-control-text">Example Transition:<br />From Monitor to Incident Mode</h2>
             </div>
             {transitionItems.map((item, index) => (
               <TransitionFrame index={index} item={item} key={item.title} />
@@ -827,20 +828,20 @@ function InformationComesOperatorScene({ chapter }: { chapter: Chapter }) {
         <div className="absolute inset-x-0 top-0 bottom-[17.95vh] grid grid-cols-[minmax(15rem,0.34fr)_minmax(43rem,0.96fr)_minmax(23rem,0.55fr)] gap-[1.05vw]">
           <motion.aside animate={{ opacity: 1, y: 0 }} className="relative min-h-0" initial={false} transition={{ duration: 0.72, ease }}>
             <div className="absolute left-[0.2vw] top-[0.7vh]">
-              <h1 className="text-[clamp(2.15rem,2.85vw,4.1rem)] font-black leading-[1.04] tracking-normal text-control-text">
+              <h1 className="text-[clamp(2.15rem,2.85vw,4.1rem)] font-bold leading-[1.04] tracking-normal text-control-text md:text-[2.5vw]">
                 <span className="block">Information</span>
                 <span className="block text-control-warm">Comes</span>
                 <span className="block">to the</span>
                 <span className="block">Operator<span className="text-control-warm">.</span></span>
               </h1>
               <div className="mt-[1.25vh] h-[2px] w-[2rem] bg-control-warm" />
-              <p className="mt-[1.35vh] max-w-[17.4rem] text-[clamp(0.68rem,0.79vw,0.92rem)] font-medium leading-[1.42] text-slate-800">
+              <p className="mt-[1.35vh] max-w-[17.4rem] text-[clamp(0.68rem,0.79vw,0.92rem)] font-medium leading-[1.42] text-slate-800 md:text-[0.8vw]">
                 Critical context moves to the active display automatically, reducing screen-hunting during time-sensitive work.
               </p>
             </div>
 
             <section className="absolute inset-x-0 bottom-0 overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.25vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.6rem,0.7vw,0.82rem)] font-black uppercase leading-tight text-control-text">Intelligent Information Delivery</h2>
+              <h2 className="text-[clamp(0.6rem,0.7vw,0.82rem)] font-semibold uppercase leading-tight text-control-text">Intelligent Information Delivery</h2>
               <div className="mt-[0.75vh] h-[2px] w-[1.7rem] bg-control-warm" />
               <div className="mt-[1.1vh] space-y-[1vh]">
                 {informationDeliveryItems.map((item) => (
@@ -853,7 +854,7 @@ function InformationComesOperatorScene({ chapter }: { chapter: Chapter }) {
           <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_19.1vh] gap-[1.05vh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
             <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <div className="absolute inset-x-[1vw] top-[1.35vh] z-10">
-                <h2 className="text-[clamp(0.68rem,0.8vw,0.94rem)] font-black uppercase tracking-normal text-control-text">Critical Information. Delivered Proactively.</h2>
+                <h2 className="text-[clamp(0.68rem,0.8vw,0.94rem)] font-semibold uppercase tracking-normal text-control-text">Critical Information. Delivered Proactively.</h2>
                 <div className="mt-[0.8vh] h-[2px] w-[1.7rem] bg-control-warm" />
               </div>
               <img alt="" className="absolute inset-x-0 bottom-0 h-[88%] w-full object-cover" src="/assets/source-pdf/p23_053_1418x798.jpg" />
@@ -869,7 +870,7 @@ function InformationComesOperatorScene({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.1vw] py-[1.25vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.66rem,0.78vw,0.9rem)] font-black uppercase tracking-normal text-control-text">How It Works</h2>
+              <h2 className="text-[clamp(0.66rem,0.78vw,0.9rem)] font-semibold uppercase tracking-normal text-control-text">How It Works</h2>
               <div className="mt-[0.75vh] h-[2px] w-[1.7rem] bg-control-warm" />
               <div className="mt-[1.05vh] grid grid-cols-5">
                 {informationHowItWorks.map((item, index) => (
@@ -886,7 +887,7 @@ function InformationComesOperatorScene({ chapter }: { chapter: Chapter }) {
             </div>
             <div className="grid min-h-0 grid-rows-[minmax(0,1fr)_24.6vh] gap-[1.05vh]">
               <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-slate-950 px-[1vw] py-[1.35vh] text-white shadow-[0_1rem_2.5rem_rgb(15_23_42/0.12)]">
-                <h2 className="text-[clamp(0.62rem,0.72vw,0.84rem)] font-black uppercase leading-tight text-white">Benefits</h2>
+                <h2 className="text-[clamp(0.62rem,0.72vw,0.84rem)] font-semibold uppercase leading-tight text-white">Benefits</h2>
                 <div className="mt-[0.8vh] h-[2px] w-[1.7rem] bg-control-warm" />
                 <div className="mt-[1vh] divide-y divide-slate-700/90">
                   {consoleBenefits.map((item) => (
@@ -895,11 +896,11 @@ function InformationComesOperatorScene({ chapter }: { chapter: Chapter }) {
                 </div>
               </section>
               <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.3vw] py-[1.7vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-                <p className="text-[clamp(1.7rem,2.3vw,2.6rem)] font-black leading-none text-control-warm">"</p>
+                <Quote aria-hidden="true" className="text-control-warm" size={32} strokeWidth={1.55} />
                 <p className="mt-[0.3vh] max-w-[13rem] text-[clamp(0.72rem,0.83vw,0.96rem)] font-medium leading-[1.34] text-control-text">
                   Information doesn't wait for you to find it. It finds you.
                 </p>
-                <p className="mt-[1vh] text-[clamp(0.72rem,0.86vw,1rem)] font-black leading-[1.25] text-control-warm">Context arrives before the search begins.</p>
+                <p className="mt-[1vh] text-[clamp(0.72rem,0.86vw,1rem)] font-semibold leading-[1.25] text-control-warm">Context arrives before the search begins.</p>
                 <span className="pointer-events-none absolute bottom-0 right-0 h-[5.7rem] w-[5.7rem] opacity-10 [background-image:radial-gradient(circle,rgb(37_99_235/0.65)_1px,transparent_1px)] [background-size:7px_7px]" />
               </section>
             </div>
@@ -909,7 +910,7 @@ function InformationComesOperatorScene({ chapter }: { chapter: Chapter }) {
         <motion.section animate={{ opacity: 1, y: 0 }} className="absolute inset-x-0 bottom-[6.2vh] h-[10.45vh] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]" initial={false} transition={{ duration: 0.72, delay: 0.18, ease }}>
           <div className="grid h-full grid-cols-[12.5rem_repeat(6,minmax(0,1fr))] items-start gap-[0.75vw]">
             <div>
-              <h2 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-black uppercase leading-[1.35] text-control-text">Examples of Intelligent Information Delivery</h2>
+              <h2 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-semibold uppercase leading-[1.35] text-control-text">Examples of Intelligent Information Delivery</h2>
               <div className="mt-[0.7vh] h-[2px] w-[1.7rem] bg-control-warm" />
             </div>
             {intelligentExamples.map((item) => (
@@ -960,35 +961,35 @@ function OperationalStateRoomRespondsScene({ chapter }: { chapter: Chapter }) {
       <div className="pointer-events-none absolute inset-x-0 top-[8.6vh] h-px bg-slate-200/80" />
 
       <section className="absolute inset-x-[1.55vw] top-[9.65vh] bottom-[7.05vh] z-10">
-        <div className="absolute inset-x-0 top-0 bottom-[6.6vh] grid grid-cols-[minmax(15rem,0.34fr)_minmax(48rem,1fr)_minmax(16rem,0.38fr)] gap-[1.05vw]">
-          <motion.aside animate={{ opacity: 1, y: 0 }} className="relative min-h-0" initial={false} transition={{ duration: 0.72, ease }}>
-            <div className="absolute left-[0.2vw] top-[0.7vh]">
-              <h1 className="text-[clamp(1.72rem,2.18vw,3.05rem)] font-black leading-[1.07] tracking-normal text-control-text">
+        <div className="absolute inset-x-0 top-0 bottom-[6.6vh] grid min-h-0 grid-cols-[minmax(12.5rem,0.27fr)_minmax(0,1fr)_minmax(13rem,0.29fr)] gap-[0.95vw]">
+          <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[auto_auto_minmax(0,1fr)] gap-[1vh] overflow-hidden" initial={false} transition={{ duration: 0.72, ease }}>
+            <div className="min-w-0 pt-[0.45vh]">
+              <h1 className="text-[clamp(1.45rem,2.05vw,2.75rem)] font-bold leading-[1.01] tracking-normal text-control-text md:text-[2vw]">
                 <span className="block">One Operational</span>
                 <span className="block">State.</span>
                 <span className="block text-control-warm">The Entire</span>
                 <span className="block text-control-warm">Room Responds.</span>
               </h1>
-              <div className="mt-[1.2vh] h-[2px] w-[2rem] bg-control-warm" />
-              <p className="mt-[1.35vh] max-w-[17rem] text-[clamp(0.66rem,0.76vw,0.88rem)] font-medium leading-[1.38] text-slate-800">
+              <div className="mt-[0.9vh] h-[2px] w-[1.8rem] bg-control-warm" />
+              <p className="mt-[1vh] max-w-[15.4rem] text-[clamp(0.56rem,0.68vw,0.78rem)] font-medium leading-[1.28] text-slate-800 md:text-[0.72vw]">
                 One event can activate a predefined room state across displays, lighting, acoustics, access, HVAC and logging.
               </p>
             </div>
 
-            <section className="absolute inset-x-0 top-[30.6vh] grid grid-cols-[4rem_minmax(0,1fr)] items-center gap-[0.8vw] rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.15vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <span className="grid h-[3.45rem] w-[3.45rem] place-items-center rounded-full border border-control-warm/22 bg-white/58 text-control-warm">
-                <SlidersHorizontal aria-hidden="true" size={31} strokeWidth={1.45} />
+            <section className="grid min-w-0 grid-cols-[3.35rem_minmax(0,1fr)] items-center gap-[0.72vw] rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.82vw] py-[0.9vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+              <span className="grid h-[3rem] w-[3rem] place-items-center rounded-full border border-control-warm/22 bg-white/58 text-control-warm">
+                <SlidersHorizontal aria-hidden="true" size={26} strokeWidth={1.45} />
               </span>
               <span className="min-w-0">
-                <strong className="block text-[clamp(0.62rem,0.72vw,0.84rem)] font-black leading-tight text-control-text">One state. Many systems.</strong>
-                <span className="mt-1 block text-[clamp(0.58rem,0.68vw,0.78rem)] font-black leading-tight text-control-warm">Coordinated without manual chasing.</span>
+                <strong className="block text-[clamp(0.54rem,0.64vw,0.74rem)] font-semibold leading-tight text-control-text">One state. Many systems.</strong>
+                <span className="mt-0.5 block text-[clamp(0.5rem,0.58vw,0.68rem)] font-semibold leading-tight text-control-warm">Coordinated without manual chasing.</span>
               </span>
             </section>
 
-            <section className="absolute inset-x-0 bottom-0 h-[27.6vh] overflow-hidden rounded-[0.62rem] border border-slate-800/70 bg-slate-950 px-[1vw] py-[1.15vh] text-white shadow-[0_1rem_2.5rem_rgb(15_23_42/0.14)]">
-              <h2 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-black uppercase leading-tight text-white">Intelligent Information Delivery</h2>
+            <section className="min-h-0 overflow-hidden rounded-[0.62rem] border border-slate-800/70 bg-slate-950 px-[0.85vw] py-[0.9vh] text-white shadow-[0_1rem_2.5rem_rgb(15_23_42/0.14)]">
+              <h2 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-semibold uppercase leading-tight text-white">Intelligent Information Delivery</h2>
               <div className="mt-[0.65vh] h-[2px] w-[1.7rem] bg-control-warm" />
-              <div className="mt-[0.9vh] divide-y divide-slate-700/80">
+              <div className="mt-[0.7vh] divide-y divide-slate-700/80">
                 {informationDeliveryItems.map((item) => (
                   <InfoDeliveryCell dark item={item} key={item.title} />
                 ))}
@@ -996,7 +997,7 @@ function OperationalStateRoomRespondsScene({ chapter }: { chapter: Chapter }) {
             </section>
           </motion.aside>
 
-          <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[9.8vh_minmax(0,1fr)_16.5vh_14.5vh] gap-[1vh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
+          <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[7.6vh_minmax(0,1fr)_13.8vh_12.6vh] gap-[0.85vh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
             <section className="grid grid-cols-5 overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               {operationalStates.map((item, index) => (
                 <OperationalStateChip index={index} item={item} key={item.title} />
@@ -1010,29 +1011,29 @@ function OperationalStateRoomRespondsScene({ chapter }: { chapter: Chapter }) {
               <span className="absolute right-0 top-0 h-[3px] w-[42%] bg-orange-400/85 shadow-[0_0_1.6rem_rgb(249_115_22/0.8)]" />
             </section>
 
-            <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/70 px-[1vw] py-[1vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-center text-[clamp(0.62rem,0.72vw,0.84rem)] font-black uppercase leading-tight text-control-text">The Entire Room Responds</h2>
-              <div className="mt-[1.05vh] grid grid-cols-9">
+            <section className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/70 px-[0.8vw] py-[0.78vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+              <h2 className="text-center text-[clamp(0.56rem,0.66vw,0.78rem)] font-semibold uppercase leading-tight text-control-text">The Entire Room Responds</h2>
+              <div className="mt-[0.55vh] grid min-h-0 grid-cols-9 items-center">
                 {roomResponseSystems.map((item, index) => (
                   <RoomResponseSystem index={index} item={item} key={item.title} />
                 ))}
               </div>
             </section>
 
-            <div className="grid min-h-0 grid-cols-[0.46fr_0.54fr] gap-[0.8vw]">
-              <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.9vw] py-[1vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-                <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-black uppercase leading-tight text-control-text">How It Works</h2>
-                <div className="mt-[0.6vh] h-[2px] w-[1.5rem] bg-control-warm" />
-                <div className="mt-[0.8vh] grid grid-cols-5">
+            <div className="grid min-h-0 grid-cols-[0.45fr_0.55fr] gap-[0.7vw]">
+              <section className="grid min-h-0 grid-rows-[auto_auto_minmax(0,1fr)] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.72vw] py-[0.78vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+                <h2 className="text-[clamp(0.52rem,0.6vw,0.72rem)] font-semibold uppercase leading-tight text-control-text">How It Works</h2>
+                <div className="mt-[0.45vh] h-[2px] w-[1.4rem] bg-control-warm" />
+                <div className="mt-[0.45vh] grid min-h-0 grid-cols-5 items-center">
                   {operationalHowSteps.map((item, index) => (
                     <OperationalHowStep index={index} item={item} key={item.title} />
                   ))}
                 </div>
               </section>
 
-              <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.9vw] py-[1vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-                <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-black uppercase leading-tight text-control-text">Example: Incident Mode Activated</h2>
-                <div className="mt-[0.8vh] grid grid-cols-6 gap-[0.55vw]">
+              <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.72vw] py-[0.78vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+                <h2 className="text-[clamp(0.52rem,0.6vw,0.72rem)] font-semibold uppercase leading-tight text-control-text">Example: Incident Mode Activated</h2>
+                <div className="mt-[0.58vh] grid grid-cols-6 gap-[0.45vw]">
                   {incidentModeExamples.map((item, index) => (
                     <IncidentExampleFrame index={index} item={item} key={item.title} />
                   ))}
@@ -1041,15 +1042,15 @@ function OperationalStateRoomRespondsScene({ chapter }: { chapter: Chapter }) {
             </div>
           </motion.main>
 
-          <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[1fr_1fr_17.6vh] gap-[1.05vh]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
+          <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_minmax(0,1fr)_14.5vh] gap-[0.85vh]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
             <ComparisonPanel accent="text-control-warm" items={manualSearchItems} title="Before: Manual Search" />
             <ComparisonPanel accent="text-green-500" items={proactiveDeliveryItems} title="After: Proactive Delivery" />
-            <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.2vw] py-[1.45vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <p className="text-[clamp(1.6rem,2.2vw,2.5rem)] font-black leading-none text-control-warm">"</p>
-              <p className="mt-[0.1vh] max-w-[12rem] text-[clamp(0.62rem,0.74vw,0.86rem)] font-medium leading-[1.35] text-control-text">
+            <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+              <Quote aria-hidden="true" className="text-control-warm" size={26} strokeWidth={1.55} />
+              <p className="mt-[0.05vh] max-w-[12rem] text-[clamp(0.54rem,0.64vw,0.76rem)] font-medium leading-[1.25] text-control-text">
                 The room changes state once.
               </p>
-              <p className="mt-[0.75vh] text-[clamp(0.64rem,0.76vw,0.9rem)] font-black leading-[1.25] text-control-text">Each connected layer follows the same operating condition.</p>
+              <p className="mt-[0.55vh] text-[clamp(0.56rem,0.66vw,0.78rem)] font-semibold leading-[1.18] text-control-text">Each connected layer follows the same operating condition.</p>
               <span className="pointer-events-none absolute bottom-0 right-0 h-[5.5rem] w-[5.5rem] opacity-10 [background-image:radial-gradient(circle,rgb(239_68_68/0.65)_1px,transparent_1px)] [background-size:7px_7px]" />
             </section>
           </motion.aside>
@@ -1097,35 +1098,37 @@ function RoomProtectsHumanPerformanceScene({ chapter }: { chapter: Chapter }) {
       <div className="pointer-events-none absolute inset-x-0 top-[8.6vh] h-px bg-slate-200/80" />
 
       <section className="absolute inset-x-[1.55vw] top-[9.65vh] bottom-[7.05vh] z-10">
-        <div className="absolute inset-x-0 top-0 bottom-[6.6vh] grid grid-cols-[minmax(15rem,0.34fr)_minmax(52rem,1fr)_minmax(18rem,0.38fr)] gap-[1.05vw]">
-          <motion.aside animate={{ opacity: 1, y: 0 }} className="relative min-h-0" initial={false} transition={{ duration: 0.72, ease }}>
-            <div className="absolute left-[0.2vw] top-[0.8vh]">
-              <h1 className="text-[clamp(1.9rem,2.45vw,3.45rem)] font-black leading-[1.06] tracking-normal text-control-text">
+        <div className="absolute inset-x-0 top-0 bottom-[6.6vh] grid min-h-0 grid-cols-[minmax(14rem,0.31fr)_minmax(0,1fr)_minmax(15rem,0.33fr)] gap-[1.05vw]">
+          <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[auto_auto_minmax(0,1fr)] gap-[1.25vh] overflow-hidden" initial={false} transition={{ duration: 0.72, ease }}>
+            <div className="min-w-0 pt-[0.45vh]">
+              <h1 className="text-[clamp(1.55rem,2.05vw,2.9rem)] font-bold leading-[1.02] tracking-normal text-control-text md:text-[2.16vw]">
                 <span className="block">The Room</span>
                 <span className="block text-control-warm">Protects</span>
                 <span className="block">Human</span>
                 <span className="block">Performance<span className="text-control-warm">.</span></span>
               </h1>
-              <div className="mt-[1.2vh] h-[2px] w-[2rem] bg-control-warm" />
-              <p className="mt-[1.35vh] max-w-[17rem] text-[clamp(0.67rem,0.78vw,0.9rem)] font-medium leading-[1.4] text-slate-800">
+              <div className="mt-[0.95vh] h-[2px] w-[2rem] bg-control-warm" />
+              <p className="mt-[1vh] max-w-[16.2rem] text-[clamp(0.54rem,0.64vw,0.76rem)] font-medium leading-[1.28] text-slate-800 md:text-[0.68vw]">
                 Operator focus depends on measurable room conditions: air, light, noise, temperature, posture and visual load.
               </p>
             </div>
 
-            <section className="absolute inset-x-0 top-[32.5vh] grid grid-cols-[4.8rem_minmax(0,1fr)] items-center gap-[0.8vw] rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.1vw] py-[1.5vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <ShieldCheck aria-hidden="true" className="text-control-warm" size={52} strokeWidth={1.35} />
-              <p className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-medium leading-[1.42] text-slate-800">
+            <section className="grid min-w-0 grid-cols-[3.15rem_minmax(0,1fr)] items-center gap-[0.65vw] rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.85vw] py-[0.95vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+              <span className="grid h-[2.75rem] w-[2.75rem] place-items-center rounded-full border border-control-warm/20 bg-white/58 text-control-warm">
+                <ShieldCheck aria-hidden="true" size={30} strokeWidth={1.35} />
+              </span>
+              <p className="min-w-0 text-[clamp(0.48rem,0.56vw,0.66rem)] font-medium leading-[1.22] text-slate-800">
                 Environmental parameters are monitored as operational inputs.<br />
-                <span className="font-black text-control-warm">Comfort becomes controllable.</span>
+                <span className="font-semibold text-control-warm">Comfort becomes controllable.</span>
               </p>
             </section>
           </motion.aside>
 
-          <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_22.5vh_12.5vh] gap-[1.05vh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
+          <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_22vh_14.4vh] gap-[1vh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
             <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-slate-950 shadow-[0_1rem_2.5rem_rgb(15_23_42/0.08)]">
               <img alt="" className="absolute inset-0 h-full w-full object-cover" src="/assets/source-pdf/p20_050_1781x1016.jpg" />
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgb(15_23_42/0.4),rgb(15_23_42/0.02)_45%,rgb(15_23_42/0.22))]" />
-              <div className="absolute left-[5%] top-[8%] text-[clamp(0.8rem,0.95vw,1.1rem)] font-black leading-[1.45] text-white drop-shadow-[0_0.5rem_1.2rem_rgb(15_23_42/0.5)]">
+              <div className="absolute left-[5%] top-[8%] text-[clamp(0.8rem,0.95vw,1.1rem)] font-semibold leading-[1.45] text-white drop-shadow-[0_0.5rem_1.2rem_rgb(15_23_42/0.5)]">
                 <p>Always Watching.</p>
                 <p>Always Adjusting.</p>
                 <p>Always Optimizing.</p>
@@ -1136,9 +1139,9 @@ function RoomProtectsHumanPerformanceScene({ chapter }: { chapter: Chapter }) {
               ))}
             </section>
 
-            <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.9vw] py-[1vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-black uppercase leading-tight text-control-text">Continuous Monitoring. Real-Time Insights.</h2>
-              <div className="mt-[0.95vh] grid grid-cols-[repeat(6,minmax(0,1fr))_8rem] gap-[0.7vw]">
+            <section className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.9vw] py-[0.95vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+              <h2 className="text-[clamp(0.54rem,0.63vw,0.74rem)] font-semibold uppercase leading-tight text-control-text">Continuous Monitoring. Real-Time Insights.</h2>
+              <div className="mt-[0.75vh] grid min-h-0 grid-cols-[repeat(6,minmax(0,1fr))_6.7rem] gap-[0.55vw]">
                 {performanceMetrics.map((item, index) => (
                   <MetricCard index={index} item={item} key={item.title} />
                 ))}
@@ -1146,9 +1149,9 @@ function RoomProtectsHumanPerformanceScene({ chapter }: { chapter: Chapter }) {
               </div>
             </section>
 
-            <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.9vw] py-[1vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-black uppercase leading-tight text-control-text">Proactive Adjustments. Before You Notice.</h2>
-              <div className="mt-[0.85vh] grid grid-cols-6">
+            <section className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.9vw] py-[0.95vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+              <h2 className="text-[clamp(0.54rem,0.63vw,0.74rem)] font-semibold uppercase leading-tight text-control-text">Proactive Adjustments. Before You Notice.</h2>
+              <div className="mt-[0.75vh] grid min-h-0 grid-cols-6 items-center">
                 {proactiveAdjustments.map((item, index) => (
                   <AdjustmentCell index={index} item={item} key={item.title} />
                 ))}
@@ -1158,7 +1161,7 @@ function RoomProtectsHumanPerformanceScene({ chapter }: { chapter: Chapter }) {
 
           <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_20vh_15.2vh] gap-[1.05vh]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.15vw] py-[1.25vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.62rem,0.72vw,0.84rem)] font-black uppercase leading-tight text-control-text">Operator Impact</h2>
+              <h2 className="text-[clamp(0.62rem,0.72vw,0.84rem)] font-semibold uppercase leading-tight text-control-text">Operator Impact</h2>
               <div className="mt-[0.8vh] h-[2px] w-[1.7rem] bg-control-warm" />
               <div className="mt-[1vh] space-y-[1.35vh]">
                 {operatorImpactItems.map((item) => (
@@ -1217,14 +1220,14 @@ function PersonalWorkspaceScene({ chapter }: { chapter: Chapter }) {
         <div className="absolute inset-x-0 top-0 bottom-[6.6vh] grid grid-cols-[minmax(15rem,0.34fr)_minmax(52rem,1fr)_minmax(17rem,0.34fr)] gap-[1.05vw]">
           <motion.aside animate={{ opacity: 1, y: 0 }} className="relative min-h-0" initial={false} transition={{ duration: 0.72, ease }}>
             <div className="absolute left-[0.2vw] top-[0.7vh]">
-              <h1 className="text-[clamp(1.85rem,2.35vw,3.3rem)] font-black leading-[1.07] tracking-normal text-control-text">
+              <h1 className="text-[clamp(1.85rem,2.35vw,3.3rem)] font-bold leading-[1.07] tracking-normal text-control-text md:text-[2.5vw]">
                 <span className="block">Every Operator</span>
                 <span className="block">Gets a</span>
                 <span className="block text-control-warm">Personal</span>
                 <span className="block text-control-warm">Workspace.</span>
               </h1>
               <div className="mt-[1.2vh] h-[2px] w-[2rem] bg-control-warm" />
-              <p className="mt-[1.35vh] max-w-[17rem] text-[clamp(0.66rem,0.76vw,0.88rem)] font-medium leading-[1.42] text-slate-800">
+              <p className="mt-[1.35vh] max-w-[17rem] text-[clamp(0.66rem,0.76vw,0.88rem)] font-medium leading-[1.42] text-slate-800 md:text-[0.8vw]">
                 Every operator can start from a known profile: preferred height, screens, apps, audio, lighting and dashboard context.
               </p>
             </div>
@@ -1239,7 +1242,7 @@ function PersonalWorkspaceScene({ chapter }: { chapter: Chapter }) {
 
           <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[40.7vh_17.2vh_15.3vh_5.7vh] gap-[1vh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.9vw] py-[1vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-black uppercase leading-tight text-control-text">Same Room. Different People. Personalized for Excellence.</h2>
+              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-semibold uppercase leading-tight text-control-text">Same Room. Different People. Personalized for Excellence.</h2>
               <div className="mt-[0.75vh] h-[2px] w-[1.8rem] bg-control-warm" />
               <div className="mt-[0.95vh] grid h-[34.3vh] grid-cols-3 gap-[0.8vw]">
                 {personalizedProfiles.map((profile) => (
@@ -1249,7 +1252,7 @@ function PersonalWorkspaceScene({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.9vw] py-[0.95vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-black uppercase leading-tight text-control-text">Continuous Monitoring. Real-Time Insights.</h2>
+              <h2 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-semibold uppercase leading-tight text-control-text">Continuous Monitoring. Real-Time Insights.</h2>
               <div className="mt-[0.78vh] grid grid-cols-[repeat(6,minmax(0,1fr))_8rem] gap-[0.65vw]">
                 {performanceMetrics.map((item, index) => (
                   <MetricCard index={index} item={item} key={item.title} />
@@ -1260,7 +1263,7 @@ function PersonalWorkspaceScene({ chapter }: { chapter: Chapter }) {
 
             <div className="grid min-h-0 grid-cols-[minmax(0,1fr)_24rem] gap-[0.8vw]">
               <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.78vw] py-[0.85vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-                <h2 className="text-[clamp(0.52rem,0.61vw,0.72rem)] font-black uppercase leading-tight text-control-text">What Personalizes for Each Operator</h2>
+                <h2 className="text-[clamp(0.52rem,0.61vw,0.72rem)] font-semibold uppercase leading-tight text-control-text">What Personalizes for Each Operator</h2>
                 <div className="mt-[0.55vh] h-[2px] w-[1.6rem] bg-control-warm" />
                 <div className="mt-[0.7vh] grid grid-cols-8">
                   {personalizationFactors.map((item, index) => (
@@ -1270,7 +1273,7 @@ function PersonalWorkspaceScene({ chapter }: { chapter: Chapter }) {
               </section>
 
               <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.9vw] py-[0.85vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-                <h2 className="text-[clamp(0.52rem,0.61vw,0.72rem)] font-black uppercase leading-tight text-control-text">Switch User. Instantly Adapted.</h2>
+                <h2 className="text-[clamp(0.52rem,0.61vw,0.72rem)] font-semibold uppercase leading-tight text-control-text">Switch User. Instantly Adapted.</h2>
                 <div className="mt-[0.55vh] h-[2px] w-[1.6rem] bg-control-warm" />
                 <div className="mt-[0.8vh] grid grid-cols-3">
                   {switchUserSteps.map((item, index) => (
@@ -1281,7 +1284,7 @@ function PersonalWorkspaceScene({ chapter }: { chapter: Chapter }) {
             </div>
 
             <section className="grid grid-cols-[18rem_repeat(6,minmax(0,1fr))] items-center overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.9vw] py-[0.65vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.52rem,0.62vw,0.72rem)] font-black uppercase leading-tight text-control-text">Consistent Experience. Every Shift. Every Time.</h2>
+              <h2 className="text-[clamp(0.52rem,0.62vw,0.72rem)] font-semibold uppercase leading-tight text-control-text">Consistent Experience. Every Shift. Every Time.</h2>
               {consistencyItems.map((item) => (
                 <ConsistencyChip key={item} label={item} />
               ))}
@@ -1290,7 +1293,7 @@ function PersonalWorkspaceScene({ chapter }: { chapter: Chapter }) {
 
           <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_20vh] gap-[1.05vh]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.15vw] py-[1.25vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.62rem,0.72vw,0.84rem)] font-black uppercase leading-tight text-control-text">Operator Impact</h2>
+              <h2 className="text-[clamp(0.62rem,0.72vw,0.84rem)] font-semibold uppercase leading-tight text-control-text">Operator Impact</h2>
               <div className="mt-[0.8vh] h-[2px] w-[1.7rem] bg-control-warm" />
               <div className="mt-[1.15vh] space-y-[2.05vh]">
                 {operatorImpactItems.map((item) => (
@@ -1348,13 +1351,13 @@ function IntelligenceBeyondDeskScene({ chapter }: { chapter: Chapter }) {
         <div className="absolute inset-x-0 top-0 bottom-[6.6vh] grid grid-cols-[minmax(15rem,0.33fr)_minmax(52rem,1fr)_minmax(18rem,0.36fr)] gap-[1.05vw]">
           <motion.aside animate={{ opacity: 1, y: 0 }} className="relative min-h-0" initial={false} transition={{ duration: 0.72, ease }}>
             <div className="absolute left-[0.2vw] top-[0.8vh]">
-              <h1 className="text-[clamp(2rem,2.55vw,3.58rem)] font-black leading-[1.07] tracking-normal text-control-text">
+              <h1 className="text-[clamp(2rem,2.55vw,3.58rem)] font-bold leading-[1.07] tracking-normal text-control-text md:text-[2.5vw]">
                 <span className="block">Intelligence</span>
                 <span className="block text-control-warm">Beyond</span>
                 <span className="block">the Desk<span className="text-control-warm">.</span></span>
               </h1>
               <div className="mt-[1.25vh] h-[2px] w-[2rem] bg-control-warm" />
-              <p className="mt-[1.35vh] max-w-[16.8rem] text-[clamp(0.68rem,0.79vw,0.92rem)] font-medium leading-[1.42] text-slate-800">
+              <p className="mt-[1.35vh] max-w-[16.8rem] text-[clamp(0.68rem,0.79vw,0.92rem)] font-medium leading-[1.42] text-slate-800 md:text-[0.8vw]">
                 Room data extends into occupancy, energy, assets, environment and infrastructure, giving operators a measurable operating picture.
               </p>
             </div>
@@ -1362,7 +1365,7 @@ function IntelligenceBeyondDeskScene({ chapter }: { chapter: Chapter }) {
             <section className="absolute inset-x-0 top-[34.8vh] grid grid-cols-[4.8rem_minmax(0,1fr)] items-center gap-[0.8vw] rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.45vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <Cpu aria-hidden="true" className="text-control-warm" size={52} strokeWidth={1.35} />
               <p className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-medium leading-[1.36] text-slate-800">
-                <span className="font-black text-control-text">One Connected Intelligence Layer</span><br />
+                <span className="font-semibold text-control-text">One Connected Intelligence Layer</span><br />
                 Unifies people, systems, assets and the environment.
               </p>
             </section>
@@ -1370,7 +1373,7 @@ function IntelligenceBeyondDeskScene({ chapter }: { chapter: Chapter }) {
 
           <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[52.6vh_21.5vh] gap-[1vh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.95vw] py-[1.05vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.6rem,0.7vw,0.82rem)] font-black uppercase leading-tight text-control-text">Everything Connected. Everything Measured.</h2>
+              <h2 className="text-[clamp(0.6rem,0.7vw,0.82rem)] font-semibold uppercase leading-tight text-control-text">Everything Connected. Everything Measured.</h2>
               <div className="mt-[0.75vh] h-[2px] w-[1.8rem] bg-control-warm" />
               <div className="relative mt-[0.7vh] h-[34.2vh] overflow-hidden">
                 <div className="absolute inset-x-[1vw] top-0 grid grid-cols-8">
@@ -1393,7 +1396,7 @@ function IntelligenceBeyondDeskScene({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.75vw] py-[0.95vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-black uppercase leading-tight text-control-text">What the Room Understands</h2>
+              <h2 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-semibold uppercase leading-tight text-control-text">What the Room Understands</h2>
               <div className="mt-[0.65vh] h-[2px] w-[1.6rem] bg-control-warm" />
               <div className="mt-[0.7vh] grid grid-cols-7 gap-[0.55vw]">
                 {roomUnderstandsItems.map((item) => (
@@ -1405,7 +1408,7 @@ function IntelligenceBeyondDeskScene({ chapter }: { chapter: Chapter }) {
 
           <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_18.3vh] gap-[1.05vh]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.15vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-black uppercase leading-tight text-control-text">Key Intelligence at a Glance</h2>
+              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-semibold uppercase leading-tight text-control-text">Key Intelligence at a Glance</h2>
               <div className="mt-[0.7vh] h-[2px] w-[1.7rem] bg-control-warm" />
               <div className="mt-[0.8vh] grid gap-[0.72vh]">
                 {intelligenceGlanceItems.map((item) => (
@@ -1415,12 +1418,12 @@ function IntelligenceBeyondDeskScene({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.15vw] py-[1.45vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <p className="text-[clamp(1.8rem,2.6vw,3rem)] font-black leading-none text-control-warm">"</p>
+              <Quote aria-hidden="true" className="text-control-warm" size={36} strokeWidth={1.55} />
               <p className="mt-[0.1vh] max-w-[14rem] text-[clamp(0.68rem,0.8vw,0.94rem)] font-medium leading-[1.34] text-control-text">
                 You can't improve what you don't measure.
               </p>
               <p className="mt-[0.55vh] max-w-[14rem] text-[clamp(0.7rem,0.82vw,0.96rem)] font-medium leading-[1.28] text-control-text">
-                The intelligent room <span className="font-black text-control-warm">measures what matters.</span>
+                The intelligent room <span className="font-semibold text-control-warm">measures what matters.</span>
               </p>
               <span className="pointer-events-none absolute bottom-0 right-0 h-[5.8rem] w-[5.8rem] opacity-10 [background-image:radial-gradient(circle,rgb(15_23_42/0.75)_1px,transparent_1px)] [background-size:7px_7px]" />
             </section>
@@ -1472,13 +1475,13 @@ function DigitalTwinControlRoomScene({ chapter }: { chapter: Chapter }) {
         <div className="absolute inset-x-0 top-0 bottom-[6.6vh] grid grid-cols-[minmax(15rem,0.31fr)_minmax(53rem,1fr)_minmax(18rem,0.34fr)] gap-[1.05vw]">
           <motion.aside animate={{ opacity: 1, y: 0 }} className="relative min-h-0" initial={false} transition={{ duration: 0.72, ease }}>
             <div className="absolute left-[0.2vw] top-[0.7vh]">
-              <h1 className="text-[clamp(1.78rem,2.4vw,3.35rem)] font-black leading-[1.07] tracking-normal text-control-text">
+              <h1 className="text-[clamp(1.78rem,2.4vw,3.35rem)] font-bold leading-[1.07] tracking-normal text-control-text md:text-[2vw]">
                 <span className="block">A Digital Twin</span>
                 <span className="block">of the Complete</span>
                 <span className="block text-control-warm">Control Room.</span>
               </h1>
               <div className="mt-[1.25vh] h-[2px] w-[2rem] bg-control-warm" />
-              <p className="mt-[1.35vh] max-w-[17.4rem] text-[clamp(0.66rem,0.77vw,0.9rem)] font-medium leading-[1.44] text-slate-800">
+              <p className="mt-[1.35vh] max-w-[17.4rem] text-[clamp(0.66rem,0.77vw,0.9rem)] font-medium leading-[1.44] text-slate-800 md:text-[0.8vw]">
                 A live model mirrors people, assets, systems, environment and workflows so changes can be seen, tested and understood before rollout.
               </p>
             </div>
@@ -1494,7 +1497,7 @@ function DigitalTwinControlRoomScene({ chapter }: { chapter: Chapter }) {
 
           <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[58.2vh_15.9vh] gap-[1vh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.95vw] py-[1vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.6rem,0.7vw,0.82rem)] font-black uppercase leading-tight text-control-text">Digital Twin - Live, Dynamic, Always in Sync</h2>
+              <h2 className="text-[clamp(0.6rem,0.7vw,0.82rem)] font-semibold uppercase leading-tight text-control-text">Digital Twin - Live, Dynamic, Always in Sync</h2>
               <div className="mt-[0.75vh] flex items-center gap-[0.62vw]">
                 {["3D Overview", "Asset View", "Systems View", "Environment View", "People View"].map((tab, index) => (
                   <DigitalTwinTab active={index === 0} key={tab} label={tab} />
@@ -1521,7 +1524,7 @@ function DigitalTwinControlRoomScene({ chapter }: { chapter: Chapter }) {
 
             <section className="grid min-h-0 grid-cols-[minmax(0,0.58fr)_minmax(0,0.42fr)] gap-[1vw]">
               <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.75vw] py-[0.9vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-                <h2 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-black uppercase leading-tight text-control-text">What the Twin Represents</h2>
+                <h2 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-semibold uppercase leading-tight text-control-text">What the Twin Represents</h2>
                 <div className="mt-[0.6vh] h-[2px] w-[1.6rem] bg-control-warm" />
                 <div className="mt-[0.65vh] grid grid-cols-6">
                   {digitalTwinRepresents.map((item, index) => (
@@ -1532,7 +1535,7 @@ function DigitalTwinControlRoomScene({ chapter }: { chapter: Chapter }) {
 
               <section className="grid min-h-0 grid-cols-[minmax(0,0.52fr)_minmax(0,0.48fr)] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
                 <div className="px-[0.8vw] py-[0.9vh]">
-                  <h2 className="text-[clamp(0.55rem,0.65vw,0.76rem)] font-black uppercase leading-tight text-control-text">Built for Safer Changes</h2>
+                  <h2 className="text-[clamp(0.55rem,0.65vw,0.76rem)] font-semibold uppercase leading-tight text-control-text">Built for Safer Changes</h2>
                   <div className="mt-[0.6vh] h-[2px] w-[1.6rem] bg-control-warm" />
                   <ul className="mt-[0.55vh] space-y-[0.18vh]">
                     {digitalTwinDecisionBullets.map((bullet) => (
@@ -1554,7 +1557,7 @@ function DigitalTwinControlRoomScene({ chapter }: { chapter: Chapter }) {
 
           <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_20vh] gap-[1.05vh]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.15vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-black uppercase leading-tight text-control-text">What the Digital Twin Enables</h2>
+              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-semibold uppercase leading-tight text-control-text">What the Digital Twin Enables</h2>
               <div className="mt-[0.7vh] h-[2px] w-[1.7rem] bg-control-warm" />
               <div className="mt-[0.8vh] divide-y divide-slate-200/90">
                 {digitalTwinEnables.map((item) => (
@@ -1564,18 +1567,18 @@ function DigitalTwinControlRoomScene({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.15vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-black uppercase leading-tight text-control-text">Digital Twin Accuracy</h2>
+              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-semibold uppercase leading-tight text-control-text">Digital Twin Accuracy</h2>
               <div className="mt-[0.7vh] h-[2px] w-[1.7rem] bg-control-warm" />
               <div className="mt-[1.1vh] grid grid-cols-[6rem_minmax(0,1fr)] items-center gap-[0.9vw]">
                 <div className="grid h-[5.5rem] w-[5.5rem] place-items-center rounded-full bg-[conic-gradient(#16a34a_0_99%,#e2e8f0_99%_100%)] shadow-[inset_0_0_0_1px_rgb(255_255_255/0.75)]">
                   <span className="grid h-[4.05rem] w-[4.05rem] place-items-center rounded-full bg-white">
-                    <strong className="text-[1.32rem] font-black leading-none text-control-text">99.2%</strong>
+                    <strong className="text-[1.32rem] font-semibold leading-none text-control-text">99.2%</strong>
                   </span>
                 </div>
                 <div className="min-w-0">
-                  <h3 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-black leading-tight text-control-text">Model Accuracy</h3>
+                  <h3 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-semibold leading-tight text-control-text">Model Accuracy</h3>
                   <p className="mt-[0.5vh] text-[clamp(0.5rem,0.58vw,0.68rem)] font-medium leading-[1.24] text-slate-800">Live sync with real-world data</p>
-                  <p className="mt-[0.85vh] text-[clamp(0.47rem,0.55vw,0.64rem)] font-black leading-tight text-control-text">Last Updated</p>
+                  <p className="mt-[0.85vh] text-[clamp(0.47rem,0.55vw,0.64rem)] font-semibold leading-tight text-control-text">Last Updated</p>
                   <p className="mt-0.5 text-[clamp(0.47rem,0.55vw,0.64rem)] font-medium leading-tight text-slate-700">10:18:32 AM</p>
                 </div>
               </div>
@@ -1628,13 +1631,13 @@ function AiSilentAssistantScene({ chapter }: { chapter: Chapter }) {
         <div className="absolute inset-x-0 top-0 bottom-[6.6vh] grid grid-cols-[minmax(15rem,0.31fr)_minmax(52rem,1fr)_minmax(18rem,0.34fr)] gap-[1.05vw]">
           <motion.aside animate={{ opacity: 1, y: 0 }} className="relative min-h-0" initial={false} transition={{ duration: 0.72, ease }}>
             <div className="absolute left-[0.2vw] top-[0.7vh]">
-              <h1 className="text-[clamp(2rem,2.75vw,3.85rem)] font-black leading-[1.03] tracking-normal text-control-text">
+              <h1 className="text-[clamp(2rem,2.75vw,3.85rem)] font-bold leading-[1.03] tracking-normal text-control-text md:text-[2.5vw]">
                 <span className="block">AI as the</span>
                 <span className="block text-violet-600">Silent</span>
                 <span className="block text-violet-600">Assistant<span className="text-control-warm">.</span></span>
               </h1>
               <div className="mt-[1.25vh] h-[2px] w-[2rem] bg-control-warm" />
-              <p className="mt-[1.35vh] max-w-[17.6rem] text-[clamp(0.68rem,0.79vw,0.92rem)] font-medium leading-[1.43] text-slate-800">
+              <p className="mt-[1.35vh] max-w-[17.6rem] text-[clamp(0.68rem,0.79vw,0.92rem)] font-medium leading-[1.43] text-slate-800 md:text-[0.8vw]">
                 Nova watches approved signals in the background, summarizes what changed, and suggests the next step without taking command away from the operator.
               </p>
             </div>
@@ -1642,14 +1645,14 @@ function AiSilentAssistantScene({ chapter }: { chapter: Chapter }) {
             <section className="absolute inset-x-0 top-[35.1vh] grid grid-cols-[4.7rem_minmax(0,1fr)] items-center gap-[0.75vw] rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.45vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <BrainCircuit aria-hidden="true" className="text-violet-600" size={50} strokeWidth={1.35} />
               <p className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-medium leading-[1.36] text-control-text">
-                <span className="font-black">Proactive. Private.</span><br />
+                <span className="font-semibold">Proactive. Private.</span><br />
                 Personalized.<br />
                 Powerful.
               </p>
             </section>
 
             <section className="absolute inset-x-0 top-[48.8vh] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.95vw] py-[1vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-black uppercase leading-tight text-violet-600">Nova Works Behind the Scenes</h2>
+              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-semibold uppercase leading-tight text-violet-600">Nova Works Behind the Scenes</h2>
               <div className="mt-[0.65vh] h-[2px] w-[1.7rem] bg-control-warm" />
               <div className="mt-[0.75vh] divide-y divide-slate-200/90">
                 {novaBehindScenesItems.map((item) => (
@@ -1667,9 +1670,9 @@ function AiSilentAssistantScene({ chapter }: { chapter: Chapter }) {
                 <span className="absolute inset-[-0.45rem] rounded-full border border-blue-400/55" />
                 <span className="absolute inset-[1.1rem] rounded-full border border-white/15" />
                 <span className="text-center">
-                  <strong className="block text-[clamp(1.65rem,2.1vw,2.35rem)] font-black leading-none">NOVA</strong>
-                  <span className="mt-[0.8vh] block text-[clamp(0.72rem,0.84vw,0.98rem)] font-black leading-tight">Silent. Smart.</span>
-                  <span className="mt-[0.7vh] block text-[clamp(0.68rem,0.8vw,0.94rem)] font-black leading-tight">Always with you.</span>
+                  <strong className="block text-[clamp(1.65rem,2.1vw,2.35rem)] font-semibold leading-none">NOVA</strong>
+                  <span className="mt-[0.8vh] block text-[clamp(0.72rem,0.84vw,0.98rem)] font-semibold leading-tight">Silent. Smart.</span>
+                  <span className="mt-[0.7vh] block text-[clamp(0.68rem,0.8vw,0.94rem)] font-semibold leading-tight">Always with you.</span>
                 </span>
               </div>
               {novaCapabilityCallouts.map((item) => (
@@ -1678,7 +1681,7 @@ function AiSilentAssistantScene({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.9vw] py-[1vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.6rem,0.7vw,0.82rem)] font-black uppercase leading-tight text-violet-600">How Nova Supports Every Operator</h2>
+              <h2 className="text-[clamp(0.6rem,0.7vw,0.82rem)] font-semibold uppercase leading-tight text-violet-600">How Nova Supports Every Operator</h2>
               <div className="mt-[0.8vh] grid grid-cols-6">
                 {novaOperatorSupportItems.map((item, index) => (
                   <NovaSupportCell index={index} item={item} key={item.title} />
@@ -1687,17 +1690,17 @@ function AiSilentAssistantScene({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="grid grid-cols-[0.12fr_1fr_1fr_1fr_0.12fr] items-center overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <p className="text-center text-[clamp(1.6rem,2.4vw,2.8rem)] font-black leading-none text-violet-600">"</p>
+              <Quote aria-hidden="true" className="mx-auto text-control-warm" size={30} strokeWidth={1.55} />
               <p className="border-r border-slate-200/90 px-[1vw] text-center text-[clamp(0.52rem,0.62vw,0.72rem)] font-medium leading-tight text-control-text">Nova doesn't replace operators.</p>
               <p className="border-r border-slate-200/90 px-[1vw] text-center text-[clamp(0.52rem,0.62vw,0.72rem)] font-medium leading-tight text-control-text">Nova gives them context.</p>
               <p className="border-r border-slate-200/90 px-[1vw] text-center text-[clamp(0.52rem,0.62vw,0.72rem)] font-medium leading-tight text-control-text">You stay in control.</p>
-              <p className="text-center text-[clamp(1.6rem,2.4vw,2.8rem)] font-black leading-none text-violet-600">"</p>
+              <Quote aria-hidden="true" className="mx-auto rotate-180 text-control-warm" size={30} strokeWidth={1.55} />
             </section>
           </motion.main>
 
           <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_21vh_14vh] gap-[1.05vh]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.15vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-black uppercase leading-tight text-violet-600">What Nova Can Do</h2>
+              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-semibold uppercase leading-tight text-violet-600">What Nova Can Do</h2>
               <div className="mt-[0.7vh] h-[2px] w-[1.7rem] bg-control-warm" />
               <div className="mt-[0.85vh] divide-y divide-slate-200/90">
                 {novaCanDoItems.map((item) => (
@@ -1707,7 +1710,7 @@ function AiSilentAssistantScene({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.15vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-black uppercase leading-tight text-violet-600">The Outcome</h2>
+              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-semibold uppercase leading-tight text-violet-600">The Outcome</h2>
               <div className="mt-[0.7vh] h-[2px] w-[1.7rem] bg-control-warm" />
               <div className="mt-[0.8vh] grid gap-[0.62vh]">
                 {novaOutcomeItems.map((item) => (
@@ -1721,7 +1724,7 @@ function AiSilentAssistantScene({ chapter }: { chapter: Chapter }) {
 
             <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.15vw] py-[1.25vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <BrainCircuit aria-hidden="true" className="absolute left-[1vw] top-[2vh] text-violet-600" size={42} strokeWidth={1.35} />
-              <p className="ml-[4rem] mt-[0.6vh] text-[clamp(0.68rem,0.8vw,0.94rem)] font-black leading-tight text-violet-600">AI You Can Trust</p>
+              <p className="ml-[4rem] mt-[0.6vh] text-[clamp(0.68rem,0.8vw,0.94rem)] font-semibold leading-tight text-violet-600">AI You Can Trust</p>
               <p className="ml-[4rem] mt-[0.5vh] max-w-[12rem] text-[clamp(0.48rem,0.57vw,0.66rem)] font-medium leading-[1.24] text-control-text">Transparent. Explainable. Secure. Built for control rooms. Built for you.</p>
               <span className="pointer-events-none absolute bottom-0 right-0 h-[5.8rem] w-[5.8rem] opacity-10 [background-image:radial-gradient(circle,rgb(124_58_237/0.8)_1px,transparent_1px)] [background-size:7px_7px]" />
             </section>
@@ -1773,13 +1776,13 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
         <div className="absolute inset-x-0 top-0 bottom-[6.6vh] grid grid-cols-[minmax(15rem,0.31fr)_minmax(52rem,1fr)_minmax(18rem,0.34fr)] gap-[1.05vw]">
           <motion.aside animate={{ opacity: 1, y: 0 }} className="relative min-h-0" initial={false} transition={{ duration: 0.72, ease }}>
             <div className="absolute left-[0.2vw] top-[0.7vh]">
-              <h1 className="text-[clamp(2rem,2.68vw,3.75rem)] font-black leading-[1.06] tracking-normal text-control-text">
+              <h1 className="text-[clamp(2rem,2.68vw,3.75rem)] font-bold leading-[1.06] tracking-normal text-control-text md:text-[2.5vw]">
                 <span className="block">The</span>
                 <span className="block text-violet-600">Software-Defined</span>
                 <span className="block">Control Room<span className="text-control-warm">.</span></span>
               </h1>
               <div className="mt-[1.35vh] h-[2px] w-[2rem] bg-control-warm" />
-              <p className="mt-[1.45vh] max-w-[17.4rem] text-[clamp(0.68rem,0.79vw,0.92rem)] font-medium leading-[1.43] text-slate-800">
+              <p className="mt-[1.45vh] max-w-[17.4rem] text-[clamp(0.68rem,0.79vw,0.92rem)] font-medium leading-[1.43] text-slate-800 md:text-[0.8vw]">
                 The physical room stays engineered; the operating experience can be updated through software.
               </p>
               <p className="mt-[2.4vh] max-w-[17.4rem] text-[clamp(0.68rem,0.79vw,0.92rem)] font-medium leading-[1.43] text-slate-800">
@@ -1790,7 +1793,7 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
             <section className="absolute inset-x-0 top-[39.3vh] grid grid-cols-[4.7rem_minmax(0,1fr)] items-center gap-[0.75vw] rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.45vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <Grid2X2 aria-hidden="true" className="text-violet-600" size={50} strokeWidth={1.35} />
               <p className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-medium leading-[1.38] text-control-text">
-                <span className="font-black">One platform.</span><br />
+                <span className="font-semibold">One platform.</span><br />
                 Any layout. Any scale.<br />
                 Always up to date.
               </p>
@@ -1800,7 +1803,7 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
           <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[50.8vh_17.6vh_13vh] gap-[0.95vh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <div className="px-[1vw] py-[1.2vh]">
-                <h2 className="text-[clamp(0.62rem,0.72vw,0.84rem)] font-black uppercase leading-tight text-control-text">Software Defines. You Decide.</h2>
+                <h2 className="text-[clamp(0.62rem,0.72vw,0.84rem)] font-semibold uppercase leading-tight text-control-text">Software Defines. You Decide.</h2>
                 <div className="mt-[1.1vh] grid grid-cols-4">
                   {softwareDefineSteps.map((item, index) => (
                     <SoftwareDefineStep index={index} item={item} key={item.title} />
@@ -1814,7 +1817,7 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.85vw] py-[1vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-black uppercase leading-tight text-control-text">Software Powering Everything</h2>
+              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-semibold uppercase leading-tight text-control-text">Software Powering Everything</h2>
               <div className="mt-[0.9vh] grid grid-cols-7 items-start">
                 {softwarePlatformFlow.map((item, index) => (
                   <SoftwarePlatformNode index={index} item={item} key={item.title} />
@@ -1824,7 +1827,7 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
 
             <section className="grid min-h-0 grid-cols-[minmax(0,0.46fr)_minmax(0,0.54fr)] gap-[1vw]">
               <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.85vw] py-[0.95vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-                <h2 className="text-[clamp(0.55rem,0.65vw,0.76rem)] font-black uppercase leading-tight text-control-text">Deploy Anywhere</h2>
+                <h2 className="text-[clamp(0.55rem,0.65vw,0.76rem)] font-semibold uppercase leading-tight text-control-text">Deploy Anywhere</h2>
                 <div className="mt-[0.9vh] grid grid-cols-5">
                   {deployAnywhereItems.map((item, index) => (
                     <DeployAnywhereCell index={index} item={item} key={item.title} />
@@ -1833,7 +1836,7 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
               </section>
 
               <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.85vw] py-[0.95vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-                <h2 className="text-[clamp(0.55rem,0.65vw,0.76rem)] font-black uppercase leading-tight text-control-text">Real Benefits</h2>
+                <h2 className="text-[clamp(0.55rem,0.65vw,0.76rem)] font-semibold uppercase leading-tight text-control-text">Real Benefits</h2>
                 <div className="mt-[0.9vh] grid grid-cols-4">
                   {softwareBenefits.map((item, index) => (
                     <SoftwareBenefitCell index={index} item={item} key={item.value} />
@@ -1845,7 +1848,7 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
 
           <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_18vh_16vh] gap-[1.05vh]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.15vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-black uppercase leading-tight text-control-text">Defined by Software. Not Hardware.</h2>
+              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-semibold uppercase leading-tight text-control-text">Defined by Software. Not Hardware.</h2>
               <div className="mt-[0.8vh] divide-y divide-slate-200/90">
                 {softwareDefinedByItems.map((item) => (
                   <SoftwareDefinedByCell item={item} key={item.title} />
@@ -1854,7 +1857,7 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.15vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-black uppercase leading-tight text-control-text">Built for Change</h2>
+              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-semibold uppercase leading-tight text-control-text">Built for Change</h2>
               <div className="mt-[0.78vh] grid gap-[0.55vh]">
                 {builtForChangeItems.map((item) => (
                   <div className="grid grid-cols-[1.35rem_minmax(0,1fr)] items-center gap-[0.48vw]" key={item}>
@@ -1866,12 +1869,12 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.15vw] py-[1.45vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <p className="text-[clamp(1.7rem,2.6vw,3rem)] font-black leading-none text-violet-600">"</p>
+              <Quote aria-hidden="true" className="text-control-warm" size={36} strokeWidth={1.55} />
               <p className="mt-[0.1vh] max-w-[14rem] text-[clamp(0.68rem,0.8vw,0.94rem)] font-medium leading-[1.32] text-control-text">
                 The room is engineered once.
               </p>
               <p className="mt-[0.55vh] max-w-[14rem] text-[clamp(0.68rem,0.8vw,0.94rem)] font-medium leading-[1.28] text-control-text">
-                The operating experience can <span className="font-black text-violet-600">keep improving</span> as teams and missions change.
+                The operating experience can <span className="font-semibold text-violet-600">keep improving</span> as teams and missions change.
               </p>
               <span className="pointer-events-none absolute bottom-0 right-0 h-[5.8rem] w-[5.8rem] opacity-10 [background-image:radial-gradient(circle,rgb(37_99_235/0.8)_1px,transparent_1px)] [background-size:7px_7px]" />
             </section>
@@ -1914,9 +1917,9 @@ function RecognitionOverlay() {
         <span className="absolute left-[40%] top-[18%] h-[3rem] w-[3rem] rounded-full border border-cyan-200/75" />
       </div>
       <div className="absolute left-[25%] top-[34%] text-white drop-shadow-[0_0.5rem_1.4rem_rgb(15_23_42/0.38)]">
-        <p className="text-[clamp(0.92rem,1.1vw,1.25rem)] font-black uppercase leading-none">Welcome</p>
-        <p className="mt-1 text-[clamp(1.45rem,1.85vw,2.1rem)] font-black leading-none">ARJUN</p>
-        <p className="mt-2 text-[clamp(0.52rem,0.62vw,0.72rem)] font-black uppercase tracking-normal">Identity Confirmed</p>
+        <p className="text-[clamp(0.92rem,1.1vw,1.25rem)] font-semibold uppercase leading-none">Welcome</p>
+        <p className="mt-1 text-[clamp(1.45rem,1.85vw,2.1rem)] font-semibold leading-none">ARJUN</p>
+        <p className="mt-2 text-[clamp(0.52rem,0.62vw,0.72rem)] font-semibold uppercase tracking-normal">Identity Confirmed</p>
         <span className="mt-2 inline-grid h-[1.65rem] w-[1.65rem] place-items-center rounded-full border border-emerald-300/70 bg-emerald-500/32 text-emerald-200">
           <SquareCheckBig aria-hidden="true" size={18} />
         </span>
@@ -1942,11 +1945,11 @@ function MiniUnderstandingCell({ item, index }: { item: SimpleItem; index: numbe
 function InfoDeliveryCell({ dark = false, item }: { dark?: boolean; item: SimpleItem }) {
   const Icon = item.Icon;
   return (
-    <div className="grid grid-cols-[2.45rem_minmax(0,1fr)] items-center gap-[0.65vw] py-[0.55vh]">
-      <Icon aria-hidden="true" className="text-control-warm" size={27} strokeWidth={1.55} />
+    <div className="grid grid-cols-[2rem_minmax(0,1fr)] items-center gap-[0.52vw] py-[0.46vh]">
+      <Icon aria-hidden="true" className="text-control-warm" size={22} strokeWidth={1.55} />
       <span className="min-w-0">
-        <strong className={`block text-[clamp(0.52rem,0.62vw,0.72rem)] font-black leading-tight ${dark ? "text-white" : "text-control-text"}`}>{item.title}</strong>
-        <span className={`mt-0.5 block text-[clamp(0.48rem,0.55vw,0.64rem)] font-medium leading-[1.18] ${dark ? "text-slate-200" : "text-slate-800"}`}>{item.description}</span>
+        <strong className={`block text-[clamp(0.46rem,0.56vw,0.66rem)] font-semibold leading-tight ${dark ? "text-white" : "text-control-text"}`}>{item.title}</strong>
+        <span className={`mt-0.5 block text-[clamp(0.42rem,0.49vw,0.58rem)] font-medium leading-[1.12] ${dark ? "text-slate-200" : "text-slate-800"}`}>{item.description}</span>
       </span>
     </div>
   );
@@ -1955,11 +1958,11 @@ function InfoDeliveryCell({ dark = false, item }: { dark?: boolean; item: Simple
 function OperationalStateChip({ item, index }: { item: SimpleItem & { color: string; active?: boolean }; index: number }) {
   const Icon = item.Icon;
   return (
-    <div className={`grid grid-cols-[3.6rem_minmax(0,1fr)] items-center gap-[0.65vw] px-[0.95vw] ${index ? "border-l border-slate-200/90" : ""} ${item.active ? "bg-control-warm/6 ring-1 ring-inset ring-control-warm/22" : ""}`}>
-      <Icon aria-hidden="true" className={item.color} size={36} strokeWidth={1.45} />
+    <div className={`grid grid-cols-[2.75rem_minmax(0,1fr)] items-center gap-[0.5vw] px-[0.7vw] ${index ? "border-l border-slate-200/90" : ""} ${item.active ? "bg-control-warm/6 ring-1 ring-inset ring-control-warm/22" : ""}`}>
+      <Icon aria-hidden="true" className={item.color} size={28} strokeWidth={1.45} />
       <span className="min-w-0">
-        <strong className={`block text-[clamp(0.56rem,0.66vw,0.76rem)] font-black uppercase leading-tight ${item.color}`}>{item.title}</strong>
-        <span className="mt-0.5 block text-[clamp(0.48rem,0.56vw,0.66rem)] font-medium leading-[1.18] text-slate-800">{item.description}</span>
+        <strong className={`block text-[clamp(0.48rem,0.58vw,0.68rem)] font-semibold uppercase leading-tight ${item.color}`}>{item.title}</strong>
+        <span className="mt-0.5 block text-[clamp(0.41rem,0.49vw,0.58rem)] font-medium leading-[1.08] text-slate-800">{item.description}</span>
       </span>
     </div>
   );
@@ -1968,10 +1971,12 @@ function OperationalStateChip({ item, index }: { item: SimpleItem & { color: str
 function RoomResponseSystem({ item, index }: { item: SimpleItem; index: number }) {
   const Icon = item.Icon;
   return (
-    <div className={`min-w-0 px-[0.55vw] text-center ${index ? "border-l border-slate-200/90" : ""}`}>
-      <Icon aria-hidden="true" className={item.color ?? "text-control-warm"} size={26} strokeWidth={1.55} />
-      <h3 className="mt-[0.6vh] text-[clamp(0.45rem,0.54vw,0.63rem)] font-black leading-tight text-control-text">{item.title}</h3>
-      <p className="mx-auto mt-[0.42vh] max-w-[6.5rem] text-[clamp(0.39rem,0.47vw,0.55rem)] font-medium leading-[1.16] text-slate-700">{item.description}</p>
+    <div className={`grid min-h-0 min-w-0 place-items-center px-[0.42vw] text-center ${index ? "border-l border-slate-200/90" : ""}`}>
+      <span className="mx-auto grid h-[1.45rem] w-[1.45rem] place-items-center">
+        <Icon aria-hidden="true" className={item.color ?? "text-control-warm"} size={22} strokeWidth={1.55} />
+      </span>
+      <h3 className="mt-[0.28vh] text-[clamp(0.37rem,0.45vw,0.54rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
+      <p className="mx-auto mt-[0.18vh] max-w-[5.6rem] text-[clamp(0.31rem,0.37vw,0.45rem)] font-medium leading-[1.04] text-slate-700">{item.description}</p>
     </div>
   );
 }
@@ -1979,11 +1984,13 @@ function RoomResponseSystem({ item, index }: { item: SimpleItem; index: number }
 function OperationalHowStep({ item, index }: { item: SimpleItem; index: number }) {
   const Icon = item.Icon;
   return (
-    <div className="relative min-w-0 px-[0.45vw] text-center">
-      {index ? <span className="absolute left-[-0.25vw] top-[1rem] text-[1rem] font-light text-control-text">→</span> : null}
-      <Icon aria-hidden="true" className={index === 1 ? "mx-auto text-amber-500" : index === 3 ? "mx-auto text-green-500" : "mx-auto text-control-warm"} size={25} strokeWidth={1.55} />
-      <h3 className="mt-[0.55vh] text-[clamp(0.43rem,0.51vw,0.6rem)] font-black leading-tight text-control-text">{item.title}</h3>
-      <p className="mx-auto mt-[0.35vh] max-w-[5.6rem] text-[clamp(0.38rem,0.45vw,0.53rem)] font-medium leading-[1.13] text-slate-700">{item.description}</p>
+    <div className="relative grid min-h-0 min-w-0 place-items-center px-[0.34vw] text-center">
+      {index ? <span className="absolute left-[-0.24vw] top-[0.76rem] text-[0.82rem] font-light text-control-text">→</span> : null}
+      <span className="mx-auto grid h-[1.45rem] w-[1.45rem] place-items-center">
+        <Icon aria-hidden="true" className={index === 1 ? "text-amber-500" : index === 3 ? "text-green-500" : "text-control-warm"} size={21} strokeWidth={1.55} />
+      </span>
+      <h3 className="mt-[0.28vh] text-[clamp(0.35rem,0.43vw,0.52rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
+      <p className="mx-auto mt-[0.16vh] max-w-[5rem] text-[clamp(0.3rem,0.36vw,0.44rem)] font-medium leading-[1.04] text-slate-700">{item.description}</p>
     </div>
   );
 }
@@ -1991,13 +1998,13 @@ function OperationalHowStep({ item, index }: { item: SimpleItem; index: number }
 function IncidentExampleFrame({ item, index }: { item: { title: string; description: string; image: string }; index: number }) {
   return (
     <article className="relative min-w-0">
-      {index ? <span className="absolute left-[-0.46vw] top-[1.4rem] text-[1.1rem] font-light text-control-warm">›</span> : null}
-      <div className="relative h-[2.75rem] overflow-hidden rounded-[0.34rem] border border-slate-200 bg-slate-950">
+      {index ? <span className="absolute left-[-0.38vw] top-[1.15rem] text-[0.9rem] font-light text-control-warm">›</span> : null}
+      <div className="relative h-[2.25rem] overflow-hidden rounded-[0.34rem] border border-slate-200 bg-slate-950">
         <img alt="" className="absolute inset-0 h-full w-full object-cover opacity-90" src={item.image} />
         <div className={index === 0 ? "absolute inset-0 bg-control-warm/24" : "absolute inset-0 bg-slate-950/8"} />
       </div>
-      <h3 className="mt-[0.4vh] text-[clamp(0.42rem,0.5vw,0.58rem)] font-black leading-tight text-control-warm">{item.title}</h3>
-      <p className="mt-[0.16vh] text-[clamp(0.36rem,0.43vw,0.5rem)] font-medium leading-[1.08] text-slate-700">{item.description}</p>
+      <h3 className="mt-[0.28vh] text-[clamp(0.36rem,0.44vw,0.52rem)] font-semibold leading-tight text-control-warm">{item.title}</h3>
+      <p className="mt-[0.1vh] text-[clamp(0.31rem,0.36vw,0.43rem)] font-medium leading-[1.02] text-slate-700">{item.description}</p>
     </article>
   );
 }
@@ -2008,7 +2015,7 @@ function PerformanceCallout({ item }: { item: SimpleItem & { color: string; clas
     <div className={`absolute z-20 grid w-[12.25rem] grid-cols-[2.8rem_minmax(0,1fr)] items-center gap-[0.62rem] rounded-[0.5rem] border border-white/90 bg-white/92 px-[0.78rem] py-[0.72rem] shadow-[0_0.9rem_2rem_rgb(15_23_42/0.16)] backdrop-blur-[20px] ${item.className}`}>
       <Icon aria-hidden="true" className={item.color} size={33} strokeWidth={1.5} />
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.52rem,0.6vw,0.68rem)] font-black leading-tight text-control-text">{item.title}</strong>
+        <strong className="block text-[clamp(0.52rem,0.6vw,0.68rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
         <span className="mt-1 block text-[clamp(0.47rem,0.53vw,0.6rem)] font-semibold leading-[1.24] text-slate-800">{item.description}</span>
       </span>
     </div>
@@ -2017,15 +2024,15 @@ function PerformanceCallout({ item }: { item: SimpleItem & { color: string; clas
 
 function MetricCard({ item, index }: { item: (typeof performanceMetrics)[number]; index: number }) {
   return (
-    <article className="relative min-w-0 overflow-hidden rounded-[0.45rem] border border-slate-200/86 bg-white/64 px-[0.65vw] py-[0.78vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92)]">
-      <div className="flex items-start justify-between gap-2">
-        <h3 className="text-[clamp(0.46rem,0.53vw,0.62rem)] font-black uppercase leading-tight text-control-text">{item.title}</h3>
-        <span className="text-[clamp(0.4rem,0.47vw,0.55rem)] font-medium text-slate-700">{item.unit}</span>
+    <article className="relative grid min-h-0 min-w-0 grid-rows-[auto_auto_auto_1fr_auto] overflow-hidden rounded-[0.45rem] border border-slate-200/86 bg-white/64 px-[0.5vw] py-[0.55vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92)]">
+      <div className="flex min-w-0 items-start justify-between gap-1.5">
+        <h3 className="text-[clamp(0.37rem,0.45vw,0.54rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</h3>
+        <span className="shrink-0 text-[clamp(0.34rem,0.4vw,0.48rem)] font-medium leading-tight text-slate-700">{item.unit}</span>
       </div>
-      <p className={`mt-[0.45vh] text-[clamp(0.98rem,1.16vw,1.36rem)] font-black leading-none ${item.color}`}>{item.value}</p>
-      <p className={`mt-[0.25vh] text-[clamp(0.46rem,0.53vw,0.62rem)] font-black ${item.status === "Good" ? "text-green-600" : "text-slate-700"}`}>{item.status}</p>
+      <p className={`mt-[0.28vh] text-[clamp(0.78rem,0.96vw,1.12rem)] font-semibold leading-none ${item.color}`}>{item.value}</p>
+      <p className={`mt-[0.16vh] text-[clamp(0.36rem,0.44vw,0.52rem)] font-semibold leading-tight ${item.status === "Good" ? "text-green-600" : "text-slate-700"}`}>{item.status}</p>
       <MiniSparkline color={item.color} index={index} />
-      <p className="mt-[0.35vh] text-[clamp(0.42rem,0.48vw,0.57rem)] font-medium leading-tight text-control-text">{item.target}</p>
+      <p className="mt-[0.14vh] text-[clamp(0.31rem,0.38vw,0.46rem)] font-medium leading-tight text-control-text">{item.target}</p>
     </article>
   );
 }
@@ -2039,7 +2046,7 @@ function MiniSparkline({ color, index }: { color: string; index: number }) {
   ];
 
   return (
-    <svg aria-hidden="true" className="mt-[0.6vh] h-[1.5rem] w-full overflow-visible" viewBox="0 0 96 30">
+    <svg aria-hidden="true" className="mt-[0.38vh] h-[1.15rem] w-full overflow-visible" viewBox="0 0 96 30">
       <polyline fill="none" points={patterns[index % patterns.length]} stroke={stroke} strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
     </svg>
   );
@@ -2047,16 +2054,16 @@ function MiniSparkline({ color, index }: { color: string; index: number }) {
 
 function ComfortIndexCard() {
   return (
-    <article className="min-w-0 rounded-[0.45rem] border border-slate-200/86 bg-white/64 px-[0.55vw] py-[0.72vh] text-center shadow-[inset_0_1px_0_rgb(255_255_255/0.92)]">
-      <div className="mx-auto grid h-[4.7rem] w-[4.7rem] place-items-center rounded-full bg-[conic-gradient(#84cc16_0_82%,#e2e8f0_82%_100%)] shadow-[inset_0_0_0_1px_rgb(255_255_255/0.75)]">
-        <span className="grid h-[3.45rem] w-[3.45rem] place-items-center rounded-full bg-white">
+    <article className="grid min-h-0 min-w-0 place-items-center rounded-[0.45rem] border border-slate-200/86 bg-white/64 px-[0.45vw] py-[0.5vh] text-center shadow-[inset_0_1px_0_rgb(255_255_255/0.92)]">
+      <div className="mx-auto grid h-[3.55rem] w-[3.55rem] place-items-center rounded-full bg-[conic-gradient(#84cc16_0_82%,#e2e8f0_82%_100%)] shadow-[inset_0_0_0_1px_rgb(255_255_255/0.75)]">
+        <span className="grid h-[2.55rem] w-[2.55rem] place-items-center rounded-full bg-white">
           <span className="text-center">
-            <strong className="block text-[1.35rem] font-black leading-none text-control-text">92</strong>
-            <span className="text-[0.52rem] font-black text-slate-700">Excellent</span>
+            <strong className="block text-[1rem] font-semibold leading-none text-control-text">92</strong>
+            <span className="text-[0.4rem] font-semibold text-slate-700">Excellent</span>
           </span>
         </span>
       </div>
-      <p className="mx-auto mt-[0.45vh] max-w-[6.2rem] text-[clamp(0.4rem,0.47vw,0.55rem)] font-medium leading-[1.12] text-slate-700">Environment is optimized for peak performance.</p>
+      <p className="mx-auto mt-[0.22vh] max-w-[5.4rem] text-[clamp(0.31rem,0.37vw,0.45rem)] font-medium leading-[1.06] text-slate-700">Environment is optimized for peak performance.</p>
     </article>
   );
 }
@@ -2064,11 +2071,13 @@ function ComfortIndexCard() {
 function AdjustmentCell({ item, index }: { item: SimpleItem; index: number }) {
   const Icon = item.Icon;
   return (
-    <div className={`grid min-w-0 grid-cols-[2.65rem_minmax(0,1fr)] items-center gap-[0.55vw] px-[0.65vw] ${index ? "border-l border-slate-200/90" : ""}`}>
-      <Icon aria-hidden="true" className={item.color ?? "text-control-warm"} size={29} strokeWidth={1.55} />
+    <div className={`grid min-h-0 min-w-0 grid-cols-[2rem_minmax(0,1fr)] items-center gap-[0.42vw] px-[0.52vw] ${index ? "border-l border-slate-200/90" : ""}`}>
+      <span className="grid h-[1.8rem] w-[1.8rem] place-items-center">
+        <Icon aria-hidden="true" className={item.color ?? "text-control-warm"} size={23} strokeWidth={1.55} />
+      </span>
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.46rem,0.54vw,0.63rem)] font-black leading-tight text-control-text">{item.title}</strong>
-        <span className="mt-0.5 block text-[clamp(0.4rem,0.47vw,0.55rem)] font-medium leading-[1.12] text-slate-700">{item.description}</span>
+        <strong className="block text-[clamp(0.36rem,0.44vw,0.53rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
+        <span className="mt-0.5 block text-[clamp(0.31rem,0.37vw,0.45rem)] font-medium leading-[1.05] text-slate-700">{item.description}</span>
       </span>
     </div>
   );
@@ -2080,7 +2089,7 @@ function ImpactCell({ item }: { item: SimpleItem }) {
     <div className="grid grid-cols-[2.7rem_minmax(0,1fr)] items-center gap-[0.72vw]">
       <Icon aria-hidden="true" className={item.color ?? "text-green-600"} size={29} strokeWidth={1.55} />
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.52rem,0.61vw,0.72rem)] font-black leading-tight text-control-text">{item.title}</strong>
+        <strong className="block text-[clamp(0.52rem,0.61vw,0.72rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
         <span className="mt-0.5 block text-[clamp(0.47rem,0.55vw,0.64rem)] font-medium leading-[1.2] text-slate-800">{item.description}</span>
       </span>
     </div>
@@ -2094,10 +2103,10 @@ function QuotePanel({ Icon, emphasis, text }: { Icon?: LucideIcon; emphasis: str
       {QuoteIcon ? (
         <QuoteIcon aria-hidden="true" className="absolute left-[1.05vw] top-[2vh] text-control-warm" size={42} strokeWidth={1.35} />
       ) : (
-        <p className="absolute left-[1.05vw] top-[1.4vh] text-[clamp(2rem,3vw,3.5rem)] font-black leading-none text-control-warm">"</p>
+        <Quote aria-hidden="true" className="absolute left-[1.05vw] top-[1.55vh] text-control-warm" size={42} strokeWidth={1.35} />
       )}
       <p className="ml-[4.4rem] mt-[1.4vh] max-w-[13.2rem] text-[clamp(0.72rem,0.85vw,0.98rem)] font-medium leading-[1.32] text-control-text">{text}</p>
-      <p className="ml-[4.4rem] mt-[0.7vh] max-w-[13rem] text-[clamp(0.74rem,0.88vw,1.02rem)] font-black leading-[1.24] text-control-warm">{emphasis}</p>
+      <p className="ml-[4.4rem] mt-[0.7vh] max-w-[13rem] text-[clamp(0.74rem,0.88vw,1.02rem)] font-semibold leading-[1.24] text-control-warm">{emphasis}</p>
       <span className="pointer-events-none absolute bottom-0 right-0 h-[5.8rem] w-[5.8rem] opacity-10 [background-image:radial-gradient(circle,rgb(239_68_68/0.65)_1px,transparent_1px)] [background-size:7px_7px]" />
     </section>
   );
@@ -2107,7 +2116,7 @@ function OperatorProfileCard({ profile }: { profile: (typeof personalizedProfile
   return (
     <article className="grid h-full min-w-0 grid-rows-[auto_minmax(0,1fr)_auto] overflow-hidden rounded-[0.46rem] border border-slate-200/86 bg-white/70 shadow-[0_0.8rem_1.9rem_rgb(15_23_42/0.08)]">
       <div className={`bg-gradient-to-r ${profile.color} px-[0.78vw] py-[0.78vh] text-white`}>
-        <h3 className="truncate text-[clamp(0.56rem,0.66vw,0.78rem)] font-black uppercase leading-tight">{profile.name}</h3>
+        <h3 className="truncate text-[clamp(0.56rem,0.66vw,0.78rem)] font-semibold uppercase leading-tight">{profile.name}</h3>
         <p className="mt-0.5 truncate text-[clamp(0.5rem,0.58vw,0.68rem)] font-semibold leading-tight">Focus: {profile.focus}</p>
       </div>
       <div className="relative min-h-0 overflow-hidden bg-slate-950">
@@ -2120,7 +2129,7 @@ function OperatorProfileCard({ profile }: { profile: (typeof personalizedProfile
           return (
             <div className="min-w-0 px-[0.28vw] text-center" key={setting.title}>
               <Icon aria-hidden="true" className={`mx-auto ${profile.accent}`} size={22} strokeWidth={1.55} />
-              <p className="mt-[0.42vh] text-[clamp(0.38rem,0.45vw,0.52rem)] font-black leading-tight text-control-text">{setting.title}</p>
+              <p className="mt-[0.42vh] text-[clamp(0.38rem,0.45vw,0.52rem)] font-semibold leading-tight text-control-text">{setting.title}</p>
               <p className="mt-[0.18vh] text-[clamp(0.35rem,0.42vw,0.5rem)] font-medium leading-[1.08] text-slate-700">{setting.value}</p>
             </div>
           );
@@ -2135,7 +2144,7 @@ function PersonalizationFactor({ item, index }: { item: SimpleItem; index: numbe
   return (
     <div className={`min-w-0 px-[0.45vw] text-center ${index ? "border-l border-slate-200/90" : ""}`}>
       <Icon aria-hidden="true" className={item.color ?? "text-blue-600"} size={24} strokeWidth={1.5} />
-      <h3 className="mt-[0.55vh] text-[clamp(0.38rem,0.46vw,0.54rem)] font-black leading-tight text-control-text">{item.title}</h3>
+      <h3 className="mt-[0.55vh] text-[clamp(0.38rem,0.46vw,0.54rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
       <p className="mx-auto mt-[0.34vh] max-w-[5.4rem] text-[clamp(0.34rem,0.41vw,0.49rem)] font-medium leading-[1.1] text-slate-700">{item.description}</p>
     </div>
   );
@@ -2149,7 +2158,7 @@ function SwitchUserStep({ item, index }: { item: SimpleItem & { color: string };
       <span className={`mx-auto grid h-[2.8rem] w-[2.8rem] place-items-center rounded-full border border-current/25 bg-white/64 ${item.color}`}>
         <Icon aria-hidden="true" size={25} strokeWidth={1.55} />
       </span>
-      <h3 className="mt-[0.55vh] text-[clamp(0.43rem,0.51vw,0.6rem)] font-black leading-tight text-control-text">{item.title}</h3>
+      <h3 className="mt-[0.55vh] text-[clamp(0.43rem,0.51vw,0.6rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
       <p className="mx-auto mt-[0.3vh] max-w-[6rem] text-[clamp(0.38rem,0.45vw,0.53rem)] font-medium leading-[1.1] text-slate-700">{item.description}</p>
     </div>
   );
@@ -2169,7 +2178,7 @@ function BeyondDeskCategory({ item }: { item: SimpleItem & { color: string } }) 
   return (
     <div className="relative min-w-0 text-center">
       <Icon aria-hidden="true" className={`mx-auto ${item.color}`} size={31} strokeWidth={1.45} />
-      <p className="mt-[0.45vh] text-[clamp(0.5rem,0.59vw,0.68rem)] font-black leading-tight text-control-text">{item.title}</p>
+      <p className="mt-[0.45vh] text-[clamp(0.5rem,0.59vw,0.68rem)] font-semibold leading-tight text-control-text">{item.title}</p>
       <span className={`absolute left-1/2 top-[5.1vh] h-[25vh] -translate-x-1/2 border-l border-dotted ${item.color.includes("green") ? "border-green-500" : item.color.includes("cyan") ? "border-cyan-500" : item.color.includes("orange") ? "border-orange-500" : item.color.includes("violet") ? "border-violet-500" : "border-blue-500"}`} />
     </div>
   );
@@ -2181,7 +2190,7 @@ function PipelineCell({ item, index }: { item: SimpleItem & { color: string }; i
     <div className={`grid min-w-0 grid-cols-[3.35rem_minmax(0,1fr)] items-center gap-[0.55vw] px-[1vw] ${index ? "border-l border-slate-200/90" : ""}`}>
       <Icon aria-hidden="true" className={item.color} size={34} strokeWidth={1.45} />
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.52rem,0.61vw,0.72rem)] font-black uppercase leading-tight text-control-text">{item.title}</strong>
+        <strong className="block text-[clamp(0.52rem,0.61vw,0.72rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</strong>
         <span className="mt-0.5 block text-[clamp(0.46rem,0.54vw,0.63rem)] font-medium leading-[1.18] text-slate-700">{item.description}</span>
       </span>
     </div>
@@ -2193,7 +2202,7 @@ function RoomUnderstandsCard({ item }: { item: SimpleItem & { color: string; bul
   return (
     <article className="min-w-0 rounded-[0.46rem] border border-slate-200/86 bg-white/66 px-[0.62vw] py-[0.85vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92)]">
       <Icon aria-hidden="true" className={`mx-auto ${item.color}`} size={31} strokeWidth={1.45} />
-      <h3 className="mx-auto mt-[0.65vh] max-w-[8rem] text-center text-[clamp(0.43rem,0.51vw,0.6rem)] font-black uppercase leading-tight text-control-text">{item.title}</h3>
+      <h3 className="mx-auto mt-[0.65vh] max-w-[8rem] text-center text-[clamp(0.43rem,0.51vw,0.6rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</h3>
       <ul className="mt-[0.62vh] space-y-[0.22vh]">
         {item.bullets.map((bullet) => (
           <li className="grid grid-cols-[0.45rem_minmax(0,1fr)] gap-1 text-[clamp(0.35rem,0.42vw,0.5rem)] font-medium leading-[1.18] text-slate-700" key={bullet}>
@@ -2214,16 +2223,16 @@ function IntelligenceGlanceCard({ item }: { item: (typeof intelligenceGlanceItem
         <Icon aria-hidden="true" size={27} strokeWidth={1.5} />
       </span>
       <span className="min-w-0">
-        <h3 className="text-[clamp(0.46rem,0.54vw,0.63rem)] font-black uppercase leading-tight text-control-text">{item.title}</h3>
+        <h3 className="text-[clamp(0.46rem,0.54vw,0.63rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</h3>
         <p className="mt-[0.3vh] text-[clamp(1rem,1.22vw,1.42rem)] font-medium leading-none text-control-text">
-          <span className={`font-black ${item.color}`}>{item.value}</span>
+          <span className={`font-semibold ${item.color}`}>{item.value}</span>
           <span className="text-control-text">{item.suffix}</span>
         </p>
         <p className="mt-[0.22vh] text-[clamp(0.4rem,0.48vw,0.56rem)] font-medium leading-tight text-slate-700">{item.caption}</p>
       </span>
       <span className="min-w-0 text-right">
         {item.title === "Occupancy" ? <GlanceSparkline /> : null}
-        <span className={`block text-[clamp(0.56rem,0.66vw,0.78rem)] font-black leading-tight ${item.color}`}>{item.side.split(" ")[0]}</span>
+        <span className={`block text-[clamp(0.56rem,0.66vw,0.78rem)] font-semibold leading-tight ${item.color}`}>{item.side.split(" ")[0]}</span>
         <span className="block text-[clamp(0.38rem,0.45vw,0.53rem)] font-medium leading-tight text-slate-700">{item.side.split(" ").slice(1).join(" ")}</span>
       </span>
     </article>
@@ -2246,7 +2255,7 @@ function DigitalTwinIntroItem({ item }: { item: SimpleItem & { color: string } }
         <Icon aria-hidden="true" size={24} strokeWidth={1.5} />
       </span>
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.5rem,0.59vw,0.68rem)] font-black leading-tight text-control-text">{item.title}</strong>
+        <strong className="block text-[clamp(0.5rem,0.59vw,0.68rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
         <span className="mt-0.5 block text-[clamp(0.45rem,0.52vw,0.61rem)] font-medium leading-[1.18] text-slate-700">{item.description}</span>
       </span>
     </div>
@@ -2256,7 +2265,7 @@ function DigitalTwinIntroItem({ item }: { item: SimpleItem & { color: string } }
 function DigitalTwinTab({ active, label }: { active?: boolean; label: string }) {
   return (
     <button
-      className={`h-[4.2vh] min-w-[7.5rem] rounded-[0.28rem] border px-[1vw] text-[clamp(0.48rem,0.56vw,0.66rem)] font-black uppercase tracking-normal shadow-[inset_0_1px_0_rgb(255_255_255/0.92)] ${
+      className={`h-[4.2vh] min-w-[7.5rem] rounded-[0.28rem] border px-[1vw] text-[clamp(0.48rem,0.56vw,0.66rem)] font-semibold uppercase tracking-normal shadow-[inset_0_1px_0_rgb(255_255_255/0.92)] ${
         active ? "border-control-warm bg-control-warm text-white shadow-[0_0.75rem_1.7rem_rgb(239_68_68/0.16)]" : "border-slate-200/90 bg-white/64 text-control-text"
       }`}
       type="button"
@@ -2272,12 +2281,12 @@ function DigitalTwinCallout({ item }: { item: (typeof digitalTwinCallouts)[numbe
     <div className={`absolute z-20 grid w-[10.3rem] grid-cols-[2.05rem_minmax(0,1fr)] gap-[0.5rem] rounded-[0.42rem] border border-white/90 bg-white/88 px-[0.62rem] py-[0.56rem] shadow-[0_0.9rem_2rem_rgb(15_23_42/0.16)] backdrop-blur-[18px] ${item.className}`}>
       <Icon aria-hidden="true" className={item.color} size={25} strokeWidth={1.55} />
       <span className="min-w-0">
-        <strong className="block text-[0.5rem] font-black uppercase leading-tight text-control-text">{item.title}</strong>
+        <strong className="block text-[0.5rem] font-semibold uppercase leading-tight text-control-text">{item.title}</strong>
         {item.lines.map((line) => (
           <span className="mt-0.5 block text-[0.48rem] font-medium leading-tight text-slate-800" key={line}>
             {line.includes("Online") || line.includes("Normal") || line.includes("Active") || line.includes("Secure") ? (
               <>
-                {line.split(": ")[0]}: <span className="font-black text-green-600">{line.split(": ")[1]}</span>
+                {line.split(": ")[0]}: <span className="font-semibold text-green-600">{line.split(": ")[1]}</span>
               </>
             ) : (
               line
@@ -2297,8 +2306,8 @@ function DigitalTwinMetric({ item, index }: { item: SimpleItem & { value: string
         <Icon aria-hidden="true" size={25} strokeWidth={1.5} />
       </span>
       <span className="min-w-0">
-        <h3 className="text-[clamp(0.43rem,0.51vw,0.6rem)] font-black uppercase leading-tight text-control-text">{item.title}</h3>
-        <p className={`mt-[0.25vh] text-[clamp(0.92rem,1.1vw,1.3rem)] font-black leading-none ${item.color}`}>{item.value}</p>
+        <h3 className="text-[clamp(0.43rem,0.51vw,0.6rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</h3>
+        <p className={`mt-[0.25vh] text-[clamp(0.92rem,1.1vw,1.3rem)] font-semibold leading-none ${item.color}`}>{item.value}</p>
         <p className="mt-[0.2vh] text-[clamp(0.38rem,0.45vw,0.53rem)] font-medium leading-tight text-slate-700">{item.description}</p>
       </span>
     </div>
@@ -2310,7 +2319,7 @@ function TwinRepresentationCell({ item, index }: { item: SimpleItem & { color: s
   return (
     <div className={`min-w-0 px-[0.48vw] text-center ${index ? "border-l border-slate-200/90" : ""}`}>
       <Icon aria-hidden="true" className={`mx-auto ${item.color}`} size={27} strokeWidth={1.45} />
-      <h3 className="mt-[0.54vh] text-[clamp(0.4rem,0.48vw,0.56rem)] font-black uppercase leading-tight text-control-text">{item.title}</h3>
+      <h3 className="mt-[0.54vh] text-[clamp(0.4rem,0.48vw,0.56rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</h3>
       <p className="mx-auto mt-[0.28vh] max-w-[5.9rem] text-[clamp(0.34rem,0.41vw,0.49rem)] font-medium leading-[1.1] text-slate-700">{item.description}</p>
     </div>
   );
@@ -2324,7 +2333,7 @@ function TwinEnablementCell({ item }: { item: SimpleItem & { color: string } }) 
         <Icon aria-hidden="true" size={25} strokeWidth={1.5} />
       </span>
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.5rem,0.59vw,0.68rem)] font-black leading-tight text-control-text">{item.title}</strong>
+        <strong className="block text-[clamp(0.5rem,0.59vw,0.68rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
         <span className="mt-0.5 block text-[clamp(0.45rem,0.52vw,0.61rem)] font-medium leading-[1.18] text-slate-800">{item.description}</span>
       </span>
     </div>
@@ -2339,7 +2348,7 @@ function NovaCapabilityCallout({ item }: { item: SimpleItem & { color: string; c
     <div className={`absolute z-20 grid w-[13rem] grid-cols-[2.7rem_minmax(0,1fr)] gap-[0.62rem] rounded-[0.52rem] border bg-white/84 px-[0.78rem] py-[0.72rem] shadow-[0_0.9rem_2rem_rgb(15_23_42/0.14)] backdrop-blur-[18px] ${border} ${item.className}`}>
       <Icon aria-hidden="true" className={item.color} size={33} strokeWidth={1.45} />
       <span className="min-w-0">
-        <strong className={`block text-[0.58rem] font-black uppercase leading-tight ${item.color}`}>{item.title}</strong>
+        <strong className={`block text-[0.58rem] font-semibold uppercase leading-tight ${item.color}`}>{item.title}</strong>
         <span className="mt-1 block text-[0.54rem] font-medium leading-[1.28] text-control-text">{item.description}</span>
       </span>
     </div>
@@ -2365,7 +2374,7 @@ function NovaSupportCell({ item, index }: { item: SimpleItem & { color: string }
       <span className={`mx-auto grid h-[2.9rem] w-[2.9rem] place-items-center rounded-full border border-current/20 bg-white/64 ${item.color}`}>
         <Icon aria-hidden="true" size={27} strokeWidth={1.5} />
       </span>
-      <h3 className="mt-[0.65vh] text-[clamp(0.45rem,0.54vw,0.63rem)] font-black leading-tight text-control-text">{item.title}</h3>
+      <h3 className="mt-[0.65vh] text-[clamp(0.45rem,0.54vw,0.63rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
       <p className="mx-auto mt-[0.42vh] max-w-[6.9rem] text-[clamp(0.38rem,0.45vw,0.53rem)] font-medium leading-[1.15] text-slate-700">{item.description}</p>
     </div>
   );
@@ -2379,7 +2388,7 @@ function NovaCanDoCell({ item }: { item: SimpleItem & { color: string } }) {
         <Icon aria-hidden="true" size={25} strokeWidth={1.5} />
       </span>
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.5rem,0.59vw,0.68rem)] font-black leading-tight text-control-text">{item.title}</strong>
+        <strong className="block text-[clamp(0.5rem,0.59vw,0.68rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
         <span className="mt-0.5 block text-[clamp(0.45rem,0.52vw,0.61rem)] font-medium leading-[1.18] text-slate-800">{item.description}</span>
       </span>
     </div>
@@ -2393,7 +2402,7 @@ function SoftwareDefineStep({ item, index }: { item: SimpleItem & { color: strin
       {index ? <span className="absolute left-[-0.3vw] top-[1.25rem] text-[1.15rem] font-light text-control-text">›</span> : null}
       <Icon aria-hidden="true" className={item.color} size={34} strokeWidth={1.45} />
       <span className="min-w-0">
-        <strong className={`block text-[clamp(0.5rem,0.59vw,0.68rem)] font-black uppercase leading-tight ${item.color}`}>{item.title}</strong>
+        <strong className={`block text-[clamp(0.5rem,0.59vw,0.68rem)] font-semibold uppercase leading-tight ${item.color}`}>{item.title}</strong>
         <span className="mt-0.5 block text-[clamp(0.43rem,0.5vw,0.59rem)] font-medium leading-[1.18] text-control-text">{item.description}</span>
       </span>
     </div>
@@ -2409,7 +2418,7 @@ function SoftwarePlatformNode({ item, index }: { item: SimpleItem & { color: str
       <span className={`mx-auto grid place-items-center rounded-full border border-current/20 bg-white/64 ${item.color} ${isPlatform ? "h-[5.2rem] w-[5.2rem] shadow-[0_0_0_0.5rem_rgb(59_130_246/0.06)]" : "h-[3.25rem] w-[3.25rem]"}`}>
         <Icon aria-hidden="true" size={isPlatform ? 36 : 30} strokeWidth={1.45} />
       </span>
-      <h3 className="mt-[0.65vh] text-[clamp(0.43rem,0.51vw,0.6rem)] font-black uppercase leading-tight text-control-text">{item.title}</h3>
+      <h3 className="mt-[0.65vh] text-[clamp(0.43rem,0.51vw,0.6rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</h3>
       {item.description ? <p className="mx-auto mt-[0.28vh] max-w-[6.1rem] text-[clamp(0.36rem,0.43vw,0.51rem)] font-medium leading-[1.12] text-slate-700">{item.description}</p> : null}
     </div>
   );
@@ -2444,7 +2453,7 @@ function SoftwareDefinedByCell({ item }: { item: SimpleItem & { color: string } 
     <div className="grid grid-cols-[3.15rem_minmax(0,1fr)] items-center gap-[0.72vw] py-[0.92vh] first:pt-0 last:pb-0">
       <Icon aria-hidden="true" className={item.color} size={30} strokeWidth={1.45} />
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.5rem,0.59vw,0.68rem)] font-black leading-tight text-control-text">{item.title}</strong>
+        <strong className="block text-[clamp(0.5rem,0.59vw,0.68rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
         <span className="mt-0.5 block text-[clamp(0.45rem,0.52vw,0.61rem)] font-medium leading-[1.18] text-slate-800">{item.description}</span>
       </span>
     </div>
@@ -2456,7 +2465,7 @@ function InfoHeroCallout({ Icon, className, color, text, title }: { Icon: Lucide
     <div className={`absolute z-20 grid w-[11.4rem] grid-cols-[2.35rem_minmax(0,1fr)] gap-[0.55rem] rounded-[0.45rem] border border-white/28 bg-slate-950/78 px-[0.72rem] py-[0.65rem] text-white shadow-[0_0.9rem_2rem_rgb(15_23_42/0.24)] backdrop-blur-md ${className}`}>
       <Icon aria-hidden="true" className={color} size={28} strokeWidth={1.55} />
       <span>
-        <strong className="block text-[0.58rem] font-black uppercase leading-tight">{title}</strong>
+        <strong className="block text-[0.58rem] font-semibold uppercase leading-tight">{title}</strong>
         <span className="mt-1 block text-[0.54rem] font-medium leading-[1.3] text-slate-100">{text}</span>
       </span>
     </div>
@@ -2471,7 +2480,7 @@ function InfoHowStep({ item, index }: { item: SimpleItem & { color: string }; in
       <span className={`mx-auto grid h-[3.45rem] w-[3.45rem] place-items-center rounded-full border border-current/25 bg-white/55 ${item.color}`}>
         <Icon aria-hidden="true" size={30} strokeWidth={1.55} />
       </span>
-      <h3 className="mt-[0.8vh] text-[clamp(0.54rem,0.63vw,0.72rem)] font-black leading-tight text-control-text">{item.title}</h3>
+      <h3 className="mt-[0.8vh] text-[clamp(0.54rem,0.63vw,0.72rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
       <p className="mx-auto mt-[0.55vh] max-w-[8.2rem] text-[clamp(0.48rem,0.56vw,0.65rem)] font-medium leading-[1.22] text-slate-800">{item.description}</p>
     </div>
   );
@@ -2479,16 +2488,16 @@ function InfoHowStep({ item, index }: { item: SimpleItem & { color: string }; in
 
 function ComparisonPanel({ accent, items, title }: { accent: string; items: SimpleItem[]; title: string }) {
   return (
-    <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.25vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-      <h2 className="text-[clamp(0.6rem,0.7vw,0.82rem)] font-black uppercase leading-tight text-control-text">{title}</h2>
-      <div className={`mt-[0.75vh] h-[2px] w-[1.7rem] ${accent === "text-green-500" ? "bg-green-500" : "bg-control-warm"}`} />
-      <div className="mt-[0.8vh] divide-y divide-slate-200/90">
+    <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.85vw] py-[0.9vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+      <h2 className="text-[clamp(0.52rem,0.62vw,0.74rem)] font-semibold uppercase leading-tight text-control-text">{title}</h2>
+      <div className={`mt-[0.55vh] h-[2px] w-[1.55rem] ${accent === "text-green-500" ? "bg-green-500" : "bg-control-warm"}`} />
+      <div className="mt-[0.55vh] divide-y divide-slate-200/90">
         {items.map((item) => {
           const Icon = item.Icon;
           return (
-            <div className="grid grid-cols-[2.35rem_minmax(0,1fr)] items-center gap-[0.55vw] py-[0.78vh]" key={item.title}>
-              <Icon aria-hidden="true" className={item.color ?? accent} size={25} strokeWidth={1.55} />
-              <p className="text-[clamp(0.48rem,0.57vw,0.68rem)] font-medium leading-[1.22] text-control-text">{item.title}</p>
+            <div className="grid grid-cols-[2rem_minmax(0,1fr)] items-center gap-[0.48vw] py-[0.58vh]" key={item.title}>
+              <Icon aria-hidden="true" className={item.color ?? accent} size={22} strokeWidth={1.55} />
+              <p className="text-[clamp(0.42rem,0.5vw,0.6rem)] font-medium leading-[1.12] text-control-text">{item.title}</p>
             </div>
           );
         })}
@@ -2504,7 +2513,7 @@ function InfoExampleCard({ item }: { item: { title: string; description: string;
         <img alt="" className="absolute inset-0 h-full w-full object-cover opacity-92" src={item.image} />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgb(15_23_42/0.14))]" />
       </div>
-      <h3 className="mt-[0.45vh] truncate text-[clamp(0.48rem,0.56vw,0.65rem)] font-black uppercase leading-tight text-control-text">{item.title}</h3>
+      <h3 className="mt-[0.45vh] truncate text-[clamp(0.48rem,0.56vw,0.65rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</h3>
       <p className="mt-[0.16vh] text-[clamp(0.44rem,0.51vw,0.6rem)] font-medium leading-[1.1] text-slate-800">{item.description}</p>
     </article>
   );
@@ -2517,7 +2526,7 @@ function ConsoleModeCell({ item, index }: { item: SimpleItem & { color: string }
       <span className={`mx-auto grid h-[3.45rem] w-[3.45rem] place-items-center rounded-full border border-current/25 bg-white/55 ${item.color}`}>
         <Icon aria-hidden="true" size={31} strokeWidth={1.55} />
       </span>
-      <h3 className={`mt-[1vh] text-[clamp(0.58rem,0.68vw,0.78rem)] font-black uppercase ${item.color}`}>{item.title}</h3>
+      <h3 className={`mt-[1vh] text-[clamp(0.58rem,0.68vw,0.78rem)] font-semibold uppercase ${item.color}`}>{item.title}</h3>
       <p className="mx-auto mt-[0.7vh] max-w-[11.4rem] text-[clamp(0.54rem,0.63vw,0.73rem)] font-medium leading-[1.32] text-slate-800">{item.description}</p>
     </div>
   );
@@ -2529,7 +2538,7 @@ function ConsoleAdaptStep({ item, index }: { item: SimpleItem; index: number }) 
     <div className="relative min-w-0 px-[0.8vw] text-center">
       {index ? <span className="absolute left-[-0.3vw] top-[1.05rem] text-[1.25rem] font-light text-control-text">→</span> : null}
       <Icon aria-hidden="true" className="mx-auto text-control-text" size={29} strokeWidth={1.55} />
-      <h3 className="mt-[0.75vh] text-[clamp(0.54rem,0.63vw,0.72rem)] font-black leading-tight text-control-text">{item.title}</h3>
+      <h3 className="mt-[0.75vh] text-[clamp(0.54rem,0.63vw,0.72rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
       <p className="mx-auto mt-[0.55vh] max-w-[8rem] text-[clamp(0.49rem,0.57vw,0.66rem)] font-medium leading-[1.22] text-slate-800">{item.description}</p>
     </div>
   );
@@ -2541,7 +2550,7 @@ function BenefitCell({ dark = false, item }: { dark?: boolean; item: SimpleItem 
     <div className="grid grid-cols-[2.8rem_minmax(0,1fr)] items-center gap-[0.7vw] py-[1.35vh]">
       <Icon aria-hidden="true" className="text-control-warm" size={30} strokeWidth={1.55} />
       <span className="min-w-0">
-        <strong className={`block text-[clamp(0.56rem,0.65vw,0.76rem)] font-black leading-tight ${dark ? "text-white" : "text-control-text"}`}>{item.title}</strong>
+        <strong className={`block text-[clamp(0.56rem,0.65vw,0.76rem)] font-semibold leading-tight ${dark ? "text-white" : "text-control-text"}`}>{item.title}</strong>
         <span className={`mt-0.5 block text-[clamp(0.49rem,0.57vw,0.67rem)] font-medium leading-[1.24] ${dark ? "text-slate-200" : "text-slate-800"}`}>{item.description}</span>
       </span>
     </div>
@@ -2555,7 +2564,7 @@ function TransitionFrame({ item, index }: { item: { title: string; description: 
       <div className="relative h-[2.85rem] overflow-hidden rounded-[0.32rem] border border-slate-200 bg-slate-950">
         <img alt="" className="absolute inset-0 h-full w-full object-cover opacity-90" src={index < 2 ? "/assets/source-pdf/p24_054_1418x798.jpg" : "/assets/source-pdf/p23_053_1418x798.jpg"} />
         <div className={`absolute inset-0 ${index >= 2 ? "bg-control-warm/22" : "bg-slate-950/12"}`} />
-        <span className="absolute bottom-[-0.05rem] left-[-0.05rem] grid h-[1.12rem] w-[1.12rem] place-items-center rounded-full bg-control-warm text-[0.55rem] font-black text-white">{index + 1}</span>
+        <span className="absolute bottom-[-0.05rem] left-[-0.05rem] grid h-[1.12rem] w-[1.12rem] place-items-center rounded-full bg-control-warm text-[0.55rem] font-semibold text-white">{index + 1}</span>
       </div>
       <h3 className="mt-[0.38vh] text-[clamp(0.5rem,0.58vw,0.68rem)] font-medium leading-tight text-control-text">{item.title}</h3>
       <p className="mt-[0.16vh] text-[clamp(0.46rem,0.53vw,0.62rem)] font-medium leading-[1.12] text-slate-800">{item.description}</p>
@@ -2568,7 +2577,7 @@ function SecurityCell({ item, index }: { item: SimpleItem; index: number }) {
   return (
     <div className={`px-[0.65vw] text-center ${index ? "border-l border-slate-200/90" : ""}`}>
       <Icon aria-hidden="true" className="mx-auto text-control-text" size={34} strokeWidth={1.55} />
-      <p className="mx-auto mt-[1.2vh] max-w-[6.5rem] text-[clamp(0.58rem,0.68vw,0.78rem)] font-black leading-tight text-control-text">{item.title}</p>
+      <p className="mx-auto mt-[1.2vh] max-w-[6.5rem] text-[clamp(0.58rem,0.68vw,0.78rem)] font-semibold leading-tight text-control-text">{item.title}</p>
     </div>
   );
 }
@@ -2579,7 +2588,7 @@ function ExperienceStep({ item, index }: { item: SimpleItem; index: number }) {
     <div className="relative min-w-0 px-[0.8vw]">
       {index ? <span className="absolute left-[-0.3vw] top-[1rem] text-[1.25rem] font-light text-control-text">→</span> : null}
       <Icon aria-hidden="true" className="text-control-warm" size={29} strokeWidth={1.55} />
-      <h3 className="mt-[0.8vh] text-[clamp(0.55rem,0.64vw,0.74rem)] font-black leading-tight text-control-text">{item.title}</h3>
+      <h3 className="mt-[0.8vh] text-[clamp(0.55rem,0.64vw,0.74rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
       <p className="mt-[0.65vh] max-w-[8rem] text-[clamp(0.5rem,0.58vw,0.67rem)] font-medium leading-[1.28] text-slate-800">{item.description}</p>
     </div>
   );
@@ -2593,7 +2602,7 @@ function ReadinessCard({ item }: { item: SimpleItem }) {
         <Icon aria-hidden="true" size={31} strokeWidth={1.55} />
       </span>
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.64rem,0.74vw,0.86rem)] font-black leading-tight text-control-text">{item.title}</strong>
+        <strong className="block text-[clamp(0.64rem,0.74vw,0.86rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
         <span className="mt-1 block text-[clamp(0.56rem,0.65vw,0.76rem)] font-medium leading-[1.28] text-slate-800">{item.description}</span>
       </span>
     </article>
@@ -2606,9 +2615,11 @@ function OutcomeCell({ item, index }: { item: SimpleItem; index: number }) {
     <div className={`grid min-w-0 grid-cols-[2.8rem_minmax(0,1fr)] items-center gap-[0.65vw] px-[0.95vw] ${index ? "border-l border-slate-200/90" : ""}`}>
       <Icon aria-hidden="true" className="text-control-warm" size={31} strokeWidth={1.55} />
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.56rem,0.65vw,0.76rem)] font-black leading-tight text-control-text">{item.title}</strong>
+        <strong className="block text-[clamp(0.56rem,0.65vw,0.76rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
         <span className="mt-0.5 block text-[clamp(0.5rem,0.58vw,0.68rem)] font-medium leading-[1.22] text-slate-800">{item.description}</span>
       </span>
     </div>
   );
 }
+
+

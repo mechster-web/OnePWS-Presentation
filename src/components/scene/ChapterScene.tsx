@@ -153,7 +153,7 @@ export function ChapterScene({ chapter }: Props) {
           </motion.p>
           <motion.h1
             animate={{ opacity: 1, y: 0 }}
-            className="scene-title mt-6 max-w-[13ch] text-balance font-extrabold tracking-normal text-control-text"
+            className="scene-title mt-6 max-w-[13ch] text-balance font-semibold tracking-normal text-control-text"
             initial={false}
             transition={{ duration: motionDuration, delay: 0.12 }}
           >
@@ -319,3 +319,4 @@ function SceneArchitecture({ chapter }: { chapter: Chapter }) {
     </div>
   );
 }
+

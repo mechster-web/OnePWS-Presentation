@@ -32,7 +32,7 @@ export class ErrorBoundary extends Component<Props, State> {
           <div className="mb-6 flex h-12 w-12 items-center justify-center border border-control-warm/50 text-control-warm">
             <AlertTriangle aria-hidden="true" size={24} />
           </div>
-          <h1 className="text-2xl font-semibold tracking-normal">Presentation paused</h1>
+          <h1 className="text-2xl font-bold tracking-normal">Presentation paused</h1>
           <p className="mt-3 max-w-xl text-sm leading-6 text-control-soft">
             The control-room presentation encountered an error. Refresh the runtime to restart the
             local experience.
@@ -55,3 +55,4 @@ export class ErrorBoundary extends Component<Props, State> {
     );
   }
 }
+

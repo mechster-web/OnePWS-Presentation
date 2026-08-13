@@ -166,10 +166,10 @@ export function OperatorChallengesChapter({ chapter }: Props) {
           <p className="text-[clamp(0.72rem,0.78vw,0.9rem)] font-bold uppercase tracking-[0.22em] text-control-warm">
             {chapter.eyebrow}
           </p>
-          <h1 className="mt-[2vh] max-w-[17ch] text-balance text-[clamp(2.48rem,3.48vw,4.55rem)] font-extrabold leading-[0.95] tracking-normal text-control-text">
+          <h1 className="mt-[2vh] max-w-[17ch] text-balance text-[clamp(2.48rem,3.48vw,4.55rem)] font-bold leading-[0.95] tracking-normal text-control-text md:text-[2.5vw]">
             {chapter.headline}
           </h1>
-          <p className="mt-[1.65vh] max-w-[41rem] text-[clamp(0.88rem,0.96vw,1.08rem)] leading-[1.32] text-control-soft">
+          <p className="mt-[1.65vh] max-w-[41rem] text-[clamp(0.88rem,0.96vw,1.08rem)] leading-[1.32] text-control-soft md:text-[0.8vw]">
             {chapter.supportingMessage}
           </p>
         </motion.div>
@@ -201,7 +201,7 @@ export function OperatorChallengesChapter({ chapter }: Props) {
                 <motion.button
                   animate={{ opacity: 1, y: 0 }}
                   aria-pressed={isSelected}
-                  className={`group relative flex h-[clamp(7.15rem,12.4vh,8.65rem)] flex-col overflow-hidden rounded-[0.42rem] border px-[clamp(0.78rem,0.88vw,1rem)] py-[clamp(0.58rem,0.72vh,0.8rem)] text-left shadow-[0_0.9rem_2rem_rgb(15_23_42/0.06)] backdrop-blur-xl transition-colors ${
+                  className={`group relative flex h-[clamp(7.15rem,13vh,8.65rem)] flex-col overflow-hidden rounded-[0.42rem] border px-[clamp(0.78rem,0.88vw,1rem)] py-[clamp(0.58rem,0.72vh,0.8rem)] text-left shadow-[0_0.9rem_2rem_rgb(15_23_42/0.06)] backdrop-blur-xl transition-colors ${
                     isSelected
                       ? "border-control-warm bg-white/88 shadow-[0_1rem_2.4rem_rgb(207_31_43/0.20)]"
                       : "border-slate-300/90 bg-white/72 hover:border-control-warm/50"
@@ -222,10 +222,10 @@ export function OperatorChallengesChapter({ chapter }: Props) {
                       transition={{ duration: 0.46, ease: processEase }}
                     />
                   ) : null}
-                  <span className="block text-[clamp(0.95rem,1.08vw,1.24rem)] font-extrabold tracking-[0.05em] text-control-warm">
+                  <span className="block text-[clamp(0.95rem,1.08vw,1.24rem)] font-semibold tracking-[0.05em] text-control-warm">
                     {choice.index}
                   </span>
-                  <span className="mt-[0.48vh] block text-[clamp(0.72rem,0.8vw,0.92rem)] font-extrabold leading-tight text-control-text">
+                  <span className="mt-[0.48vh] block text-[clamp(0.72rem,0.8vw,0.92rem)] font-semibold leading-tight text-control-text">
                     {choice.title}
                   </span>
                   <span className="mt-[0.45vh] block h-px w-8 bg-control-warm/70" />
@@ -257,7 +257,7 @@ export function OperatorChallengesChapter({ chapter }: Props) {
           <div className="grid grid-cols-[minmax(12rem,0.34fr)_1fr]">
             <div className="flex items-center border-r border-slate-300 px-[1.25vw]">
               <div className="border-l-2 border-control-warm pl-[0.9vw]">
-                <p className="text-[clamp(0.78rem,0.9vw,1.02rem)] font-extrabold leading-tight text-control-text">
+                <p className="text-[clamp(0.78rem,0.9vw,1.02rem)] font-semibold leading-tight text-control-text">
                   {isRiskScene ? "Operational impact" : "How this affects the operator"}
                 </p>
               </div>
@@ -278,7 +278,7 @@ export function OperatorChallengesChapter({ chapter }: Props) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="pws-scene-control-dock absolute bottom-[2.45vh] left-[3.55vw] justify-start"
+          className="pws-scene-control-dock absolute bottom-[0.1vh] left-[0.1vw] z-40 justify-start"
           initial={state.reducedMotion ? false : { opacity: 0, y: 10 }}
           transition={{ duration: motionDuration, delay: 0.72, ease: processEase }}
         >
@@ -313,3 +313,5 @@ export function OperatorChallengesChapter({ chapter }: Props) {
     </article>
   );
 }
+
+

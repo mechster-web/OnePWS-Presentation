@@ -17,7 +17,7 @@ export function DesignSystemShowcase() {
     <main className={`pws-showcase-shell pws-theme-${theme} pws-performance-${performance}`}>
       <section className="px-[clamp(1.5rem,5vw,6rem)] py-[clamp(2rem,5vw,6rem)]">
         <p className="pws-technical-label">OnePWS internal design system</p>
-        <h1 className="mt-5 max-w-5xl text-[clamp(2.5rem,6vw,6.5rem)] font-semibold leading-[0.94] tracking-[-0.02em]">
+        <h1 className="mt-5 max-w-5xl text-[clamp(2.5rem,6vw,6.5rem)] font-bold leading-[0.94] tracking-[-0.02em]">
           Cinematic control-room presentation language
         </h1>
         <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--pws-theme-muted)]">
@@ -126,3 +126,4 @@ export function DesignSystemShowcase() {
 }
 
 export default DesignSystemShowcase;
+

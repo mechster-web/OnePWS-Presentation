@@ -195,7 +195,7 @@ export function MainNavigation() {
                     <div className="pws-next-scene-card">
                       <div className="min-w-0">
                         <p className="uppercase tracking-[0.18em] text-control-warm">Next Scene</p>
-                        <p className="mt-1 truncate text-sm font-black text-control-text">{model.nextDestination.shortTitle}</p>
+                        <p className="mt-1 truncate text-sm font-semibold text-control-text">{model.nextDestination.shortTitle}</p>
                         <p className="mt-1 text-[11px] text-control-muted">{Math.round(model.nextDestination.duration / 60_000)} min · {model.nextDestination.navigationType}</p>
                       </div>
                       <ChevronRight aria-hidden="true" className="shrink-0 text-control-warm" size={18} />
@@ -313,3 +313,4 @@ function JourneyTrace({
     </div>
   );
 }
+

@@ -168,12 +168,12 @@ export function WhyOnePwsChapter({ chapter }: { chapter: Chapter }) {
             transition={{ duration: 0.72, ease }}
           >
             <div className="min-w-0 pl-[0.35vw] pt-[1.05vh]">
-              <h1 className="text-[clamp(2.45rem,3.45vw,4.85rem)] font-black uppercase leading-[0.98] tracking-normal text-black">
+              <h1 className="text-[clamp(2.45rem,3.45vw,4.85rem)] font-bold uppercase leading-[0.98] tracking-normal text-black md:text-[2.5vw]">
                 <span className="block">Why</span>
                 <span className="block text-control-warm">OnePWS.</span>
               </h1>
               <div className="mt-[1.15vh] h-[2px] w-[3rem] bg-control-warm" />
-              <p className="mt-[1.25vh] max-w-[45rem] text-[clamp(0.78rem,0.98vw,1.14rem)] font-medium leading-[1.3] text-slate-900">
+              <p className="mt-[1.25vh] max-w-[45rem] text-[clamp(0.78rem,0.98vw,1.14rem)] font-medium leading-[1.3] text-slate-900 md:text-[0.8vw]">
                 One accountable capability for the complete control room: design, ergonomics, manufacturing,
                 integration, compliance, project proof and lifecycle support.
               </p>
@@ -198,7 +198,7 @@ export function WhyOnePwsChapter({ chapter }: { chapter: Chapter }) {
               ) : null}
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgb(255_255_255/0.82)_0%,rgb(255_255_255/0.32)_48%,rgb(255_255_255/0.1)_100%)]" />
               <div className="absolute left-[1.1vw] top-[1.5vh] max-w-[19rem] rounded-[0.8rem] border border-white/84 bg-white/70 p-[1vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_0.8rem_2rem_rgb(15_23_42/0.1)] backdrop-blur-[18px]">
-                <p className="text-[clamp(0.7rem,0.82vw,0.96rem)] font-black uppercase leading-tight text-control-text">
+                <p className="text-[clamp(0.7rem,0.82vw,0.96rem)] font-semibold uppercase leading-tight text-control-text">
                   The buying decision is not furniture versus technology.
                 </p>
                 <p className="mt-[0.65vh] text-[clamp(0.6rem,0.72vw,0.82rem)] font-semibold leading-[1.28] text-slate-700">
@@ -208,8 +208,8 @@ export function WhyOnePwsChapter({ chapter }: { chapter: Chapter }) {
               <div className="absolute bottom-[1.2vh] left-[1.1vw] right-[1.1vw] grid grid-cols-3 gap-[0.62vw]">
                 {["People", "Room", "Systems"].map((label, index) => (
                   <div className="rounded-[0.7rem] border border-white/78 bg-white/72 px-[0.75vw] py-[0.85vh] text-center shadow-sm backdrop-blur-[14px]" key={label}>
-                    <p className="text-[0.62rem] font-black uppercase tracking-[0.12em] text-slate-500">0{index + 1}</p>
-                    <p className="mt-[0.25vh] text-[0.82rem] font-black text-control-text">{label}</p>
+                    <p className="text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-slate-500">0{index + 1}</p>
+                    <p className="mt-[0.25vh] text-[0.82rem] font-semibold text-control-text">{label}</p>
                   </div>
                 ))}
               </div>
@@ -218,12 +218,12 @@ export function WhyOnePwsChapter({ chapter }: { chapter: Chapter }) {
             <section className="min-h-0 overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/72 p-[0.9vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.8rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <div className="flex items-end justify-between gap-4">
                 <div>
-                  <h2 className="text-[clamp(0.9rem,1.05vw,1.22rem)] font-black uppercase leading-tight text-control-text">
+                  <h2 className="text-[clamp(0.9rem,1.05vw,1.22rem)] font-semibold uppercase leading-tight text-control-text">
                     What Makes the Decision Safer
                   </h2>
                   <div className="mt-[0.7vh] h-[2px] w-[2.6rem] bg-control-warm" />
                 </div>
-                <p className="rounded-full border border-slate-200 bg-white/75 px-3 py-1 text-[0.58rem] font-black uppercase tracking-[0.14em] text-slate-600">
+                <p className="rounded-full border border-slate-200 bg-white/75 px-3 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.14em] text-slate-600">
                   Customer-facing proof
                 </p>
               </div>
@@ -243,13 +243,13 @@ export function WhyOnePwsChapter({ chapter }: { chapter: Chapter }) {
             transition={{ duration: 0.72, delay: 0.14, ease }}
           >
             <section className="overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/76 px-[1vw] py-[1.05vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.78rem,0.9vw,1.02rem)] font-black uppercase leading-tight text-control-text">
+              <h2 className="text-[clamp(0.78rem,0.9vw,1.02rem)] font-semibold uppercase leading-tight text-control-text">
                 Proven Where Control Rooms Matter
               </h2>
               <div className="mt-[0.55vh] h-[2px] w-[2.35rem] bg-control-warm" />
               <div className="mt-[0.9vh] grid grid-cols-3 gap-[0.55vw]">
                 {featuredProjectNames.map((project) => (
-                  <div className="rounded-[0.55rem] border border-slate-200/86 bg-white/70 px-[0.62vw] py-[0.75vh] text-[clamp(0.52rem,0.62vw,0.72rem)] font-black leading-tight text-slate-800" key={project}>
+                  <div className="rounded-[0.55rem] border border-slate-200/86 bg-white/70 px-[0.62vw] py-[0.75vh] text-[clamp(0.52rem,0.62vw,0.72rem)] font-semibold leading-tight text-slate-800" key={project}>
                     {project}
                   </div>
                 ))}
@@ -258,7 +258,7 @@ export function WhyOnePwsChapter({ chapter }: { chapter: Chapter }) {
 
             <section className="grid min-h-0 grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/76 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <div className="border-r border-slate-200/90 px-[1vw] py-[1.05vh]">
-                <p className="text-[clamp(1.18rem,1.55vw,1.85rem)] font-black leading-tight text-control-text">
+                <p className="text-[clamp(1.18rem,1.55vw,1.85rem)] font-semibold leading-tight text-control-text">
                   Better rooms start with <span className="text-control-warm">one accountable system.</span>
                 </p>
                 <p className="mt-[0.75vh] text-[clamp(0.58rem,0.68vw,0.78rem)] font-semibold leading-[1.25] text-slate-700">
@@ -312,8 +312,8 @@ function WhyMetricCard({ metric }: { metric: ProofMetric; index: number }) {
           <metric.Icon aria-hidden="true" size={20} strokeWidth={1.55} />
         </span>
       </div>
-      <strong className="mt-[0.12vh] block text-[clamp(0.98rem,1.34vw,1.55rem)] font-black leading-none text-control-warm">{metric.value}</strong>
-      <span className="mt-[0.28vh] block text-[clamp(0.48rem,0.58vw,0.68rem)] font-black leading-tight text-control-text">{metric.label}</span>
+      <strong className="mt-[0.12vh] block text-[clamp(0.98rem,1.34vw,1.55rem)] font-semibold leading-none text-control-warm">{metric.value}</strong>
+      <span className="mt-[0.28vh] block text-[clamp(0.48rem,0.58vw,0.68rem)] font-semibold leading-tight text-control-text">{metric.label}</span>
       <span className="sr-only">{metric.detail}</span>
     </article>
   );
@@ -327,11 +327,13 @@ function WhyPillarCard({ pillar }: { pillar: DecisionPillar }) {
           <pillar.Icon aria-hidden="true" size={20} strokeWidth={1.65} />
         </span>
         <div className="min-w-0">
-          <h3 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-black uppercase leading-tight text-control-text">{pillar.title}</h3>
+          <h3 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-semibold uppercase leading-tight text-control-text">{pillar.title}</h3>
           <p className="mt-[0.45vh] text-[clamp(0.45rem,0.53vw,0.62rem)] font-medium leading-[1.2] text-slate-700">{pillar.detail}</p>
-          <p className="mt-[0.5vh] text-[clamp(0.43rem,0.5vw,0.58rem)] font-black uppercase tracking-[0.08em] text-control-warm">{pillar.proof}</p>
+          <p className="mt-[0.5vh] text-[clamp(0.43rem,0.5vw,0.58rem)] font-semibold uppercase tracking-[0.08em] text-control-warm">{pillar.proof}</p>
         </div>
       </div>
     </article>
   );
 }
+
+

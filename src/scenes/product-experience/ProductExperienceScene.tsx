@@ -276,6 +276,40 @@ const commonErgoViews: ConsoleErgoView[] = [
   { id: "posture", label: "Posture", description: "Desk height, leg clearance and seating geometry support neutral operating posture.", metric: "Neutral seated posture", Icon: UserRound },
 ];
 
+const ergonomicConsoleViews = [
+  {
+    title: "Seated View",
+    description: "Optimal height and monitor angle for focused operations.",
+    image: "/assets/products/ergonomic-views/seated-view.png",
+  },
+  {
+    title: "Standing View",
+    description: "Adjustable height for comfort and flexibility throughout the day.",
+    image: "/assets/products/ergonomic-views/standing-view.png",
+  },
+  {
+    title: "Reach Zone",
+    description: "Everything within comfortable reach for maximum ease.",
+    image: "/assets/products/ergonomic-views/reach-zone.png",
+  },
+  {
+    title: "Sightline View",
+    description: "Clear line of sight to critical information at all times.",
+    image: "/assets/products/ergonomic-views/sightline-view.png",
+  },
+];
+
+const consoleFeatureStripItems = [
+  { label: "Layout variants", icon: "/assets/products/console-feature-icons/layout-variants.png" },
+  { label: "Accessories", icon: "/assets/products/console-feature-icons/accessories.png" },
+  { label: "Cable management", icon: "/assets/products/console-feature-icons/cable-management.png" },
+  { label: "Materials", icon: "/assets/products/console-feature-icons/materials.png" },
+  { label: "Lighting", icon: "/assets/products/console-feature-icons/lighting.png" },
+  { label: "Storage", icon: "/assets/products/console-feature-icons/storage.png" },
+  { label: "Control modules", icon: "/assets/products/console-feature-icons/control-modules.png" },
+  { label: "Export specification", icon: "/assets/products/console-feature-icons/export-specification.png" },
+];
+
 const consoleDetailSlides: ConsoleDetail[] = consolePortfolioCards.map((card) => {
   const detailById: Record<string, Omit<ConsoleDetail, keyof PortfolioCard>> = {
     edge: {
@@ -396,15 +430,15 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
           initial={state.reducedMotion ? false : { opacity: 0, y: 14 }}
           transition={{ duration, ease: processEase }}
         >
-          <p className="text-[clamp(0.64rem,0.74vw,0.9rem)] font-extrabold uppercase tracking-[0.11em] text-control-warm">
+          <p className="text-[clamp(0.64rem,0.74vw,0.9rem)] font-semibold uppercase tracking-[0.11em] text-control-warm">
             Our Console Range
           </p>
           <div className="mt-[1.9vh] h-[2px] w-8 bg-control-warm" />
-          <h1 className="mt-[1.8vh] text-balance text-[clamp(1.98rem,2.58vw,3.42rem)] font-extrabold leading-[1.03] tracking-normal text-control-text">
+          <h1 className="mt-[1.8vh] text-balance text-[clamp(1.98rem,2.58vw,3.42rem)] font-bold leading-[1.03] tracking-normal text-control-text md:text-[2.5vw]">
             Control-Room Console <span className="text-control-warm">Portfolio.</span>
           </h1>
           <div className="mt-[2.2vh] h-px w-8 bg-slate-300" />
-          <p className="mt-[1.7vh] max-w-[16.8rem] text-[clamp(0.82rem,0.91vw,1.08rem)] leading-[1.54] text-control-text">
+          <p className="mt-[1.7vh] max-w-[16.8rem] text-[clamp(0.82rem,0.91vw,1.08rem)] leading-[1.54] text-control-text md:text-[0.8vw]">
             Engineered for performance.
             <br />
             Designed for people.
@@ -423,7 +457,7 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
               <UserRound size={29} strokeWidth={1.8} />
             </span>
             <div>
-              <h2 className="text-[clamp(0.7rem,0.76vw,0.92rem)] font-extrabold text-control-text">Human-Centred by Design</h2>
+              <h2 className="text-[clamp(0.7rem,0.76vw,0.92rem)] font-semibold text-control-text">Human-Centred by Design</h2>
               <p className="mt-[0.58vh] text-[clamp(0.61rem,0.68vw,0.82rem)] leading-[1.45] text-slate-700">
                 Every console is built around operator comfort, optimal reach and seamless system integration.
               </p>
@@ -500,10 +534,10 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
               <div className="flex min-h-0 flex-1 flex-col px-[0.92vw] py-[1.08vh]">
                 <div className="flex items-start justify-between gap-[0.5vw]">
                   <div>
-                    <p className="text-[clamp(0.76rem,0.86vw,1.04rem)] font-extrabold uppercase leading-none" style={{ color: item.accent }}>
+                    <p className="text-[clamp(0.76rem,0.86vw,1.04rem)] font-semibold uppercase leading-none" style={{ color: item.accent }}>
                       {item.name}
                     </p>
-                    <h2 className="mt-[0.48vh] text-[clamp(0.76rem,0.86vw,1.04rem)] font-extrabold leading-[1.08] text-control-text">
+                    <h2 className="mt-[0.48vh] text-[clamp(0.76rem,0.86vw,1.04rem)] font-semibold leading-[1.08] text-control-text">
                       {item.title}
                     </h2>
                   </div>
@@ -524,7 +558,7 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
                     >
                       <spec.Icon aria-hidden="true" className="mt-[0.02rem]" color={item.accent} size={15} strokeWidth={1.9} />
                       <div>
-                        <dt className="text-[clamp(0.48rem,0.53vw,0.63rem)] font-extrabold uppercase leading-none text-control-text">{spec.label}</dt>
+                        <dt className="text-[clamp(0.48rem,0.53vw,0.63rem)] font-semibold uppercase leading-none text-control-text">{spec.label}</dt>
                         <dd className="mt-[0.13rem] text-[clamp(0.48rem,0.54vw,0.65rem)] leading-[1.18] text-slate-700">{spec.value}</dd>
                       </div>
                     </motion.div>
@@ -540,7 +574,7 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
                   >
                     <highlightSpec.Icon aria-hidden="true" className="mt-[0.02rem]" color={item.accent} size={15.5} strokeWidth={1.9} />
                     <p className="text-[clamp(0.49rem,0.55vw,0.66rem)] font-semibold leading-[1.22] text-slate-800">
-                      <span className="font-extrabold text-control-text">{highlightSpec.label}: </span>
+                      <span className="font-semibold text-control-text">{highlightSpec.label}: </span>
                       {highlightSpec.value}
                     </p>
                   </motion.div>
@@ -570,7 +604,7 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
                 <item.Icon size={24} strokeWidth={1.8} />
               </span>
               <div>
-                <h3 className="text-[clamp(0.66rem,0.72vw,0.86rem)] font-extrabold leading-[1.12] text-control-text">{item.title}</h3>
+                <h3 className="text-[clamp(0.66rem,0.72vw,0.86rem)] font-semibold leading-[1.12] text-control-text">{item.title}</h3>
                 <p className="mt-[0.3vh] text-[clamp(0.55rem,0.61vw,0.72rem)] leading-[1.32] text-slate-700">{item.detail}</p>
               </div>
             </motion.div>
@@ -579,7 +613,7 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="pws-scene-control-dock absolute bottom-[2.25vh] left-[2.75vw] justify-start"
+          className="pws-scene-control-dock absolute bottom-[0.1vh] left-[0.1vw] z-40 justify-start"
           initial={state.reducedMotion ? false : { opacity: 0, y: 18 }}
           transition={{ duration: 0.56, delay: 0.74, ease: processEase }}
         >
@@ -628,7 +662,6 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
   const [selectedColor, setSelectedColor] = useState(detail.colors[0]);
   const [selectedView, setSelectedView] = useState(detail.views[0]);
   const [activeHotspot, setActiveHotspot] = useState(detail.hotspots[0]);
-  const [activeErgoView, setActiveErgoView] = useState(detail.ergonomicViews[0]);
   const [modelAvailable, setModelAvailable] = useState<boolean | null>(null);
   const [viewerMaximized, setViewerMaximized] = useState(false);
 
@@ -673,29 +706,29 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
       <section className="absolute inset-0 z-20 px-[2.75vw] py-[3vh]">
         <motion.aside
           animate={{ opacity: 1, y: 0 }}
-          className="absolute left-[2.75vw] top-[12.4vh] w-[22vw]"
+          className="absolute left-[2.75vw] top-[13vh] w-[22vw]"
           initial={state.reducedMotion ? false : { opacity: 0, y: 16 }}
           transition={{ duration: state.reducedMotion ? 0.01 : 0.72, ease: processEase }}
         >
           <button
-            className="inline-flex items-center gap-3 rounded-full border border-white/85 bg-white/78 px-4 py-3 text-[clamp(0.72rem,0.78vw,0.95rem)] font-extrabold uppercase tracking-[0.08em] text-control-text shadow-[0_0.75rem_1.8rem_rgb(15_23_42/0.08)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:text-control-warm"
+            className="inline-flex items-center gap-3 rounded-full border border-white/85 bg-white/78 px-4 py-3 text-[clamp(0.72rem,0.78vw,0.95rem)] font-semibold uppercase tracking-[0.08em] text-control-text shadow-[0_0.75rem_1.8rem_rgb(15_23_42/0.08)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:text-control-warm"
             onClick={() => dispatch({ type: "GO_TO_CHAPTER", chapterId: "console-portfolio" })}
             type="button"
           >
             <ArrowLeft aria-hidden="true" size={18} />
             Back to Portfolio
           </button>
-          <p className="mt-[3.2vh] text-[clamp(0.68rem,0.78vw,0.95rem)] font-extrabold uppercase tracking-[0.11em]" style={{ color: detail.accent }}>
+          <p className="mt-[3.2vh] text-[clamp(0.68rem,0.78vw,0.95rem)] font-semibold uppercase tracking-[0.11em]" style={{ color: detail.accent }}>
             {detail.descriptor}
           </p>
           <div className="mt-[1.6vh] h-[2px] w-10" style={{ backgroundColor: detail.accent }} />
-          <h1 className="mt-[1.8vh] text-balance text-[clamp(2.35rem,3.28vw,4.25rem)] font-extrabold leading-[0.98] tracking-normal text-control-text">
+          <h1 className="mt-[1.8vh] text-balance text-[clamp(2.35rem,3.28vw,4.25rem)] font-bold leading-[0.98] tracking-normal text-control-text md:text-[2.5vw]">
             {detail.name}
             <span className="block text-[0.48em] leading-[1.2]" style={{ color: detail.accent }}>
               {detail.title}
             </span>
           </h1>
-          <p className="mt-[2vh] max-w-[20rem] text-[clamp(0.82rem,0.95vw,1.12rem)] leading-[1.48] text-slate-700">
+          <p className="mt-[2vh] max-w-[20rem] text-[clamp(0.82rem,0.95vw,1.12rem)] leading-[1.48] text-slate-700 md:text-[0.8vw]">
             {detail.promise}
           </p>
 
@@ -705,7 +738,7 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
             initial={state.reducedMotion ? false : { opacity: 0, y: 18, scale: 0.97 }}
             transition={{ duration: 0.72, delay: 0.22, ease: popEase }}
           >
-            <p className="text-[clamp(0.62rem,0.7vw,0.85rem)] font-extrabold uppercase tracking-[0.08em] text-control-text">Designed for</p>
+            <p className="text-[clamp(0.62rem,0.7vw,0.85rem)] font-semibold uppercase tracking-[0.08em] text-control-text">Designed for</p>
             <p className="mt-[0.8vh] text-[clamp(0.7rem,0.78vw,0.94rem)] leading-[1.45] text-slate-700">{detail.fit}</p>
           </motion.div>
 
@@ -718,7 +751,7 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
             {primarySpecs.slice(1, 3).map((spec) => (
               <div className="rounded-[0.7rem] border border-white/80 bg-white/68 p-[0.72vw] shadow-[0_0.7rem_1.6rem_rgb(15_23_42/0.055)]" key={spec.label}>
                 <spec.Icon aria-hidden="true" color={detail.accent} size={22} strokeWidth={1.85} />
-                <p className="mt-[0.55vh] text-[clamp(0.5rem,0.56vw,0.68rem)] font-extrabold uppercase tracking-[0.05em] text-control-text">{spec.label}</p>
+                <p className="mt-[0.55vh] text-[clamp(0.5rem,0.56vw,0.68rem)] font-semibold uppercase tracking-[0.05em] text-control-text">{spec.label}</p>
                 <p className="mt-[0.24vh] text-[clamp(0.58rem,0.66vw,0.78rem)] font-semibold leading-[1.22] text-slate-700">{spec.value}</p>
               </div>
             ))}
@@ -742,11 +775,11 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
             ) : null}
             <div className="pointer-events-none absolute left-[1.25vw] top-[1.5vh] z-20 flex items-center gap-[0.55vw] rounded-full border border-white/85 bg-white/78 px-[0.8vw] py-[0.62vh] shadow-[0_0.7rem_1.7rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
               <Rotate3D aria-hidden="true" color={detail.accent} size={20} strokeWidth={1.8} />
-              <span className="text-[clamp(0.56rem,0.64vw,0.78rem)] font-extrabold uppercase tracking-[0.08em] text-control-text">360 Desk View</span>
+              <span className="text-[clamp(0.56rem,0.64vw,0.78rem)] font-semibold uppercase tracking-[0.08em] text-control-text">360 Desk View</span>
             </div>
             <button
               aria-label="Maximize 360 desk view"
-              className="absolute right-[1.25vw] top-[1.5vh] z-30 inline-flex items-center gap-[0.52vw] rounded-full border border-white/85 bg-white/82 px-[0.82vw] py-[0.62vh] text-[clamp(0.56rem,0.64vw,0.78rem)] font-extrabold uppercase tracking-[0.08em] text-control-text shadow-[0_0.7rem_1.7rem_rgb(15_23_42/0.08)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:text-control-warm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-control-warm/70"
+              className="absolute right-[1.25vw] top-[1.5vh] z-30 inline-flex items-center gap-[0.52vw] rounded-full border border-white/85 bg-white/82 px-[0.82vw] py-[0.62vh] text-[clamp(0.56rem,0.64vw,0.78rem)] font-semibold uppercase tracking-[0.08em] text-control-text shadow-[0_0.7rem_1.7rem_rgb(15_23_42/0.08)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:text-control-warm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-control-warm/70"
               onClick={() => setViewerMaximized(true)}
               type="button"
             >
@@ -784,7 +817,7 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
                 />
                 <div className="pointer-events-none absolute inset-0 mix-blend-multiply opacity-[0.16]" style={{ background: `linear-gradient(135deg, ${selectedColor.surface}, transparent 48%, ${selectedColor.edge})` }} />
                 <div className="pointer-events-none absolute right-[1.25vw] top-[1.5vh] z-20 rounded-[0.72rem] border border-white/85 bg-white/78 px-[0.85vw] py-[0.7vh] shadow-[0_0.7rem_1.7rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
-                  <p className="text-[clamp(0.5rem,0.58vw,0.7rem)] font-extrabold uppercase tracking-[0.08em] text-control-text">GLB slot ready</p>
+                  <p className="text-[clamp(0.5rem,0.58vw,0.7rem)] font-semibold uppercase tracking-[0.08em] text-control-text">GLB slot ready</p>
                   <p className="mt-[0.22vh] text-[clamp(0.5rem,0.58vw,0.7rem)] leading-[1.2] text-slate-600">{detail.modelPath}</p>
                 </div>
               </>
@@ -839,7 +872,7 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
 
             <div className="absolute bottom-[2.3vh] left-[1.35vw] right-[1.35vw] z-30 grid grid-cols-[1fr_auto] items-end gap-[1vw]">
               <div className="rounded-[0.82rem] border border-white/90 bg-white/84 px-[1vw] py-[1.05vh] shadow-[0_0.85rem_1.8rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
-                <p className="text-[clamp(0.62rem,0.7vw,0.84rem)] font-extrabold text-control-text">{selectedView.label} view</p>
+                <p className="text-[clamp(0.62rem,0.7vw,0.84rem)] font-semibold text-control-text">{selectedView.label} view</p>
                 <p className="mt-[0.25vh] text-[clamp(0.58rem,0.66vw,0.78rem)] leading-[1.28] text-slate-700">{selectedView.caption}</p>
               </div>
               <div className="flex rounded-full border border-white/90 bg-white/84 p-[0.28rem] shadow-[0_0.85rem_1.8rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
@@ -848,7 +881,7 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
                   return (
                     <button
                       aria-pressed={active}
-                      className="rounded-full px-[0.82vw] py-[0.62vh] text-[clamp(0.52rem,0.58vw,0.7rem)] font-extrabold uppercase tracking-[0.04em] transition"
+                      className="rounded-full px-[0.82vw] py-[0.62vh] text-[clamp(0.52rem,0.58vw,0.7rem)] font-semibold uppercase tracking-[0.04em] transition"
                       key={view.id}
                       onClick={() => setSelectedView(view)}
                       style={{ backgroundColor: active ? detail.accent : "transparent", color: active ? "#ffffff" : "#111827" }}
@@ -871,7 +904,7 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
             >
               <div className="flex items-center gap-[0.65vw]">
                 <Palette aria-hidden="true" color={detail.accent} size={24} strokeWidth={1.85} />
-                <h2 className="text-[clamp(0.8rem,0.94vw,1.12rem)] font-extrabold uppercase tracking-[0.02em] text-control-text">Color options</h2>
+                <h2 className="text-[clamp(0.8rem,0.94vw,1.12rem)] font-semibold uppercase tracking-[0.02em] text-control-text">Color options</h2>
               </div>
               <div className="mt-[1.1vh] grid grid-cols-4 gap-[0.5vw]">
                 {detail.colors.map((color) => (
@@ -883,7 +916,7 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
                     type="button"
                   >
                     <span className="block h-[2.2vh] rounded-[0.42rem] border border-slate-200" style={{ background: `linear-gradient(90deg, ${color.surface} 0 62%, ${color.edge} 62% 100%)` }} />
-                    <span className="mt-[0.45vh] block text-[clamp(0.46rem,0.52vw,0.62rem)] font-extrabold leading-[1.08] text-control-text">{color.name}</span>
+                    <span className="mt-[0.45vh] block text-[clamp(0.46rem,0.52vw,0.62rem)] font-semibold leading-[1.08] text-control-text">{color.name}</span>
                   </button>
                 ))}
               </div>
@@ -891,34 +924,24 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
 
             <motion.div
               animate={{ opacity: 1, x: 0 }}
-              className="rounded-[1rem] border border-white/85 bg-white/78 p-[1.05vw] shadow-[0_1rem_2.45rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
+              className="row-span-2 min-h-0 overflow-hidden rounded-[1rem] border border-white/85 bg-white/84 p-[1.05vw] shadow-[0_1rem_2.45rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
               initial={state.reducedMotion ? false : { opacity: 0, x: 18 }}
               transition={{ duration: 0.7, delay: 0.38, ease: processEase }}
             >
               <div className="flex items-center gap-[0.65vw]">
-                <activeHotspot.Icon aria-hidden="true" color={detail.accent} size={24} strokeWidth={1.85} />
-                <h2 className="text-[clamp(0.8rem,0.94vw,1.12rem)] font-extrabold uppercase tracking-[0.02em] text-control-text">Console feature</h2>
+                <UserRound aria-hidden="true" color={detail.accent} size={24} strokeWidth={1.85} />
+                <h2 className="text-[clamp(0.84rem,0.98vw,1.16rem)] font-semibold tracking-[0.01em] text-control-text">Ergonomic Console Views</h2>
               </div>
-              <div className="mt-[1.05vh] rounded-[0.78rem] px-[0.82vw] py-[1vh]" style={{ backgroundColor: detail.soft }}>
-                <p className="text-[clamp(0.72rem,0.84vw,1rem)] font-extrabold text-control-text">{activeHotspot.label}</p>
-                <p className="mt-[0.42vh] text-[clamp(0.62rem,0.72vw,0.86rem)] leading-[1.34] text-slate-700">{activeHotspot.description}</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              animate={{ opacity: 1, x: 0 }}
-              className="rounded-[1rem] border border-white/85 bg-white/78 p-[1.05vw] shadow-[0_1rem_2.45rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
-              initial={state.reducedMotion ? false : { opacity: 0, x: 18 }}
-              transition={{ duration: 0.7, delay: 0.46, ease: processEase }}
-            >
-              <h2 className="text-[clamp(0.8rem,0.94vw,1.12rem)] font-extrabold uppercase tracking-[0.02em] text-control-text">Console features</h2>
-              <div className="mt-[1vh] grid grid-cols-2 gap-[0.55vw]">
-                {detail.capabilities.map((item, index) => (
-                  <div className="rounded-[0.68rem] bg-slate-50/82 px-[0.65vw] py-[0.64vh]" key={item}>
-                    <p className="text-[clamp(0.56rem,0.64vw,0.76rem)] font-semibold leading-[1.22] text-slate-800">
-                      <span style={{ color: detail.accent }}>{String(index + 1).padStart(2, "0")} </span>
-                      {item}
-                    </p>
+              <div className="mt-[1.05vh] grid h-[calc(100%-2.1rem)] min-h-0 grid-rows-4 overflow-hidden rounded-[0.9rem] border border-slate-200/70 bg-white/62">
+                {ergonomicConsoleViews.map((view) => (
+                  <div className="grid min-h-0 grid-cols-[43%_1fr] border-b border-slate-200/70 last:border-b-0" key={view.title}>
+                    <div className="m-[0.45vw] overflow-hidden rounded-[0.62rem] border border-slate-200/70 bg-slate-50">
+                      <img alt={view.title} className="h-full w-full object-contain" src={view.image} />
+                    </div>
+                    <div className="flex min-w-0 flex-col justify-center py-[0.62vh] pl-[0.25vw] pr-[0.8vw]">
+                      <p className="text-[clamp(0.72rem,0.86vw,1.02rem)] font-semibold leading-[1.05] text-control-text">{view.title}</p>
+                      <p className="mt-[0.42vh] text-[0.72rem] leading-[1.25] text-slate-700 md:text-[0.6vw]">{view.description}</p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -928,47 +951,23 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-[9.65vh] left-[4.2vw] right-[4.2vw] grid h-[10.6vh] grid-cols-[0.82fr_1fr_0.78fr] overflow-hidden rounded-[0.9rem] border border-white/85 bg-white/78 shadow-[0_1rem_2.6rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
+          className="absolute bottom-[9.65vh] left-[2.75vw] right-[2.75vw] overflow-hidden rounded-[0.9rem] border border-white/85 bg-white/82 shadow-[0_1rem_2.6rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
           initial={state.reducedMotion ? false : { opacity: 0, y: 20 }}
           transition={{ duration: 0.72, delay: 0.54, ease: popEase }}
         >
-          <div className="flex items-center gap-[0.9vw] border-r border-slate-200 px-[1.2vw]">
-            <activeErgoView.Icon aria-hidden="true" color={detail.accent} size={34} strokeWidth={1.75} />
-            <div>
-              <p className="text-[clamp(0.58rem,0.66vw,0.8rem)] font-extrabold uppercase tracking-[0.07em] text-control-text">Ergonomic view</p>
-              <p className="mt-[0.22vh] text-[clamp(0.72rem,0.84vw,1rem)] font-extrabold" style={{ color: detail.accent }}>{activeErgoView.metric}</p>
-            </div>
-          </div>
-          <div className="grid grid-cols-3">
-            {detail.ergonomicViews.map((view) => {
-              const active = view.id === activeErgoView.id;
-              return (
-                <button
-                  aria-pressed={active}
-                  className={`px-[0.9vw] text-left transition ${active ? "bg-white/74" : "hover:bg-white/46"}`}
-                  key={view.id}
-                  onClick={() => setActiveErgoView(view)}
-                  type="button"
-                >
-                  <p className="text-[clamp(0.62rem,0.72vw,0.86rem)] font-extrabold text-control-text">{view.label}</p>
-                  <p className="mt-[0.28vh] text-[clamp(0.5rem,0.58vw,0.7rem)] leading-[1.22] text-slate-700">{view.description}</p>
-                </button>
-              );
-            })}
-          </div>
-          <div className="border-l border-slate-200 px-[1.1vw] py-[1.1vh]">
-            <p className="text-[clamp(0.58rem,0.66vw,0.8rem)] font-extrabold uppercase tracking-[0.07em] text-control-text">Related features</p>
-            <div className="mt-[0.75vh] grid grid-cols-2 gap-[0.45vw]">
-              {detail.relatedFeatures.map((feature) => (
-                <span className="rounded-full bg-slate-50 px-[0.62vw] py-[0.35vh] text-[clamp(0.48rem,0.56vw,0.68rem)] font-semibold leading-none text-slate-700" key={feature}>{feature}</span>
-              ))}
-            </div>
+          <div className="grid grid-cols-8 divide-x divide-slate-200/80 max-lg:grid-cols-4 max-lg:divide-x-0 max-lg:divide-y max-sm:grid-cols-2">
+            {consoleFeatureStripItems.map((item) => (
+              <div className="grid min-h-[10.6vh] place-items-center px-[0.68vw] py-[0.9vh] text-center" key={item.label}>
+                <img alt="" className="h-[clamp(1.65rem,2.45vw,2.65rem)] w-[clamp(1.65rem,2.45vw,2.65rem)] object-contain" src={item.icon} />
+                <p className="mt-[0.45vh] max-w-[8.5rem] text-[clamp(0.54rem,0.64vw,0.78rem)] font-semibold leading-[1.08] text-control-text">{item.label}</p>
+              </div>
+            ))}
           </div>
         </motion.div>
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="pws-scene-control-dock absolute bottom-[2.25vh] left-[2.75vw] justify-start"
+          className="pws-scene-control-dock absolute bottom-[0.1vh] left-[0.1vw] z-40 justify-start"
           initial={state.reducedMotion ? false : { opacity: 0, y: 18 }}
           transition={{ duration: 0.56, delay: 0.66, ease: processEase }}
         >
@@ -1009,11 +1008,11 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
             <div className="pointer-events-none absolute inset-x-[13%] bottom-[13%] h-[14%] rounded-full bg-[radial-gradient(ellipse_at_center,rgb(15_23_42/0.2)_0%,rgb(15_23_42/0.08)_36%,transparent_72%)] blur-2xl" />
             <div className="absolute left-[2vw] top-[6.2vh] z-30 flex items-center gap-[0.75vw] rounded-full border border-white/85 bg-white/80 px-[1vw] py-[0.82vh] shadow-[0_0.8rem_2rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
               <Rotate3D aria-hidden="true" color={detail.accent} size={22} strokeWidth={1.8} />
-              <span className="text-[clamp(0.66rem,0.78vw,0.92rem)] font-extrabold uppercase tracking-[0.08em] text-control-text">{detail.name} 360 Desk View</span>
+              <span className="text-[clamp(0.66rem,0.78vw,0.92rem)] font-semibold uppercase tracking-[0.08em] text-control-text">{detail.name} 360 Desk View</span>
             </div>
             <button
               aria-label="Restore 360 desk view"
-              className="absolute right-[2vw] top-[6.2vh] z-30 inline-flex items-center gap-[0.6vw] rounded-full border border-white/85 bg-white/84 px-[1vw] py-[0.82vh] text-[clamp(0.66rem,0.78vw,0.92rem)] font-extrabold uppercase tracking-[0.08em] text-control-text shadow-[0_0.8rem_2rem_rgb(15_23_42/0.08)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:text-control-warm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-control-warm/70"
+              className="absolute right-[2vw] top-[6.2vh] z-30 inline-flex items-center gap-[0.6vw] rounded-full border border-white/85 bg-white/84 px-[1vw] py-[0.82vh] text-[clamp(0.66rem,0.78vw,0.92rem)] font-semibold uppercase tracking-[0.08em] text-control-text shadow-[0_0.8rem_2rem_rgb(15_23_42/0.08)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:text-control-warm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-control-warm/70"
               onClick={() => setViewerMaximized(false)}
               type="button"
             >
@@ -1054,10 +1053,10 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
                 transition={{ duration: state.reducedMotion ? 0.01 : 0.62, ease: precisionEase }}
               />
             )}
-            <div className="absolute bottom-[2.3vh] left-[2vw] z-30 rounded-[1rem] border border-white/90 bg-white/86 px-[0.9vw] py-[0.78vh] shadow-[0_0.85rem_2rem_rgb(15_23_42/0.1)] backdrop-blur-xl">
+            <div className="absolute bottom-[2.3vh] right-[2vw] z-30 rounded-[1rem] border border-white/90 bg-white/86 px-[0.9vw] py-[0.78vh] shadow-[0_0.85rem_2rem_rgb(15_23_42/0.1)] backdrop-blur-xl">
               <div className="flex items-center gap-[0.55vw]">
                 <Palette aria-hidden="true" color={detail.accent} size={18} strokeWidth={1.85} />
-                <span className="text-[clamp(0.58rem,0.66vw,0.78rem)] font-extrabold uppercase tracking-[0.07em] text-control-text">Color Options</span>
+                <span className="text-[clamp(0.58rem,0.66vw,0.78rem)] font-semibold uppercase tracking-[0.07em] text-control-text">Color Options</span>
               </div>
               <div className="mt-[0.72vh] flex items-center gap-[0.42vw]">
                 {detail.colors.map((color) => {
@@ -1090,7 +1089,7 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
                 return (
                   <button
                     aria-pressed={active}
-                    className="rounded-full px-[1.15vw] py-[0.78vh] text-[clamp(0.66rem,0.76vw,0.9rem)] font-extrabold uppercase tracking-[0.05em] transition"
+                    className="rounded-full px-[1.15vw] py-[0.78vh] text-[clamp(0.66rem,0.76vw,0.9rem)] font-semibold uppercase tracking-[0.05em] transition"
                     key={view.id}
                     onClick={() => setSelectedView(view)}
                     style={{ backgroundColor: active ? detail.accent : "transparent", color: active ? "#ffffff" : "#111827" }}
@@ -1364,3 +1363,5 @@ function eventForMode(mode: ProductSceneMode) {
       return "product_feature_opened";
   }
 }
+
+

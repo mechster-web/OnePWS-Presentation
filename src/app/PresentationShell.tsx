@@ -7,7 +7,6 @@ import { ExperienceDebugOverlay } from "../components/dev/ExperienceDebugOverlay
 import { AudioManager } from "../components/media/AudioManager";
 import { MainNavigation } from "../components/navigation/MainNavigation";
 import { ProgressIndicator } from "../components/navigation/ProgressIndicator";
-import { AutoPlayShowroomControls } from "../components/autoplay/AutoPlayShowroomControls";
 import { ChapterMapOverlay } from "../components/overlays/ChapterMapOverlay";
 import { PresenterPanel } from "../components/presenter/PresenterPanel";
 import { OfflineStatusIndicator } from "../components/pwa/OfflineStatusIndicator";
@@ -173,7 +172,6 @@ export function PresentationShell() {
       </AnimatePresence>
       {isLogoFinale ? null : <MainNavigation />}
       {isLogoFinale ? null : <SelfGuidedAssist />}
-      {isLogoFinale ? null : <AutoPlayShowroomControls />}
       <AudioManager />
       <ExperienceDebugOverlay director={director} />
       {state.blankScreenActive ? <BlankScreen /> : null}

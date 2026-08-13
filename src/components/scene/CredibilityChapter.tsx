@@ -193,7 +193,7 @@ export function CredibilityChapter({ chapter }: Props) {
           </motion.p>
           <motion.h1
             animate={{ opacity: 1, y: 0 }}
-            className="mt-5 max-w-[14ch] text-balance text-[clamp(2.35rem,3.55vw,4.45rem)] font-extrabold leading-[0.97] tracking-normal text-control-text"
+            className="mt-5 max-w-[14ch] text-balance text-[clamp(2.35rem,3.55vw,4.45rem)] font-semibold leading-[0.97] tracking-normal text-control-text"
             initial={false}
             transition={{ duration: motionDuration, delay: 0.08 }}
           >
@@ -359,7 +359,7 @@ function CredibilityMetricGrid({ points }: { points: CredentialProofPoint[] }) {
             className="min-h-[4.25rem] border border-slate-200/80 bg-white/72 px-4 py-3 shadow-[0_0.8rem_2rem_rgb(15_23_42/0.055)] backdrop-blur-xl"
             key={point.id}
           >
-            <p className="text-[clamp(1.3rem,1.55vw,2rem)] font-extrabold leading-none text-control-text">
+            <p className="text-[clamp(1.3rem,1.55vw,2rem)] font-semibold leading-none text-control-text">
               {display?.value ?? point.value}
             </p>
             <p className="mt-2 text-[clamp(0.72rem,0.78vw,0.9rem)] font-semibold leading-snug text-control-text">
@@ -430,7 +430,7 @@ function TurnoverChart({ reducedMotion }: { reducedMotion: boolean }) {
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-control-warm">
             Turnover
           </p>
-          <h2 className="mt-2 text-[clamp(1.32rem,1.55vw,1.95rem)] font-extrabold leading-[0.98] text-control-text">
+          <h2 className="mt-2 text-[clamp(1.32rem,1.55vw,1.95rem)] font-semibold leading-[0.98] text-control-text">
             A track record of sustained growth
           </h2>
         </div>
@@ -508,7 +508,7 @@ function TurnoverChart({ reducedMotion }: { reducedMotion: boolean }) {
             <text
               fill="#11151b"
               fontSize="15"
-              fontWeight="800"
+              fontWeight="600"
               textAnchor="middle"
               x={point.centerX}
               y={point.y - 12}
@@ -567,7 +567,7 @@ function TurnoverChart({ reducedMotion }: { reducedMotion: boolean }) {
         <text
           fill="#6b7280"
           fontSize="11"
-          fontWeight="800"
+          fontWeight="600"
           letterSpacing="4"
           textAnchor="middle"
           x={(chartWidth + plot.left - plot.right) / 2}
@@ -876,3 +876,4 @@ function CredibilityBackdrop() {
     </div>
   );
 }
+

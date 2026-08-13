@@ -153,7 +153,7 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
             </motion.p>
             <motion.h1
               animate={{ opacity: 1, y: 0 }}
-              className="mt-2 max-w-[14ch] text-balance text-[clamp(2.25rem,3.15vw,3.85rem)] font-extrabold leading-[0.96] tracking-normal text-control-text"
+              className="mt-2 max-w-[14ch] text-balance text-[clamp(2.25rem,3.15vw,3.85rem)] font-semibold leading-[0.96] tracking-normal text-control-text"
               initial={state.reducedMotion ? false : { opacity: 0, y: 18 }}
               transition={{ duration: motionDuration + 0.12, delay: 0.08, ease: processEase }}
             >
@@ -210,7 +210,7 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
                   <div className="relative mx-auto grid h-10 w-10 place-items-center bg-white text-control-warm [&_svg]:h-9 [&_svg]:w-9">
                     {item.icon}
                   </div>
-                  <h2 className="mt-2 text-[0.78rem] font-extrabold uppercase leading-tight text-control-text">
+                  <h2 className="mt-2 text-[0.78rem] font-semibold uppercase leading-tight text-control-text">
                     {item.title}
                   </h2>
                   <p className="mt-2 text-[0.7rem] leading-[1.32] text-control-soft">
@@ -256,7 +256,7 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
               />
               <motion.span
                 animate={{ opacity: 1, scaleX: 1 }}
-                className="absolute left-0 top-0 origin-left rounded-br-md rounded-tl-[0.55rem] bg-control-warm px-3 py-1 text-xs font-extrabold text-white"
+                className="absolute left-0 top-0 origin-left rounded-br-md rounded-tl-[0.55rem] bg-control-warm px-3 py-1 text-xs font-semibold text-white"
                 initial={state.reducedMotion ? false : { opacity: 0, scaleX: 0.72 }}
                 transition={{ duration: 0.5, delay: 0.78 + 0.08 * index, ease: processEase }}
               >
@@ -279,7 +279,7 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
               >
                 {capability.icon}
               </motion.span>
-              <h2 className="self-end text-[clamp(0.95rem,1vw,1.12rem)] font-extrabold leading-tight text-control-text">
+              <h2 className="self-end text-[clamp(0.95rem,1vw,1.12rem)] font-semibold leading-tight text-control-text">
                 {capability.title}
               </h2>
               <p className="self-start text-[clamp(0.68rem,0.72vw,0.82rem)] font-bold leading-snug text-control-warm">
@@ -361,7 +361,7 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
               <ClipboardCheck aria-hidden="true" size={20} strokeWidth={1.8} />
             </span>
             <div className="border-l border-slate-200 pl-4">
-              <p className="text-[clamp(0.9rem,1vw,1.08rem)] font-extrabold leading-[1.25] text-control-text">
+              <p className="text-[clamp(0.9rem,1vw,1.08rem)] font-semibold leading-[1.25] text-control-text">
                 Every project follows a controlled, traceable process.
               </p>
             </div>
@@ -371,3 +371,4 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
     </article>
   );
 }
+

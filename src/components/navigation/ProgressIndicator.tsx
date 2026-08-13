@@ -74,12 +74,12 @@ export function ProgressIndicator() {
           : "visible";
 
   return (
-    <header className={`pointer-events-none absolute inset-x-[var(--stage-safe-x)] top-[var(--stage-safe-y)] z-30 transition-opacity duration-300 pws-nav-${navigationState} ${isDarkScene ? "pws-progress-on-dark" : ""}`}>
-      <div className="flex items-start justify-between gap-5">
-        <div className="pointer-events-auto min-w-[12rem]">
+    <header className={`pointer-events-none absolute inset-x-[var(--stage-content-x)] top-[var(--stage-safe-y)] z-30 transition-opacity duration-300 pws-nav-${navigationState} ${isDarkScene ? "pws-progress-on-dark" : ""}`}>
+      <div className="grid grid-cols-[minmax(9.5rem,0.24fr)_minmax(0,1fr)_minmax(9.5rem,0.24fr)] items-start gap-[1.2vw]">
+        <div className="pointer-events-auto min-w-0">
           <OnePwsLogo compact lightOnDark={isDarkScene} />
         </div>
-        <div className={`pointer-events-auto mt-2 hidden min-w-0 max-w-[42rem] flex-1 md:block ${immersiveFocusMode ? "opacity-70" : ""}`}>
+        <div className={`pointer-events-auto mt-[0.45rem] hidden min-w-0 md:block ${immersiveFocusMode ? "opacity-70" : ""}`}>
           <p className="truncate text-center text-xs uppercase tracking-[0.22em] text-control-muted">
             {model.journey.name}
           </p>
@@ -87,8 +87,8 @@ export function ProgressIndicator() {
             <div className="h-px bg-control-warm" style={{ width: `${model.progressPercent}%` }} />
           </div>
         </div>
-        {immersiveFocusMode ? <div className="min-w-40" /> : (
-          <div className="pointer-events-auto min-w-40 text-right">
+        {immersiveFocusMode ? <div className="min-w-0" /> : (
+          <div className="pointer-events-auto min-w-0 text-right">
             <p className="truncate text-xs uppercase tracking-[0.22em] text-control-warm" title={displayShortTitle}>
               {displayShortTitle}
             </p>

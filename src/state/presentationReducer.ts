@@ -4,7 +4,7 @@ import {
   getPrioritizedChapterSequence,
   type CustomerPathSelection,
 } from "../content/customerPaths";
-import { navigationJourneys, optionalBranches } from "../config/navigation";
+import { navigationConfig, navigationJourneys, optionalBranches } from "../config/navigation";
 import type { ConceptSelection } from "../content/conceptSelector";
 import type { FeatureStoryId } from "../content/featureStories";
 import type { ChapterId, PresentationMode } from "../data/contentTypes";
@@ -264,7 +264,18 @@ function routeForState(state: PresentationState) {
   if (activeJourney) {
     return activeJourney.sequence.filter((chapterId) => enabledChapters.some((chapter) => chapter.id === chapterId));
   }
-  return getPrioritizedChapterSequence(state.customerPath);
+  const matchingJourney = navigationJourneys.find((journey) => selectionMatches(journey.selection, state.customerPath));
+  const defaultJourney = navigationJourneys.find((journey) => journey.id === navigationConfig.defaultJourneyId);
+  const resolvedJourney = matchingJourney ?? defaultJourney;
+  const route = resolvedJourney?.sequence.filter((chapterId) => enabledChapters.some((chapter) => chapter.id === chapterId)) ?? [];
+  return route.length > 0 ? route : getPrioritizedChapterSequence(state.customerPath);
+}
+
+function selectionMatches(selection: CustomerPathSelection | undefined, current: CustomerPathSelection) {
+  if (!selection) {
+    return false;
+  }
+  return (!selection.role || selection.role === current.role) && (!selection.industry || selection.industry === current.industry);
 }
 
 function chapterByRouteIndex(state: PresentationState, index: number) {

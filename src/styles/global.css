@@ -5,6 +5,7 @@
 :root {
   color-scheme: light;
   --stage-safe-x: clamp(1.5rem, 3.25vw, 4.25rem);
+  --stage-content-x: clamp(1.05rem, 1.65vw, 2rem);
   --stage-safe-y: clamp(0.95rem, 2.15vw, 2.35rem);
   --stage-header-h: clamp(4.25rem, 7.6vw, 6rem);
   --stage-footer-h: clamp(4.8rem, 8.4vw, 6.25rem);
@@ -104,10 +105,34 @@ button:focus-visible {
 }
 
 .presentation-stage {
-  height: min(calc(100dvh - 1.5rem), calc((100dvw - 1.5rem) * 9 / 16));
-  width: min(calc(100dvw - 1.5rem), calc((100dvh - 1.5rem) * 16 / 9));
+  height: min(100dvh, calc(100dvw * 9 / 16));
+  width: min(100dvw, calc(100dvh * 16 / 9));
   isolation: isolate;
   background: #ffffff;
+}
+
+.presentation-stage :where(article, section, div, p, h1, h2, h3, h4, span, strong) {
+  min-width: 0;
+}
+
+.presentation-stage :where(img, video, canvas, svg) {
+  max-width: 100%;
+}
+
+.presentation-stage :where(svg) {
+  flex-shrink: 0;
+}
+
+.presentation-stage :where(p, h1, h2, h3, h4, span, strong) {
+  overflow-wrap: anywhere;
+}
+
+.presentation-stage :where(.text-balance) {
+  text-wrap: balance;
+}
+
+.presentation-stage :where(.pws-responsive-panel) {
+  overflow: hidden;
 }
 
 .presenter-stage-preview {
@@ -117,6 +142,7 @@ button:focus-visible {
   width: min(calc(100% - 1.5rem), calc((100dvh - 5rem) * 16 / 9));
   isolation: isolate;
   --stage-safe-x: clamp(1rem, 2.2vw, 2.2rem);
+  --stage-content-x: clamp(0.8rem, 1.65vw, 1.4rem);
   --stage-safe-y: clamp(0.7rem, 1.2vw, 1.3rem);
   --stage-header-h: clamp(3.25rem, 4.6vw, 4rem);
   --stage-footer-h: clamp(3.6rem, 5vw, 4.4rem);
@@ -144,8 +170,8 @@ button:focus-visible {
 
 .scene-title {
   color: #101216;
-  font-size: clamp(2.25rem, 4.35vw, 5rem);
-  font-weight: 800;
+  font-size: clamp(3rem, 4.35vw, 5rem);
+  font-weight: 700;
   line-height: 0.98;
   opacity: 1;
 }
@@ -156,6 +182,19 @@ button:focus-visible {
   font-weight: 450;
   line-height: 1.5;
   opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .scene-title,
+  .pws-chapter-title,
+  .pws-display-headline {
+    font-size: 4vw;
+  }
+
+  .scene-support,
+  .pws-body-copy {
+    font-size: 0.8vw;
+  }
 }
 
 .presenter-stage-preview .scene-content-safe {
@@ -614,7 +653,7 @@ button:focus-visible {
 .pws-display-headline {
   max-width: 13ch;
   font-size: clamp(2.45rem, 4.9vw, 5.9rem);
-  font-weight: 760;
+  font-weight: 700;
   letter-spacing: var(--pws-letter-display);
   line-height: var(--pws-leading-tight);
   text-wrap: balance;
@@ -623,7 +662,7 @@ button:focus-visible {
 .pws-chapter-title {
   max-width: 16ch;
   font-size: clamp(2rem, 3.4vw, 4.4rem);
-  font-weight: 720;
+  font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1.02;
   text-wrap: balance;
@@ -705,7 +744,7 @@ button:focus-visible {
   max-width: 15ch;
   color: #ffffff;
   font-size: clamp(3rem, 5.5vw, 6.6rem);
-  font-weight: 790;
+  font-weight: 700;
   letter-spacing: 0;
   line-height: 0.94;
   text-wrap: balance;
@@ -845,73 +884,6 @@ button:focus-visible {
   line-height: 1.48;
 }
 
-.pws-opening-control-dock {
-  position: absolute;
-  right: var(--stage-safe-x);
-  bottom: var(--stage-safe-y);
-  z-index: 34;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0.5rem;
-  max-width: min(38rem, calc(100% - var(--stage-safe-x) * 2));
-  border: 1px solid rgb(255 255 255 / 0.12);
-  border-radius: 1.15rem;
-  background:
-    linear-gradient(180deg, rgb(255 255 255 / 0.14), rgb(255 255 255 / 0.06)),
-    rgb(12 14 18 / 0.34);
-  box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / 0.16),
-    0 18px 52px rgb(0 0 0 / 0.28);
-  padding: 0.45rem;
-  backdrop-filter: blur(22px) saturate(140%);
-}
-
-.pws-opening-control {
-  display: inline-flex;
-  min-height: 2.75rem;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  border: 1px solid rgb(255 255 255 / 0.16);
-  border-radius: 0.82rem;
-  background: rgb(255 255 255 / 0.1);
-  color: rgb(255 255 255 / 0.86);
-  padding: 0 0.9rem;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  transition:
-    border-color 180ms ease,
-    background 180ms ease,
-    color 180ms ease,
-    transform 180ms ease;
-}
-
-.pws-opening-control:hover,
-.pws-opening-control:focus-visible {
-  border-color: rgb(255 255 255 / 0.32);
-  background: rgb(255 255 255 / 0.18);
-  color: #ffffff;
-}
-
-.pws-opening-control:active {
-  transform: translateY(1px);
-}
-
-.pws-opening-control-primary {
-  border-color: rgb(207 31 43 / 0.64);
-  background: linear-gradient(180deg, rgb(207 31 43 / 0.92), rgb(166 22 32 / 0.88));
-  color: #ffffff;
-  box-shadow: 0 10px 30px rgb(207 31 43 / 0.2);
-}
-
-.pws-opening-control-primary:hover,
-.pws-opening-control-primary:focus-visible {
-  border-color: rgb(255 255 255 / 0.36);
-  background: linear-gradient(180deg, rgb(226 45 58 / 0.96), rgb(183 24 35 / 0.94));
-}
-
 .pws-opening-video-scene {
   position: absolute;
   inset: 0;
@@ -1023,19 +995,95 @@ button:focus-visible {
 }
 
 .pws-scene-control-dock {
+  position: fixed !important;
+  left: calc((100dvw - min(100dvw, calc(100dvh * 16 / 9))) / 2 + clamp(1.25rem, 2.15vw, 2.75rem)) !important;
+  right: auto !important;
+  bottom: calc((100dvh - min(100dvh, calc(100dvw * 9 / 16))) / 2 + clamp(1.25rem, 2.15vh, 2.5rem)) !important;
+  top: auto !important;
+  z-index: 55 !important;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
+  align-items: center;
+  gap: 0.7rem;
+  justify-content: flex-start;
+  pointer-events: auto;
 }
 
-.pws-scene-control {
+.pws-fixed-scene-controller {
+  position: fixed;
+  left: calc((100dvw - min(100dvw, calc(100dvh * 16 / 9))) / 2 + clamp(1.25rem, 2.15vw, 2.75rem));
+  right: auto;
+  bottom: calc((100dvh - min(100dvh, calc(100dvw * 9 / 16))) / 2 + clamp(1.25rem, 2.15vh, 2.5rem));
+  top: auto;
+  z-index: 55;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  justify-content: flex-start;
+  pointer-events: auto;
+}
+
+.pws-fixed-scene-control {
   display: inline-flex;
-  min-height: 3rem;
-  min-width: 3rem;
+  height: 3rem;
+  width: 3.25rem;
   align-items: center;
   justify-content: center;
   border: 1px solid rgb(34 40 48 / 0.18);
   border-radius: 0.9rem;
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.86), rgb(244 247 250 / 0.5)),
+    rgb(255 255 255 / 0.76);
+  color: #12161c;
+  box-shadow: 0 0.75rem 1.8rem rgb(18 24 32 / 0.08);
+  backdrop-filter: blur(18px) saturate(135%);
+  -webkit-backdrop-filter: blur(18px) saturate(135%);
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.pws-fixed-scene-control:hover,
+.pws-fixed-scene-control:focus-visible {
+  border-color: rgb(207 31 43 / 0.45);
+  background: rgb(255 255 255 / 0.94);
+  box-shadow: 0 0.9rem 2rem rgb(18 24 32 / 0.1);
+}
+
+.pws-fixed-scene-control:active {
+  transform: translateY(1px);
+}
+
+.pws-fixed-scene-control:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
+  transform: none;
+}
+
+.pws-fixed-scene-control-primary {
+  border-color: rgb(207 31 43 / 0.7);
+  background: linear-gradient(180deg, rgb(207 31 43 / 0.98), rgb(178 24 35 / 0.96));
+  color: #ffffff;
+  box-shadow: 0 0.85rem 1.9rem rgb(207 31 43 / 0.24);
+}
+
+.pws-fixed-scene-control-primary:hover,
+.pws-fixed-scene-control-primary:focus-visible {
+  border-color: rgb(207 31 43 / 0.78);
+  background: linear-gradient(180deg, rgb(222 39 52 / 1), rgb(188 24 36 / 0.98));
+  color: #ffffff;
+}
+
+.pws-scene-control {
+  display: inline-flex;
+  min-height: 2.65rem;
+  min-width: 2.65rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(34 40 48 / 0.18);
+  border-radius: 0.78rem;
   background:
     linear-gradient(180deg, rgb(255 255 255 / 0.82), rgb(244 247 250 / 0.42)),
     rgb(230 235 241 / 0.2);
@@ -1043,7 +1091,7 @@ button:focus-visible {
   box-shadow:
     inset 0 1px 0 rgb(255 255 255 / 0.8),
     0 0.65rem 1.7rem rgb(18 24 32 / 0.08);
-  padding: 0 0.9rem;
+  padding: 0 0.72rem;
   backdrop-filter: blur(18px) saturate(135%);
   -webkit-backdrop-filter: blur(18px) saturate(135%);
   transition:
@@ -1154,17 +1202,6 @@ button:focus-visible {
 
   .pws-opening-detection-fragments {
     display: none;
-  }
-
-  .pws-opening-control-dock {
-    left: var(--stage-safe-x);
-    right: var(--stage-safe-x);
-    justify-content: center;
-  }
-
-  .pws-opening-control {
-    flex: 1 1 auto;
-    min-width: 7.2rem;
   }
 
   .pws-opening-video-controls {
@@ -4059,3 +4096,5 @@ button:focus-visible {
     display: none !important;
   }
 }
+
+

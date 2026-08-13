@@ -12,7 +12,7 @@ export function OnePwsLogo({ compact = false, lightOnDark = false }: Props) {
       <img
         src={lightOnDark ? "/assets/brand/onepws-logo-white.png" : "/assets/brand/onepws-logo-black.png"}
         alt="OnePWS Private Limited"
-        className={`${compact ? "h-[38px] w-[134px]" : "h-[54px] w-[189px]"} object-contain`}
+        className={`${compact ? "h-[38px] w-[134px]" : "h-[54px] w-[189px]"} object-contain md:h-auto md:w-[clamp(160px,10.42vw,200px)]`}
         draggable={false}
       />
     </div>

@@ -33,7 +33,7 @@ export function BrandRevealScene({ reducedMotion }: { reducedMotion: boolean }) 
             ) : (
               <p className="text-4xl font-semibold">OnePWS</p>
             )}
-            <h1 className="mt-[var(--pws-space-4)] text-[clamp(2rem,4vw,4.8rem)] font-semibold leading-[0.98] tracking-[-0.02em]">
+            <h1 className="mt-[var(--pws-space-4)] text-[clamp(2rem,4vw,4.8rem)] font-bold leading-[0.98] tracking-[-0.02em] md:text-[2.5vw]">
               Maximising human potential at work
             </h1>
             <p className="pws-body-copy mx-auto mt-[var(--pws-space-4)] max-w-2xl">
@@ -48,3 +48,4 @@ export function BrandRevealScene({ reducedMotion }: { reducedMotion: boolean }) 
     </SceneCanvas>
   );
 }
+

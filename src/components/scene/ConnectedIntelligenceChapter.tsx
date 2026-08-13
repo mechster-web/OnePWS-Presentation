@@ -162,14 +162,14 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
         <div className="grid min-h-0 grid-cols-[minmax(0,1.04fr)_minmax(36rem,0.96fr)] gap-5">
           <section className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)] gap-4">
             <motion.div animate={{ opacity: 1, y: 0 }} initial={false} transition={{ duration: motionDuration }}>
-              <h1 className="max-w-[45rem] text-[clamp(2.35rem,3.02vw,3.92rem)] font-black leading-[1.02] tracking-normal text-slate-950">
+              <h1 className="max-w-[45rem] text-[clamp(2.35rem,3.02vw,3.92rem)] font-bold leading-[1.02] tracking-normal text-slate-950 md:text-[2.5vw]">
                 One Environment.
                 <span className="block">
                   Connected <span className="text-red-600">Intelligence.</span>
                 </span>
               </h1>
               <div className="mt-3 h-[3px] w-16 rounded-full bg-red-600" />
-              <p className="mt-3 max-w-[42rem] text-[clamp(0.86rem,0.88vw,1rem)] font-medium leading-[1.55] text-slate-800">
+              <p className="mt-3 max-w-[42rem] text-[clamp(0.86rem,0.88vw,1rem)] font-medium leading-[1.55] text-slate-800 md:text-[0.8vw]">
                 A control-room environment where consoles, architecture, systems and intelligence share one
                 operating context around the people doing the work.
               </p>
@@ -214,7 +214,7 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
 
           <section className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)]">
             <motion.div animate={{ opacity: 1, y: 0 }} initial={false} transition={{ duration: motionDuration, delay: 0.1 }}>
-              <h2 className="text-[clamp(1rem,1.18vw,1.34rem)] font-black leading-none text-slate-950">Most Advanced Capabilities</h2>
+              <h2 className="text-[clamp(1rem,1.18vw,1.34rem)] font-semibold leading-none text-slate-950">Most Advanced Capabilities</h2>
               <div className="mt-3 h-[3px] w-14 rounded-full bg-red-600" />
             </motion.div>
             <div className="mt-4 grid min-h-0 grid-cols-3 grid-rows-3 gap-3">
@@ -239,7 +239,7 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
                   >
                     <capability.icon aria-hidden="true" className={`mx-auto shrink-0 ${capability.color}`} size={25} strokeWidth={1.8} />
                   </motion.span>
-                  <h3 className="mt-2 text-[clamp(0.7rem,0.72vw,0.84rem)] font-black leading-tight text-slate-950">{capability.title}</h3>
+                  <h3 className="mt-2 text-[clamp(0.7rem,0.72vw,0.84rem)] font-semibold leading-tight text-slate-950">{capability.title}</h3>
                   <p className="mx-auto mt-1 max-w-[11rem] text-[clamp(0.54rem,0.56vw,0.66rem)] font-medium leading-[1.28] text-slate-700">
                     {capability.body}
                   </p>
@@ -264,7 +264,7 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
             >
               <Users aria-hidden="true" size={26} strokeWidth={1.9} />
             </motion.div>
-            <p className="text-[clamp(0.86rem,0.94vw,1.08rem)] font-medium leading-[1.42] text-slate-950">
+            <p className="text-[clamp(0.86rem,0.94vw,1.08rem)] font-medium leading-[1.42] text-slate-950 md:text-[0.7vw]">
               When the room, console and software share context, operators spend less time coordinating the
               <span className="block">environment and more time managing the <span className="text-red-600">mission.</span></span>
             </p>
@@ -273,7 +273,7 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
             <div className="flex min-h-0 items-center gap-3 border-l border-slate-200/80 px-3.5 py-3" key={item.title}>
               <item.icon aria-hidden="true" className={`shrink-0 ${item.color}`} size={22} strokeWidth={1.85} />
               <div className="min-w-0">
-                <h3 className="text-[clamp(0.62rem,0.66vw,0.78rem)] font-black leading-tight text-slate-950">{item.title}</h3>
+                <h3 className="text-[clamp(0.62rem,0.66vw,0.78rem)] font-semibold leading-tight text-slate-950">{item.title}</h3>
                 <p className="mt-1 text-[clamp(0.5rem,0.53vw,0.62rem)] font-medium leading-[1.28] text-slate-700">{item.body}</p>
               </div>
             </div>
@@ -772,3 +772,5 @@ function ConnectedRoomVisual({
     </motion.div>
   );
 }
+
+

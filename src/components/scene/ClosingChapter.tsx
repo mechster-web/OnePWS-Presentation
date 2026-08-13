@@ -148,12 +148,12 @@ export function ClosingChapter({ chapter }: Props) {
             transition={{ duration: 0.72, ease }}
           >
             <div className="min-w-0 pl-[0.35vw] pt-[1.05vh]">
-              <h1 className="text-[clamp(2.3rem,3.35vw,4.7rem)] font-black uppercase leading-[0.98] tracking-normal text-black">
+              <h1 className="text-[clamp(2.3rem,3.35vw,4.7rem)] font-bold uppercase leading-[0.98] tracking-normal text-black md:text-[2.5vw]">
                 <span className="block">The Future</span>
                 <span className="block text-control-warm">Starts Here.</span>
               </h1>
               <div className="mt-[1.1vh] h-[2px] w-[3rem] bg-control-warm" />
-              <p className="mt-[1.15vh] max-w-[45rem] text-[clamp(0.78rem,0.98vw,1.14rem)] font-medium leading-[1.3] text-slate-900">
+              <p className="mt-[1.15vh] max-w-[45rem] text-[clamp(0.78rem,0.98vw,1.14rem)] font-medium leading-[1.3] text-slate-900 md:text-[0.8vw]">
                 The next step is a structured design process that turns your mission, operators,
                 systems and room constraints into one complete control-room environment.
               </p>
@@ -178,7 +178,7 @@ export function ClosingChapter({ chapter }: Props) {
               ) : null}
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgb(255_255_255/0.9)_0%,rgb(255_255_255/0.36)_48%,rgb(255_255_255/0.1)_100%)]" />
               <div className="absolute left-[1.1vw] top-[1.35vh] max-w-[20rem] rounded-[0.8rem] border border-white/84 bg-white/72 p-[1vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_0.8rem_2rem_rgb(15_23_42/0.1)] backdrop-blur-[18px]">
-                <p className="text-[clamp(0.75rem,0.9vw,1.04rem)] font-black uppercase leading-tight text-control-text">
+                <p className="text-[clamp(0.75rem,0.9vw,1.04rem)] font-semibold uppercase leading-tight text-control-text">
                   From presentation to project direction.
                 </p>
                 <p className="mt-[0.65vh] text-[clamp(0.6rem,0.72vw,0.82rem)] font-semibold leading-[1.28] text-slate-700">
@@ -195,7 +195,7 @@ export function ClosingChapter({ chapter }: Props) {
             </section>
 
             <section className="min-h-0 overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/74 p-[0.9vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.8rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.86rem,1vw,1.16rem)] font-black uppercase leading-tight text-control-text">
+              <h2 className="text-[clamp(0.86rem,1vw,1.16rem)] font-semibold uppercase leading-tight text-control-text">
                 Start the Design Process
               </h2>
               <div className="mt-[0.65vh] h-[2px] w-[2.6rem] bg-control-warm" />
@@ -214,7 +214,7 @@ export function ClosingChapter({ chapter }: Props) {
             transition={{ duration: 0.72, delay: 0.14, ease }}
           >
             <section className="overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/76 px-[1vw] py-[1.05vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.78rem,0.9vw,1.02rem)] font-black uppercase leading-tight text-control-text">
+              <h2 className="text-[clamp(0.78rem,0.9vw,1.02rem)] font-semibold uppercase leading-tight text-control-text">
                 Customer Direction Captured
               </h2>
               <div className="mt-[0.55vh] h-[2px] w-[2.35rem] bg-control-warm" />
@@ -230,7 +230,7 @@ export function ClosingChapter({ chapter }: Props) {
 
             <section className="grid min-h-0 grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/76 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <div className="border-r border-slate-200/90 px-[1vw] py-[1.05vh]">
-                <p className="text-[clamp(1.12rem,1.45vw,1.72rem)] font-black leading-tight text-control-text">
+                <p className="text-[clamp(1.12rem,1.45vw,1.72rem)] font-semibold leading-tight text-control-text">
                   Next decision: <span className="text-control-warm">approve the technical discovery.</span>
                 </p>
                 <p className="mt-[0.75vh] text-[clamp(0.56rem,0.66vw,0.76rem)] font-semibold leading-[1.25] text-slate-700">
@@ -284,8 +284,8 @@ function ClosingMetricCard({ metric }: { metric: ProofMetric }) {
           <metric.Icon aria-hidden="true" size={20} strokeWidth={1.55} />
         </span>
       </div>
-      <strong className="mt-[0.12vh] block text-[clamp(0.98rem,1.34vw,1.55rem)] font-black leading-none text-control-warm">{metric.value}</strong>
-      <span className="mt-[0.28vh] block text-[clamp(0.48rem,0.58vw,0.68rem)] font-black leading-tight text-control-text">{metric.label}</span>
+      <strong className="mt-[0.12vh] block text-[clamp(0.98rem,1.34vw,1.55rem)] font-semibold leading-none text-control-warm">{metric.value}</strong>
+      <span className="mt-[0.28vh] block text-[clamp(0.48rem,0.58vw,0.68rem)] font-semibold leading-tight text-control-text">{metric.label}</span>
     </article>
   );
 }
@@ -298,8 +298,8 @@ function ProcessStepCard({ step, index }: { step: NextStep; index: number }) {
           <step.Icon aria-hidden="true" size={19} strokeWidth={1.65} />
         </span>
         <div className="min-w-0">
-          <p className="text-[0.54rem] font-black uppercase tracking-[0.14em] text-control-warm">{String(index + 1).padStart(2, "0")}</p>
-          <h3 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-black uppercase leading-tight text-control-text">{step.title}</h3>
+          <p className="text-[0.54rem] font-semibold uppercase tracking-[0.14em] text-control-warm">{String(index + 1).padStart(2, "0")}</p>
+          <h3 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-semibold uppercase leading-tight text-control-text">{step.title}</h3>
           <p className="mt-[0.25vh] text-[clamp(0.44rem,0.52vw,0.62rem)] font-medium leading-[1.16] text-slate-700">{step.detail}</p>
         </div>
       </div>
@@ -310,8 +310,10 @@ function ProcessStepCard({ step, index }: { step: NextStep; index: number }) {
 function SummaryChip({ title, value }: { title: string; value: string }) {
   return (
     <article className="rounded-[0.55rem] border border-slate-200/86 bg-white/70 px-[0.62vw] py-[0.62vh]">
-      <p className="text-[0.5rem] font-black uppercase tracking-[0.12em] text-control-warm">{title}</p>
+      <p className="text-[0.5rem] font-semibold uppercase tracking-[0.12em] text-control-warm">{title}</p>
       <p className="mt-[0.32vh] line-clamp-2 text-[clamp(0.5rem,0.6vw,0.7rem)] font-bold leading-[1.2] text-slate-800">{value}</p>
     </article>
   );
 }
+
+

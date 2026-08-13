@@ -15,7 +15,7 @@ export function LoadingScreen() {
           transition={{ duration: 0.7 }}
         >
           <p className="pws-technical-label">OnePWS Private Limited</p>
-          <h1 className="mt-5 text-balance text-4xl font-semibold tracking-[-0.01em] md:text-6xl">
+          <h1 className="mt-5 text-balance text-4xl font-bold tracking-[-0.01em] md:text-6xl">
             Control-room experience activating
           </h1>
           <p className="mt-5 max-w-xl text-sm leading-6 text-[var(--pws-muted-dark)] md:text-base">
@@ -38,3 +38,4 @@ export function LoadingScreen() {
     </main>
   );
 }
+

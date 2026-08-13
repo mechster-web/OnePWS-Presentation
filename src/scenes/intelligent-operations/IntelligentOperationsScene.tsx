@@ -17,6 +17,7 @@ import {
   Map,
   Monitor,
   Puzzle,
+  Quote,
   Recycle,
   Settings,
   ShieldCheck,
@@ -98,7 +99,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "High-strength die-cast aluminium joints and brackets deliver superior rigidity, precision and ruggedness.",
     Icon: Box,
     visual: "joint",
-    image: "/assets/source-pdf/p07_013_264x268.jpg",
+    image: "/assets/products/mechanical-strength/01-die-cast-structural-components-mechanical-strength.png",
   },
   {
     id: "extruded-frame",
@@ -107,7 +108,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "Engineered aluminium profiles provide exceptional strength, light weight and dimensional accuracy.",
     Icon: Box,
     visual: "extrusion",
-    image: "/assets/source-pdf/p07_014_515x290.jpg",
+    image: "/assets/products/mechanical-strength/02-heavy-duty-extruded-aluminum-frame.png",
   },
   {
     id: "bolted-construction",
@@ -116,6 +117,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "Bolted assembly enables easy assembly, dismantling, upgrades and relocation.",
     Icon: Wrench,
     visual: "bolted",
+    image: "/assets/products/mechanical-strength/03-modular-bolted-construction-frame.png",
   },
   {
     id: "load-bearing-chassis",
@@ -124,7 +126,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "Reinforced chassis and cross-members support heavy equipment, monitors and 24/7 loads.",
     Icon: Weight,
     visual: "chassis",
-    image: "/assets/source-pdf/p07_019_593x334.jpg",
+    image: "/assets/products/mechanical-strength/04-high-load-bearing-structural-chassis.png",
   },
   {
     id: "cable-management",
@@ -133,6 +135,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "Horizontal and vertical cable channels separate power, data and AV cables for safety and serviceability.",
     Icon: Cable,
     visual: "cable",
+    image: "/assets/products/mechanical-strength/05-integrated-structural-cable-management.png",
   },
   {
     id: "access-panels",
@@ -141,7 +144,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "Quick-release panels allow fast access to power, data and electronics without tools.",
     Icon: Wrench,
     visual: "panel",
-    image: "/assets/source-pdf/p07_012_382x215.jpg",
+    image: "/assets/products/mechanical-strength/06-tool-less-removable-access-panels.png",
   },
   {
     id: "levelling-system",
@@ -150,6 +153,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "Heavy-duty levellers compensate for uneven floors and ensure stable console installation.",
     Icon: Settings,
     visual: "leveler",
+    image: "/assets/products/mechanical-strength/07-precision-adjustable-leveling-system.png",
   },
   {
     id: "monitor-mounting",
@@ -158,7 +162,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "Dedicated support beams reduce vibration and prevent sag under multi-monitor loads.",
     Icon: Monitor,
     visual: "mount",
-    image: "/assets/source-pdf/p07_018_520x293.jpg",
+    image: "/assets/products/mechanical-strength/08-reinforced-monitor-mount-structure.png",
   },
   {
     id: "edge-protection",
@@ -167,7 +171,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "Aluminium and PU edge components protect high-contact areas while maintaining a clean finish.",
     Icon: ShieldCheck,
     visual: "edge",
-    image: "/assets/source-pdf/p07_016_362x251.jpg",
+    image: "/assets/products/mechanical-strength/09-impact-resistant-adjustable-mount-base.png",
   },
   {
     id: "replaceable-parts",
@@ -176,6 +180,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "High-wear panels, trims, covers, worktops and brackets can be replaced individually.",
     Icon: Puzzle,
     visual: "parts",
+    image: "/assets/products/mechanical-strength/10-modular-control-room-workstation.png",
   },
 ];
 
@@ -185,102 +190,110 @@ const intelligentFeatureCards: IntelligentFeatureCard[] = [
     number: "01",
     title: "Adaptive Sit-Stand Automation",
     description: "Motorized height adjustment with operator presets and scheduled posture changes.",
-    accent: "#174ea0",
-    soft: "rgb(23 78 160 / 0.11)",
+    accent: "#d51d2a",
+    soft: "rgb(213 29 42 / 0.11)",
     Icon: SlidersHorizontal,
     visual: "automation",
+    image: "/assets/products/intelligent-features/1.png",
   },
   {
     id: "ai-desk-assistant",
     number: "02",
     title: "AI Desk Assistant",
     description: "Built-in AI assistant provides alerts, SOP guidance, reminders and actionable insights.",
-    accent: "#174ea0",
-    soft: "rgb(23 78 160 / 0.11)",
+    accent: "#d51d2a",
+    soft: "rgb(213 29 42 / 0.11)",
     Icon: Monitor,
     visual: "assistant",
+    image: "/assets/products/intelligent-features/2.png",
   },
   {
     id: "operator-recognition",
     number: "03",
     title: "Operator Recognition & Auto-Personalization",
     description: "Identify the operator and restore personalized settings for height, monitors, lighting and applications.",
-    accent: "#174ea0",
-    soft: "rgb(23 78 160 / 0.11)",
+    accent: "#d51d2a",
+    soft: "rgb(213 29 42 / 0.11)",
     Icon: UserRound,
     visual: "recognition",
+    image: "/assets/products/intelligent-features/3.png",
   },
   {
     id: "motorized-monitor-positioning",
     number: "04",
     title: "Motorized Monitor Positioning",
     description: "Automatically adjusts monitor height, distance, tilt and layout as per operator or task.",
-    accent: "#174ea0",
-    soft: "rgb(23 78 160 / 0.11)",
+    accent: "#d51d2a",
+    soft: "rgb(213 29 42 / 0.11)",
     Icon: Monitor,
     visual: "monitoring",
-    image: "/assets/source-pdf/p07_018_520x293.jpg",
+    image: "/assets/products/intelligent-features/4.png",
   },
   {
     id: "intelligent-touch-panel",
     number: "05",
     title: "Intelligent Touch Control Panel",
     description: "One interface controls desk, monitors, lighting, AV, communication, power and more.",
-    accent: "#174ea0",
-    soft: "rgb(23 78 160 / 0.11)",
+    accent: "#d51d2a",
+    soft: "rgb(213 29 42 / 0.11)",
     Icon: SlidersHorizontal,
     visual: "touch",
+    image: "/assets/products/intelligent-features/5.png",
   },
   {
     id: "voice-controlled-console",
     number: "06",
     title: "Voice-Controlled Console",
     description: "Execute commands, retrieve information and control workstation functions hands-free.",
-    accent: "#174ea0",
-    soft: "rgb(23 78 160 / 0.11)",
+    accent: "#d51d2a",
+    soft: "rgb(213 29 42 / 0.11)",
     Icon: Headphones,
     visual: "voice",
+    image: "/assets/products/intelligent-features/6.png",
   },
   {
     id: "situational-awareness-lighting",
     number: "07",
     title: "Situational Awareness Lighting",
     description: "Integrated RGB lighting changes according to alarm severity, events and system conditions.",
-    accent: "#174ea0",
-    soft: "rgb(23 78 160 / 0.11)",
+    accent: "#d51d2a",
+    soft: "rgb(213 29 42 / 0.11)",
     Icon: Lightbulb,
     visual: "lighting",
-    image: "/assets/source-pdf/p08_021_574x312.jpg",
+    image: "/assets/products/intelligent-features/7.png",
   },
   {
     id: "operator-wellness",
     number: "08",
     title: "Operator Wellness & Posture Monitoring",
     description: "Sensors monitor posture, sitting duration and usage, prompting healthier work habits.",
-    accent: "#174ea0",
-    soft: "rgb(23 78 160 / 0.11)",
+    accent: "#d51d2a",
+    soft: "rgb(213 29 42 / 0.11)",
     Icon: Settings,
     visual: "wellness",
+    image: "/assets/products/intelligent-features/8.png",
   },
   {
     id: "power-device-management",
     number: "09",
     title: "Smart Power & Device Management",
     description: "Monitors connected devices, power consumption and abnormal loads or device issues.",
-    accent: "#174ea0",
-    soft: "rgb(23 78 160 / 0.11)",
+    accent: "#d51d2a",
+    soft: "rgb(213 29 42 / 0.11)",
     Icon: Activity,
     visual: "power",
+    image: "/assets/products/intelligent-features/9.png",
   },
   {
     id: "shift-handover",
     number: "10",
     title: "Intelligent Shift Handover",
     description: "Auto-generates shift summaries with alarms, pending actions, notes and critical events.",
-    accent: "#174ea0",
-    soft: "rgb(23 78 160 / 0.11)",
+    accent: "#d51d2a",
+    soft: "rgb(213 29 42 / 0.11)",
     Icon: UsersRound,
     visual: "handover",
+    image: "/assets/products/intelligent-features/10.png",
   },
 ];
 
@@ -313,13 +326,13 @@ function IntelligentFeaturesReferenceStage({ chapter }: { chapter: Chapter }) {
           initial={false}
           transition={{ duration: 0.78, ease }}
         >
-          <p className="text-[clamp(0.58rem,0.68vw,0.82rem)] font-black uppercase tracking-[0.58em] text-slate-700">Unified Control Room</p>
-          <h1 className="mt-[0.95vh] text-[clamp(2.08rem,3.22vw,4.4rem)] font-black uppercase leading-[0.94] tracking-normal">
+          <p className="text-[clamp(0.58rem,0.68vw,0.82rem)] font-semibold uppercase tracking-[0.58em] text-slate-700">Unified Control Room</p>
+          <h1 className="mt-[0.95vh] text-[clamp(2.08rem,3.22vw,4.4rem)] font-bold uppercase leading-[0.94] tracking-normal md:text-[2.5vw]">
             <span className="block text-control-text">Intelligent by Design.</span>
-            <span className="block text-[#174ea0]">Smarter by Nature.</span>
+            <span className="block text-[#d51d2a]">Smarter by Nature.</span>
           </h1>
           <div className="mt-[1.05vh] h-[3px] w-[3.3rem] bg-control-warm" />
-          <p className="mt-[0.92vh] max-w-[34rem] text-[clamp(0.78rem,0.88vw,1.02rem)] font-medium leading-[1.3] text-slate-800">
+          <p className="mt-[0.92vh] max-w-[34rem] text-[clamp(0.78rem,0.88vw,1.02rem)] font-medium leading-[1.3] text-slate-800 md:text-[0.8vw]">
             Our intelligent console ecosystem is engineered to adapt, assist and elevate every operator, every shift, every day.
           </p>
         </motion.aside>
@@ -343,11 +356,11 @@ function IntelligentFeaturesReferenceStage({ chapter }: { chapter: Chapter }) {
                 key={item.title}
                 transition={{ duration: 3.2, delay: index * 0.35, repeat: Infinity, ease: "easeInOut" }}
               >
-                <span className="grid h-[1.85rem] w-[1.85rem] place-items-center rounded-full border border-blue-700/16 bg-white/54 text-[#174ea0] shadow-[inset_0_1px_0_rgb(255_255_255/0.95),0_0.55rem_1.2rem_rgb(15_23_42/0.06)]">
+                <span className="grid h-[1.85rem] w-[1.85rem] place-items-center rounded-full border border-red-700/16 bg-white/54 text-[#d51d2a] shadow-[inset_0_1px_0_rgb(255_255_255/0.95),0_0.55rem_1.2rem_rgb(15_23_42/0.06)]">
                   <Icon aria-hidden="true" size={19} strokeWidth={1.75} />
                 </span>
                 <div>
-                  <h2 className="text-[clamp(0.58rem,0.66vw,0.78rem)] font-black uppercase tracking-[0.1em] text-[#174ea0]">{item.title}</h2>
+                  <h2 className="text-[clamp(0.58rem,0.66vw,0.78rem)] font-semibold uppercase tracking-[0.1em] text-[#d51d2a]">{item.title}</h2>
                   <p className="mt-0.5 text-[clamp(0.48rem,0.55vw,0.64rem)] font-medium leading-[1.2] text-slate-700">{item.detail}</p>
                 </div>
               </motion.div>
@@ -368,7 +381,7 @@ function IntelligentFeaturesReferenceStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-[0.35vh] left-[19.6vw] right-[0.1vw] grid h-[7.3vh] grid-cols-3 overflow-hidden rounded-[0.72rem] border border-white/18 bg-[linear-gradient(135deg,#062f58,#0a4275)] text-white shadow-[inset_0_1px_0_rgb(255_255_255/0.22),0_1rem_2.4rem_rgb(6_51_95/0.18)]"
+          className="absolute bottom-[0.35vh] left-[19.6vw] right-[0.1vw] grid h-[7.3vh] grid-cols-3 overflow-hidden rounded-[0.72rem] border border-white/18 bg-[linear-gradient(135deg,#9f101b,#d51d2a)] text-white shadow-[inset_0_1px_0_rgb(255_255_255/0.22),0_1rem_2.4rem_rgb(213_29_42/0.18)]"
           initial={false}
           transition={{ duration: 0.72, delay: 0.38, ease }}
         >
@@ -382,8 +395,8 @@ function IntelligentFeaturesReferenceStage({ chapter }: { chapter: Chapter }) {
               <div className={`grid grid-cols-[2.35rem_minmax(0,1fr)] items-center gap-[0.9vw] px-[1.5vw] ${index ? "border-l border-white/28" : ""}`} key={item.title}>
                 <Icon aria-hidden="true" className="text-white" size={29} strokeWidth={1.6} />
                 <div>
-                  <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-black uppercase tracking-[0.08em]">{item.title}</h2>
-                  <p className="mt-0.5 text-[clamp(0.5rem,0.58vw,0.68rem)] font-medium leading-[1.22] text-white/88">{item.detail}</p>
+                  <h2 className="text-[0.68rem] font-semibold uppercase tracking-[0.08em] md:text-[0.7vw]">{item.title}</h2>
+                  <p className="mt-0.5 text-[0.58rem] font-medium leading-[1.22] text-white/88 md:text-[0.55vw]">{item.detail}</p>
                 </div>
               </div>
             );
@@ -427,7 +440,7 @@ function IntelligentFeaturesReferenceStage({ chapter }: { chapter: Chapter }) {
 
       <motion.div
         animate={reducedMotion ? undefined : { x: ["-20%", "120%"], opacity: [0, 0.18, 0] }}
-        className="pointer-events-none absolute top-[30vh] h-px w-[48vw] bg-[linear-gradient(90deg,transparent,rgb(23_78_160/0.65),transparent)]"
+        className="pointer-events-none absolute top-[30vh] h-px w-[48vw] bg-[linear-gradient(90deg,transparent,rgb(213_29_42/0.65),transparent)]"
         initial={false}
         transition={{ duration: 2.8, delay: 0.6, ease, repeat: 1, repeatDelay: 1.5 }}
       />
@@ -468,13 +481,13 @@ function MechanicalStrengthConsoleStage({ chapter }: { chapter: Chapter }) {
           initial={false}
           transition={{ duration: 0.72, ease }}
         >
-          <p className="text-[clamp(0.58rem,0.68vw,0.82rem)] font-black uppercase tracking-[0.58em] text-slate-700">Engineered to endure. Built to perform.</p>
-          <h1 className="mt-[0.9vh] text-[clamp(2rem,3.05vw,4.18rem)] font-black uppercase leading-[0.94] tracking-normal">
+          <p className="text-[clamp(0.58rem,0.68vw,0.82rem)] font-semibold uppercase tracking-[0.58em] text-slate-700">Engineered to endure. Built to perform.</p>
+          <h1 className="mt-[0.9vh] text-[clamp(2rem,3.05vw,4.18rem)] font-bold uppercase leading-[0.94] tracking-normal md:text-[2.5vw]">
             <span className="block text-control-text">Mechanical Strength.</span>
-            <span className="block text-[#174ea0]">Precision in Every Detail.</span>
+            <span className="block text-[#d51d2a]">Precision in Every Detail.</span>
           </h1>
           <div className="mt-[1.35vh] h-[3px] w-[3.3rem] bg-control-warm" />
-          <p className="mt-[0.9vh] max-w-[34rem] text-[clamp(0.76rem,0.86vw,1rem)] font-medium leading-[1.3] text-slate-800">
+          <p className="mt-[0.9vh] max-w-[34rem] text-[clamp(0.76rem,0.86vw,1rem)] font-medium leading-[1.3] text-slate-800 md:text-[0.8vw]">
             Every component is engineered for rugged performance, ease of assembly and long-term reliability in 24/7 mission-critical control rooms.
           </p>
         </motion.aside>
@@ -494,11 +507,11 @@ function MechanicalStrengthConsoleStage({ chapter }: { chapter: Chapter }) {
             const Icon = item.Icon;
             return (
               <div className="grid grid-cols-[1.85rem_minmax(0,1fr)] gap-[0.62vw]" key={item.title}>
-                <span className="grid h-[1.85rem] w-[1.85rem] place-items-center rounded-full border border-blue-700/16 bg-white/54 text-[#174ea0] shadow-[inset_0_1px_0_rgb(255_255_255/0.95),0_0.55rem_1.2rem_rgb(15_23_42/0.06)]">
+                <span className="grid h-[1.85rem] w-[1.85rem] place-items-center rounded-full border border-red-700/16 bg-white/54 text-[#d51d2a] shadow-[inset_0_1px_0_rgb(255_255_255/0.95),0_0.55rem_1.2rem_rgb(15_23_42/0.06)]">
                   <Icon aria-hidden="true" size={19} strokeWidth={1.75} />
                 </span>
                 <div>
-                  <h2 className="text-[clamp(0.56rem,0.64vw,0.76rem)] font-black uppercase leading-tight text-control-text">{item.title}</h2>
+                  <h2 className="text-[clamp(0.56rem,0.64vw,0.76rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</h2>
                   <p className="mt-0.5 text-[clamp(0.47rem,0.54vw,0.63rem)] font-medium leading-[1.22] text-slate-700">{item.detail}</p>
                 </div>
               </div>
@@ -519,7 +532,7 @@ function MechanicalStrengthConsoleStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-[0.35vh] left-[19.6vw] right-0 grid h-[7.35vh] grid-cols-5 overflow-hidden rounded-[0.72rem] border border-white/18 bg-[linear-gradient(135deg,#062f58,#0a4275)] text-white shadow-[inset_0_1px_0_rgb(255_255_255/0.22),0_1rem_2.4rem_rgb(6_51_95/0.18)]"
+          className="absolute bottom-[0.35vh] left-[19.6vw] right-0 grid grid-cols-5 overflow-hidden rounded-[0.72rem] border border-white/18 bg-[linear-gradient(135deg,#9f101b,#d51d2a)] text-white shadow-[inset_0_1px_0_rgb(255_255_255/0.22),0_1rem_2.4rem_rgb(213_29_42/0.18)]"
           initial={false}
           transition={{ duration: 0.72, delay: 0.38, ease }}
         >
@@ -532,11 +545,11 @@ function MechanicalStrengthConsoleStage({ chapter }: { chapter: Chapter }) {
           ].map((item, index) => {
             const Icon = item.Icon;
             return (
-              <div className={`grid grid-cols-[2.25rem_minmax(0,1fr)] items-center gap-[0.85vw] px-[1.15vw] ${index ? "border-l border-white/28" : ""}`} key={item.title}>
+              <div className={`grid grid-cols-[2.25rem_minmax(0,1fr)] items-center gap-[0.85vw] px-[1.15vw] py-[1.05vh] ${index ? "border-l border-white/28" : ""}`} key={item.title}>
                 <Icon aria-hidden="true" className="text-white" size={28} strokeWidth={1.6} />
                 <div>
-                  <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-black uppercase tracking-[0.08em]">{item.title}</h2>
-                  <p className="mt-0.5 text-[clamp(0.48rem,0.56vw,0.66rem)] font-medium leading-[1.25] text-white/86">{item.detail}</p>
+                  <h2 className="text-[0.68rem] font-semibold uppercase tracking-[0.08em] md:text-[0.58vw]">{item.title}</h2>
+                  <p className="mt-0.5 text-[0.56rem] font-medium leading-[1.2] text-white/86 md:text-[0.52vw]">{item.detail}</p>
                 </div>
               </div>
             );
@@ -594,18 +607,16 @@ function MechanicalStrengthCard({ item, index, reducedMotion }: { item: Mechanic
     >
       <span className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgb(255_255_255/0.84),rgb(255_255_255/0.38)_48%,rgb(232_238_245/0.5))]" />
       <span className="pointer-events-none absolute -right-[18%] -top-[30%] h-[6rem] w-[6rem] rounded-full bg-white/48 blur-2xl" />
-      <div className="relative z-10 grid h-[43%] grid-cols-[2.35rem_minmax(0,1fr)_1.8rem] gap-[0.48vw] px-[0.58vw] py-[0.88vh]">
-        <span className="grid h-[2rem] w-[2rem] place-items-center rounded-[0.42rem] bg-[#174ea0] text-[0.86rem] font-black text-white shadow-[0_0.45rem_1rem_rgb(23_78_160/0.28)]">{item.number}</span>
+      <div className="relative z-10 grid h-[35%] grid-cols-[minmax(0,1fr)_1.8rem] gap-[0.48vw] px-[0.58vw] py-[0.88vh] pl-[2.9rem]">
+        <span className="absolute left-0 top-0 grid h-[1.55rem] min-w-[2.15rem] place-items-center rounded-br-md rounded-tl-[0.78rem] bg-control-warm px-2 text-[clamp(0.64rem,0.72vw,0.82rem)] font-semibold leading-none text-white">{item.number}</span>
         <div className="min-w-0">
-          <h2 className="text-[clamp(0.52rem,0.6vw,0.72rem)] font-black uppercase leading-[1.08] text-control-text">{item.title}</h2>
-          <div className="mt-[0.48vh] h-px w-full bg-slate-200/85" />
-          <p className="mt-[0.42vh] text-[clamp(0.44rem,0.5vw,0.58rem)] font-medium leading-[1.18] text-slate-700">{item.description}</p>
+          <h2 className="text-[clamp(0.52rem,0.6vw,0.72rem)] font-semibold uppercase leading-[1.08] text-control-text">{item.title}</h2>
         </div>
         <Icon aria-hidden="true" className="mt-0.5 text-slate-900/72" size={21} strokeWidth={1.65} />
       </div>
-      <div className="relative z-10 h-[57%] overflow-hidden rounded-b-[0.76rem] bg-[linear-gradient(135deg,#eef2f6,#ffffff)]">
+      <div className="relative z-10 h-[65%] overflow-hidden rounded-b-[0.76rem] bg-[linear-gradient(135deg,#eef2f6,#ffffff)]">
         {imageVisual}
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgb(255_255_255/0.08),rgb(15_23_42/0.16))]" />
+        {!item.image ? <div className="absolute inset-0 bg-[linear-gradient(180deg,rgb(255_255_255/0.08),rgb(15_23_42/0.16))]" /> : null}
         {!item.image ? <MechanicalStrengthVisual visual={item.visual} reducedMotion={reducedMotion} /> : null}
       </div>
     </motion.article>
@@ -621,8 +632,8 @@ function MechanicalStrengthVisual({ visual, reducedMotion }: { visual: Mechanica
           <span className="absolute right-0 top-[44%] h-[18%] w-[45%] rounded bg-slate-800" />
           {[16, 34, 58, 76].map((left) => (
             <motion.span
-              animate={reducedMotion ? undefined : { boxShadow: ["0 0 0 rgb(23 78 160 / 0)", "0 0 18px rgb(23 78 160 / 0.45)", "0 0 0 rgb(23 78 160 / 0)"] }}
-              className="absolute top-[39%] h-5 w-5 rounded-full border border-white/70 bg-[#174ea0]"
+              animate={reducedMotion ? undefined : { boxShadow: ["0 0 0 rgb(213 29 42 / 0)", "0 0 18px rgb(213 29 42 / 0.45)", "0 0 0 rgb(213 29 42 / 0)"] }}
+              className="absolute top-[39%] h-5 w-5 rounded-full border border-white/70 bg-[#d51d2a]"
               key={left}
               style={{ left: `${left}%` }}
               transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
@@ -639,7 +650,7 @@ function MechanicalStrengthVisual({ visual, reducedMotion }: { visual: Mechanica
         {[0, 1, 2, 3].map((index) => (
           <motion.span
             animate={reducedMotion ? undefined : { x: ["-8%", "4%", "-8%"] }}
-            className="absolute left-[12%] h-[5px] w-[74%] rounded-full bg-[#1e88ff]"
+            className="absolute left-[12%] h-[5px] w-[74%] rounded-full bg-control-warm"
             key={index}
             style={{ top: `${34 + index * 9}%` }}
             transition={{ duration: 2.4 + index * 0.2, repeat: Infinity, ease: "easeInOut" }}
@@ -825,12 +836,12 @@ function IncidentResponseReferenceStage({ chapter }: { chapter: Chapter }) {
           transition={{ duration: 0.72, ease }}
         >
           <div className="absolute left-[0.25vw] top-[1.05vh] z-20 w-[min(47vw,48rem)]">
-            <h1 className="text-[clamp(2.9rem,4.25vw,5.65rem)] font-black leading-[0.94] tracking-normal text-control-text">
+            <h1 className="text-[clamp(2.9rem,4.25vw,5.65rem)] font-bold leading-[0.94] tracking-normal text-control-text md:text-[2.5vw]">
               <span className="block">When Every</span>
               <span className="block">Second <span className="text-control-warm">Matters.</span></span>
             </h1>
             <div className="mt-[1.25vh] h-[3px] w-[2.65rem] bg-control-warm" />
-            <p className="mt-[1.45vh] max-w-[35rem] text-[clamp(0.82rem,0.92vw,1.04rem)] font-medium leading-[1.5] text-slate-800">
+            <p className="mt-[1.45vh] max-w-[35rem] text-[clamp(0.82rem,0.92vw,1.04rem)] font-medium leading-[1.5] text-slate-800 md:text-[0.8vw]">
               In critical moments, operators don't have time to search, adjust or wait. Our intelligent control room responds instantly so operators can focus on what truly matters: the mission.
             </p>
           </div>
@@ -841,8 +852,8 @@ function IncidentResponseReferenceStage({ chapter }: { chapter: Chapter }) {
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgb(255_255_255/0.72)_0%,transparent_42%,rgb(255_255_255/0.18)_100%)]" />
             <div className="absolute left-[52%] top-[22%] -translate-x-1/2 text-center text-control-warm">
               <AlertTriangleVisual reducedMotion={reducedMotion} />
-              <p className="mt-2 text-[clamp(0.74rem,0.9vw,1rem)] font-black uppercase tracking-normal">Critical Alert</p>
-              <p className="mt-1 text-[clamp(1.35rem,2.05vw,2.5rem)] font-black leading-none tracking-normal">00:00:07</p>
+              <p className="mt-2 text-[clamp(0.74rem,0.9vw,1rem)] font-semibold uppercase tracking-normal">Critical Alert</p>
+              <p className="mt-1 text-[clamp(1.35rem,2.05vw,2.5rem)] font-semibold leading-none tracking-normal">00:00:07</p>
             </div>
           </div>
 
@@ -853,7 +864,7 @@ function IncidentResponseReferenceStage({ chapter }: { chapter: Chapter }) {
                 <div className={`relative flex min-w-0 gap-[0.72vw] px-[0.9vw] py-[1.1vh] ${index ? "border-l border-slate-200/90" : ""}`} key={outcome.title}>
                   <Icon aria-hidden="true" className="mt-0.5 shrink-0 text-control-warm" size={25} strokeWidth={1.65} />
                   <div className="min-w-0">
-                    <h2 className="text-[clamp(0.56rem,0.64vw,0.76rem)] font-black leading-tight text-control-text">{outcome.title}</h2>
+                    <h2 className="text-[clamp(0.56rem,0.64vw,0.76rem)] font-semibold leading-tight text-control-text">{outcome.title}</h2>
                     <p className="mt-1 text-[clamp(0.52rem,0.59vw,0.68rem)] font-medium leading-[1.28] text-slate-700">{outcome.description}</p>
                   </div>
                 </div>
@@ -869,7 +880,7 @@ function IncidentResponseReferenceStage({ chapter }: { chapter: Chapter }) {
           transition={{ duration: 0.74, delay: 0.08, ease }}
         >
           <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.25vw] py-[2vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-            <h2 className="text-[clamp(1.05rem,1.32vw,1.58rem)] font-black leading-none text-control-text">From Event to Action - Instantly.</h2>
+            <h2 className="text-[clamp(1.05rem,1.32vw,1.58rem)] font-semibold leading-none text-control-text">From Event to Action - Instantly.</h2>
             <div className="mt-[1vh] h-[2px] w-[2.2rem] bg-control-warm" />
             <div className="mt-[2.3vh] grid grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-start gap-[0.8vw]">
               {responseFlow.map((item, index) => (
@@ -879,7 +890,7 @@ function IncidentResponseReferenceStage({ chapter }: { chapter: Chapter }) {
           </section>
 
           <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.25vw] py-[2vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-            <h2 className="text-[clamp(0.98rem,1.15vw,1.34rem)] font-black leading-none text-control-text">Built for Critical Moments</h2>
+            <h2 className="text-[clamp(0.98rem,1.15vw,1.34rem)] font-semibold leading-none text-control-text">Built for Critical Moments</h2>
             <div className="mt-[1vh] h-[2px] w-[1.9rem] bg-control-warm" />
             <div className="mt-[2vh] grid h-[calc(100%-3.4rem)] grid-cols-3 grid-rows-2">
               {criticalMomentItems.map((item, index) => (
@@ -890,9 +901,9 @@ function IncidentResponseReferenceStage({ chapter }: { chapter: Chapter }) {
 
           <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.45vw] py-[1.35vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
             <div className="relative z-10 max-w-[31rem]">
-              <p className="text-[clamp(2rem,3vw,3.6rem)] font-black leading-none text-control-warm">"</p>
-              <p className="-mt-3 text-[clamp(0.78rem,0.9vw,1rem)] font-medium text-slate-800">Technology should never slow you down.</p>
-              <p className="mt-1.5 text-[clamp(0.78rem,0.9vw,1rem)] font-black text-control-warm">Our environment makes you faster, sharper and stronger.</p>
+              <Quote aria-hidden="true" className="text-control-warm" size={40} strokeWidth={1.55} />
+              <p className="mt-[0.2vh] text-[clamp(0.78rem,0.9vw,1rem)] font-medium text-slate-800">Technology should never slow you down.</p>
+              <p className="mt-1.5 text-[clamp(0.78rem,0.9vw,1rem)] font-semibold text-control-warm">Our environment makes you faster, sharper and stronger.</p>
             </div>
             <div className="absolute bottom-[0.7rem] right-[2.1vw] h-[7.4rem] w-[7.4rem] opacity-75">
               <SpeedGauge />
@@ -946,7 +957,7 @@ function ResponseFlowNode({ item, showArrow }: { item: ResponseFlowItem; showArr
         <div className="mx-auto grid h-[clamp(3.1rem,5.4vh,4.1rem)] w-[clamp(3.1rem,5.4vh,4.1rem)] place-items-center rounded-full bg-control-warm/8 text-control-warm">
           <Icon aria-hidden="true" size={28} strokeWidth={1.65} />
         </div>
-        <h3 className="mt-[1.05vh] text-[clamp(0.6rem,0.68vw,0.78rem)] font-black leading-tight text-control-text">{item.title}</h3>
+        <h3 className="mt-[1.05vh] text-[clamp(0.6rem,0.68vw,0.78rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
         <p className="mx-auto mt-1 max-w-[8.2rem] text-[clamp(0.55rem,0.62vw,0.72rem)] font-medium leading-[1.34] text-slate-700">{item.description}</p>
       </div>
       {showArrow ? <div className="pt-[clamp(1.55rem,2.9vh,2.25rem)] text-[clamp(1.1rem,1.35vw,1.55rem)] font-light text-control-text">›</div> : null}
@@ -963,7 +974,7 @@ function CriticalMomentCell({ item, index }: { item: CriticalMomentItem; index: 
     <div className={`grid grid-cols-[2.3rem_minmax(0,1fr)] gap-[0.8vw] px-[0.85vw] py-[1.35vh] ${hasLeftBorder ? "border-l border-slate-200/90" : ""} ${hasTopBorder ? "border-t border-slate-200/90" : ""}`}>
       <Icon aria-hidden="true" className="mt-0.5 text-control-warm" size={26} strokeWidth={1.65} />
       <div>
-        <h3 className="text-[clamp(0.62rem,0.72vw,0.84rem)] font-black leading-tight text-control-text">{item.title}</h3>
+        <h3 className="text-[clamp(0.62rem,0.72vw,0.84rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
         <p className="mt-2 text-[clamp(0.54rem,0.62vw,0.72rem)] font-medium leading-[1.38] text-slate-700">{item.description}</p>
       </div>
     </div>
@@ -981,7 +992,7 @@ function AlertTriangleVisual({ reducedMotion }: { reducedMotion: boolean }) {
         <span className="absolute left-1/2 top-1 h-14 w-[3px] -translate-x-1/2 rotate-[30deg] rounded-full bg-control-warm" />
         <span className="absolute bottom-2 left-2 h-[3px] w-12 rounded-full bg-control-warm" />
         <span className="absolute right-[0.62rem] top-1 h-14 w-[3px] rotate-[-30deg] rounded-full bg-control-warm" />
-        <span className="absolute left-1/2 top-[1.2rem] -translate-x-1/2 text-3xl font-black leading-none text-control-warm">!</span>
+        <span className="absolute left-1/2 top-[1.2rem] -translate-x-1/2 text-3xl font-semibold leading-none text-control-warm">!</span>
       </div>
     </motion.div>
   );
@@ -1033,12 +1044,12 @@ function FeatureCard({ feature, index, reducedMotion }: { feature: IntelligentFe
       <span className="pointer-events-none absolute inset-x-[0.55rem] top-0 h-px bg-white/90" />
       <span className="pointer-events-none absolute -right-[18%] -top-[32%] h-[6rem] w-[6rem] rounded-full bg-white/42 blur-2xl" />
 
-      <header className="relative z-10 grid min-h-[7.2vh] grid-cols-[2.25rem_minmax(0,1fr)_1.82rem] items-start gap-[0.46vw]">
-        <span className="grid h-[2rem] w-[2rem] place-items-center rounded-[0.42rem] bg-[#174ea0] text-[clamp(0.78rem,0.88vw,0.96rem)] font-black leading-none tracking-normal text-white shadow-[0_0.45rem_1rem_rgb(23_78_160/0.24)]">
+      <header className="relative z-10 grid min-h-[4.6vh] grid-cols-[minmax(0,1fr)_1.82rem] items-start gap-[0.46vw] pl-[2.8rem]">
+        <span className="absolute left-[-0.54vw] top-[-0.54vw] grid h-[1.55rem] min-w-[2.15rem] place-items-center rounded-br-md rounded-tl-[0.78rem] bg-control-warm px-2 text-[clamp(0.64rem,0.72vw,0.82rem)] font-semibold leading-none tracking-normal text-white">
           {feature.number}
         </span>
         <div className="min-w-0 pt-[0.02rem]">
-          <h2 className="max-w-[13rem] text-[clamp(0.52rem,0.59vw,0.7rem)] font-black uppercase leading-[1.08] tracking-normal text-control-text">
+          <h2 className="max-w-[13rem] text-[clamp(0.52rem,0.59vw,0.7rem)] font-semibold uppercase leading-[1.08] tracking-normal text-control-text">
             {titleParts.length > 3 ? (
               <>
                 <span className="block">{titleParts.slice(0, Math.ceil(titleParts.length / 2)).join(" ")}</span>
@@ -1048,7 +1059,6 @@ function FeatureCard({ feature, index, reducedMotion }: { feature: IntelligentFe
               feature.title
             )}
           </h2>
-          <p className="mt-[0.52vh] text-[clamp(0.44rem,0.5vw,0.59rem)] font-medium leading-[1.18] text-slate-700">{feature.description}</p>
         </div>
         <span className="grid h-[1.76rem] w-[1.76rem] shrink-0 place-items-center rounded-full border border-slate-300/62 bg-white/56 text-slate-900/76 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_0.4rem_0.9rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
           <Icon aria-hidden="true" size={18} strokeWidth={1.75} />
@@ -1065,13 +1075,16 @@ function FeatureCard({ feature, index, reducedMotion }: { feature: IntelligentFe
 }
 
 function FeatureVisual({ feature, reducedMotion }: { feature: IntelligentFeatureCard; reducedMotion: boolean }) {
-  const imageVisual = feature.image ? (
-    <img alt="" className="absolute inset-0 h-full w-full object-cover" src={feature.image} />
-  ) : null;
+  if (feature.image) {
+    return (
+      <div className="relative z-10 mt-auto h-[13.4vh] shrink-0 overflow-hidden rounded-[0.58rem] border border-white/54 bg-[linear-gradient(135deg,#101820,#27313b)] shadow-[inset_0_1px_0_rgb(255_255_255/0.16),0_0.62rem_1.35rem_rgb(15_23_42/0.09)]">
+        <img alt="" className="h-full w-full object-cover" src={feature.image} />
+      </div>
+    );
+  }
 
   return (
     <div className="relative z-10 mt-auto h-[9.95vh] shrink-0 overflow-hidden rounded-[0.58rem] border border-white/54 bg-[linear-gradient(135deg,#101820,#27313b)] shadow-[inset_0_1px_0_rgb(255_255_255/0.16),0_0.62rem_1.35rem_rgb(15_23_42/0.09)]">
-      {imageVisual}
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgb(0_0_0/0.05),rgb(0_0_0/0.38))]" />
       {feature.visual === "automation" ? <AutomationVisual reducedMotion={reducedMotion} /> : null}
       {feature.visual === "assistant" ? <AssistantVisual reducedMotion={reducedMotion} /> : null}
@@ -1116,12 +1129,12 @@ function AssistantVisual({ reducedMotion }: { reducedMotion: boolean }) {
         className="h-full w-[82%] rounded-lg border border-sky-300/28 bg-[#071827]/88 p-2"
         transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
       >
-        <div className="mb-1 flex items-center justify-between text-[0.42rem] font-black uppercase tracking-[0.12em] text-sky-200">
+        <div className="mb-1 flex items-center justify-between text-[0.42rem] font-semibold uppercase tracking-[0.12em] text-sky-200">
           <span>AI Assistant</span>
           <span className="grid h-4 w-4 place-items-center rounded-full border border-sky-300/40">AI</span>
         </div>
         <p className="text-[0.48rem] font-semibold leading-[1.22] text-white/90">High temperature alert on AHU-3. SOP ready.</p>
-        <div className="mt-2 flex gap-1 text-[0.38rem] font-black uppercase">
+        <div className="mt-2 flex gap-1 text-[0.38rem] font-semibold uppercase">
           <span className="rounded bg-sky-500/80 px-2 py-1">View SOP</span>
           <span className="rounded bg-white/12 px-2 py-1">Dismiss</span>
         </div>
@@ -1142,7 +1155,7 @@ function RecognitionVisual({ reducedMotion }: { reducedMotion: boolean }) {
           <UserRound aria-hidden="true" size={18} />
         </span>
         <div>
-          <p className="text-[0.55rem] font-black">Welcome, Arjun</p>
+          <p className="text-[0.55rem] font-semibold">Welcome, Arjun</p>
           <p className="mt-1 rounded bg-blue-500/24 px-2 py-1 text-[0.38rem] font-bold uppercase tracking-[0.1em] text-blue-100">Profile Loaded</p>
         </div>
       </motion.div>
@@ -1190,7 +1203,7 @@ function WellnessVisual({ reducedMotion }: { reducedMotion: boolean }) {
         transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
       >
         <div className="grid h-14 w-14 place-items-center rounded-full bg-[conic-gradient(#22c55e_306deg,rgb(255_255_255/0.16)_0)]">
-          <span className="grid h-10 w-10 place-items-center rounded-full bg-[#07130f] text-lg font-black text-emerald-200">85</span>
+          <span className="grid h-10 w-10 place-items-center rounded-full bg-[#07130f] text-lg font-semibold text-emerald-200">85</span>
         </div>
       </motion.div>
       <div className="flex flex-col justify-center text-[0.48rem] font-semibold leading-[1.3] text-emerald-50">
@@ -1211,7 +1224,7 @@ function PowerVisual({ reducedMotion }: { reducedMotion: boolean }) {
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
       >
         <div className="grid h-14 w-14 place-items-center rounded-full bg-[conic-gradient(#2563eb_238deg,#22c55e_0_330deg,rgb(255_255_255/0.16)_0)]">
-          <span className="text-center text-[0.58rem] font-black leading-none">2.4 kW</span>
+          <span className="text-center text-[0.58rem] font-semibold leading-none">2.4 kW</span>
         </div>
       </motion.div>
       <div className="flex flex-col justify-center gap-1 text-[0.48rem] font-semibold">
@@ -1238,11 +1251,11 @@ function HandoverVisual({ reducedMotion }: { reducedMotion: boolean }) {
         className="w-[84%] rounded-lg border border-white/12 bg-[#071827]/88 p-2"
         transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
       >
-        <p className="mb-1 text-[0.42rem] font-black uppercase tracking-[0.12em] text-white/76">Shift Handover Summary</p>
+        <p className="mb-1 text-[0.42rem] font-semibold uppercase tracking-[0.12em] text-white/76">Shift Handover Summary</p>
         {rows.map(([label, value, color]) => (
           <div className="flex items-center justify-between border-t border-white/10 py-1 text-[0.42rem] font-semibold text-white" key={label}>
             <span>{label}</span>
-            <span className="rounded-full px-2 py-0.5 text-[0.36rem] font-black" style={{ backgroundColor: color }}>{value}</span>
+            <span className="rounded-full px-2 py-0.5 text-[0.36rem] font-semibold" style={{ backgroundColor: color }}>{value}</span>
           </div>
         ))}
       </motion.div>
@@ -1262,7 +1275,7 @@ function AlertnessVisual({ reducedMotion }: { reducedMotion: boolean }) {
             initial={reducedMotion ? false : { opacity: 0.72, scale: 0.82 }}
             transition={{ duration: 1.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="grid h-10 w-10 place-items-center rounded-full bg-[#07130f] text-xl font-extrabold text-emerald-300">92</div>
+            <div className="grid h-10 w-10 place-items-center rounded-full bg-[#07130f] text-xl font-semibold text-emerald-300">92</div>
           </motion.div>
         </div>
         <div className="grid gap-1 text-[0.48rem]">
@@ -1315,7 +1328,7 @@ function CollisionVisual({ reducedMotion }: { reducedMotion: boolean }) {
         className="absolute bottom-[22%] left-[24%] h-[18%] w-[58%] rounded-full border border-red-400/80 bg-red-500/24 blur-[1px]"
         transition={{ duration: 1.55, repeat: Infinity, ease: "easeInOut" }}
       />
-      <span className="absolute bottom-[30%] left-[49%] text-xl font-black text-white">!</span>
+      <span className="absolute bottom-[30%] left-[49%] text-xl font-semibold text-white">!</span>
     </>
   );
 }
@@ -1342,7 +1355,7 @@ function RfidVisual({ reducedMotion }: { reducedMotion: boolean }) {
     <div className="absolute inset-0 grid place-items-center">
       <motion.div
         animate={reducedMotion ? undefined : { rotate: [-4, 0, -4], x: [-6, 2, -6] }}
-        className="grid h-[42%] w-[45%] place-items-center rounded border border-white/40 bg-white text-[0.58rem] font-extrabold text-control-text shadow-xl"
+        className="grid h-[42%] w-[45%] place-items-center rounded border border-white/40 bg-white text-[0.58rem] font-semibold text-control-text shadow-xl"
         transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
       >
         ONE<span className="text-control-warm">PWS</span>

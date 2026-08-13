@@ -195,11 +195,11 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
             initial={state.reducedMotion ? false : { scaleX: 0 }}
             transition={{ duration: 0.62, delay: 0.18, ease: processEase }}
           />
-          <h1 className="mt-[1.75vh] max-w-[11.8ch] text-balance text-[clamp(2.18rem,2.72vw,3.56rem)] font-extrabold leading-[1.02] tracking-normal text-control-text">
+          <h1 className="mt-[1.75vh] max-w-[11.8ch] text-balance text-[clamp(2.18rem,2.72vw,3.56rem)] font-bold leading-[1.02] tracking-normal text-control-text md:text-[2.5vw]">
             {chapter.headline}
           </h1>
           <div className="mt-[1.35vh] h-px w-8 bg-slate-300" />
-          <p className="mt-[1.1vh] max-w-[28rem] text-[clamp(0.78rem,0.84vw,0.98rem)] leading-[1.36] text-control-soft">
+          <p className="mt-[1.1vh] max-w-[28rem] text-[clamp(0.78rem,0.84vw,0.98rem)] leading-[1.36] text-control-soft md:text-[0.8vw]">
             {chapter.supportingMessage}
           </p>
         </motion.div>
@@ -305,7 +305,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
                     <principle.Icon aria-hidden="true" className="text-control-warm" size={25} strokeWidth={1.75} />
                   </motion.div>
                   <div>
-                    <p className="text-[clamp(0.56rem,0.62vw,0.72rem)] font-extrabold uppercase leading-tight text-white">
+                    <p className="text-[clamp(0.56rem,0.62vw,0.72rem)] font-semibold uppercase leading-tight text-white">
                       {principle.label}
                     </p>
                     <p className="mt-[0.22vh] max-w-[9.2rem] text-[clamp(0.52rem,0.6vw,0.72rem)] leading-[1.28] text-white/84">
@@ -324,7 +324,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
           initial={state.reducedMotion ? false : { opacity: 0, y: 14 }}
           transition={{ duration: motionDuration, delay: 0.24, ease: processEase }}
         >
-          <p className="mb-[1vh] text-[clamp(0.62rem,0.7vw,0.8rem)] font-extrabold uppercase tracking-[0.16em] text-control-text">
+          <p className="mb-[1vh] text-[clamp(0.62rem,0.7vw,0.8rem)] font-semibold uppercase tracking-[0.16em] text-control-text">
             What should the room adapt to first?
           </p>
           <div className="grid h-[12.7vh] grid-cols-5 overflow-hidden rounded-[0.32rem] border border-slate-200 bg-white/74 shadow-[0_1.1rem_2.5rem_rgb(15_23_42/0.07)] backdrop-blur-xl">
@@ -374,7 +374,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
                   <div className="relative z-10">
                     <motion.span
                       animate={{ opacity: 1, y: 0 }}
-                      className="block text-[clamp(1.15rem,1.28vw,1.46rem)] font-extrabold tracking-[0.04em]"
+                      className="block text-[clamp(1.15rem,1.28vw,1.46rem)] font-semibold tracking-[0.04em]"
                       initial={state.reducedMotion ? false : { opacity: 0, y: 8 }}
                       style={{ color: item.accent }}
                       transition={{ duration: 0.58, delay: 0.48 + index * 0.07, ease: processEase }}
@@ -395,7 +395,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
                     </motion.div>
                   </div>
                   <div className="relative z-10">
-                    <p className="text-[clamp(0.78rem,0.86vw,1rem)] font-extrabold leading-tight text-control-text">
+                    <p className="text-[clamp(0.78rem,0.86vw,1rem)] font-semibold leading-tight text-control-text">
                       {item.title}
                     </p>
                     <div className="mt-[0.5vh] h-px w-6" style={{ background: item.accent }} />
@@ -425,13 +425,13 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
           ) : null}
           <div className="grid h-full max-w-[54rem] grid-cols-[4.5rem_1fr] items-center">
             <div className="flex h-full items-center justify-center text-control-warm">
-              <span className="text-[clamp(2.25rem,3.1vw,3.8rem)] font-extrabold leading-none">&ldquo;</span>
+              <span className="text-[clamp(2.25rem,3.1vw,3.8rem)] font-semibold leading-none">&ldquo;</span>
             </div>
             <div className="border-l border-slate-200 pl-[1.2vw]">
               <p className="text-[clamp(0.78rem,0.88vw,1rem)] font-medium leading-[1.28] text-control-text">
                 The operator should never have to adapt to a poorly designed room.
               </p>
-              <p className="mt-[0.35vh] text-[clamp(0.78rem,0.88vw,1rem)] font-extrabold leading-[1.25] text-control-warm">
+              <p className="mt-[0.35vh] text-[clamp(0.78rem,0.88vw,1rem)] font-semibold leading-[1.25] text-control-warm">
                 The room should adapt to the operator.
               </p>
             </div>
@@ -440,7 +440,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="pws-scene-control-dock absolute bottom-[2.45vh] left-[3.55vw] justify-start"
+          className="pws-scene-control-dock absolute bottom-[0.1vh] left-[0.1vw] z-40 justify-start"
           initial={state.reducedMotion ? false : { opacity: 0, y: 10 }}
           transition={{ duration: motionDuration, delay: 0.66, ease: processEase }}
         >
@@ -476,3 +476,5 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
     </article>
   );
 }
+
+

@@ -55,42 +55,42 @@ const processSteps: ProcessStep[] = [
     title: "Discover",
     description: "Understand operations, people, goals and challenges.",
     Icon: MessageSquare,
-    image: "/assets/source-pdf/p20_050_1781x1016.jpg",
+    image: "/assets/products/process-icons/01-discover-magnifier-people.png",
   },
   {
     number: "02",
     title: "Design",
     description: "Ergonomic layouts, 3D visualization and engineering solutions.",
     Icon: DraftingCompass,
-    image: "/assets/source-pdf/p31_059_2078x1168.jpg",
+    image: "/assets/products/process-icons/02-design-engineering-blueprint.png",
   },
   {
     number: "03",
     title: "Engineer",
     description: "Detailed engineering, simulations and compliance validation.",
     Icon: FileCheck2,
-    visual: "blueprint",
+    image: "/assets/products/process-icons/03-engineering-validation-checklist.png",
   },
   {
     number: "04",
     title: "Manufacture",
     description: "Precision manufacturing with quality control at every step.",
     Icon: Cog,
-    image: "/assets/source-pdf/p36_063_495x250.jpg",
+    image: "/assets/products/process-icons/04-manufacturing-robotic-automation.png",
   },
   {
     number: "05",
     title: "Build & Integrate",
     description: "Expert installation and integration of all systems.",
     Icon: Truck,
-    image: "/assets/source-pdf/p06_010_574x312.jpg",
+    image: "/assets/products/process-icons/05-build-integrate-logistics-truck.png",
   },
   {
     number: "06",
     title: "Commission & Support",
     description: "Testing, training and ongoing support for sustained performance.",
     Icon: ShieldCheck,
-    image: "/assets/source-pdf/p34_062_1422x800.jpg",
+    image: "/assets/products/process-icons/06-commission-support-technician.png",
   },
 ];
 
@@ -169,34 +169,34 @@ export function DesignBuildReferenceScene({ chapter }: { chapter: Chapter }) {
       <div className="pointer-events-none absolute inset-x-0 top-[8.6vh] h-px bg-slate-200/80" />
 
       <section className="absolute inset-x-[1.7vw] top-[9.85vh] bottom-[7.05vh] z-10">
-        <div className="absolute inset-x-0 top-0 bottom-[7.35vh] grid grid-cols-[minmax(17rem,0.43fr)_minmax(0,1.57fr)] gap-[1.55vw]">
+        <div className="absolute inset-x-0 top-0 bottom-[7.35vh] grid grid-cols-[minmax(15.5rem,0.36fr)_minmax(0,1.64fr)] gap-[1.55vw]">
           <motion.aside
             animate={{ opacity: 1, x: 0 }}
-            className="relative min-h-0 border-r border-slate-200/88 pr-[1.35vw]"
+            className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)_13.2vh] gap-[1vh] overflow-hidden border-r border-slate-200/88 pr-[1.35vw]"
             initial={false}
             transition={{ duration: 0.72, ease }}
           >
-            <div className="absolute left-0 top-[1.1vh] grid grid-cols-[0.28rem_minmax(0,1fr)] gap-[1.4vw]">
-              <span className="h-[14.2vh] w-[3px] bg-control-warm" />
+            <div className="grid grid-cols-[0.28rem_minmax(0,1fr)] gap-[1.25vw] pt-[0.75vh]">
+              <span className="h-full min-h-[12vh] w-[3px] bg-control-warm" />
               <div>
-                <h1 className="text-[clamp(2.05rem,2.7vw,3.75rem)] font-black leading-[1.03] tracking-normal text-control-text">
+                <h1 className="text-[clamp(1.7rem,2.32vw,3.05rem)] font-bold leading-[1.02] tracking-normal text-control-text md:text-[2.28vw]">
                   <span className="block">Integrated</span>
                   <span className="block">Design-Build</span>
                   <span className="block text-control-warm">Approach.</span>
                 </h1>
-                <p className="mt-[2.2vh] max-w-[17rem] text-[clamp(0.72rem,0.82vw,0.94rem)] font-medium leading-[1.45] text-slate-800">
+                <p className="mt-[1.15vh] max-w-[17rem] text-[clamp(0.62rem,0.7vw,0.82rem)] font-medium leading-[1.28] text-slate-800 md:text-[0.68vw]">
                   One team. One process. One responsibility. Seamless from concept to commissioning.
                 </p>
               </div>
             </div>
 
-            <div className="absolute inset-x-[0.2vw] top-[23.2vh] grid gap-[0.55vh]">
+            <div className="grid min-h-0 content-start gap-[0.26vh] overflow-hidden">
               {designBuildReasons.map((item, index) => (
                 <ReasonRow index={index} item={item} key={item.title} />
               ))}
             </div>
 
-            <div className="absolute inset-x-[-1.7vw] bottom-0 h-[17.4vh] overflow-hidden border-t border-slate-200/82 bg-white/38">
+            <div className="relative ml-[-1.7vw] h-full overflow-hidden border-t border-slate-200/82 bg-white/38">
               <img alt="" className="absolute inset-0 h-full w-full object-cover" src="/assets/source-pdf/p06_010_574x312.jpg" />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgb(255_255_255/0.42)_0%,rgb(255_255_255/0.08)_62%,rgb(255_255_255/0.34)_100%)]" />
             </div>
@@ -204,21 +204,21 @@ export function DesignBuildReferenceScene({ chapter }: { chapter: Chapter }) {
 
           <motion.section
             animate={{ opacity: 1, y: 0 }}
-            className="relative grid min-h-0 grid-rows-[minmax(0,1fr)_8vh_16.5vh] gap-[1.05vh]"
+            className="relative grid min-h-0 grid-rows-[minmax(0,1fr)_7.7vh_13.8vh] gap-[0.86vh]"
             initial={false}
             transition={{ duration: 0.74, delay: 0.08, ease }}
           >
             <section className="relative min-h-0">
-              <h2 className="text-[clamp(0.98rem,1.14vw,1.32rem)] font-black uppercase tracking-normal text-control-text">Our Integrated Delivery Process</h2>
+              <h2 className="text-[clamp(0.98rem,1.14vw,1.32rem)] font-semibold uppercase tracking-normal text-control-text">Our Integrated Delivery Process</h2>
               <div className="mt-[1vh] h-[2px] w-[2.2rem] bg-control-warm" />
-              <div className="mt-[1.9vh] grid grid-cols-[repeat(6,minmax(0,1fr))] gap-[0.82vw]">
+              <div className="mt-[1.35vh] grid grid-cols-[repeat(6,minmax(0,1fr))] gap-[0.82vw]">
                 {processSteps.map((step, index) => (
                   <ProcessStepCard index={index} key={step.number} step={step} />
                 ))}
               </div>
             </section>
 
-            <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.1vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+            <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.9vw] py-[0.78vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <div className="grid h-full grid-cols-5">
                 {capabilityItems.map((item, index) => (
                   <CapabilityCell index={index} item={item} key={item.title} />
@@ -226,18 +226,18 @@ export function DesignBuildReferenceScene({ chapter }: { chapter: Chapter }) {
               </div>
             </section>
 
-            <section className="relative min-h-0 px-[1vw] py-[0.95vh]">
-              <h2 className="text-[clamp(0.76rem,0.9vw,1.04rem)] font-black uppercase tracking-normal text-control-text">What This Means for You</h2>
+            <section className="relative min-h-0 overflow-hidden px-[0.9vw] py-[0.72vh]">
+              <h2 className="text-[clamp(0.76rem,0.9vw,1.04rem)] font-semibold uppercase tracking-normal text-control-text">What This Means for You</h2>
               <div className="mt-[0.65vh] h-[2px] w-[2rem] bg-control-warm" />
-              <div className="mt-[1.2vh] grid min-h-[7.8rem] grid-cols-[repeat(4,minmax(0,1fr))_minmax(18rem,0.92fr)] items-center gap-[1vw]">
+              <div className="mt-[0.9vh] grid min-h-0 grid-cols-[repeat(4,minmax(0,1fr))_minmax(15rem,0.9fr)] items-center gap-[0.82vw]">
                 {meaningItems.map((item, index) => (
                   <MeaningCell index={index} item={item} key={item.title} />
                 ))}
-                <div className="relative min-h-[7.8rem] border-l border-slate-400/80 pl-[2.2vw]">
-                  <p className="max-w-[20rem] text-[clamp(0.82rem,0.98vw,1.14rem)] font-black leading-[1.12] text-control-warm">
+                <div className="relative min-h-0 border-l border-slate-400/80 pl-[1.7vw]">
+                  <p className="max-w-[20rem] text-[clamp(0.76rem,0.9vw,1.02rem)] font-semibold leading-[1.1] text-control-warm">
                     Better Control. Better Decisions. Better Outcomes.
                   </p>
-                  <p className="mt-[0.75vh] max-w-[22rem] text-[clamp(0.56rem,0.66vw,0.76rem)] font-medium leading-[1.3] text-slate-800">
+                  <p className="mt-[0.5vh] max-w-[21rem] text-[clamp(0.5rem,0.6vw,0.7rem)] font-medium leading-[1.22] text-slate-800">
                     An integrated approach that delivers control rooms built for performance, people and the future.
                   </p>
                   <span className="pointer-events-none absolute bottom-[-1rem] right-0 h-[6rem] w-[10rem] opacity-[0.07]">
@@ -290,13 +290,13 @@ export function DesignBuildReferenceScene({ chapter }: { chapter: Chapter }) {
 function ReasonRow({ item, index }: { item: DesignBuildReason; index: number }) {
   const Icon = item.Icon;
   return (
-    <div className={`grid min-w-0 grid-cols-[2.85rem_minmax(0,1fr)] items-center gap-[0.65vw] py-[0.5vh] ${index ? "border-t border-slate-200/90" : ""}`}>
-      <span className="grid h-[2.45rem] w-[2.45rem] place-items-center rounded-full border border-slate-200 bg-white/56 text-control-warm shadow-[inset_0_1px_0_rgb(255_255_255/0.9),0_0.65rem_1.55rem_rgb(15_23_42/0.07)]">
-        <Icon aria-hidden="true" size={21} strokeWidth={1.6} />
+    <div className={`grid min-w-0 grid-cols-[2.55rem_minmax(0,1fr)] items-center gap-[0.55vw] py-[0.38vh] ${index ? "border-t border-slate-200/90" : ""}`}>
+      <span className="grid h-[2.22rem] w-[2.22rem] place-items-center rounded-full border border-slate-200 bg-white/56 text-control-warm shadow-[inset_0_1px_0_rgb(255_255_255/0.9),0_0.65rem_1.55rem_rgb(15_23_42/0.07)]">
+        <Icon aria-hidden="true" size={19} strokeWidth={1.6} />
       </span>
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.54rem,0.62vw,0.72rem)] font-black leading-tight text-control-text">{item.title}</strong>
-        <span className="mt-0.5 block text-[clamp(0.48rem,0.55vw,0.64rem)] font-medium leading-[1.24] text-slate-800">{item.description}</span>
+        <strong className="block text-[clamp(0.5rem,0.58vw,0.68rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
+        <span className="mt-0.5 block text-[clamp(0.43rem,0.5vw,0.58rem)] font-medium leading-[1.18] text-slate-800">{item.description}</span>
       </span>
     </div>
   );
@@ -306,19 +306,21 @@ function ProcessStepCard({ step, index }: { step: ProcessStep; index: number }) 
   const Icon = step.Icon;
   return (
     <div className="relative min-w-0">
-      <span className="absolute left-1/2 top-[-0.45rem] z-20 grid h-[2rem] w-[2rem] -translate-x-1/2 place-items-center rounded-full bg-control-warm text-[0.72rem] font-black text-white shadow-[0_0.55rem_1.3rem_rgb(213_29_42/0.26)]">
+      <span className="absolute left-0 top-0 z-20 grid h-[1.72rem] min-w-[2.15rem] place-items-center rounded-br-[0.34rem] bg-control-warm px-[0.46rem] text-[0.62rem] font-semibold text-white shadow-[0_0.55rem_1.3rem_rgb(213_29_42/0.24)]">
         {step.number}
       </span>
-      {index < processSteps.length - 1 ? <span className="absolute right-[-0.62vw] top-[4.1rem] z-20 text-[1.45rem] font-light text-control-text">›</span> : null}
-      <article className="relative overflow-hidden rounded-[0.56rem] border border-slate-200/86 bg-white/62 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_0.8rem_1.9rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-        <div className="grid h-[9.5rem] place-items-center px-[0.68vw] py-[1.15vh] text-center">
-          <Icon aria-hidden="true" className="text-control-text" size={31} strokeWidth={1.55} />
-          <h3 className="mt-[0.55vh] text-[clamp(0.54rem,0.63vw,0.73rem)] font-black uppercase leading-tight text-control-text">{step.title}</h3>
-          <p className="mt-[0.6vh] max-w-[9.3rem] text-[clamp(0.48rem,0.56vw,0.65rem)] font-medium leading-[1.28] text-slate-800">{step.description}</p>
+      {index < processSteps.length - 1 ? <span className="absolute right-[-0.62vw] top-[3.4rem] z-20 text-[1.1rem] font-light text-control-text">›</span> : null}
+      <article className="relative overflow-hidden rounded-[0.56rem] border border-slate-200/86 bg-white/70 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_0.8rem_1.9rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+        <div className="grid h-[11.6vh] grid-cols-[2.4rem_minmax(0,1fr)] items-start gap-[0.48vw] px-[0.58vw] pb-[0.62vh] pt-[1.85rem]">
+          <Icon aria-hidden="true" className="justify-self-end text-control-text" size={21} strokeWidth={1.55} />
+          <div className="min-w-0">
+            <h3 className="text-[clamp(0.47rem,0.55vw,0.64rem)] font-semibold uppercase leading-tight text-control-text">{step.title}</h3>
+            <p className="mt-[0.36vh] text-[clamp(0.39rem,0.46vw,0.54rem)] font-medium leading-[1.16] text-slate-800">{step.description}</p>
+          </div>
         </div>
-        <div className="relative h-[7.35rem] overflow-hidden border-t border-slate-200/86 bg-slate-100">
-          {step.visual === "blueprint" ? <BlueprintVisual /> : <img alt="" className="absolute inset-0 h-full w-full object-cover" src={step.image} />}
-          <span className="absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,rgb(15_23_42/0.08)_100%)]" />
+        <div className="relative h-[12.3vh] overflow-hidden border-t border-slate-200/86 bg-[radial-gradient(circle_at_50%_42%,rgb(255_255_255/0.96),rgb(241_245_249/0.92))]">
+          {step.visual === "blueprint" ? <BlueprintVisual /> : <img alt="" className="absolute inset-0 h-full w-full object-contain p-[0.32rem]" src={step.image} />}
+          <span className="absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,rgb(15_23_42/0.05)_100%)]" />
         </div>
       </article>
     </div>
@@ -342,11 +344,11 @@ function BlueprintVisual() {
 function CapabilityCell({ item, index }: { item: CapabilityItem; index: number }) {
   const Icon = item.Icon;
   return (
-    <div className={`grid min-w-0 grid-cols-[3.1rem_minmax(0,1fr)] items-center gap-[0.75vw] px-[0.8vw] ${index ? "border-l border-slate-200/90" : ""}`}>
-      <Icon aria-hidden="true" className="text-control-warm" size={27} strokeWidth={1.55} />
+    <div className={`grid min-w-0 grid-cols-[2.7rem_minmax(0,1fr)] items-center gap-[0.58vw] px-[0.62vw] ${index ? "border-l border-slate-200/90" : ""}`}>
+      <Icon aria-hidden="true" className="text-control-warm" size={23} strokeWidth={1.55} />
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.5rem,0.59vw,0.68rem)] font-black leading-tight text-control-text">{item.title}</strong>
-        <span className="mt-0.5 block text-[clamp(0.46rem,0.53vw,0.61rem)] font-medium leading-[1.22] text-slate-800">{item.description}</span>
+        <strong className="block text-[clamp(0.45rem,0.53vw,0.62rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
+        <span className="mt-0.5 block text-[clamp(0.4rem,0.47vw,0.55rem)] font-medium leading-[1.15] text-slate-800">{item.description}</span>
       </span>
     </div>
   );
@@ -355,11 +357,11 @@ function CapabilityCell({ item, index }: { item: CapabilityItem; index: number }
 function MeaningCell({ item, index }: { item: CapabilityItem; index: number }) {
   const Icon = item.Icon;
   return (
-    <div className={`grid min-w-0 grid-cols-[2.25rem_minmax(0,1fr)] items-center gap-[0.55vw] ${index ? "border-l border-slate-200/90 pl-[0.75vw]" : ""}`}>
-      <Icon aria-hidden="true" className="text-control-text" size={24} strokeWidth={1.55} />
+    <div className={`grid min-w-0 grid-cols-[2rem_minmax(0,1fr)] items-center gap-[0.48vw] ${index ? "border-l border-slate-200/90 pl-[0.62vw]" : ""}`}>
+      <Icon aria-hidden="true" className="text-control-text" size={21} strokeWidth={1.55} />
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.47rem,0.55vw,0.63rem)] font-black leading-tight text-control-text">{item.title}</strong>
-        <span className="mt-0.5 block text-[clamp(0.43rem,0.5vw,0.58rem)] font-medium leading-[1.15] text-slate-800">{item.description}</span>
+        <strong className="block text-[clamp(0.42rem,0.5vw,0.58rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
+        <span className="mt-0.5 block text-[clamp(0.38rem,0.45vw,0.52rem)] font-medium leading-[1.12] text-slate-800">{item.description}</span>
       </span>
     </div>
   );

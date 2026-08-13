@@ -45,36 +45,36 @@ const productCards: ProductCard[] = [
   {
     title: "Control Rooms",
     description: "Mission-critical environments with integrated ergonomics, acoustics and technology.",
-    metric: "200+",
+    metric: "450+",
     metricLabel: "Control Rooms Delivered",
-    image: "/assets/source-pdf/p01_000_1536x863.jpg",
+    image: "/assets/products/control-room.png",
     accent: "#0b376d",
     Icon: PanelsTopLeft,
   },
   {
     title: "Control Desks",
     description: "Ergonomic, modular and customizable consoles for optimal operator performance.",
-    metric: "1,500+",
+    metric: "75K+",
     metricLabel: "Control Desks Installed",
-    image: "/assets/source-pdf/p07_012_382x215.jpg",
+    image: "/assets/products/console.png",
     accent: "#1262b3",
     Icon: SlidersHorizontal,
   },
   {
     title: "Raised Access Floor",
     description: "High-performance flooring systems for cable management, flexibility and strength.",
-    metric: "250,000+ m2",
-    metricLabel: "Raised Access Floor Installed",
-    image: "/assets/source-pdf/p11_035_104x103.jpg",
+    metric: "10 L+",
+    metricLabel: "Sq. Ft. Raised Access Floor Installed",
+    image: "/assets/products/floor.png",
     accent: "#0f8b8d",
     Icon: Layers3,
   },
   {
     title: "Modular Operation Theatres",
     description: "Hygienic, infection-controlled modular OT solutions built for safety and efficiency.",
-    metric: "100+",
+    metric: "200",
     metricLabel: "Modular OTs Delivered",
-    image: "/assets/source-pdf/p28_058_1898x1063.jpg",
+    image: "/assets/products/mot.png",
     accent: "#6d3fc2",
     Icon: ShieldCheck,
   },
@@ -83,7 +83,7 @@ const productCards: ProductCard[] = [
     description: "Acoustically optimized auditoriums that deliver exceptional sound, comfort and aesthetics.",
     metric: "150+",
     metricLabel: "Auditoriums Completed",
-    image: "/assets/source-pdf/p24_054_1418x798.jpg",
+    image: "/assets/products/auditoriums.png",
     accent: "#ef5b0c",
     Icon: Sofa,
   },
@@ -92,7 +92,7 @@ const productCards: ProductCard[] = [
     description: "Smart, collaborative and sustainable workspaces that enhance productivity.",
     metric: "300,000+ ft2",
     metricLabel: "Corporate Spaces Created",
-    image: "/assets/source-pdf/p25_055_1759x986.jpg",
+    image: "/assets/products/corporate-offices.png",
     accent: "#5b8c2a",
     Icon: Building2,
   },
@@ -155,10 +155,10 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
       <section className="absolute inset-x-[1.65vw] bottom-[9vh] top-[11.8vh] z-20">
         <div className="grid grid-cols-[minmax(0,1fr)_25vw] items-start gap-[2vw]">
           <motion.div animate={{ opacity: 1, y: 0 }} initial={state.reducedMotion ? false : { opacity: 0, y: 16 }} transition={{ duration, ease }}>
-            <h1 className="text-balance text-[clamp(2.15rem,3.05vw,4rem)] font-extrabold leading-[0.98] tracking-normal text-control-text">
+            <h1 className="text-balance text-[clamp(2.15rem,3.05vw,4rem)] font-bold leading-[0.98] tracking-normal text-control-text md:text-[2.5vw]">
               Our Products. <span className="text-control-warm">Transforming Spaces.</span>
             </h1>
-            <p className="mt-[1.2vh] max-w-[72rem] text-[clamp(0.95rem,1.08vw,1.3rem)] leading-[1.38] text-slate-700">
+            <p className="mt-[1.2vh] max-w-[72rem] text-[clamp(0.95rem,1.08vw,1.3rem)] leading-[1.38] text-slate-700 md:text-[0.8vw]">
               End-to-end interiors and infrastructure solutions designed for performance, safety and sustainability.
             </p>
           </motion.div>
@@ -174,7 +174,7 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
                 <Factory aria-hidden="true" size={32} strokeWidth={1.65} />
               </span>
               <div>
-                <p className="text-[clamp(1.45rem,1.9vw,2.35rem)] font-extrabold leading-none text-control-text">800+</p>
+                <p className="text-[clamp(1.45rem,1.9vw,2.35rem)] font-semibold leading-none text-control-text">800+</p>
                 <p className="mt-[0.35vh] text-[clamp(0.72rem,0.82vw,0.98rem)] font-semibold text-control-text">Projects Delivered</p>
                 <p className="mt-[0.35vh] text-[clamp(0.58rem,0.66vw,0.8rem)] leading-[1.25] text-slate-600">Across industries. Across India. Across the world.</p>
               </div>
@@ -210,7 +210,7 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
                 </span>
               </div>
               <div className="flex min-h-0 flex-1 flex-col px-[0.8vw] pb-[1vh] pt-[0.7vh] text-center">
-                <h2 className="min-h-[2.15lh] text-[clamp(0.9rem,1.05vw,1.22rem)] font-extrabold leading-[1.08]" style={{ color: product.accent }}>
+                <h2 className="min-h-[2.15lh] text-[clamp(0.9rem,1.05vw,1.22rem)] font-semibold leading-[1.08] md:text-[0.9vw]" style={{ color: product.accent }}>
                   {product.title}
                 </h2>
                 <div className="mx-auto mt-[0.75vh] h-[2px] w-[2.4rem]" style={{ backgroundColor: product.accent }} />
@@ -223,7 +223,7 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
                       <CheckCircle2 aria-hidden="true" size={18} strokeWidth={1.85} />
                     </span>
                     <div>
-                      <p className="text-[clamp(0.82rem,1vw,1.14rem)] font-extrabold leading-none" style={{ color: product.accent }}>{product.metric}</p>
+                      <p className="text-[clamp(0.82rem,1vw,1.14rem)] font-semibold leading-none" style={{ color: product.accent }}>{product.metric}</p>
                       <p className="mt-[0.24vh] text-[clamp(0.52rem,0.6vw,0.7rem)] font-semibold leading-[1.15] text-control-text">{product.metricLabel}</p>
                     </div>
                   </div>
@@ -241,7 +241,7 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
         >
           <div className="grid grid-cols-[13vw_1fr] items-center gap-[1vw]">
             <div>
-              <p className="text-[clamp(0.75rem,0.88vw,1.05rem)] font-extrabold uppercase tracking-[0.04em] text-control-text">OnePWS Key Differentiators</p>
+              <p className="text-[clamp(0.75rem,0.88vw,1.05rem)] font-semibold uppercase tracking-[0.04em] text-control-text">OnePWS Key Differentiators</p>
               <div className="mt-[0.65vh] h-[2px] w-[2.4rem] bg-control-warm" />
             </div>
             <div className="grid grid-cols-6">
@@ -249,7 +249,7 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
                 <div className={`grid grid-cols-[2.6rem_1fr] items-center gap-[0.65vw] px-[0.8vw] ${index > 0 ? "border-l border-slate-200" : ""}`} key={item.title}>
                   <item.Icon aria-hidden="true" color={item.accent} size={32} strokeWidth={1.65} />
                   <div>
-                    <p className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-extrabold leading-[1.08] text-control-text">{item.title}</p>
+                    <p className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-semibold leading-[1.08] text-control-text">{item.title}</p>
                     <p className="mt-[0.28vh] text-[clamp(0.48rem,0.55vw,0.66rem)] font-medium leading-[1.2] text-slate-600">{item.detail}</p>
                   </div>
                 </div>
@@ -261,7 +261,7 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
 
       <motion.div
         animate={{ opacity: 1, y: 0 }}
-        className="pws-scene-control-dock absolute bottom-[2.25vh] left-[2.75vw] z-30 justify-start"
+        className="pws-scene-control-dock absolute bottom-[0.1vh] left-[0.1vw] z-40 justify-start"
         initial={state.reducedMotion ? false : { opacity: 0, y: 18 }}
         transition={{ duration, delay: 0.58, ease }}
       >
@@ -295,3 +295,5 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
     </article>
   );
 }
+
+

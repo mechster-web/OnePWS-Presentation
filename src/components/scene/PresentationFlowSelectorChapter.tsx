@@ -111,13 +111,13 @@ export function PresentationFlowSelectorChapter({ chapter }: { chapter: Chapter 
       <section className="absolute inset-x-[2.2vw] bottom-[10.2vh] top-[11.4vh] z-20 grid grid-cols-[minmax(20rem,0.42fr)_minmax(0,1fr)_minmax(20rem,0.36fr)] gap-[1.25vw]">
         <motion.aside animate={{ opacity: 1, x: 0 }} className="flex min-h-0 flex-col justify-between" initial={state.reducedMotion ? false : { opacity: 0, x: -18 }} transition={{ duration }}>
           <div>
-            <p className="text-[0.86rem] font-black uppercase tracking-[0.28em] text-red-600">{chapter.eyebrow}</p>
-            <h1 className="mt-[2vh] text-balance text-[clamp(3.1rem,4.6vw,6rem)] font-black leading-[0.92] tracking-normal text-slate-950">
+            <p className="text-[0.86rem] font-semibold uppercase tracking-[0.28em] text-red-600">{chapter.eyebrow}</p>
+            <h1 className="mt-[2vh] text-balance text-[clamp(3.1rem,4.6vw,6rem)] font-bold leading-[0.92] tracking-normal text-slate-950 md:text-[4vw]">
               Choose the
               <span className="block text-red-600">right flow.</span>
             </h1>
             <div className="mt-[2.1vh] h-[3px] w-[4.2rem] rounded-full bg-red-600" />
-            <p className="mt-[2.2vh] max-w-[30rem] text-[clamp(1rem,1.12vw,1.35rem)] font-medium leading-[1.45] text-slate-700">
+            <p className="mt-[2.2vh] max-w-[30rem] text-[clamp(1rem,1.12vw,1.35rem)] font-medium leading-[1.45] text-slate-700 md:text-[0.8vw]">
               Select the sector and audience so the presentation starts with what matters most.
             </p>
           </div>
@@ -146,7 +146,7 @@ export function PresentationFlowSelectorChapter({ chapter }: { chapter: Chapter 
                     <span className={`grid size-11 shrink-0 place-items-center rounded-full ${active ? "bg-red-600 text-white" : "bg-slate-50 text-slate-700 ring-1 ring-slate-200"}`}>
                       <Icon aria-hidden="true" size={21} strokeWidth={1.8} />
                     </span>
-                    <span className="text-[0.9rem] font-extrabold leading-tight">{item}</span>
+                    <span className="text-[0.9rem] font-semibold leading-tight">{item}</span>
                   </button>
                 );
               })}
@@ -161,7 +161,7 @@ export function PresentationFlowSelectorChapter({ chapter }: { chapter: Chapter 
                 return (
                   <button className={`flex min-h-[5.15rem] flex-col items-center justify-center gap-2 rounded-[0.85rem] border px-2 text-center transition ${active ? "border-blue-200 bg-blue-50/90 text-blue-700 shadow-[0_0.8rem_1.8rem_rgb(37_99_235/0.12)]" : "border-white/80 bg-white/70 text-slate-700 shadow-[0_0.65rem_1.4rem_rgb(15_23_42/0.055)] hover:-translate-y-0.5 hover:bg-white"}`} key={item} onClick={() => setRole(item)} type="button">
                     <Icon aria-hidden="true" size={23} strokeWidth={1.8} />
-                    <span className="text-[0.72rem] font-extrabold leading-tight">{item}</span>
+                    <span className="text-[0.72rem] font-semibold leading-tight">{item}</span>
                   </button>
                 );
               })}
@@ -171,8 +171,8 @@ export function PresentationFlowSelectorChapter({ chapter }: { chapter: Chapter 
           <div className="grid min-h-0 grid-cols-3 gap-[0.8rem]">
             {highlights.map((label, index) => (
               <div className="rounded-[1rem] border border-white/80 bg-white/68 p-[1rem] shadow-[0_1rem_2.4rem_rgb(15_23_42/0.08)] backdrop-blur-2xl" key={label}>
-                <p className="text-[0.78rem] font-black text-red-600">0{index + 1}</p>
-                <p className="mt-2 text-[1rem] font-extrabold leading-tight text-slate-950">{label}</p>
+                <p className="text-[0.78rem] font-semibold text-red-600">0{index + 1}</p>
+                <p className="mt-2 text-[1rem] font-semibold leading-tight text-slate-950">{label}</p>
                 <p className="mt-2 text-[0.82rem] font-medium leading-5 text-slate-600">Included in the recommended route for this audience.</p>
               </div>
             ))}
@@ -181,25 +181,25 @@ export function PresentationFlowSelectorChapter({ chapter }: { chapter: Chapter 
 
         <motion.aside animate={{ opacity: 1, x: 0 }} className="flex min-h-0 flex-col gap-[1rem]" initial={state.reducedMotion ? false : { opacity: 0, x: 18 }} transition={{ duration, delay: 0.12 }}>
           <div className="rounded-[1.2rem] border border-white/85 bg-white/80 p-[1.25rem] shadow-[0_1.35rem_3.4rem_rgb(15_23_42/0.11)] backdrop-blur-2xl">
-            <p className="text-[0.8rem] font-black uppercase tracking-[0.18em] text-slate-950">Recommended Flow</p>
+            <p className="text-[0.8rem] font-semibold uppercase tracking-[0.18em] text-slate-950">Recommended Flow</p>
             <div className="mt-3 h-[2px] w-12 rounded-full bg-red-600" />
-            <h2 className="mt-5 text-[clamp(1.7rem,2vw,2.45rem)] font-black leading-tight text-slate-950">{journey?.name ?? "Focused OnePWS route"}</h2>
+            <h2 className="mt-5 text-[clamp(1.7rem,2vw,2.45rem)] font-semibold leading-tight text-slate-950">{journey?.name ?? "Focused OnePWS route"}</h2>
             <p className="mt-3 text-[1rem] font-semibold leading-6 text-slate-600">{journey?.audienceOrOutcome}</p>
             <div className="mt-5 grid grid-cols-2 gap-3">
               <Metric label="Duration" value={journey?.durationLabel ?? "Focused"} tone="text-red-600" />
               <Metric label="Slides" value={String(journey?.sequence.length ?? 0)} tone="text-blue-700" />
             </div>
-            <button className="mt-5 inline-flex h-14 w-full items-center justify-center gap-3 rounded-xl bg-red-600 px-5 text-[1rem] font-extrabold text-white shadow-[0_1rem_2rem_rgb(220_38_38/0.26)] transition hover:-translate-y-0.5 hover:bg-red-700" onClick={beginSelectedFlow} type="button">
+            <button className="mt-5 inline-flex h-14 w-full items-center justify-center gap-3 rounded-xl bg-red-600 px-5 text-[1rem] font-semibold text-white shadow-[0_1rem_2rem_rgb(220_38_38/0.26)] transition hover:-translate-y-0.5 hover:bg-red-700" onClick={beginSelectedFlow} type="button">
               Begin Selected Flow
               <ChevronRight aria-hidden="true" size={22} />
             </button>
-            <button className="mt-3 inline-flex h-12 w-full items-center justify-center rounded-xl border border-slate-200 bg-white/80 px-5 text-[0.92rem] font-extrabold text-slate-800 shadow-[0_0.75rem_1.5rem_rgb(15_23_42/0.07)] transition hover:-translate-y-0.5 hover:bg-white" onClick={beginCompleteStory} type="button">
+            <button className="mt-3 inline-flex h-12 w-full items-center justify-center rounded-xl border border-slate-200 bg-white/80 px-5 text-[0.92rem] font-semibold text-slate-800 shadow-[0_0.75rem_1.5rem_rgb(15_23_42/0.07)] transition hover:-translate-y-0.5 hover:bg-white" onClick={beginCompleteStory} type="button">
               Full Complete Story
             </button>
           </div>
 
           <div className="flex-1 rounded-[1.2rem] border border-[#082c5b]/20 bg-[#082c5b] p-[1.2rem] text-white shadow-[0_1.35rem_3.2rem_rgb(8_44_91/0.18)]">
-            <p className="text-[1.15rem] font-black leading-tight">Selected context</p>
+            <p className="text-[1.15rem] font-semibold leading-tight">Selected context</p>
             <p className="mt-3 text-[0.95rem] font-semibold leading-6 text-white/78">{sector}<span className="mx-2 text-red-300">/</span>{role}</p>
             <div className="mt-7 space-y-3">
               {["Story opens at the most relevant chapter.", "Experience map follows the selected route.", "Sector and role are saved for recommendations."].map((item) => (
@@ -229,7 +229,7 @@ function FlowCard({ children, label, support }: { children: ReactNode; label: st
     <div className="rounded-[1.15rem] border border-white/80 bg-white/74 p-[1.1rem] shadow-[0_1.2rem_3rem_rgb(15_23_42/0.1)] backdrop-blur-2xl">
       <div className="flex items-center justify-between gap-4">
         <div>
-          <p className="text-[0.78rem] font-black uppercase tracking-[0.18em] text-slate-950">{label}</p>
+          <p className="text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-slate-950">{label}</p>
           <div className="mt-2 h-[2px] w-12 rounded-full bg-red-600" />
         </div>
         <p className="text-sm font-semibold text-slate-500">{support}</p>
@@ -242,8 +242,11 @@ function FlowCard({ children, label, support }: { children: ReactNode; label: st
 function Metric({ label, value, tone }: { label: string; value: string; tone: string }) {
   return (
     <div className="rounded-[0.85rem] bg-slate-50 p-4 ring-1 ring-slate-200/80">
-      <p className="text-xs font-black uppercase tracking-[0.14em] text-slate-500">{label}</p>
-      <p className={`mt-2 text-2xl font-black ${tone}`}>{value}</p>
+      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">{label}</p>
+      <p className={`mt-2 text-2xl font-semibold ${tone}`}>{value}</p>
     </div>
   );
 }
+
+
+

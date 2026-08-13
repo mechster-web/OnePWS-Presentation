@@ -141,13 +141,13 @@ export function RoomBuiltToProtectChapter({ chapter }: { chapter: Chapter }) {
       <section className="absolute inset-x-[1.55vw] top-[9.65vh] bottom-[7.05vh] z-10">
         <div className="absolute inset-x-0 top-0 bottom-[10.1vh] grid grid-cols-[minmax(16rem,0.31fr)_minmax(0,1fr)_minmax(18rem,0.36fr)] gap-[1.05vw]">
           <motion.aside animate={{ opacity: 1, y: 0 }} className="min-h-0 pt-[2.9vh]" initial={false} transition={{ duration: 0.72, ease }}>
-            <h1 className="text-[clamp(2.05rem,2.85vw,4rem)] font-black leading-[1.03] tracking-normal text-black">
+            <h1 className="text-[clamp(2.05rem,2.85vw,4rem)] font-bold leading-[1.03] tracking-normal text-black md:text-[2.5vw]">
               <span className="block">The Room</span>
               <span className="block">Is Built to</span>
               <span className="block text-control-warm">Protect.</span>
             </h1>
             <div className="mt-[1.3vh] h-[2px] w-[3rem] bg-control-warm" />
-            <p className="mt-[1.55vh] text-[clamp(0.76rem,0.95vw,1.1rem)] font-medium leading-[1.38] text-slate-900">
+            <p className="mt-[1.55vh] text-[clamp(0.76rem,0.95vw,1.1rem)] font-medium leading-[1.38] text-slate-900 md:text-[0.8vw]">
               Fire safety is designed into every surface, helping protect people, assets and operations when it matters most.
             </p>
 
@@ -157,7 +157,7 @@ export function RoomBuiltToProtectChapter({ chapter }: { chapter: Chapter }) {
                   <Shield aria-hidden="true" size={34} strokeWidth={1.6} />
                 </span>
                 <p className="text-[clamp(0.8rem,0.95vw,1.08rem)] font-semibold leading-[1.35] text-slate-900">
-                  Integrated fire protection. <span className="block font-black text-control-warm">Built in. Not added on.</span>
+                  Integrated fire protection. <span className="block font-semibold text-control-warm">Built in. Not added on.</span>
                 </p>
               </div>
             </section>
@@ -165,7 +165,7 @@ export function RoomBuiltToProtectChapter({ chapter }: { chapter: Chapter }) {
 
           <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[9.3vh_minmax(0,1fr)_20.2vh] gap-[1.05vh]" initial={false} transition={{ duration: 0.72, delay: 0.06, ease }}>
             <section className="overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/74 px-[1vw] py-[1vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.4rem_rgb(15_23_42/0.07)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.84rem,0.98vw,1.14rem)] font-black uppercase leading-tight text-control-text">
+              <h2 className="text-[clamp(0.84rem,0.98vw,1.14rem)] font-semibold uppercase leading-tight text-control-text">
                 Engineered for Fire Safety. Built for Continuity.
               </h2>
               <div className="mt-[0.65vh] grid grid-cols-4 divide-x divide-slate-200/90">
@@ -175,7 +175,7 @@ export function RoomBuiltToProtectChapter({ chapter }: { chapter: Chapter }) {
                       <item.Icon aria-hidden="true" size={22} strokeWidth={1.65} />
                     </span>
                     <span>
-                      <strong className="block text-[clamp(0.55rem,0.64vw,0.76rem)] font-black leading-tight text-control-text">{item.title}</strong>
+                      <strong className="block text-[clamp(0.55rem,0.64vw,0.76rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
                       <span className="mt-[0.16vh] block text-[clamp(0.46rem,0.54vw,0.64rem)] font-semibold leading-[1.18] text-slate-600">{item.detail}</span>
                     </span>
                   </div>
@@ -196,7 +196,7 @@ export function RoomBuiltToProtectChapter({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="overflow-hidden rounded-[0.85rem] border border-slate-200/86 bg-white/74 px-[0.95vw] py-[1vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.4rem_rgb(15_23_42/0.07)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.76rem,0.88vw,1rem)] font-black uppercase leading-tight text-control-text">
+              <h2 className="text-[clamp(0.76rem,0.88vw,1rem)] font-semibold uppercase leading-tight text-control-text">
                 Fire-Safe Surfaces. Reliable by Design.
               </h2>
               <div className="mt-[0.55vh] h-[2px] w-[2.5rem] bg-control-warm" />
@@ -210,7 +210,7 @@ export function RoomBuiltToProtectChapter({ chapter }: { chapter: Chapter }) {
 
           <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_18vh] gap-[1.05vh]" initial={false} transition={{ duration: 0.72, delay: 0.12, ease }}>
             <section className="overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/74 p-[1vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.6rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.82rem,0.96vw,1.1rem)] font-black uppercase leading-tight text-control-text">
+              <h2 className="text-[clamp(0.82rem,0.96vw,1.1rem)] font-semibold uppercase leading-tight text-control-text">
                 Fire Safety Performance
               </h2>
               <div className="mt-[0.65vh] h-[2px] w-[2.5rem] bg-control-warm" />
@@ -222,7 +222,7 @@ export function RoomBuiltToProtectChapter({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/74 px-[1vw] py-[1vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.6rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.74rem,0.86vw,1rem)] font-black uppercase leading-tight text-control-text">
+              <h2 className="text-[clamp(0.74rem,0.86vw,1rem)] font-semibold uppercase leading-tight text-control-text">
                 Operator Confidence
               </h2>
               <div className="mt-[0.55vh] h-[2px] w-[2.25rem] bg-control-warm" />
@@ -230,7 +230,7 @@ export function RoomBuiltToProtectChapter({ chapter }: { chapter: Chapter }) {
                 {confidenceItems.map((item) => (
                   <div className="text-center" key={item.title}>
                     <item.Icon aria-hidden="true" className="mx-auto text-control-warm" size={25} strokeWidth={1.55} />
-                    <p className="mt-[0.35vh] text-[clamp(0.45rem,0.53vw,0.62rem)] font-black leading-tight text-control-text">{item.title}</p>
+                    <p className="mt-[0.35vh] text-[clamp(0.45rem,0.53vw,0.62rem)] font-semibold leading-tight text-control-text">{item.title}</p>
                     <p className="mt-[0.2vh] text-[clamp(0.38rem,0.45vw,0.52rem)] font-medium leading-[1.16] text-slate-600">{item.detail}</p>
                   </div>
                 ))}
@@ -271,7 +271,7 @@ function SafetyCallout({ item }: { item: CalloutItem }) {
     <div className={`absolute max-w-[13.2rem] rounded-[0.7rem] border border-white/86 bg-white/80 px-[0.9vw] py-[0.85vh] shadow-[0_0.8rem_1.8rem_rgb(15_23_42/0.12)] backdrop-blur-[18px] ${item.className}`}>
       <div className="flex items-center gap-2">
         <item.Icon aria-hidden="true" className="text-control-warm" size={17} strokeWidth={1.75} />
-        <strong className="text-[clamp(0.52rem,0.6vw,0.7rem)] font-black uppercase leading-tight text-control-text">{item.title}</strong>
+        <strong className="text-[clamp(0.52rem,0.6vw,0.7rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</strong>
       </div>
       <p className="mt-[0.45vh] text-[clamp(0.46rem,0.54vw,0.63rem)] font-medium leading-[1.2] text-slate-700">{item.detail}</p>
     </div>
@@ -285,8 +285,8 @@ function PerformanceMetric({ metric }: { metric: PerformanceItem }) {
         <metric.Icon aria-hidden="true" size={24} strokeWidth={1.55} />
       </span>
       <span>
-        <strong className="block text-[clamp(0.96rem,1.24vw,1.45rem)] font-black leading-none text-control-warm">{metric.value}</strong>
-        <span className="mt-[0.35vh] block text-[clamp(0.54rem,0.64vw,0.74rem)] font-black uppercase leading-tight text-control-text">{metric.label}</span>
+        <strong className="block text-[clamp(0.96rem,1.24vw,1.45rem)] font-semibold leading-none text-control-warm">{metric.value}</strong>
+        <span className="mt-[0.35vh] block text-[clamp(0.54rem,0.64vw,0.74rem)] font-semibold uppercase leading-tight text-control-text">{metric.label}</span>
         <span className="mt-[0.18vh] block text-[clamp(0.46rem,0.54vw,0.64rem)] font-medium leading-[1.18] text-slate-600">{metric.detail}</span>
       </span>
     </article>
@@ -298,7 +298,7 @@ function SurfaceCard({ item }: { item: SurfaceItem }) {
     <article className="grid min-h-[14.4vh] grid-cols-[minmax(6rem,0.47fr)_minmax(0,0.53fr)] gap-[0.65vw] rounded-[0.68rem] border border-slate-200/86 bg-white/68 p-[0.62vw]">
       <SurfaceStack type={item.image} />
       <div className="min-w-0">
-        <h3 className="text-[clamp(0.54rem,0.64vw,0.76rem)] font-black uppercase leading-tight text-control-warm">{item.title}</h3>
+        <h3 className="text-[clamp(0.54rem,0.64vw,0.76rem)] font-semibold uppercase leading-tight text-control-warm">{item.title}</h3>
         <ul className="mt-[0.55vh] grid gap-[0.2vh]">
           {item.bullets.map((bullet) => (
             <li className="flex gap-2 text-[clamp(0.42rem,0.5vw,0.58rem)] font-semibold leading-[1.16] text-slate-700" key={bullet}>
@@ -343,3 +343,5 @@ function SurfaceStack({ type }: { type: SurfaceItem["image"] }) {
     </div>
   );
 }
+
+

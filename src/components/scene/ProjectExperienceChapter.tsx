@@ -270,7 +270,7 @@ function ProjectCredentialSlide({ chapter }: Props) {
         >
           <span className="mt-2 h-[8.1rem] w-[3px] rounded-full bg-red-600" />
           <div>
-            <h1 className="text-[clamp(2.65rem,3.1vw,3.45rem)] font-black uppercase leading-[0.98] tracking-normal text-slate-950">
+            <h1 className="text-[clamp(2.65rem,3.1vw,3.45rem)] font-bold uppercase leading-[0.98] tracking-normal text-slate-950 md:text-[2.5vw]">
               Project
               <span className="block text-red-600">Credentials</span>
             </h1>
@@ -317,7 +317,7 @@ function ProjectCredentialSlide({ chapter }: Props) {
                 <metric.icon aria-hidden="true" size={30} strokeWidth={1.8} />
               </div>
               <div>
-                <p className="text-3xl font-black leading-none text-red-600">{metric.value}</p>
+                <p className="text-3xl font-semibold leading-none text-red-600">{metric.value}</p>
                 <p className="mt-1 max-w-[12rem] text-sm font-medium leading-5 text-slate-800">{metric.label}</p>
               </div>
             </div>
@@ -337,13 +337,13 @@ function ProjectCredentialSlide({ chapter }: Props) {
           />
           <div className="absolute inset-y-0 left-[45%] right-0 bg-[linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,0.94)_25%,rgba(255,255,255,0.98))]" />
           <div className="absolute right-0 top-0 flex h-full w-[42%] flex-col justify-center px-10">
-            <p className="text-sm font-black uppercase tracking-[0.18em] text-red-600">Selected Project Completed</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-red-600">Selected Project Completed</p>
             <div className="mt-5 flex items-start gap-5">
-              <span className="grid size-16 shrink-0 place-items-center rounded-2xl bg-red-600 text-2xl font-black text-white shadow-[0_14px_34px_rgba(220,38,38,0.3)]">
+              <span className="grid size-16 shrink-0 place-items-center rounded-2xl bg-red-600 text-2xl font-semibold text-white shadow-[0_14px_34px_rgba(220,38,38,0.3)]">
                 {project.number}
               </span>
               <div>
-                <h2 className="text-[clamp(2.8rem,4.5vw,5.4rem)] font-black leading-[0.95] tracking-normal text-slate-950">
+                <h2 className="text-[clamp(2.8rem,4.5vw,5.4rem)] font-semibold leading-[0.95] tracking-normal text-slate-950">
                   {project.name}
                 </h2>
                 <div className="mt-6 h-[2px] w-44 rounded-full bg-red-600" />
@@ -373,7 +373,7 @@ function ProjectCredentialSlide({ chapter }: Props) {
           transition={{ duration: motionDuration, delay: 0.18 }}
         >
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.12em] text-slate-950">Project {project.number} of {projectCountLabel}</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-950">Project {project.number} of {projectCountLabel}</p>
             <div className="mt-2 h-[2px] w-12 rounded-full bg-red-600" />
           </div>
           <div className="flex gap-2 overflow-x-auto pb-1">
@@ -388,7 +388,7 @@ function ProjectCredentialSlide({ chapter }: Props) {
                   }`}
                   key={item.chapterId}
                 >
-                  <p className="text-xs font-black">{item.number}</p>
+                  <p className="text-xs font-semibold">{item.number}</p>
                   <p className="mt-1 truncate text-[0.72rem] font-semibold">{item.shortName}</p>
                 </div>
               );
@@ -1086,3 +1086,5 @@ function formatLocation(project: ProjectRecord) {
     .filter(Boolean)
     .join(", ");
 }
+
+

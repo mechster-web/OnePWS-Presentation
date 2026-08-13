@@ -140,9 +140,9 @@ export function RoomSoundsRightChapter({ chapter }: { chapter: Chapter }) {
       <section className="absolute inset-x-[1.9vw] top-[10.1vh] bottom-[7.05vh] z-10">
         <div className="absolute inset-x-0 top-0 bottom-[3.7vh] grid grid-cols-[minmax(16rem,0.29fr)_minmax(0,1fr)_minmax(17rem,0.31fr)] gap-[1.15vw]">
           <motion.aside animate={{ opacity: 1, y: 0 }} className="min-h-0 pt-[3vh]" initial={reducedMotion ? false : { opacity: 0, y: 18 }} transition={{ duration: 0.72, ease }}>
-            <h1 className="text-[clamp(2.15rem,3.08vw,4.15rem)] font-black leading-[0.99] tracking-normal text-black">
+            <h1 className="text-[clamp(2.15rem,3.08vw,4.15rem)] font-bold leading-[0.99] tracking-normal text-black md:text-[2.5vw]">
               <span className="block">The Room</span>
-              <span className="block text-violet-600">Sounds Right.</span>
+              <span className="block text-[#cf1f2b]">Sounds Right.</span>
             </h1>
             <motion.div
               animate={{ scaleX: 1 }}
@@ -150,7 +150,7 @@ export function RoomSoundsRightChapter({ chapter }: { chapter: Chapter }) {
               initial={reducedMotion ? false : { scaleX: 0 }}
               transition={{ duration: 0.7, delay: 0.18, ease }}
             />
-            <p className="mt-[1.55vh] text-[clamp(0.76rem,0.95vw,1.12rem)] font-medium leading-[1.36] text-slate-900">
+            <p className="mt-[1.55vh] text-[clamp(0.76rem,0.95vw,1.12rem)] font-medium leading-[1.36] text-slate-900 md:text-[0.8vw]">
               Acoustic performance engineered into every surface so operators hear more clearly,
               focus longer, and decide faster.
             </p>
@@ -164,13 +164,13 @@ export function RoomSoundsRightChapter({ chapter }: { chapter: Chapter }) {
               <div className="flex items-center gap-4">
                 <motion.span
                   animate={reducedMotion ? undefined : { boxShadow: ["0 0 0 0 rgb(124 58 237 / 0.16)", "0 0 0 0.65rem rgb(124 58 237 / 0)", "0 0 0 0 rgb(124 58 237 / 0)"] }}
-                  className="grid size-16 shrink-0 place-items-center rounded-full border border-violet-200 bg-violet-50 text-violet-600"
+                  className="grid size-16 shrink-0 place-items-center rounded-full border border-violet-200 bg-violet-50 text-[#cf1f2b]"
                   transition={{ duration: 2.6, repeat: Infinity, ease: "easeOut" }}
                 >
                   <AudioWaveform aria-hidden="true" size={34} strokeWidth={1.6} />
                 </motion.span>
                 <p className="text-[clamp(0.8rem,0.95vw,1.08rem)] font-semibold leading-[1.35] text-slate-900">
-                  Great rooms are not just built. <span className="block font-black text-violet-600">They are tuned.</span>
+                  Great rooms are not just built. <span className="block font-semibold text-[#cf1f2b]">They are tuned.</span>
                 </p>
               </div>
             </motion.section>
@@ -183,7 +183,7 @@ export function RoomSoundsRightChapter({ chapter }: { chapter: Chapter }) {
               initial={reducedMotion ? false : { opacity: 0, y: 14 }}
               transition={{ duration: 0.62, delay: 0.16, ease }}
             >
-              <h2 className="text-[clamp(0.84rem,0.98vw,1.14rem)] font-black uppercase leading-tight text-control-text">
+              <h2 className="text-[clamp(0.84rem,0.98vw,1.14rem)] font-semibold uppercase leading-tight text-control-text">
                 Acoustically Optimized. Purposefully Designed.
               </h2>
               <div className="mt-[0.62vh] grid grid-cols-4 divide-x divide-slate-200/90">
@@ -197,13 +197,13 @@ export function RoomSoundsRightChapter({ chapter }: { chapter: Chapter }) {
                   >
                     <motion.span
                       animate={reducedMotion ? undefined : { scale: [1, 1.06, 1] }}
-                      className="grid size-9 place-items-center rounded-full bg-violet-50 text-violet-600"
+                      className="grid size-9 place-items-center rounded-full bg-violet-50 text-[#cf1f2b] text-violet-600"
                       transition={{ duration: 3, delay: index * 0.28, repeat: Infinity, ease: "easeInOut" }}
                     >
                       <item.Icon aria-hidden="true" size={20} strokeWidth={1.65} />
                     </motion.span>
                     <span>
-                      <strong className="block text-[clamp(0.58rem,0.68vw,0.8rem)] font-black leading-tight text-control-text">{item.title}</strong>
+                      <strong className="block text-[clamp(0.58rem,0.68vw,0.8rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
                       <span className="mt-[0.16vh] block text-[clamp(0.5rem,0.58vw,0.68rem)] font-semibold leading-[1.18] text-slate-600">{item.detail}</span>
                     </span>
                   </motion.div>
@@ -259,7 +259,7 @@ export function RoomSoundsRightChapter({ chapter }: { chapter: Chapter }) {
             >
               <div className="grid h-full grid-cols-[13rem_minmax(0,1fr)] gap-[0.9vw]">
                 <div className="border-r border-slate-200/90 pr-[0.85vw]">
-                  <h2 className="text-[clamp(0.78rem,0.9vw,1.04rem)] font-black uppercase leading-tight text-control-text">
+                  <h2 className="text-[clamp(0.78rem,0.9vw,1.04rem)] font-semibold uppercase leading-tight text-control-text">
                     Engineered Surfaces.
                   </h2>
                   <div className="mt-[0.5vh] h-[2px] w-[2.4rem] bg-control-warm" />
@@ -278,7 +278,7 @@ export function RoomSoundsRightChapter({ chapter }: { chapter: Chapter }) {
 
           <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_28vh] gap-[1.05vh]" initial={reducedMotion ? false : { opacity: 0, x: 18 }} transition={{ duration: 0.72, delay: 0.16, ease }}>
             <section className="rounded-[0.9rem] border border-slate-200/86 bg-white/76 p-[0.9vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.6rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.82rem,0.96vw,1.1rem)] font-black uppercase leading-tight text-control-text">
+              <h2 className="text-[clamp(0.82rem,0.96vw,1.1rem)] font-semibold uppercase leading-tight text-control-text">
                 Acoustic Performance at a Glance
               </h2>
               <div className="mt-[0.65vh] h-[2px] w-[2.5rem] bg-control-warm" />
@@ -290,7 +290,7 @@ export function RoomSoundsRightChapter({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="rounded-[0.9rem] border border-slate-200/86 bg-white/74 px-[1vw] py-[1vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.6rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.74rem,0.86vw,1rem)] font-black uppercase leading-tight text-control-text">
+              <h2 className="text-[clamp(0.74rem,0.86vw,1rem)] font-semibold uppercase leading-tight text-control-text">
                 The Operator Benefit
               </h2>
               <div className="mt-[0.55vh] h-[2px] w-[2.25rem] bg-control-warm" />
@@ -305,7 +305,7 @@ export function RoomSoundsRightChapter({ chapter }: { chapter: Chapter }) {
                   >
                     <item.Icon aria-hidden="true" className="text-violet-600" size={21} strokeWidth={1.55} />
                     <span>
-                      <p className="text-[clamp(0.54rem,0.62vw,0.72rem)] font-black leading-tight text-control-text">{item.title}</p>
+                      <p className="text-[clamp(0.54rem,0.62vw,0.72rem)] font-semibold leading-tight text-control-text">{item.title}</p>
                       <p className="mt-[0.14vh] text-[clamp(0.44rem,0.51vw,0.6rem)] font-medium leading-[1.1] text-slate-600">{item.detail}</p>
                     </span>
                   </motion.div>
@@ -352,7 +352,7 @@ function AcousticCallout({ index, item, reducedMotion }: { index: number; item: 
     >
       <div className="flex items-center gap-2">
         <item.Icon aria-hidden="true" className="text-violet-600" size={17} strokeWidth={1.75} />
-        <strong className="text-[clamp(0.58rem,0.66vw,0.78rem)] font-black uppercase leading-tight text-control-text">{item.title}</strong>
+        <strong className="text-[clamp(0.58rem,0.66vw,0.78rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</strong>
       </div>
       <p className="mt-[0.35vh] text-[clamp(0.5rem,0.58vw,0.68rem)] font-semibold leading-[1.18] text-slate-700">{item.detail}</p>
     </motion.div>
@@ -375,8 +375,8 @@ function PerformanceMetric({ index, metric, reducedMotion }: { index: number; me
         <metric.Icon aria-hidden="true" size={20} strokeWidth={1.55} />
       </motion.span>
       <span>
-        <strong className="block text-[clamp(0.9rem,1.12vw,1.34rem)] font-black leading-none text-violet-600">{metric.value}</strong>
-        <span className="mt-[0.22vh] block text-[clamp(0.55rem,0.64vw,0.74rem)] font-black leading-tight text-control-text">{metric.label}</span>
+        <strong className="block text-[clamp(0.9rem,1.12vw,1.34rem)] font-semibold leading-none text-violet-600">{metric.value}</strong>
+        <span className="mt-[0.22vh] block text-[clamp(0.55rem,0.64vw,0.74rem)] font-semibold leading-tight text-control-text">{metric.label}</span>
         <span className="mt-[0.12vh] block text-[clamp(0.48rem,0.56vw,0.64rem)] font-medium leading-[1.1] text-slate-600">{metric.detail}</span>
       </span>
     </motion.article>
@@ -399,7 +399,7 @@ function SurfaceCard({ index, item, reducedMotion }: { index: number; item: Surf
         >
           <item.Icon aria-hidden="true" size={18} strokeWidth={1.65} />
         </motion.span>
-        <h3 className="text-[clamp(0.6rem,0.7vw,0.82rem)] font-black uppercase leading-tight text-violet-600">{item.title}</h3>
+        <h3 className="text-[clamp(0.6rem,0.7vw,0.82rem)] font-semibold uppercase leading-tight text-violet-600">{item.title}</h3>
       </div>
       <p className="mt-[0.42vh] text-[clamp(0.5rem,0.58vw,0.68rem)] font-semibold leading-[1.16] text-slate-700">{item.detail}</p>
       <ul className="mt-[0.55vh] grid grid-cols-2 gap-x-[0.45vw] gap-y-[0.32vh]">
@@ -413,3 +413,5 @@ function SurfaceCard({ index, item, reducedMotion }: { index: number; item: Surf
     </motion.article>
   );
 }
+
+

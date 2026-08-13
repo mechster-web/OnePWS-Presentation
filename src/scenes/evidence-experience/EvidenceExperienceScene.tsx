@@ -209,12 +209,12 @@ function ManufacturingQualityScene({ chapter }: { chapter: Chapter }) {
         <div className="absolute inset-x-0 top-0 bottom-[6.6vh] grid grid-rows-[32.2vh_13.6vh_31.1vh] gap-[1.05vh]">
           <motion.section animate={{ opacity: 1, y: 0 }} className="relative overflow-hidden" initial={false} transition={{ duration: 0.72, ease }}>
             <div className="absolute left-[0.4vw] top-[3.2vh] z-20">
-              <h1 className="text-[clamp(2.8rem,4vw,5.75rem)] font-black uppercase leading-[0.98] tracking-normal text-black">
+              <h1 className="text-[clamp(2.8rem,4vw,5.75rem)] font-bold uppercase leading-[0.98] tracking-normal text-black md:text-[2.5vw]">
                 <span className="block">Manufacturing</span>
                 <span className="block text-control-warm">and Quality.</span>
               </h1>
               <div className="mt-[1.65vh] h-[2px] w-[3rem] bg-control-warm" />
-              <p className="mt-[1.75vh] max-w-[35rem] text-[clamp(0.86rem,1.12vw,1.38rem)] font-medium leading-[1.32] text-slate-900">
+              <p className="mt-[1.75vh] max-w-[35rem] text-[clamp(0.86rem,1.12vw,1.38rem)] font-medium leading-[1.32] text-slate-900 md:text-[0.8vw]">
                 State-of-the-art manufacturing infrastructure and robust quality systems that ensure precision, reliability and long-term performance.
               </p>
             </div>
@@ -232,7 +232,7 @@ function ManufacturingQualityScene({ chapter }: { chapter: Chapter }) {
 
           <motion.section animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-cols-[minmax(0,0.47fr)_minmax(0,0.53fr)] gap-[0.9vw]" initial={false} transition={{ duration: 0.72, delay: 0.16, ease }}>
             <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/68 px-[1.45vw] py-[1.9vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.9rem,1.1vw,1.25rem)] font-black uppercase leading-tight text-control-text">Group Turnover</h2>
+              <h2 className="text-[clamp(0.9rem,1.1vw,1.25rem)] font-semibold uppercase leading-tight text-control-text">Group Turnover</h2>
               <div className="mt-[0.7vh] h-[2px] w-[2.15rem] bg-control-warm" />
               <p className="mt-[1.1vh] text-[clamp(0.56rem,0.68vw,0.78rem)] font-medium text-control-text">In Cr. INR</p>
               <div className="relative mt-[1.1vh] h-[19vh] border-b border-slate-300/90">
@@ -255,7 +255,7 @@ function ManufacturingQualityScene({ chapter }: { chapter: Chapter }) {
 
             <section className="grid min-h-0 grid-cols-[minmax(0,0.55fr)_minmax(0,0.45fr)] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/68 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <div className="px-[1.45vw] py-[1.9vh]">
-                <h2 className="text-[clamp(0.9rem,1.1vw,1.25rem)] font-black uppercase leading-tight text-control-text">Quality at Every Step</h2>
+                <h2 className="text-[clamp(0.9rem,1.1vw,1.25rem)] font-semibold uppercase leading-tight text-control-text">Quality at Every Step</h2>
                 <div className="mt-[0.7vh] h-[2px] w-[2.15rem] bg-control-warm" />
                 <div className="mt-[1.7vh] grid gap-[1.35vh]">
                   {qualityStepItems.map((item) => (
@@ -264,7 +264,7 @@ function ManufacturingQualityScene({ chapter }: { chapter: Chapter }) {
                 </div>
               </div>
               <div className="border-l border-slate-200/90 px-[1.4vw] py-[7.2vh]">
-                <h3 className="text-center text-[clamp(0.72rem,0.9vw,1.05rem)] font-black uppercase leading-tight text-control-text">Management Certifications</h3>
+                <h3 className="text-center text-[clamp(0.72rem,0.9vw,1.05rem)] font-semibold uppercase leading-tight text-control-text">Management Certifications</h3>
                 <div className="mt-[3.1vh] grid grid-cols-3 gap-[1vw]">
                   {managementCertifications.map((item) => (
                     <CertificationBadge label={item} key={item} />
@@ -308,7 +308,7 @@ function ManufacturingMetric({ item, index }: { item: ManufacturingItem & { valu
         <Icon aria-hidden="true" size={36} strokeWidth={1.45} />
       </span>
       <span className="min-w-0">
-        <strong className="block text-[clamp(1.25rem,1.62vw,1.9rem)] font-black leading-none text-control-warm">{item.value}</strong>
+        <strong className="block text-[clamp(1.25rem,1.62vw,1.9rem)] font-semibold leading-none text-control-warm">{item.value}</strong>
         <span className="mt-[0.45vh] block text-[clamp(0.68rem,0.82vw,0.98rem)] font-medium leading-[1.15] text-control-text">{item.title}</span>
       </span>
     </div>
@@ -341,8 +341,8 @@ function CertificationBadge({ label }: { label: string }) {
     <div className="min-w-0 text-center">
       <div className="mx-auto grid h-[4.9rem] w-[4.9rem] place-items-center rounded-[0.65rem] border border-control-warm/60 bg-white/65 text-control-warm shadow-[inset_0_1px_0_rgb(255_255_255/0.92)]">
         <span className="text-center">
-          <strong className="block text-[1.2rem] font-black leading-none">ISO</strong>
-          <span className="mt-1 block text-[0.86rem] font-black leading-none">{code}</span>
+          <strong className="block text-[1.2rem] font-semibold leading-none">ISO</strong>
+          <span className="mt-1 block text-[0.86rem] font-semibold leading-none">{code}</span>
         </span>
       </div>
       <p className="mt-[1.1vh] text-[clamp(0.52rem,0.64vw,0.76rem)] font-medium text-control-text">{label}</p>
@@ -370,12 +370,12 @@ function CertificationOverviewScene({ chapter }: { chapter: Chapter }) {
         <div className="absolute inset-x-0 top-0 bottom-[6.6vh] grid grid-rows-[44.6vh_32.3vh] gap-[1.2vh]">
           <motion.section animate={{ opacity: 1, y: 0 }} className="relative overflow-hidden" initial={false} transition={{ duration: 0.72, ease }}>
             <div className="absolute left-[0.4vw] top-[4vh] z-20">
-              <h1 className="text-[clamp(2.75rem,4vw,5.65rem)] font-black uppercase leading-[0.98] tracking-normal text-black">
+              <h1 className="text-[clamp(2.75rem,4vw,5.65rem)] font-bold uppercase leading-[0.98] tracking-normal text-black md:text-[2.5vw]">
                 <span className="block">International</span>
                 <span className="block text-control-warm">Certifications</span>
               </h1>
               <div className="mt-[1.65vh] h-[2px] w-[3rem] bg-control-warm" />
-              <p className="mt-[1.75vh] max-w-[37rem] text-[clamp(0.86rem,1.12vw,1.38rem)] font-medium leading-[1.32] text-slate-900">
+              <p className="mt-[1.75vh] max-w-[37rem] text-[clamp(0.86rem,1.12vw,1.38rem)] font-medium leading-[1.32] text-slate-900 md:text-[0.8vw]">
                 Our products are tested and certified to meet globally recognized standards for safety, quality and environmental responsibility.
               </p>
 
@@ -393,9 +393,9 @@ function CertificationOverviewScene({ chapter }: { chapter: Chapter }) {
             <section className="absolute right-[8.2vw] bottom-[3.4vh] grid max-w-[36rem] grid-cols-[0.18rem_minmax(0,1fr)] gap-[1.25vw]">
               <span className="mt-[0.25vh] h-[5.2vh] bg-control-warm" />
               <span>
-                <h2 className="text-[clamp(0.9rem,1.15vw,1.32rem)] font-black uppercase leading-tight text-control-text">Trusted Worldwide</h2>
+                <h2 className="text-[clamp(0.9rem,1.15vw,1.32rem)] font-semibold uppercase leading-tight text-control-text">Trusted Worldwide</h2>
                 <p className="mt-[0.55vh] text-[clamp(0.66rem,0.86vw,1rem)] font-medium leading-[1.32] text-control-text">
-                  Our certified products are trusted in <span className="font-black text-control-warm">75+</span> countries across the globe.
+                  Our certified products are trusted in <span className="font-semibold text-control-warm">75+</span> countries across the globe.
                 </p>
               </span>
             </section>
@@ -404,7 +404,7 @@ function CertificationOverviewScene({ chapter }: { chapter: Chapter }) {
           <motion.section animate={{ opacity: 1, y: 0 }} className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/70 px-[0.8vw] py-[1.5vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]" initial={false} transition={{ duration: 0.72, delay: 0.12, ease }}>
             <div className="flex items-center justify-center gap-[1.6vw]">
               <span className="h-[2px] w-[2rem] bg-control-warm" />
-              <h2 className="text-[clamp(0.9rem,1.15vw,1.32rem)] font-black uppercase leading-tight text-control-text">Product Certifications</h2>
+              <h2 className="text-[clamp(0.9rem,1.15vw,1.32rem)] font-semibold uppercase leading-tight text-control-text">Product Certifications</h2>
               <span className="h-[2px] w-[2rem] bg-control-warm" />
             </div>
             <div className="mt-[1.8vh] grid grid-cols-8 gap-[0.75vw]">
@@ -448,7 +448,7 @@ function CertificationMetric({ item, index }: { item: ManufacturingItem & { valu
         <Icon aria-hidden="true" size={40} strokeWidth={1.4} />
       </span>
       <span className="min-w-0">
-        <strong className="block text-[clamp(1.28rem,1.75vw,2.1rem)] font-black leading-none text-control-warm">{item.value}</strong>
+        <strong className="block text-[clamp(1.28rem,1.75vw,2.1rem)] font-semibold leading-none text-control-warm">{item.value}</strong>
         <span className="mt-[0.42vh] block text-[clamp(0.68rem,0.85vw,1rem)] font-medium leading-[1.17] text-control-text">{item.title}</span>
       </span>
     </div>
@@ -463,14 +463,14 @@ function ProductCertificationCard({ item }: { item: ManufacturingItem & { logo: 
         <div className={`grid h-[4.65rem] w-[4.65rem] place-items-center rounded-[0.7rem] border border-slate-200/70 ${item.accent} shadow-[0_0.55rem_1.25rem_rgb(15_23_42/0.08)]`}>
           <span className="text-center">
             {item.logo === "RoHS" ? <Icon aria-hidden="true" className="mx-auto mb-0.5" size={23} strokeWidth={1.7} /> : null}
-            <strong className="block text-[clamp(1.05rem,1.28vw,1.52rem)] font-black leading-none">{item.logo}</strong>
-            {item.title.includes("GOLD") ? <span className="mt-1 block text-[0.52rem] font-black uppercase">Gold</span> : null}
-            {item.title === "GREENGUARD" ? <span className="mt-1 block text-[0.48rem] font-black uppercase">Greenguard</span> : null}
-            {item.title === "ISO 13849" ? <span className="mt-1 block text-[0.6rem] font-black">13849</span> : null}
+            <strong className="block text-[clamp(1.05rem,1.28vw,1.52rem)] font-semibold leading-none">{item.logo}</strong>
+            {item.title.includes("GOLD") ? <span className="mt-1 block text-[0.52rem] font-semibold uppercase">Gold</span> : null}
+            {item.title === "GREENGUARD" ? <span className="mt-1 block text-[0.48rem] font-semibold uppercase">Greenguard</span> : null}
+            {item.title === "ISO 13849" ? <span className="mt-1 block text-[0.6rem] font-semibold">13849</span> : null}
           </span>
         </div>
       </div>
-      <h3 className="mt-[0.55vh] text-[clamp(0.55rem,0.67vw,0.78rem)] font-black uppercase leading-tight text-control-text">{item.title}</h3>
+      <h3 className="mt-[0.55vh] text-[clamp(0.55rem,0.67vw,0.78rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</h3>
       <p className="mx-auto mt-[0.72vh] max-w-[9.5rem] text-[clamp(0.48rem,0.58vw,0.68rem)] font-medium leading-[1.34] text-slate-800">{item.description}</p>
     </article>
   );
@@ -504,12 +504,12 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
             transition={{ duration: 0.72, ease }}
           >
             <div className="min-w-0 pl-[0.4vw] pt-[1.25vh]">
-              <h1 className="text-[clamp(2.35rem,3.45vw,4.85rem)] font-black uppercase leading-[0.98] tracking-normal text-black">
+              <h1 className="text-[clamp(2.35rem,3.45vw,4.85rem)] font-bold uppercase leading-[0.98] tracking-normal text-black md:text-[2.5vw]">
                 <span className="block">Customers and</span>
                 <span className="block text-control-warm">Global Presence</span>
               </h1>
               <div className="mt-[1.15vh] h-[2px] w-[3rem] bg-control-warm" />
-              <p className="mt-[1.15vh] max-w-[47rem] text-[clamp(0.76rem,0.95vw,1.1rem)] font-medium leading-[1.3] text-slate-900">
+              <p className="mt-[1.15vh] max-w-[47rem] text-[clamp(0.76rem,0.95vw,1.1rem)] font-medium leading-[1.3] text-slate-900 md:text-[0.8vw]">
                 Trusted across mission-critical environments, with customer references spanning public sector,
                 transport, energy, utilities, industrial and technology operations.
               </p>
@@ -531,12 +531,12 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
             <div className="min-h-0 overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/72 p-[0.9vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.6rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <div className="flex items-center justify-between">
                 <div>
-                  <h2 className="text-[clamp(0.92rem,1.08vw,1.28rem)] font-black uppercase leading-tight text-control-text">
+                  <h2 className="text-[clamp(0.92rem,1.08vw,1.28rem)] font-semibold uppercase leading-tight text-control-text">
                     Customer References by Sector
                   </h2>
                   <div className="mt-[0.7vh] h-[2px] w-[2.6rem] bg-control-warm" />
                 </div>
-                <p className="rounded-full border border-slate-200 bg-white/75 px-3 py-1 text-[0.62rem] font-black uppercase tracking-[0.16em] text-slate-600">
+                <p className="rounded-full border border-slate-200 bg-white/75 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-slate-600">
                   {referencedCount} sourced names
                 </p>
               </div>
@@ -549,7 +549,7 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
 
             <div className="grid min-h-0 grid-rows-[1fr_auto] gap-[1.1vh]">
               <section className="overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/72 p-[0.95vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.6rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-                <h2 className="text-[clamp(0.92rem,1.05vw,1.22rem)] font-black uppercase leading-tight text-control-text">
+                <h2 className="text-[clamp(0.92rem,1.05vw,1.22rem)] font-semibold uppercase leading-tight text-control-text">
                   Global Delivery Signal
                 </h2>
                 <div className="mt-[0.7vh] h-[2px] w-[2.6rem] bg-control-warm" />
@@ -561,7 +561,7 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
                   <div className="absolute left-[74%] top-[51%] size-3 rounded-full bg-control-warm shadow-[0_0_0_0.55rem_rgb(220_38_38/0.10)]" />
                   <div className="absolute bottom-[1.3vh] left-[1vw] right-[1vw] grid grid-cols-3 gap-[0.55vw]">
                     {["India", "Middle East", "International markets"].map((region) => (
-                      <div className="rounded-[0.55rem] bg-white/82 px-3 py-2 text-center text-[0.72rem] font-black text-slate-800 shadow-sm" key={region}>
+                      <div className="rounded-[0.55rem] bg-white/82 px-3 py-2 text-center text-[0.72rem] font-semibold text-slate-800 shadow-sm" key={region}>
                         {region}
                       </div>
                     ))}
@@ -590,7 +590,7 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
                   <item.Icon aria-hidden="true" size={21} strokeWidth={1.6} />
                 </span>
                 <span>
-                  <strong className="block text-[clamp(0.62rem,0.72vw,0.84rem)] font-black leading-tight text-control-text">{item.title}</strong>
+                  <strong className="block text-[clamp(0.62rem,0.72vw,0.84rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
                   <span className="mt-[0.25vh] block text-[clamp(0.5rem,0.58vw,0.68rem)] font-medium leading-[1.18] text-slate-700">{item.detail}</span>
                 </span>
               </div>
@@ -633,7 +633,7 @@ function CustomerPresenceMetric({ item, index }: { item: { value: string; label:
           <item.Icon aria-hidden="true" size={25} strokeWidth={1.55} />
         </span>
       </div>
-      <strong className="mt-[0.35vh] block text-[clamp(1.35rem,1.82vw,2.05rem)] font-black leading-none text-control-warm">{item.value}</strong>
+      <strong className="mt-[0.35vh] block text-[clamp(1.35rem,1.82vw,2.05rem)] font-semibold leading-none text-control-warm">{item.value}</strong>
       <span className="mt-[0.5vh] block text-[clamp(0.62rem,0.74vw,0.86rem)] font-semibold leading-tight text-control-text">{item.label}</span>
     </article>
   );
@@ -644,7 +644,7 @@ function CustomerSectorCard({ group }: { group: { title: string; accent: string;
     <article className="min-h-[14.3vh] rounded-[0.75rem] border border-slate-200/86 bg-white/66 p-[0.68vw] shadow-[0_0.75rem_1.7rem_rgb(15_23_42/0.055)]">
       <div className="flex items-center gap-2">
         <group.Icon aria-hidden="true" className={group.accent} size={22} strokeWidth={1.7} />
-        <h3 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-black uppercase leading-tight text-control-text">{group.title}</h3>
+        <h3 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-semibold uppercase leading-tight text-control-text">{group.title}</h3>
       </div>
       <div className="mt-[0.72vh] flex flex-wrap gap-[0.28vw]">
         {group.names.map((name) => (
@@ -862,3 +862,5 @@ function eventForCategory(category: EvidenceCategory): EvidenceEvent {
       return "capability_viewed";
   }
 }
+
+
