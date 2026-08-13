@@ -51,13 +51,21 @@ type ManufacturingItem = {
   Icon: LucideIcon;
 };
 
-const manufacturingMetrics: (ManufacturingItem & { value: string })[] = [
-  { title: "Sq. ft. Manufacturing Area", value: "1000,000", description: "", Icon: Factory },
-  { title: "People Working with us", value: "2500+", description: "", Icon: Users },
-  { title: "Engineered Products", value: "50+", description: "", Icon: Settings },
-  { title: "Countries Served", value: "75+", description: "", Icon: Globe2 },
-  { title: "Sales FY 2025-26", value: "INR 1056 Cr.", description: "", Icon: TrendingUp },
-  { title: "Patents Granted", value: "25", description: "", Icon: FileBadge },
+type ManufacturingStat = {
+  title: string;
+  value: string;
+  prefix?: string;
+  suffix?: string;
+  Icon: LucideIcon;
+};
+
+const manufacturingMetrics: ManufacturingStat[] = [
+  { title: "Sq. ft. Manufacturing Area", value: "1,000,000", Icon: Factory },
+  { title: "People Working with us", value: "2,500+", Icon: Users },
+  { title: "Engineered Products", value: "50+", Icon: Settings },
+  { title: "Countries Served", value: "75+", Icon: Globe2 },
+  { title: "Sales FY 2025-26", value: "1,056", prefix: "INR", suffix: "Cr", Icon: TrendingUp },
+  { title: "Patents Granted", value: "25", Icon: FileBadge },
 ];
 
 const turnoverBars = [
@@ -219,7 +227,7 @@ function ManufacturingQualityScene({ chapter }: { chapter: Chapter }) {
               </p>
             </div>
             <div className="absolute inset-y-0 right-0 w-[65%] overflow-hidden rounded-[0.2rem]">
-              <img alt="" className="absolute inset-0 h-full w-full object-cover object-center" src="/assets/generated/manufacturing-quality-hero.png" />
+              <img alt="" className="absolute inset-0 h-full w-full object-cover object-center" src="/assets/brand/onepws-facility-exterior.webp" />
               <div className="absolute inset-0 bg-[linear-gradient(90deg,#fff_0%,rgb(255_255_255/0.82)_12%,rgb(255_255_255/0.08)_42%,rgb(255_255_255/0)_100%)]" />
             </div>
           </motion.section>
@@ -300,16 +308,20 @@ function ManufacturingQualityScene({ chapter }: { chapter: Chapter }) {
   );
 }
 
-function ManufacturingMetric({ item, index }: { item: ManufacturingItem & { value: string }; index: number }) {
+function ManufacturingMetric({ item, index }: { item: ManufacturingStat; index: number }) {
   const Icon = item.Icon;
   return (
-    <div className={`grid min-w-0 grid-cols-[4.1rem_minmax(0,1fr)] items-center gap-[0.8vw] px-[0.8vw] ${index ? "border-l border-slate-200/90" : ""}`}>
-      <span className="grid h-[3.8rem] w-[3.8rem] place-items-center rounded-full bg-control-warm/7 text-control-warm">
-        <Icon aria-hidden="true" size={36} strokeWidth={1.45} />
+    <div className={`grid min-w-0 grid-cols-[3.1rem_minmax(0,1fr)] items-center gap-[0.66vw] px-[0.78vw] ${index ? "border-l border-slate-200/90" : ""}`}>
+      <span className="grid h-[3.1rem] w-[3.1rem] place-items-center rounded-full bg-control-warm/[0.07] text-control-warm">
+        <Icon aria-hidden="true" size={28} strokeWidth={1.5} />
       </span>
       <span className="min-w-0">
-        <strong className="block text-[clamp(1.25rem,1.62vw,1.9rem)] font-semibold leading-none text-control-warm">{item.value}</strong>
-        <span className="mt-[0.45vh] block text-[clamp(0.68rem,0.82vw,0.98rem)] font-medium leading-[1.15] text-control-text">{item.title}</span>
+        <strong className="flex items-baseline gap-[0.22em] whitespace-nowrap text-[clamp(1.02rem,1.32vw,1.6rem)] font-semibold leading-none tracking-[-0.012em] text-control-warm [font-variant-numeric:tabular-nums]">
+          {item.prefix ? <span className="text-[0.6em] font-semibold tracking-[0.04em]">{item.prefix}</span> : null}
+          {item.value}
+          {item.suffix ? <span className="text-[0.6em] font-semibold tracking-[0.04em]">{item.suffix}</span> : null}
+        </strong>
+        <span className="mt-[0.62vh] block min-h-[2.4em] text-[clamp(0.62rem,0.74vw,0.88rem)] font-medium leading-[1.2] text-control-text">{item.title}</span>
       </span>
     </div>
   );

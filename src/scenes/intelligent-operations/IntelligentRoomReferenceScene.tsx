@@ -446,13 +446,13 @@ const softwareDefineSteps: (SimpleItem & { color: string })[] = [
   { title: "Configure", description: "Design layouts, workflows & views", Icon: Gauge, color: "text-blue-600" },
   { title: "Deploy", description: "Push to any system. Anywhere.", Icon: FastForward, color: "text-green-600" },
   { title: "Adapt", description: "Room states update when workflows change", Icon: SlidersHorizontal, color: "text-orange-500" },
-  { title: "Evolve", description: "New layouts and capabilities can be added", Icon: TrendingUp, color: "text-violet-600" },
+  { title: "Evolve", description: "New layouts and capabilities can be added", Icon: TrendingUp, color: "text-control-warm" },
 ];
 
 const softwareDefinedByItems: (SimpleItem & { color: string })[] = [
   { title: "Dynamic Layouts", description: "Create, save and switch layouts in seconds.", Icon: Monitor, color: "text-blue-600" },
   { title: "Unified Platform", description: "People, systems, data and devices-all connected.", Icon: Grid2X2, color: "text-green-600" },
-  { title: "Open & Integrable", description: "Works with your existing systems. Open APIs, open future.", Icon: FastForward, color: "text-violet-600" },
+  { title: "Open & Integrable", description: "Works with your existing systems. Open APIs, open future.", Icon: FastForward, color: "text-control-warm" },
   { title: "Secure by Design", description: "Role-based access, encryption and audit-ready.", Icon: LockKeyhole, color: "text-orange-500" },
   { title: "Future-Ready", description: "Continuous updates. New features. Zero disruption.", Icon: Activity, color: "text-cyan-600" },
 ];
@@ -460,17 +460,17 @@ const softwareDefinedByItems: (SimpleItem & { color: string })[] = [
 const softwarePlatformFlow: (SimpleItem & { color: string })[] = [
   { title: "People", description: "Roles, Teams, Permissions", Icon: Users, color: "text-blue-600" },
   { title: "Data", description: "All sources. One model.", Icon: Database, color: "text-green-600" },
-  { title: "Applications", description: "Dashboards, Apps, Workflows", Icon: Monitor, color: "text-violet-600" },
-  { title: "OnePWS Platform", description: "", Icon: FastForward, color: "text-blue-600" },
+  { title: "Applications", description: "Dashboards, Apps, Workflows", Icon: Monitor, color: "text-control-warm" },
+  { title: "OnePWS Platform", description: "", Icon: FastForward, color: "text-control-warm" },
   { title: "Devices", description: "AV, IT, IoT, Control Systems", Icon: Grid2X2, color: "text-orange-500" },
-  { title: "Intelligence", description: "AI/ML, Analytics, Predictions", Icon: TrendingUp, color: "text-violet-600" },
+  { title: "Intelligence", description: "AI/ML, Analytics, Predictions", Icon: TrendingUp, color: "text-control-warm" },
   { title: "Actions", description: "Alerts, Automation, Response", Icon: ShieldCheck, color: "text-green-600" },
 ];
 
 const deployAnywhereItems: (SimpleItem & { color: string })[] = [
   { title: "On-Premise", description: "", Icon: Building2, color: "text-blue-600" },
   { title: "Private Cloud", description: "", Icon: FastForward, color: "text-green-600" },
-  { title: "Hybrid Cloud", description: "", Icon: FastForward, color: "text-violet-600" },
+  { title: "Hybrid Cloud", description: "", Icon: FastForward, color: "text-control-warm" },
   { title: "Multi-Site", description: "", Icon: Target, color: "text-orange-500" },
   { title: "Edge Locations", description: "", Icon: Radio, color: "text-cyan-600" },
 ];
@@ -478,7 +478,7 @@ const deployAnywhereItems: (SimpleItem & { color: string })[] = [
 const softwareBenefits = [
   { value: "70%", label: "Faster deployment of new layouts", Icon: Clock3, color: "text-blue-600" },
   { value: "40%", label: "Lower total cost of ownership", Icon: TrendingUp, color: "text-green-600" },
-  { value: "99.9%", label: "System availability & reliability", Icon: ShieldCheck, color: "text-violet-600" },
+  { value: "99.9%", label: "System availability & reliability", Icon: ShieldCheck, color: "text-control-warm" },
   { value: "2X", label: "Operator productivity & situational clarity", Icon: TrendingUp, color: "text-orange-500" },
 ];
 
@@ -1770,29 +1770,29 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
   return (
     <article className="relative h-full w-full overflow-hidden bg-white text-control-text">
       <div className="absolute inset-0 bg-[linear-gradient(116deg,#ffffff_0%,#fbfcfd_56%,#eff3f8_100%)]" />
-      <div className="pointer-events-none absolute inset-x-0 top-[8.6vh] h-px bg-slate-200/80" />
+      <div className="pointer-events-none absolute inset-x-0 top-[8.6cqh] h-px bg-slate-200/80" />
 
-      <section className="absolute inset-x-[1.55vw] top-[9.65vh] bottom-[7.05vh] z-10">
-        <div className="absolute inset-x-0 top-0 bottom-[6.6vh] grid grid-cols-[minmax(15rem,0.31fr)_minmax(52rem,1fr)_minmax(18rem,0.34fr)] gap-[1.05vw]">
-          <motion.aside animate={{ opacity: 1, y: 0 }} className="relative min-h-0" initial={false} transition={{ duration: 0.72, ease }}>
-            <div className="absolute left-[0.2vw] top-[0.7vh]">
-              <h1 className="text-[clamp(2rem,2.68vw,3.75rem)] font-bold leading-[1.06] tracking-normal text-control-text md:text-[2.5vw]">
+      <section className="absolute inset-x-[1.55cqw] top-[9.65cqh] bottom-[7.05cqh] z-10">
+        <div className="absolute inset-x-0 top-0 bottom-[6.6cqh] grid grid-cols-[0.31fr_1fr_0.34fr] gap-[1.05cqw]">
+          <motion.aside animate={{ opacity: 1, y: 0 }} className="flex min-h-0 flex-col pl-[0.2cqw] pt-[0.7cqh]" initial={false} transition={{ duration: 0.72, ease }}>
+            <div className="min-h-0">
+              <h1 className="text-[2.5cqw] font-bold leading-[1.06] tracking-normal text-control-text">
                 <span className="block">The</span>
-                <span className="block text-violet-600">Software-Defined</span>
+                <span className="block text-control-warm">Software-Defined</span>
                 <span className="block">Control Room<span className="text-control-warm">.</span></span>
               </h1>
-              <div className="mt-[1.35vh] h-[2px] w-[2rem] bg-control-warm" />
-              <p className="mt-[1.45vh] max-w-[17.4rem] text-[clamp(0.68rem,0.79vw,0.92rem)] font-medium leading-[1.43] text-slate-800 md:text-[0.8vw]">
+              <div className="mt-[1.35cqh] h-[2px] w-[1.67cqw] bg-control-warm" />
+              <p className="mt-[1.45cqh] max-w-[14.5cqw] text-[0.79cqw] font-medium leading-[1.43] text-slate-800">
                 The physical room stays engineered; the operating experience can be updated through software.
               </p>
-              <p className="mt-[2.4vh] max-w-[17.4rem] text-[clamp(0.68rem,0.79vw,0.92rem)] font-medium leading-[1.43] text-slate-800">
+              <p className="mt-[2.4cqh] max-w-[14.5cqw] text-[0.79cqw] font-medium leading-[1.43] text-slate-800">
                 Layouts, workflows and device behavior can evolve after handover without rebuilding the room.
               </p>
             </div>
 
-            <section className="absolute inset-x-0 top-[39.3vh] grid grid-cols-[4.7rem_minmax(0,1fr)] items-center gap-[0.75vw] rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.45vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <Grid2X2 aria-hidden="true" className="text-violet-600" size={50} strokeWidth={1.35} />
-              <p className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-medium leading-[1.38] text-control-text">
+            <section className="mt-auto grid grid-cols-[3.92cqw_minmax(0,1fr)] items-center gap-[0.75cqw] rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1cqw] py-[1.45cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+              <Grid2X2 aria-hidden="true" className="h-[2.6cqw] w-[2.6cqw] text-control-warm" strokeWidth={1.35} />
+              <p className="text-[0.68cqw] font-medium leading-[1.38] text-control-text">
                 <span className="font-semibold">One platform.</span><br />
                 Any layout. Any scale.<br />
                 Always up to date.
@@ -1800,44 +1800,44 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
             </section>
           </motion.aside>
 
-          <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[50.8vh_17.6vh_13vh] gap-[0.95vh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
-            <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <div className="px-[1vw] py-[1.2vh]">
-                <h2 className="text-[clamp(0.62rem,0.72vw,0.84rem)] font-semibold uppercase leading-tight text-control-text">Software Defines. You Decide.</h2>
-                <div className="mt-[1.1vh] grid grid-cols-4">
+          <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_17.6cqh_14.4cqh] gap-[0.95cqh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
+            <section className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+              <div className="px-[1cqw] py-[1.2cqh]">
+                <h2 className="text-[0.72cqw] font-semibold uppercase leading-tight text-control-text">Software Defines. You Decide.</h2>
+                <div className="mt-[1.1cqh] grid grid-cols-4">
                   {softwareDefineSteps.map((item, index) => (
                     <SoftwareDefineStep index={index} item={item} key={item.title} />
                   ))}
                 </div>
               </div>
-              <div className="relative h-[34.2vh] overflow-hidden">
+              <div className="relative min-h-0 overflow-hidden">
                 <img alt="" className="absolute inset-0 h-full w-full object-cover object-center" src="/assets/source-pdf/p20_050_1781x1016.jpg" />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgb(255_255_255/0.12),rgb(255_255_255/0.02)_55%,rgb(255_255_255/0.18))]" />
               </div>
             </section>
 
-            <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.85vw] py-[1vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-semibold uppercase leading-tight text-control-text">Software Powering Everything</h2>
-              <div className="mt-[0.9vh] grid grid-cols-7 items-start">
+            <section className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.85cqw] py-[1cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+              <h2 className="text-[0.68cqw] font-semibold uppercase leading-tight text-control-text">Software Powering Everything</h2>
+              <div className="mt-[0.9cqh] grid min-h-0 grid-cols-7 items-start">
                 {softwarePlatformFlow.map((item, index) => (
                   <SoftwarePlatformNode index={index} item={item} key={item.title} />
                 ))}
               </div>
             </section>
 
-            <section className="grid min-h-0 grid-cols-[minmax(0,0.46fr)_minmax(0,0.54fr)] gap-[1vw]">
-              <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.85vw] py-[0.95vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-                <h2 className="text-[clamp(0.55rem,0.65vw,0.76rem)] font-semibold uppercase leading-tight text-control-text">Deploy Anywhere</h2>
-                <div className="mt-[0.9vh] grid grid-cols-5">
+            <section className="grid min-h-0 grid-cols-[minmax(0,0.46fr)_minmax(0,0.54fr)] gap-[1cqw]">
+              <section className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.9cqw] py-[1.15cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+                <h2 className="text-[0.65cqw] font-semibold uppercase leading-tight text-control-text">Deploy Anywhere</h2>
+                <div className="mt-[0.9cqh] grid min-h-0 grid-cols-5 items-center">
                   {deployAnywhereItems.map((item, index) => (
                     <DeployAnywhereCell index={index} item={item} key={item.title} />
                   ))}
                 </div>
               </section>
 
-              <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.85vw] py-[0.95vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-                <h2 className="text-[clamp(0.55rem,0.65vw,0.76rem)] font-semibold uppercase leading-tight text-control-text">Real Benefits</h2>
-                <div className="mt-[0.9vh] grid grid-cols-4">
+              <section className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.9cqw] py-[1.15cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+                <h2 className="text-[0.65cqw] font-semibold uppercase leading-tight text-control-text">Real Benefits</h2>
+                <div className="mt-[0.9cqh] grid min-h-0 grid-cols-4 items-center">
                   {softwareBenefits.map((item, index) => (
                     <SoftwareBenefitCell index={index} item={item} key={item.value} />
                   ))}
@@ -1846,37 +1846,37 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
             </section>
           </motion.main>
 
-          <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_18vh_16vh] gap-[1.05vh]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
-            <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.15vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-semibold uppercase leading-tight text-control-text">Defined by Software. Not Hardware.</h2>
-              <div className="mt-[0.8vh] divide-y divide-slate-200/90">
+          <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_18cqh_16cqh] gap-[1.05cqh]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
+            <section className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1cqw] py-[1.15cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+              <h2 className="text-[0.68cqw] font-semibold uppercase leading-tight text-control-text">Defined by Software. Not Hardware.</h2>
+              <div className="mt-[0.8cqh] grid min-h-0 content-start divide-y divide-slate-200/90">
                 {softwareDefinedByItems.map((item) => (
                   <SoftwareDefinedByCell item={item} key={item.title} />
                 ))}
               </div>
             </section>
 
-            <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.15vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-semibold uppercase leading-tight text-control-text">Built for Change</h2>
-              <div className="mt-[0.78vh] grid gap-[0.55vh]">
+            <section className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1cqw] py-[1.15cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+              <h2 className="text-[0.68cqw] font-semibold uppercase leading-tight text-control-text">Built for Change</h2>
+              <div className="mt-[0.78cqh] grid min-h-0 content-between">
                 {builtForChangeItems.map((item) => (
-                  <div className="grid grid-cols-[1.35rem_minmax(0,1fr)] items-center gap-[0.48vw]" key={item}>
-                    <SquareCheckBig aria-hidden="true" className="text-violet-600" size={16} strokeWidth={1.8} />
-                    <span className="text-[clamp(0.47rem,0.55vw,0.64rem)] font-medium leading-tight text-control-text">{item}</span>
+                  <div className="grid grid-cols-[1.13cqw_minmax(0,1fr)] items-center gap-[0.48cqw]" key={item}>
+                    <SquareCheckBig aria-hidden="true" className="h-[0.83cqw] w-[0.83cqw] text-control-warm" strokeWidth={1.8} />
+                    <span className="text-[0.55cqw] font-medium leading-tight text-control-text">{item}</span>
                   </div>
                 ))}
               </div>
             </section>
 
-            <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.15vw] py-[1.45vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <Quote aria-hidden="true" className="text-control-warm" size={36} strokeWidth={1.55} />
-              <p className="mt-[0.1vh] max-w-[14rem] text-[clamp(0.68rem,0.8vw,0.94rem)] font-medium leading-[1.32] text-control-text">
+            <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.15cqw] py-[1.45cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+              <Quote aria-hidden="true" className="h-[1.88cqw] w-[1.88cqw] text-control-warm" strokeWidth={1.55} />
+              <p className="mt-[0.1cqh] max-w-[11.67cqw] text-[0.8cqw] font-medium leading-[1.32] text-control-text">
                 The room is engineered once.
               </p>
-              <p className="mt-[0.55vh] max-w-[14rem] text-[clamp(0.68rem,0.8vw,0.94rem)] font-medium leading-[1.28] text-control-text">
-                The operating experience can <span className="font-semibold text-violet-600">keep improving</span> as teams and missions change.
+              <p className="mt-[0.55cqh] max-w-[11.67cqw] text-[0.8cqw] font-medium leading-[1.28] text-control-text">
+                The operating experience can <span className="font-semibold text-control-warm">keep improving</span> as teams and missions change.
               </p>
-              <span className="pointer-events-none absolute bottom-0 right-0 h-[5.8rem] w-[5.8rem] opacity-10 [background-image:radial-gradient(circle,rgb(37_99_235/0.8)_1px,transparent_1px)] [background-size:7px_7px]" />
+              <span className="pointer-events-none absolute bottom-0 right-0 h-[4.83cqw] w-[4.83cqw] opacity-10 [background-image:radial-gradient(circle,rgb(213_29_42/0.8)_1px,transparent_1px)] [background-size:7px_7px]" />
             </section>
           </motion.aside>
         </div>
@@ -2398,12 +2398,12 @@ function NovaCanDoCell({ item }: { item: SimpleItem & { color: string } }) {
 function SoftwareDefineStep({ item, index }: { item: SimpleItem & { color: string }; index: number }) {
   const Icon = item.Icon;
   return (
-    <div className={`relative grid min-w-0 grid-cols-[3rem_minmax(0,1fr)] items-center gap-[0.55vw] px-[0.75vw] ${index ? "border-l border-slate-200/90" : ""}`}>
-      {index ? <span className="absolute left-[-0.3vw] top-[1.25rem] text-[1.15rem] font-light text-control-text">›</span> : null}
-      <Icon aria-hidden="true" className={item.color} size={34} strokeWidth={1.45} />
+    <div className={`relative grid min-w-0 grid-cols-[2.5cqw_minmax(0,1fr)] items-center gap-[0.55cqw] px-[0.75cqw] ${index ? "border-l border-slate-200/90" : ""}`}>
+      {index ? <span className="absolute left-[-0.3cqw] top-1/2 -translate-y-1/2 text-[1.15cqw] font-light leading-none text-control-text">›</span> : null}
+      <Icon aria-hidden="true" className={`h-[1.77cqw] w-[1.77cqw] ${item.color}`} strokeWidth={1.45} />
       <span className="min-w-0">
-        <strong className={`block text-[clamp(0.5rem,0.59vw,0.68rem)] font-semibold uppercase leading-tight ${item.color}`}>{item.title}</strong>
-        <span className="mt-0.5 block text-[clamp(0.43rem,0.5vw,0.59rem)] font-medium leading-[1.18] text-control-text">{item.description}</span>
+        <strong className={`block text-[0.59cqw] font-semibold uppercase leading-tight ${item.color}`}>{item.title}</strong>
+        <span className="mt-[0.25cqh] block text-[0.5cqw] font-medium leading-[1.18] text-control-text">{item.description}</span>
       </span>
     </div>
   );
@@ -2413,13 +2413,13 @@ function SoftwarePlatformNode({ item, index }: { item: SimpleItem & { color: str
   const Icon = item.Icon;
   const isPlatform = item.title === "OnePWS Platform";
   return (
-    <div className="relative min-w-0 px-[0.42vw] text-center">
-      {index ? <span className="absolute left-[-0.32vw] top-[2.1rem] w-[1.1vw] border-t border-dotted border-blue-400/70" /> : null}
-      <span className={`mx-auto grid place-items-center rounded-full border border-current/20 bg-white/64 ${item.color} ${isPlatform ? "h-[5.2rem] w-[5.2rem] shadow-[0_0_0_0.5rem_rgb(59_130_246/0.06)]" : "h-[3.25rem] w-[3.25rem]"}`}>
-        <Icon aria-hidden="true" size={isPlatform ? 36 : 30} strokeWidth={1.45} />
+    <div className="relative min-w-0 px-[0.42cqw] text-center">
+      {index ? <span className={`absolute left-[-0.32cqw] w-[1.1cqw] border-t border-dotted border-slate-400/70 ${isPlatform ? "top-[2.17cqw]" : "top-[1.36cqw]"}`} /> : null}
+      <span className={`mx-auto grid place-items-center rounded-full border border-current/20 bg-white/64 ${item.color} ${isPlatform ? "h-[4.33cqw] w-[4.33cqw] shadow-[0_0_0_0.5cqw_rgb(213_29_42/0.06)]" : "h-[2.71cqw] w-[2.71cqw]"}`}>
+        <Icon aria-hidden="true" className={isPlatform ? "h-[1.88cqw] w-[1.88cqw]" : "h-[1.56cqw] w-[1.56cqw]"} strokeWidth={1.45} />
       </span>
-      <h3 className="mt-[0.65vh] text-[clamp(0.43rem,0.51vw,0.6rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</h3>
-      {item.description ? <p className="mx-auto mt-[0.28vh] max-w-[6.1rem] text-[clamp(0.36rem,0.43vw,0.51rem)] font-medium leading-[1.12] text-slate-700">{item.description}</p> : null}
+      <h3 className="mt-[0.65cqh] text-[0.51cqw] font-semibold uppercase leading-tight text-control-text">{item.title}</h3>
+      {item.description ? <p className="mx-auto mt-[0.28cqh] max-w-[5.08cqw] text-[0.43cqw] font-medium leading-[1.12] text-slate-700">{item.description}</p> : null}
     </div>
   );
 }
@@ -2427,9 +2427,9 @@ function SoftwarePlatformNode({ item, index }: { item: SimpleItem & { color: str
 function DeployAnywhereCell({ item, index }: { item: SimpleItem & { color: string }; index: number }) {
   const Icon = item.Icon;
   return (
-    <div className={`min-w-0 px-[0.42vw] text-center ${index ? "border-l border-slate-200/90" : ""}`}>
-      <Icon aria-hidden="true" className={`mx-auto ${item.color}`} size={31} strokeWidth={1.45} />
-      <p className="mt-[0.6vh] text-[clamp(0.42rem,0.5vw,0.58rem)] font-medium leading-tight text-control-text">{item.title}</p>
+    <div className={`min-w-0 px-[0.5cqw] text-center ${index ? "border-l border-slate-200/90" : ""}`}>
+      <Icon aria-hidden="true" className={`mx-auto h-[1.61cqw] w-[1.61cqw] ${item.color}`} strokeWidth={1.45} />
+      <p className="mt-[0.6cqh] text-[0.5cqw] font-medium leading-[1.2] text-control-text">{item.title}</p>
     </div>
   );
 }
@@ -2437,12 +2437,12 @@ function DeployAnywhereCell({ item, index }: { item: SimpleItem & { color: strin
 function SoftwareBenefitCell({ item, index }: { item: (typeof softwareBenefits)[number]; index: number }) {
   const Icon = item.Icon;
   return (
-    <div className={`grid min-w-0 grid-cols-[2.4rem_minmax(0,1fr)] items-center gap-[0.5vw] px-[0.62vw] ${index ? "border-l border-slate-200/90" : ""}`}>
-      <Icon aria-hidden="true" className={item.color} size={27} strokeWidth={1.45} />
-      <span className="min-w-0">
-        <strong className="block text-[clamp(1rem,1.2vw,1.42rem)] font-medium leading-none text-control-text">{item.value}</strong>
-        <span className="mt-[0.34vh] block text-[clamp(0.38rem,0.45vw,0.53rem)] font-medium leading-[1.14] text-slate-700">{item.label}</span>
+    <div className={`min-w-0 px-[0.68cqw] ${index ? "border-l border-slate-200/90" : ""}`}>
+      <span className="flex items-center gap-[0.38cqw]">
+        <Icon aria-hidden="true" className={`h-[1.15cqw] w-[1.15cqw] shrink-0 ${item.color}`} strokeWidth={1.5} />
+        <strong className="whitespace-nowrap text-[1.1cqw] font-semibold leading-none tracking-[-0.01em] text-control-text [font-variant-numeric:tabular-nums]">{item.value}</strong>
       </span>
+      <span className="mt-[0.55cqh] block text-[0.45cqw] font-medium leading-[1.2] text-slate-700">{item.label}</span>
     </div>
   );
 }
@@ -2450,11 +2450,11 @@ function SoftwareBenefitCell({ item, index }: { item: (typeof softwareBenefits)[
 function SoftwareDefinedByCell({ item }: { item: SimpleItem & { color: string } }) {
   const Icon = item.Icon;
   return (
-    <div className="grid grid-cols-[3.15rem_minmax(0,1fr)] items-center gap-[0.72vw] py-[0.92vh] first:pt-0 last:pb-0">
-      <Icon aria-hidden="true" className={item.color} size={30} strokeWidth={1.45} />
+    <div className="grid grid-cols-[2.63cqw_minmax(0,1fr)] items-center gap-[0.72cqw] py-[0.92cqh] first:pt-0 last:pb-0">
+      <Icon aria-hidden="true" className={`h-[1.56cqw] w-[1.56cqw] ${item.color}`} strokeWidth={1.45} />
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.5rem,0.59vw,0.68rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
-        <span className="mt-0.5 block text-[clamp(0.45rem,0.52vw,0.61rem)] font-medium leading-[1.18] text-slate-800">{item.description}</span>
+        <strong className="block text-[0.59cqw] font-semibold leading-tight text-control-text">{item.title}</strong>
+        <span className="mt-[0.25cqh] block text-[0.52cqw] font-medium leading-[1.18] text-slate-800">{item.description}</span>
       </span>
     </div>
   );

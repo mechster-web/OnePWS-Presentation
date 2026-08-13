@@ -109,6 +109,8 @@ button:focus-visible {
   width: min(100dvw, calc(100dvh * 16 / 9));
   isolation: isolate;
   background: #ffffff;
+  container-type: size;
+  container-name: stage;
 }
 
 .presentation-stage :where(article, section, div, p, h1, h2, h3, h4, span, strong) {
@@ -141,6 +143,8 @@ button:focus-visible {
   max-width: calc(100% - 1.5rem);
   width: min(calc(100% - 1.5rem), calc((100dvh - 5rem) * 16 / 9));
   isolation: isolate;
+  container-type: size;
+  container-name: stage;
   --stage-safe-x: clamp(1rem, 2.2vw, 2.2rem);
   --stage-content-x: clamp(0.8rem, 1.65vw, 1.4rem);
   --stage-safe-y: clamp(0.7rem, 1.2vw, 1.3rem);
@@ -994,11 +998,13 @@ button:focus-visible {
   backdrop-filter: blur(18px);
 }
 
+/* The stage is a size query container, so it is the containing block for these
+   fixed children -- the letterbox offset is already applied by the stage box. */
 .pws-scene-control-dock {
   position: fixed !important;
-  left: calc((100dvw - min(100dvw, calc(100dvh * 16 / 9))) / 2 + clamp(1.25rem, 2.15vw, 2.75rem)) !important;
+  left: clamp(1.25rem, 2.15vw, 2.75rem) !important;
   right: auto !important;
-  bottom: calc((100dvh - min(100dvh, calc(100dvw * 9 / 16))) / 2 + clamp(1.25rem, 2.15vh, 2.5rem)) !important;
+  bottom: clamp(1.25rem, 2.15vh, 2.5rem) !important;
   top: auto !important;
   z-index: 55 !important;
   display: flex;
