@@ -109,18 +109,18 @@ export function UnifiedControlRoomChapter({ chapter }: { chapter: Chapter }) {
       <div className="pointer-events-none absolute left-[2vw] top-[15vh] h-[50vh] w-[42vw] opacity-[0.045] [background-image:linear-gradient(90deg,#94a3b8_1px,transparent_1px),linear-gradient(#94a3b8_1px,transparent_1px)] [background-size:34px_34px]" />
       <div className="pointer-events-none absolute right-[8vw] top-[11vh] h-[32vh] w-[38vw] rounded-full bg-blue-500/8 blur-[80px]" />
 
-      <section className="absolute inset-x-[1.2vw] top-[9.6vh] bottom-[7.05vh] z-10">
-        <div className="grid h-[28.8vh] grid-cols-[minmax(26rem,0.33fr)_minmax(0,1fr)_minmax(20rem,0.31fr)] gap-[1vw]">
-          <motion.aside animate={{ opacity: 1, y: 0 }} className="pt-[1.3vh]" initial={false} transition={{ duration: 0.72, ease }}>
-            <h1 className="text-[clamp(2rem,2.65vw,3.75rem)] font-black uppercase leading-[1.02] tracking-normal text-slate-950">
+      <section className="absolute inset-x-[1.9vw] top-[10.2vh] bottom-[7.05vh] z-10">
+        <div className="grid h-[34.6vh] grid-cols-[minmax(24rem,0.31fr)_minmax(0,1fr)_minmax(19rem,0.3fr)] gap-[1vw]">
+          <motion.aside animate={{ opacity: 1, y: 0 }} className="min-h-0 pt-[1.2vh]" initial={false} transition={{ duration: 0.72, ease }}>
+            <h1 className="text-[clamp(1.95rem,2.55vw,3.55rem)] font-black uppercase leading-[1.02] tracking-normal text-slate-950">
               <span className="block">Designed Like Lego.</span>
               <span className="block text-blue-600">Built for Control.</span>
             </h1>
             <div className="mt-[1.1vh] h-[2px] w-[3rem] bg-control-warm" />
-            <p className="mt-[0.9vh] text-[clamp(0.78rem,0.98vw,1.18rem)] font-black uppercase leading-tight tracking-[0.04em] text-blue-600">
+            <p className="mt-[1vh] text-[clamp(0.74rem,0.9vw,1.08rem)] font-black uppercase leading-[1.12] tracking-[0.04em] text-blue-600">
               Modular partitions that adapt, evolve and last.
             </p>
-            <p className="mt-[0.75vh] max-w-[38rem] text-[clamp(0.7rem,0.83vw,0.98rem)] font-medium leading-[1.35] text-slate-800">
+            <p className="mt-[0.85vh] max-w-[34rem] text-[clamp(0.62rem,0.75vw,0.9rem)] font-medium leading-[1.34] text-slate-800">
               Our partition and panelling systems use a lego-type modular philosophy, standardized building blocks that connect seamlessly to create any layout, at any scale, with ease.
             </p>
           </motion.aside>
@@ -135,45 +135,47 @@ export function UnifiedControlRoomChapter({ chapter }: { chapter: Chapter }) {
             <div className="absolute inset-y-[12%] right-[18%] w-px bg-blue-500/45 shadow-[0_0_16px_rgb(37_99_235/0.45)]" />
           </motion.section>
 
-          <motion.aside animate={{ opacity: 1, y: 0 }} className="rounded-[0.9rem] border border-slate-200/86 bg-white/76 p-[1.2vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.6rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]" initial={false} transition={{ duration: 0.72, delay: 0.12, ease }}>
+          <motion.aside animate={{ opacity: 1, y: 0 }} className="rounded-[0.9rem] border border-slate-200/86 bg-white/76 p-[1.05vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.6rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]" initial={false} transition={{ duration: 0.72, delay: 0.12, ease }}>
             <h2 className="text-[clamp(0.82rem,1vw,1.18rem)] font-black uppercase leading-tight text-control-text">The Lego Principle</h2>
             <p className="mt-[0.25vh] text-[clamp(0.62rem,0.74vw,0.86rem)] font-bold uppercase tracking-[0.02em] text-slate-700">
               Standard modules. Infinite possibilities.
             </p>
             <div className="mt-[0.75vh] h-[2px] w-[2.6rem] bg-control-warm" />
-            <div className="mt-[1.3vh] grid grid-cols-4 divide-x divide-slate-200/90">
+            <div className="mt-[1.1vh] grid grid-cols-2 gap-[0.65vw]">
               {legoPrinciples.map((item) => (
-                <div className="px-[0.45vw] text-center first:pl-0 last:pr-0" key={item.title}>
-                  <item.Icon aria-hidden="true" className="mx-auto text-blue-600" size={32} strokeWidth={1.55} />
-                  <p className="mt-[0.65vh] text-[clamp(0.45rem,0.54vw,0.64rem)] font-black uppercase leading-tight text-control-text">{item.title}</p>
-                  <p className="mt-[0.3vh] text-[clamp(0.38rem,0.47vw,0.56rem)] font-medium leading-[1.18] text-slate-600">{item.detail}</p>
+                <div className="grid grid-cols-[2.25rem_minmax(0,1fr)] items-start gap-[0.48vw] rounded-[0.58rem] bg-white/62 p-[0.48vw]" key={item.title}>
+                  <item.Icon aria-hidden="true" className="text-blue-600" size={26} strokeWidth={1.55} />
+                  <span>
+                    <p className="text-[clamp(0.5rem,0.6vw,0.72rem)] font-black uppercase leading-tight text-control-text">{item.title}</p>
+                    <p className="mt-[0.2vh] text-[clamp(0.42rem,0.5vw,0.6rem)] font-medium leading-[1.14] text-slate-600">{item.detail}</p>
+                  </span>
                 </div>
               ))}
             </div>
           </motion.aside>
         </div>
 
-        <motion.section animate={{ opacity: 1, y: 0 }} className="mt-[1vh] grid h-[11.2vh] grid-cols-6 overflow-hidden rounded-[0.75rem] bg-[#062f56] text-white shadow-[0_1rem_2.4rem_rgb(15_23_42/0.13)]" initial={false} transition={{ duration: 0.72, delay: 0.18, ease }}>
+        <motion.section animate={{ opacity: 1, y: 0 }} className="mt-[1.15vh] grid h-[10.6vh] grid-cols-6 overflow-hidden rounded-[0.75rem] bg-[#062f56] text-white shadow-[0_1rem_2.4rem_rgb(15_23_42/0.13)]" initial={false} transition={{ duration: 0.72, delay: 0.18, ease }}>
           {capabilityStrip.map((item) => (
-            <div className="grid grid-cols-[3.4rem_minmax(0,1fr)] items-center gap-[0.65vw] border-r border-white/20 px-[0.9vw] last:border-r-0" key={item.title}>
-              <item.Icon aria-hidden="true" className="text-blue-300" size={34} strokeWidth={1.5} />
+            <div className="grid grid-cols-[2.8rem_minmax(0,1fr)] items-center gap-[0.58vw] border-r border-white/20 px-[0.75vw] last:border-r-0" key={item.title}>
+              <item.Icon aria-hidden="true" className="text-blue-300" size={30} strokeWidth={1.5} />
               <span>
-                <strong className="block text-[clamp(0.56rem,0.66vw,0.78rem)] font-black uppercase leading-tight">{item.title}</strong>
-                <span className="mt-[0.25vh] block text-[clamp(0.45rem,0.54vw,0.64rem)] font-semibold leading-[1.17] text-blue-50/92">{item.detail}</span>
+                <strong className="block text-[clamp(0.52rem,0.62vw,0.74rem)] font-black uppercase leading-tight">{item.title}</strong>
+                <span className="mt-[0.22vh] block text-[clamp(0.42rem,0.5vw,0.6rem)] font-semibold leading-[1.12] text-blue-50/92">{item.detail}</span>
               </span>
             </div>
           ))}
         </motion.section>
 
-        <motion.section animate={{ opacity: 1, y: 0 }} className="mt-[1.1vh] grid h-[31.9vh] grid-cols-[0.24fr_0.19fr_0.24fr_0.19fr_0.14fr] gap-[0.85vw]" initial={false} transition={{ duration: 0.72, delay: 0.24, ease }}>
+        <motion.section animate={{ opacity: 1, y: 0 }} className="mt-[1.05vh] grid h-[26.6vh] grid-cols-[0.23fr_0.19fr_0.24fr_0.19fr_0.15fr] gap-[0.85vw]" initial={false} transition={{ duration: 0.72, delay: 0.24, ease }}>
           <InfoPanel title="The Modular Building Blocks">
-            <div className="grid gap-[0.55vh]">
+            <div className="grid gap-[0.34vh]">
               {buildingBlocks.map((item) => (
-                <div className="grid grid-cols-[4.6rem_minmax(0,1fr)] items-center gap-[0.7vw] border-b border-slate-200/80 pb-[0.45vh] last:border-b-0 last:pb-0" key={item.title}>
+                <div className="grid grid-cols-[3.6rem_minmax(0,1fr)] items-center gap-[0.55vw] border-b border-slate-200/80 pb-[0.28vh] last:border-b-0 last:pb-0" key={item.title}>
                   <ModuleGraphic variant={item.variant} />
                   <span>
-                    <strong className="block text-[clamp(0.48rem,0.58vw,0.68rem)] font-black uppercase leading-tight text-control-text">{item.title}</strong>
-                    <span className="mt-[0.18vh] block text-[clamp(0.4rem,0.48vw,0.57rem)] font-medium leading-[1.16] text-slate-600">{item.detail}</span>
+                    <strong className="block text-[clamp(0.46rem,0.55vw,0.66rem)] font-black uppercase leading-tight text-control-text">{item.title}</strong>
+                    <span className="mt-[0.12vh] block text-[clamp(0.37rem,0.44vw,0.53rem)] font-medium leading-[1.1] text-slate-600">{item.detail}</span>
                   </span>
                 </div>
               ))}
@@ -271,35 +273,35 @@ export function UnifiedControlRoomChapter({ chapter }: { chapter: Chapter }) {
 
 function InfoPanel({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <section className="min-h-0 overflow-hidden rounded-[0.72rem] border border-slate-200/86 bg-white/76 p-[0.85vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.2rem_rgb(15_23_42/0.06)] backdrop-blur-[22px]">
-      <h2 className="text-[clamp(0.66rem,0.78vw,0.92rem)] font-black uppercase leading-tight text-control-text">{title}</h2>
+    <section className="min-h-0 rounded-[0.72rem] border border-slate-200/86 bg-white/76 p-[0.72vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.2rem_rgb(15_23_42/0.06)] backdrop-blur-[22px]">
+      <h2 className="text-[clamp(0.62rem,0.74vw,0.88rem)] font-black uppercase leading-tight text-control-text">{title}</h2>
       <div className="mt-[0.48vh] h-[2px] w-[2.25rem] bg-control-warm" />
-      <div className="mt-[0.8vh]">{children}</div>
+      <div className="mt-[0.65vh]">{children}</div>
     </section>
   );
 }
 
 function ModuleGraphic({ variant, compact = false }: { variant: BuildingBlock["variant"] | StepItem["variant"]; compact?: boolean }) {
-  const size = compact ? "h-12" : "h-14";
+  const size = compact ? "h-8" : "h-9";
   if (variant === "profile" || variant === "structure") {
-    return <div className={`${size} flex items-center justify-center gap-2 rounded bg-slate-50`}><span className="h-10 w-2 rounded bg-slate-900" /><span className="h-10 w-2 rounded bg-slate-500" /></div>;
+    return <div className={`${size} flex items-center justify-center gap-2 rounded bg-slate-50`}><span className="h-6 w-1.5 rounded bg-slate-900" /><span className="h-6 w-1.5 rounded bg-slate-500" /></div>;
   }
   if (variant === "panel" || variant === "modules") {
-    return <div className={`${size} flex items-center justify-center gap-1 rounded bg-slate-50`}><span className="h-9 w-5 rounded-sm bg-slate-200" /><span className="h-9 w-5 rounded-sm bg-stone-300" /><span className="h-9 w-5 rounded-sm bg-slate-700" /></div>;
+    return <div className={`${size} flex items-center justify-center gap-1 rounded bg-slate-50`}><span className="h-6 w-3.5 rounded-sm bg-slate-200" /><span className="h-6 w-3.5 rounded-sm bg-stone-300" /><span className="h-6 w-3.5 rounded-sm bg-slate-700" /></div>;
   }
   if (variant === "glass" || variant === "lock") {
-    return <div className={`${size} flex items-center justify-center gap-1 rounded bg-slate-50`}><span className="h-10 w-6 rounded-sm border border-slate-500 bg-blue-100/70" /><span className="h-10 w-2 rounded bg-slate-800" /><span className="h-10 w-6 rounded-sm border border-slate-500 bg-blue-100/70" /></div>;
+    return <div className={`${size} flex items-center justify-center gap-1 rounded bg-slate-50`}><span className="h-7 w-4 rounded-sm border border-slate-500 bg-blue-100/70" /><span className="h-7 w-1.5 rounded bg-slate-800" /><span className="h-7 w-4 rounded-sm border border-slate-500 bg-blue-100/70" /></div>;
   }
   if (variant === "door" || variant === "complete") {
-    return <div className={`${size} flex items-end justify-center gap-1 rounded bg-slate-50`}><span className="h-11 w-5 rounded-t-sm border border-slate-500 bg-white" /><span className="h-11 w-5 rounded-t-sm border border-slate-500 bg-blue-50" /><span className="h-11 w-5 rounded-t-sm border border-slate-500 bg-white" /></div>;
+    return <div className={`${size} flex items-end justify-center gap-1 rounded bg-slate-50`}><span className="h-7 w-3.5 rounded-t-sm border border-slate-500 bg-white" /><span className="h-7 w-3.5 rounded-t-sm border border-slate-500 bg-blue-50" /><span className="h-7 w-3.5 rounded-t-sm border border-slate-500 bg-white" /></div>;
   }
-  return <div className={`${size} grid grid-cols-3 place-items-center rounded bg-slate-50 p-2`}><span className="size-4 rounded bg-slate-700" /><span className="size-4 rounded bg-slate-300" /><span className="size-4 rounded bg-blue-500" /></div>;
+  return <div className={`${size} grid grid-cols-3 place-items-center rounded bg-slate-50 p-1.5`}><span className="size-3 rounded bg-slate-700" /><span className="size-3 rounded bg-slate-300" /><span className="size-3 rounded bg-blue-500" /></div>;
 }
 
 function LayoutGraphic({ shape }: { shape: LayoutItem["shape"] }) {
   const common = "absolute border-2 border-slate-800 bg-blue-100/55";
   return (
-    <div className="relative h-[8.8vh] overflow-hidden rounded-[0.45rem] bg-[linear-gradient(135deg,#f8fafc,#e8f1ff)]">
+    <div className="relative h-[7.2vh] overflow-hidden rounded-[0.45rem] bg-[linear-gradient(135deg,#f8fafc,#e8f1ff)]">
       {shape === "linear" ? <span className={`${common} left-[12%] top-[34%] h-[24%] w-[76%] rounded-sm`} /> : null}
       {shape === "curved" ? <span className={`${common} left-[17%] top-[18%] h-[70%] w-[66%] rounded-full`} /> : null}
       {shape === "corner" ? <><span className={`${common} left-[18%] top-[22%] h-[58%] w-[22%]`} /><span className={`${common} left-[18%] top-[58%] h-[22%] w-[62%]`} /></> : null}
@@ -311,7 +313,7 @@ function LayoutGraphic({ shape }: { shape: LayoutItem["shape"] }) {
 
 function RoomBlock({ level }: { level: number }) {
   return (
-    <div className="relative h-14 rounded-[0.4rem] bg-slate-50">
+    <div className="relative h-11 rounded-[0.4rem] bg-slate-50">
       <span className="absolute left-[20%] top-[28%] h-[45%] w-[56%] -skew-x-12 rounded border border-slate-300 bg-white shadow-sm" />
       <span className="absolute left-[28%] top-[38%] h-[18%] w-[24%] -skew-x-12 rounded bg-blue-100" />
       <span className="absolute left-[54%] top-[36%] h-[20%] w-[16%] -skew-x-12 rounded bg-slate-300" />

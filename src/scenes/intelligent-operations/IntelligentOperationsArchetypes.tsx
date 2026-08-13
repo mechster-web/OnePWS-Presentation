@@ -11,7 +11,9 @@ import { IntelligentRoomReferenceScene } from "./IntelligentRoomReferenceScene";
 
 export function OperationsFeatureOrbitArchetype(props: SceneComponentProps) {
   const fallback = <FeatureOrbitArchetype {...props} />;
-  return hasOperationsScenario(props) ? <IntelligentOperationsScene chapter={props.chapter} fallback={fallback} /> : fallback;
+  return hasOperationsScenario(props) || props.chapter.id === "mechanical-strength-console"
+    ? <IntelligentOperationsScene chapter={props.chapter} fallback={fallback} />
+    : fallback;
 }
 
 export function OperationsVoiceGuidedArchetype(props: SceneComponentProps) {
@@ -41,7 +43,9 @@ export function OperationsSystemConnectionArchetype(props: SceneComponentProps) 
 
 export function OperationsDataStoryArchetype(props: SceneComponentProps) {
   const fallback = <DataStoryArchetype {...props} />;
-  return hasOperationsScenario(props) ? <IntelligentOperationsScene chapter={props.chapter} fallback={fallback} /> : fallback;
+  return hasOperationsScenario(props) || props.chapter.id === "mechanical-strength-console"
+    ? <IntelligentOperationsScene chapter={props.chapter} fallback={fallback} />
+    : fallback;
 }
 
 function hasOperationsScenario({ chapter }: SceneComponentProps) {

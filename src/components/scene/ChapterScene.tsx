@@ -14,7 +14,9 @@ import { LogoFinaleChapter } from "./LogoFinaleChapter";
 import { HumanCentredPhilosophyChapter } from "./HumanCentredPhilosophyChapter";
 import { MissionControlDefinitionChapter } from "./MissionControlDefinitionChapter";
 import { OperatorChallengesChapter } from "./OperatorChallengesChapter";
+import { PresentationFlowSelectorChapter } from "./PresentationFlowSelectorChapter";
 import { ProjectExperienceChapter } from "./ProjectExperienceChapter";
+import { ProductsTransformingSpacesChapter } from "./ProductsTransformingSpacesChapter";
 import { RoomBuiltToProtectChapter } from "./RoomBuiltToProtectChapter";
 import { RoomEngineeredToLastChapter } from "./RoomEngineeredToLastChapter";
 import { RoomSoundsRightChapter } from "./RoomSoundsRightChapter";
@@ -47,6 +49,13 @@ const projectCredentialChapterIds = new Set([
   "project-credentials-acpo-ahmedabad",
   "project-credentials-itms-noida",
   "project-credentials-shell-brunei",
+  "project-credentials-metro-rail-occ",
+  "project-credentials-utility-command-centre",
+  "project-credentials-industrial-operations-centre",
+  "project-credentials-data-centre-noc",
+  "project-credentials-emergency-response-centre",
+  "project-credentials-airport-operations-centre",
+  "project-credentials-manufacturing-control-centre",
 ]);
 
 type Props = {
@@ -62,6 +71,14 @@ export function ChapterScene({ chapter }: Props) {
 
   if (chapter.id === "complete-ecosystem") {
     return <ConnectedIntelligenceChapter chapter={chapter} />;
+  }
+
+  if (chapter.id === "presentation-flow-selector") {
+    return <PresentationFlowSelectorChapter chapter={chapter} />;
+  }
+
+  if (chapter.id === "products-transforming-spaces") {
+    return <ProductsTransformingSpacesChapter chapter={chapter} />;
   }
 
   if (chapter.id === "logo-finale") {

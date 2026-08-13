@@ -475,7 +475,7 @@ export function presentationReducer(
       return {
         ...state,
         activeJourneyId: action.journeyId,
-        customerPath: journey?.selection ?? state.customerPath,
+        customerPath: journey?.selection ? { ...state.customerPath, ...journey.selection } : state.customerPath,
         chapterId,
         activeOverlay: null,
         transitionDirection: "direct",

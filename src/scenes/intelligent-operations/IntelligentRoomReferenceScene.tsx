@@ -84,11 +84,11 @@ const experienceSteps: SimpleItem[] = [
 ];
 
 const outcomeItems: SimpleItem[] = [
-  { title: "Faster Start", description: "No login delays. No distractions.", Icon: ShieldCheck },
-  { title: "Better Focus", description: "Your environment is ready to perform.", Icon: Target },
+  { title: "Faster Start", description: "Access and preferences load before setup begins.", Icon: ShieldCheck },
+  { title: "Cleaner Setup", description: "Lighting, screens and comfort return to a known profile.", Icon: Target },
   { title: "Consistent Every Shift", description: "Every setting returns exactly where it belongs.", Icon: UserCheck },
   { title: "Secure by Design", description: "Biometric recognition keeps access safe.", Icon: LockKeyhole },
-  { title: "Higher Performance", description: "Comfort, ergonomics and information already in sync.", Icon: Sparkles },
+  { title: "Ready Workspace", description: "The operator starts with the room already aligned.", Icon: Sparkles },
 ];
 
 const consoleModeItems: (SimpleItem & { color: string })[] = [
@@ -111,8 +111,8 @@ const consoleAdaptSteps: SimpleItem[] = [
   { title: "Detects Context", description: "Monitors activity, alerts and environment.", Icon: Gauge },
   { title: "Understands Priority", description: "Determines what's important right now.", Icon: ClipboardList },
   { title: "Reconfigures Workspace", description: "Moves displays, opens apps and adjusts settings.", Icon: SlidersHorizontal },
-  { title: "Presents What Matters", description: "Only the right information, right where you need it.", Icon: UserCheck },
-  { title: "Keeps You in Control", description: "You stay focused. The console does the rest.", Icon: SquareCheckBig },
+  { title: "Presents the Task View", description: "The active mode decides what belongs on screen.", Icon: UserCheck },
+  { title: "Keeps Control Human", description: "Automation prepares the workspace; the operator acts.", Icon: SquareCheckBig },
 ];
 
 const transitionItems = [
@@ -124,11 +124,11 @@ const transitionItems = [
 ];
 
 const consoleBenefits: SimpleItem[] = [
-  { title: "Less Time Searching", description: "Information is organized for you.", Icon: Target },
-  { title: "Faster Response", description: "Critical data is always front and center.", Icon: Clock3 },
-  { title: "Lower Cognitive Load", description: "A clean, relevant workspace reduces distractions.", Icon: SlidersHorizontal },
-  { title: "Better Decisions", description: "Right context, right time, better outcomes.", Icon: ShieldCheck },
-  { title: "Consistent Performance", description: "Every shift. Every operator. Every time.", Icon: Gauge },
+  { title: "Mode Clarity", description: "Monitoring, incident and handover screens stay distinct.", Icon: Target },
+  { title: "Priority Fronting", description: "Critical data is placed where attention already is.", Icon: Clock3 },
+  { title: "Lower Cognitive Load", description: "The console hides non-essential work surfaces.", Icon: SlidersHorizontal },
+  { title: "Operator Authority", description: "The system prepares options without taking command.", Icon: ShieldCheck },
+  { title: "Repeatable Handover", description: "Shift context moves with the workflow, not memory.", Icon: Gauge },
 ];
 
 const informationDeliveryItems: SimpleItem[] = [
@@ -143,8 +143,8 @@ const informationHowItWorks: (SimpleItem & { color: string })[] = [
   { title: "Detect", description: "System monitors events, data and operator activity.", Icon: Target, color: "text-control-warm" },
   { title: "Analyze", description: "AI understands context, priority and urgency.", Icon: Filter, color: "text-amber-500" },
   { title: "Prioritize", description: "Critical information is ranked and organized.", Icon: Gauge, color: "text-green-500" },
-  { title: "Deliver", description: "Information appears on the right display automatically.", Icon: Monitor, color: "text-blue-600" },
-  { title: "Act", description: "Operator takes faster, smarter and more confident actions.", Icon: UserCheck, color: "text-control-text" },
+  { title: "Deliver", description: "The active display receives the next useful view.", Icon: Monitor, color: "text-blue-600" },
+  { title: "Act", description: "The operator acts from one organized context.", Icon: UserCheck, color: "text-control-text" },
 ];
 
 const manualSearchItems: SimpleItem[] = [
@@ -157,8 +157,8 @@ const manualSearchItems: SimpleItem[] = [
 const proactiveDeliveryItems: SimpleItem[] = [
   { title: "Critical information delivered instantly", description: "", Icon: Gauge, color: "text-green-500" },
   { title: "Focused, relevant and actionable", description: "", Icon: ShieldCheck, color: "text-green-500" },
-  { title: "Faster response, better outcomes", description: "", Icon: Target, color: "text-green-500" },
-  { title: "Lower stress, higher situational awareness", description: "", Icon: Users, color: "text-green-500" },
+  { title: "Search paths removed during incidents", description: "", Icon: Target, color: "text-green-500" },
+  { title: "Shared context for the next handoff", description: "", Icon: Users, color: "text-green-500" },
 ];
 
 const intelligentExamples = [
@@ -183,7 +183,7 @@ const roomResponseSystems: SimpleItem[] = [
   { title: "Displays & Video Wall", description: "Reorganize layouts. Show what matters most.", Icon: Grid2X2, color: "text-blue-600" },
   { title: "Consoles", description: "Adjust height, position and posture settings automatically.", Icon: SlidersHorizontal, color: "text-blue-500" },
   { title: "Acoustics", description: "Reduce distraction. Enhance speech clarity.", Icon: Radio, color: "text-violet-600" },
-  { title: "HVAC & Air Quality", description: "Increase fresh air circulation and optimize comfort.", Icon: FastForward, color: "text-green-500" },
+  { title: "HVAC & Air Quality", description: "Move fresh-air and thermal setpoints into incident mode.", Icon: FastForward, color: "text-green-500" },
   { title: "Collaboration", description: "Enable rooms, audio, video and shared workspaces.", Icon: Users, color: "text-green-500" },
   { title: "Recording & Logging", description: "Start event recording and activity logs automatically.", Icon: Video, color: "text-amber-500" },
   { title: "Power & Infrastructure", description: "Ensure system redundancy and power stability.", Icon: ShieldCheck, color: "text-amber-500" },
@@ -212,7 +212,7 @@ const performanceEnvironmentCallouts: (SimpleItem & { color: string; className: 
   { title: "Humidity", description: "Keeps humidity in the ideal range for comfort and health.", Icon: Droplets, color: "text-blue-600", className: "left-[3%] bottom-[15%]" },
   { title: "Lighting", description: "Maintains ideal brightness and reduces eye strain.", Icon: Sun, color: "text-green-500", className: "left-[39%] top-[4%]" },
   { title: "Air Quality", description: "Keeps air fresh and oxygen levels optimal.", Icon: FastForward, color: "text-green-500", className: "right-[9%] top-[15%]" },
-  { title: "Noise Control", description: "Limits noise distraction for better concentration.", Icon: Radio, color: "text-violet-600", className: "right-[4%] top-[44%]" },
+  { title: "Noise Control", description: "Holds background sound inside the target range.", Icon: Radio, color: "text-violet-600", className: "right-[4%] top-[44%]" },
   { title: "Ergonomics", description: "Supports posture, reach and comfort through intelligent adjustments.", Icon: Armchair, color: "text-orange-500", className: "right-[2%] bottom-[12%]" },
 ];
 
@@ -235,11 +235,11 @@ const proactiveAdjustments: SimpleItem[] = [
 ];
 
 const operatorImpactItems: SimpleItem[] = [
-  { title: "Better Focus", description: "Fewer distractions. Higher concentration.", Icon: Target, color: "text-green-600" },
-  { title: "Less Fatigue", description: "Comfort that reduces physical and mental load.", Icon: Users, color: "text-green-600" },
-  { title: "Improved Alertness", description: "Environment tuned to maintain vigilance.", Icon: Eye, color: "text-green-600" },
-  { title: "Health & Well-being", description: "Cleaner air, better posture, safer environment.", Icon: ShieldCheck, color: "text-green-600" },
-  { title: "Higher Performance", description: "Optimal conditions lead to better decisions.", Icon: TrendingUp, color: "text-green-600" },
+  { title: "Visual Comfort", description: "Lighting supports screen work without glare.", Icon: Target, color: "text-green-600" },
+  { title: "Lower Fatigue Load", description: "Posture and climate are managed across long shifts.", Icon: Users, color: "text-green-600" },
+  { title: "Maintained Alertness", description: "Room conditions stay inside defined thresholds.", Icon: Eye, color: "text-green-600" },
+  { title: "Well-being by Design", description: "Air, ergonomics and safety are treated as systems.", Icon: ShieldCheck, color: "text-green-600" },
+  { title: "Stable Conditions", description: "Operators work inside a controlled performance envelope.", Icon: TrendingUp, color: "text-green-600" },
 ];
 
 const personalizedProfiles = [
@@ -306,10 +306,10 @@ const switchUserSteps: (SimpleItem & { color: string })[] = [
 
 const consistencyItems = [
   "Reduces setup time",
-  "Improves focus",
+  "Restores preferred views",
   "Minimizes errors",
-  "Enhances comfort",
-  "Boosts productivity",
+  "Normalizes comfort settings",
+  "Supports role-specific dashboards",
   "Supports long-shift performance",
 ];
 
@@ -328,7 +328,7 @@ const intelligencePipeline: (SimpleItem & { color: string })[] = [
   { title: "Data", description: "Continuous collection from across the room", Icon: Database, color: "text-blue-600" },
   { title: "Insight", description: "AI analyzes patterns and detects changes", Icon: Sun, color: "text-green-600" },
   { title: "Action", description: "Automated or guided actions are triggered", Icon: Target, color: "text-orange-500" },
-  { title: "Value", description: "Better performance, safer operations", Icon: TrendingUp, color: "text-violet-600" },
+  { title: "Value", description: "Signals become operational evidence", Icon: TrendingUp, color: "text-violet-600" },
 ];
 
 const roomUnderstandsItems: (SimpleItem & { color: string; bullets: string[] })[] = [
@@ -351,10 +351,10 @@ const intelligenceGlanceItems = [
 ];
 
 const digitalTwinIntroItems: (SimpleItem & { color: string })[] = [
-  { title: "One live model. Everything connected.", description: "Accurate. Dynamic. Unified.", Icon: Grid2X2, color: "text-blue-600" },
-  { title: "See the whole room. Understand every detail.", description: "From infrastructure to human.", Icon: Activity, color: "text-green-600" },
-  { title: "Simulate. Test. Optimize.", description: "Decisions powered by real-time insights.", Icon: TrendingUp, color: "text-orange-500" },
-  { title: "Plan for today. Prepare for tomorrow.", description: "Lower risk. Higher resilience.", Icon: ShieldCheck, color: "text-violet-600" },
+  { title: "One live room model.", description: "Assets, systems and people in one view.", Icon: Grid2X2, color: "text-blue-600" },
+  { title: "See current state clearly.", description: "From power rooms to operator positions.", Icon: Activity, color: "text-green-600" },
+  { title: "Test before rollout.", description: "Layouts and workflows can be simulated.", Icon: TrendingUp, color: "text-orange-500" },
+  { title: "Plan with fewer blind spots.", description: "Change risk is visible earlier.", Icon: ShieldCheck, color: "text-violet-600" },
 ];
 
 const digitalTwinCallouts = [
@@ -367,10 +367,10 @@ const digitalTwinCallouts = [
 
 const digitalTwinMetrics: (SimpleItem & { value: string; color: string })[] = [
   { title: "Total Assets", value: "1,248", description: "All systems connected", Icon: Grid2X2, color: "text-blue-600" },
-  { title: "System Health", value: "97%", description: "Operational excellence", Icon: Activity, color: "text-green-600" },
+  { title: "System Health", value: "97%", description: "Live service status", Icon: Activity, color: "text-green-600" },
   { title: "Alerts", value: "3", description: "Requires attention", Icon: Bell, color: "text-orange-500" },
   { title: "Active Users", value: "24", description: "Across all shifts", Icon: UserCheck, color: "text-violet-600" },
-  { title: "Energy Usage", value: "68.4 kWh", description: "Optimized performance", Icon: Zap, color: "text-blue-600" },
+  { title: "Energy Usage", value: "68.4 kWh", description: "Current room demand", Icon: Zap, color: "text-blue-600" },
 ];
 
 const digitalTwinRepresents: (SimpleItem & { color: string })[] = [
@@ -387,12 +387,12 @@ const digitalTwinEnables: (SimpleItem & { color: string })[] = [
   { title: "Predict & Prevent", description: "AI detects issues before they impact operations.", Icon: BrainCircuit, color: "text-green-600" },
   { title: "Scenario Simulation", description: "Test layouts, workflows and events virtually.", Icon: Grid2X2, color: "text-orange-500" },
   { title: "Change Impact Analysis", description: "Understand the outcome before implementation.", Icon: TrendingUp, color: "text-violet-600" },
-  { title: "Continuous Optimization", description: "AI learns and improves room performance.", Icon: Activity, color: "text-cyan-600" },
+  { title: "Room Tuning Loop", description: "Observed usage feeds the next configuration review.", Icon: Activity, color: "text-cyan-600" },
 ];
 
 const digitalTwinDecisionBullets = [
   "Data-driven planning",
-  "Faster response",
+  "Visible change impact",
   "Lower downtime",
   "Higher efficiency",
   "Increased safety",
@@ -410,16 +410,16 @@ const novaCapabilityCallouts: (SimpleItem & { color: string; className: string }
 const novaBehindScenesItems: (SimpleItem & { color: string })[] = [
   { title: "Continuously observes systems, people and environment", description: "", Icon: Eye, color: "text-blue-600" },
   { title: "Understands patterns, context and intent", description: "", Icon: BrainCircuit, color: "text-violet-600" },
-  { title: "Anticipates needs and suggests the best next actions", description: "", Icon: Sun, color: "text-orange-500" },
-  { title: "Delivers insights and automation seamlessly", description: "", Icon: Monitor, color: "text-green-600" },
-  { title: "Learns and adapts to your room, your team, your way", description: "", Icon: Activity, color: "text-cyan-600" },
+  { title: "Anticipates likely next questions and options", description: "", Icon: Sun, color: "text-orange-500" },
+  { title: "Delivers summaries and routine automation", description: "", Icon: Monitor, color: "text-green-600" },
+  { title: "Learns from approved workflows and preferences", description: "", Icon: Activity, color: "text-cyan-600" },
 ];
 
 const novaOperatorSupportItems: (SimpleItem & { color: string })[] = [
   { title: "Smart Context", description: "Understands who you are, what you're doing and what matters most.", Icon: UserCheck, color: "text-blue-600" },
   { title: "Proactive Alerts", description: "Not just alarms-early warnings with the likely impact and options.", Icon: Bell, color: "text-orange-500" },
   { title: "Instant Answers", description: "Find anything-documents, data, procedures-instantly.", Icon: Gauge, color: "text-green-600" },
-  { title: "Decision Support", description: "Weighs scenarios and recommends the best course of action.", Icon: Users, color: "text-violet-600" },
+  { title: "Decision Support", description: "Compares scenarios and explains likely tradeoffs.", Icon: Users, color: "text-violet-600" },
   { title: "Workload Balance", description: "Monitors operator load and helps balance attention.", Icon: Activity, color: "text-cyan-600" },
   { title: "Privacy First", description: "Works within your permissions. Your data stays secure.", Icon: LockKeyhole, color: "text-orange-500" },
 ];
@@ -428,24 +428,24 @@ const novaCanDoItems: (SimpleItem & { color: string })[] = [
   { title: "Natural language Q&A", description: "Ask anything. Get instant answers.", Icon: Monitor, color: "text-violet-600" },
   { title: "Cross-system intelligence", description: "Connects data across all systems.", Icon: Grid2X2, color: "text-blue-600" },
   { title: "Anomaly detection", description: "Spots issues humans might miss.", Icon: Target, color: "text-control-warm" },
-  { title: "Predictive insights", description: "Sees what's coming-so you're always ready.", Icon: TrendingUp, color: "text-green-600" },
-  { title: "Workflow automation", description: "Handles routine tasks so you can focus.", Icon: Gauge, color: "text-orange-500" },
+  { title: "Predictive insights", description: "Shows likely changes before they become events.", Icon: TrendingUp, color: "text-green-600" },
+  { title: "Workflow automation", description: "Runs approved routine actions in the background.", Icon: Gauge, color: "text-orange-500" },
 ];
 
 const novaOutcomeItems = [
   "Faster awareness",
-  "Better decisions",
+  "Clearer summaries",
   "Lower workload",
   "Fewer surprises",
   "Higher reliability",
-  "Happier teams",
+  "Controlled automation",
 ];
 
 const softwareDefineSteps: (SimpleItem & { color: string })[] = [
   { title: "Configure", description: "Design layouts, workflows & views", Icon: Gauge, color: "text-blue-600" },
   { title: "Deploy", description: "Push to any system. Anywhere.", Icon: FastForward, color: "text-green-600" },
-  { title: "Adapt", description: "AI adapts in real time to changes", Icon: SlidersHorizontal, color: "text-orange-500" },
-  { title: "Evolve", description: "Update, expand, improve-seamlessly", Icon: TrendingUp, color: "text-violet-600" },
+  { title: "Adapt", description: "Room states update when workflows change", Icon: SlidersHorizontal, color: "text-orange-500" },
+  { title: "Evolve", description: "New layouts and capabilities can be added", Icon: TrendingUp, color: "text-violet-600" },
 ];
 
 const softwareDefinedByItems: (SimpleItem & { color: string })[] = [
@@ -675,7 +675,7 @@ function ConsoleUnderstandsTaskScene({ chapter }: { chapter: Chapter }) {
               </h1>
               <div className="mt-[1.35vh] h-[2px] w-[2rem] bg-control-warm" />
               <p className="mt-[1.5vh] max-w-[19rem] text-[clamp(0.78rem,0.9vw,1.02rem)] font-medium leading-[1.48] text-slate-800">
-                The console adapts to the task, the situation and the operator-anticipating what's needed next.
+                Task modes bring the right controls, displays and guidance forward without making the operator rebuild the workspace.
               </p>
             </div>
 
@@ -686,7 +686,7 @@ function ConsoleUnderstandsTaskScene({ chapter }: { chapter: Chapter }) {
               <span className="min-w-0">
                 <strong className="block text-[clamp(0.68rem,0.78vw,0.9rem)] font-black leading-tight text-control-text">Smart Context Awareness</strong>
                 <span className="mt-1 block text-[clamp(0.56rem,0.66vw,0.77rem)] font-medium leading-[1.3] text-slate-800">
-                  Recognizes activity, priorities and system state to automatically optimize your workspace.
+                  Reads activity, priority and system state so each mode starts with the right operating context.
                 </span>
               </span>
             </section>
@@ -835,7 +835,7 @@ function InformationComesOperatorScene({ chapter }: { chapter: Chapter }) {
               </h1>
               <div className="mt-[1.25vh] h-[2px] w-[2rem] bg-control-warm" />
               <p className="mt-[1.35vh] max-w-[17.4rem] text-[clamp(0.68rem,0.79vw,0.92rem)] font-medium leading-[1.42] text-slate-800">
-                The right information. At the right time. On the right display. No searching. No switching. Just clarity when it matters most.
+                Critical context moves to the active display automatically, reducing screen-hunting during time-sensitive work.
               </p>
             </div>
 
@@ -899,7 +899,7 @@ function InformationComesOperatorScene({ chapter }: { chapter: Chapter }) {
                 <p className="mt-[0.3vh] max-w-[13rem] text-[clamp(0.72rem,0.83vw,0.96rem)] font-medium leading-[1.34] text-control-text">
                   Information doesn't wait for you to find it. It finds you.
                 </p>
-                <p className="mt-[1vh] text-[clamp(0.72rem,0.86vw,1rem)] font-black leading-[1.25] text-control-warm">So you can act faster. And stay ahead.</p>
+                <p className="mt-[1vh] text-[clamp(0.72rem,0.86vw,1rem)] font-black leading-[1.25] text-control-warm">Context arrives before the search begins.</p>
                 <span className="pointer-events-none absolute bottom-0 right-0 h-[5.7rem] w-[5.7rem] opacity-10 [background-image:radial-gradient(circle,rgb(37_99_235/0.65)_1px,transparent_1px)] [background-size:7px_7px]" />
               </section>
             </div>
@@ -971,7 +971,7 @@ function OperationalStateRoomRespondsScene({ chapter }: { chapter: Chapter }) {
               </h1>
               <div className="mt-[1.2vh] h-[2px] w-[2rem] bg-control-warm" />
               <p className="mt-[1.35vh] max-w-[17rem] text-[clamp(0.66rem,0.76vw,0.88rem)] font-medium leading-[1.38] text-slate-800">
-                One command or one event changes the operational state-and the entire environment adapts instantly.
+                One event can activate a predefined room state across displays, lighting, acoustics, access, HVAC and logging.
               </p>
             </div>
 
@@ -980,8 +980,8 @@ function OperationalStateRoomRespondsScene({ chapter }: { chapter: Chapter }) {
                 <SlidersHorizontal aria-hidden="true" size={31} strokeWidth={1.45} />
               </span>
               <span className="min-w-0">
-                <strong className="block text-[clamp(0.62rem,0.72vw,0.84rem)] font-black leading-tight text-control-text">Everything works as one.</strong>
-                <span className="mt-1 block text-[clamp(0.58rem,0.68vw,0.78rem)] font-black leading-tight text-control-warm">Seamlessly. Instantly. Reliably.</span>
+                <strong className="block text-[clamp(0.62rem,0.72vw,0.84rem)] font-black leading-tight text-control-text">One state. Many systems.</strong>
+                <span className="mt-1 block text-[clamp(0.58rem,0.68vw,0.78rem)] font-black leading-tight text-control-warm">Coordinated without manual chasing.</span>
               </span>
             </section>
 
@@ -1047,9 +1047,9 @@ function OperationalStateRoomRespondsScene({ chapter }: { chapter: Chapter }) {
             <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.2vw] py-[1.45vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <p className="text-[clamp(1.6rem,2.2vw,2.5rem)] font-black leading-none text-control-warm">"</p>
               <p className="mt-[0.1vh] max-w-[12rem] text-[clamp(0.62rem,0.74vw,0.86rem)] font-medium leading-[1.35] text-control-text">
-                One state change. Every system. Every second.
+                The room changes state once.
               </p>
-              <p className="mt-[0.75vh] text-[clamp(0.64rem,0.76vw,0.9rem)] font-black leading-[1.25] text-control-text">One purpose: <span className="text-control-warm">Operational Excellence.</span></p>
+              <p className="mt-[0.75vh] text-[clamp(0.64rem,0.76vw,0.9rem)] font-black leading-[1.25] text-control-text">Each connected layer follows the same operating condition.</p>
               <span className="pointer-events-none absolute bottom-0 right-0 h-[5.5rem] w-[5.5rem] opacity-10 [background-image:radial-gradient(circle,rgb(239_68_68/0.65)_1px,transparent_1px)] [background-size:7px_7px]" />
             </section>
           </motion.aside>
@@ -1108,15 +1108,15 @@ function RoomProtectsHumanPerformanceScene({ chapter }: { chapter: Chapter }) {
               </h1>
               <div className="mt-[1.2vh] h-[2px] w-[2rem] bg-control-warm" />
               <p className="mt-[1.35vh] max-w-[17rem] text-[clamp(0.67rem,0.78vw,0.9rem)] font-medium leading-[1.4] text-slate-800">
-                A high-performance operator needs the right environment to stay alert, focused and comfortable-every second, every shift.
+                Operator focus depends on measurable room conditions: air, light, noise, temperature, posture and visual load.
               </p>
             </div>
 
             <section className="absolute inset-x-0 top-[32.5vh] grid grid-cols-[4.8rem_minmax(0,1fr)] items-center gap-[0.8vw] rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.1vw] py-[1.5vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <ShieldCheck aria-hidden="true" className="text-control-warm" size={52} strokeWidth={1.35} />
               <p className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-medium leading-[1.42] text-slate-800">
-                The room continuously monitors. Intelligently adjusts.<br />
-                <span className="font-black text-control-warm">Proactively protects.</span>
+                Environmental parameters are monitored as operational inputs.<br />
+                <span className="font-black text-control-warm">Comfort becomes controllable.</span>
               </p>
             </section>
           </motion.aside>
@@ -1168,7 +1168,7 @@ function RoomProtectsHumanPerformanceScene({ chapter }: { chapter: Chapter }) {
             </section>
 
             <QuotePanel emphasis="people protect operations." text="When the environment supports people," />
-            <QuotePanel Icon={Sparkles} emphasis="stronger." text="A smarter environment makes every operator" />
+            <QuotePanel Icon={Sparkles} emphasis="measurable." text="A protected environment makes performance" />
           </motion.aside>
         </div>
 
@@ -1225,14 +1225,14 @@ function PersonalWorkspaceScene({ chapter }: { chapter: Chapter }) {
               </h1>
               <div className="mt-[1.2vh] h-[2px] w-[2rem] bg-control-warm" />
               <p className="mt-[1.35vh] max-w-[17rem] text-[clamp(0.66rem,0.76vw,0.88rem)] font-medium leading-[1.42] text-slate-800">
-                One touch. Everything returns exactly where it belongs. Different people. Different needs. One intelligent room that adapts to every individual.
+                Every operator can start from a known profile: preferred height, screens, apps, audio, lighting and dashboard context.
               </p>
             </div>
 
             <section className="absolute inset-x-0 top-[34.2vh] grid grid-cols-[4.8rem_minmax(0,1fr)] items-center gap-[0.8vw] rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] py-[1.45vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <UserCheck aria-hidden="true" className="text-control-warm" size={52} strokeWidth={1.35} />
               <p className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-medium leading-[1.36] text-slate-800">
-                Personalization that improves comfort, efficiency and operational performance.
+                Personalization reduces setup variation and keeps repeated shifts consistent.
               </p>
             </section>
           </motion.aside>
@@ -1299,7 +1299,7 @@ function PersonalWorkspaceScene({ chapter }: { chapter: Chapter }) {
               </div>
             </section>
 
-            <QuotePanel emphasis="Not the other way around." text="The room adapts to the operator." />
+            <QuotePanel emphasis="before work begins." text="The workspace is ready" />
           </motion.aside>
         </div>
 
@@ -1355,7 +1355,7 @@ function IntelligenceBeyondDeskScene({ chapter }: { chapter: Chapter }) {
               </h1>
               <div className="mt-[1.25vh] h-[2px] w-[2rem] bg-control-warm" />
               <p className="mt-[1.35vh] max-w-[16.8rem] text-[clamp(0.68rem,0.79vw,0.92rem)] font-medium leading-[1.42] text-slate-800">
-                The control room knows more than what's on the screens. It continuously senses, measures and learns-turning data into actionable insights.
+                Room data extends into occupancy, energy, assets, environment and infrastructure, giving operators a measurable operating picture.
               </p>
             </div>
 
@@ -1479,7 +1479,7 @@ function DigitalTwinControlRoomScene({ chapter }: { chapter: Chapter }) {
               </h1>
               <div className="mt-[1.25vh] h-[2px] w-[2rem] bg-control-warm" />
               <p className="mt-[1.35vh] max-w-[17.4rem] text-[clamp(0.66rem,0.77vw,0.9rem)] font-medium leading-[1.44] text-slate-800">
-                A real-time digital replica of your entire control room-people, assets, systems and environment-kept in sync, continuously learning, and always ready to optimize performance.
+                A live model mirrors people, assets, systems, environment and workflows so changes can be seen, tested and understood before rollout.
               </p>
             </div>
 
@@ -1532,7 +1532,7 @@ function DigitalTwinControlRoomScene({ chapter }: { chapter: Chapter }) {
 
               <section className="grid min-h-0 grid-cols-[minmax(0,0.52fr)_minmax(0,0.48fr)] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
                 <div className="px-[0.8vw] py-[0.9vh]">
-                  <h2 className="text-[clamp(0.55rem,0.65vw,0.76rem)] font-black uppercase leading-tight text-control-text">Built for Better Decisions</h2>
+                  <h2 className="text-[clamp(0.55rem,0.65vw,0.76rem)] font-black uppercase leading-tight text-control-text">Built for Safer Changes</h2>
                   <div className="mt-[0.6vh] h-[2px] w-[1.6rem] bg-control-warm" />
                   <ul className="mt-[0.55vh] space-y-[0.18vh]">
                     {digitalTwinDecisionBullets.map((bullet) => (
@@ -1635,7 +1635,7 @@ function AiSilentAssistantScene({ chapter }: { chapter: Chapter }) {
               </h1>
               <div className="mt-[1.25vh] h-[2px] w-[2rem] bg-control-warm" />
               <p className="mt-[1.35vh] max-w-[17.6rem] text-[clamp(0.68rem,0.79vw,0.92rem)] font-medium leading-[1.43] text-slate-800">
-                Always listening. Never interrupting. Nova works quietly in the background-understanding context, anticipating needs, and delivering the right information at the right moment.
+                Nova watches approved signals in the background, summarizes what changed, and suggests the next step without taking command away from the operator.
               </p>
             </div>
 
@@ -1689,7 +1689,7 @@ function AiSilentAssistantScene({ chapter }: { chapter: Chapter }) {
             <section className="grid grid-cols-[0.12fr_1fr_1fr_1fr_0.12fr] items-center overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <p className="text-center text-[clamp(1.6rem,2.4vw,2.8rem)] font-black leading-none text-violet-600">"</p>
               <p className="border-r border-slate-200/90 px-[1vw] text-center text-[clamp(0.52rem,0.62vw,0.72rem)] font-medium leading-tight text-control-text">Nova doesn't replace operators.</p>
-              <p className="border-r border-slate-200/90 px-[1vw] text-center text-[clamp(0.52rem,0.62vw,0.72rem)] font-medium leading-tight text-control-text">Nova empowers them.</p>
+              <p className="border-r border-slate-200/90 px-[1vw] text-center text-[clamp(0.52rem,0.62vw,0.72rem)] font-medium leading-tight text-control-text">Nova gives them context.</p>
               <p className="border-r border-slate-200/90 px-[1vw] text-center text-[clamp(0.52rem,0.62vw,0.72rem)] font-medium leading-tight text-control-text">You stay in control.</p>
               <p className="text-center text-[clamp(1.6rem,2.4vw,2.8rem)] font-black leading-none text-violet-600">"</p>
             </section>
@@ -1780,10 +1780,10 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
               </h1>
               <div className="mt-[1.35vh] h-[2px] w-[2rem] bg-control-warm" />
               <p className="mt-[1.45vh] max-w-[17.4rem] text-[clamp(0.68rem,0.79vw,0.92rem)] font-medium leading-[1.43] text-slate-800">
-                Modern control rooms are no longer built around hardware-they are defined by software.
+                The physical room stays engineered; the operating experience can be updated through software.
               </p>
               <p className="mt-[2.4vh] max-w-[17.4rem] text-[clamp(0.68rem,0.79vw,0.92rem)] font-medium leading-[1.43] text-slate-800">
-                Flexible. Scalable. Intelligent. Your room, your way-today and ready for tomorrow.
+                Layouts, workflows and device behavior can evolve after handover without rebuilding the room.
               </p>
             </div>
 
@@ -1868,10 +1868,10 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
             <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.15vw] py-[1.45vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <p className="text-[clamp(1.7rem,2.6vw,3rem)] font-black leading-none text-violet-600">"</p>
               <p className="mt-[0.1vh] max-w-[14rem] text-[clamp(0.68rem,0.8vw,0.94rem)] font-medium leading-[1.32] text-control-text">
-                You don't just build the room.
+                The room is engineered once.
               </p>
               <p className="mt-[0.55vh] max-w-[14rem] text-[clamp(0.68rem,0.8vw,0.94rem)] font-medium leading-[1.28] text-control-text">
-                You <span className="font-black text-violet-600">define</span> it in software. And it <span className="font-black text-violet-600">evolves</span> with you.
+                The operating experience can <span className="font-black text-violet-600">keep improving</span> as teams and missions change.
               </p>
               <span className="pointer-events-none absolute bottom-0 right-0 h-[5.8rem] w-[5.8rem] opacity-10 [background-image:radial-gradient(circle,rgb(37_99_235/0.8)_1px,transparent_1px)] [background-size:7px_7px]" />
             </section>

@@ -52,55 +52,55 @@ export function ConnectedIntelligenceChapter({ chapter }: Props) {
 const advancedCapabilities = [
   {
     title: "Unified Visualization",
-    body: "Real-time, high-resolution visualization across systems, video walls and workstations.",
+    body: "One operating picture across workstation displays, video wall and shared views.",
     icon: MonitorCog,
     color: "text-red-600",
   },
   {
     title: "AI-Powered Insights",
-    body: "Predictive analytics, anomaly detection and intelligent alerts for proactive operations.",
+    body: "Patterns, anomalies and summaries surface only where the workflow needs them.",
     icon: Brain,
     color: "text-blue-600",
   },
   {
     title: "Collaboration at Speed",
-    body: "Secure communication and workflow tools to coordinate faster, together.",
+    body: "Event context travels with the handoff so teams work from the same facts.",
     icon: Network,
     color: "text-cyan-600",
   },
   {
     title: "Ergonomic Excellence",
-    body: "Workspaces designed for comfort, focus and sustained performance.",
+    body: "Sightlines, reach, posture and comfort are planned as operating requirements.",
     icon: CircleUserRound,
     color: "text-violet-600",
   },
   {
     title: "Built to Protect",
-    body: "Enterprise-grade security, redundancy and compliance you can rely on.",
+    body: "Access, redundancy, fire safety and compliance sit inside the room architecture.",
     icon: ShieldCheck,
     color: "text-orange-600",
   },
   {
     title: "Sustainable by Design",
-    body: "Energy-efficient systems that reduce footprint and operational costs.",
+    body: "Energy and material choices are handled as lifecycle design decisions.",
     icon: Leaf,
     color: "text-green-600",
   },
   {
     title: "Continuous Intelligence",
-    body: "The room learns, adapts and improves with every interaction.",
+    body: "Room-state data becomes feedback for tuning layouts, workflows and support.",
     icon: TrendingUp,
     color: "text-blue-600",
   },
   {
     title: "Predictive Maintenance",
-    body: "Smart monitoring detects issues early and prevents downtime.",
+    body: "Asset health and service signals are visible before support becomes urgent.",
     icon: CloudCog,
     color: "text-cyan-600",
   },
   {
     title: "Digital Twin Ready",
-    body: "Simulate, plan and optimize every change before it happens in real life.",
+    body: "Proposed changes can be modeled before they affect the live room.",
     icon: Maximize2,
     color: "text-violet-600",
   },
@@ -127,7 +127,7 @@ const impactItems = [
   },
   {
     title: "Impact Driven",
-    body: "Better decisions. Better outcomes.",
+    body: "Clearer state. Cleaner handoffs.",
     icon: Globe2,
     color: "text-cyan-600",
   },
@@ -170,8 +170,8 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
               </h1>
               <div className="mt-3 h-[3px] w-16 rounded-full bg-red-600" />
               <p className="mt-3 max-w-[42rem] text-[clamp(0.86rem,0.88vw,1rem)] font-medium leading-[1.55] text-slate-800">
-                A software-defined control room that thinks, adapts and evolves with you, empowering operators,
-                optimizing performance, and protecting what matters most.
+                A control-room environment where consoles, architecture, systems and intelligence share one
+                operating context around the people doing the work.
               </p>
             </motion.div>
 
@@ -265,8 +265,8 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
               <Users aria-hidden="true" size={26} strokeWidth={1.9} />
             </motion.div>
             <p className="text-[clamp(0.86rem,0.94vw,1.08rem)] font-medium leading-[1.42] text-slate-950">
-              When the room understands people, operations become <span className="text-red-600">safer, smarter</span>
-              <span className="block">and <span className="text-red-600">stronger</span>, every single day.</span>
+              When the room, console and software share context, operators spend less time coordinating the
+              <span className="block">environment and more time managing the <span className="text-red-600">mission.</span></span>
             </p>
           </div>
           {impactItems.map((item) => (

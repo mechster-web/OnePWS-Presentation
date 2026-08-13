@@ -40,7 +40,7 @@ export function MainNavigation() {
           : "visible";
   const controlsVisible = navigatorOpen || state.navigationControlsRevealed || state.mode === "presenter" || Boolean(state.activeOverlay);
   const triggerVisible = model.currentDestination.chapterId !== "opening-cover" || state.navigationControlsRevealed;
-  const branchOverlaySuppressedDestinations = new Set(["complete-ecosystem", "console-portfolio", "console-detail-edge", "console-detail-linear", "console-detail-vista", "console-detail-elevate", "console-detail-collab", "room-sounds-right", "room-built-to-protect", "room-engineered-to-last", "unified-control-room", "intelligent-features", "incident-response", "ergonomic-methodology", "sightline-comfort", "design-build-approach", "architectural-systems", "manufacturing-quality", "certification-overview", "project-portfolio", "project-credentials-chandigarh-iccc", "project-credentials-adani-khavda", "project-credentials-rtgc-andhra", "project-credentials-acpo-ahmedabad", "project-credentials-itms-noida", "project-credentials-shell-brunei", "customer-presence", "why-onepws", "next-steps-closing", "logo-finale", "room-recognizes-you", "console-understands-task", "information-comes-operator", "operational-state-room-responds", "room-protects-human-performance", "personal-workspace", "intelligence-beyond-desk", "digital-twin-control-room", "ai-silent-assistant", "software-defined-control-room"]);
+  const branchOverlaySuppressedDestinations = new Set(["complete-ecosystem", "console-portfolio", "console-detail-edge", "console-detail-linear", "console-detail-vista", "console-detail-elevate", "console-detail-collab", "room-sounds-right", "room-built-to-protect", "room-engineered-to-last", "unified-control-room", "intelligent-features", "mechanical-strength-console", "incident-response", "ergonomic-methodology", "sightline-comfort", "design-build-approach", "architectural-systems", "manufacturing-quality", "certification-overview", "project-portfolio", "project-credentials-chandigarh-iccc", "project-credentials-adani-khavda", "project-credentials-rtgc-andhra", "project-credentials-acpo-ahmedabad", "project-credentials-itms-noida", "project-credentials-shell-brunei", "project-credentials-metro-rail-occ", "project-credentials-utility-command-centre", "project-credentials-industrial-operations-centre", "project-credentials-data-centre-noc", "project-credentials-emergency-response-centre", "project-credentials-airport-operations-centre", "project-credentials-manufacturing-control-centre", "customer-presence", "why-onepws", "next-steps-closing", "logo-finale", "room-recognizes-you", "console-understands-task", "information-comes-operator", "operational-state-room-responds", "room-protects-human-performance", "personal-workspace", "intelligence-beyond-desk", "digital-twin-control-room", "ai-silent-assistant", "software-defined-control-room"]);
   const showOptionalBranches = controlsVisible && !branchOverlaySuppressedDestinations.has(model.currentDestination.chapterId);
 
   useEffect(() => {
@@ -110,106 +110,104 @@ export function MainNavigation() {
                 ease: [0.22, 1, 0.36, 1],
               }}
             >
-              <div className="pws-navigator-panel mx-auto grid max-w-[min(62rem,calc(100dvw-(var(--stage-safe-x)*2)))] grid-cols-[minmax(10rem,1fr)_auto_minmax(10rem,1fr)] items-center gap-3 px-3 py-2 max-lg:grid-cols-[minmax(0,1fr)_auto]">
-                <div className="min-w-0 max-lg:hidden">
-              <JourneyTrace
-                model={model}
-                onSelect={(chapterId) => {
-                  setNavigatorOpen(false);
-                  dispatch({ type: "GO_TO_CHAPTER", chapterId });
-                }}
-              />
-                  <div className="mt-2 flex min-w-0 items-center gap-3 text-[11px] text-[var(--pws-theme-muted)]">
-                <Route aria-hidden="true" size={14} />
-                <span className="truncate">{model.journey.name}</span>
-                <span className="shrink-0">{model.routePosition + 1}/{model.route.length}</span>
-              </div>
-            </div>
+              <div className="pws-navigator-panel mx-auto grid w-full max-w-[min(72rem,calc(100dvw-(var(--stage-safe-x)*2)))] grid-cols-[minmax(16rem,0.95fr)_auto_minmax(16rem,0.9fr)] items-center gap-4 px-4 py-3 max-lg:grid-cols-1">
+                <div className="min-w-0">
+                  <JourneyTrace
+                    model={model}
+                    onSelect={(chapterId) => {
+                      setNavigatorOpen(false);
+                      dispatch({ type: "GO_TO_CHAPTER", chapterId });
+                    }}
+                  />
+                </div>
 
                 <div className="flex flex-wrap items-center justify-center gap-2">
-              {state.branchStack.length > 0 ? (
-                <button className="quiet-action min-h-10 px-3 py-2 text-xs" onClick={() => dispatch({ type: "RETURN_TO_JOURNEY" })} type="button">
-                  <CornerUpLeft aria-hidden="true" size={15} />
-                  Return
-                </button>
-              ) : null}
-              <button
-                aria-label="Open experience map"
-                className="control-button"
-                onClick={openChapterMap}
-                title="Experience map"
-                type="button"
-              >
-                <Map aria-hidden="true" size={17} />
-              </button>
-              <button
-                aria-label={model.previousDestination ? `Previous: ${model.previousDestination.shortTitle}` : "Previous scene"}
-                className="control-button"
-                disabled={!model.previousDestination}
-                onClick={() => dispatch({ type: "PREVIOUS_CHAPTER" })}
-                title={model.previousDestination ? `Previous: ${model.previousDestination.shortTitle}` : "Previous scene"}
-                type="button"
-              >
-                <ChevronLeft aria-hidden="true" size={18} />
-              </button>
-              <button
-                aria-label={state.isPlaying ? "Pause route" : "Play route"}
-                className={`control-button ${state.mode === "autoPlay" && state.isPlaying ? "border-control-warm text-control-warm" : ""}`}
-                onClick={() => dispatch({ type: "SET_PLAYING", isPlaying: !state.isPlaying })}
-                title={state.isPlaying ? "Pause route" : "Play route"}
-                type="button"
-              >
-                {state.isPlaying ? <Pause aria-hidden="true" size={17} /> : <Play aria-hidden="true" size={17} />}
-              </button>
-              <button
-                aria-label={model.nextDestination ? `Next: ${model.nextDestination.shortTitle}` : "Next scene"}
-                className="control-button"
-                disabled={!model.nextDestination}
-                onClick={() => dispatch({ type: "NEXT_CHAPTER" })}
-                title={model.nextDestination ? `Next: ${model.nextDestination.shortTitle}` : "Next scene"}
-                type="button"
-              >
-                <ChevronRight aria-hidden="true" size={18} />
-              </button>
-              <button
-                aria-label={state.narrationEnabled ? "Narration enabled" : "Narration disabled"}
-                className="control-button"
-                onClick={() => dispatch({ type: "TOGGLE_NARRATION" })}
-                title={state.narrationEnabled ? "Disable narration" : "Enable narration"}
-                type="button"
-              >
-                {state.narrationEnabled ? <Volume2 aria-hidden="true" size={17} /> : <VolumeX aria-hidden="true" size={17} />}
-              </button>
-              <button
-                aria-label={state.captionsEnabled ? "Captions enabled" : "Captions disabled"}
-                className={`control-button ${state.captionsEnabled ? "border-control-warm text-control-warm" : ""}`}
-                onClick={() => dispatch({ type: "TOGGLE_CAPTIONS" })}
-                title={state.captionsEnabled ? "Hide captions" : "Show captions"}
-                type="button"
-              >
-                <Captions aria-hidden="true" size={17} />
-              </button>
-              <button aria-label="Toggle fullscreen" className="control-button" onClick={() => void toggleFullscreen()} title="Fullscreen" type="button">
-                <Expand aria-hidden="true" size={17} />
-              </button>
-              <ModeToggle />
-            </div>
+                  {state.branchStack.length > 0 ? (
+                    <button className="quiet-action min-h-10 px-3 py-2 text-xs" onClick={() => dispatch({ type: "RETURN_TO_JOURNEY" })} type="button">
+                      <CornerUpLeft aria-hidden="true" size={15} />
+                      Return
+                    </button>
+                  ) : null}
+                  <button
+                    aria-label="Open experience map"
+                    className="control-button"
+                    onClick={openChapterMap}
+                    title="Experience map"
+                    type="button"
+                  >
+                    <Map aria-hidden="true" size={17} />
+                  </button>
+                  <button
+                    aria-label={model.previousDestination ? `Previous: ${model.previousDestination.shortTitle}` : "Previous scene"}
+                    className="control-button"
+                    disabled={!model.previousDestination}
+                    onClick={() => dispatch({ type: "PREVIOUS_CHAPTER" })}
+                    title={model.previousDestination ? `Previous: ${model.previousDestination.shortTitle}` : "Previous scene"}
+                    type="button"
+                  >
+                    <ChevronLeft aria-hidden="true" size={18} />
+                  </button>
+                  <button
+                    aria-label={state.isPlaying ? "Pause route" : "Play route"}
+                    className={`control-button ${state.mode === "autoPlay" && state.isPlaying ? "border-control-warm text-control-warm" : ""}`}
+                    onClick={() => dispatch({ type: "SET_PLAYING", isPlaying: !state.isPlaying })}
+                    title={state.isPlaying ? "Pause route" : "Play route"}
+                    type="button"
+                  >
+                    {state.isPlaying ? <Pause aria-hidden="true" size={17} /> : <Play aria-hidden="true" size={17} />}
+                  </button>
+                  <button
+                    aria-label={model.nextDestination ? `Next: ${model.nextDestination.shortTitle}` : "Next scene"}
+                    className="control-button"
+                    disabled={!model.nextDestination}
+                    onClick={() => dispatch({ type: "NEXT_CHAPTER" })}
+                    title={model.nextDestination ? `Next: ${model.nextDestination.shortTitle}` : "Next scene"}
+                    type="button"
+                  >
+                    <ChevronRight aria-hidden="true" size={18} />
+                  </button>
+                  <button
+                    aria-label={state.narrationEnabled ? "Narration enabled" : "Narration disabled"}
+                    className="control-button"
+                    onClick={() => dispatch({ type: "TOGGLE_NARRATION" })}
+                    title={state.narrationEnabled ? "Disable narration" : "Enable narration"}
+                    type="button"
+                  >
+                    {state.narrationEnabled ? <Volume2 aria-hidden="true" size={17} /> : <VolumeX aria-hidden="true" size={17} />}
+                  </button>
+                  <button
+                    aria-label={state.captionsEnabled ? "Captions enabled" : "Captions disabled"}
+                    className={`control-button ${state.captionsEnabled ? "border-control-warm text-control-warm" : ""}`}
+                    onClick={() => dispatch({ type: "TOGGLE_CAPTIONS" })}
+                    title={state.captionsEnabled ? "Hide captions" : "Show captions"}
+                    type="button"
+                  >
+                    <Captions aria-hidden="true" size={17} />
+                  </button>
+                  <button aria-label="Toggle fullscreen" className="control-button" onClick={() => void toggleFullscreen()} title="Fullscreen" type="button">
+                    <Expand aria-hidden="true" size={17} />
+                  </button>
+                  <ModeToggle />
+                </div>
 
-                <div className="min-w-0 justify-self-end text-right max-lg:hidden">
-              {model.nextDestination ? (
-                <div className="border-r border-control-warm/65 pr-3 text-xs text-control-muted">
-                      <p className="uppercase tracking-[0.18em] text-control-warm">Next scene</p>
-                  <p className="mt-1 truncate text-sm font-semibold text-control-text">{model.nextDestination.shortTitle}</p>
-                  <p className="mt-1">{Math.round(model.nextDestination.duration / 60_000)} min · {model.nextDestination.navigationType}</p>
+                <div className="min-w-0 justify-self-stretch max-lg:hidden">
+                  {model.nextDestination ? (
+                    <div className="pws-next-scene-card">
+                      <div className="min-w-0">
+                        <p className="uppercase tracking-[0.18em] text-control-warm">Next Scene</p>
+                        <p className="mt-1 truncate text-sm font-black text-control-text">{model.nextDestination.shortTitle}</p>
+                        <p className="mt-1 text-[11px] text-control-muted">{Math.round(model.nextDestination.duration / 60_000)} min · {model.nextDestination.navigationType}</p>
+                      </div>
+                      <ChevronRight aria-hidden="true" className="shrink-0 text-control-warm" size={18} />
+                    </div>
+                  ) : (
+                    <div className="inline-flex items-center gap-2 text-xs text-control-muted">
+                      <Radio aria-hidden="true" size={14} />
+                      Route complete
+                    </div>
+                  )}
                 </div>
-              ) : (
-                <div className="inline-flex items-center gap-2 text-xs text-control-muted">
-                  <Radio aria-hidden="true" size={14} />
-                  Route complete
-                </div>
-              )}
-            </div>
-          </div>
+              </div>
             </motion.div>
           ) : null}
         </AnimatePresence>
@@ -257,28 +255,61 @@ function JourneyTrace({
   model: ReturnType<typeof buildNavigationModel>;
   onSelect: (chapterId: string) => void;
 }) {
+  const currentIndex = model.destinations.findIndex((destination) => destination.chapterId === model.currentDestination.chapterId);
+  const safeCurrentIndex = currentIndex >= 0 ? currentIndex : model.routePosition;
+  const windowStart = Math.max(0, Math.min(model.destinations.length - 7, safeCurrentIndex - 3));
+  const visibleDestinations = model.destinations.slice(windowStart, windowStart + 7);
+
   return (
     <div aria-label={`Journey progress ${Math.round(model.progressPercent)} percent`} className="pws-journey-trace">
-      {model.destinations.map((destination, index) => (
-        <button
-          aria-current={destination.chapterId === model.currentDestination.chapterId ? "step" : undefined}
-          aria-label={`Go to ${index + 1}. ${destination.shortTitle}. ${destination.completionState}`}
-          className={`pws-journey-segment ${
-            destination.chapterId === model.currentDestination.chapterId
-              ? "pws-journey-current"
-              : destination.completed
-                ? "pws-journey-complete"
-                : destination.memoryMoment
-                  ? "pws-journey-memory"
-                  : ""
-          }`}
-          key={destination.id}
-          onClick={() => onSelect(destination.chapterId)}
-          style={{ flexGrow: destination.memoryMoment ? 1.8 : 1 }}
-          title={`${index + 1}. ${destination.title}`}
-          type="button"
-        />
-      ))}
+      <div className="pws-journey-meta">
+        <Route aria-hidden="true" size={14} />
+        <span className="truncate">{model.journey.name}</span>
+      </div>
+      <div className="pws-journey-jump">
+        <select
+          aria-label="Jump to slide"
+          onChange={(event) => onSelect(event.target.value)}
+          value={model.currentDestination.chapterId}
+        >
+          {model.destinations.map((destination, index) => (
+            <option key={destination.id} value={destination.chapterId}>
+              {String(index + 1).padStart(2, "0")} - {destination.title}
+            </option>
+          ))}
+        </select>
+        <strong>{model.routePosition + 1}/{model.route.length}</strong>
+      </div>
+      <div className="pws-journey-meter">
+        <span className="pws-journey-meter-fill" style={{ width: `${model.progressPercent}%` }} />
+      </div>
+      <div className="pws-journey-dots" aria-label="Nearby scenes">
+        {windowStart > 0 ? <span className="pws-journey-ellipsis" aria-hidden="true" /> : null}
+        {visibleDestinations.map((destination, index) => {
+          const absoluteIndex = windowStart + index;
+          const isCurrent = destination.chapterId === model.currentDestination.chapterId;
+          return (
+            <button
+              aria-current={isCurrent ? "step" : undefined}
+              aria-label={`Go to ${absoluteIndex + 1}. ${destination.shortTitle}. ${destination.completionState}`}
+              className={`pws-journey-dot ${
+                isCurrent
+                  ? "pws-journey-current"
+                  : destination.completed
+                    ? "pws-journey-complete"
+                    : destination.memoryMoment
+                      ? "pws-journey-memory"
+                      : ""
+              }`}
+              key={destination.id}
+              onClick={() => onSelect(destination.chapterId)}
+              title={`${absoluteIndex + 1}. ${destination.title}`}
+              type="button"
+            />
+          );
+        })}
+        {windowStart + visibleDestinations.length < model.destinations.length ? <span className="pws-journey-ellipsis" aria-hidden="true" /> : null}
+      </div>
     </div>
   );
 }

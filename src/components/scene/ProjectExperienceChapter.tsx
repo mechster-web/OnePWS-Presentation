@@ -138,7 +138,101 @@ const projectCredentialSlides = [
       emphasis: "without taking shutdown.",
     },
   },
+
+  {
+    chapterId: "project-credentials-metro-rail-occ",
+    number: "08",
+    name: "Metro Rail OCC",
+    shortName: "Metro Rail",
+    location: "Metro operations reference",
+    imageSrc: "/assets/placeholders/ambient-control-room.svg",
+    description: "A placeholder transit operations centre credential for a future metro or rail control-room project.",
+    note: {
+      before: "Placeholder reference page",
+      emphasis: "image and customer details to be updated.",
+    },
+  },
+  {
+    chapterId: "project-credentials-utility-command-centre",
+    number: "09",
+    name: "Utility Command Centre",
+    shortName: "Utility",
+    location: "Power and utility reference",
+    imageSrc: "/assets/placeholders/ambient-control-room.svg",
+    description: "A placeholder utility command-centre credential for future power, grid or infrastructure project proof.",
+    note: {
+      before: "Placeholder reference page",
+      emphasis: "image and customer details to be updated.",
+    },
+  },
+  {
+    chapterId: "project-credentials-industrial-operations-centre",
+    number: "10",
+    name: "Industrial Operations Centre",
+    shortName: "Industrial",
+    location: "Industrial operations reference",
+    imageSrc: "/assets/placeholders/ambient-control-room.svg",
+    description: "A placeholder industrial operations credential for future process, plant or manufacturing control-room proof.",
+    note: {
+      before: "Placeholder reference page",
+      emphasis: "image and customer details to be updated.",
+    },
+  },
+  {
+    chapterId: "project-credentials-data-centre-noc",
+    number: "11",
+    name: "Data Centre NOC",
+    shortName: "Data Centre",
+    location: "Network operations reference",
+    imageSrc: "/assets/placeholders/ambient-control-room.svg",
+    description: "A placeholder data-centre NOC credential for future uptime, monitoring and infrastructure operations proof.",
+    note: {
+      before: "Placeholder reference page",
+      emphasis: "image and customer details to be updated.",
+    },
+  },
+  {
+    chapterId: "project-credentials-emergency-response-centre",
+    number: "12",
+    name: "Emergency Response Centre",
+    shortName: "Emergency",
+    location: "Emergency response reference",
+    imageSrc: "/assets/placeholders/ambient-control-room.svg",
+    description: "A placeholder emergency response credential for future command, dispatch and public-safety project proof.",
+    note: {
+      before: "Placeholder reference page",
+      emphasis: "image and customer details to be updated.",
+    },
+  },
+  {
+    chapterId: "project-credentials-airport-operations-centre",
+    number: "13",
+    name: "Airport Operations Centre",
+    shortName: "Airport",
+    location: "Airport operations reference",
+    imageSrc: "/assets/placeholders/ambient-control-room.svg",
+    description: "A placeholder airport operations credential for future aviation, security and operations-centre proof.",
+    note: {
+      before: "Placeholder reference page",
+      emphasis: "image and customer details to be updated.",
+    },
+  },
+  {
+    chapterId: "project-credentials-manufacturing-control-centre",
+    number: "14",
+    name: "Manufacturing Control Centre",
+    shortName: "Manufacturing",
+    location: "Manufacturing operations reference",
+    imageSrc: "/assets/placeholders/ambient-control-room.svg",
+    description: "A placeholder manufacturing control-centre credential for future plant, production and supervision proof.",
+    note: {
+      before: "Placeholder reference page",
+      emphasis: "image and customer details to be updated.",
+    },
+  },
 ];
+
+const verifiedProjectCredentialCount = 7;
 
 export function ProjectExperienceChapter({ chapter }: Props) {
   if (projectCredentialSlides.some((project) => project.chapterId === chapter.id)) {
@@ -155,6 +249,12 @@ function ProjectCredentialSlide({ chapter }: Props) {
     projectCredentialSlides.find((credentialProject) => credentialProject.chapterId === chapter.id) ??
     projectCredentialSlides[0];
   const motionDuration = state.reducedMotion ? 0.01 : 0.66;
+  const projectIndex = projectCredentialSlides.findIndex((item) => item.chapterId === project.chapterId);
+  const isPlaceholderCredential = projectIndex >= verifiedProjectCredentialCount;
+  const visibleProjectCredentials = isPlaceholderCredential
+    ? projectCredentialSlides
+    : projectCredentialSlides.slice(0, verifiedProjectCredentialCount);
+  const projectCountLabel = isPlaceholderCredential ? projectCredentialSlides.length : verifiedProjectCredentialCount;
 
   return (
     <article className="relative h-full w-full overflow-hidden bg-[#fbfcfd] text-slate-950">
@@ -273,15 +373,15 @@ function ProjectCredentialSlide({ chapter }: Props) {
           transition={{ duration: motionDuration, delay: 0.18 }}
         >
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.12em] text-slate-950">Project {project.number} of 07</p>
+            <p className="text-sm font-black uppercase tracking-[0.12em] text-slate-950">Project {project.number} of {projectCountLabel}</p>
             <div className="mt-2 h-[2px] w-12 rounded-full bg-red-600" />
           </div>
-          <div className="grid grid-cols-7 gap-2">
-            {projectCredentialSlides.map((item) => {
+          <div className="flex gap-2 overflow-x-auto pb-1">
+            {visibleProjectCredentials.map((item) => {
               const active = item.chapterId === project.chapterId;
               return (
                 <div
-                  className={`min-w-0 rounded-xl border px-3 py-2 transition ${
+                  className={`min-w-[5.6rem] rounded-xl border px-3 py-2 transition ${
                     active
                       ? "border-red-200 bg-red-50 text-red-700 shadow-[0_12px_30px_rgba(220,38,38,0.14)]"
                       : "border-slate-200/80 bg-white/60 text-slate-500"

@@ -65,7 +65,7 @@ const connectedByFeatureId = Object.fromEntries(connectedIntelligenceFeatures.ma
 const confirmationBoundary =
   "Capability is shown as a conceptual or approved-scope interaction only. System integrations, AI behavior, automation rules, APIs, data governance and response workflows require project confirmation.";
 
-export const intelligentOperationsChapterIds: ChapterId[] = ["intelligent-features", "incident-response"];
+export const intelligentOperationsChapterIds: ChapterId[] = ["intelligent-features", "mechanical-strength-console", "incident-response"];
 
 export const intelligentOperationsScenarios: OperationsScenario[] = [
   {
