@@ -152,7 +152,7 @@ export function AudioManager() {
       </section>
 
       {subtitlesVisible && active && subtitle ? (
-        <div className="architectural-panel absolute bottom-[calc(var(--stage-safe-y)+5.4rem)] right-[var(--stage-safe-x)] z-40 hidden w-[min(27rem,30vw)] px-4 py-3 text-left text-xs leading-5 text-control-soft shadow-control lg:block">
+        <div className="architectural-panel absolute bottom-[calc(var(--stage-safe-y)+5.4rem)] right-[var(--stage-safe-x)] z-40 hidden w-[min(27rem,30cqw)] px-4 py-3 text-left text-xs leading-5 text-control-soft shadow-control lg:block">
           {subtitle}
         </div>
       ) : null}

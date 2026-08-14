@@ -28,7 +28,7 @@ export function ConnectedIntelligenceOpeningScene({
       <AmbientLayer atmosphere="data-trace" intensity="medium" />
       <StructuralLayer variant="data" />
       <SafeArea>
-        <div className="grid h-full grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] items-center gap-[var(--pws-space-6)] max-lg:grid-cols-1">
+        <div className="grid h-full grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] items-center gap-[var(--pws-space-6)] [@container_stage_(max-width:1023px)]:grid-cols-1">
           <div>
             <p className="pws-technical-label">Connected intelligence</p>
             <h1 className="pws-chapter-title mt-[var(--pws-space-3)]">One environment. Connected intelligence.</h1>

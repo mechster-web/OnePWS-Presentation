@@ -72,7 +72,7 @@ const productCards: ProductCard[] = [
   {
     title: "Modular Operation Theatres",
     description: "Hygienic, infection-controlled modular OT solutions built for safety and efficiency.",
-    metric: "200",
+    metric: "200+",
     metricLabel: "Modular OTs Delivered",
     image: "/assets/products/mot.png",
     accent: "#6d3fc2",
@@ -90,7 +90,7 @@ const productCards: ProductCard[] = [
   {
     title: "Corporate Offices",
     description: "Smart, collaborative and sustainable workspaces that enhance productivity.",
-    metric: "300,000+ ft2",
+    metric: "300,000+ ft²",
     metricLabel: "Corporate Spaces Created",
     image: "/assets/products/corporate-offices.png",
     accent: "#5b8c2a",
@@ -148,35 +148,45 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
   return (
     <article className="relative h-full w-full overflow-hidden bg-white text-control-text">
       <div className="absolute inset-0 bg-[linear-gradient(120deg,#ffffff_0%,#fbfcfd_54%,#edf4f8_100%)]" />
+      {/* Control-room photograph held far back so the glass panels above it have
+          something to refract, without competing with the product cards. */}
+      <img
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover object-[68%_50%] opacity-[0.16]"
+        draggable={false}
+        src="/assets/source-pdf/p31_059_2078x1168.jpg"
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgb(255_255_255/0.70)_0%,rgb(255_255_255/0.26)_32%,rgb(255_255_255/0.30)_64%,rgb(255_255_255/0.72)_100%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(rgb(16_18_22/0.018)_1px,transparent_1px),linear-gradient(90deg,rgb(16_18_22/0.018)_1px,transparent_1px)] bg-[length:5.2rem_5.2rem] opacity-55" />
-      <div className="absolute right-[-10vw] top-[-18vh] h-[38vh] w-[44vw] rounded-full bg-control-warm/5 blur-3xl" />
-      <div className="absolute bottom-[-22vh] left-[18vw] h-[40vh] w-[52vw] rounded-full bg-slate-300/20 blur-3xl" />
+      <div className="absolute right-[-10cqw] top-[-18cqh] h-[38cqh] w-[44cqw] rounded-full bg-control-warm/5 blur-3xl" />
+      <div className="absolute bottom-[-22cqh] left-[18cqw] h-[40cqh] w-[52cqw] rounded-full bg-slate-300/20 blur-3xl" />
 
-      <section className="absolute inset-x-[1.65vw] bottom-[9vh] top-[11.8vh] z-20">
-        <div className="grid grid-cols-[minmax(0,1fr)_25vw] items-start gap-[2vw]">
+      <section className="absolute inset-x-[1.65cqw] bottom-[9cqh] top-[11.8cqh] z-20">
+        <div className="grid grid-cols-[minmax(0,1fr)_25cqw] items-start gap-[2cqw]">
           <motion.div animate={{ opacity: 1, y: 0 }} initial={state.reducedMotion ? false : { opacity: 0, y: 16 }} transition={{ duration, ease }}>
-            <h1 className="text-balance text-[clamp(2.15rem,3.05vw,4rem)] font-bold leading-[0.98] tracking-normal text-control-text md:text-[2.5vw]">
+            <h1 className="text-balance text-[clamp(2.15rem,3.05cqw,4rem)] font-bold leading-[0.98] tracking-normal text-control-text md:text-[3.5cqw]">
               Our Products. <span className="text-control-warm">Transforming Spaces.</span>
             </h1>
-            <p className="mt-[1.2vh] max-w-[72rem] text-[clamp(0.95rem,1.08vw,1.3rem)] leading-[1.38] text-slate-700 md:text-[0.8vw]">
+            <p className="mt-[1.2cqh] max-w-[72rem] text-[clamp(0.95rem,1.08cqw,1.3rem)] leading-[1.38] text-slate-700 md:text-[1cqw]">
               End-to-end interiors and infrastructure solutions designed for performance, safety and sustainability.
             </p>
           </motion.div>
 
           <motion.aside
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            className="rounded-[1rem] border border-white/90 bg-white/82 px-[1.35vw] py-[1.35vh] shadow-[0_1rem_2.4rem_rgb(15_23_42/0.1)] backdrop-blur-xl"
+            className="rounded-[1rem] border border-white/90 bg-white/82 px-[1.35cqw] py-[1.35cqh] shadow-[0_1rem_2.4rem_rgb(15_23_42/0.1)] backdrop-blur-xl"
             initial={state.reducedMotion ? false : { opacity: 0, y: 18, scale: 0.98 }}
             transition={{ duration, delay: 0.1, ease }}
           >
-            <div className="flex items-center gap-[1vw]">
+            <div className="flex items-center gap-[1cqw]">
               <span className="grid h-[4.2rem] w-[4.2rem] shrink-0 place-items-center rounded-full border border-control-warm/25 bg-control-warm/5 text-control-warm">
                 <Factory aria-hidden="true" size={32} strokeWidth={1.65} />
               </span>
               <div>
-                <p className="text-[clamp(1.45rem,1.9vw,2.35rem)] font-semibold leading-none text-control-text">800+</p>
-                <p className="mt-[0.35vh] text-[clamp(0.72rem,0.82vw,0.98rem)] font-semibold text-control-text">Projects Delivered</p>
-                <p className="mt-[0.35vh] text-[clamp(0.58rem,0.66vw,0.8rem)] leading-[1.25] text-slate-600">Across industries. Across India. Across the world.</p>
+                <p className="text-[clamp(1.45rem,1.9cqw,2.35rem)] font-semibold leading-none text-control-text">800+</p>
+                <p className="mt-[0.35cqh] text-[clamp(0.72rem,0.82cqw,0.98rem)] font-semibold text-control-text">Projects Delivered</p>
+                <p className="mt-[0.35cqh] text-[clamp(0.58rem,0.66cqw,0.8rem)] leading-[1.25] text-slate-600">Across industries. Across India. Across the world.</p>
               </div>
             </div>
           </motion.aside>
@@ -184,7 +194,7 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="mt-[2.1vh] grid h-[46.5vh] grid-cols-6 gap-[0.62vw]"
+          className="mt-[2.1cqh] grid h-[46.5cqh] grid-cols-6 gap-[0.62cqw]"
           initial={state.reducedMotion ? false : { opacity: 0, y: 22 }}
           transition={{ duration, delay: 0.18, ease }}
         >
@@ -197,9 +207,9 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
               transition={{ duration, delay: 0.23 + index * 0.05, ease }}
               whileHover={state.reducedMotion ? undefined : { y: -4, transition: { duration: 0.22 } }}
             >
-              <div className="relative h-[39%] overflow-hidden">
+              <div className="relative h-[50%] overflow-hidden">
                 <img alt={product.title} className="h-full w-full object-cover" src={product.image} />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_50%,rgb(255_255_255/0.88)_100%)]" />
+                <div className="absolute inset-0 " />
               </div>
               <div className="relative -mt-[2.3rem] flex justify-center">
                 <span
@@ -209,22 +219,22 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
                   <product.Icon aria-hidden="true" size={28} strokeWidth={1.75} />
                 </span>
               </div>
-              <div className="flex min-h-0 flex-1 flex-col px-[0.8vw] pb-[1vh] pt-[0.7vh] text-center">
-                <h2 className="min-h-[2.15lh] text-[clamp(0.9rem,1.05vw,1.22rem)] font-semibold leading-[1.08] md:text-[0.9vw]" style={{ color: product.accent }}>
+              <div className="flex min-h-0 flex-1 flex-col px-[0.8cqw] pb-[1cqh] pt-[0.7cqh] text-center">
+                <h2 className="min-h-[2.15lh] text-[clamp(0.9rem,1.05cqw,1.22rem)] font-semibold leading-[1.08] md:text-[0.9cqw]" style={{ color: product.accent }}>
                   {product.title}
                 </h2>
-                <div className="mx-auto mt-[0.75vh] h-[2px] w-[2.4rem]" style={{ backgroundColor: product.accent }} />
-                <p className="mt-[1.1vh] min-h-[4.4lh] text-[clamp(0.58rem,0.68vw,0.8rem)] font-medium leading-[1.32] text-slate-700">
+                <div className="mx-auto mt-[0.75cqh] h-[2px] w-[2.4rem]" style={{ backgroundColor: product.accent }} />
+                <p className="mt-[1.1cqh] min-h-[4.4lh] text-[clamp(0.58rem,0.68cqw,0.8rem)] font-medium leading-[1.32] text-slate-700">
                   {product.description}
                 </p>
-                <div className="mt-auto rounded-[0.65rem] border border-slate-200/80 bg-white/72 px-[0.65vw] py-[0.75vh] text-left shadow-[0_0.45rem_1.1rem_rgb(15_23_42/0.045)]">
-                  <div className="grid grid-cols-[2.15rem_1fr] items-center gap-[0.55vw]">
+                <div className="mt-auto rounded-[0.65rem] border border-slate-200/80 bg-white/72 px-[0.65cqw] py-[0.75cqh] text-left shadow-[0_0.45rem_1.1rem_rgb(15_23_42/0.045)]">
+                  <div className="grid grid-cols-[2.15rem_1fr] items-center gap-[0.55cqw]">
                     <span className="grid h-[2.15rem] w-[2.15rem] place-items-center rounded-full border" style={{ borderColor: product.accent, color: product.accent }}>
                       <CheckCircle2 aria-hidden="true" size={18} strokeWidth={1.85} />
                     </span>
                     <div>
-                      <p className="text-[clamp(0.82rem,1vw,1.14rem)] font-semibold leading-none" style={{ color: product.accent }}>{product.metric}</p>
-                      <p className="mt-[0.24vh] text-[clamp(0.52rem,0.6vw,0.7rem)] font-semibold leading-[1.15] text-control-text">{product.metricLabel}</p>
+                      <p className="text-[clamp(0.82rem,1cqw,1.14rem)] font-semibold leading-none" style={{ color: product.accent }}>{product.metric}</p>
+                      <p className="mt-[0.24cqh] text-[clamp(0.52rem,0.6cqw,0.7rem)] font-semibold leading-[1.15] text-control-text">{product.metricLabel}</p>
                     </div>
                   </div>
                 </div>
@@ -235,22 +245,22 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
 
         <motion.section
           animate={{ opacity: 1, y: 0 }}
-          className="mt-[1.55vh] overflow-hidden rounded-[0.95rem] border border-white/90 bg-white/82 px-[1.15vw] py-[1.15vh] shadow-[0_1rem_2.5rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
+          className="mt-[1.55cqh] overflow-hidden rounded-[0.95rem] border border-white/90 bg-white/82 px-[1.15cqw] py-[1.15cqh] shadow-[0_1rem_2.5rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
           initial={state.reducedMotion ? false : { opacity: 0, y: 18 }}
           transition={{ duration, delay: 0.46, ease }}
         >
-          <div className="grid grid-cols-[13vw_1fr] items-center gap-[1vw]">
+          <div className="grid grid-cols-[13cqw_1fr] items-center gap-[1cqw]">
             <div>
-              <p className="text-[clamp(0.75rem,0.88vw,1.05rem)] font-semibold uppercase tracking-[0.04em] text-control-text">OnePWS Key Differentiators</p>
-              <div className="mt-[0.65vh] h-[2px] w-[2.4rem] bg-control-warm" />
+              <p className="text-[clamp(1.05rem,0.88cqw,1.2rem)] font-semibold uppercase tracking-[0em] text-control-text">OnePWS Key Differentiators</p>
+              <div className="mt-[0.65cqh] h-[2px] w-[2.4rem] bg-control-warm" />
             </div>
-            <div className="grid grid-cols-6">
+            <div className="grid grid-cols-3 gap-5">
               {differentiators.map((item, index) => (
-                <div className={`grid grid-cols-[2.6rem_1fr] items-center gap-[0.65vw] px-[0.8vw] ${index > 0 ? "border-l border-slate-200" : ""}`} key={item.title}>
+                <div className={`grid grid-cols-[2.6rem_1fr] items-center gap-[0.65cqw] px-[0.8cqw] ${index > 0 ? "border-l border-slate-200" : ""}`} key={item.title}>
                   <item.Icon aria-hidden="true" color={item.accent} size={32} strokeWidth={1.65} />
                   <div>
-                    <p className="text-[clamp(0.58rem,0.68vw,0.8rem)] font-semibold leading-[1.08] text-control-text">{item.title}</p>
-                    <p className="mt-[0.28vh] text-[clamp(0.48rem,0.55vw,0.66rem)] font-medium leading-[1.2] text-slate-600">{item.detail}</p>
+                    <p className="text-[clamp(0.8rem,0.68cqw,1rem)] font-semibold leading-[1.08] text-control-text">{item.title}</p>
+                    <p className="mt-[0.28cqh] text-[clamp(0.66rem,0.55cqw,0.8rem)] font-medium leading-[1.2] text-slate-600">{item.detail}</p>
                   </div>
                 </div>
               ))}
@@ -261,7 +271,7 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
 
       <motion.div
         animate={{ opacity: 1, y: 0 }}
-        className="pws-scene-control-dock absolute bottom-[0.1vh] left-[0.1vw] z-40 justify-start"
+        className="pws-scene-control-dock absolute bottom-[0.1cqh] left-[0.1cqw] z-40 justify-start"
         initial={state.reducedMotion ? false : { opacity: 0, y: 18 }}
         transition={{ duration, delay: 0.58, ease }}
       >

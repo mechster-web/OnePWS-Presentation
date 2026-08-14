@@ -77,7 +77,7 @@ export function FeatureStory({ feature, onClose, onNavigate }: Props) {
 
       <section className="absolute bottom-[18%] left-8 z-20 max-w-[680px] md:left-14 lg:left-20">
         <p className="text-xs uppercase tracking-[0.42em] text-control-warm">Feature story</p>
-        <h2 className="mt-4 text-balance text-[clamp(2.25rem,4.3vw,5.35rem)] font-semibold leading-[0.98]">
+        <h2 className="mt-4 text-balance text-[clamp(2.25rem,4.3cqw,5.35rem)] font-semibold leading-[0.98]">
           {feature.headline}
         </h2>
         <p className="mt-5 max-w-2xl text-base leading-7 text-control-soft">
@@ -196,7 +196,7 @@ export function FeatureStory({ feature, onClose, onNavigate }: Props) {
         {technicalOpen ? (
           <motion.aside
             animate={{ x: 0 }}
-            className="absolute bottom-28 right-8 top-[14%] z-50 w-[min(500px,88vw)] border border-control-line bg-control-deep/96 p-6 shadow-control backdrop-blur"
+            className="absolute bottom-28 right-8 top-[14%] z-50 w-[min(500px,88cqw)] border border-control-line bg-control-deep/96 p-6 shadow-control backdrop-blur"
             exit={{ x: "100%" }}
             initial={{ x: "100%" }}
             transition={{ duration: state.reducedMotion ? 0.01 : 0.45, ease: [0.22, 1, 0.36, 1] }}

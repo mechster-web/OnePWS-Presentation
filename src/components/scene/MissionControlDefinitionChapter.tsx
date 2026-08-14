@@ -100,13 +100,13 @@ export function MissionControlDefinitionChapter({ chapter }: Props) {
           <>
             <motion.div
               animate={{ opacity: [0, 0.42, 0], x: ["-18%", "58%", "112%"] }}
-              className="absolute top-[18vh] h-px w-[42vw] bg-[linear-gradient(90deg,transparent,rgb(207_31_43/0.52),transparent)]"
+              className="absolute top-[18cqh] h-px w-[42cqw] bg-[linear-gradient(90deg,transparent,rgb(207_31_43/0.52),transparent)]"
               initial={{ opacity: 0, x: "-18%" }}
               transition={{ duration: 3.6, delay: 0.72, ease: "easeInOut" }}
             />
             <motion.div
               animate={{ opacity: [0, 0.18, 0.08], scaleX: [0.82, 1.06, 1] }}
-              className="absolute left-[30vw] top-[48vh] h-[19vh] w-[36vw] origin-left rounded-full bg-[radial-gradient(circle,rgb(207_31_43/0.20)_0%,transparent_64%)] blur-3xl"
+              className="absolute left-[30cqw] top-[48cqh] h-[19cqh] w-[36cqw] origin-left rounded-full bg-[radial-gradient(circle,rgb(207_31_43/0.20)_0%,transparent_64%)] blur-3xl"
               initial={{ opacity: 0, scaleX: 0.82 }}
               transition={{ duration: 2.8, delay: 0.92, ease: processEase }}
             />
@@ -114,34 +114,34 @@ export function MissionControlDefinitionChapter({ chapter }: Props) {
         ) : null}
       </motion.div>
 
-      <section className="absolute inset-0 z-20 px-[3.55vw] py-[3.15vh]">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-[10.2vh] bg-white/82 backdrop-blur-[2px]" />
+      <section className="absolute inset-0 z-20 px-[3.55cqw] py-[3.15cqh]">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-[10.2cqh] bg-white/82 backdrop-blur-[2px]" />
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute left-[3.55vw] top-[16.5vh] w-[min(51vw,58rem)]"
+          className="absolute left-[3.55cqw] top-[16.5cqh] w-[min(51cqw,58rem)]"
           initial={state.reducedMotion ? false : { opacity: 0, y: 16 }}
           transition={{ duration: motionDuration, ease: processEase }}
         >
-          <p className="text-[clamp(0.72rem,0.78vw,0.9rem)] font-bold uppercase tracking-[0.22em] text-control-warm">
+          <p className="text-[clamp(0.72rem,0.78cqw,0.9rem)] font-bold uppercase tracking-[0.22em] text-control-warm">
             {chapter.eyebrow}
           </p>
-          <h1 className="mt-[2vh] max-w-[18ch] text-balance text-[clamp(2.65rem,3.72vw,4.85rem)] font-bold leading-[0.94] tracking-normal text-control-text md:text-[2.5vw]">
+          <h1 className="mt-[2cqh] max-w-[18ch] text-balance text-[clamp(2.65rem,3.72cqw,4.85rem)] font-bold leading-[0.94] tracking-normal text-control-text md:text-[2.5cqw]">
             {chapter.headline}
           </h1>
-          <p className="mt-[1.65vh] max-w-[40rem] text-[clamp(0.9rem,0.98vw,1.1rem)] leading-[1.32] text-control-soft md:text-[0.8vw]">
+          <p className="mt-[1.65cqh] max-w-[40rem] text-[clamp(0.9rem,0.98cqw,1.1rem)] leading-[1.32] text-control-soft md:text-[0.8cqw]">
             {chapter.supportingMessage}
           </p>
         </motion.div>
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute left-[3.55vw] top-[61.2vh] w-[min(69vw,84rem)]"
+          className="absolute left-[3.55cqw] top-[61.2cqh] w-[min(69cqw,84rem)]"
           initial={state.reducedMotion ? false : { opacity: 0, y: 16 }}
           transition={{ duration: motionDuration, delay: 0.2, ease: processEase }}
         >
-          <div className="mb-[1.05vh] flex items-center gap-5">
-            <p className="shrink-0 text-[clamp(0.68rem,0.75vw,0.86rem)] font-bold uppercase tracking-[0.28em] text-control-warm">
+          <div className="mb-[1.05cqh] flex items-center gap-5">
+            <p className="shrink-0 text-[clamp(0.68rem,0.75cqw,0.86rem)] font-bold uppercase tracking-[0.28em] text-control-warm">
               Select what matters most in your operation.
             </p>
             <div className="relative h-px flex-1 overflow-hidden bg-slate-300">
@@ -153,7 +153,7 @@ export function MissionControlDefinitionChapter({ chapter }: Props) {
               />
             </div>
           </div>
-          <div className="grid grid-cols-5 gap-[1vw]">
+          <div className="grid grid-cols-5 gap-[1cqw]">
             {choices.map((choice, index) => {
               const isSelected = choice.id === selected.id;
 
@@ -161,7 +161,7 @@ export function MissionControlDefinitionChapter({ chapter }: Props) {
                 <motion.button
                   animate={{ opacity: 1, y: 0 }}
                   aria-pressed={isSelected}
-                  className={`group relative flex h-[clamp(7.15rem,13vh,8.65rem)] flex-col overflow-hidden rounded-[0.42rem] border px-[clamp(0.78rem,0.88vw,1rem)] py-[clamp(0.58rem,0.72vh,0.8rem)] text-left shadow-[0_0.9rem_2rem_rgb(15_23_42/0.06)] backdrop-blur-xl transition-colors ${
+                  className={`group relative flex h-[clamp(7.15rem,13cqh,8.65rem)] flex-col overflow-hidden rounded-[0.42rem] border px-[clamp(0.78rem,0.88cqw,1rem)] py-[clamp(0.58rem,0.72cqh,0.8rem)] text-left shadow-[0_0.9rem_2rem_rgb(15_23_42/0.06)] backdrop-blur-xl transition-colors ${
                     isSelected
                       ? "border-control-warm bg-white/88 shadow-[0_1rem_2.4rem_rgb(207_31_43/0.20)]"
                       : "border-slate-300/90 bg-white/72 hover:border-control-warm/50"
@@ -182,14 +182,14 @@ export function MissionControlDefinitionChapter({ chapter }: Props) {
                       transition={{ duration: 0.46, ease: processEase }}
                     />
                   ) : null}
-                  <span className="block text-[clamp(0.95rem,1.08vw,1.24rem)] font-semibold tracking-[0.05em] text-control-warm">
+                  <span className="block text-[clamp(0.95rem,1.08cqw,1.24rem)] font-semibold tracking-[0.05em] text-control-warm">
                     {choice.index}
                   </span>
-                  <span className="mt-[0.48vh] block text-[clamp(0.74rem,0.82vw,0.94rem)] font-semibold leading-tight text-control-text">
+                  <span className="mt-[0.48cqh] block text-[clamp(0.74rem,0.82cqw,0.94rem)] font-semibold leading-tight text-control-text">
                     {choice.title}
                   </span>
-                  <span className="mt-[0.45vh] block h-px w-8 bg-control-warm/70" />
-                  <span className="mt-[0.45vh] block overflow-hidden text-[clamp(0.53rem,0.58vw,0.66rem)] leading-[1.22] text-control-soft [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">
+                  <span className="mt-[0.45cqh] block h-px w-8 bg-control-warm/70" />
+                  <span className="mt-[0.45cqh] block overflow-hidden text-[clamp(0.53rem,0.58cqw,0.66rem)] leading-[1.22] text-control-soft [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">
                     {choice.detail}
                   </span>
                   {isSelected ? <span className="absolute inset-x-0 bottom-0 h-1 bg-control-warm" /> : null}
@@ -201,7 +201,7 @@ export function MissionControlDefinitionChapter({ chapter }: Props) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-[calc(12.3vh-23px)] left-[3.55vw] grid h-[clamp(4.7rem,7.5vh,5.7rem)] w-[min(69vw,84rem)] overflow-hidden rounded-[0.45rem] border border-slate-300/90 bg-white/84 shadow-[0_1rem_2.2rem_rgb(15_23_42/0.08)] backdrop-blur-xl"
+          className="absolute bottom-[calc(12.3cqh-23px)] left-[3.55cqw] grid h-[clamp(4.7rem,7.5cqh,5.7rem)] w-[min(69cqw,84rem)] overflow-hidden rounded-[0.45rem] border border-slate-300/90 bg-white/84 shadow-[0_1rem_2.2rem_rgb(15_23_42/0.08)] backdrop-blur-xl"
           initial={state.reducedMotion ? false : { opacity: 0, y: 12 }}
           transition={{ duration: motionDuration, delay: 0.54, ease: processEase }}
         >
@@ -215,17 +215,17 @@ export function MissionControlDefinitionChapter({ chapter }: Props) {
             />
           ) : null}
           <div className="grid grid-cols-[minmax(12rem,0.34fr)_1fr]">
-            <div className="flex items-center border-r border-slate-300 px-[1.25vw]">
-              <div className="border-l-2 border-control-warm pl-[0.9vw]">
-                <p className="text-[clamp(0.78rem,0.9vw,1.02rem)] font-semibold leading-tight text-control-text">
+            <div className="flex items-center border-r border-slate-300 px-[1.25cqw]">
+              <div className="border-l-2 border-control-warm pl-[0.9cqw]">
+                <p className="text-[clamp(0.78rem,0.9cqw,1.02rem)] font-semibold leading-tight text-control-text">
                 Select one to see what it means.
                 </p>
               </div>
             </div>
-            <div className="flex flex-col justify-center px-[1.35vw]">
+            <div className="flex flex-col justify-center px-[1.35cqw]">
               <motion.p
                 animate={{ opacity: 1, y: 0 }}
-                className="text-[clamp(0.88rem,1.02vw,1.18rem)] font-bold leading-[1.24] text-control-text"
+                className="text-[clamp(0.88rem,1.02cqw,1.18rem)] font-bold leading-[1.24] text-control-text"
                 initial={state.reducedMotion ? false : { opacity: 0, y: 8 }}
                 key={selected.id}
                 transition={{ duration: 0.42, ease: processEase }}
@@ -238,7 +238,7 @@ export function MissionControlDefinitionChapter({ chapter }: Props) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="pws-scene-control-dock absolute bottom-[0.1vh] left-[0.1vw] z-40 justify-start"
+          className="pws-scene-control-dock absolute bottom-[0.1cqh] left-[0.1cqw] z-40 justify-start"
           initial={state.reducedMotion ? false : { opacity: 0, y: 10 }}
           transition={{ duration: motionDuration, delay: 0.72, ease: processEase }}
         >

@@ -75,7 +75,7 @@ export function ConceptSelectorChapter({ chapter }: Props) {
           </motion.p>
           <motion.h1
             animate={{ opacity: 1, y: 0 }}
-            className="mt-3 text-balance text-[clamp(2rem,3.05vw,3.55rem)] font-semibold leading-[1.02] text-control-text"
+            className="mt-3 text-balance text-[clamp(2rem,3.05cqw,3.55rem)] font-semibold leading-[1.02] text-control-text"
             initial={{ opacity: 0, y: state.reducedMotion ? 0 : 18 }}
             transition={{ duration: state.reducedMotion ? 0.01 : 0.7, delay: 0.12 }}
           >
@@ -277,7 +277,7 @@ function ConceptSummary({
       <div className="flex items-start justify-between gap-5">
         <div>
           <p className="text-xs uppercase tracking-[0.32em] text-control-warm">Conceptual recommendation</p>
-          <h2 className={`${full ? "mt-4 text-5xl" : "mt-2 text-[clamp(1.55rem,2vw,2.35rem)]"} font-semibold leading-tight`}>
+          <h2 className={`${full ? "mt-4 text-5xl" : "mt-2 text-[clamp(1.55rem,2cqw,2.35rem)]"} font-semibold leading-tight`}>
             {selection.industry} / {selection.visualCharacter}
           </h2>
         </div>

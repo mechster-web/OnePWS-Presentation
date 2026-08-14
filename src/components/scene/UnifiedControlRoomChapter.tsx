@@ -105,22 +105,22 @@ export function UnifiedControlRoomChapter({ chapter }: { chapter: Chapter }) {
   return (
     <article className="relative h-full w-full overflow-hidden bg-white text-control-text">
       <div className="absolute inset-0 bg-[linear-gradient(116deg,#ffffff_0%,#fbfcfd_55%,#fff1f3_100%)]" />
-      <div className="pointer-events-none absolute inset-x-0 top-[8.6vh] h-px bg-slate-200/80" />
-      <div className="pointer-events-none absolute left-[2vw] top-[15vh] h-[50vh] w-[42vw] opacity-[0.045] [background-image:linear-gradient(90deg,#94a3b8_1px,transparent_1px),linear-gradient(#94a3b8_1px,transparent_1px)] [background-size:34px_34px]" />
-      <div className="pointer-events-none absolute right-[8vw] top-[11vh] h-[32vh] w-[38vw] rounded-full bg-control-warm/8 blur-[80px]" />
+      <div className="pointer-events-none absolute inset-x-0 top-[8.6cqh] h-px bg-slate-200/80" />
+      <div className="pointer-events-none absolute left-[2cqw] top-[15cqh] h-[50cqh] w-[42cqw] opacity-[0.045] [background-image:linear-gradient(90deg,#94a3b8_1px,transparent_1px),linear-gradient(#94a3b8_1px,transparent_1px)] [background-size:34px_34px]" />
+      <div className="pointer-events-none absolute right-[8cqw] top-[11cqh] h-[32cqh] w-[38cqw] rounded-full bg-control-warm/8 blur-[80px]" />
 
-      <section className="absolute inset-x-[1.9vw] top-[10.2vh] bottom-[7.05vh] z-10">
-        <div className="grid h-[34.6vh] grid-cols-[minmax(24rem,0.31fr)_minmax(0,1fr)_minmax(19rem,0.3fr)] gap-[1vw]">
-          <motion.aside animate={{ opacity: 1, y: 0 }} className="min-h-0 pt-[1.2vh]" initial={false} transition={{ duration: 0.72, ease }}>
-            <h1 className="text-[clamp(1.95rem,2.55vw,3.55rem)] font-bold uppercase leading-[1.02] tracking-normal text-slate-950 md:text-[2.5vw]">
+      <section className="absolute inset-x-[1.9cqw] top-[10.2cqh] bottom-[7.05cqh] z-10">
+        <div className="grid h-[34.6cqh] grid-cols-[minmax(24rem,0.31fr)_minmax(0,1fr)_minmax(19rem,0.3fr)] gap-[1cqw]">
+          <motion.aside animate={{ opacity: 1, y: 0 }} className="min-h-0 pt-[1.2cqh]" initial={false} transition={{ duration: 0.72, ease }}>
+            <h1 className="text-[clamp(1.95rem,2.55cqw,3.55rem)] font-bold uppercase leading-[1.02] tracking-normal text-slate-950 md:text-[2.5cqw]">
               <span className="block">Designed Like Lego.</span>
               <span className="block text-control-warm">Built for Control.</span>
             </h1>
-            <div className="mt-[1.1vh] h-[2px] w-[3rem] bg-control-warm" />
-            <p className="mt-[1vh] text-[clamp(0.74rem,0.9vw,1.08rem)] font-semibold uppercase leading-[1.12] tracking-[0.04em] text-control-warm md:text-[0.8vw]">
+            <div className="mt-[1.1cqh] h-[2px] w-[3rem] bg-control-warm" />
+            <p className="mt-[1cqh] text-[clamp(0.74rem,0.9cqw,1.08rem)] font-semibold uppercase leading-[1.12] tracking-[0.04em] text-control-warm md:text-[0.8cqw]">
               Modular partitions that adapt, evolve and last.
             </p>
-            <p className="mt-[0.85vh] max-w-[34rem] text-[clamp(0.62rem,0.75vw,0.9rem)] font-medium leading-[1.34] text-slate-800">
+            <p className="mt-[0.85cqh] max-w-[34rem] text-[clamp(0.62rem,0.75cqw,0.9rem)] font-medium leading-[1.34] text-slate-800">
               Our partition and panelling systems use a lego-type modular philosophy, standardized building blocks that connect seamlessly to create any layout, at any scale, with ease.
             </p>
           </motion.aside>
@@ -135,19 +135,19 @@ export function UnifiedControlRoomChapter({ chapter }: { chapter: Chapter }) {
             <div className="absolute inset-y-[12%] right-[18%] w-px bg-control-warm/45 shadow-[0_0_16px_rgb(213_29_42/0.38)]" />
           </motion.section>
 
-          <motion.aside animate={{ opacity: 1, y: 0 }} className="rounded-[0.9rem] border border-slate-200/86 bg-white/76 p-[1.05vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.6rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]" initial={false} transition={{ duration: 0.72, delay: 0.12, ease }}>
-            <h2 className="text-[clamp(0.82rem,1vw,1.18rem)] font-semibold uppercase leading-tight text-control-text">The Lego Principle</h2>
-            <p className="mt-[0.25vh] text-[clamp(0.62rem,0.74vw,0.86rem)] font-bold uppercase tracking-[0.02em] text-slate-700">
+          <motion.aside animate={{ opacity: 1, y: 0 }} className="rounded-[0.9rem] border border-slate-200/86 bg-white/76 p-[1.05cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.6rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]" initial={false} transition={{ duration: 0.72, delay: 0.12, ease }}>
+            <h2 className="text-[clamp(0.82rem,1cqw,1.18rem)] font-semibold uppercase leading-tight text-control-text">The Lego Principle</h2>
+            <p className="mt-[0.25cqh] text-[clamp(0.62rem,0.74cqw,0.86rem)] font-bold uppercase tracking-[0.02em] text-slate-700">
               Standard modules. Infinite possibilities.
             </p>
-            <div className="mt-[0.75vh] h-[2px] w-[2.6rem] bg-control-warm" />
-            <div className="mt-[1.1vh] grid grid-cols-2 gap-[0.65vw]">
+            <div className="mt-[0.75cqh] h-[2px] w-[2.6rem] bg-control-warm" />
+            <div className="mt-[1.1cqh] grid grid-cols-2 gap-[0.65cqw]">
               {legoPrinciples.map((item) => (
-                <div className="grid grid-cols-[2.25rem_minmax(0,1fr)] items-start gap-[0.48vw] rounded-[0.58rem] bg-white/62 p-[0.48vw]" key={item.title}>
+                <div className="grid grid-cols-[2.25rem_minmax(0,1fr)] items-start gap-[0.48cqw] rounded-[0.58rem] bg-white/62 p-[0.48cqw]" key={item.title}>
                   <item.Icon aria-hidden="true" className="text-control-warm" size={26} strokeWidth={1.55} />
                   <span>
-                    <p className="text-[clamp(0.5rem,0.6vw,0.72rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</p>
-                    <p className="mt-[0.2vh] text-[clamp(0.42rem,0.5vw,0.6rem)] font-medium leading-[1.14] text-slate-600">{item.detail}</p>
+                    <p className="text-[clamp(0.5rem,0.6cqw,0.72rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</p>
+                    <p className="mt-[0.2cqh] text-[clamp(0.42rem,0.5cqw,0.6rem)] font-medium leading-[1.14] text-slate-600">{item.detail}</p>
                   </span>
                 </div>
               ))}
@@ -155,27 +155,27 @@ export function UnifiedControlRoomChapter({ chapter }: { chapter: Chapter }) {
           </motion.aside>
         </div>
 
-        <motion.section animate={{ opacity: 1, y: 0 }} className="mt-[1.15vh] grid h-[10.6vh] grid-cols-6 overflow-hidden rounded-[0.75rem] bg-[linear-gradient(135deg,#9f101b,#d51d2a)] text-white shadow-[0_1rem_2.4rem_rgb(15_23_42/0.13)]" initial={false} transition={{ duration: 0.72, delay: 0.18, ease }}>
+        <motion.section animate={{ opacity: 1, y: 0 }} className="mt-[1.15cqh] grid h-[10.6cqh] grid-cols-6 overflow-hidden rounded-[0.75rem] bg-[linear-gradient(135deg,#9f101b,#d51d2a)] text-white shadow-[0_1rem_2.4rem_rgb(15_23_42/0.13)]" initial={false} transition={{ duration: 0.72, delay: 0.18, ease }}>
           {capabilityStrip.map((item) => (
-            <div className="grid grid-cols-[2.8rem_minmax(0,1fr)] items-center gap-[0.58vw] border-r border-white/20 px-[0.75vw] last:border-r-0" key={item.title}>
+            <div className="grid grid-cols-[2.8rem_minmax(0,1fr)] items-center gap-[0.58cqw] border-r border-white/20 px-[0.75cqw] last:border-r-0" key={item.title}>
               <item.Icon aria-hidden="true" className="text-red-100" size={30} strokeWidth={1.5} />
               <span>
-                <strong className="block text-[clamp(0.52rem,0.62vw,0.74rem)] font-semibold uppercase leading-tight">{item.title}</strong>
-                <span className="mt-[0.22vh] block text-[clamp(0.42rem,0.5vw,0.6rem)] font-semibold leading-[1.12] text-red-50/92">{item.detail}</span>
+                <strong className="block text-[clamp(0.52rem,0.62cqw,0.74rem)] font-semibold uppercase leading-tight">{item.title}</strong>
+                <span className="mt-[0.22cqh] block text-[clamp(0.42rem,0.5cqw,0.6rem)] font-semibold leading-[1.12] text-red-50/92">{item.detail}</span>
               </span>
             </div>
           ))}
         </motion.section>
 
-        <motion.section animate={{ opacity: 1, y: 0 }} className="mt-[1.05vh] grid h-[26.6vh] grid-cols-[0.23fr_0.19fr_0.24fr_0.19fr_0.15fr] gap-[0.85vw]" initial={false} transition={{ duration: 0.72, delay: 0.24, ease }}>
+        <motion.section animate={{ opacity: 1, y: 0 }} className="mt-[1.05cqh] grid h-[26.6cqh] grid-cols-[0.23fr_0.19fr_0.24fr_0.19fr_0.15fr] gap-[0.85cqw]" initial={false} transition={{ duration: 0.72, delay: 0.24, ease }}>
           <InfoPanel title="The Modular Building Blocks">
-            <div className="grid gap-[0.34vh]">
+            <div className="grid gap-[0.34cqh]">
               {buildingBlocks.map((item) => (
-                <div className="grid grid-cols-[3.6rem_minmax(0,1fr)] items-center gap-[0.55vw] border-b border-slate-200/80 pb-[0.28vh] last:border-b-0 last:pb-0" key={item.title}>
+                <div className="grid grid-cols-[3.6rem_minmax(0,1fr)] items-center gap-[0.55cqw] border-b border-slate-200/80 pb-[0.28cqh] last:border-b-0 last:pb-0" key={item.title}>
                   <ModuleGraphic variant={item.variant} />
                   <span>
-                    <strong className="block text-[clamp(0.46rem,0.55vw,0.66rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</strong>
-                    <span className="mt-[0.12vh] block text-[clamp(0.37rem,0.44vw,0.53rem)] font-medium leading-[1.1] text-slate-600">{item.detail}</span>
+                    <strong className="block text-[clamp(0.46rem,0.55cqw,0.66rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</strong>
+                    <span className="mt-[0.12cqh] block text-[clamp(0.37rem,0.44cqw,0.53rem)] font-medium leading-[1.1] text-slate-600">{item.detail}</span>
                   </span>
                 </div>
               ))}
@@ -183,13 +183,13 @@ export function UnifiedControlRoomChapter({ chapter }: { chapter: Chapter }) {
           </InfoPanel>
 
           <InfoPanel title="How It Connects">
-            <div className="grid gap-[0.62vh]">
+            <div className="grid gap-[0.62cqh]">
               {connectSteps.map((item, index) => (
-                <div className="grid grid-cols-[1.35rem_minmax(0,1fr)_3.8rem] items-center gap-[0.45vw] border-b border-slate-200/80 pb-[0.5vh] last:border-b-0 last:pb-0" key={item.title}>
+                <div className="grid grid-cols-[1.35rem_minmax(0,1fr)_3.8rem] items-center gap-[0.45cqw] border-b border-slate-200/80 pb-[0.5cqh] last:border-b-0 last:pb-0" key={item.title}>
                   <span className="grid size-5 place-items-center rounded-full bg-control-warm text-[0.62rem] font-semibold text-white">{index + 1}</span>
                   <span>
-                    <strong className="block text-[clamp(0.43rem,0.52vw,0.62rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
-                    <span className="mt-[0.16vh] block text-[clamp(0.36rem,0.44vw,0.53rem)] font-medium leading-[1.15] text-slate-600">{item.detail}</span>
+                    <strong className="block text-[clamp(0.43rem,0.52cqw,0.62rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
+                    <span className="mt-[0.16cqh] block text-[clamp(0.36rem,0.44cqw,0.53rem)] font-medium leading-[1.15] text-slate-600">{item.detail}</span>
                   </span>
                   <ModuleGraphic variant={item.variant} compact />
                 </div>
@@ -198,28 +198,28 @@ export function UnifiedControlRoomChapter({ chapter }: { chapter: Chapter }) {
           </InfoPanel>
 
           <InfoPanel title="One System. Many Layouts.">
-            <div className="grid grid-cols-2 gap-[0.65vw]">
+            <div className="grid grid-cols-2 gap-[0.65cqw]">
               {layoutItems.map((item) => (
-                <div className="rounded-[0.55rem] border border-slate-200/80 bg-white/74 p-[0.45vw] text-center" key={item.title}>
+                <div className="rounded-[0.55rem] border border-slate-200/80 bg-white/74 p-[0.45cqw] text-center" key={item.title}>
                   <LayoutGraphic shape={item.shape} />
-                  <p className="mt-[0.35vh] text-[clamp(0.45rem,0.54vw,0.64rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</p>
+                  <p className="mt-[0.35cqh] text-[clamp(0.45rem,0.54cqw,0.64rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</p>
                 </div>
               ))}
             </div>
           </InfoPanel>
 
           <InfoPanel title="Adapt. Expand. Reconfigure.">
-            <p className="text-[clamp(0.44rem,0.52vw,0.62rem)] font-semibold leading-tight text-slate-700">Built to change as your needs evolve.</p>
-            <div className="mt-[0.8vh] grid gap-[0.75vh]">
+            <p className="text-[clamp(0.44rem,0.52cqw,0.62rem)] font-semibold leading-tight text-slate-700">Built to change as your needs evolve.</p>
+            <div className="mt-[0.8cqh] grid gap-[0.75cqh]">
               {[
                 ["Initial Setup", "Start with what you need."],
                 ["Expand", "Add modules easily."],
                 ["Reconfigure", "Change layouts without rebuild."],
               ].map(([title, detail], index) => (
-                <div className="grid grid-cols-[minmax(0,1fr)_4.8rem] items-center gap-[0.55vw]" key={title}>
+                <div className="grid grid-cols-[minmax(0,1fr)_4.8rem] items-center gap-[0.55cqw]" key={title}>
                   <span>
-                    <strong className="block text-[clamp(0.45rem,0.54vw,0.64rem)] font-semibold uppercase leading-tight text-control-text">{title}</strong>
-                    <span className="mt-[0.15vh] block text-[clamp(0.37rem,0.45vw,0.54rem)] font-medium leading-tight text-slate-600">{detail}</span>
+                    <strong className="block text-[clamp(0.45rem,0.54cqw,0.64rem)] font-semibold uppercase leading-tight text-control-text">{title}</strong>
+                    <span className="mt-[0.15cqh] block text-[clamp(0.37rem,0.45cqw,0.54rem)] font-medium leading-tight text-slate-600">{detail}</span>
                   </span>
                   <RoomBlock level={index} />
                 </div>
@@ -228,15 +228,15 @@ export function UnifiedControlRoomChapter({ chapter }: { chapter: Chapter }) {
           </InfoPanel>
 
           <InfoPanel title="Why It Matters">
-            <div className="grid gap-[0.8vh]">
+            <div className="grid gap-[0.8cqh]">
               {whyItMatters.map((item) => (
-                <div className="grid grid-cols-[2.6rem_minmax(0,1fr)] items-center gap-[0.55vw]" key={item.title}>
+                <div className="grid grid-cols-[2.6rem_minmax(0,1fr)] items-center gap-[0.55cqw]" key={item.title}>
                   <span className="grid size-10 place-items-center rounded-full border border-red-200 bg-red-50 text-control-warm">
                     <item.Icon aria-hidden="true" size={22} strokeWidth={1.55} />
                   </span>
                   <span>
-                    <strong className="block text-[clamp(0.45rem,0.54vw,0.64rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</strong>
-                    <span className="mt-[0.16vh] block text-[clamp(0.37rem,0.45vw,0.54rem)] font-medium leading-[1.14] text-slate-600">{item.detail}</span>
+                    <strong className="block text-[clamp(0.45rem,0.54cqw,0.64rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</strong>
+                    <span className="mt-[0.16cqh] block text-[clamp(0.37rem,0.45cqw,0.54rem)] font-medium leading-[1.14] text-slate-600">{item.detail}</span>
                   </span>
                 </div>
               ))}
@@ -244,7 +244,7 @@ export function UnifiedControlRoomChapter({ chapter }: { chapter: Chapter }) {
           </InfoPanel>
         </motion.section>
 
-        <motion.div animate={{ opacity: 1, y: 0 }} className="pws-scene-control-dock absolute bottom-[0.1vh] left-[0.1vw] z-40 justify-start" initial={false} transition={{ duration: 0.62, delay: 0.42, ease }}>
+        <motion.div animate={{ opacity: 1, y: 0 }} className="pws-scene-control-dock absolute bottom-[0.1cqh] left-[0.1cqw] z-40 justify-start" initial={false} transition={{ duration: 0.62, delay: 0.42, ease }}>
           <button aria-label="Previous scene" className="pws-scene-control" onClick={() => dispatch({ type: "PREVIOUS_CHAPTER" })} title="Previous" type="button"><ChevronLeft aria-hidden="true" size={22} /></button>
           <button aria-label="Continue to next scene" className="pws-scene-control pws-scene-control-primary" onClick={() => dispatch({ type: "NEXT_CHAPTER" })} title="Continue" type="button"><ChevronRight aria-hidden="true" size={23} /></button>
           <button aria-label="Open experience map" className="pws-scene-control" onClick={() => dispatch({ type: "SET_OVERLAY", overlay: { type: "chapterMap" } })} title="Experience Map" type="button"><Map aria-hidden="true" size={22} /></button>
@@ -273,10 +273,10 @@ export function UnifiedControlRoomChapter({ chapter }: { chapter: Chapter }) {
 
 function InfoPanel({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <section className="min-h-0 rounded-[0.72rem] border border-slate-200/86 bg-white/76 p-[0.72vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.2rem_rgb(15_23_42/0.06)] backdrop-blur-[22px]">
-      <h2 className="text-[clamp(0.62rem,0.74vw,0.88rem)] font-semibold uppercase leading-tight text-control-text">{title}</h2>
-      <div className="mt-[0.48vh] h-[2px] w-[2.25rem] bg-control-warm" />
-      <div className="mt-[0.65vh]">{children}</div>
+    <section className="min-h-0 rounded-[0.72rem] border border-slate-200/86 bg-white/76 p-[0.72cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.2rem_rgb(15_23_42/0.06)] backdrop-blur-[22px]">
+      <h2 className="text-[clamp(0.62rem,0.74cqw,0.88rem)] font-semibold uppercase leading-tight text-control-text">{title}</h2>
+      <div className="mt-[0.48cqh] h-[2px] w-[2.25rem] bg-control-warm" />
+      <div className="mt-[0.65cqh]">{children}</div>
     </section>
   );
 }
@@ -301,7 +301,7 @@ function ModuleGraphic({ variant, compact = false }: { variant: BuildingBlock["v
 function LayoutGraphic({ shape }: { shape: LayoutItem["shape"] }) {
   const common = "absolute border-2 border-slate-800 bg-red-100/55";
   return (
-    <div className="relative h-[7.2vh] overflow-hidden rounded-[0.45rem] bg-[linear-gradient(135deg,#f8fafc,#fff1f3)]">
+    <div className="relative h-[7.2cqh] overflow-hidden rounded-[0.45rem] bg-[linear-gradient(135deg,#f8fafc,#fff1f3)]">
       {shape === "linear" ? <span className={`${common} left-[12%] top-[34%] h-[24%] w-[76%] rounded-sm`} /> : null}
       {shape === "curved" ? <span className={`${common} left-[17%] top-[18%] h-[70%] w-[66%] rounded-full`} /> : null}
       {shape === "corner" ? <><span className={`${common} left-[18%] top-[22%] h-[58%] w-[22%]`} /><span className={`${common} left-[18%] top-[58%] h-[22%] w-[62%]`} /></> : null}

@@ -162,7 +162,7 @@ export function OpeningChapter({ chapter }: Props) {
         </motion.p>
         <motion.h1
           animate={{ opacity: 1, filter: "blur(0px)" }}
-          className="mt-6 text-balance text-[clamp(2.8rem,5vw,6.2rem)] font-semibold uppercase leading-[1.04] tracking-normal text-control-text"
+          className="mt-6 text-balance text-[clamp(2.8rem,5cqw,6.2rem)] font-semibold uppercase leading-[1.04] tracking-normal text-control-text"
           initial={false}
           transition={revealTransition(state.reducedMotion, 0.9)}
         >

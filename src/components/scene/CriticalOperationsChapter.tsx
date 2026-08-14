@@ -72,7 +72,7 @@ export function CriticalOperationsChapter({ chapter }: Props) {
         </motion.p>
         <motion.h1
           animate={{ opacity: 1, y: 0 }}
-          className="mt-4 text-balance text-[clamp(2.1rem,3.25vw,4rem)] font-semibold leading-[1.04] text-control-text"
+          className="mt-4 text-balance text-[clamp(2.1rem,3.25cqw,4rem)] font-semibold leading-[1.04] text-control-text"
           initial={{ opacity: 0, y: state.reducedMotion ? 0 : 18 }}
           transition={{ duration: state.reducedMotion ? 0.01 : 0.72, delay: 0.28 }}
         >
@@ -171,7 +171,7 @@ function ProblemPanel({
   return (
     <motion.aside
       animate={{ opacity: 1, x: 0 }}
-      className="instrument-panel absolute right-8 top-[24%] z-40 w-[min(420px,30vw)] p-5 text-control-text max-lg:left-8 max-lg:right-auto max-lg:top-auto max-lg:bottom-40 max-lg:w-[calc(100%-4rem)]"
+      className="instrument-panel absolute right-8 top-[24%] z-40 w-[min(420px,30cqw)] p-5 text-control-text [@container_stage_(max-width:1023px)]:left-8 [@container_stage_(max-width:1023px)]:right-auto [@container_stage_(max-width:1023px)]:top-auto [@container_stage_(max-width:1023px)]:bottom-40 [@container_stage_(max-width:1023px)]:w-[calc(100%-4rem)]"
       initial={{ opacity: 0, x: state.reducedMotion ? 0 : 20 }}
       transition={{ duration: state.reducedMotion ? 0.01 : 0.55 }}
       key={hotspot.id}
@@ -249,7 +249,7 @@ function TechnicalDrawer({
       {isOpen ? (
         <motion.aside
           animate={{ x: 0 }}
-          className="absolute bottom-28 right-8 top-[14%] z-50 w-[min(500px,88vw)] border border-control-line bg-control-deep/96 p-6 shadow-control backdrop-blur"
+          className="absolute bottom-28 right-8 top-[14%] z-50 w-[min(500px,88cqw)] border border-control-line bg-control-deep/96 p-6 shadow-control backdrop-blur"
           exit={{ x: "100%" }}
           initial={{ x: "100%" }}
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}

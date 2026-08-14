@@ -58,7 +58,7 @@ export function ChapterScene({ chapter }: Props) {
       <SceneArchitecture chapter={chapter} />
 
       <section className="absolute scene-content-safe grid grid-cols-[minmax(0,0.72fr)_minmax(30rem,1fr)] items-center gap-[min(4vw,4rem)] max-xl:grid-cols-1">
-        <div className="scene-copy max-xl:max-w-[44rem]">
+        <div className="max-xl:max-w-[44rem]">
           <motion.p
             animate={{ opacity: 1, y: 0 }}
             className="text-sm font-bold uppercase tracking-[0.18em] text-control-warm"

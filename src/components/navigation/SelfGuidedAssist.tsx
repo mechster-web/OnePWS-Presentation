@@ -44,7 +44,7 @@ export function SelfGuidedAssist() {
   }
 
   return (
-    <aside className="architectural-panel absolute right-[var(--stage-safe-x)] top-[calc(var(--stage-safe-y)+4.6rem)] z-30 w-[min(25rem,34vw)] p-4 text-control-soft max-lg:inset-x-[var(--stage-safe-x)] max-lg:bottom-[calc(var(--stage-safe-y)+4.2rem)] max-lg:top-auto max-lg:w-auto">
+    <aside className="architectural-panel absolute right-[var(--stage-safe-x)] top-[calc(var(--stage-safe-y)+4.6rem)] z-30 w-[min(25rem,34cqw)] p-4 text-control-soft [@container_stage_(max-width:1023px)]:inset-x-[var(--stage-safe-x)] [@container_stage_(max-width:1023px)]:bottom-[calc(var(--stage-safe-y)+4.2rem)] [@container_stage_(max-width:1023px)]:top-auto [@container_stage_(max-width:1023px)]:w-auto">
       <button
         aria-label="Hide self-guided help"
         className="absolute right-3 top-3 text-control-muted transition hover:text-control-text"

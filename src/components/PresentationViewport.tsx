@@ -1,4 +1,5 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
+import { STAGE_HEIGHT, STAGE_WIDTH, useStageScale } from "../hooks/useStageScale";
 
 export function PresentationViewport({
   children,
@@ -7,19 +8,26 @@ export function PresentationViewport({
   children: ReactNode;
   presenterPreview?: boolean;
 }) {
+  const { frameRef, scale } = useStageScale<HTMLDivElement>();
+
   return (
     <section
-      className={`relative z-10 grid place-items-center overflow-hidden ${
-        presenterPreview ? "h-full w-full" : "h-dvh w-dvw"
-      }`}
+      className={`relative z-10 overflow-hidden ${presenterPreview ? "h-full w-full" : "h-dvh w-dvw"}`}
     >
-      <div
-        aria-label="OnePWS interactive presentation stage"
-        className={`relative overflow-hidden bg-control-deep/95 ${
-          presenterPreview ? "presenter-stage-preview" : "presentation-stage"
-        }`}
-      >
-        {children}
+      <div className="pws-stage-frame" ref={frameRef}>
+        <div
+          aria-label="OnePWS interactive presentation stage"
+          className={`presentation-stage ${presenterPreview ? "presentation-stage--preview" : ""}`}
+          style={
+            {
+              "--stage-scale": scale,
+              height: `${STAGE_HEIGHT}px`,
+              width: `${STAGE_WIDTH}px`,
+            } as CSSProperties
+          }
+        >
+          {children}
+        </div>
       </div>
     </section>
   );

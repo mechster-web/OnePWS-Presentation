@@ -36,7 +36,7 @@ export function ChapterMapOverlay() {
             >
               <X aria-hidden="true" size={18} />
             </button>
-            <div className="h-full overflow-hidden p-6 pr-16 max-lg:p-5 max-lg:pr-16">
+            <div className="h-full overflow-hidden p-6 pr-16 [@media(max-width:1023px)]:p-5 [@media(max-width:1023px)]:pr-16">
               {overlay?.type === "technical" ? (
                 <TechnicalLayer layer={overlay.layer} />
               ) : overlay?.type === "customerPath" ? (
@@ -70,7 +70,7 @@ function ExperienceMap() {
 
   return (
     <div className="flex h-full flex-col">
-      <header className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-6 max-lg:grid-cols-1">
+      <header className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-6 [@media(max-width:1023px)]:grid-cols-1">
         <div className="min-w-0">
           <p className="pws-technical-label">Experience map</p>
           <h2 className="mt-3 max-w-4xl text-[clamp(2.1rem,3.2vw,3.8rem)] font-semibold leading-[0.98] tracking-[-0.02em]">
@@ -80,7 +80,7 @@ function ExperienceMap() {
             Current route: {model.journey.name}. Explored areas, memory moments and optional branches stay connected to the main journey.
           </p>
         </div>
-        <div className="mr-14 flex shrink-0 flex-wrap justify-end gap-2 max-lg:mr-0 max-lg:justify-start">
+        <div className="mr-14 flex shrink-0 flex-wrap justify-end gap-2 [@media(max-width:1023px)]:mr-0 [@media(max-width:1023px)]:justify-start">
           {level !== "ecosystem" ? (
             <button className="quiet-action px-4" onClick={() => setLevel(level === "destination" ? "zone" : "ecosystem")} type="button">
               <ArrowLeft aria-hidden="true" size={16} />
@@ -100,11 +100,11 @@ function ExperienceMap() {
         </div>
       </header>
 
-      <div className="mt-5 grid min-h-0 flex-1 grid-cols-[minmax(0,1.35fr)_minmax(19rem,0.65fr)] gap-5 overflow-hidden max-lg:grid-cols-1">
+      <div className="mt-5 grid min-h-0 flex-1 grid-cols-[minmax(0,1.35fr)_minmax(19rem,0.65fr)] gap-5 overflow-hidden [@media(max-width:1023px)]:grid-cols-1">
         <div className="relative overflow-hidden border border-white/12 bg-black/28">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_46%,rgb(207_31_43/0.12),transparent_28%),linear-gradient(90deg,rgb(255_255_255/0.06)_1px,transparent_1px),linear-gradient(rgb(255_255_255/0.05)_1px,transparent_1px)] bg-[length:auto,84px_84px,84px_84px]" />
           {level === "ecosystem" ? (
-            <div className="absolute inset-5 grid auto-rows-fr grid-cols-3 gap-3 max-xl:grid-cols-2 max-sm:grid-cols-1">
+            <div className="absolute inset-5 grid auto-rows-fr grid-cols-3 gap-3 [@media(max-width:1279px)]:grid-cols-2 [@media(max-width:639px)]:grid-cols-1">
               {model.mapGroups.map((group) => (
                 <button
                   aria-label={`Open ${group.title}`}
@@ -166,7 +166,7 @@ function ExperienceMap() {
           ) : null}
 
           {level === "destination" ? (
-            <div className="absolute inset-10 grid grid-cols-[1fr_0.7fr] gap-8 max-lg:grid-cols-1">
+            <div className="absolute inset-10 grid grid-cols-[1fr_0.7fr] gap-8 [@media(max-width:1023px)]:grid-cols-1">
               <section className="grid content-center">
                 <p className="pws-technical-label">{activeChapter.eyebrow}</p>
                 <h3 className="mt-5 max-w-3xl text-5xl font-semibold leading-none">{activeChapter.title}</h3>
@@ -202,7 +202,7 @@ function ExperienceMap() {
           ) : null}
         </div>
 
-        <aside className="min-h-0 overflow-hidden border-l border-control-warm/50 pl-5 max-lg:border-l-0 max-lg:border-t max-lg:pl-0 max-lg:pt-4">
+        <aside className="min-h-0 overflow-hidden border-l border-control-warm/50 pl-5 [@media(max-width:1023px)]:border-l-0 [@media(max-width:1023px)]:border-t [@media(max-width:1023px)]:pl-0 [@media(max-width:1023px)]:pt-4">
           <label className="grid gap-2 text-xs uppercase tracking-[0.18em] text-white/54">
             Presenter search
             <span className="grid grid-cols-[1rem_1fr] items-center gap-2 border border-white/12 bg-black/30 px-3 py-2">

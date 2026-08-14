@@ -136,6 +136,8 @@ const impactItems = [
 function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
   const { dispatch, state } = usePresentation();
   const { toggleFullscreen } = useFullscreen();
+  const backgroundImage = getAsset("connected-intelligence-room-reference");
+  const stageVisual = getAsset("ai-powered-operations-control-center");
   const motionDuration = state.reducedMotion ? 0.01 : 0.62;
   const subtleLoop = state.reducedMotion
     ? undefined
@@ -143,17 +145,23 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
 
   return (
     <article className="relative h-full w-full overflow-hidden bg-[#fbfcfd] text-slate-950">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_24%_20%,rgba(239,68,68,0.06),transparent_30%),linear-gradient(135deg,rgba(248,250,252,0.98),rgba(255,255,255,0.98)_48%,rgba(241,245,249,0.92))]" />
+      <div
+        className="pointer-events-none absolute inset-0 scale-[1.06] bg-cover bg-center opacity-[0.32] blur-[7px] saturate-[1.05]"
+        style={{
+          backgroundImage: backgroundImage?.src ? `url('${backgroundImage.src}')` : 'none',
+        }}
+      />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_24%_20%,rgba(239,68,68,0.10),transparent_34%),linear-gradient(135deg,rgba(248,250,252,0.78),rgba(255,255,255,0.66)_48%,rgba(241,245,249,0.74))]" />
       <div className="pointer-events-none absolute left-0 top-[9rem] h-[39rem] w-[36rem] opacity-[0.07] [background-image:linear-gradient(90deg,#94a3b8_1px,transparent_1px),linear-gradient(#94a3b8_1px,transparent_1px)] [background-size:34px_34px] [mask-image:linear-gradient(90deg,#000,transparent)]" />
       <motion.div
         animate={state.reducedMotion ? { opacity: 0.12 } : { opacity: [0.14, 0.32, 0.14], scale: [1, 1.08, 1] }}
-        className="pointer-events-none absolute left-[29vw] top-[32vh] h-[22rem] w-[22rem] rounded-full bg-red-500/10 blur-[88px]"
+        className="pointer-events-none absolute left-[29cqw] top-[32cqh] h-[22rem] w-[22rem] rounded-full bg-red-500/10 blur-[88px]"
         initial={false}
         transition={subtleLoop}
       />
       <motion.div
         animate={state.reducedMotion ? { opacity: 0.1 } : { opacity: [0.1, 0.24, 0.1], x: ["-2%", "2%", "-2%"] }}
-        className="pointer-events-none absolute right-[13vw] top-[19vh] h-[24rem] w-[30rem] rounded-full bg-blue-500/10 blur-[96px]"
+        className="pointer-events-none absolute right-[13cqw] top-[19cqh] h-[24rem] w-[30rem] rounded-full bg-blue-500/10 blur-[96px]"
         initial={false}
         transition={state.reducedMotion ? undefined : { duration: 7.5, ease: "easeInOut", repeat: Infinity }}
       />
@@ -162,14 +170,14 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
         <div className="grid min-h-0 grid-cols-[minmax(0,1.04fr)_minmax(36rem,0.96fr)] gap-5">
           <section className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)] gap-4">
             <motion.div animate={{ opacity: 1, y: 0 }} initial={false} transition={{ duration: motionDuration }}>
-              <h1 className="max-w-[45rem] text-[clamp(2.35rem,3.02vw,3.92rem)] font-bold leading-[1.02] tracking-normal text-slate-950 md:text-[2.5vw]">
+              <h1 className="max-w-[45rem] text-[clamp(2.35rem,3.02cqw,3.92rem)] font-bold leading-[1.02] tracking-normal text-slate-950 md:text-[2.5cqw]">
                 One Environment.
                 <span className="block">
                   Connected <span className="text-red-600">Intelligence.</span>
                 </span>
               </h1>
               <div className="mt-3 h-[3px] w-16 rounded-full bg-red-600" />
-              <p className="mt-3 max-w-[42rem] text-[clamp(0.86rem,0.88vw,1rem)] font-medium leading-[1.55] text-slate-800 md:text-[0.8vw]">
+              <p className="mt-3 max-w-[42rem] text-[clamp(0.86rem,0.88cqw,1rem)] font-medium leading-[1.55] text-slate-800 md:text-[0.8cqw]">
                 A control-room environment where consoles, architecture, systems and intelligence share one
                 operating context around the people doing the work.
               </p>
@@ -181,12 +189,20 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
               initial={false}
               transition={{ duration: motionDuration, delay: 0.08 }}
             >
-              <img
-                alt="Connected intelligence control room with smart systems, AI insights and human-centred callouts."
-                className="h-full w-full object-contain"
-                src="/assets/generated/connected-intelligence-room-reference.png"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.28))]" />
+              {stageVisual?.src ? (
+                <img
+                  alt={stageVisual.alt}
+                  className="absolute inset-0 h-full w-full object-cover object-center"
+                  draggable={false}
+                  src={stageVisual.src}
+                />
+              ) : null}
+              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.10),rgba(255,255,255,0.04)_46%,rgba(15,23,42,0.32))]" />
+              <div className="absolute inset-x-0 bottom-0 flex items-center justify-center px-4 pb-4">
+                <h3 className="rounded-full border border-white/60 bg-white/55 px-5 py-2 text-center text-[clamp(0.9rem,1.02cqw,1.28rem)] font-semibold text-slate-950 shadow-[0_0.6rem_1.8rem_rgba(15,23,42,0.16)] backdrop-blur-xl">
+                  AI-Powered Operations Control Center
+                </h3>
+              </div>
               <motion.div
                 animate={state.reducedMotion ? { opacity: 0 } : { x: ["-110%", "112%"], opacity: [0, 0.72, 0] }}
                 className="pointer-events-none absolute inset-y-0 left-0 w-[28%] skew-x-[-14deg] bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.72),transparent)] blur-sm"
@@ -214,14 +230,14 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
 
           <section className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)]">
             <motion.div animate={{ opacity: 1, y: 0 }} initial={false} transition={{ duration: motionDuration, delay: 0.1 }}>
-              <h2 className="text-[clamp(1rem,1.18vw,1.34rem)] font-semibold leading-none text-slate-950">Most Advanced Capabilities</h2>
-              <div className="mt-3 h-[3px] w-14 rounded-full bg-red-600" />
+              <h2 className="text-[clamp(1rem,1.18cqw,1.34rem)] font-semibold leading-none text-slate-950">Most Advanced Capabilities</h2>
+              <div className="mt-2 h-[3px] w-14 rounded-full bg-red-600" />
             </motion.div>
-            <div className="mt-4 grid min-h-0 grid-cols-3 grid-rows-3 gap-3">
+            <div className="mt-2 grid min-h-0 grid-cols-3 grid-rows-3 gap-3">
               {advancedCapabilities.map((capability, index) => (
                 <motion.div
                   animate={state.reducedMotion ? { opacity: 1, y: 0 } : { opacity: 1, y: [0, -3, 0] }}
-                  className="flex min-h-0 flex-col items-center justify-center rounded-[0.95rem] border border-white/75 bg-white/76 px-3 py-2.5 text-center shadow-[0_1rem_2.8rem_rgba(15,23,42,0.08)] backdrop-blur-2xl"
+                  className="flex min-h-0 flex-col pt-8 rounded-[0.95rem] border border-white/75 bg-white/76 px-3  text-center shadow-[0_1rem_2.8rem_rgba(15,23,42,0.08)] backdrop-blur-2xl"
                   initial={false}
                   key={capability.title}
                   transition={
@@ -237,10 +253,10 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
                     initial={false}
                     transition={state.reducedMotion ? undefined : { duration: 3.6, delay: index * 0.13, ease: "easeInOut", repeat: Infinity, repeatDelay: 2.4 }}
                   >
-                    <capability.icon aria-hidden="true" className={`mx-auto shrink-0 ${capability.color}`} size={25} strokeWidth={1.8} />
+                    <capability.icon aria-hidden="true" className={`mx-auto shrink-0 ${capability.color}`} size={38} strokeWidth={1.8} />
                   </motion.span>
-                  <h3 className="mt-2 text-[clamp(0.7rem,0.72vw,0.84rem)] font-semibold leading-tight text-slate-950">{capability.title}</h3>
-                  <p className="mx-auto mt-1 max-w-[11rem] text-[clamp(0.54rem,0.56vw,0.66rem)] font-medium leading-[1.28] text-slate-700">
+                  <h3 className="mt-2 text-[clamp(1.2rem,0.72cqw,0.84rem)] font-semibold leading-tight text-slate-950">{capability.title}</h3>
+                  <p className="mx-auto mt-1 max-w-[11rem] text-[clamp(0.9rem,0.56cqw,0.66rem)] font-medium leading-[1.28] text-slate-700">
                     {capability.body}
                   </p>
                 </motion.div>
@@ -264,17 +280,17 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
             >
               <Users aria-hidden="true" size={26} strokeWidth={1.9} />
             </motion.div>
-            <p className="text-[clamp(0.86rem,0.94vw,1.08rem)] font-medium leading-[1.42] text-slate-950 md:text-[0.7vw]">
-              When the room, console and software share context, operators spend less time coordinating the
-              <span className="block">environment and more time managing the <span className="text-red-600">mission.</span></span>
+            <p className="text-[clamp(0.86rem,0.94cqw,1.08rem)] font-medium leading-[1.42] text-slate-950 md:text-[0.8cqw]">
+              When room, console, and software share context, operators focus less on coordination and more on the
+              <span className="text-red-600"> mission.</span>
             </p>
           </div>
           {impactItems.map((item) => (
             <div className="flex min-h-0 items-center gap-3 border-l border-slate-200/80 px-3.5 py-3" key={item.title}>
-              <item.icon aria-hidden="true" className={`shrink-0 ${item.color}`} size={22} strokeWidth={1.85} />
+              <item.icon aria-hidden="true" className={`shrink-0 ${item.color}`} size={28} strokeWidth={1.85} />
               <div className="min-w-0">
-                <h3 className="text-[clamp(0.62rem,0.66vw,0.78rem)] font-semibold leading-tight text-slate-950">{item.title}</h3>
-                <p className="mt-1 text-[clamp(0.5rem,0.53vw,0.62rem)] font-medium leading-[1.28] text-slate-700">{item.body}</p>
+                <h3 className="text-[clamp(1rem,0.66cqw,0.78rem)] font-semibold leading-tight text-slate-950">{item.title}</h3>
+                <p className="mt-1 text-[clamp(0.8rem,0.53cqw,0.62rem)] font-medium leading-[1.28] text-slate-700">{item.body}</p>
               </div>
             </div>
           ))}
@@ -423,7 +439,7 @@ function LegacyConnectedIntelligenceChapter({ chapter }: Props) {
         </motion.p>
         <motion.h1
           {...entrance.informationFocus(state.reducedMotion)}
-          className="mt-3 text-balance text-[clamp(2.15rem,3.5vw,4.25rem)] font-semibold leading-[0.98] text-control-text"
+          className="mt-3 text-balance text-[clamp(2.15rem,3.5cqw,4.25rem)] font-semibold leading-[0.98] text-control-text"
           initial={false}
           transition={revealTransition(state.reducedMotion, 0.1)}
         >
@@ -623,7 +639,7 @@ function FeatureFocusPanel({
   return (
     <motion.aside
       animate={{ opacity: 1, x: 0 }}
-      className="architectural-panel absolute bottom-[calc(var(--stage-safe-y)+5.4rem)] right-[var(--stage-safe-x)] z-40 w-[min(33rem,36vw)] p-5 shadow-control"
+      className="architectural-panel absolute bottom-[calc(var(--stage-safe-y)+5.4rem)] right-[var(--stage-safe-x)] z-40 w-[min(33rem,36cqw)] p-5 shadow-control"
       exit={{ opacity: 0, x: 18 }}
       initial={{ opacity: 0, x: 24 }}
       transition={{ duration: 0.24 }}

@@ -106,18 +106,18 @@ export function PresentationFlowSelectorChapter({ chapter }: { chapter: Chapter 
     <article className="relative h-full w-full overflow-hidden bg-white text-control-text">
       <div className="absolute inset-0 bg-[linear-gradient(120deg,#ffffff_0%,#fbfcfd_52%,#eef5f8_100%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(rgb(16_18_22/0.018)_1px,transparent_1px),linear-gradient(90deg,rgb(16_18_22/0.018)_1px,transparent_1px)] bg-[length:5.2rem_5.2rem] opacity-55" />
-      <div className="absolute right-[-8vw] top-[-18vh] h-[42vh] w-[44vw] rounded-full bg-red-500/5 blur-3xl" />
+      <div className="absolute right-[-8cqw] top-[-18cqh] h-[42cqh] w-[44cqw] rounded-full bg-red-500/5 blur-3xl" />
 
-      <section className="absolute inset-x-[2.2vw] bottom-[10.2vh] top-[11.4vh] z-20 grid grid-cols-[minmax(20rem,0.42fr)_minmax(0,1fr)_minmax(20rem,0.36fr)] gap-[1.25vw]">
+      <section className="absolute inset-x-[2.2cqw] bottom-[10.2cqh] top-[11.4cqh] z-20 grid grid-cols-[minmax(20rem,0.42fr)_minmax(0,1fr)_minmax(20rem,0.36fr)] gap-[1.25cqw]">
         <motion.aside animate={{ opacity: 1, x: 0 }} className="flex min-h-0 flex-col justify-between" initial={state.reducedMotion ? false : { opacity: 0, x: -18 }} transition={{ duration }}>
           <div>
             <p className="text-[0.86rem] font-semibold uppercase tracking-[0.28em] text-red-600">{chapter.eyebrow}</p>
-            <h1 className="mt-[2vh] text-balance text-[clamp(3.1rem,4.6vw,6rem)] font-bold leading-[0.92] tracking-normal text-slate-950 md:text-[4vw]">
-              Choose the
-              <span className="block text-red-600">right flow.</span>
+            <h1 className="mt-[2cqh] text-balance text-[clamp(3.1rem,4.6cqw,6rem)] font-bold leading-[1] tracking-normal text-slate-950 md:text-[4cqw]">
+              Choose <br /> the
+              <span className="block text-red-600">Right<br /> flow.</span>
             </h1>
-            <div className="mt-[2.1vh] h-[3px] w-[4.2rem] rounded-full bg-red-600" />
-            <p className="mt-[2.2vh] max-w-[30rem] text-[clamp(1rem,1.12vw,1.35rem)] font-medium leading-[1.45] text-slate-700 md:text-[0.8vw]">
+            <div className="mt-[2.1cqh] h-[3px] w-[4.2rem] rounded-full bg-red-600" />
+            <p className="mt-[2.2cqh] max-w-[30rem] text-[clamp(1rem,1.12cqw,1.35rem)] font-medium leading-[1.45] text-slate-700 md:text-[0.8cqw]">
               Select the sector and audience so the presentation starts with what matters most.
             </p>
           </div>
@@ -135,7 +135,7 @@ export function PresentationFlowSelectorChapter({ chapter }: { chapter: Chapter 
           </div>
         </motion.aside>
 
-        <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[auto_auto_minmax(0,1fr)] gap-[1vh]" initial={state.reducedMotion ? false : { opacity: 0, y: 18 }} transition={{ duration, delay: 0.06 }}>
+        <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[auto_auto_minmax(0,1fr)] gap-[1cqh]" initial={state.reducedMotion ? false : { opacity: 0, y: 18 }} transition={{ duration, delay: 0.06 }}>
           <FlowCard label="1. Select sector" support="Industry context changes proof and emphasis.">
             <div className="grid grid-cols-3 gap-[0.65rem]">
               {industries.map((item) => {
@@ -183,7 +183,7 @@ export function PresentationFlowSelectorChapter({ chapter }: { chapter: Chapter 
           <div className="rounded-[1.2rem] border border-white/85 bg-white/80 p-[1.25rem] shadow-[0_1.35rem_3.4rem_rgb(15_23_42/0.11)] backdrop-blur-2xl">
             <p className="text-[0.8rem] font-semibold uppercase tracking-[0.18em] text-slate-950">Recommended Flow</p>
             <div className="mt-3 h-[2px] w-12 rounded-full bg-red-600" />
-            <h2 className="mt-5 text-[clamp(1.7rem,2vw,2.45rem)] font-semibold leading-tight text-slate-950">{journey?.name ?? "Focused OnePWS route"}</h2>
+            <h2 className="mt-5 text-[clamp(1.7rem,2cqw,2.45rem)] font-semibold leading-tight text-slate-950">{journey?.name ?? "Focused OnePWS route"}</h2>
             <p className="mt-3 text-[1rem] font-semibold leading-6 text-slate-600">{journey?.audienceOrOutcome}</p>
             <div className="mt-5 grid grid-cols-2 gap-3">
               <Metric label="Duration" value={journey?.durationLabel ?? "Focused"} tone="text-red-600" />
@@ -198,13 +198,13 @@ export function PresentationFlowSelectorChapter({ chapter }: { chapter: Chapter 
             </button>
           </div>
 
-          <div className="flex-1 rounded-[1.2rem] border border-[#082c5b]/20 bg-[#082c5b] p-[1.2rem] text-white shadow-[0_1.35rem_3.2rem_rgb(8_44_91/0.18)]">
+          <div className="flex-1 rounded-[1.2rem] border border-[#082c5b]/20 bg-slate-50 p-[1.2rem] text-black shadow-[0_1.35rem_3.2rem_rgb(8_44_91/0.18)]">
             <p className="text-[1.15rem] font-semibold leading-tight">Selected context</p>
-            <p className="mt-3 text-[0.95rem] font-semibold leading-6 text-white/78">{sector}<span className="mx-2 text-red-300">/</span>{role}</p>
+            <p className="mt-3 text-[0.95rem] font-semibold leading-6 text-white/78">{sector}<span className="mx-2 text-red-600">/</span>{role}</p>
             <div className="mt-7 space-y-3">
               {["Story opens at the most relevant chapter.", "Experience map follows the selected route.", "Sector and role are saved for recommendations."].map((item) => (
-                <p className="flex items-start gap-3 text-[0.9rem] font-semibold leading-5 text-white/84" key={item}>
-                  <CheckCircle2 aria-hidden="true" className="mt-0.5 shrink-0 text-red-300" size={18} />
+                <p className="flex items-start gap-3 text-[0.9rem] font-semibold leading-5 text-black" key={item}>
+                  <CheckCircle2 aria-hidden="true" className="mt-0.5 shrink-0 text-red-600" size={18} />
                   {item}
                 </p>
               ))}

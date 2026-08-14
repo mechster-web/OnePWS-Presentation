@@ -141,8 +141,8 @@ export function ChapterScene({ chapter }: Props) {
     <article className="relative h-full w-full overflow-hidden bg-white">
       <SceneArchitecture chapter={chapter} />
 
-      <section className="absolute scene-content-safe grid grid-cols-[minmax(0,0.72fr)_minmax(30rem,1fr)] items-center gap-[min(4vw,4rem)] max-xl:grid-cols-1">
-        <div className="scene-copy max-xl:max-w-[44rem]">
+      <section className="absolute scene-content-safe grid grid-cols-[minmax(0,0.30fr)_minmax(0,0.70fr)] items-start mt-8 gap-[2em] [@container_stage_(max-width:1279px)]:grid-cols-1">
+        <div className="scene-copy [@container_stage_(max-width:1279px)]:max-w-[44rem]">
           <motion.p
             animate={{ opacity: 1, y: 0 }}
             className="text-sm font-bold uppercase tracking-[0.18em] text-control-warm"

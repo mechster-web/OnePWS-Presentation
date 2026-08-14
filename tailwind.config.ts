@@ -3,6 +3,17 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
+    // Scenes live on a fixed 1920x1080 canvas, so width breakpoints must not
+    // track the browser window -- otherwise the same slide would pick different
+    // type sizes on a phone and on a desktop. Every breakpoint the canvas
+    // satisfies (all of them, at 1920px) is therefore always on.
+    screens: {
+      sm: { raw: "all" },
+      md: { raw: "all" },
+      lg: { raw: "all" },
+      xl: { raw: "all" },
+      "2xl": { raw: "all" },
+    },
     extend: {
       colors: {
         control: {

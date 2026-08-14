@@ -270,7 +270,7 @@ function ProjectCredentialSlide({ chapter }: Props) {
         >
           <span className="mt-2 h-[8.1rem] w-[3px] rounded-full bg-red-600" />
           <div>
-            <h1 className="text-[clamp(2.65rem,3.1vw,3.45rem)] font-bold uppercase leading-[0.98] tracking-normal text-slate-950 md:text-[2.5vw]">
+            <h1 className="text-[clamp(2.65rem,3.1cqw,3.45rem)] font-bold uppercase leading-[0.98] tracking-normal text-slate-950 md:text-[2.5cqw]">
               Project
               <span className="block text-red-600">Credentials</span>
             </h1>
@@ -343,7 +343,7 @@ function ProjectCredentialSlide({ chapter }: Props) {
                 {project.number}
               </span>
               <div>
-                <h2 className="text-[clamp(2.8rem,4.5vw,5.4rem)] font-semibold leading-[0.95] tracking-normal text-slate-950">
+                <h2 className="text-[clamp(2.8rem,4.5cqw,5.4rem)] font-semibold leading-[0.95] tracking-normal text-slate-950">
                   {project.name}
                 </h2>
                 <div className="mt-6 h-[2px] w-44 rounded-full bg-red-600" />
@@ -517,7 +517,7 @@ function ProjectBrowserChapter({ chapter }: Props) {
         </motion.p>
         <motion.h1
           {...entrance.informationFocus(state.reducedMotion)}
-          className="mt-3 text-balance text-[clamp(2.2rem,3.65vw,4.2rem)] font-semibold leading-[0.98] text-control-text"
+          className="mt-3 text-balance text-[clamp(2.2rem,3.65cqw,4.2rem)] font-semibold leading-[0.98] text-control-text"
           initial={false}
           transition={revealTransition(state.reducedMotion, 0.1)}
         >
@@ -579,7 +579,7 @@ function ProjectFilterRail({
   resultCount: number;
 }) {
   return (
-    <aside className="absolute left-[var(--stage-safe-x)] top-[17.8rem] z-30 w-[min(42rem,43vw)]">
+    <aside className="absolute left-[var(--stage-safe-x)] top-[17.8rem] z-30 w-[min(42rem,43cqw)]">
       <div className="architectural-panel p-4">
         <div className="flex items-center justify-between gap-4">
           <p className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.32em] text-control-warm">
@@ -720,7 +720,7 @@ function ProjectSelector({
   selectedId: string;
 }) {
   return (
-    <section className="absolute bottom-[calc(var(--stage-safe-y)+4.9rem)] left-[var(--stage-safe-x)] z-30 w-[min(42rem,43vw)]">
+    <section className="absolute bottom-[calc(var(--stage-safe-y)+4.9rem)] left-[var(--stage-safe-x)] z-30 w-[min(42rem,43cqw)]">
       <div className="mb-3 flex items-center justify-between text-[10px] uppercase tracking-[0.28em] text-control-muted">
         <span className="inline-flex items-center gap-2">
           <Search aria-hidden="true" size={14} />
@@ -777,7 +777,7 @@ function CaseStudyStage({
     <AnimatePresence mode="wait">
       <motion.aside
         animate={{ opacity: 1, x: 0 }}
-        className="architectural-panel absolute bottom-[calc(var(--stage-safe-y)+4.9rem)] right-[var(--stage-safe-x)] top-[calc(var(--stage-safe-y)+6rem)] z-30 w-[min(55rem,51vw)] overflow-hidden p-5 shadow-control"
+        className="architectural-panel absolute bottom-[calc(var(--stage-safe-y)+4.9rem)] right-[var(--stage-safe-x)] top-[calc(var(--stage-safe-y)+6rem)] z-30 w-[min(55rem,51cqw)] overflow-hidden p-5 shadow-control"
         exit={{ opacity: 0, x: 18 }}
         initial={{ opacity: 0, x: 20 }}
         key={project.id}
@@ -786,7 +786,7 @@ function CaseStudyStage({
         <div className="flex items-start justify-between gap-5">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-control-warm">Focused case study</p>
-            <h2 className="mt-2 max-w-2xl text-[clamp(1.45rem,1.8vw,2.05rem)] font-semibold leading-tight">
+            <h2 className="mt-2 max-w-2xl text-[clamp(1.45rem,1.8cqw,2.05rem)] font-semibold leading-tight">
               {project.name}
             </h2>
           </div>

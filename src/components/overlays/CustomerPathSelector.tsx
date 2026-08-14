@@ -57,15 +57,15 @@ export function CustomerPathSelector() {
   return (
     <>
       <p className="text-xs uppercase tracking-[0.4em] text-control-warm">Customer path</p>
-      <h2 className="mt-4 max-w-4xl text-3xl font-semibold md:text-5xl">
+      <h2 className="mt-4 max-w-4xl text-[clamp(1.6rem,4vw,3rem)] font-semibold leading-[1.1]">
         Select the mission context. The complete journey remains available.
       </h2>
-      <p className="mt-5 max-w-3xl text-sm leading-6 text-control-soft md:text-base md:leading-7">
+      <p className="mt-5 max-w-3xl text-[clamp(0.85rem,1.5vw,1rem)] leading-[1.65] text-control-soft">
         Your selections prioritise the next chapters, recommend relevant product stories and surface
         source-backed projects. Unavailable sector proof is labelled neutrally.
       </p>
 
-      <section className="mt-8 grid gap-7 lg:grid-cols-[1.15fr_0.85fr]">
+      <section className="mt-8 grid gap-7 [grid-template-columns:repeat(auto-fit,minmax(min(24rem,100%),1fr))]">
         <div className="space-y-7">
           <SelectionGroup
             active={state.customerPath.industry}
@@ -187,7 +187,7 @@ function SelectionGroup({
   return (
     <section>
       <p className="mb-3 text-xs uppercase tracking-[0.34em] text-control-warm">{label}</p>
-      <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-2 [grid-template-columns:repeat(auto-fit,minmax(min(13rem,100%),1fr))]">
         {options.map((option, index) => (
           <motion.button
             animate={{ opacity: 1, y: 0 }}

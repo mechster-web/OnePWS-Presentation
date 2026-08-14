@@ -58,7 +58,7 @@ export function ContinuousAwarenessChapter({ chapter }: Props) {
         </motion.p>
         <motion.h1
           {...entrance.informationFocus(state.reducedMotion)}
-          className="mt-4 text-balance text-[clamp(2.15rem,3.35vw,4rem)] font-semibold leading-[1.04] text-control-text"
+          className="mt-4 text-balance text-[clamp(2.15rem,3.35cqw,4rem)] font-semibold leading-[1.04] text-control-text"
           transition={revealTransition(state.reducedMotion, 0.1)}
         >
           Critical operations demand continuous awareness.
@@ -73,7 +73,7 @@ export function ContinuousAwarenessChapter({ chapter }: Props) {
         </motion.p>
       </section>
 
-      <section className="absolute bottom-[15%] left-8 z-20 grid w-[min(980px,66vw)] grid-cols-3 gap-3 md:left-12 lg:left-16">
+      <section className="absolute bottom-[15%] left-8 z-20 grid w-[min(980px,66cqw)] grid-cols-3 gap-3 md:left-12 lg:left-16">
         {awarenessLayers.map((layer, index) => (
           <motion.div
             animate={{ opacity: 1, x: 0 }}

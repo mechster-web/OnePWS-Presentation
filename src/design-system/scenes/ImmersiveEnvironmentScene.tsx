@@ -39,10 +39,10 @@ export function ImmersiveEnvironmentScene({ chapter }: SceneComponentProps) {
             transition={motionFamilyTransition("cinematic-reveal", state.reducedMotion, 0.12)}
           >
             <p className="pws-technical-label">Mission-Critical Control Rooms</p>
-            <h1 className="mt-5 text-balance text-[clamp(3.2rem,7vw,8.6rem)] font-[780] leading-[0.92] text-white">
+            <h1 className="mt-5 text-balance text-[clamp(3.2rem,7cqw,8.6rem)] font-[780] leading-[0.92] text-white">
               {chapter.headline}
             </h1>
-            <p className="mx-auto mt-6 max-w-[56rem] text-balance text-[clamp(1rem,1.55vw,1.55rem)] leading-relaxed text-white/78">
+            <p className="mx-auto mt-6 max-w-[56rem] text-balance text-[clamp(1rem,1.55cqw,1.55rem)] leading-relaxed text-white/78">
               {chapter.supportingMessage}
             </p>
             <div className="mx-auto mt-9 grid max-w-[42rem] grid-cols-3 gap-3 text-left">
@@ -82,7 +82,7 @@ export function ImmersiveEnvironmentScene({ chapter }: SceneComponentProps) {
             initial={{ opacity: 0, y: state.reducedMotion ? 0 : 18 }}
             transition={motionFamilyTransition("architectural-reveal", state.reducedMotion, 0.45)}
           >
-            <div className="pws-glass-surface w-[min(26rem,32vw)] p-4">
+            <div className="pws-glass-surface w-[min(26rem,32cqw)] p-4">
               <p className="pws-technical-label">Operational sequence</p>
               <div className="mt-4 grid gap-3">
                 {chapter.beats.map((beat, index) => (

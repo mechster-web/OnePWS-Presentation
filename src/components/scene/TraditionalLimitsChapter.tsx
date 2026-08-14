@@ -41,7 +41,7 @@ export function TraditionalLimitsChapter({ chapter }: Props) {
       <LimitsBackdrop reducedMotion={state.reducedMotion} />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.86)_50%,rgba(255,255,255,0.68)_100%)]" />
 
-      <section className="absolute bottom-[15%] left-8 top-[13%] z-20 flex w-[min(840px,58vw)] flex-col md:left-12 lg:left-16">
+      <section className="absolute bottom-[15%] left-8 top-[13%] z-20 flex w-[min(840px,58cqw)] flex-col md:left-12 lg:left-16">
         <motion.p
           {...entrance.quietReveal(state.reducedMotion, 8)}
           className="text-xs uppercase tracking-[0.42em] text-control-warm"
@@ -51,7 +51,7 @@ export function TraditionalLimitsChapter({ chapter }: Props) {
         </motion.p>
         <motion.h1
           {...entrance.informationFocus(state.reducedMotion)}
-          className="mt-4 max-w-[640px] text-balance text-[clamp(2rem,3.15vw,3.75rem)] font-semibold leading-[1.04] text-control-text"
+          className="mt-4 max-w-[640px] text-balance text-[clamp(2rem,3.15cqw,3.75rem)] font-semibold leading-[1.04] text-control-text"
           transition={revealTransition(state.reducedMotion, 0.1)}
         >
           Traditional control rooms are no longer sufficient.

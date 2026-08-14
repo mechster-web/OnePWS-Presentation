@@ -29,12 +29,12 @@ export function HumanChallengeScene({
       <AmbientLayer atmosphere="data-trace" intensity="low" />
       <StructuralLayer variant="focus" />
       <SafeArea>
-        <div className="grid h-full grid-cols-[minmax(0,0.8fr)_minmax(20rem,1fr)] items-center gap-[var(--pws-space-6)] max-lg:grid-cols-1">
+        <div className="grid h-full grid-cols-[minmax(0,0.8fr)_minmax(20rem,1fr)] items-center gap-[var(--pws-space-6)] [@container_stage_(max-width:1023px)]:grid-cols-1">
           <div>
             {["More information.", "Less time.", "No room for hesitation."].map((line, index) => (
               <motion.p
                 animate={{ opacity: 1, x: 0 }}
-                className="mt-4 text-[clamp(2.2rem,4.3vw,5.3rem)] font-semibold leading-[0.96] tracking-[-0.02em]"
+                className="mt-4 text-[clamp(2.2rem,4.3cqw,5.3rem)] font-semibold leading-[0.96] tracking-[-0.02em]"
                 initial={{ opacity: 0, x: reducedMotion ? 0 : -18 }}
                 key={line}
                 transition={motionFamilyTransition("operational-response", reducedMotion, 0.18 + index * 0.42)}
