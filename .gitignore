@@ -8,3 +8,7 @@ output/
 
 # Visual audit screenshots (regenerate with: npm run audit:visual:shots)
 docs/visual-audit/
+# Local credentials -- never commit
+.env
+.env.local
+.env.*.local

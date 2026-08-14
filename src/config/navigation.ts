@@ -172,7 +172,7 @@ export const navigationJourneys: NavigationJourney[] = [
       "company-at-a-glance",
       "system-driven-execution",
       "certification-overview",
-      ...featuredProjectCredentialsSequence,
+      ...verifiedProjectCredentialsSequence,
       "customer-presence",
       "why-onepws",
       "next-steps-closing",

@@ -460,7 +460,7 @@ type TintedItem = SimpleItem & { color: string; tint: string };
 
 /** Shared panel treatment for the software-defined scene. */
 const CARD =
-  "overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/72 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.07)] backdrop-blur-[26px]";
+  "overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/70 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.07)] backdrop-blur-[26px]";
 
 const softwareDefineSteps: TintedItem[] = [
   { title: "Configure", description: "Design layouts, workflows & views", Icon: Settings, color: "text-blue-600", tint: "bg-blue-50" },

@@ -261,34 +261,56 @@ function ProjectCredentialSlide({ chapter }: Props) {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_18%,rgba(239,68,68,0.08),transparent_32%),linear-gradient(135deg,rgba(248,250,252,0.98),rgba(255,255,255,0.98)_45%,rgba(241,245,249,0.9))]" />
       <div className="pointer-events-none absolute left-0 top-[8.6rem] h-[42rem] w-[34rem] opacity-[0.08] [background-image:linear-gradient(90deg,#94a3b8_1px,transparent_1px),linear-gradient(#94a3b8_1px,transparent_1px)] [background-size:34px_34px] [mask-image:linear-gradient(90deg,#000,transparent)]" />
 
-      <section className="absolute left-[2.8rem] top-[7.2rem] z-10 w-[22rem]">
+      <div className="absolute inset-x-[2.4rem] bottom-[6.5rem] top-[7.2rem] z-10 flex gap-[1.2rem] pl-[0.4rem]">
+      <section className="flex w-[22rem] shrink-0 flex-col justify-between">
         <motion.div
           animate={{ opacity: 1, x: 0 }}
-          className="flex gap-4"
+          className="flex flex-col gap-4"
           initial={false}
           transition={{ duration: motionDuration }}
         >
-          <span className="mt-2 h-[8.1rem] w-[3px] rounded-full bg-red-600" />
+          <span className="" />
           <div>
             <h1 className="text-[clamp(2.65rem,3.1cqw,3.45rem)] font-bold uppercase leading-[0.98] tracking-normal text-slate-950 md:text-[2.5cqw]">
               Project
               <span className="block text-red-600">Credentials</span>
             </h1>
             <div className="mt-5 h-[3px] w-16 rounded-full bg-red-600" />
+            <p className="mt-6 max-w-[20rem] text-[1.05rem] leading-7 text-slate-700">
+              Successfully delivered mission-critical control room solutions across key projects.
+            </p>
+            
+          </div>
+          <div className=" flex-col justify-center ">
+           
+            <div className="mt-6 flex items-start gap-5">
+              <div>
+                <h2 className="max-w-[12ch] text-[clamp(3.1rem,3.15cqw,5.05rem)] font-semibold leading-[0.98] tracking-normal text-slate-950">
+                  {project.name}
+                </h2>
+                <div className="mt-5 h-[2px] w-40 rounded-full bg-red-600" />
+              </div>
+            </div>
+            <div className="mt-6 flex items-start gap-3 text-[1.02rem] font-semibold leading-7 text-slate-700">
+              <MapPin aria-hidden="true" className="mt-1 shrink-0 text-red-600" size={24} strokeWidth={2.1} />
+              <span>{project.location}</span>
+            </div>
+            <p className="mt-5 max-w-[32rem] text-[1.02rem] font-medium leading-[1.65] text-slate-700">{project.description}</p>
+            {project.note ? (
+              <div className="mt-7 flex items-center gap-4 rounded-2xl border border-red-100 bg-red-50/80 p-4 text-[1.05rem] font-semibold leading-6 text-slate-900">
+                <CheckCircle2 aria-hidden="true" className="shrink-0 text-red-600" size={32} />
+                <span>
+                  {project.note.before}
+                  <span className="text-red-600"> {project.note.emphasis}</span>
+                </span>
+              </div>
+            ) : null}
           </div>
         </motion.div>
-        <motion.p
-          animate={{ opacity: 1, y: 0 }}
-          className="mt-6 max-w-[20rem] text-[1.05rem] leading-7 text-slate-700"
-          initial={false}
-          transition={{ duration: motionDuration, delay: 0.08 }}
-        >
-          Successfully delivered mission-critical control room solutions across key projects.
-        </motion.p>
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="mt-8 rounded-[1.35rem] border border-white/70 bg-white/68 p-5 shadow-[0_22px_70px_rgba(15,23,42,0.12)] backdrop-blur-2xl"
+          className="rounded-[1.35rem] border border-slate-200/70 bg-white/70 p-5 shadow-[0_1px_4px_rgba(15,23,42,0.05),0_14px_34px_rgba(15,23,42,0.09)] backdrop-blur-2xl"
           initial={false}
           transition={{ duration: motionDuration, delay: 0.14 }}
         >
@@ -304,10 +326,10 @@ function ProjectCredentialSlide({ chapter }: Props) {
         </motion.div>
       </section>
 
-      <section className="absolute left-[26rem] right-[2.4rem] top-[7.2rem] z-10 grid h-[calc(100%-13.7rem)] grid-rows-[auto_minmax(0,1fr)_auto] gap-4">
+      <section className="grid min-w-0 flex-1 grid-rows-[auto_minmax(0,1fr)_auto] gap-4">
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="grid grid-cols-3 overflow-hidden rounded-[1.35rem] border border-white/80 bg-white/72 shadow-[0_22px_70px_rgba(15,23,42,0.10)] backdrop-blur-2xl"
+          className="grid grid-cols-3 overflow-hidden rounded-[1.35rem] border border-slate-200/70 bg-white/70 shadow-[0_1px_4px_rgba(15,23,42,0.05),0_14px_34px_rgba(15,23,42,0.08)] backdrop-blur-2xl"
           initial={false}
           transition={{ duration: motionDuration, delay: 0.06 }}
         >
@@ -322,53 +344,32 @@ function ProjectCredentialSlide({ chapter }: Props) {
               </div>
             </div>
           ))}
+          
         </motion.div>
 
         <motion.div
           animate={{ opacity: 1, scale: 1 }}
-          className="relative min-h-0 overflow-hidden rounded-[1.55rem] border border-white/75 bg-white/78 shadow-[0_28px_90px_rgba(15,23,42,0.14)] backdrop-blur-2xl"
+          className="relative min-h-0 overflow-hidden rounded-[1.55rem] border border-slate-200/70 bg-white/80 shadow-[0_2px_6px_rgba(15,23,42,0.06),0_18px_40px_rgba(15,23,42,0.10),0_44px_90px_rgba(15,23,42,0.10)] backdrop-blur-2xl"
           initial={false}
           transition={{ duration: motionDuration, delay: 0.12 }}
         >
+          
           <img
             alt={`${project.name} project control room`}
-            className="absolute inset-y-0 left-0 h-full w-[63%] object-cover"
+            className="absolute inset-y-0 left-0 h-full w-[100%] object-cover"
             src={project.imageSrc}
           />
-          <div className="absolute inset-y-0 left-[45%] right-0 bg-[linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,0.94)_25%,rgba(255,255,255,0.98))]" />
-          <div className="absolute right-0 top-0 flex h-full w-[42%] flex-col justify-center px-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-red-600">Selected Project Completed</p>
-            <div className="mt-5 flex items-start gap-5">
-              <span className="grid size-16 shrink-0 place-items-center rounded-2xl bg-red-600 text-2xl font-semibold text-white shadow-[0_14px_34px_rgba(220,38,38,0.3)]">
-                {project.number}
-              </span>
-              <div>
-                <h2 className="text-[clamp(2.8rem,4.5cqw,5.4rem)] font-semibold leading-[0.95] tracking-normal text-slate-950">
-                  {project.name}
-                </h2>
-                <div className="mt-6 h-[2px] w-44 rounded-full bg-red-600" />
-              </div>
-            </div>
-            <div className="mt-7 flex items-start gap-3 text-lg font-medium leading-7 text-slate-700">
-              <MapPin aria-hidden="true" className="mt-1 text-red-600" size={25} strokeWidth={2.1} />
-              <span>{project.location}</span>
-            </div>
-            <p className="mt-7 max-w-xl text-[1.05rem] leading-7 text-slate-700">{project.description}</p>
-            {project.note ? (
-              <div className="mt-7 flex items-center gap-4 rounded-2xl border border-red-100 bg-red-50/80 p-4 text-[1.05rem] font-semibold leading-6 text-slate-900">
-                <CheckCircle2 aria-hidden="true" className="shrink-0 text-red-600" size={32} />
-                <span>
-                  {project.note.before}
-                  <span className="text-red-600"> {project.note.emphasis}</span>
-                </span>
-              </div>
-            ) : null}
-          </div>
+          <span className="absolute left-[10px] top-[10px] z-20 grid min-w-[4.35rem] place-items-center rounded-[15px] bg-red-600 p-[15px] text-[1.12rem] font-semibold leading-none text-white shadow-[0_12px_26px_rgba(220,38,38,0.24)]">
+            {project.number}
+          </span>
+          <div className="" />
+          <div className="" />
+          
         </motion.div>
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="grid grid-cols-[auto_1fr] items-center gap-5 rounded-[1.2rem] border border-white/70 bg-white/72 px-5 py-4 shadow-[0_18px_48px_rgba(15,23,42,0.09)] backdrop-blur-2xl"
+          className="grid grid-cols-[auto_1fr] items-center gap-5 rounded-[1.2rem] border border-slate-200/70 bg-white/70 px-5 py-4 shadow-[0_1px_4px_rgba(15,23,42,0.05),0_12px_28px_rgba(15,23,42,0.08)] backdrop-blur-2xl"
           initial={false}
           transition={{ duration: motionDuration, delay: 0.18 }}
         >
@@ -381,26 +382,29 @@ function ProjectCredentialSlide({ chapter }: Props) {
               const active = item.chapterId === project.chapterId;
               return (
                 <div
-                  className={`min-w-[5.6rem] rounded-xl border px-3 py-2 transition ${
+                  className={`relative min-w-[5.6rem] overflow-hidden rounded-xl border px-3 pb-2 pt-6 transition ${
                     active
                       ? "border-red-200 bg-red-50 text-red-700 shadow-[0_12px_30px_rgba(220,38,38,0.14)]"
                       : "border-slate-200/80 bg-white/60 text-slate-500"
                   }`}
                   key={item.chapterId}
                 >
-                  <p className="text-xs font-semibold">{item.number}</p>
-                  <p className="mt-1 truncate text-[0.72rem] font-semibold">{item.shortName}</p>
+                  <span className={`absolute left-0 top-0 grid h-5 min-w-8 place-items-center rounded-br-[0.32rem] px-2 text-[0.62rem] font-semibold text-white ${active ? "bg-red-600" : "bg-slate-400"}`}>
+                    {item.number}
+                  </span>
+                  <p className="truncate text-[0.72rem] font-semibold">{item.shortName}</p>
                 </div>
               );
             })}
           </div>
         </motion.div>
       </section>
+      </div>
 
       <div className="absolute bottom-[1.6rem] left-[2.8rem] z-40 flex items-center gap-3">
         <button
           aria-label="Previous"
-          className="inline-flex h-14 items-center gap-3 rounded-xl border border-white/75 bg-white/78 px-5 text-sm font-semibold text-slate-800 shadow-[0_14px_36px_rgba(15,23,42,0.10)] backdrop-blur-2xl transition hover:-translate-y-0.5 hover:bg-white"
+          className="inline-flex h-14 items-center gap-3 rounded-xl border border-white/75 bg-white/80 px-5 text-sm font-semibold text-slate-800 shadow-[0_14px_36px_rgba(15,23,42,0.10)] backdrop-blur-2xl transition hover:-translate-y-0.5 hover:bg-white"
           onClick={() => dispatch({ type: "PREVIOUS_CHAPTER" })}
           type="button"
         >
@@ -417,7 +421,7 @@ function ProjectCredentialSlide({ chapter }: Props) {
         </button>
         <button
           aria-label="Experience Map"
-          className="inline-flex size-14 items-center justify-center rounded-xl border border-white/75 bg-white/78 text-slate-800 shadow-[0_14px_36px_rgba(15,23,42,0.10)] backdrop-blur-2xl transition hover:-translate-y-0.5 hover:bg-white"
+          className="inline-flex size-14 items-center justify-center rounded-xl border border-white/75 bg-white/80 text-slate-800 shadow-[0_14px_36px_rgba(15,23,42,0.10)] backdrop-blur-2xl transition hover:-translate-y-0.5 hover:bg-white"
           onClick={() => dispatch({ type: "SET_OVERLAY", overlay: { type: "chapterMap" } })}
           title="Experience Map"
           type="button"
@@ -429,7 +433,7 @@ function ProjectCredentialSlide({ chapter }: Props) {
           className={`inline-flex size-14 items-center justify-center rounded-xl border shadow-[0_14px_36px_rgba(15,23,42,0.10)] backdrop-blur-2xl transition hover:-translate-y-0.5 ${
             state.narrationEnabled
               ? "border-red-200 bg-red-50 text-red-600"
-              : "border-white/75 bg-white/78 text-slate-800 hover:bg-white"
+              : "border-white/75 bg-white/80 text-slate-800 hover:bg-white"
           }`}
           onClick={() => dispatch({ type: "TOGGLE_NARRATION" })}
           title="Narration"
@@ -439,7 +443,7 @@ function ProjectCredentialSlide({ chapter }: Props) {
         </button>
         <button
           aria-label="Full Screen"
-          className="inline-flex size-14 items-center justify-center rounded-xl border border-white/75 bg-white/78 text-slate-800 shadow-[0_14px_36px_rgba(15,23,42,0.10)] backdrop-blur-2xl transition hover:-translate-y-0.5 hover:bg-white"
+          className="inline-flex size-14 items-center justify-center rounded-xl border border-white/75 bg-white/80 text-slate-800 shadow-[0_14px_36px_rgba(15,23,42,0.10)] backdrop-blur-2xl transition hover:-translate-y-0.5 hover:bg-white"
           onClick={() => void toggleFullscreen()}
           title="Full Screen"
           type="button"
@@ -731,7 +735,7 @@ function ProjectSelector({
       <div className="grid grid-cols-2 gap-2">
         {filteredProjects.slice(0, 4).map((project) => (
           <button
-            className={`min-h-[3.55rem] border bg-white/74 px-3 py-2.5 text-left shadow-sm backdrop-blur transition ${
+            className={`min-h-[3.55rem] border bg-white/75 px-3 py-2.5 text-left shadow-sm backdrop-blur transition ${
               selectedId === project.id
                 ? "border-control-warm text-control-text"
                 : "border-control-line text-control-soft hover:border-control-warm/70"
@@ -823,7 +827,7 @@ function CaseStudyStage({
             <div className="mt-3 flex flex-wrap gap-2">
               {project.relatedFeatures.length > 0 ? (
                 project.relatedFeatures.slice(0, 4).map((feature) => (
-                  <span className="border-l border-control-line bg-white/62 px-3 py-2 text-xs text-control-soft" key={feature}>
+                  <span className="border-l border-control-line bg-white/60 px-3 py-2 text-xs text-control-soft" key={feature}>
                     {feature.replace(/-/g, " ")}
                   </span>
                 ))
@@ -850,7 +854,7 @@ function CaseStudyStage({
 
 function CaseMetric({ icon, label, value }: { icon: ReactNode; label: string; value: string }) {
   return (
-    <div className="border-l border-control-line bg-white/62 px-3 py-2">
+    <div className="border-l border-control-line bg-white/60 px-3 py-2">
       <p className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-control-muted">
         {icon}
         {label}
@@ -907,7 +911,7 @@ function CaseHeroPhoto({ project }: { project: ProjectRecord }) {
   return (
     <>
       <img alt={asset.alt ?? firstImage.label} className="h-full min-h-[13rem] w-full object-cover" src={asset.src} />
-      <div className="absolute bottom-0 left-0 right-0 bg-white/82 px-3 py-2 text-[10px] uppercase tracking-[0.2em] text-control-muted backdrop-blur">
+      <div className="absolute bottom-0 left-0 right-0 bg-white/80 px-3 py-2 text-[10px] uppercase tracking-[0.2em] text-control-muted backdrop-blur">
         {firstImage.sourcePage}
       </div>
     </>
@@ -928,7 +932,7 @@ function ProjectGalleryOverlay({
   return (
     <motion.div
       animate={{ opacity: 1 }}
-      className="absolute inset-0 z-50 bg-white/94 p-[var(--stage-safe-y)] text-control-text backdrop-blur-xl"
+      className="absolute inset-0 z-50 bg-white/95 p-[var(--stage-safe-y)] text-control-text backdrop-blur-xl"
       exit={{ opacity: 0 }}
       initial={{ opacity: 0 }}
     >

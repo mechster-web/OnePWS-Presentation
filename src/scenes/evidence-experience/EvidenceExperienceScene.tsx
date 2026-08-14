@@ -242,7 +242,7 @@ function ManufacturingQualityScene({ chapter }: { chapter: Chapter }) {
           </motion.section>
 
           <motion.section animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-cols-[minmax(0,0.47fr)_minmax(0,0.53fr)] gap-[0.9cqw]" initial={false} transition={{ duration: 0.72, delay: 0.16, ease }}>
-            <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/68 px-[1.45cqw] py-[1.9cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+            <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/70 px-[1.45cqw] py-[1.9cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <h2 className="text-[clamp(0.9rem,1.1cqw,1.25rem)] font-semibold uppercase leading-tight text-control-text">Group Turnover</h2>
               <div className="mt-[0.7cqh] h-[2px] w-[2.15rem] bg-control-warm" />
               <p className="mt-[1.1cqh] text-[clamp(0.56rem,0.68cqw,0.78rem)] font-medium text-control-text">In Cr. INR</p>
@@ -264,7 +264,7 @@ function ManufacturingQualityScene({ chapter }: { chapter: Chapter }) {
               <p className="mt-[0.72cqh] text-center text-[clamp(0.56rem,0.66cqw,0.76rem)] font-medium text-control-text">Year</p>
             </section>
 
-            <section className="grid min-h-0 grid-cols-[minmax(0,0.55fr)_minmax(0,0.45fr)] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/68 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+            <section className="grid min-h-0 grid-cols-[minmax(0,0.55fr)_minmax(0,0.45fr)] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/70 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <div className="px-[1.45cqw] py-[1.9cqh]">
                 <h2 className="text-[clamp(0.9rem,1.1cqw,1.25rem)] font-semibold uppercase leading-tight text-control-text">Quality at Every Step</h2>
                 <div className="mt-[0.7cqh] h-[2px] w-[2.15rem] bg-control-warm" />
@@ -541,7 +541,7 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
             initial={false}
             transition={{ duration: 0.72, delay: 0.08, ease }}
           >
-            <div className="min-h-0 overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/72 p-[0.9cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.6rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+            <div className="min-h-0 overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/70 p-[0.9cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.6rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-[clamp(0.92rem,1.08cqw,1.28rem)] font-semibold uppercase leading-tight text-control-text">
@@ -561,20 +561,23 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
             </div>
 
             <div className="grid min-h-0 grid-rows-[1fr_auto] gap-[1.1cqh]">
-              <section className="overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/72 p-[0.95cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.6rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+              <section className="overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/70 p-[0.95cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.6rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
                 <h2 className="text-[clamp(0.92rem,1.05cqw,1.22rem)] font-semibold uppercase leading-tight text-control-text">
                   Global Delivery Signal
                 </h2>
                 <div className="mt-[0.7cqh] h-[2px] w-[2.6rem] bg-control-warm" />
-                <div className="relative mt-[1.1cqh] h-[19.6cqh] rounded-[0.8rem] border border-slate-200/80 bg-[radial-gradient(circle_at_25%_40%,rgba(220,38,38,0.13),transparent_22%),radial-gradient(circle_at_64%_35%,rgba(37,99,235,0.11),transparent_24%),linear-gradient(135deg,#f8fafc,#ffffff)]">
-                  <div className="absolute inset-0 opacity-[0.18] [background-image:radial-gradient(circle,#64748b_1.2px,transparent_1.2px)] [background-size:12px_12px]" />
-                  <div className="absolute left-[10%] top-[32%] size-3 rounded-full bg-control-warm shadow-[0_0_0_0.55rem_rgb(220_38_38/0.10)]" />
-                  <div className="absolute left-[43%] top-[38%] size-3 rounded-full bg-control-warm shadow-[0_0_0_0.55rem_rgb(220_38_38/0.10)]" />
-                  <div className="absolute left-[61%] top-[28%] size-3 rounded-full bg-control-warm shadow-[0_0_0_0.55rem_rgb(220_38_38/0.10)]" />
-                  <div className="absolute left-[74%] top-[51%] size-3 rounded-full bg-control-warm shadow-[0_0_0_0.55rem_rgb(220_38_38/0.10)]" />
+                <div className="relative mt-[1.1cqh] h-[19.6cqh] overflow-hidden rounded-[0.8rem] border border-slate-200/80 bg-[linear-gradient(135deg,#f8fafc,#ffffff)]">
+                  <img
+                    alt="World map highlighting the markets OnePWS has delivered control rooms into."
+                    className="absolute inset-x-0 top-0 h-[74%] w-full object-contain object-center"
+                    draggable={false}
+                    onError={(event) => { event.currentTarget.style.display = "none"; }}
+                    src="/assets/generated/customer-presence-world-map.png"
+                  />
+                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[42%] bg-[linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,0.86)_58%,#ffffff)]" />
                   <div className="absolute bottom-[1.3cqh] left-[1cqw] right-[1cqw] grid grid-cols-3 gap-[0.55cqw]">
                     {["India", "Middle East", "International markets"].map((region) => (
-                      <div className="rounded-[0.55rem] bg-white/82 px-3 py-2 text-center text-[0.72rem] font-semibold text-slate-800 shadow-sm" key={region}>
+                      <div className="rounded-[0.55rem] bg-white/80 px-3 py-2 text-center text-[0.72rem] font-semibold text-slate-800 shadow-sm" key={region}>
                         {region}
                       </div>
                     ))}
@@ -593,7 +596,7 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
 
           <motion.section
             animate={{ opacity: 1, y: 0 }}
-            className="grid grid-cols-4 overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/76 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]"
+            className="grid grid-cols-4 overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/75 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]"
             initial={false}
             transition={{ duration: 0.72, delay: 0.14, ease }}
           >
@@ -640,7 +643,7 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
 
 function CustomerPresenceMetric({ item, index }: { item: { value: string; label: string; Icon: LucideIcon }; index: number }) {
   return (
-    <article className="grid min-w-0 grid-rows-[2.95rem_auto_minmax(0,1fr)] rounded-[0.85rem] border border-white/80 bg-white/72 px-[0.8cqw] py-[1cqh] text-center shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.4rem_rgb(15_23_42/0.08)] backdrop-blur-[24px]">
+    <article className="grid min-w-0 grid-rows-[2.95rem_auto_minmax(0,1fr)] rounded-[0.85rem] border border-white/80 bg-white/70 px-[0.8cqw] py-[1cqh] text-center shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.4rem_rgb(15_23_42/0.08)] backdrop-blur-[24px]">
       <div className="grid place-items-center">
         <span className="grid size-10 place-items-center rounded-full bg-control-warm/7 text-control-warm">
           <item.Icon aria-hidden="true" size={25} strokeWidth={1.55} />
@@ -654,14 +657,14 @@ function CustomerPresenceMetric({ item, index }: { item: { value: string; label:
 
 function CustomerSectorCard({ group }: { group: { title: string; accent: string; Icon: LucideIcon; names: string[] } }) {
   return (
-    <article className="min-h-[14.3cqh] rounded-[0.75rem] border border-slate-200/86 bg-white/66 p-[0.68cqw] shadow-[0_0.75rem_1.7rem_rgb(15_23_42/0.055)]">
+    <article className="min-h-[14.3cqh] rounded-[0.75rem] border border-slate-200/86 bg-white/65 p-[0.68cqw] shadow-[0_0.75rem_1.7rem_rgb(15_23_42/0.055)]">
       <div className="flex items-center gap-2">
         <group.Icon aria-hidden="true" className={group.accent} size={22} strokeWidth={1.7} />
         <h3 className="text-[clamp(0.56rem,0.66cqw,0.78rem)] font-semibold uppercase leading-tight text-control-text">{group.title}</h3>
       </div>
       <div className="mt-[0.72cqh] flex flex-wrap gap-[0.28cqw]">
         {group.names.map((name) => (
-          <span className="rounded-full border border-slate-200/90 bg-white/74 px-[0.42rem] py-[0.28rem] text-[clamp(0.42rem,0.49cqw,0.58rem)] font-bold leading-none text-slate-700" key={name}>
+          <span className="rounded-full border border-slate-200/90 bg-white/75 px-[0.42rem] py-[0.28rem] text-[clamp(0.42rem,0.49cqw,0.58rem)] font-bold leading-none text-slate-700" key={name}>
             {name}
           </span>
         ))}

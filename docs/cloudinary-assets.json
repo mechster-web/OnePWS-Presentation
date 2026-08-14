@@ -1,0 +1,901 @@
+{
+  "cloudName": "dxzttptsl",
+  "folder": "onepws-presentation",
+  "assets": {
+    "/assets/audio/en/chapters/03-onepws-positioning.mp3": {
+      "publicId": "onepws-presentation/audio/en/chapters/03-onepws-positioning",
+      "resourceType": "video",
+      "url": "https://res.cloudinary.com/dxzttptsl/video/upload/v1786712020/onepws-presentation/audio/en/chapters/03-onepws-positioning.mp3"
+    },
+    "/assets/brand/onepws-facility-exterior.webp": {
+      "publicId": "onepws-presentation/brand/onepws-facility-exterior",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712021/onepws-presentation/brand/onepws-facility-exterior.webp"
+    },
+    "/assets/brand/onepws-logo-black.png": {
+      "publicId": "onepws-presentation/brand/onepws-logo-black",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712020/onepws-presentation/brand/onepws-logo-black.png"
+    },
+    "/assets/brand/onepws-logo-white.png": {
+      "publicId": "onepws-presentation/brand/onepws-logo-white",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712020/onepws-presentation/brand/onepws-logo-white.png"
+    },
+    "/assets/certificates/astm-international.svg": {
+      "publicId": "onepws-presentation/certificates/astm-international",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712181/onepws-presentation/certificates/astm-international.svg"
+    },
+    "/assets/certificates/bifma-level.svg": {
+      "publicId": "onepws-presentation/certificates/bifma-level",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712181/onepws-presentation/certificates/bifma-level.svg"
+    },
+    "/assets/certificates/bifma.svg": {
+      "publicId": "onepws-presentation/certificates/bifma",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712181/onepws-presentation/certificates/bifma.svg"
+    },
+    "/assets/certificates/greenguard-gold.svg": {
+      "publicId": "onepws-presentation/certificates/greenguard-gold",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712182/onepws-presentation/certificates/greenguard-gold.svg"
+    },
+    "/assets/certificates/greenguard.svg": {
+      "publicId": "onepws-presentation/certificates/greenguard",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712183/onepws-presentation/certificates/greenguard.svg"
+    },
+    "/assets/certificates/iso-11064.svg": {
+      "publicId": "onepws-presentation/certificates/iso-11064",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712183/onepws-presentation/certificates/iso-11064.svg"
+    },
+    "/assets/certificates/level-3.svg": {
+      "publicId": "onepws-presentation/certificates/level-3",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712184/onepws-presentation/certificates/level-3.svg"
+    },
+    "/assets/certificates/life-cycle-assessment.svg": {
+      "publicId": "onepws-presentation/certificates/life-cycle-assessment",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712184/onepws-presentation/certificates/life-cycle-assessment.svg"
+    },
+    "/assets/certificates/rohs.svg": {
+      "publicId": "onepws-presentation/certificates/rohs",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712185/onepws-presentation/certificates/rohs.svg"
+    },
+    "/assets/certificates/seismic.svg": {
+      "publicId": "onepws-presentation/certificates/seismic",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712185/onepws-presentation/certificates/seismic.svg"
+    },
+    "/assets/certificates/ul.svg": {
+      "publicId": "onepws-presentation/certificates/ul",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712185/onepws-presentation/certificates/ul.svg"
+    },
+    "/assets/generated/ai-powered-operations-control-center.png": {
+      "publicId": "onepws-presentation/generated/ai-powered-operations-control-center",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712024/onepws-presentation/generated/ai-powered-operations-control-center.png"
+    },
+    "/assets/generated/connected-intelligence-room-reference.png": {
+      "publicId": "onepws-presentation/generated/connected-intelligence-room-reference",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712023/onepws-presentation/generated/connected-intelligence-room-reference.png"
+    },
+    "/assets/generated/international-certifications-map-red.png": {
+      "publicId": "onepws-presentation/generated/international-certifications-map-red",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712024/onepws-presentation/generated/international-certifications-map-red.png"
+    },
+    "/assets/generated/international-certifications-map.png": {
+      "publicId": "onepws-presentation/generated/international-certifications-map",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712023/onepws-presentation/generated/international-certifications-map.png"
+    },
+    "/assets/generated/manufacturing-quality-hero.png": {
+      "publicId": "onepws-presentation/generated/manufacturing-quality-hero",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712025/onepws-presentation/generated/manufacturing-quality-hero.png"
+    },
+    "/assets/generated/project-credentials-01-dfcc.png": {
+      "publicId": "onepws-presentation/generated/project-credentials-01-dfcc",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712025/onepws-presentation/generated/project-credentials-01-dfcc.png"
+    },
+    "/assets/generated/project-credentials-02-chandigarh.png": {
+      "publicId": "onepws-presentation/generated/project-credentials-02-chandigarh",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712025/onepws-presentation/generated/project-credentials-02-chandigarh.png"
+    },
+    "/assets/generated/project-credentials-03-adani.png": {
+      "publicId": "onepws-presentation/generated/project-credentials-03-adani",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712026/onepws-presentation/generated/project-credentials-03-adani.png"
+    },
+    "/assets/generated/project-credentials-04-rtgc.png": {
+      "publicId": "onepws-presentation/generated/project-credentials-04-rtgc",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712026/onepws-presentation/generated/project-credentials-04-rtgc.png"
+    },
+    "/assets/generated/project-credentials-05-acpo.png": {
+      "publicId": "onepws-presentation/generated/project-credentials-05-acpo",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712026/onepws-presentation/generated/project-credentials-05-acpo.png"
+    },
+    "/assets/generated/project-credentials-06-itms.png": {
+      "publicId": "onepws-presentation/generated/project-credentials-06-itms",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712026/onepws-presentation/generated/project-credentials-06-itms.png"
+    },
+    "/assets/generated/project-credentials-07-shell.png": {
+      "publicId": "onepws-presentation/generated/project-credentials-07-shell",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712027/onepws-presentation/generated/project-credentials-07-shell.png"
+    },
+    "/assets/icons/pwa-icon.svg": {
+      "publicId": "onepws-presentation/icons/pwa-icon",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712187/onepws-presentation/icons/pwa-icon.svg"
+    },
+    "/assets/models/consoles/xlat-se.glb": {
+      "publicId": "onepws-presentation/models/consoles/xlat-se.glb",
+      "resourceType": "raw",
+      "url": "https://res.cloudinary.com/dxzttptsl/raw/upload/v1786712028/onepws-presentation/models/consoles/xlat-se.glb"
+    },
+    "/assets/models/consoles/xlat-xe.glb": {
+      "publicId": "onepws-presentation/models/consoles/xlat-xe.glb",
+      "resourceType": "raw",
+      "url": "https://res.cloudinary.com/dxzttptsl/raw/upload/v1786712028/onepws-presentation/models/consoles/xlat-xe.glb"
+    },
+    "/assets/placeholders/ambient-control-room.svg": {
+      "publicId": "onepws-presentation/placeholders/ambient-control-room",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712187/onepws-presentation/placeholders/ambient-control-room.svg"
+    },
+    "/assets/placeholders/opening-control-room.svg": {
+      "publicId": "onepws-presentation/placeholders/opening-control-room",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712187/onepws-presentation/placeholders/opening-control-room.svg"
+    },
+    "/assets/products/auditoriums.png": {
+      "publicId": "onepws-presentation/products/auditoriums",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712029/onepws-presentation/products/auditoriums.png"
+    },
+    "/assets/products/console-feature-icons/accessories.png": {
+      "publicId": "onepws-presentation/products/console-feature-icons/accessories",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712029/onepws-presentation/products/console-feature-icons/accessories.png"
+    },
+    "/assets/products/console-feature-icons/cable-management.png": {
+      "publicId": "onepws-presentation/products/console-feature-icons/cable-management",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712029/onepws-presentation/products/console-feature-icons/cable-management.png"
+    },
+    "/assets/products/console-feature-icons/control-modules.png": {
+      "publicId": "onepws-presentation/products/console-feature-icons/control-modules",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712029/onepws-presentation/products/console-feature-icons/control-modules.png"
+    },
+    "/assets/products/console-feature-icons/export-specification.png": {
+      "publicId": "onepws-presentation/products/console-feature-icons/export-specification",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712030/onepws-presentation/products/console-feature-icons/export-specification.png"
+    },
+    "/assets/products/console-feature-icons/layout-variants.png": {
+      "publicId": "onepws-presentation/products/console-feature-icons/layout-variants",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712030/onepws-presentation/products/console-feature-icons/layout-variants.png"
+    },
+    "/assets/products/console-feature-icons/lighting.png": {
+      "publicId": "onepws-presentation/products/console-feature-icons/lighting",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712030/onepws-presentation/products/console-feature-icons/lighting.png"
+    },
+    "/assets/products/console-feature-icons/materials.png": {
+      "publicId": "onepws-presentation/products/console-feature-icons/materials",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712030/onepws-presentation/products/console-feature-icons/materials.png"
+    },
+    "/assets/products/console-feature-icons/storage.png": {
+      "publicId": "onepws-presentation/products/console-feature-icons/storage",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712031/onepws-presentation/products/console-feature-icons/storage.png"
+    },
+    "/assets/products/console.png": {
+      "publicId": "onepws-presentation/products/console",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712031/onepws-presentation/products/console.png"
+    },
+    "/assets/products/consoles/center-hub.png": {
+      "publicId": "onepws-presentation/products/consoles/center-hub",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712031/onepws-presentation/products/consoles/center-hub.png"
+    },
+    "/assets/products/consoles/dynamic-xe.png": {
+      "publicId": "onepws-presentation/products/consoles/dynamic-xe",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712032/onepws-presentation/products/consoles/dynamic-xe.png"
+    },
+    "/assets/products/consoles/xlat-reference.png": {
+      "publicId": "onepws-presentation/products/consoles/xlat-reference",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712032/onepws-presentation/products/consoles/xlat-reference.png"
+    },
+    "/assets/products/consoles/xlat-se.png": {
+      "publicId": "onepws-presentation/products/consoles/xlat-se",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712033/onepws-presentation/products/consoles/xlat-se.png"
+    },
+    "/assets/products/consoles/xlat-xe.png": {
+      "publicId": "onepws-presentation/products/consoles/xlat-xe",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712032/onepws-presentation/products/consoles/xlat-xe.png"
+    },
+    "/assets/products/consoles/xlat-ze.png": {
+      "publicId": "onepws-presentation/products/consoles/xlat-ze",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712033/onepws-presentation/products/consoles/xlat-ze.png"
+    },
+    "/assets/products/control-room.png": {
+      "publicId": "onepws-presentation/products/control-room",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712033/onepws-presentation/products/control-room.png"
+    },
+    "/assets/products/corporate-offices.png": {
+      "publicId": "onepws-presentation/products/corporate-offices",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712034/onepws-presentation/products/corporate-offices.png"
+    },
+    "/assets/products/ergonomic-views/reach-zone.png": {
+      "publicId": "onepws-presentation/products/ergonomic-views/reach-zone",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712034/onepws-presentation/products/ergonomic-views/reach-zone.png"
+    },
+    "/assets/products/ergonomic-views/seated-view.png": {
+      "publicId": "onepws-presentation/products/ergonomic-views/seated-view",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712034/onepws-presentation/products/ergonomic-views/seated-view.png"
+    },
+    "/assets/products/ergonomic-views/sightline-view.png": {
+      "publicId": "onepws-presentation/products/ergonomic-views/sightline-view",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712034/onepws-presentation/products/ergonomic-views/sightline-view.png"
+    },
+    "/assets/products/ergonomic-views/standing-view.png": {
+      "publicId": "onepws-presentation/products/ergonomic-views/standing-view",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712035/onepws-presentation/products/ergonomic-views/standing-view.png"
+    },
+    "/assets/products/floor.png": {
+      "publicId": "onepws-presentation/products/floor",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712036/onepws-presentation/products/floor.png"
+    },
+    "/assets/products/incident-response-operations-center.png": {
+      "publicId": "onepws-presentation/products/incident-response-operations-center",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712036/onepws-presentation/products/incident-response-operations-center.png"
+    },
+    "/assets/products/incident-response-speed.png": {
+      "publicId": "onepws-presentation/products/incident-response-speed",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712036/onepws-presentation/products/incident-response-speed.png"
+    },
+    "/assets/products/intelligent-features/1.png": {
+      "publicId": "onepws-presentation/products/intelligent-features/1",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712037/onepws-presentation/products/intelligent-features/1.png"
+    },
+    "/assets/products/intelligent-features/10.png": {
+      "publicId": "onepws-presentation/products/intelligent-features/10",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712037/onepws-presentation/products/intelligent-features/10.png"
+    },
+    "/assets/products/intelligent-features/2.png": {
+      "publicId": "onepws-presentation/products/intelligent-features/2",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712037/onepws-presentation/products/intelligent-features/2.png"
+    },
+    "/assets/products/intelligent-features/3.png": {
+      "publicId": "onepws-presentation/products/intelligent-features/3",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712038/onepws-presentation/products/intelligent-features/3.png"
+    },
+    "/assets/products/intelligent-features/4.png": {
+      "publicId": "onepws-presentation/products/intelligent-features/4",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712040/onepws-presentation/products/intelligent-features/4.png"
+    },
+    "/assets/products/intelligent-features/5.png": {
+      "publicId": "onepws-presentation/products/intelligent-features/5",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712039/onepws-presentation/products/intelligent-features/5.png"
+    },
+    "/assets/products/intelligent-features/6.png": {
+      "publicId": "onepws-presentation/products/intelligent-features/6",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712039/onepws-presentation/products/intelligent-features/6.png"
+    },
+    "/assets/products/intelligent-features/7.png": {
+      "publicId": "onepws-presentation/products/intelligent-features/7",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712040/onepws-presentation/products/intelligent-features/7.png"
+    },
+    "/assets/products/intelligent-features/8.png": {
+      "publicId": "onepws-presentation/products/intelligent-features/8",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712040/onepws-presentation/products/intelligent-features/8.png"
+    },
+    "/assets/products/intelligent-features/9.png": {
+      "publicId": "onepws-presentation/products/intelligent-features/9",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712040/onepws-presentation/products/intelligent-features/9.png"
+    },
+    "/assets/products/mechanical-strength/01-die-cast-structural-components-mechanical-strength.png": {
+      "publicId": "onepws-presentation/products/mechanical-strength/01-die-cast-structural-components-mechanical-strength",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712042/onepws-presentation/products/mechanical-strength/01-die-cast-structural-components-mechanical-strength.png"
+    },
+    "/assets/products/mechanical-strength/02-heavy-duty-extruded-aluminum-frame.png": {
+      "publicId": "onepws-presentation/products/mechanical-strength/02-heavy-duty-extruded-aluminum-frame",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712042/onepws-presentation/products/mechanical-strength/02-heavy-duty-extruded-aluminum-frame.png"
+    },
+    "/assets/products/mechanical-strength/03-modular-bolted-construction-frame.png": {
+      "publicId": "onepws-presentation/products/mechanical-strength/03-modular-bolted-construction-frame",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712042/onepws-presentation/products/mechanical-strength/03-modular-bolted-construction-frame.png"
+    },
+    "/assets/products/mechanical-strength/04-high-load-bearing-structural-chassis.png": {
+      "publicId": "onepws-presentation/products/mechanical-strength/04-high-load-bearing-structural-chassis",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712042/onepws-presentation/products/mechanical-strength/04-high-load-bearing-structural-chassis.png"
+    },
+    "/assets/products/mechanical-strength/05-integrated-structural-cable-management.png": {
+      "publicId": "onepws-presentation/products/mechanical-strength/05-integrated-structural-cable-management",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712043/onepws-presentation/products/mechanical-strength/05-integrated-structural-cable-management.png"
+    },
+    "/assets/products/mechanical-strength/06-tool-less-removable-access-panels.png": {
+      "publicId": "onepws-presentation/products/mechanical-strength/06-tool-less-removable-access-panels",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712044/onepws-presentation/products/mechanical-strength/06-tool-less-removable-access-panels.png"
+    },
+    "/assets/products/mechanical-strength/07-precision-adjustable-leveling-system.png": {
+      "publicId": "onepws-presentation/products/mechanical-strength/07-precision-adjustable-leveling-system",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712044/onepws-presentation/products/mechanical-strength/07-precision-adjustable-leveling-system.png"
+    },
+    "/assets/products/mechanical-strength/08-reinforced-monitor-mount-structure.png": {
+      "publicId": "onepws-presentation/products/mechanical-strength/08-reinforced-monitor-mount-structure",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712044/onepws-presentation/products/mechanical-strength/08-reinforced-monitor-mount-structure.png"
+    },
+    "/assets/products/mechanical-strength/09-impact-resistant-adjustable-mount-base.png": {
+      "publicId": "onepws-presentation/products/mechanical-strength/09-impact-resistant-adjustable-mount-base",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712045/onepws-presentation/products/mechanical-strength/09-impact-resistant-adjustable-mount-base.png"
+    },
+    "/assets/products/mechanical-strength/10-modular-control-room-workstation.png": {
+      "publicId": "onepws-presentation/products/mechanical-strength/10-modular-control-room-workstation",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712045/onepws-presentation/products/mechanical-strength/10-modular-control-room-workstation.png"
+    },
+    "/assets/products/mot.png": {
+      "publicId": "onepws-presentation/products/mot",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712045/onepws-presentation/products/mot.png"
+    },
+    "/assets/products/process-icons/01-discover-magnifier-people.png": {
+      "publicId": "onepws-presentation/products/process-icons/01-discover-magnifier-people",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712045/onepws-presentation/products/process-icons/01-discover-magnifier-people.png"
+    },
+    "/assets/products/process-icons/02-design-engineering-blueprint.png": {
+      "publicId": "onepws-presentation/products/process-icons/02-design-engineering-blueprint",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712046/onepws-presentation/products/process-icons/02-design-engineering-blueprint.png"
+    },
+    "/assets/products/process-icons/03-engineering-validation-checklist.png": {
+      "publicId": "onepws-presentation/products/process-icons/03-engineering-validation-checklist",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712047/onepws-presentation/products/process-icons/03-engineering-validation-checklist.png"
+    },
+    "/assets/products/process-icons/04-manufacturing-robotic-automation.png": {
+      "publicId": "onepws-presentation/products/process-icons/04-manufacturing-robotic-automation",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712047/onepws-presentation/products/process-icons/04-manufacturing-robotic-automation.png"
+    },
+    "/assets/products/process-icons/05-build-integrate-logistics-truck.png": {
+      "publicId": "onepws-presentation/products/process-icons/05-build-integrate-logistics-truck",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712047/onepws-presentation/products/process-icons/05-build-integrate-logistics-truck.png"
+    },
+    "/assets/products/process-icons/06-commission-support-technician.png": {
+      "publicId": "onepws-presentation/products/process-icons/06-commission-support-technician",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712048/onepws-presentation/products/process-icons/06-commission-support-technician.png"
+    },
+    "/assets/products/room-systems/acoustic-ceiling.png": {
+      "publicId": "onepws-presentation/products/room-systems/acoustic-ceiling",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712048/onepws-presentation/products/room-systems/acoustic-ceiling.png"
+    },
+    "/assets/products/room-systems/acoustic-flooring.png": {
+      "publicId": "onepws-presentation/products/room-systems/acoustic-flooring",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712049/onepws-presentation/products/room-systems/acoustic-flooring.png"
+    },
+    "/assets/products/room-systems/acoustic-wall-panelling.png": {
+      "publicId": "onepws-presentation/products/room-systems/acoustic-wall-panelling",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712049/onepws-presentation/products/room-systems/acoustic-wall-panelling.png"
+    },
+    "/assets/products/room-systems/ceiling-systems.png": {
+      "publicId": "onepws-presentation/products/room-systems/ceiling-systems",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712049/onepws-presentation/products/room-systems/ceiling-systems.png"
+    },
+    "/assets/products/room-systems/fire-rated-ceiling-systems.png": {
+      "publicId": "onepws-presentation/products/room-systems/fire-rated-ceiling-systems",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712050/onepws-presentation/products/room-systems/fire-rated-ceiling-systems.png"
+    },
+    "/assets/products/room-systems/fire-rated-flooring-systems.png": {
+      "publicId": "onepws-presentation/products/room-systems/fire-rated-flooring-systems",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712051/onepws-presentation/products/room-systems/fire-rated-flooring-systems.png"
+    },
+    "/assets/products/room-systems/fire-rated-wall-systems.png": {
+      "publicId": "onepws-presentation/products/room-systems/fire-rated-wall-systems",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712051/onepws-presentation/products/room-systems/fire-rated-wall-systems.png"
+    },
+    "/assets/products/room-systems/floor-systems.png": {
+      "publicId": "onepws-presentation/products/room-systems/floor-systems",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712051/onepws-presentation/products/room-systems/floor-systems.png"
+    },
+    "/assets/products/room-systems/wall-panel-systems.png": {
+      "publicId": "onepws-presentation/products/room-systems/wall-panel-systems",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712051/onepws-presentation/products/room-systems/wall-panel-systems.png"
+    },
+    "/assets/source-pdf/p01_000_1536x863.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p01_000_1536x863",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712052/onepws-presentation/source-pdf/p01_000_1536x863.jpg"
+    },
+    "/assets/source-pdf/p01_001_382x81.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p01_001_382x81",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712052/onepws-presentation/source-pdf/p01_001_382x81.jpg"
+    },
+    "/assets/source-pdf/p03_002_850x528.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p03_002_850x528",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712052/onepws-presentation/source-pdf/p03_002_850x528.jpg"
+    },
+    "/assets/source-pdf/p04_003_847x609.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p04_003_847x609",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712053/onepws-presentation/source-pdf/p04_003_847x609.jpg"
+    },
+    "/assets/source-pdf/p05_004_528x271.png": {
+      "publicId": "onepws-presentation/source-pdf/p05_004_528x271",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712053/onepws-presentation/source-pdf/p05_004_528x271.png"
+    },
+    "/assets/source-pdf/p05_005_195x319.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p05_005_195x319",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712053/onepws-presentation/source-pdf/p05_005_195x319.jpg"
+    },
+    "/assets/source-pdf/p05_006_202x334.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p05_006_202x334",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712053/onepws-presentation/source-pdf/p05_006_202x334.jpg"
+    },
+    "/assets/source-pdf/p05_007_201x333.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p05_007_201x333",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712053/onepws-presentation/source-pdf/p05_007_201x333.jpg"
+    },
+    "/assets/source-pdf/p06_008_525x294.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p06_008_525x294",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712054/onepws-presentation/source-pdf/p06_008_525x294.jpg"
+    },
+    "/assets/source-pdf/p06_009_477x254.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p06_009_477x254",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712054/onepws-presentation/source-pdf/p06_009_477x254.jpg"
+    },
+    "/assets/source-pdf/p06_010_574x312.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p06_010_574x312",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712054/onepws-presentation/source-pdf/p06_010_574x312.jpg"
+    },
+    "/assets/source-pdf/p07_011_295x276.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p07_011_295x276",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712055/onepws-presentation/source-pdf/p07_011_295x276.jpg"
+    },
+    "/assets/source-pdf/p07_012_382x215.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p07_012_382x215",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712055/onepws-presentation/source-pdf/p07_012_382x215.jpg"
+    },
+    "/assets/source-pdf/p07_013_264x268.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p07_013_264x268",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712055/onepws-presentation/source-pdf/p07_013_264x268.jpg"
+    },
+    "/assets/source-pdf/p07_014_515x290.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p07_014_515x290",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712055/onepws-presentation/source-pdf/p07_014_515x290.jpg"
+    },
+    "/assets/source-pdf/p07_015_249x192.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p07_015_249x192",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712056/onepws-presentation/source-pdf/p07_015_249x192.jpg"
+    },
+    "/assets/source-pdf/p07_016_362x251.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p07_016_362x251",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712056/onepws-presentation/source-pdf/p07_016_362x251.jpg"
+    },
+    "/assets/source-pdf/p07_017_265x192.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p07_017_265x192",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712056/onepws-presentation/source-pdf/p07_017_265x192.jpg"
+    },
+    "/assets/source-pdf/p07_018_520x293.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p07_018_520x293",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712057/onepws-presentation/source-pdf/p07_018_520x293.jpg"
+    },
+    "/assets/source-pdf/p07_019_593x334.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p07_019_593x334",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712057/onepws-presentation/source-pdf/p07_019_593x334.jpg"
+    },
+    "/assets/source-pdf/p08_020_160x158.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p08_020_160x158",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712057/onepws-presentation/source-pdf/p08_020_160x158.jpg"
+    },
+    "/assets/source-pdf/p08_021_574x312.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p08_021_574x312",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712057/onepws-presentation/source-pdf/p08_021_574x312.jpg"
+    },
+    "/assets/source-pdf/p09_022_278x190.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p09_022_278x190",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712058/onepws-presentation/source-pdf/p09_022_278x190.jpg"
+    },
+    "/assets/source-pdf/p09_023_277x190.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p09_023_277x190",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712058/onepws-presentation/source-pdf/p09_023_277x190.jpg"
+    },
+    "/assets/source-pdf/p09_024_340x178.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p09_024_340x178",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712058/onepws-presentation/source-pdf/p09_024_340x178.jpg"
+    },
+    "/assets/source-pdf/p10_025_163x111.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p10_025_163x111",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712058/onepws-presentation/source-pdf/p10_025_163x111.jpg"
+    },
+    "/assets/source-pdf/p10_026_175x120.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p10_026_175x120",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712059/onepws-presentation/source-pdf/p10_026_175x120.jpg"
+    },
+    "/assets/source-pdf/p10_027_229x158.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p10_027_229x158",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712059/onepws-presentation/source-pdf/p10_027_229x158.jpg"
+    },
+    "/assets/source-pdf/p10_028_228x158.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p10_028_228x158",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712060/onepws-presentation/source-pdf/p10_028_228x158.jpg"
+    },
+    "/assets/source-pdf/p10_029_175x120.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p10_029_175x120",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712060/onepws-presentation/source-pdf/p10_029_175x120.jpg"
+    },
+    "/assets/source-pdf/p10_030_303x182.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p10_030_303x182",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712060/onepws-presentation/source-pdf/p10_030_303x182.jpg"
+    },
+    "/assets/source-pdf/p10_031_175x120.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p10_031_175x120",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712060/onepws-presentation/source-pdf/p10_031_175x120.jpg"
+    },
+    "/assets/source-pdf/p10_032_358x248.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p10_032_358x248",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712061/onepws-presentation/source-pdf/p10_032_358x248.jpg"
+    },
+    "/assets/source-pdf/p11_033_100x112.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p11_033_100x112",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712062/onepws-presentation/source-pdf/p11_033_100x112.jpg"
+    },
+    "/assets/source-pdf/p11_034_110x26.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p11_034_110x26",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712062/onepws-presentation/source-pdf/p11_034_110x26.jpg"
+    },
+    "/assets/source-pdf/p11_035_104x103.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p11_035_104x103",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712062/onepws-presentation/source-pdf/p11_035_104x103.jpg"
+    },
+    "/assets/source-pdf/p11_036_107x19.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p11_036_107x19",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712062/onepws-presentation/source-pdf/p11_036_107x19.jpg"
+    },
+    "/assets/source-pdf/p11_037_107x104.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p11_037_107x104",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712062/onepws-presentation/source-pdf/p11_037_107x104.jpg"
+    },
+    "/assets/source-pdf/p11_038_120x159.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p11_038_120x159",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712063/onepws-presentation/source-pdf/p11_038_120x159.jpg"
+    },
+    "/assets/source-pdf/p11_039_107x120.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p11_039_107x120",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712063/onepws-presentation/source-pdf/p11_039_107x120.jpg"
+    },
+    "/assets/source-pdf/p11_040_107x19.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p11_040_107x19",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712063/onepws-presentation/source-pdf/p11_040_107x19.jpg"
+    },
+    "/assets/source-pdf/p11_041_107x19.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p11_041_107x19",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712064/onepws-presentation/source-pdf/p11_041_107x19.jpg"
+    },
+    "/assets/source-pdf/p12_042_1728x857.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p12_042_1728x857",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712064/onepws-presentation/source-pdf/p12_042_1728x857.jpg"
+    },
+    "/assets/source-pdf/p13_043_1451x733.png": {
+      "publicId": "onepws-presentation/source-pdf/p13_043_1451x733",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712064/onepws-presentation/source-pdf/p13_043_1451x733.png"
+    },
+    "/assets/source-pdf/p15_044_1279x687.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p15_044_1279x687",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712065/onepws-presentation/source-pdf/p15_044_1279x687.jpg"
+    },
+    "/assets/source-pdf/p16_045_1280x660.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p16_045_1280x660",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712065/onepws-presentation/source-pdf/p16_045_1280x660.jpg"
+    },
+    "/assets/source-pdf/p18_046_529x352.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p18_046_529x352",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712065/onepws-presentation/source-pdf/p18_046_529x352.jpg"
+    },
+    "/assets/source-pdf/p18_047_529x353.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p18_047_529x353",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712065/onepws-presentation/source-pdf/p18_047_529x353.jpg"
+    },
+    "/assets/source-pdf/p18_048_529x352.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p18_048_529x352",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712065/onepws-presentation/source-pdf/p18_048_529x352.jpg"
+    },
+    "/assets/source-pdf/p18_049_529x352.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p18_049_529x352",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712066/onepws-presentation/source-pdf/p18_049_529x352.jpg"
+    },
+    "/assets/source-pdf/p20_050_1781x1016.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p20_050_1781x1016",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712066/onepws-presentation/source-pdf/p20_050_1781x1016.jpg"
+    },
+    "/assets/source-pdf/p21_051_1672x940.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p21_051_1672x940",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712066/onepws-presentation/source-pdf/p21_051_1672x940.jpg"
+    },
+    "/assets/source-pdf/p22_052_1421x800.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p22_052_1421x800",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712066/onepws-presentation/source-pdf/p22_052_1421x800.jpg"
+    },
+    "/assets/source-pdf/p23_053_1418x798.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p23_053_1418x798",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712067/onepws-presentation/source-pdf/p23_053_1418x798.jpg"
+    },
+    "/assets/source-pdf/p24_054_1418x798.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p24_054_1418x798",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712067/onepws-presentation/source-pdf/p24_054_1418x798.jpg"
+    },
+    "/assets/source-pdf/p25_055_1759x986.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p25_055_1759x986",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712068/onepws-presentation/source-pdf/p25_055_1759x986.jpg"
+    },
+    "/assets/source-pdf/p26_056_1672x941.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p26_056_1672x941",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712068/onepws-presentation/source-pdf/p26_056_1672x941.jpg"
+    },
+    "/assets/source-pdf/p27_057_1422x800.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p27_057_1422x800",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712068/onepws-presentation/source-pdf/p27_057_1422x800.jpg"
+    },
+    "/assets/source-pdf/p28_058_1898x1063.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p28_058_1898x1063",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712068/onepws-presentation/source-pdf/p28_058_1898x1063.jpg"
+    },
+    "/assets/source-pdf/p31_059_2078x1168.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p31_059_2078x1168",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712069/onepws-presentation/source-pdf/p31_059_2078x1168.jpg"
+    },
+    "/assets/source-pdf/p32_060_2002x1125.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p32_060_2002x1125",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712069/onepws-presentation/source-pdf/p32_060_2002x1125.jpg"
+    },
+    "/assets/source-pdf/p33_061_2088x1172.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p33_061_2088x1172",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712069/onepws-presentation/source-pdf/p33_061_2088x1172.jpg"
+    },
+    "/assets/source-pdf/p34_062_1422x800.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p34_062_1422x800",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712069/onepws-presentation/source-pdf/p34_062_1422x800.jpg"
+    },
+    "/assets/source-pdf/p36_063_495x250.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p36_063_495x250",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712070/onepws-presentation/source-pdf/p36_063_495x250.jpg"
+    },
+    "/assets/source-pdf/p36_064_427x180.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p36_064_427x180",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712070/onepws-presentation/source-pdf/p36_064_427x180.jpg"
+    },
+    "/assets/source-pdf/p36_065_360x282.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p36_065_360x282",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712070/onepws-presentation/source-pdf/p36_065_360x282.jpg"
+    },
+    "/assets/source-pdf/p36_066_616x302.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p36_066_616x302",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712071/onepws-presentation/source-pdf/p36_066_616x302.jpg"
+    },
+    "/assets/source-pdf/p36_067_604x252.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p36_067_604x252",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712071/onepws-presentation/source-pdf/p36_067_604x252.jpg"
+    },
+    "/assets/source-pdf/p36_068_278x181.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p36_068_278x181",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712071/onepws-presentation/source-pdf/p36_068_278x181.jpg"
+    },
+    "/assets/source-pdf/p36_069_245x206.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p36_069_245x206",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712072/onepws-presentation/source-pdf/p36_069_245x206.jpg"
+    },
+    "/assets/source-pdf/p38_070_160x158.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p38_070_160x158",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712072/onepws-presentation/source-pdf/p38_070_160x158.jpg"
+    },
+    "/assets/source-pdf/p38_071_78x103.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p38_071_78x103",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712072/onepws-presentation/source-pdf/p38_071_78x103.jpg"
+    },
+    "/assets/source-pdf/p38_072_79x103.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p38_072_79x103",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712072/onepws-presentation/source-pdf/p38_072_79x103.jpg"
+    },
+    "/assets/source-pdf/p39_073_194x45.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p39_073_194x45",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712072/onepws-presentation/source-pdf/p39_073_194x45.jpg"
+    },
+    "/assets/source-pdf/p39_074_200x34.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p39_074_200x34",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712073/onepws-presentation/source-pdf/p39_074_200x34.jpg"
+    },
+    "/assets/source-pdf/p39_075_200x34.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p39_075_200x34",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712073/onepws-presentation/source-pdf/p39_075_200x34.jpg"
+    },
+    "/assets/source-pdf/p39_076_200x34.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p39_076_200x34",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712073/onepws-presentation/source-pdf/p39_076_200x34.jpg"
+    },
+    "/assets/source-pdf/p41_077_443x235.png": {
+      "publicId": "onepws-presentation/source-pdf/p41_077_443x235",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712074/onepws-presentation/source-pdf/p41_077_443x235.png"
+    },
+    "/assets/source-pdf/p41_078_573x235.png": {
+      "publicId": "onepws-presentation/source-pdf/p41_078_573x235",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712074/onepws-presentation/source-pdf/p41_078_573x235.png"
+    },
+    "/assets/source-pdf/p41_079_627x281.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p41_079_627x281",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712074/onepws-presentation/source-pdf/p41_079_627x281.jpg"
+    },
+    "/assets/source-pdf/p41_080_659x281.png": {
+      "publicId": "onepws-presentation/source-pdf/p41_080_659x281",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712074/onepws-presentation/source-pdf/p41_080_659x281.png"
+    },
+    "/assets/source-pdf/p41_081_468x459.png": {
+      "publicId": "onepws-presentation/source-pdf/p41_081_468x459",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712075/onepws-presentation/source-pdf/p41_081_468x459.png"
+    },
+    "/assets/source-pdf/p41_082_396x235.png": {
+      "publicId": "onepws-presentation/source-pdf/p41_082_396x235",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712075/onepws-presentation/source-pdf/p41_082_396x235.png"
+    },
+    "/assets/source-pdf/p41_083_341x235.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p41_083_341x235",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712075/onepws-presentation/source-pdf/p41_083_341x235.jpg"
+    },
+    "/assets/source-pdf/p43_084_1184x264.jpg": {
+      "publicId": "onepws-presentation/source-pdf/p43_084_1184x264",
+      "resourceType": "image",
+      "url": "https://res.cloudinary.com/dxzttptsl/image/upload/v1786712075/onepws-presentation/source-pdf/p43_084_1184x264.jpg"
+    },
+    "/assets/video/opening/onepws-opening.mp4": {
+      "publicId": "onepws-presentation/video/opening/onepws-opening",
+      "resourceType": "video",
+      "url": "https://res.cloudinary.com/dxzttptsl/video/upload/v1786712085/onepws-presentation/video/opening/onepws-opening.mp4"
+    }
+  }
+}

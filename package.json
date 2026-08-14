@@ -15,7 +15,9 @@
     "typecheck": "tsc -b",
     "generate:pptx": "node scripts/generate-onepws-pptx.mjs",
     "audit:visual": "node scripts/visual-audit.mjs",
-    "audit:visual:shots": "node scripts/visual-audit.mjs --shots"
+    "audit:visual:shots": "node scripts/visual-audit.mjs --shots",
+    "assets:upload": "node scripts/upload-assets-to-cloudinary.mjs",
+    "assets:upload:dry": "node scripts/upload-assets-to-cloudinary.mjs --dry-run"
   },
   "build": {
     "appId": "com.onepws.controlroom.presentation",
