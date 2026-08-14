@@ -120,25 +120,25 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
     <article className="relative h-full w-full overflow-hidden bg-white text-control-text">
       <div className="absolute inset-0 bg-[linear-gradient(116deg,#ffffff_0%,#fbfcfd_52%,#eef4f7_100%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(rgb(16_18_22/0.025)_1px,transparent_1px),linear-gradient(90deg,rgb(16_18_22/0.025)_1px,transparent_1px)] bg-[length:5.5rem_5.5rem] opacity-55" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[10.2vh] bg-white/88 backdrop-blur-[2px]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[10.2cqh] bg-white/88 backdrop-blur-[2px]" />
       {!state.reducedMotion ? (
         <>
           <motion.div
             animate={{ opacity: [0, 0.42, 0.16], scale: [0.98, 1.03, 1] }}
-            className="pointer-events-none absolute left-[31vw] top-[11vh] h-[48vh] w-[65vw] rounded-full bg-[radial-gradient(circle_at_55%_48%,rgb(213_29_42/0.14),rgb(47_101_184/0.08)_34%,transparent_68%)] blur-3xl"
+            className="pointer-events-none absolute left-[31cqw] top-[11cqh] h-[48cqh] w-[cqw] rounded-full bg-[radial-gradient(circle_at_55%_48%,rgb(213_29_42/0.14),rgb(47_101_184/0.08)_34%,transparent_68%)] blur-3xl"
             initial={{ opacity: 0, scale: 0.98 }}
             transition={{ duration: 2.2, ease: processEase }}
           />
           <motion.div
             animate={{ opacity: [0, 0.55, 0.18], scaleX: 1 }}
-            className="pointer-events-none absolute left-[3.55vw] top-[59.25vh] h-px w-[77vw] origin-left bg-[linear-gradient(90deg,transparent,rgb(213_29_42/0.6),rgb(47_101_184/0.18),transparent)]"
+            className="pointer-events-none absolute left-[3.55cqw] top-[59.25cqh] h-px w-[77cqw] origin-left bg-[linear-gradient(90deg,transparent,rgb(213_29_42/0.6),rgb(47_101_184/0.18),transparent)]"
             initial={{ opacity: 0, scaleX: 0 }}
             transition={{ duration: 1.45, delay: 0.76, ease: processEase }}
           />
         </>
       ) : null}
 
-      <section className="absolute inset-0 z-20 px-[3.55vw] py-[3.15vh]">
+      <section className="absolute inset-0 z-20 px-[3.55cqw] py-[3.15cqh]">
         {!state.reducedMotion ? (
           <motion.svg
             aria-hidden="true"
@@ -182,31 +182,31 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute left-[3.55vw] top-[13.2vh] z-10 w-[min(27.4vw,33rem)]"
+          className="absolute left-[3.55cqw] top-[13.2cqh] z-10 w-[min(27.4cqw,33rem)]"
           initial={state.reducedMotion ? false : { opacity: 0, y: 14 }}
           transition={{ duration: motionDuration, ease: processEase }}
         >
-          <p className="text-[clamp(0.72rem,0.78vw,0.9rem)] font-bold uppercase tracking-[0.2em] text-control-warm">
+          <p className="text-[clamp(0.72rem,0.78cqw,0.9rem)] font-bold uppercase tracking-[0.2em] text-control-warm">
             Human-Centred Philosophy
           </p>
           <motion.div
             animate={{ scaleX: 1 }}
-            className="mt-[1.8vh] h-[2px] w-8 origin-left bg-control-warm"
+            className="mt-[1.8cqh] h-[2px] w-8 origin-left bg-control-warm"
             initial={state.reducedMotion ? false : { scaleX: 0 }}
             transition={{ duration: 0.62, delay: 0.18, ease: processEase }}
           />
-          <h1 className="mt-[1.75vh] max-w-[11.8ch] text-balance text-[clamp(2.18rem,2.72vw,3.56rem)] font-bold leading-[1.02] tracking-normal text-control-text md:text-[2.5vw]">
-            {chapter.headline}
+          <h1 className="mt-[1.75cqh] max-w-[11.8ch] text-balance text-[clamp(2.18rem,2.72cqw,3.56rem)] font-bold leading-[1.02] tracking-normal text-control-text md:text-[3.5cqw]">
+            Design the <span className="text-control-warm">Control Room</span> around the people who make the decisions.
           </h1>
-          <div className="mt-[1.35vh] h-px w-8 bg-slate-300" />
-          <p className="mt-[1.1vh] max-w-[28rem] text-[clamp(0.78rem,0.84vw,0.98rem)] leading-[1.36] text-control-soft md:text-[0.8vw]">
+          <div className="mt-[1.35cqh] h-px w-8 bg-slate-300" />
+          <p className="mt-[1.1cqh] max-w-[28rem] text-[clamp(0.78rem,0.84cqw,0.98rem)] leading-[1.36] text-control-soft md:text-[0.8cqw]">
             {chapter.supportingMessage}
           </p>
         </motion.div>
 
         <motion.div
           animate={{ clipPath: "inset(0% 0% 0% 0%)", opacity: 1, x: 0 }}
-          className="absolute left-[34vw] right-[3.55vw] top-[12.6vh] h-[43.2vh] overflow-hidden rounded-[0.22rem] border border-slate-200 bg-slate-100 shadow-[0_1.3rem_3rem_rgb(15_23_42/0.12)]"
+          className="absolute left-[34cqw] right-[3.55cqw] top-[12.6cqh] h-[43.2cqh] overflow-hidden rounded-[0.22rem] border border-slate-200 bg-slate-100 shadow-[0_1.3rem_3rem_rgb(15_23_42/0.12)]"
           initial={state.reducedMotion ? false : { clipPath: "inset(0% 0% 0% 10%)", opacity: 0, x: 20 }}
           transition={{ duration: cinematicDuration, delay: 0.08, ease: processEase }}
         >
@@ -246,7 +246,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
               />
               <motion.div
                 animate={{ scaleX: 1, opacity: [0, 0.72, 0.2] }}
-                className="pointer-events-none absolute left-[15.4vw] right-0 top-[51%] h-px origin-left bg-[linear-gradient(90deg,rgb(213_29_42/0.7),rgb(255_255_255/0.45),transparent)]"
+                className="pointer-events-none absolute left-[15.4cqw] right-0 top-[51%] h-px origin-left bg-[linear-gradient(90deg,rgb(213_29_42/0.7),rgb(255_255_255/0.45),transparent)]"
                 initial={{ scaleX: 0, opacity: 0 }}
                 transition={{ duration: 1.15, delay: 0.62, ease: processEase }}
               />
@@ -277,18 +277,12 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
           ) : null}
           <motion.div
             animate={{ opacity: 1, x: 0 }}
-            className="absolute left-0 top-0 h-full w-[min(15.4vw,18.5rem)] bg-[#10151d]/96 px-[clamp(0.86rem,1vw,1.25rem)] py-[2.2vh] text-white shadow-[1rem_0_2rem_rgb(0_0_0/0.16)]"
+            className="absolute left-0 top-0 h-full w-[min(15.4cqw,18.5rem)] bg-[#10151d]/96 px-[clamp(0.86rem,1cqw,1.25rem)] py-[2.2cqh] text-white shadow-[1rem_0_2rem_rgb(0_0_0/0.16)]"
             initial={state.reducedMotion ? false : { opacity: 0, x: -18 }}
             transition={{ duration: motionDuration, delay: 0.22, ease: processEase }}
           >
-            <div className="absolute left-[1.4rem] top-[2.1vh] h-[calc(100%-4.2vh)] w-px bg-white/42" />
-            <motion.div
-              animate={{ scaleY: 1 }}
-              className="absolute left-[1.4rem] top-[2.1vh] h-[calc(100%-4.2vh)] w-px origin-top bg-control-warm"
-              initial={state.reducedMotion ? false : { scaleY: 0 }}
-              transition={{ duration: 1.1, delay: 0.42, ease: processEase }}
-            />
-            <div className="ml-[2rem] grid h-full grid-rows-4 gap-[0.82vh]">
+            <div className="absolute left-[1.4rem] top-[2.1cqh] h-[calc(100%-4.2cqh)] w-px bg-white/42" />
+            <div className="ml-[1rem] grid h-full grid-rows-4 gap-[0.82cqh]">
               {principles.map((principle, index) => (
                 <motion.div
                   animate={{ opacity: 1, x: 0 }}
@@ -302,13 +296,13 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
                     initial={state.reducedMotion ? false : { opacity: 0, scale: 0.72 }}
                     transition={{ duration: 0.54, delay: 0.48 + index * 0.08, ease: processEase }}
                   >
-                    <principle.Icon aria-hidden="true" className="text-control-warm" size={25} strokeWidth={1.75} />
+                    <principle.Icon aria-hidden="true" className="text-control-warm" size={32} strokeWidth={1.75} />
                   </motion.div>
                   <div>
-                    <p className="text-[clamp(0.56rem,0.62vw,0.72rem)] font-semibold uppercase leading-tight text-white">
+                    <p className="text-[clamp(0.68rem,0.75cqw,0.88rem)] font-semibold uppercase leading-tight text-white">
                       {principle.label}
                     </p>
-                    <p className="mt-[0.22vh] max-w-[9.2rem] text-[clamp(0.52rem,0.6vw,0.72rem)] leading-[1.28] text-white/84">
+                    <p className="mt-[0.22cqh] max-w-[9.2rem] text-[clamp(0.62rem,0.72cqw,0.84rem)] leading-[1.28] text-white/84">
                       {principle.detail}
                     </p>
                   </div>
@@ -320,14 +314,14 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute left-[3.55vw] right-[3.55vw] top-[60.8vh]"
+          className="absolute left-[3.55cqw] right-[3.55cqw] top-[68cqh]"
           initial={state.reducedMotion ? false : { opacity: 0, y: 14 }}
           transition={{ duration: motionDuration, delay: 0.24, ease: processEase }}
         >
-          <p className="mb-[1vh] text-[clamp(0.62rem,0.7vw,0.8rem)] font-semibold uppercase tracking-[0.16em] text-control-text">
+          <p className="mb-[1cqh] text-[clamp(0.62rem,0.7cqw,0.8rem)] font-semibold uppercase tracking-[0.16em] text-control-text">
             What should the room adapt to first?
           </p>
-          <div className="grid h-[12.7vh] grid-cols-5 overflow-hidden rounded-[0.32rem] border border-slate-200 bg-white/74 shadow-[0_1.1rem_2.5rem_rgb(15_23_42/0.07)] backdrop-blur-xl">
+          <div className="grid h-[12.7cqh] grid-cols-5 overflow-hidden rounded-[0.32rem] border border-slate-200 bg-white/74 shadow-[0_1.1rem_2.5rem_rgb(15_23_42/0.07)] backdrop-blur-xl">
             {!state.reducedMotion ? (
               <motion.div
                 animate={{ opacity: [0, 0.6, 0.18], scaleX: 1 }}
@@ -342,7 +336,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
                 <motion.button
                   animate={{ opacity: 1, y: 0 }}
                   aria-pressed={isSelected}
-                  className={`relative grid grid-cols-[3rem_1fr] items-center gap-[0.82rem] overflow-hidden border-r border-slate-200 px-[1.05vw] text-left last:border-r-0 transition-colors ${
+                  className={`relative grid grid-cols-[3rem_1fr] items-center gap-[0.82rem] overflow-hidden border-r border-slate-200 px-[1.05cqw] text-left last:border-r-0 transition-colors ${
                     isSelected ? "bg-white" : "bg-white/46 hover:bg-white/74"
                   }`}
                   initial={state.reducedMotion ? false : { opacity: 0, y: 10 }}
@@ -374,7 +368,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
                   <div className="relative z-10">
                     <motion.span
                       animate={{ opacity: 1, y: 0 }}
-                      className="block text-[clamp(1.15rem,1.28vw,1.46rem)] font-semibold tracking-[0.04em]"
+                      className="block text-[clamp(1.15rem,1.28cqw,1.46rem)] font-semibold tracking-[0.04em]"
                       initial={state.reducedMotion ? false : { opacity: 0, y: 8 }}
                       style={{ color: item.accent }}
                       transition={{ duration: 0.58, delay: 0.48 + index * 0.07, ease: processEase }}
@@ -387,7 +381,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
                           ? { boxShadow: [`0 0 0 0 ${item.soft}`, `0 0 0 0.5rem ${item.soft}`, `0 0 0 0 ${item.soft}`] }
                           : undefined
                       }
-                      className="mt-[0.82vh] flex h-[2.35rem] w-[2.35rem] items-center justify-center rounded-full"
+                      className="mt-[0.82cqh] flex h-[2.35rem] w-[2.35rem] items-center justify-center rounded-full"
                       style={{ background: item.soft }}
                       transition={{ duration: 1.2, ease: processEase }}
                     >
@@ -395,11 +389,11 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
                     </motion.div>
                   </div>
                   <div className="relative z-10">
-                    <p className="text-[clamp(0.78rem,0.86vw,1rem)] font-semibold leading-tight text-control-text">
+                    <p className="text-[clamp(0.78rem,0.86cqw,1rem)] font-semibold leading-tight text-control-text">
                       {item.title}
                     </p>
-                    <div className="mt-[0.5vh] h-px w-6" style={{ background: item.accent }} />
-                    <p className="mt-[0.48vh] text-[clamp(0.6rem,0.66vw,0.76rem)] font-medium leading-[1.24] text-control-soft">
+                    <div className="mt-[0.5cqh] h-px w-6" style={{ background: item.accent }} />
+                    <p className="mt-[0.48cqh] text-[clamp(0.6rem,0.66cqw,0.76rem)] font-medium leading-[1.24] text-control-soft">
                       {item.detail}
                     </p>
                   </div>
@@ -411,7 +405,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute left-[3.55vw] right-[3.55vw] top-[78.3vh] grid h-[7.2vh] items-center overflow-hidden border-y border-slate-200"
+          className="absolute left-[3.55cqw] right-[3.55cqw] top-[85.3cqh] grid h-[7.2cqh] items-center overflow-hidden border-y border-slate-200"
           initial={state.reducedMotion ? false : { opacity: 0, y: 12 }}
           transition={{ duration: motionDuration, delay: 0.52, ease: processEase }}
         >
@@ -425,13 +419,13 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
           ) : null}
           <div className="grid h-full max-w-[54rem] grid-cols-[4.5rem_1fr] items-center">
             <div className="flex h-full items-center justify-center text-control-warm">
-              <span className="text-[clamp(2.25rem,3.1vw,3.8rem)] font-semibold leading-none">&ldquo;</span>
+              <span className="text-[clamp(2.25rem,3.1cqw,3.8rem)] font-semibold leading-none">&ldquo;</span>
             </div>
-            <div className="border-l border-slate-200 pl-[1.2vw]">
-              <p className="text-[clamp(0.78rem,0.88vw,1rem)] font-medium leading-[1.28] text-control-text">
+            <div className="border-l border-slate-200 pl-[1.2cqw]">
+              <p className="text-[clamp(0.78rem,0.88cqw,1rem)] font-medium leading-[1.28] text-control-text">
                 The operator should never have to adapt to a poorly designed room.
               </p>
-              <p className="mt-[0.35vh] text-[clamp(0.78rem,0.88vw,1rem)] font-semibold leading-[1.25] text-control-warm">
+              <p className="mt-[0.35cqh] text-[clamp(0.78rem,0.88cqw,1rem)] font-semibold leading-[1.25] text-control-warm">
                 The room should adapt to the operator.
               </p>
             </div>
@@ -440,7 +434,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="pws-scene-control-dock absolute bottom-[0.1vh] left-[0.1vw] z-40 justify-start"
+          className="pws-scene-control-dock absolute bottom-[0.1cqh] left-[0.1cqw] z-40 justify-start"
           initial={state.reducedMotion ? false : { opacity: 0, y: 10 }}
           transition={{ duration: motionDuration, delay: 0.66, ease: processEase }}
         >

@@ -135,7 +135,7 @@ const consolePortfolioCards: PortfolioCard[] = [
     name: "XLAT XE",
     title: "Curve Console",
     description: "Premium curved command desk for immersive visibility, superior reach and operator comfort.",
-    image: "/assets/source-pdf/p07_012_382x215.jpg",
+    image: "/assets/products/consoles/xlat-xe.png",
     accent: "#d51d2a",
     soft: "rgb(213 29 42 / 0.12)",
     specs: [
@@ -150,7 +150,7 @@ const consolePortfolioCards: PortfolioCard[] = [
     name: "XLAT SE",
     title: "Straight Console",
     description: "Clean linear console for focused monitoring, modular expansion and efficient operations.",
-    image: "/assets/source-pdf/p07_019_593x334.jpg",
+    image: "/assets/products/consoles/xlat-se.png",
     accent: "#2367b7",
     soft: "rgb(35 103 183 / 0.12)",
     specs: [
@@ -165,7 +165,7 @@ const consolePortfolioCards: PortfolioCard[] = [
     name: "XLAT ZE",
     title: "Multi-Tier Console",
     description: "Layered control desk for stronger sightlines, display hierarchy and shared awareness.",
-    image: "/assets/source-pdf/p06_009_477x254.jpg",
+    image: "/assets/products/consoles/xlat-ze.png",
     accent: "#0f9678",
     soft: "rgb(15 150 120 / 0.12)",
     specs: [
@@ -180,7 +180,7 @@ const consolePortfolioCards: PortfolioCard[] = [
     name: "Dynamic XE",
     title: "Sit-Stand Console",
     description: "Height-adjustable consoles that adapt to every operator and every task.",
-    image: "/assets/source-pdf/p07_018_520x293.jpg",
+    image: "/assets/products/consoles/dynamic-xe.png",
     accent: "#7a3db7",
     soft: "rgb(122 61 183 / 0.12)",
     specs: [
@@ -195,7 +195,7 @@ const consolePortfolioCards: PortfolioCard[] = [
     name: "Center HUB",
     title: "Collaboration Console",
     description: "Designed for teamwork, briefings and decision-making in real time.",
-    image: "/assets/source-pdf/p06_010_574x312.jpg",
+    image: "/assets/products/consoles/center-hub.png",
     accent: "#f06b18",
     soft: "rgb(240 107 24 / 0.12)",
     specs: [
@@ -404,41 +404,41 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
     <article className="relative h-full w-full overflow-hidden bg-white text-control-text">
       <div className="absolute inset-0 bg-[linear-gradient(116deg,#ffffff_0%,#fbfcfd_55%,#eef4f7_100%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(rgb(16_18_22/0.022)_1px,transparent_1px),linear-gradient(90deg,rgb(16_18_22/0.022)_1px,transparent_1px)] bg-[length:5.4rem_5.4rem] opacity-65" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[10.6vh] bg-white/90 backdrop-blur-[2px]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[10.6cqh] bg-white/90 backdrop-blur-[2px]" />
 
       {!state.reducedMotion ? (
         <>
           <motion.div
             animate={{ opacity: [0, 0.34, 0.14], scale: [0.98, 1.04, 1] }}
-            className="pointer-events-none absolute left-[30vw] top-[14vh] h-[44vh] w-[66vw] rounded-full bg-[radial-gradient(circle_at_52%_45%,rgb(213_29_42/0.11),rgb(47_101_184/0.07)_36%,transparent_69%)] blur-3xl"
+            className="pointer-events-none absolute left-[30cqw] top-[14cqh] h-[44cqh] w-[66cqw] rounded-full bg-[radial-gradient(circle_at_52%_45%,rgb(213_29_42/0.11),rgb(47_101_184/0.07)_36%,transparent_69%)] blur-3xl"
             initial={{ opacity: 0, scale: 0.98 }}
             transition={{ duration: 2.15, ease: processEase }}
           />
           <motion.div
             animate={{ opacity: [0, 0.56, 0.18], scaleX: 1 }}
-            className="pointer-events-none absolute left-[25.35vw] top-[69.4vh] h-px w-[70vw] origin-left bg-[linear-gradient(90deg,rgb(213_29_42/0.55),rgb(15_150_120/0.22),transparent)]"
+            className="pointer-events-none absolute left-[25.35cqw] top-[69.4cqh] h-px w-[70cqw] origin-left bg-[linear-gradient(90deg,rgb(213_29_42/0.55),rgb(15_150_120/0.22),transparent)]"
             initial={{ opacity: 0, scaleX: 0 }}
             transition={{ duration: 1.55, delay: 0.34, ease: processEase }}
           />
         </>
       ) : null}
 
-      <section className="absolute inset-0 z-20 px-[2.75vw] py-[3vh]">
+      <section className="absolute inset-0 z-20 px-[2.75cqw] py-[3cqh]">
         <motion.aside
           animate={{ opacity: 1, y: 0 }}
-          className="absolute left-[2.75vw] top-[13vh] z-20 w-[20.7vw]"
+          className="absolute left-[2.75cqw] top-[13cqh] z-20 w-[20.7cqw]"
           initial={state.reducedMotion ? false : { opacity: 0, y: 14 }}
           transition={{ duration, ease: processEase }}
         >
-          <p className="text-[clamp(0.64rem,0.74vw,0.9rem)] font-semibold uppercase tracking-[0.11em] text-control-warm">
+          <p className="text-[clamp(0.64rem,0.74cqw,0.9rem)] font-semibold uppercase tracking-[0.11em] text-control-warm">
             Our Console Range
           </p>
-          <div className="mt-[1.9vh] h-[2px] w-8 bg-control-warm" />
-          <h1 className="mt-[1.8vh] text-balance text-[clamp(1.98rem,2.58vw,3.42rem)] font-bold leading-[1.03] tracking-normal text-control-text md:text-[2.5vw]">
+          <div className="mt-[1.9cqh] h-[2px] w-8 bg-control-warm" />
+          <h1 className="mt-[1.8cqh] text-balance text-[clamp(1.98rem,2.58cqw,3.42rem)] font-bold leading-[1.03] tracking-normal text-control-text md:text-[3.6cqw]">
             Control-Room Console <span className="text-control-warm">Portfolio.</span>
           </h1>
-          <div className="mt-[2.2vh] h-px w-8 bg-slate-300" />
-          <p className="mt-[1.7vh] max-w-[16.8rem] text-[clamp(0.82rem,0.91vw,1.08rem)] leading-[1.54] text-control-text md:text-[0.8vw]">
+          <div className="mt-[2.2cqh] h-px w-8 bg-slate-300" />
+          <p className="mt-[1.7cqh] max-w-[16.8rem] text-[clamp(0.82rem,0.91cqw,1.08rem)] leading-[1.54] text-control-text md:text-[0.8cqw]">
             Engineered for performance.
             <br />
             Designed for people.
@@ -448,7 +448,7 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
 
           <motion.div
             animate={{ opacity: 1, y: 0 }}
-            className="mt-[3.8vh] flex items-start gap-[0.9vw] rounded-[0.8rem] border border-white/85 bg-white/76 p-[0.95vw] shadow-[0_1.1rem_2.65rem_rgb(15_23_42/0.095)] backdrop-blur-xl"
+            className="mt-[3.8cqh] flex items-start gap-[0.9cqw] rounded-[0.8rem] border border-white/85 bg-white/76 p-[0.95cqw] shadow-[0_1.1rem_2.65rem_rgb(15_23_42/0.095)] backdrop-blur-xl"
             initial={state.reducedMotion ? false : { opacity: 0, y: 18, scale: 0.96 }}
             transition={{ duration: 0.72, delay: 0.42, ease: popEase }}
             whileHover={state.reducedMotion ? undefined : { y: -3, scale: 1.01, transition: { duration: 0.36, ease: precisionEase } }}
@@ -457,8 +457,8 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
               <UserRound size={29} strokeWidth={1.8} />
             </span>
             <div>
-              <h2 className="text-[clamp(0.7rem,0.76vw,0.92rem)] font-semibold text-control-text">Human-Centred by Design</h2>
-              <p className="mt-[0.58vh] text-[clamp(0.61rem,0.68vw,0.82rem)] leading-[1.45] text-slate-700">
+              <h2 className="text-[clamp(0.7rem,0.76cqw,0.92rem)] font-semibold text-control-text">Human-Centred by Design</h2>
+              <p className="mt-[0.58cqh] text-[clamp(0.61rem,0.68cqw,0.82rem)] leading-[1.45] text-slate-700">
                 Every console is built around operator comfort, optimal reach and seamless system integration.
               </p>
             </div>
@@ -467,7 +467,7 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate="show"
-          className="absolute left-[25.3vw] right-[2.75vw] top-[13.8vh] grid h-[57.2vh] grid-cols-5 gap-[0.82vw] [perspective:1600px]"
+          className="absolute left-[25.3cqw] right-[2.75cqw] top-[13.8cqh] grid h-[57.2cqh] grid-cols-5 gap-[0.82cqw] [perspective:1600px]"
           initial="hidden"
           variants={{
             hidden: {},
@@ -509,13 +509,13 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
               }
             >
               <motion.div
-                className="pointer-events-none absolute inset-x-[0.75vw] top-[16.2vh] z-10 h-px origin-left"
+                className="pointer-events-none absolute inset-x-[0.75cqw] top-[16.2cqh] z-10 h-px origin-left"
                 initial={state.reducedMotion ? false : { scaleX: 0, opacity: 0 }}
                 style={{ backgroundColor: item.accent }}
                 animate={{ scaleX: 1, opacity: 0.42 }}
                 transition={{ duration: 0.8, delay: 0.44 + cardIndex * 0.08, ease: precisionEase }}
               />
-              <div className="relative h-[16.2vh] overflow-hidden bg-[linear-gradient(135deg,#f5f7f9,#dce2e8)]">
+              <div className="relative h-[16.2cqh] overflow-hidden bg-[linear-gradient(135deg,#f5f7f9,#dce2e8)]">
                 <img
                   alt={`${item.title} product render`}
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.035]"
@@ -531,35 +531,35 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
                   />
                 ) : null}
               </div>
-              <div className="flex min-h-0 flex-1 flex-col px-[0.92vw] py-[1.08vh]">
-                <div className="flex items-start justify-between gap-[0.5vw]">
+              <div className="flex min-h-0 flex-1 flex-col px-[0.92cqw] py-[1.08cqh]">
+                <div className="flex items-start justify-between gap-[0.5cqw]">
                   <div>
-                    <p className="text-[clamp(0.76rem,0.86vw,1.04rem)] font-semibold uppercase leading-none" style={{ color: item.accent }}>
+                    <p className="text-[clamp(0.76rem,0.86cqw,1.04rem)] font-semibold uppercase leading-none" style={{ color: item.accent }}>
                       {item.name}
                     </p>
-                    <h2 className="mt-[0.48vh] text-[clamp(0.76rem,0.86vw,1.04rem)] font-semibold leading-[1.08] text-control-text">
+                    <h2 className="mt-[0.48cqh] text-[clamp(0.76rem,0.86cqw,1.04rem)] font-semibold leading-[1.08] text-control-text">
                       {item.title}
                     </h2>
                   </div>
                   <span className="mt-[-0.08rem] h-[0.54rem] w-[0.54rem] shrink-0 rounded-full shadow-[0_0_0_0.28rem_rgb(255_255_255/0.9)]" style={{ backgroundColor: item.accent }} />
                 </div>
-                <p className="mt-[0.78vh] min-h-[4.9vh] text-[clamp(0.58rem,0.64vw,0.76rem)] leading-[1.3] text-slate-700">
+                <p className="mt-[0.78cqh] min-h-[4.9cqh] text-[clamp(0.58rem,0.64cqw,0.76rem)] leading-[1.3] text-slate-700">
                   {item.description}
                 </p>
-                <div className="my-[0.72vh] h-px bg-slate-200/90" />
-                <dl className="grid gap-[0.5vh] self-stretch">
+                <div className="my-[0.72cqh] h-px bg-slate-200/90" />
+                <dl className="grid gap-[0.5cqh] self-stretch">
                   {primarySpecs.map((spec, specIndex) => (
                     <motion.div
                       animate={{ opacity: 1, x: 0 }}
-                      className="grid grid-cols-[1.02rem_1fr] gap-x-[0.42vw] rounded-[0.52rem] bg-slate-50/78 px-[0.48vw] py-[0.48vh]"
+                      className="grid grid-cols-[1.02rem_1fr] gap-x-[0.42cqw] rounded-[0.52rem] bg-slate-50/78 px-[0.48cqw] py-[0.48cqh]"
                       initial={state.reducedMotion ? false : { opacity: 0, x: -8 }}
                       key={spec.label}
                       transition={{ duration: 0.46, delay: 0.38 + cardIndex * 0.08 + specIndex * 0.035, ease: precisionEase }}
                     >
                       <spec.Icon aria-hidden="true" className="mt-[0.02rem]" color={item.accent} size={15} strokeWidth={1.9} />
                       <div>
-                        <dt className="text-[clamp(0.48rem,0.53vw,0.63rem)] font-semibold uppercase leading-none text-control-text">{spec.label}</dt>
-                        <dd className="mt-[0.13rem] text-[clamp(0.48rem,0.54vw,0.65rem)] leading-[1.18] text-slate-700">{spec.value}</dd>
+                        <dt className="text-[clamp(0.48rem,0.53cqw,0.63rem)] font-semibold uppercase leading-none text-control-text">{spec.label}</dt>
+                        <dd className="mt-[0.13rem] text-[clamp(0.48rem,0.54cqw,0.65rem)] leading-[1.18] text-slate-700">{spec.value}</dd>
                       </div>
                     </motion.div>
                   ))}
@@ -567,13 +567,13 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
                 {highlightSpec ? (
                   <motion.div
                     animate={{ opacity: 1, y: 0 }}
-                    className="mt-auto grid grid-cols-[1.08rem_1fr] gap-x-[0.44vw] rounded-[0.62rem] px-[0.54vw] py-[0.62vh]"
+                    className="mt-auto grid grid-cols-[1.08rem_1fr] gap-x-[0.44cqw] rounded-[0.62rem] px-[0.54cqw] py-[0.62cqh]"
                     initial={state.reducedMotion ? false : { opacity: 0, y: 8 }}
                     style={{ backgroundColor: item.soft }}
                     transition={{ duration: 0.46, delay: 0.56 + cardIndex * 0.08, ease: precisionEase }}
                   >
                     <highlightSpec.Icon aria-hidden="true" className="mt-[0.02rem]" color={item.accent} size={15.5} strokeWidth={1.9} />
-                    <p className="text-[clamp(0.49rem,0.55vw,0.66rem)] font-semibold leading-[1.22] text-slate-800">
+                    <p className="text-[clamp(0.49rem,0.55cqw,0.66rem)] font-semibold leading-[1.22] text-slate-800">
                       <span className="font-semibold text-control-text">{highlightSpec.label}: </span>
                       {highlightSpec.value}
                     </p>
@@ -587,14 +587,14 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-[9.45vh] left-[4.2vw] right-[4.2vw] grid h-[8.6vh] grid-cols-5 overflow-hidden rounded-[0.82rem] border border-white/85 bg-white/78 shadow-[0_1rem_2.65rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
+          className="absolute bottom-[9.45cqh] left-[2.75cqw] right-[2.75cqw] grid h-[8.6cqh] grid-cols-5 overflow-hidden rounded-[0.82rem] border border-white/85 bg-white/78 shadow-[0_1rem_2.65rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
           initial={state.reducedMotion ? false : { opacity: 0, y: 24, scale: 0.985 }}
           transition={{ duration: 0.82, delay: 0.68, ease: popEase }}
         >
           {consoleSupportItems.map((item, index) => (
             <motion.div
               animate={{ opacity: 1, y: 0 }}
-              className={`flex items-center gap-[0.7vw] px-[1.05vw] ${index > 0 ? "border-l border-slate-200" : ""}`}
+              className={`flex items-center gap-[0.7cqw] px-[1.05cqw] ${index > 0 ? "border-l border-slate-200" : ""}`}
               initial={state.reducedMotion ? false : { opacity: 0, y: 12 }}
               key={item.title}
               transition={{ duration: 0.58, delay: 0.82 + index * 0.065, ease: precisionEase }}
@@ -604,8 +604,8 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
                 <item.Icon size={24} strokeWidth={1.8} />
               </span>
               <div>
-                <h3 className="text-[clamp(0.66rem,0.72vw,0.86rem)] font-semibold leading-[1.12] text-control-text">{item.title}</h3>
-                <p className="mt-[0.3vh] text-[clamp(0.55rem,0.61vw,0.72rem)] leading-[1.32] text-slate-700">{item.detail}</p>
+                <h3 className="text-[clamp(0.66rem,0.72cqw,0.86rem)] font-semibold leading-[1.12] text-control-text">{item.title}</h3>
+                <p className="mt-[0.3cqh] text-[clamp(0.55rem,0.61cqw,0.72rem)] leading-[1.32] text-slate-700">{item.detail}</p>
               </div>
             </motion.div>
           ))}
@@ -613,7 +613,7 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="pws-scene-control-dock absolute bottom-[0.1vh] left-[0.1vw] z-40 justify-start"
+          className="pws-scene-control-dock absolute bottom-[0.1cqh] left-[0.1cqw] z-40 justify-start"
           initial={state.reducedMotion ? false : { opacity: 0, y: 18 }}
           transition={{ duration: 0.56, delay: 0.74, ease: processEase }}
         >
@@ -688,13 +688,19 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
 
   return (
     <article className="relative h-full w-full overflow-hidden bg-white text-control-text">
-      <div className="absolute inset-0 bg-[linear-gradient(116deg,#ffffff_0%,#fbfcfd_54%,#edf4f8_100%)]" />
+      <img
+        alt=""
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.18] saturate-[0.92]"
+        src="/assets/products/control-room.png"
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(116deg,rgb(255_255_255/0.84)_0%,rgb(251_252_253/0.74)_54%,rgb(237_244_248/0.72)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_68%_18%,rgb(255_255_255/0.1),transparent_42%),linear-gradient(90deg,rgb(255_255_255/0.72),rgb(255_255_255/0.22)_46%,rgb(255_255_255/0.5))]" />
       <div className="absolute inset-0 bg-[linear-gradient(rgb(16_18_22/0.022)_1px,transparent_1px),linear-gradient(90deg,rgb(16_18_22/0.022)_1px,transparent_1px)] bg-[length:5.4rem_5.4rem] opacity-60" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[10.6vh] bg-white/90 backdrop-blur-[2px]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[10.6cqh] bg-white/90 backdrop-blur-[2px]" />
       {!state.reducedMotion ? (
         <motion.div
           animate={{ opacity: [0, 0.42, 0.18], scale: [0.98, 1.04, 1] }}
-          className="pointer-events-none absolute left-[24vw] top-[18vh] h-[56vh] w-[70vw] rounded-full blur-3xl"
+          className="pointer-events-none absolute left-[24cqw] top-[18cqh] h-[56cqh] w-[70cqw] rounded-full blur-3xl"
           initial={{ opacity: 0, scale: 0.98 }}
           style={{
             background: `radial-gradient(circle at 46% 44%, ${detail.soft}, rgb(35 103 183 / 0.07) 36%, transparent 70%)`,
@@ -703,56 +709,56 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
         />
       ) : null}
 
-      <section className="absolute inset-0 z-20 px-[2.75vw] py-[3vh]">
+      <section className="absolute inset-0 z-20 px-[2.75cqw] py-[3cqh]">
         <motion.aside
           animate={{ opacity: 1, y: 0 }}
-          className="absolute left-[2.75vw] top-[13vh] w-[22vw]"
+          className="absolute left-[2.75cqw] top-[13cqh] w-[22cqw]"
           initial={state.reducedMotion ? false : { opacity: 0, y: 16 }}
           transition={{ duration: state.reducedMotion ? 0.01 : 0.72, ease: processEase }}
         >
           <button
-            className="inline-flex items-center gap-3 rounded-full border border-white/85 bg-white/78 px-4 py-3 text-[clamp(0.72rem,0.78vw,0.95rem)] font-semibold uppercase tracking-[0.08em] text-control-text shadow-[0_0.75rem_1.8rem_rgb(15_23_42/0.08)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:text-control-warm"
+            className="inline-flex items-center gap-3 rounded-full border border-white/85 bg-white/78 px-4 py-3 text-[clamp(0.72rem,0.78cqw,0.95rem)] font-semibold uppercase tracking-[0.08em] text-control-text shadow-[0_0.75rem_1.8rem_rgb(15_23_42/0.08)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:text-control-warm"
             onClick={() => dispatch({ type: "GO_TO_CHAPTER", chapterId: "console-portfolio" })}
             type="button"
           >
             <ArrowLeft aria-hidden="true" size={18} />
             Back to Portfolio
           </button>
-          <p className="mt-[3.2vh] text-[clamp(0.68rem,0.78vw,0.95rem)] font-semibold uppercase tracking-[0.11em]" style={{ color: detail.accent }}>
+          <p className="mt-[3.2cqh] text-[clamp(0.68rem,0.78cqw,0.95rem)] font-semibold uppercase tracking-[0.11em]" style={{ color: detail.accent }}>
             {detail.descriptor}
           </p>
-          <div className="mt-[1.6vh] h-[2px] w-10" style={{ backgroundColor: detail.accent }} />
-          <h1 className="mt-[1.8vh] text-balance text-[clamp(2.35rem,3.28vw,4.25rem)] font-bold leading-[0.98] tracking-normal text-control-text md:text-[2.5vw]">
+          <div className="mt-[1.6cqh] h-[2px] w-10" style={{ backgroundColor: detail.accent }} />
+          <h1 className="mt-[1.8cqh] text-balance text-[clamp(2.35rem,3.28cqw,4.25rem)] font-bold leading-[0.98] tracking-normal text-control-text md:text-[2.5cqw]">
             {detail.name}
             <span className="block text-[0.48em] leading-[1.2]" style={{ color: detail.accent }}>
               {detail.title}
             </span>
           </h1>
-          <p className="mt-[2vh] max-w-[20rem] text-[clamp(0.82rem,0.95vw,1.12rem)] leading-[1.48] text-slate-700 md:text-[0.8vw]">
+          <p className="mt-[2cqh] max-w-[20rem] text-[clamp(0.82rem,0.95cqw,1.12rem)] leading-[1.48] text-slate-700 md:text-[0.8cqw]">
             {detail.promise}
           </p>
 
           <motion.div
             animate={{ opacity: 1, y: 0 }}
-            className="mt-[2.7vh] rounded-[0.9rem] border border-white/85 bg-white/78 p-[1vw] shadow-[0_1rem_2.45rem_rgb(15_23_42/0.085)] backdrop-blur-xl"
+            className="mt-[2.7cqh] rounded-[0.9rem] border border-white/85 bg-white/78 p-[1cqw] shadow-[0_1rem_2.45rem_rgb(15_23_42/0.085)] backdrop-blur-xl"
             initial={state.reducedMotion ? false : { opacity: 0, y: 18, scale: 0.97 }}
             transition={{ duration: 0.72, delay: 0.22, ease: popEase }}
           >
-            <p className="text-[clamp(0.62rem,0.7vw,0.85rem)] font-semibold uppercase tracking-[0.08em] text-control-text">Designed for</p>
-            <p className="mt-[0.8vh] text-[clamp(0.7rem,0.78vw,0.94rem)] leading-[1.45] text-slate-700">{detail.fit}</p>
+            <p className="text-[clamp(0.62rem,0.7cqw,0.85rem)] font-semibold uppercase tracking-[0.08em] text-control-text">Designed for</p>
+            <p className="mt-[0.8cqh] text-[clamp(0.7rem,0.78cqw,0.94rem)] leading-[1.45] text-slate-700">{detail.fit}</p>
           </motion.div>
 
           <motion.div
             animate={{ opacity: 1, y: 0 }}
-            className="mt-[1.4vh] grid grid-cols-2 gap-[0.55vw]"
+            className="mt-[1.4cqh] grid grid-cols-2 gap-[0.55cqw]"
             initial={state.reducedMotion ? false : { opacity: 0, y: 14 }}
             transition={{ duration: 0.58, delay: 0.34, ease: precisionEase }}
           >
             {primarySpecs.slice(1, 3).map((spec) => (
-              <div className="rounded-[0.7rem] border border-white/80 bg-white/68 p-[0.72vw] shadow-[0_0.7rem_1.6rem_rgb(15_23_42/0.055)]" key={spec.label}>
+              <div className="rounded-[0.7rem] border border-white/80 bg-white/68 p-[0.72cqw] shadow-[0_0.7rem_1.6rem_rgb(15_23_42/0.055)]" key={spec.label}>
                 <spec.Icon aria-hidden="true" color={detail.accent} size={22} strokeWidth={1.85} />
-                <p className="mt-[0.55vh] text-[clamp(0.5rem,0.56vw,0.68rem)] font-semibold uppercase tracking-[0.05em] text-control-text">{spec.label}</p>
-                <p className="mt-[0.24vh] text-[clamp(0.58rem,0.66vw,0.78rem)] font-semibold leading-[1.22] text-slate-700">{spec.value}</p>
+                <p className="mt-[0.55cqh] text-[clamp(0.5rem,0.56cqw,0.68rem)] font-semibold uppercase tracking-[0.05em] text-control-text">{spec.label}</p>
+                <p className="mt-[0.24cqh] text-[clamp(0.58rem,0.66cqw,0.78rem)] font-semibold leading-[1.22] text-slate-700">{spec.value}</p>
               </div>
             ))}
           </motion.div>
@@ -760,7 +766,7 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
 
         <motion.section
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          className="absolute left-[26.4vw] right-[3vw] top-[12.3vh] grid h-[61.6vh] grid-cols-[minmax(0,1.05fr)_minmax(19rem,0.58fr)] gap-[1.1vw]"
+          className="absolute left-[26.4cqw] right-[3cqw] top-[12.3cqh] grid h-[61.6cqh] grid-cols-[minmax(0,1.05fr)_minmax(19rem,0.58fr)] gap-[1.1cqw]"
           initial={state.reducedMotion ? false : { opacity: 0, y: 22, scale: 0.985 }}
           transition={{ duration: 0.84, delay: 0.12, ease: popEase }}
         >
@@ -773,13 +779,13 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
                 <div className="pointer-events-none absolute inset-x-[18%] bottom-[24%] z-[1] h-px bg-[linear-gradient(90deg,transparent,rgb(15_23_42/0.1),transparent)]" />
               </>
             ) : null}
-            <div className="pointer-events-none absolute left-[1.25vw] top-[1.5vh] z-20 flex items-center gap-[0.55vw] rounded-full border border-white/85 bg-white/78 px-[0.8vw] py-[0.62vh] shadow-[0_0.7rem_1.7rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
+            <div className="pointer-events-none absolute left-[1.25cqw] top-[1.5cqh] z-20 flex items-center gap-[0.55cqw] rounded-full border border-white/85 bg-white/78 px-[0.8cqw] py-[0.62cqh] shadow-[0_0.7rem_1.7rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
               <Rotate3D aria-hidden="true" color={detail.accent} size={20} strokeWidth={1.8} />
-              <span className="text-[clamp(0.56rem,0.64vw,0.78rem)] font-semibold uppercase tracking-[0.08em] text-control-text">360 Desk View</span>
+              <span className="text-[clamp(0.56rem,0.64cqw,0.78rem)] font-semibold uppercase tracking-[0.08em] text-control-text">360 Desk View</span>
             </div>
             <button
               aria-label="Maximize 360 desk view"
-              className="absolute right-[1.25vw] top-[1.5vh] z-30 inline-flex items-center gap-[0.52vw] rounded-full border border-white/85 bg-white/82 px-[0.82vw] py-[0.62vh] text-[clamp(0.56rem,0.64vw,0.78rem)] font-semibold uppercase tracking-[0.08em] text-control-text shadow-[0_0.7rem_1.7rem_rgb(15_23_42/0.08)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:text-control-warm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-control-warm/70"
+              className="absolute right-[1.25cqw] top-[1.5cqh] z-30 inline-flex items-center gap-[0.52cqw] rounded-full border border-white/85 bg-white/82 px-[0.82cqw] py-[0.62cqh] text-[clamp(0.56rem,0.64cqw,0.78rem)] font-semibold uppercase tracking-[0.08em] text-control-text shadow-[0_0.7rem_1.7rem_rgb(15_23_42/0.08)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:text-control-warm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-control-warm/70"
               onClick={() => setViewerMaximized(true)}
               type="button"
             >
@@ -816,9 +822,9 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
                   transition={{ duration: state.reducedMotion ? 0.01 : 0.62, ease: precisionEase }}
                 />
                 <div className="pointer-events-none absolute inset-0 mix-blend-multiply opacity-[0.16]" style={{ background: `linear-gradient(135deg, ${selectedColor.surface}, transparent 48%, ${selectedColor.edge})` }} />
-                <div className="pointer-events-none absolute right-[1.25vw] top-[1.5vh] z-20 rounded-[0.72rem] border border-white/85 bg-white/78 px-[0.85vw] py-[0.7vh] shadow-[0_0.7rem_1.7rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
-                  <p className="text-[clamp(0.5rem,0.58vw,0.7rem)] font-semibold uppercase tracking-[0.08em] text-control-text">GLB slot ready</p>
-                  <p className="mt-[0.22vh] text-[clamp(0.5rem,0.58vw,0.7rem)] leading-[1.2] text-slate-600">{detail.modelPath}</p>
+                <div className="pointer-events-none absolute right-[1.25cqw] top-[1.5cqh] z-20 rounded-[0.72rem] border border-white/85 bg-white/78 px-[0.85cqw] py-[0.7cqh] shadow-[0_0.7rem_1.7rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
+                  <p className="text-[clamp(0.5rem,0.58cqw,0.7rem)] font-semibold uppercase tracking-[0.08em] text-control-text">GLB slot ready</p>
+                  <p className="mt-[0.22cqh] text-[clamp(0.5rem,0.58cqw,0.7rem)] leading-[1.2] text-slate-600">{detail.modelPath}</p>
                 </div>
               </>
             )}
@@ -870,10 +876,10 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
               />
             ) : null}
 
-            <div className="absolute bottom-[2.3vh] left-[1.35vw] right-[1.35vw] z-30 grid grid-cols-[1fr_auto] items-end gap-[1vw]">
-              <div className="rounded-[0.82rem] border border-white/90 bg-white/84 px-[1vw] py-[1.05vh] shadow-[0_0.85rem_1.8rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
-                <p className="text-[clamp(0.62rem,0.7vw,0.84rem)] font-semibold text-control-text">{selectedView.label} view</p>
-                <p className="mt-[0.25vh] text-[clamp(0.58rem,0.66vw,0.78rem)] leading-[1.28] text-slate-700">{selectedView.caption}</p>
+            <div className="absolute bottom-[2.3cqh] left-[1.35cqw] right-[1.35cqw] z-30 grid grid-cols-[1fr_auto] items-end gap-[1cqw]">
+              <div className="rounded-[0.82rem] border border-white/90 bg-white/84 px-[1cqw] py-[1.05cqh] shadow-[0_0.85rem_1.8rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
+                <p className="text-[clamp(0.62rem,0.7cqw,0.84rem)] font-semibold text-control-text">{selectedView.label} view</p>
+                <p className="mt-[0.25cqh] text-[clamp(0.58rem,0.66cqw,0.78rem)] leading-[1.28] text-slate-700">{selectedView.caption}</p>
               </div>
               <div className="flex rounded-full border border-white/90 bg-white/84 p-[0.28rem] shadow-[0_0.85rem_1.8rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
                 {detail.views.map((view) => {
@@ -881,7 +887,7 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
                   return (
                     <button
                       aria-pressed={active}
-                      className="rounded-full px-[0.82vw] py-[0.62vh] text-[clamp(0.52rem,0.58vw,0.7rem)] font-semibold uppercase tracking-[0.04em] transition"
+                      className="rounded-full px-[0.82cqw] py-[0.62cqh] text-[clamp(0.52rem,0.58cqw,0.7rem)] font-semibold uppercase tracking-[0.04em] transition"
                       key={view.id}
                       onClick={() => setSelectedView(view)}
                       style={{ backgroundColor: active ? detail.accent : "transparent", color: active ? "#ffffff" : "#111827" }}
@@ -895,28 +901,28 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
             </div>
           </div>
 
-          <div className="grid min-h-0 grid-rows-[0.78fr_0.9fr_0.82fr] gap-[1vh]">
+          <div className="grid min-h-0 grid-rows-[0.78fr_0.9fr_0.82fr] gap-[1cqh]">
             <motion.div
               animate={{ opacity: 1, x: 0 }}
-              className="rounded-[1rem] border border-white/85 bg-white/78 p-[1.05vw] shadow-[0_1rem_2.45rem_rgb(15_23_42/0.085)] backdrop-blur-xl"
+              className="rounded-[1rem] border border-white/85 bg-white/78 p-[1.05cqw] shadow-[0_1rem_2.45rem_rgb(15_23_42/0.085)] backdrop-blur-xl"
               initial={state.reducedMotion ? false : { opacity: 0, x: 18 }}
               transition={{ duration: 0.7, delay: 0.28, ease: processEase }}
             >
-              <div className="flex items-center gap-[0.65vw]">
+              <div className="flex items-center gap-[0.65cqw]">
                 <Palette aria-hidden="true" color={detail.accent} size={24} strokeWidth={1.85} />
-                <h2 className="text-[clamp(0.8rem,0.94vw,1.12rem)] font-semibold uppercase tracking-[0.02em] text-control-text">Color options</h2>
+                <h2 className="text-[clamp(0.8rem,0.94cqw,1.12rem)] font-semibold uppercase tracking-[0.02em] text-control-text">Color options</h2>
               </div>
-              <div className="mt-[1.1vh] grid grid-cols-4 gap-[0.5vw]">
+              <div className="mt-[1.1cqh] grid grid-cols-4 gap-[0.5cqw]">
                 {detail.colors.map((color) => (
                   <button
                     aria-pressed={color.name === selectedColor.name}
-                    className="group rounded-[0.7rem] border border-slate-200 bg-white/76 p-[0.42vw] text-left shadow-[0_0.55rem_1.2rem_rgb(15_23_42/0.045)] transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-control-warm/70"
+                    className="group rounded-[0.7rem] border border-slate-200 bg-white/76 p-[0.42cqw] text-left shadow-[0_0.55rem_1.2rem_rgb(15_23_42/0.045)] transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-control-warm/70"
                     key={color.name}
                     onClick={() => setSelectedColor(color)}
                     type="button"
                   >
-                    <span className="block h-[2.2vh] rounded-[0.42rem] border border-slate-200" style={{ background: `linear-gradient(90deg, ${color.surface} 0 62%, ${color.edge} 62% 100%)` }} />
-                    <span className="mt-[0.45vh] block text-[clamp(0.46rem,0.52vw,0.62rem)] font-semibold leading-[1.08] text-control-text">{color.name}</span>
+                    <span className="block h-[2.2cqh] rounded-[0.42rem] border border-slate-200" style={{ background: `linear-gradient(90deg, ${color.surface} 0 62%, ${color.edge} 62% 100%)` }} />
+                    <span className="mt-[0.45cqh] block text-[clamp(0.46rem,0.52cqw,0.62rem)] font-semibold leading-[1.08] text-control-text">{color.name}</span>
                   </button>
                 ))}
               </div>
@@ -924,23 +930,23 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
 
             <motion.div
               animate={{ opacity: 1, x: 0 }}
-              className="row-span-2 min-h-0 overflow-hidden rounded-[1rem] border border-white/85 bg-white/84 p-[1.05vw] shadow-[0_1rem_2.45rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
+              className="row-span-2 min-h-0 overflow-hidden rounded-[1rem] border border-white/85 bg-white/84 p-[1.05cqw] shadow-[0_1rem_2.45rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
               initial={state.reducedMotion ? false : { opacity: 0, x: 18 }}
               transition={{ duration: 0.7, delay: 0.38, ease: processEase }}
             >
-              <div className="flex items-center gap-[0.65vw]">
+              <div className="flex items-center gap-[0.65cqw]">
                 <UserRound aria-hidden="true" color={detail.accent} size={24} strokeWidth={1.85} />
-                <h2 className="text-[clamp(0.84rem,0.98vw,1.16rem)] font-semibold tracking-[0.01em] text-control-text">Ergonomic Console Views</h2>
+                <h2 className="text-[clamp(0.84rem,0.98cqw,1.16rem)] font-semibold tracking-[0.01em] text-control-text">Ergonomic Console Views</h2>
               </div>
-              <div className="mt-[1.05vh] grid h-[calc(100%-2.1rem)] min-h-0 grid-rows-4 overflow-hidden rounded-[0.9rem] border border-slate-200/70 bg-white/62">
+              <div className="mt-[1.05cqh] grid h-[calc(100%-2.1rem)] min-h-0 grid-rows-4 overflow-hidden rounded-[0.9rem] border border-slate-200/70 bg-white/62">
                 {ergonomicConsoleViews.map((view) => (
                   <div className="grid min-h-0 grid-cols-[43%_1fr] border-b border-slate-200/70 last:border-b-0" key={view.title}>
-                    <div className="m-[0.45vw] overflow-hidden rounded-[0.62rem] border border-slate-200/70 bg-slate-50">
+                    <div className="m-[0.45cqw] overflow-hidden rounded-[0.62rem] border border-slate-200/70 bg-slate-50">
                       <img alt={view.title} className="h-full w-full object-contain" src={view.image} />
                     </div>
-                    <div className="flex min-w-0 flex-col justify-center py-[0.62vh] pl-[0.25vw] pr-[0.8vw]">
-                      <p className="text-[clamp(0.72rem,0.86vw,1.02rem)] font-semibold leading-[1.05] text-control-text">{view.title}</p>
-                      <p className="mt-[0.42vh] text-[0.72rem] leading-[1.25] text-slate-700 md:text-[0.6vw]">{view.description}</p>
+                    <div className="flex min-w-0 flex-col justify-center py-[0.62cqh] pl-[0.25cqw] pr-[0.8cqw]">
+                      <p className="text-[clamp(0.72rem,0.86cqw,1.02rem)] font-semibold leading-[1.05] text-control-text">{view.title}</p>
+                      <p className="mt-[0.42cqh] text-[0.72rem] leading-[1.25] text-slate-700 md:text-[0.6cqw]">{view.description}</p>
                     </div>
                   </div>
                 ))}
@@ -951,15 +957,15 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-[9.65vh] left-[2.75vw] right-[2.75vw] overflow-hidden rounded-[0.9rem] border border-white/85 bg-white/82 shadow-[0_1rem_2.6rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
+          className="absolute bottom-[9.65cqh] left-[2.75cqw] right-[2.75cqw] overflow-hidden rounded-[0.9rem] border border-white/85 bg-white/82 shadow-[0_1rem_2.6rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
           initial={state.reducedMotion ? false : { opacity: 0, y: 20 }}
           transition={{ duration: 0.72, delay: 0.54, ease: popEase }}
         >
-          <div className="grid grid-cols-8 divide-x divide-slate-200/80 max-lg:grid-cols-4 max-lg:divide-x-0 max-lg:divide-y max-sm:grid-cols-2">
+          <div className="grid grid-cols-8 divide-x divide-slate-200/80 [@container_stage_(max-width:1023px)]:grid-cols-4 [@container_stage_(max-width:1023px)]:divide-x-0 [@container_stage_(max-width:1023px)]:divide-y [@container_stage_(max-width:639px)]:grid-cols-2">
             {consoleFeatureStripItems.map((item) => (
-              <div className="grid min-h-[10.6vh] place-items-center px-[0.68vw] py-[0.9vh] text-center" key={item.label}>
-                <img alt="" className="h-[clamp(1.65rem,2.45vw,2.65rem)] w-[clamp(1.65rem,2.45vw,2.65rem)] object-contain" src={item.icon} />
-                <p className="mt-[0.45vh] max-w-[8.5rem] text-[clamp(0.54rem,0.64vw,0.78rem)] font-semibold leading-[1.08] text-control-text">{item.label}</p>
+              <div className="grid min-h-[10.6cqh] place-items-center px-[0.68cqw] py-[0.9cqh] text-center" key={item.label}>
+                <img alt="" className="h-[clamp(1.65rem,2.45cqw,2.65rem)] w-[clamp(1.65rem,2.45cqw,2.65rem)] object-contain" src={item.icon} />
+                <p className="mt-[0.45cqh] max-w-[8.5rem] text-[clamp(0.54rem,0.64cqw,0.78rem)] font-semibold leading-[1.08] text-control-text">{item.label}</p>
               </div>
             ))}
           </div>
@@ -967,7 +973,7 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="pws-scene-control-dock absolute bottom-[0.1vh] left-[0.1vw] z-40 justify-start"
+          className="pws-scene-control-dock absolute bottom-[0.1cqh] left-[0.1cqw] z-40 justify-start"
           initial={state.reducedMotion ? false : { opacity: 0, y: 18 }}
           transition={{ duration: 0.56, delay: 0.66, ease: processEase }}
         >
@@ -999,20 +1005,20 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
         {viewerMaximized ? (
           <motion.div
             animate={{ opacity: 1 }}
-            className="absolute inset-[1.7vw] z-50 rounded-[1.25rem] border border-white/90 bg-white/90 shadow-[0_2.4rem_6rem_rgb(15_23_42/0.24)] backdrop-blur-2xl"
+            className="absolute inset-[1.7cqw] z-50 rounded-[1.25rem] border border-white/90 bg-white/90 shadow-[0_2.4rem_6rem_rgb(15_23_42/0.24)] backdrop-blur-2xl"
             exit={{ opacity: 0 }}
             initial={state.reducedMotion ? false : { opacity: 0 }}
             transition={{ duration: 0.28, ease: precisionEase }}
           >
             <div className="absolute inset-0 overflow-hidden rounded-[1.25rem] bg-[radial-gradient(circle_at_50%_13%,rgb(255_255_255/1)_0%,rgb(244_247_250/0.98)_46%,rgb(223_230_238/0.98)_100%)]" />
             <div className="pointer-events-none absolute inset-x-[13%] bottom-[13%] h-[14%] rounded-full bg-[radial-gradient(ellipse_at_center,rgb(15_23_42/0.2)_0%,rgb(15_23_42/0.08)_36%,transparent_72%)] blur-2xl" />
-            <div className="absolute left-[2vw] top-[6.2vh] z-30 flex items-center gap-[0.75vw] rounded-full border border-white/85 bg-white/80 px-[1vw] py-[0.82vh] shadow-[0_0.8rem_2rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
+            <div className="absolute left-[2cqw] top-[6.2cqh] z-30 flex items-center gap-[0.75cqw] rounded-full border border-white/85 bg-white/80 px-[1cqw] py-[0.82cqh] shadow-[0_0.8rem_2rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
               <Rotate3D aria-hidden="true" color={detail.accent} size={22} strokeWidth={1.8} />
-              <span className="text-[clamp(0.66rem,0.78vw,0.92rem)] font-semibold uppercase tracking-[0.08em] text-control-text">{detail.name} 360 Desk View</span>
+              <span className="text-[clamp(0.66rem,0.78cqw,0.92rem)] font-semibold uppercase tracking-[0.08em] text-control-text">{detail.name} 360 Desk View</span>
             </div>
             <button
               aria-label="Restore 360 desk view"
-              className="absolute right-[2vw] top-[6.2vh] z-30 inline-flex items-center gap-[0.6vw] rounded-full border border-white/85 bg-white/84 px-[1vw] py-[0.82vh] text-[clamp(0.66rem,0.78vw,0.92rem)] font-semibold uppercase tracking-[0.08em] text-control-text shadow-[0_0.8rem_2rem_rgb(15_23_42/0.08)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:text-control-warm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-control-warm/70"
+              className="absolute right-[2cqw] top-[6.2cqh] z-30 inline-flex items-center gap-[0.6cqw] rounded-full border border-white/85 bg-white/84 px-[1cqw] py-[0.82cqh] text-[clamp(0.66rem,0.78cqw,0.92rem)] font-semibold uppercase tracking-[0.08em] text-control-text shadow-[0_0.8rem_2rem_rgb(15_23_42/0.08)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:text-control-warm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-control-warm/70"
               onClick={() => setViewerMaximized(false)}
               type="button"
             >
@@ -1029,7 +1035,7 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
                 camera-controls
                 camera-orbit={enlargedCameraOrbit(selectedView.cameraOrbit)}
                 camera-target="0m 0.32m 0m"
-                className="absolute bottom-[8.4vh] left-[2.2vw] right-[2.2vw] top-[8.7vh] z-10 h-auto w-auto cursor-grab active:cursor-grabbing"
+                className="absolute bottom-[8.4cqh] left-[2.2cqw] right-[2.2cqw] top-[8.7cqh] z-10 h-auto w-auto cursor-grab active:cursor-grabbing"
                 disable-tap
                 environment-image="neutral"
                 exposure="1.18"
@@ -1042,23 +1048,23 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
                 shadow-intensity="1"
                 shadow-softness="0.92"
                 src={detail.modelPath}
-                style={{ background: "transparent", display: "block", height: "calc(100% - 17.1vh)", width: "calc(100% - 4.4vw)" }}
+                style={{ background: "transparent", display: "block", height: "calc(100% - 17.1cqh)", width: "calc(100% - 4.4cqw)" }}
               />
             ) : (
               <motion.img
                 alt={`${detail.name} ${detail.title} enlarged`}
                 animate={{ transform: selectedView.transform }}
-                className="absolute bottom-[10vh] left-[3vw] right-[3vw] top-[4.8vh] z-10 h-auto w-auto object-contain"
+                className="absolute bottom-[10cqh] left-[3cqw] right-[3cqw] top-[4.8cqh] z-10 h-auto w-auto object-contain"
                 src={detail.image}
                 transition={{ duration: state.reducedMotion ? 0.01 : 0.62, ease: precisionEase }}
               />
             )}
-            <div className="absolute bottom-[2.3vh] right-[2vw] z-30 rounded-[1rem] border border-white/90 bg-white/86 px-[0.9vw] py-[0.78vh] shadow-[0_0.85rem_2rem_rgb(15_23_42/0.1)] backdrop-blur-xl">
-              <div className="flex items-center gap-[0.55vw]">
+            <div className="absolute bottom-[2.3cqh] right-[2cqw] z-30 rounded-[1rem] border border-white/90 bg-white/86 px-[0.9cqw] py-[0.78cqh] shadow-[0_0.85rem_2rem_rgb(15_23_42/0.1)] backdrop-blur-xl">
+              <div className="flex items-center gap-[0.55cqw]">
                 <Palette aria-hidden="true" color={detail.accent} size={18} strokeWidth={1.85} />
-                <span className="text-[clamp(0.58rem,0.66vw,0.78rem)] font-semibold uppercase tracking-[0.07em] text-control-text">Color Options</span>
+                <span className="text-[clamp(0.58rem,0.66cqw,0.78rem)] font-semibold uppercase tracking-[0.07em] text-control-text">Color Options</span>
               </div>
-              <div className="mt-[0.72vh] flex items-center gap-[0.42vw]">
+              <div className="mt-[0.72cqh] flex items-center gap-[0.42cqw]">
                 {detail.colors.map((color) => {
                   const active = color.name === selectedColor.name;
                   return (
@@ -1083,13 +1089,13 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
                 })}
               </div>
             </div>
-            <div className="absolute bottom-[2.3vh] left-1/2 z-30 flex -translate-x-1/2 rounded-full border border-white/90 bg-white/86 p-[0.35rem] shadow-[0_0.85rem_2rem_rgb(15_23_42/0.1)] backdrop-blur-xl">
+            <div className="absolute bottom-[2.3cqh] left-1/2 z-30 flex -translate-x-1/2 rounded-full border border-white/90 bg-white/86 p-[0.35rem] shadow-[0_0.85rem_2rem_rgb(15_23_42/0.1)] backdrop-blur-xl">
               {detail.views.map((view) => {
                 const active = view.id === selectedView.id;
                 return (
                   <button
                     aria-pressed={active}
-                    className="rounded-full px-[1.15vw] py-[0.78vh] text-[clamp(0.66rem,0.76vw,0.9rem)] font-semibold uppercase tracking-[0.05em] transition"
+                    className="rounded-full px-[1.15cqw] py-[0.78cqh] text-[clamp(0.66rem,0.76cqw,0.9rem)] font-semibold uppercase tracking-[0.05em] transition"
                     key={view.id}
                     onClick={() => setSelectedView(view)}
                     style={{ backgroundColor: active ? detail.accent : "transparent", color: active ? "#ffffff" : "#111827" }}
