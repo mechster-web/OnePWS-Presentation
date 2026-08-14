@@ -34,7 +34,7 @@ export function JourneySelectionScene({
       <AmbientLayer atmosphere="linework" intensity="low" />
       <StructuralLayer variant="architectural" />
       <SafeArea>
-        <div className="grid h-full grid-cols-[minmax(0,0.68fr)_minmax(0,1.32fr)] items-center gap-[var(--pws-space-6)] max-lg:grid-cols-1">
+        <div className="grid h-full grid-cols-[minmax(0,0.68fr)_minmax(0,1.32fr)] items-center gap-[var(--pws-space-6)] [@container_stage_(max-width:1023px)]:grid-cols-1">
           <motion.div
             animate={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: reducedMotion ? 0 : -14 }}

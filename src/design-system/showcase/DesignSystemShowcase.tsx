@@ -52,7 +52,7 @@ export function DesignSystemShowcase() {
         </div>
       </section>
 
-      <section className="pws-showcase-section grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+      <section className="pws-showcase-section grid gap-10 [grid-template-columns:repeat(auto-fit,minmax(min(22rem,100%),1fr))]">
         <div>
           <p className="pws-technical-label">Typography</p>
           <h2 className="pws-display-headline mt-4">Designed around human decisions.</h2>
@@ -70,7 +70,7 @@ export function DesignSystemShowcase() {
 
       <section className="pws-showcase-section">
         <h2 className="pws-chapter-title">Surfaces, Cues And Audio States</h2>
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className="mt-8 grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(min(15rem,100%),1fr))]">
           <div className="pws-glass-surface p-5">
             <p className="pws-technical-label">Surface</p>
             <p className="mt-3 text-sm text-[var(--pws-theme-muted)]">Restraint-first glass, used sparingly.</p>
@@ -91,7 +91,7 @@ export function DesignSystemShowcase() {
         </div>
       </section>
 
-      <section className="pws-showcase-section grid gap-8 lg:grid-cols-2">
+      <section className="pws-showcase-section grid gap-8 [grid-template-columns:repeat(auto-fit,minmax(min(22rem,100%),1fr))]">
         <MemoryMoment active>
           <div className="min-h-[22rem] overflow-hidden border border-[var(--pws-theme-line)] bg-[radial-gradient(circle_at_62%_35%,rgb(207_31_43/0.18),transparent_26%),linear-gradient(135deg,var(--pws-theme-bg),var(--pws-theme-surface))] p-8">
             <p className="pws-technical-label">Memory moment</p>
@@ -106,7 +106,7 @@ export function DesignSystemShowcase() {
 
       <section className="pws-showcase-section">
         <h2 className="pws-chapter-title">Navigation States</h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
+        <div className="mt-6 grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(min(15rem,100%),1fr))]">
           {["visible", "minimal", "hidden-cinematic"].map((state) => (
             <div className="pws-glass-surface p-5" key={state}>
               <p className="pws-technical-label">{state}</p>

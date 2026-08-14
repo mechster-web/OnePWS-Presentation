@@ -5,3 +5,6 @@ release/
 output/
 *.log
 
+
+# Visual audit screenshots (regenerate with: npm run audit:visual:shots)
+docs/visual-audit/

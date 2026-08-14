@@ -23,6 +23,7 @@ import {
   ShieldCheck,
   SlidersHorizontal,
   ThumbsUp,
+  TriangleAlert,
   UsersRound,
   UserRound,
   Weight,
@@ -308,10 +309,10 @@ function IntelligentFeaturesReferenceStage({ chapter }: { chapter: Chapter }) {
   return (
     <article className="relative h-full w-full overflow-hidden bg-white text-control-text">
       <div className="absolute inset-0 bg-[linear-gradient(116deg,#ffffff_0%,#fbfcfd_58%,#eef4f7_100%)]" />
-      <div className="pointer-events-none absolute inset-x-0 top-[8.6vh] h-px bg-slate-200/80" />
+      <div className="pointer-events-none absolute inset-x-0 top-[8.6cqh] h-px bg-slate-200/80" />
       <motion.div
         animate={reducedMotion ? undefined : { opacity: [0.94, 1, 0.96], y: [0, -3, 0] }}
-        className="pointer-events-none absolute right-[16.6vw] top-[7.45vh] h-[20.6vh] w-[42vw] overflow-hidden"
+        className="pointer-events-none absolute right-[16.6cqw] top-[7.45cqh] h-[20.6cqh] w-[42cqw] overflow-hidden"
         initial={false}
         transition={{ duration: 4.8, ease: "easeInOut", repeat: Infinity }}
       >
@@ -319,27 +320,27 @@ function IntelligentFeaturesReferenceStage({ chapter }: { chapter: Chapter }) {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_86%,rgb(15_23_42/0.12),transparent_40%)]" />
       </motion.div>
 
-      <section className="absolute inset-x-[1.65vw] top-[9.65vh] bottom-[7.6vh] z-10">
+      <section className="absolute inset-x-[1.65cqw] top-[9.65cqh] bottom-[7.6cqh] z-10">
         <motion.aside
           animate={{ opacity: 1, y: 0 }}
-          className="absolute left-[0.35vw] top-[0.25vh] w-[37.5vw]"
+          className="absolute left-[0.35cqw] top-[0.25cqh] w-[37.5cqw]"
           initial={false}
           transition={{ duration: 0.78, ease }}
         >
-          <p className="text-[clamp(0.58rem,0.68vw,0.82rem)] font-semibold uppercase tracking-[0.58em] text-slate-700">Unified Control Room</p>
-          <h1 className="mt-[0.95vh] text-[clamp(2.08rem,3.22vw,4.4rem)] font-bold uppercase leading-[0.94] tracking-normal md:text-[2.5vw]">
+          <p className="text-[clamp(0.58rem,0.68cqw,0.82rem)] font-semibold uppercase tracking-[0.58em] text-slate-700">Unified Control Room</p>
+          <h1 className="mt-[0.95cqh] text-[clamp(2.08rem,3.22cqw,4.4rem)] font-bold uppercase leading-[0.94] tracking-normal md:text-[2.5cqw]">
             <span className="block text-control-text">Intelligent by Design.</span>
             <span className="block text-[#d51d2a]">Smarter by Nature.</span>
           </h1>
-          <div className="mt-[1.05vh] h-[3px] w-[3.3rem] bg-control-warm" />
-          <p className="mt-[0.92vh] max-w-[34rem] text-[clamp(0.78rem,0.88vw,1.02rem)] font-medium leading-[1.3] text-slate-800 md:text-[0.8vw]">
+          <div className="mt-[1.05cqh] h-[3px] w-[3.3rem] bg-control-warm" />
+          <p className="mt-[0.92cqh] max-w-[34rem] text-[clamp(0.78rem,0.88cqw,1.02rem)] font-medium leading-[1.3] text-slate-800 md:text-[0.8cqw]">
             Our intelligent console ecosystem is engineered to adapt, assist and elevate every operator, every shift, every day.
           </p>
         </motion.aside>
 
         <motion.aside
           animate={{ opacity: 1, x: 0 }}
-          className="absolute right-[0.35vw] top-[0.35vh] grid h-[21.8vh] w-[14.8vw] content-center gap-[1.15vh] rounded-[0.85rem] border border-white/80 bg-white/50 p-[0.88vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.95),0_1rem_2.7rem_rgb(15_23_42/0.08)] backdrop-blur-[28px]"
+          className="absolute right-[0.35cqw] top-[0.35cqh] grid h-[21.8cqh] w-[14.8cqw] content-center gap-[1.15cqh] rounded-[0.85rem] border border-white/80 bg-white/50 p-[0.88cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.95),0_1rem_2.7rem_rgb(15_23_42/0.08)] backdrop-blur-[28px]"
           initial={false}
           transition={{ duration: 0.72, delay: 0.08, ease }}
         >
@@ -352,7 +353,7 @@ function IntelligentFeaturesReferenceStage({ chapter }: { chapter: Chapter }) {
             return (
               <motion.div
                 animate={reducedMotion ? undefined : { opacity: [0.86, 1, 0.9] }}
-                className="grid grid-cols-[1.85rem_minmax(0,1fr)] gap-[0.62vw]"
+                className="grid grid-cols-[1.85rem_minmax(0,1fr)] gap-[0.62cqw]"
                 key={item.title}
                 transition={{ duration: 3.2, delay: index * 0.35, repeat: Infinity, ease: "easeInOut" }}
               >
@@ -360,8 +361,8 @@ function IntelligentFeaturesReferenceStage({ chapter }: { chapter: Chapter }) {
                   <Icon aria-hidden="true" size={19} strokeWidth={1.75} />
                 </span>
                 <div>
-                  <h2 className="text-[clamp(0.58rem,0.66vw,0.78rem)] font-semibold uppercase tracking-[0.1em] text-[#d51d2a]">{item.title}</h2>
-                  <p className="mt-0.5 text-[clamp(0.48rem,0.55vw,0.64rem)] font-medium leading-[1.2] text-slate-700">{item.detail}</p>
+                  <h2 className="text-[clamp(0.58rem,0.66cqw,0.78rem)] font-semibold uppercase tracking-[0.1em] text-[#d51d2a]">{item.title}</h2>
+                  <p className="mt-0.5 text-[clamp(0.48rem,0.55cqw,0.64rem)] font-medium leading-[1.2] text-slate-700">{item.detail}</p>
                 </div>
               </motion.div>
             );
@@ -370,7 +371,7 @@ function IntelligentFeaturesReferenceStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute inset-x-[0.1vw] top-[27.4vh] bottom-[10.45vh] grid grid-cols-5 grid-rows-2 gap-x-[0.78vw] gap-y-[1.18vh]"
+          className="absolute inset-x-[0.1cqw] top-[27.4cqh] bottom-[10.45cqh] grid grid-cols-5 grid-rows-2 gap-x-[0.78cqw] gap-y-[1.18cqh]"
           initial={false}
           transition={{ duration: 0.82, delay: 0.12, ease }}
         >
@@ -381,7 +382,7 @@ function IntelligentFeaturesReferenceStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-[0.35vh] left-[19.6vw] right-[0.1vw] grid h-[7.3vh] grid-cols-3 overflow-hidden rounded-[0.72rem] border border-white/18 bg-[linear-gradient(135deg,#9f101b,#d51d2a)] text-white shadow-[inset_0_1px_0_rgb(255_255_255/0.22),0_1rem_2.4rem_rgb(213_29_42/0.18)]"
+          className="absolute bottom-[0.35cqh] left-[19.6cqw] right-[0.1cqw] grid h-[7.3cqh] grid-cols-3 overflow-hidden rounded-[0.72rem] border border-white/18 bg-[linear-gradient(135deg,#9f101b,#d51d2a)] text-white shadow-[inset_0_1px_0_rgb(255_255_255/0.22),0_1rem_2.4rem_rgb(213_29_42/0.18)]"
           initial={false}
           transition={{ duration: 0.72, delay: 0.38, ease }}
         >
@@ -392,11 +393,11 @@ function IntelligentFeaturesReferenceStage({ chapter }: { chapter: Chapter }) {
           ].map((item, index) => {
             const Icon = item.Icon;
             return (
-              <div className={`grid grid-cols-[2.35rem_minmax(0,1fr)] items-center gap-[0.9vw] px-[1.5vw] ${index ? "border-l border-white/28" : ""}`} key={item.title}>
+              <div className={`grid grid-cols-[2.35rem_minmax(0,1fr)] items-center gap-[0.9cqw] px-[1.5cqw] ${index ? "border-l border-white/28" : ""}`} key={item.title}>
                 <Icon aria-hidden="true" className="text-white" size={29} strokeWidth={1.6} />
                 <div>
-                  <h2 className="text-[0.68rem] font-semibold uppercase tracking-[0.08em] md:text-[0.7vw]">{item.title}</h2>
-                  <p className="mt-0.5 text-[0.58rem] font-medium leading-[1.22] text-white/88 md:text-[0.55vw]">{item.detail}</p>
+                  <h2 className="text-[0.68rem] font-semibold uppercase tracking-[0.08em] md:text-[0.7cqw]">{item.title}</h2>
+                  <p className="mt-0.5 text-[0.58rem] font-medium leading-[1.22] text-white/88 md:text-[0.55cqw]">{item.detail}</p>
                 </div>
               </div>
             );
@@ -405,7 +406,7 @@ function IntelligentFeaturesReferenceStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="pws-scene-control-dock absolute bottom-[0.1vh] left-[0.1vw] z-40 justify-start"
+          className="pws-scene-control-dock absolute bottom-[0.1cqh] left-[0.1cqw] z-40 justify-start"
           initial={false}
           transition={{ duration: 0.62, delay: 0.82, ease }}
         >
@@ -440,7 +441,7 @@ function IntelligentFeaturesReferenceStage({ chapter }: { chapter: Chapter }) {
 
       <motion.div
         animate={reducedMotion ? undefined : { x: ["-20%", "120%"], opacity: [0, 0.18, 0] }}
-        className="pointer-events-none absolute top-[30vh] h-px w-[48vw] bg-[linear-gradient(90deg,transparent,rgb(213_29_42/0.65),transparent)]"
+        className="pointer-events-none absolute top-[30cqh] h-px w-[48cqw] bg-[linear-gradient(90deg,transparent,rgb(213_29_42/0.65),transparent)]"
         initial={false}
         transition={{ duration: 2.8, delay: 0.6, ease, repeat: 1, repeatDelay: 1.5 }}
       />
@@ -463,10 +464,10 @@ function MechanicalStrengthConsoleStage({ chapter }: { chapter: Chapter }) {
   return (
     <article className="relative h-full w-full overflow-hidden bg-white text-control-text">
       <div className="absolute inset-0 bg-[linear-gradient(116deg,#ffffff_0%,#fbfcfd_56%,#eef4f7_100%)]" />
-      <div className="pointer-events-none absolute inset-x-0 top-[8.6vh] h-px bg-slate-200/80" />
+      <div className="pointer-events-none absolute inset-x-0 top-[8.6cqh] h-px bg-slate-200/80" />
       <motion.div
         animate={reducedMotion ? undefined : { opacity: [0.92, 1, 0.94], y: [0, -4, 0] }}
-        className="pointer-events-none absolute right-[19vw] top-[7.85vh] h-[20.8vh] w-[42vw] overflow-hidden"
+        className="pointer-events-none absolute right-[19cqw] top-[7.85cqh] h-[20.8cqh] w-[42cqw] overflow-hidden"
         initial={false}
         transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut" }}
       >
@@ -474,27 +475,27 @@ function MechanicalStrengthConsoleStage({ chapter }: { chapter: Chapter }) {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_84%,rgb(15_23_42/0.12),transparent_42%)]" />
       </motion.div>
 
-      <section className="absolute inset-x-[1.65vw] top-[9.75vh] bottom-[7.6vh] z-10">
+      <section className="absolute inset-x-[1.65cqw] top-[9.75cqh] bottom-[7.6cqh] z-10">
         <motion.aside
           animate={{ opacity: 1, y: 0 }}
-          className="absolute left-[0.35vw] top-[0.2vh] w-[38.2vw]"
+          className="absolute left-[0.35cqw] top-[0.2cqh] w-[38.2cqw]"
           initial={false}
           transition={{ duration: 0.72, ease }}
         >
-          <p className="text-[clamp(0.58rem,0.68vw,0.82rem)] font-semibold uppercase tracking-[0.58em] text-slate-700">Engineered to endure. Built to perform.</p>
-          <h1 className="mt-[0.9vh] text-[clamp(2rem,3.05vw,4.18rem)] font-bold uppercase leading-[0.94] tracking-normal md:text-[2.5vw]">
+          <p className="text-[clamp(0.58rem,0.68cqw,0.82rem)] font-semibold uppercase tracking-[0.58em] text-slate-700">Engineered to endure. Built to perform.</p>
+          <h1 className="mt-[0.9cqh] text-[clamp(2rem,3.05cqw,4.18rem)] font-bold uppercase leading-[0.94] tracking-normal md:text-[2.5cqw]">
             <span className="block text-control-text">Mechanical Strength.</span>
             <span className="block text-[#d51d2a]">Precision in Every Detail.</span>
           </h1>
-          <div className="mt-[1.35vh] h-[3px] w-[3.3rem] bg-control-warm" />
-          <p className="mt-[0.9vh] max-w-[34rem] text-[clamp(0.76rem,0.86vw,1rem)] font-medium leading-[1.3] text-slate-800 md:text-[0.8vw]">
+          <div className="mt-[1.35cqh] h-[3px] w-[3.3rem] bg-control-warm" />
+          <p className="mt-[0.9cqh] max-w-[34rem] text-[clamp(0.76rem,0.86cqw,1rem)] font-medium leading-[1.3] text-slate-800 md:text-[0.8cqw]">
             Every component is engineered for rugged performance, ease of assembly and long-term reliability in 24/7 mission-critical control rooms.
           </p>
         </motion.aside>
 
         <motion.aside
           animate={{ opacity: 1, x: 0 }}
-          className="absolute right-[0.35vw] top-[0.15vh] grid h-[22.45vh] w-[18.2vw] content-center gap-[0.92vh] rounded-[0.85rem] border border-white/80 bg-white/52 p-[0.95vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.95),0_1rem_2.7rem_rgb(15_23_42/0.08)] backdrop-blur-[28px]"
+          className="absolute right-[0.35cqw] top-[0.15cqh] grid h-[22.45cqh] w-[18.2cqw] content-center gap-[0.92cqh] rounded-[0.85rem] border border-white/80 bg-white/52 p-[0.95cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.95),0_1rem_2.7rem_rgb(15_23_42/0.08)] backdrop-blur-[28px]"
           initial={false}
           transition={{ duration: 0.72, delay: 0.08, ease }}
         >
@@ -506,13 +507,13 @@ function MechanicalStrengthConsoleStage({ chapter }: { chapter: Chapter }) {
           ].map((item) => {
             const Icon = item.Icon;
             return (
-              <div className="grid grid-cols-[1.85rem_minmax(0,1fr)] gap-[0.62vw]" key={item.title}>
+              <div className="grid grid-cols-[1.85rem_minmax(0,1fr)] gap-[0.62cqw]" key={item.title}>
                 <span className="grid h-[1.85rem] w-[1.85rem] place-items-center rounded-full border border-red-700/16 bg-white/54 text-[#d51d2a] shadow-[inset_0_1px_0_rgb(255_255_255/0.95),0_0.55rem_1.2rem_rgb(15_23_42/0.06)]">
                   <Icon aria-hidden="true" size={19} strokeWidth={1.75} />
                 </span>
                 <div>
-                  <h2 className="text-[clamp(0.56rem,0.64vw,0.76rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</h2>
-                  <p className="mt-0.5 text-[clamp(0.47rem,0.54vw,0.63rem)] font-medium leading-[1.22] text-slate-700">{item.detail}</p>
+                  <h2 className="text-[clamp(0.56rem,0.64cqw,0.76rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</h2>
+                  <p className="mt-0.5 text-[clamp(0.47rem,0.54cqw,0.63rem)] font-medium leading-[1.22] text-slate-700">{item.detail}</p>
                 </div>
               </div>
             );
@@ -521,7 +522,7 @@ function MechanicalStrengthConsoleStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute inset-x-0 top-[31vh] bottom-[10.65vh] grid grid-cols-5 grid-rows-2 gap-x-[0.78vw] gap-y-[1.18vh]"
+          className="absolute inset-x-0 top-[31cqh] bottom-[10.65cqh] grid grid-cols-5 grid-rows-2 gap-x-[0.78cqw] gap-y-[1.18cqh]"
           initial={false}
           transition={{ duration: 0.82, delay: 0.16, ease }}
         >
@@ -532,7 +533,7 @@ function MechanicalStrengthConsoleStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-[0.35vh] left-[19.6vw] right-0 grid grid-cols-5 overflow-hidden rounded-[0.72rem] border border-white/18 bg-[linear-gradient(135deg,#9f101b,#d51d2a)] text-white shadow-[inset_0_1px_0_rgb(255_255_255/0.22),0_1rem_2.4rem_rgb(213_29_42/0.18)]"
+          className="absolute bottom-[0.35cqh] left-[19.6cqw] right-0 grid grid-cols-5 overflow-hidden rounded-[0.72rem] border border-white/18 bg-[linear-gradient(135deg,#9f101b,#d51d2a)] text-white shadow-[inset_0_1px_0_rgb(255_255_255/0.22),0_1rem_2.4rem_rgb(213_29_42/0.18)]"
           initial={false}
           transition={{ duration: 0.72, delay: 0.38, ease }}
         >
@@ -545,11 +546,11 @@ function MechanicalStrengthConsoleStage({ chapter }: { chapter: Chapter }) {
           ].map((item, index) => {
             const Icon = item.Icon;
             return (
-              <div className={`grid grid-cols-[2.25rem_minmax(0,1fr)] items-center gap-[0.85vw] px-[1.15vw] py-[1.05vh] ${index ? "border-l border-white/28" : ""}`} key={item.title}>
+              <div className={`grid grid-cols-[2.25rem_minmax(0,1fr)] items-center gap-[0.85cqw] px-[1.15cqw] py-[1.05cqh] ${index ? "border-l border-white/28" : ""}`} key={item.title}>
                 <Icon aria-hidden="true" className="text-white" size={28} strokeWidth={1.6} />
                 <div>
-                  <h2 className="text-[0.68rem] font-semibold uppercase tracking-[0.08em] md:text-[0.58vw]">{item.title}</h2>
-                  <p className="mt-0.5 text-[0.56rem] font-medium leading-[1.2] text-white/86 md:text-[0.52vw]">{item.detail}</p>
+                  <h2 className="text-[0.68rem] font-semibold uppercase tracking-[0.08em] md:text-[0.58cqw]">{item.title}</h2>
+                  <p className="mt-0.5 text-[0.56rem] font-medium leading-[1.2] text-white/86 md:text-[0.52cqw]">{item.detail}</p>
                 </div>
               </div>
             );
@@ -558,7 +559,7 @@ function MechanicalStrengthConsoleStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="pws-scene-control-dock absolute bottom-[0.1vh] left-[0.1vw] z-40 justify-start"
+          className="pws-scene-control-dock absolute bottom-[0.1cqh] left-[0.1cqw] z-40 justify-start"
           initial={false}
           transition={{ duration: 0.62, delay: 0.82, ease }}
         >
@@ -607,10 +608,10 @@ function MechanicalStrengthCard({ item, index, reducedMotion }: { item: Mechanic
     >
       <span className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgb(255_255_255/0.84),rgb(255_255_255/0.38)_48%,rgb(232_238_245/0.5))]" />
       <span className="pointer-events-none absolute -right-[18%] -top-[30%] h-[6rem] w-[6rem] rounded-full bg-white/48 blur-2xl" />
-      <div className="relative z-10 grid h-[35%] grid-cols-[minmax(0,1fr)_1.8rem] gap-[0.48vw] px-[0.58vw] py-[0.88vh] pl-[2.9rem]">
-        <span className="absolute left-0 top-0 grid h-[1.55rem] min-w-[2.15rem] place-items-center rounded-br-md rounded-tl-[0.78rem] bg-control-warm px-2 text-[clamp(0.64rem,0.72vw,0.82rem)] font-semibold leading-none text-white">{item.number}</span>
+      <div className="relative z-10 grid h-[35%] grid-cols-[minmax(0,1fr)_1.8rem] gap-[0.48cqw] px-[0.58cqw] py-[0.88cqh] pl-[2.9rem]">
+        <span className="absolute left-0 top-0 grid h-[1.55rem] min-w-[2.15rem] place-items-center rounded-br-md rounded-tl-[0.78rem] bg-control-warm px-2 text-[clamp(0.64rem,0.72cqw,0.82rem)] font-semibold leading-none text-white">{item.number}</span>
         <div className="min-w-0">
-          <h2 className="text-[clamp(0.52rem,0.6vw,0.72rem)] font-semibold uppercase leading-[1.08] text-control-text">{item.title}</h2>
+          <h2 className="text-[clamp(0.52rem,0.6cqw,0.72rem)] font-semibold uppercase leading-[1.08] text-control-text">{item.title}</h2>
         </div>
         <Icon aria-hidden="true" className="mt-0.5 text-slate-900/72" size={21} strokeWidth={1.65} />
       </div>
@@ -826,46 +827,63 @@ function IncidentResponseReferenceStage({ chapter }: { chapter: Chapter }) {
   return (
     <article className="relative h-full w-full overflow-hidden bg-white text-control-text">
       <div className="absolute inset-0 bg-[linear-gradient(116deg,#ffffff_0%,#fbfcfd_55%,#eef4f7_100%)]" />
-      <div className="pointer-events-none absolute inset-x-0 top-[8.6vh] h-px bg-slate-200/80" />
+      <div className="pointer-events-none absolute inset-x-0 top-[8.6cqh] h-px bg-slate-200/80" />
 
-      <section className="absolute inset-x-[1.7vw] top-[9.9vh] bottom-[7.05vh] z-10 grid grid-cols-[minmax(0,1.05fr)_minmax(34rem,0.95fr)] gap-[0.95vw]">
+      <section className="absolute inset-x-[1.7cqw] top-[9.9cqh] bottom-[7.05cqh] z-10 grid grid-cols-[minmax(0,1.05fr)_minmax(34rem,0.95fr)] gap-[0.95cqw]">
         <motion.div
           animate={{ opacity: 1, y: 0 }}
           className="relative min-h-0"
           initial={false}
           transition={{ duration: 0.72, ease }}
         >
-          <div className="absolute left-[0.25vw] top-[1.05vh] z-20 w-[min(47vw,48rem)]">
-            <h1 className="text-[clamp(2.9rem,4.25vw,5.65rem)] font-bold leading-[0.94] tracking-normal text-control-text md:text-[2.5vw]">
-              <span className="block">When Every</span>
-              <span className="block">Second <span className="text-control-warm">Matters.</span></span>
-            </h1>
-            <div className="mt-[1.25vh] h-[3px] w-[2.65rem] bg-control-warm" />
-            <p className="mt-[1.45vh] max-w-[35rem] text-[clamp(0.82rem,0.92vw,1.04rem)] font-medium leading-[1.5] text-slate-800 md:text-[0.8vw]">
-              In critical moments, operators don't have time to search, adjust or wait. Our intelligent control room responds instantly so operators can focus on what truly matters: the mission.
-            </p>
-          </div>
+          <div className="absolute inset-x-0 bottom-[15.2cqh] top-0 overflow-hidden rounded-[0.65rem] border border-slate-200/86 bg-white shadow-[0_1.1rem_2.9rem_rgb(15_23_42/0.09)]">
+            <img
+              alt="Operators monitoring a live control room during a critical incident."
+              className="absolute inset-0 h-full w-full object-cover object-center"
+              draggable={false}
+              src="/assets/products/incident-response-operations-center.png"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-white/10" />
+            {/* The headline sits on a white wash that only covers the top-left quadrant, so the
+                room stays visible along the top edge and under the copy, as in the reference. */}
+            <div
+              className="pointer-events-none absolute inset-0"
+              style={{
+                backgroundImage:
+                  "linear-gradient(90deg,#ffffff 0%,#ffffff 44%,rgb(255 255 255 / 0.74) 56%,rgb(255 255 255 / 0.24) 66%,rgb(255 255 255 / 0) 74%)",
+                WebkitMaskImage: "linear-gradient(180deg,#000 0%,#000 40%,rgba(0,0,0,0.42) 52%,rgba(0,0,0,0) 62%)",
+                maskImage: "linear-gradient(180deg,#000 0%,#000 40%,rgba(0,0,0,0.42) 52%,rgba(0,0,0,0) 62%)",
+              }}
+            />
 
-          <div className="absolute inset-x-0 bottom-[15.2vh] top-[31.6vh] overflow-hidden rounded-[0.65rem] border border-white/86 bg-white/48 shadow-[inset_0_1px_0_rgb(255_255_255/0.9),0_1.3rem_3.2rem_rgb(15_23_42/0.11)] backdrop-blur-[26px]">
-            <img alt="" className="absolute inset-0 h-full w-full object-cover" src="/assets/source-pdf/p06_010_574x312.jpg" />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgb(255_255_255/0.9)_0%,rgb(255_255_255/0.48)_30%,rgb(255_255_255/0.16)_62%,rgb(255_255_255/0.44)_100%)]" />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgb(255_255_255/0.72)_0%,transparent_42%,rgb(255_255_255/0.18)_100%)]" />
-            <div className="absolute left-[52%] top-[22%] -translate-x-1/2 text-center text-control-warm">
+            <div className="relative z-20 w-[min(47cqw,48rem)] px-[1.7cqw] pt-[2.5cqh]">
+              <h1 className="text-[clamp(2.9rem,4.25cqw,5.65rem)] font-bold leading-[0.94] tracking-normal text-control-text md:text-[2.5cqw]">
+                <span className="block">When Every</span>
+                <span className="block">Second <span className="text-control-warm">Matters.</span></span>
+              </h1>
+              <div className="mt-[1.25cqh] h-[3px] w-[2.65rem] bg-control-warm" />
+              <p className="mt-[1.45cqh] max-w-[33rem] text-[clamp(0.82rem,0.92cqw,1.04rem)] font-medium leading-[1.5] text-slate-800 md:text-[0.8cqw]">
+                In critical moments, operators don't have time to search, adjust or wait. Our intelligent control room responds instantly so operators can focus on what truly matters: the mission.
+              </p>
+            </div>
+
+            <div className="absolute left-[58%] top-[45%] z-20 -translate-x-1/2 -translate-y-1/2 text-center text-control-warm">
+              <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[15rem] w-[15rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgb(255_255_255/0.92)_0%,rgb(255_255_255/0.72)_44%,rgb(255_255_255/0)_72%)]" />
               <AlertTriangleVisual reducedMotion={reducedMotion} />
-              <p className="mt-2 text-[clamp(0.74rem,0.9vw,1rem)] font-semibold uppercase tracking-normal">Critical Alert</p>
-              <p className="mt-1 text-[clamp(1.35rem,2.05vw,2.5rem)] font-semibold leading-none tracking-normal">00:00:07</p>
+              <p className="mt-2 text-[clamp(0.74rem,0.9cqw,1rem)] font-semibold uppercase tracking-normal">Critical Alert</p>
+              <p className="mt-1 text-[clamp(1.35rem,2.05cqw,2.5rem)] font-semibold leading-none tracking-normal tabular-nums">00:00:07</p>
             </div>
           </div>
 
-          <div className="absolute inset-x-[0.1vw] bottom-[6.35vh] grid h-[8.2vh] grid-cols-4 overflow-hidden rounded-[0.62rem] border border-white/82 bg-white/52 shadow-[inset_0_1px_0_rgb(255_255_255/0.9),0_0.9rem_2rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+          <div className="absolute inset-x-0 bottom-[6.35cqh] grid h-[8.2cqh] grid-cols-4 overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white shadow-[0_0.9rem_2rem_rgb(15_23_42/0.07)]">
             {responseOutcomes.map((outcome, index) => {
               const Icon = outcome.Icon;
               return (
-                <div className={`relative flex min-w-0 gap-[0.72vw] px-[0.9vw] py-[1.1vh] ${index ? "border-l border-slate-200/90" : ""}`} key={outcome.title}>
+                <div className={`relative flex min-w-0 gap-[0.72cqw] px-[0.9cqw] py-[1.1cqh] ${index ? "border-l border-slate-200/90" : ""}`} key={outcome.title}>
                   <Icon aria-hidden="true" className="mt-0.5 shrink-0 text-control-warm" size={25} strokeWidth={1.65} />
                   <div className="min-w-0">
-                    <h2 className="text-[clamp(0.56rem,0.64vw,0.76rem)] font-semibold leading-tight text-control-text">{outcome.title}</h2>
-                    <p className="mt-1 text-[clamp(0.52rem,0.59vw,0.68rem)] font-medium leading-[1.28] text-slate-700">{outcome.description}</p>
+                    <h2 className="text-[clamp(0.56rem,0.64cqw,0.76rem)] font-semibold leading-tight text-control-text">{outcome.title}</h2>
+                    <p className="mt-1 text-[clamp(0.52rem,0.59cqw,0.68rem)] font-medium leading-[1.28] text-slate-700">{outcome.description}</p>
                   </div>
                 </div>
               );
@@ -875,45 +893,50 @@ function IncidentResponseReferenceStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="relative grid min-h-0 grid-rows-[0.68fr_0.98fr_0.5fr] gap-[1.25vh]"
+          className="relative grid min-h-0 grid-rows-[0.68fr_0.98fr_0.5fr] gap-[1.25cqh]"
           initial={false}
           transition={{ duration: 0.74, delay: 0.08, ease }}
         >
-          <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.25vw] py-[2vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-            <h2 className="text-[clamp(1.05rem,1.32vw,1.58rem)] font-semibold leading-none text-control-text">From Event to Action - Instantly.</h2>
-            <div className="mt-[1vh] h-[2px] w-[2.2rem] bg-control-warm" />
-            <div className="mt-[2.3vh] grid grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-start gap-[0.8vw]">
+          <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.25cqw] py-[2cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+            <h2 className="text-[clamp(1.05rem,1.32cqw,1.58rem)] font-semibold leading-none text-control-text">From Event to Action - Instantly.</h2>
+            <div className="mt-[1cqh] h-[2px] w-[2.2rem] bg-control-warm" />
+            <div className="mt-[2.3cqh] grid grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-start gap-[0.8cqw]">
               {responseFlow.map((item, index) => (
                 <ResponseFlowNode item={item} key={item.title} showArrow={index < responseFlow.length - 1} />
               ))}
             </div>
           </section>
 
-          <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.25vw] py-[2vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-            <h2 className="text-[clamp(0.98rem,1.15vw,1.34rem)] font-semibold leading-none text-control-text">Built for Critical Moments</h2>
-            <div className="mt-[1vh] h-[2px] w-[1.9rem] bg-control-warm" />
-            <div className="mt-[2vh] grid h-[calc(100%-3.4rem)] grid-cols-3 grid-rows-2">
+          <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.25cqw] py-[2cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+            <h2 className="text-[clamp(0.98rem,1.15cqw,1.34rem)] font-semibold leading-none text-control-text">Built for Critical Moments</h2>
+            <div className="mt-[1cqh] h-[2px] w-[1.9rem] bg-control-warm" />
+            <div className="mt-[2cqh] grid h-[calc(100%-3.4rem)] grid-cols-3 grid-rows-2">
               {criticalMomentItems.map((item, index) => (
                 <CriticalMomentCell item={item} index={index} key={item.title} />
               ))}
             </div>
           </section>
 
-          <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.45vw] py-[1.35vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-            <div className="relative z-10 max-w-[31rem]">
-              <Quote aria-hidden="true" className="text-control-warm" size={40} strokeWidth={1.55} />
-              <p className="mt-[0.2vh] text-[clamp(0.78rem,0.9vw,1rem)] font-medium text-slate-800">Technology should never slow you down.</p>
-              <p className="mt-1.5 text-[clamp(0.78rem,0.9vw,1rem)] font-semibold text-control-warm">Our environment makes you faster, sharper and stronger.</p>
+          <section className="relative flex items-center overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.45cqw] py-[1.35cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+            <div className="relative z-10 flex max-w-[33rem] items-start gap-[0.9cqw]">
+              <Quote aria-hidden="true" className="mt-[0.15rem] shrink-0 fill-control-warm text-control-warm" size={36} strokeWidth={1.2} />
+              <div>
+                <p className="text-[clamp(0.78rem,0.9cqw,1rem)] font-medium leading-[1.45] text-slate-800">Technology should never slow you down.</p>
+                <p className="mt-1.5 text-[clamp(0.78rem,0.9cqw,1rem)] font-semibold leading-tight text-control-warm">Our environment makes you faster, sharper and stronger.</p>
+              </div>
             </div>
-            <div className="absolute bottom-[0.7rem] right-[2.1vw] h-[7.4rem] w-[7.4rem] opacity-75">
-              <SpeedGauge />
-            </div>
+            <img
+              alt="Speedometer illustration representing response speed under pressure."
+              className="pointer-events-none absolute bottom-[0.4rem] right-[1cqw] h-[8.6rem] w-auto max-w-[14rem] object-contain opacity-85"
+              draggable={false}
+              src="/assets/products/incident-response-speed.png"
+            />
           </section>
         </motion.div>
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="pws-scene-control-dock absolute bottom-[0.1vh] left-[0.1vw] z-40 justify-start"
+          className="pws-scene-control-dock absolute bottom-[0.1cqh] left-[0.1cqw] z-40 justify-start"
           initial={false}
           transition={{ duration: 0.62, delay: 0.82, ease }}
         >
@@ -954,13 +977,13 @@ function ResponseFlowNode({ item, showArrow }: { item: ResponseFlowItem; showArr
   return (
     <>
       <div className="min-w-0 text-center">
-        <div className="mx-auto grid h-[clamp(3.1rem,5.4vh,4.1rem)] w-[clamp(3.1rem,5.4vh,4.1rem)] place-items-center rounded-full bg-control-warm/8 text-control-warm">
+        <div className="mx-auto grid h-[clamp(3.1rem,5.4cqh,4.1rem)] w-[clamp(3.1rem,5.4cqh,4.1rem)] place-items-center rounded-full bg-control-warm/[0.13] text-control-warm">
           <Icon aria-hidden="true" size={28} strokeWidth={1.65} />
         </div>
-        <h3 className="mt-[1.05vh] text-[clamp(0.6rem,0.68vw,0.78rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
-        <p className="mx-auto mt-1 max-w-[8.2rem] text-[clamp(0.55rem,0.62vw,0.72rem)] font-medium leading-[1.34] text-slate-700">{item.description}</p>
+        <h3 className="mt-[1.05cqh] text-[clamp(0.6rem,0.68cqw,0.78rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
+        <p className="mx-auto mt-1 max-w-[8.2rem] text-[clamp(0.55rem,0.62cqw,0.72rem)] font-medium leading-[1.34] text-slate-700">{item.description}</p>
       </div>
-      {showArrow ? <div className="pt-[clamp(1.55rem,2.9vh,2.25rem)] text-[clamp(1.1rem,1.35vw,1.55rem)] font-light text-control-text">›</div> : null}
+      {showArrow ? <div className="pt-[clamp(1.55rem,2.9cqh,2.25rem)] text-[clamp(1.1rem,1.35cqw,1.55rem)] font-light text-control-text">›</div> : null}
     </>
   );
 }
@@ -971,11 +994,11 @@ function CriticalMomentCell({ item, index }: { item: CriticalMomentItem; index: 
   const hasTopBorder = index >= 3;
 
   return (
-    <div className={`grid grid-cols-[2.3rem_minmax(0,1fr)] gap-[0.8vw] px-[0.85vw] py-[1.35vh] ${hasLeftBorder ? "border-l border-slate-200/90" : ""} ${hasTopBorder ? "border-t border-slate-200/90" : ""}`}>
+    <div className={`grid grid-cols-[2.3rem_minmax(0,1fr)] gap-[0.8cqw] px-[0.85cqw] py-[1.35cqh] ${hasLeftBorder ? "border-l border-slate-200/90" : ""} ${hasTopBorder ? "border-t border-slate-200/90" : ""}`}>
       <Icon aria-hidden="true" className="mt-0.5 text-control-warm" size={26} strokeWidth={1.65} />
       <div>
-        <h3 className="text-[clamp(0.62rem,0.72vw,0.84rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
-        <p className="mt-2 text-[clamp(0.54rem,0.62vw,0.72rem)] font-medium leading-[1.38] text-slate-700">{item.description}</p>
+        <h3 className="text-[clamp(0.62rem,0.72cqw,0.84rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
+        <p className="mt-2 text-[clamp(0.54rem,0.62cqw,0.72rem)] font-medium leading-[1.38] text-slate-700">{item.description}</p>
       </div>
     </div>
   );
@@ -988,32 +1011,8 @@ function AlertTriangleVisual({ reducedMotion }: { reducedMotion: boolean }) {
       className="mx-auto grid h-[4.4rem] w-[4.4rem] place-items-center"
       transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
     >
-      <div className="relative h-16 w-16">
-        <span className="absolute left-1/2 top-1 h-14 w-[3px] -translate-x-1/2 rotate-[30deg] rounded-full bg-control-warm" />
-        <span className="absolute bottom-2 left-2 h-[3px] w-12 rounded-full bg-control-warm" />
-        <span className="absolute right-[0.62rem] top-1 h-14 w-[3px] rotate-[-30deg] rounded-full bg-control-warm" />
-        <span className="absolute left-1/2 top-[1.2rem] -translate-x-1/2 text-3xl font-semibold leading-none text-control-warm">!</span>
-      </div>
+      <TriangleAlert aria-hidden="true" className="text-control-warm" size={58} strokeWidth={1.7} />
     </motion.div>
-  );
-}
-
-function SpeedGauge() {
-  return (
-    <div className="relative h-full w-full">
-      <div className="absolute inset-0 rounded-full border border-slate-200 bg-white/46 shadow-[inset_0_0_1.2rem_rgb(15_23_42/0.06)]" />
-      <div className="absolute inset-[14%] rounded-full border border-slate-200" />
-      {Array.from({ length: 9 }).map((_, index) => (
-        <span
-          className="absolute left-1/2 top-[11%] h-[0.42rem] w-px origin-[50%_4.2rem] bg-control-warm/50"
-          key={index}
-          style={{ transform: `rotate(${-62 + index * 15}deg)` }}
-        />
-      ))}
-      <span className="absolute left-1/2 top-1/2 h-[3px] w-[3.7rem] origin-left -translate-y-1/2 rotate-[-22deg] rounded-full bg-control-warm shadow-[0_0_1rem_rgb(213_29_42/0.28)]" />
-      <span className="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border border-control-warm bg-white" />
-      <div className="absolute inset-y-[28%] left-[-3.4rem] right-full bg-[repeating-linear-gradient(0deg,transparent_0_0.55rem,rgb(213_29_42/0.16)_0.55rem_0.62rem)]" />
-    </div>
   );
 }
 
@@ -1025,7 +1024,7 @@ function FeatureCard({ feature, index, reducedMotion }: { feature: IntelligentFe
   return (
     <motion.article
       animate={{ opacity: 1, y: 0, rotateX: 0 }}
-      className="group relative flex min-h-0 flex-col overflow-hidden rounded-[0.78rem] border border-white/82 bg-white/48 p-[0.54vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.96),inset_0_-1px_0_rgb(148_163_184/0.14),0_0.95rem_2.2rem_rgb(15_23_42/0.09)] backdrop-blur-[30px]"
+      className="group relative flex min-h-0 flex-col overflow-hidden rounded-[0.78rem] border border-white/82 bg-white/48 p-[0.54cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.96),inset_0_-1px_0_rgb(148_163_184/0.14),0_0.95rem_2.2rem_rgb(15_23_42/0.09)] backdrop-blur-[30px]"
       initial={false}
       style={{ "--feature-accent": feature.accent, "--feature-soft": feature.soft } as CSSProperties}
       transition={{ duration: 0.78, delay, ease: [0.16, 1, 0.3, 1] }}
@@ -1044,12 +1043,12 @@ function FeatureCard({ feature, index, reducedMotion }: { feature: IntelligentFe
       <span className="pointer-events-none absolute inset-x-[0.55rem] top-0 h-px bg-white/90" />
       <span className="pointer-events-none absolute -right-[18%] -top-[32%] h-[6rem] w-[6rem] rounded-full bg-white/42 blur-2xl" />
 
-      <header className="relative z-10 grid min-h-[4.6vh] grid-cols-[minmax(0,1fr)_1.82rem] items-start gap-[0.46vw] pl-[2.8rem]">
-        <span className="absolute left-[-0.54vw] top-[-0.54vw] grid h-[1.55rem] min-w-[2.15rem] place-items-center rounded-br-md rounded-tl-[0.78rem] bg-control-warm px-2 text-[clamp(0.64rem,0.72vw,0.82rem)] font-semibold leading-none tracking-normal text-white">
+      <header className="relative z-10 grid min-h-[4.6cqh] grid-cols-[minmax(0,1fr)_1.82rem] items-start gap-[0.46cqw] pl-[2.8rem]">
+        <span className="absolute left-[-0.54cqw] top-[-0.54cqw] grid h-[1.55rem] min-w-[2.15rem] place-items-center rounded-br-md rounded-tl-[0.78rem] bg-control-warm px-2 text-[clamp(0.64rem,0.72cqw,0.82rem)] font-semibold leading-none tracking-normal text-white">
           {feature.number}
         </span>
         <div className="min-w-0 pt-[0.02rem]">
-          <h2 className="max-w-[13rem] text-[clamp(0.52rem,0.59vw,0.7rem)] font-semibold uppercase leading-[1.08] tracking-normal text-control-text">
+          <h2 className="max-w-[13rem] text-[clamp(0.52rem,0.59cqw,0.7rem)] font-semibold uppercase leading-[1.08] tracking-normal text-control-text">
             {titleParts.length > 3 ? (
               <>
                 <span className="block">{titleParts.slice(0, Math.ceil(titleParts.length / 2)).join(" ")}</span>
@@ -1077,14 +1076,14 @@ function FeatureCard({ feature, index, reducedMotion }: { feature: IntelligentFe
 function FeatureVisual({ feature, reducedMotion }: { feature: IntelligentFeatureCard; reducedMotion: boolean }) {
   if (feature.image) {
     return (
-      <div className="relative z-10 mt-auto h-[13.4vh] shrink-0 overflow-hidden rounded-[0.58rem] border border-white/54 bg-[linear-gradient(135deg,#101820,#27313b)] shadow-[inset_0_1px_0_rgb(255_255_255/0.16),0_0.62rem_1.35rem_rgb(15_23_42/0.09)]">
+      <div className="relative z-10 mt-auto h-[13.4cqh] shrink-0 overflow-hidden rounded-[0.58rem] border border-white/54 bg-[linear-gradient(135deg,#101820,#27313b)] shadow-[inset_0_1px_0_rgb(255_255_255/0.16),0_0.62rem_1.35rem_rgb(15_23_42/0.09)]">
         <img alt="" className="h-full w-full object-cover" src={feature.image} />
       </div>
     );
   }
 
   return (
-    <div className="relative z-10 mt-auto h-[9.95vh] shrink-0 overflow-hidden rounded-[0.58rem] border border-white/54 bg-[linear-gradient(135deg,#101820,#27313b)] shadow-[inset_0_1px_0_rgb(255_255_255/0.16),0_0.62rem_1.35rem_rgb(15_23_42/0.09)]">
+    <div className="relative z-10 mt-auto h-[9.95cqh] shrink-0 overflow-hidden rounded-[0.58rem] border border-white/54 bg-[linear-gradient(135deg,#101820,#27313b)] shadow-[inset_0_1px_0_rgb(255_255_255/0.16),0_0.62rem_1.35rem_rgb(15_23_42/0.09)]">
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgb(0_0_0/0.05),rgb(0_0_0/0.38))]" />
       {feature.visual === "automation" ? <AutomationVisual reducedMotion={reducedMotion} /> : null}
       {feature.visual === "assistant" ? <AssistantVisual reducedMotion={reducedMotion} /> : null}

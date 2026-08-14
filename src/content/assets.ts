@@ -140,4 +140,32 @@ export const assets: Asset[] = [
     alt: "OnePWS Private Limited approved logo.",
     publicSafe: true,
   },
+  {
+    id: "connected-intelligence-room-reference",
+    type: "image",
+    src: "/assets/generated/connected-intelligence-room-reference.png",
+    alt: "Connected intelligence room reference for glass morphism background effect.",
+    publicSafe: true,
+  },
+  {
+    id: "ai-powered-operations-control-center",
+    type: "image",
+    src: "/assets/generated/ai-powered-operations-control-center.png",
+    alt: "AI-powered operations control center with smart consoles, connected systems and human-centred insight callouts.",
+    publicSafe: true,
+  },
+  {
+    id: "incident-response-operations-center",
+    type: "image",
+    src: "/assets/products/incident-response-operations-center.png",
+    alt: "Operators monitoring a live control room during a critical incident.",
+    publicSafe: true,
+  },
+  {
+    id: "incident-response-speed",
+    type: "image",
+    src: "/assets/products/incident-response-speed.png",
+    alt: "Speedometer illustration representing response speed under pressure.",
+    publicSafe: true,
+  },
 ];

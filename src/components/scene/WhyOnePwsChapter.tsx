@@ -155,31 +155,31 @@ export function WhyOnePwsChapter({ chapter }: { chapter: Chapter }) {
   return (
     <article className="relative h-full w-full overflow-hidden bg-white text-control-text">
       <div className="absolute inset-0 bg-[linear-gradient(116deg,#ffffff_0%,#fbfcfd_55%,#eef3f7_100%)]" />
-      <div className="pointer-events-none absolute inset-x-0 top-[8.6vh] h-px bg-slate-200/80" />
-      <div className="pointer-events-none absolute right-[3vw] top-[12vh] h-[36vh] w-[38vw] rounded-full bg-control-warm/5 blur-[76px]" />
-      <div className="pointer-events-none absolute left-[1vw] top-[14vh] h-[58vh] w-[40vw] opacity-[0.055] [background-image:linear-gradient(90deg,#94a3b8_1px,transparent_1px),linear-gradient(#94a3b8_1px,transparent_1px)] [background-size:34px_34px] [mask-image:linear-gradient(90deg,#000,transparent)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-[8.6cqh] h-px bg-slate-200/80" />
+      <div className="pointer-events-none absolute right-[3cqw] top-[12cqh] h-[36cqh] w-[38cqw] rounded-full bg-control-warm/5 blur-[76px]" />
+      <div className="pointer-events-none absolute left-[1cqw] top-[14cqh] h-[58cqh] w-[40cqw] opacity-[0.055] [background-image:linear-gradient(90deg,#94a3b8_1px,transparent_1px),linear-gradient(#94a3b8_1px,transparent_1px)] [background-size:34px_34px] [mask-image:linear-gradient(90deg,#000,transparent)]" />
 
-      <section className="absolute inset-x-[1.55vw] top-[9.65vh] bottom-[7.05vh] z-10">
-        <div className="absolute inset-x-0 top-0 bottom-[10.1vh] grid grid-rows-[22.2vh_31.6vh_16.2vh] gap-[1.05vh]">
+      <section className="absolute inset-x-[1.55cqw] top-[9.65cqh] bottom-[7.05cqh] z-10">
+        <div className="absolute inset-x-0 top-0 bottom-[10.1cqh] grid grid-rows-[22.2cqh_31.6cqh_16.2cqh] gap-[1.05cqh]">
           <motion.section
             animate={{ opacity: 1, y: 0 }}
-            className="grid min-h-0 grid-cols-[minmax(30rem,0.72fr)_minmax(0,1fr)] gap-[1.4vw]"
+            className="grid min-h-0 grid-cols-[minmax(30rem,0.72fr)_minmax(0,1fr)] gap-[1.4cqw]"
             initial={false}
             transition={{ duration: 0.72, ease }}
           >
-            <div className="min-w-0 pl-[0.35vw] pt-[1.05vh]">
-              <h1 className="text-[clamp(2.45rem,3.45vw,4.85rem)] font-bold uppercase leading-[0.98] tracking-normal text-black md:text-[2.5vw]">
+            <div className="min-w-0 pl-[0.35cqw] pt-[1.05cqh]">
+              <h1 className="text-[clamp(2.45rem,3.45cqw,4.85rem)] font-bold uppercase leading-[0.98] tracking-normal text-black md:text-[2.5cqw]">
                 <span className="block">Why</span>
                 <span className="block text-control-warm">OnePWS.</span>
               </h1>
-              <div className="mt-[1.15vh] h-[2px] w-[3rem] bg-control-warm" />
-              <p className="mt-[1.25vh] max-w-[45rem] text-[clamp(0.78rem,0.98vw,1.14rem)] font-medium leading-[1.3] text-slate-900 md:text-[0.8vw]">
+              <div className="mt-[1.15cqh] h-[2px] w-[3rem] bg-control-warm" />
+              <p className="mt-[1.25cqh] max-w-[45rem] text-[clamp(0.78rem,0.98cqw,1.14rem)] font-medium leading-[1.3] text-slate-900 md:text-[0.8cqw]">
                 One accountable capability for the complete control room: design, ergonomics, manufacturing,
                 integration, compliance, project proof and lifecycle support.
               </p>
             </div>
 
-            <div className="grid min-h-0 grid-cols-3 gap-[0.72vw] pt-[0.65vh]">
+            <div className="grid min-h-0 grid-cols-3 gap-[0.72cqw] pt-[0.65cqh]">
               {whyOnePwsMetrics.map((metric, index) => (
                 <WhyMetricCard index={index} key={metric.label} metric={metric} />
               ))}
@@ -188,7 +188,7 @@ export function WhyOnePwsChapter({ chapter }: { chapter: Chapter }) {
 
           <motion.section
             animate={{ opacity: 1, y: 0 }}
-            className="grid min-h-0 grid-cols-[minmax(32rem,0.98fr)_minmax(0,1.02fr)] gap-[1.05vw]"
+            className="grid min-h-0 grid-cols-[minmax(32rem,0.98fr)_minmax(0,1.02fr)] gap-[1.05cqw]"
             initial={false}
             transition={{ duration: 0.72, delay: 0.08, ease }}
           >
@@ -197,38 +197,38 @@ export function WhyOnePwsChapter({ chapter }: { chapter: Chapter }) {
                 <img alt="" className="absolute inset-0 h-full w-full object-cover object-center" draggable={false} src={roomAsset.src} />
               ) : null}
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgb(255_255_255/0.82)_0%,rgb(255_255_255/0.32)_48%,rgb(255_255_255/0.1)_100%)]" />
-              <div className="absolute left-[1.1vw] top-[1.5vh] max-w-[19rem] rounded-[0.8rem] border border-white/84 bg-white/70 p-[1vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_0.8rem_2rem_rgb(15_23_42/0.1)] backdrop-blur-[18px]">
-                <p className="text-[clamp(0.7rem,0.82vw,0.96rem)] font-semibold uppercase leading-tight text-control-text">
+              <div className="absolute left-[1.1cqw] top-[1.5cqh] max-w-[19rem] rounded-[0.8rem] border border-white/84 bg-white/70 p-[1cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_0.8rem_2rem_rgb(15_23_42/0.1)] backdrop-blur-[18px]">
+                <p className="text-[clamp(0.7rem,0.82cqw,0.96rem)] font-semibold uppercase leading-tight text-control-text">
                   The buying decision is not furniture versus technology.
                 </p>
-                <p className="mt-[0.65vh] text-[clamp(0.6rem,0.72vw,0.82rem)] font-semibold leading-[1.28] text-slate-700">
+                <p className="mt-[0.65cqh] text-[clamp(0.6rem,0.72cqw,0.82rem)] font-semibold leading-[1.28] text-slate-700">
                   It is whether the whole room can perform as one environment.
                 </p>
               </div>
-              <div className="absolute bottom-[1.2vh] left-[1.1vw] right-[1.1vw] grid grid-cols-3 gap-[0.62vw]">
+              <div className="absolute bottom-[1.2cqh] left-[1.1cqw] right-[1.1cqw] grid grid-cols-3 gap-[0.62cqw]">
                 {["People", "Room", "Systems"].map((label, index) => (
-                  <div className="rounded-[0.7rem] border border-white/78 bg-white/72 px-[0.75vw] py-[0.85vh] text-center shadow-sm backdrop-blur-[14px]" key={label}>
+                  <div className="rounded-[0.7rem] border border-white/78 bg-white/72 px-[0.75cqw] py-[0.85cqh] text-center shadow-sm backdrop-blur-[14px]" key={label}>
                     <p className="text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-slate-500">0{index + 1}</p>
-                    <p className="mt-[0.25vh] text-[0.82rem] font-semibold text-control-text">{label}</p>
+                    <p className="mt-[0.25cqh] text-[0.82rem] font-semibold text-control-text">{label}</p>
                   </div>
                 ))}
               </div>
             </section>
 
-            <section className="min-h-0 overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/72 p-[0.9vw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.8rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+            <section className="min-h-0 overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/72 p-[0.9cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.8rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <div className="flex items-end justify-between gap-4">
                 <div>
-                  <h2 className="text-[clamp(0.9rem,1.05vw,1.22rem)] font-semibold uppercase leading-tight text-control-text">
+                  <h2 className="text-[clamp(0.9rem,1.05cqw,1.22rem)] font-semibold uppercase leading-tight text-control-text">
                     What Makes the Decision Safer
                   </h2>
-                  <div className="mt-[0.7vh] h-[2px] w-[2.6rem] bg-control-warm" />
+                  <div className="mt-[0.7cqh] h-[2px] w-[2.6rem] bg-control-warm" />
                 </div>
                 <p className="rounded-full border border-slate-200 bg-white/75 px-3 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.14em] text-slate-600">
                   Customer-facing proof
                 </p>
               </div>
 
-              <div className="mt-[1.05vh] grid grid-cols-3 gap-[0.62vw]">
+              <div className="mt-[1.05cqh] grid grid-cols-3 gap-[0.62cqw]">
                 {decisionPillars.map((pillar) => (
                   <WhyPillarCard key={pillar.title} pillar={pillar} />
                 ))}
@@ -238,18 +238,18 @@ export function WhyOnePwsChapter({ chapter }: { chapter: Chapter }) {
 
           <motion.section
             animate={{ opacity: 1, y: 0 }}
-            className="grid min-h-0 grid-cols-[minmax(0,0.52fr)_minmax(0,0.48fr)] gap-[1.05vw]"
+            className="grid min-h-0 grid-cols-[minmax(0,0.52fr)_minmax(0,0.48fr)] gap-[1.05cqw]"
             initial={false}
             transition={{ duration: 0.72, delay: 0.14, ease }}
           >
-            <section className="overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/76 px-[1vw] py-[1.05vh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.78rem,0.9vw,1.02rem)] font-semibold uppercase leading-tight text-control-text">
+            <section className="overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/76 px-[1cqw] py-[1.05cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+              <h2 className="text-[clamp(0.78rem,0.9cqw,1.02rem)] font-semibold uppercase leading-tight text-control-text">
                 Proven Where Control Rooms Matter
               </h2>
-              <div className="mt-[0.55vh] h-[2px] w-[2.35rem] bg-control-warm" />
-              <div className="mt-[0.9vh] grid grid-cols-3 gap-[0.55vw]">
+              <div className="mt-[0.55cqh] h-[2px] w-[2.35rem] bg-control-warm" />
+              <div className="mt-[0.9cqh] grid grid-cols-3 gap-[0.55cqw]">
                 {featuredProjectNames.map((project) => (
-                  <div className="rounded-[0.55rem] border border-slate-200/86 bg-white/70 px-[0.62vw] py-[0.75vh] text-[clamp(0.52rem,0.62vw,0.72rem)] font-semibold leading-tight text-slate-800" key={project}>
+                  <div className="rounded-[0.55rem] border border-slate-200/86 bg-white/70 px-[0.62cqw] py-[0.75cqh] text-[clamp(0.52rem,0.62cqw,0.72rem)] font-semibold leading-tight text-slate-800" key={project}>
                     {project}
                   </div>
                 ))}
@@ -257,17 +257,17 @@ export function WhyOnePwsChapter({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="grid min-h-0 grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/76 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <div className="border-r border-slate-200/90 px-[1vw] py-[1.05vh]">
-                <p className="text-[clamp(1.18rem,1.55vw,1.85rem)] font-semibold leading-tight text-control-text">
+              <div className="border-r border-slate-200/90 px-[1cqw] py-[1.05cqh]">
+                <p className="text-[clamp(1.18rem,1.55cqw,1.85rem)] font-semibold leading-tight text-control-text">
                   Better rooms start with <span className="text-control-warm">one accountable system.</span>
                 </p>
-                <p className="mt-[0.75vh] text-[clamp(0.58rem,0.68vw,0.78rem)] font-semibold leading-[1.25] text-slate-700">
+                <p className="mt-[0.75cqh] text-[clamp(0.58rem,0.68cqw,0.78rem)] font-semibold leading-[1.25] text-slate-700">
                   A complete control-room partner helps customers align operators, technology, space and long-term support.
                 </p>
               </div>
-              <div className="grid content-center gap-[0.42vh] px-[1vw] py-[0.85vh]">
+              <div className="grid content-center gap-[0.42cqh] px-[1cqw] py-[0.85cqh]">
                 {buyerOutcomes.map((outcome) => (
-                  <div className="flex items-center gap-2 text-[clamp(0.54rem,0.64vw,0.76rem)] font-bold text-slate-800" key={outcome}>
+                  <div className="flex items-center gap-2 text-[clamp(0.54rem,0.64cqw,0.76rem)] font-bold text-slate-800" key={outcome}>
                     <CheckCircle2 aria-hidden="true" className="shrink-0 text-control-warm" size={16} strokeWidth={1.8} />
                     <span>{outcome}</span>
                   </div>
@@ -277,7 +277,7 @@ export function WhyOnePwsChapter({ chapter }: { chapter: Chapter }) {
           </motion.section>
         </div>
 
-        <motion.div animate={{ opacity: 1, y: 0 }} className="pws-scene-control-dock absolute bottom-[0.1vh] left-[0.1vw] z-40 justify-start" initial={false} transition={{ duration: 0.62, delay: 0.42, ease }}>
+        <motion.div animate={{ opacity: 1, y: 0 }} className="pws-scene-control-dock absolute bottom-[0.1cqh] left-[0.1cqw] z-40 justify-start" initial={false} transition={{ duration: 0.62, delay: 0.42, ease }}>
           <button aria-label="Previous scene" className="pws-scene-control" onClick={() => dispatch({ type: "PREVIOUS_CHAPTER" })} title="Previous" type="button"><ChevronLeft aria-hidden="true" size={22} /></button>
           <button aria-label="Continue to next scene" className="pws-scene-control pws-scene-control-primary" onClick={() => dispatch({ type: "NEXT_CHAPTER" })} title="Continue" type="button"><ChevronRight aria-hidden="true" size={23} /></button>
           <button aria-label="Open experience map" className="pws-scene-control" onClick={() => dispatch({ type: "SET_OVERLAY", overlay: { type: "chapterMap" } })} title="Experience Map" type="button"><Map aria-hidden="true" size={22} /></button>
@@ -306,14 +306,14 @@ export function WhyOnePwsChapter({ chapter }: { chapter: Chapter }) {
 
 function WhyMetricCard({ metric }: { metric: ProofMetric; index: number }) {
   return (
-    <article className="grid min-w-0 grid-rows-[2.05rem_auto_minmax(0,1fr)] rounded-[0.78rem] border border-white/80 bg-white/72 px-[0.68vw] py-[0.68vh] text-center shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_0.9rem_2.1rem_rgb(15_23_42/0.07)] backdrop-blur-[24px]">
+    <article className="grid min-w-0 grid-rows-[2.05rem_auto_minmax(0,1fr)] rounded-[0.78rem] border border-white/80 bg-white/72 px-[0.68cqw] py-[0.68cqh] text-center shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_0.9rem_2.1rem_rgb(15_23_42/0.07)] backdrop-blur-[24px]">
       <div className="grid place-items-center">
         <span className="grid size-8 place-items-center rounded-full bg-control-warm/7 text-control-warm">
           <metric.Icon aria-hidden="true" size={20} strokeWidth={1.55} />
         </span>
       </div>
-      <strong className="mt-[0.12vh] block text-[clamp(0.98rem,1.34vw,1.55rem)] font-semibold leading-none text-control-warm">{metric.value}</strong>
-      <span className="mt-[0.28vh] block text-[clamp(0.48rem,0.58vw,0.68rem)] font-semibold leading-tight text-control-text">{metric.label}</span>
+      <strong className="mt-[0.12cqh] block text-[clamp(0.98rem,1.34cqw,1.55rem)] font-semibold leading-none text-control-warm">{metric.value}</strong>
+      <span className="mt-[0.28cqh] block text-[clamp(0.48rem,0.58cqw,0.68rem)] font-semibold leading-tight text-control-text">{metric.label}</span>
       <span className="sr-only">{metric.detail}</span>
     </article>
   );
@@ -321,15 +321,15 @@ function WhyMetricCard({ metric }: { metric: ProofMetric; index: number }) {
 
 function WhyPillarCard({ pillar }: { pillar: DecisionPillar }) {
   return (
-    <article className="min-h-[13.05vh] rounded-[0.72rem] border border-slate-200/86 bg-white/68 p-[0.68vw] shadow-[0_0.75rem_1.7rem_rgb(15_23_42/0.052)]">
+    <article className="min-h-[13.05cqh] rounded-[0.72rem] border border-slate-200/86 bg-white/68 p-[0.68cqw] shadow-[0_0.75rem_1.7rem_rgb(15_23_42/0.052)]">
       <div className="flex items-start gap-2">
         <span className={`grid size-8 shrink-0 place-items-center rounded-full bg-slate-50 ${pillar.accent}`}>
           <pillar.Icon aria-hidden="true" size={20} strokeWidth={1.65} />
         </span>
         <div className="min-w-0">
-          <h3 className="text-[clamp(0.56rem,0.66vw,0.78rem)] font-semibold uppercase leading-tight text-control-text">{pillar.title}</h3>
-          <p className="mt-[0.45vh] text-[clamp(0.45rem,0.53vw,0.62rem)] font-medium leading-[1.2] text-slate-700">{pillar.detail}</p>
-          <p className="mt-[0.5vh] text-[clamp(0.43rem,0.5vw,0.58rem)] font-semibold uppercase tracking-[0.08em] text-control-warm">{pillar.proof}</p>
+          <h3 className="text-[clamp(0.56rem,0.66cqw,0.78rem)] font-semibold uppercase leading-tight text-control-text">{pillar.title}</h3>
+          <p className="mt-[0.45cqh] text-[clamp(0.45rem,0.53cqw,0.62rem)] font-medium leading-[1.2] text-slate-700">{pillar.detail}</p>
+          <p className="mt-[0.5cqh] text-[clamp(0.43rem,0.5cqw,0.58rem)] font-semibold uppercase tracking-[0.08em] text-control-warm">{pillar.proof}</p>
         </div>
       </div>
     </article>

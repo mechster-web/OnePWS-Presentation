@@ -110,7 +110,7 @@ export const chapters: Chapter[] = [
     order: 3,
     title: "OnePWS Positioning",
     eyebrow: "Integrated OnePWS Capability",
-    headline: "One partner for intelligent control-room environments.",
+    headline: "One partner for Intelligent Control-Room environments.",
     supportingMessage:
       "OnePWS brings together operator-centred ergonomics, engineered workstations, architectural integration and execution expertise to create mission-critical environments designed for performance, reliability and long-term adaptability.",
     durationMs: 35_000,
@@ -187,7 +187,7 @@ export const chapters: Chapter[] = [
   },
   {
     id: "company-at-a-glance",
-    order: 5,
+    order: 12.55,
     title: "OnePWS At A Glance",
     eyebrow: "OnePWS At A Glance",
     headline: "Built to deliver at scale.",
@@ -206,12 +206,12 @@ export const chapters: Chapter[] = [
   },
   {
     id: "system-driven-execution",
-    order: 6,
+    order: 12.57,
     title: "System-Driven Execution",
     eyebrow: "Built on standards. Managed through systems.",
     headline: "System-driven operations. Consistent delivery.",
     supportingMessage:
-      "Certified standards and integrated digital processes ensure quality, safety, control and traceability at every stage.",
+      "Certified standards and integrated digital processes\nensure quality, safety,\ncontrol and traceability at every stage.",
     durationMs: 42_000,
     visualNote: "Standards, digital systems and controlled execution flow.",
     presenterTalkingPoint:
@@ -314,7 +314,7 @@ export const chapters: Chapter[] = [
     order: 10,
     title: "Human-Centred Philosophy",
     eyebrow: "Human-Centred Philosophy",
-    headline: "Design the room around the people who make the decisions.",
+    headline: "Design the Control Room around the people who make the decisions.",
     supportingMessage:
       "A high-performing control room begins with the operator—their tasks, sightlines, reach, posture, information flow and need to collaborate under pressure.",
     durationMs: 38_000,

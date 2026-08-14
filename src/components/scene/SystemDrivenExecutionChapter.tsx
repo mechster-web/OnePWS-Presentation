@@ -140,12 +140,12 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
         transition={{ duration: 2.6, delay: 0.35, ease: processEase }}
       />
 
-      <section className="absolute scene-content-safe z-20 grid content-start gap-[clamp(0.8rem,1.15vh,1.1rem)]">
-        <div className="grid items-start gap-[min(2.5vw,2.4rem)] lg:grid-cols-[minmax(0,0.52fr)_minmax(40rem,1fr)]">
+      <section className="absolute scene-content-safe z-20 grid content-center gap-[clamp(0.8rem,1.15cqh,1.1rem)]">
+        <div className="grid items-start gap-[min(2.5cqw,2.4rem)] lg:grid-cols-[minmax(0,0.52fr)_minmax(40rem,1fr)]">
           <div className="min-w-0">
             <motion.p
               animate={{ opacity: 1, y: 0 }}
-              className="text-[clamp(0.7rem,0.8vw,0.86rem)] font-bold uppercase tracking-[0.14em] text-control-warm"
+              className="text-[clamp(0.7rem,0.8cqw,0.86rem)] font-bold uppercase tracking-[0.14em] text-control-warm"
               initial={state.reducedMotion ? false : { opacity: 0, y: 8 }}
               transition={{ duration: motionDuration, ease: processEase }}
             >
@@ -153,7 +153,7 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
             </motion.p>
             <motion.h1
               animate={{ opacity: 1, y: 0 }}
-              className="mt-2 max-w-[14ch] text-balance text-[clamp(2.25rem,3.15vw,3.85rem)] font-semibold leading-[0.96] tracking-normal text-control-text"
+              className="mt-2 max-w-[14ch] text-balance text-[clamp(2.25rem,3.15cqw,3.85rem)] font-bold leading-[0.96] tracking-normal text-control-text"
               initial={state.reducedMotion ? false : { opacity: 0, y: 18 }}
               transition={{ duration: motionDuration + 0.12, delay: 0.08, ease: processEase }}
             >
@@ -161,7 +161,7 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
             </motion.h1>
             <motion.p
               animate={{ opacity: 1, y: 0 }}
-              className="mt-4 max-w-[40rem] text-[clamp(1rem,1.05vw,1.18rem)] leading-[1.42] text-control-soft"
+              className="mt-4 max-w-[40rem] whitespace-pre-line text-[clamp(1rem,1.05cqw,1.18rem)] leading-[1.42] text-control-soft"
               initial={state.reducedMotion ? false : { opacity: 0, y: 12 }}
               transition={{ duration: motionDuration, delay: 0.2, ease: processEase }}
             >
@@ -171,7 +171,7 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
 
           <motion.div
             animate={{ opacity: 1, y: 0 }}
-            className="relative mt-[clamp(3.1rem,4.25vh,3.95rem)] flex min-h-[clamp(10.4rem,18vh,12.8rem)] self-start overflow-hidden rounded-[0.65rem] border border-slate-200/90 bg-white/76 px-5 py-5 shadow-[0_1rem_2.4rem_rgb(15_23_42/0.06)] backdrop-blur-xl"
+            className="relative mt-[clamp(3.1rem,4.25cqh,3.95rem)] flex min-h-[clamp(10.4rem,18cqh,12.8rem)] self-start overflow-hidden rounded-[0.65rem] border border-slate-200/90 bg-white/76 px-5 py-5 shadow-[0_1rem_2.4rem_rgb(15_23_42/0.06)] backdrop-blur-xl"
             initial={state.reducedMotion ? false : { opacity: 0, y: 22 }}
             transition={{ duration: motionDuration + 0.08, delay: 0.18, ease: processEase }}
           >
@@ -224,14 +224,14 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="grid grid-cols-6 gap-3 max-xl:grid-cols-3"
+          className="grid grid-cols-6 gap-3 [@container_stage_(max-width:1279px)]:grid-cols-3"
           initial={state.reducedMotion ? false : { opacity: 0, y: 14 }}
           transition={{ duration: motionDuration, delay: 0.44, ease: processEase }}
         >
           {capabilities.map((capability, index) => (
             <motion.article
               animate={{ clipPath: "inset(0% 0% 0% 0%)", opacity: 1, y: 0 }}
-              className="relative grid h-[clamp(11.2rem,21vh,13rem)] grid-rows-[3.45rem_2.1rem_2rem_minmax(0,1fr)] items-start overflow-hidden rounded-[0.65rem] border border-slate-200/86 bg-white/82 px-4 pb-4 pt-5 text-center shadow-[0_0.7rem_1.8rem_rgb(15_23_42/0.045)] backdrop-blur-xl"
+              className="relative grid h-[clamp(11.2rem,21cqh,13rem)] grid-rows-[3.45rem_2.1rem_2rem_minmax(0,1fr)] items-start overflow-hidden rounded-[0.65rem] border border-slate-200/86 bg-white/82 px-4 pb-4 pt-5 text-center shadow-[0_0.7rem_1.8rem_rgb(15_23_42/0.045)] backdrop-blur-xl"
               initial={state.reducedMotion ? false : { clipPath: "inset(0% 0% 100% 0%)", opacity: 0, y: 10 }}
               key={capability.id}
               transition={{
@@ -279,20 +279,20 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
               >
                 {capability.icon}
               </motion.span>
-              <h2 className="self-end text-[clamp(0.95rem,1vw,1.12rem)] font-semibold leading-tight text-control-text">
+              <h2 className="self-end text-[clamp(0.95rem,1cqw,1.12rem)] font-semibold leading-tight text-control-text">
                 {capability.title}
               </h2>
-              <p className="self-start text-[clamp(0.68rem,0.72vw,0.82rem)] font-bold leading-snug text-control-warm">
+              <p className="self-start text-[clamp(0.68rem,0.72cqw,0.82rem)] font-bold leading-snug text-control-warm">
                 {capability.subtitle}
               </p>
-              <p className="mx-auto max-w-[12.5rem] self-start text-[clamp(0.68rem,0.72vw,0.82rem)] leading-[1.22] text-control-soft">
+              <p className="mx-auto max-w-[12.5rem] self-start text-[clamp(0.68rem,0.72cqw,0.82rem)] leading-[1.22] text-control-soft">
                 {capability.description}
               </p>
             </motion.article>
           ))}
         </motion.div>
 
-        <div className="grid grid-cols-[auto_minmax(0,1fr)] items-end gap-3 max-lg:grid-cols-1">
+        <div className="grid grid-cols-[auto_minmax(0,1fr)] items-end gap-3 [@container_stage_(max-width:1023px)]:grid-cols-1">
           <motion.div
             animate={{ opacity: 1, y: 0 }}
             className="pws-scene-control-dock justify-start pb-0.5"
@@ -353,7 +353,7 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
 
           <motion.div
             animate={{ opacity: 1, y: 0 }}
-            className="ml-auto flex min-h-[3.65rem] w-full max-w-[min(48rem,54vw)] items-center gap-3 rounded-[0.65rem] border border-slate-200/86 bg-white/78 px-4 py-2 shadow-[0_0.7rem_1.8rem_rgb(15_23_42/0.045)] backdrop-blur-xl"
+            className="ml-auto flex min-h-[3.65rem] w-full max-w-[min(48rem,54cqw)] items-center gap-3 rounded-[0.65rem] border border-slate-200/86 bg-white/78 px-4 py-2 shadow-[0_0.7rem_1.8rem_rgb(15_23_42/0.045)] backdrop-blur-xl"
             initial={state.reducedMotion ? false : { opacity: 0, y: 10 }}
             transition={{ duration: motionDuration, delay: 0.88, ease: processEase }}
           >
@@ -361,7 +361,7 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
               <ClipboardCheck aria-hidden="true" size={20} strokeWidth={1.8} />
             </span>
             <div className="border-l border-slate-200 pl-4">
-              <p className="text-[clamp(0.9rem,1vw,1.08rem)] font-semibold leading-[1.25] text-control-text">
+              <p className="text-[clamp(0.9rem,1cqw,1.08rem)] font-semibold leading-[1.25] text-control-text">
                 Every project follows a controlled, traceable process.
               </p>
             </div>

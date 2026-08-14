@@ -104,16 +104,11 @@ const productCertifications: ProductCertification[] = [
   { title: "BIFMA", logoSrc: "/assets/certificates/bifma.svg", description: "Furniture standards and performance guidance.", Icon: BadgeCheck },
   { title: "BIFMA LEVEL", logoSrc: "/assets/certificates/bifma-level.svg", description: "Sustainability standard for furniture products.", Icon: Leaf },
   { title: "GREENGUARD", logoSrc: "/assets/certificates/greenguard.svg", description: "Low chemical emissions certification.", Icon: Leaf },
-  { title: "GREENGUARD Gold", logoSrc: "/assets/certificates/greenguard-gold.svg", description: "Stricter emissions criteria for sensitive interiors.", Icon: Leaf },
+  { title: "GREENGUARD GOLD", logoSrc: "/assets/certificates/greenguard-gold.svg", description: "Stricter emissions criteria for sensitive interiors.", Icon: Leaf },
   { title: "ISO 11064", logoSrc: "/assets/certificates/iso-11064.svg", description: "Ergonomic design principles for control centres.", Icon: ShieldCheck },
   { title: "LEVEL 3", logoSrc: "/assets/certificates/level-3.svg", description: "High level sustainability certification.", Icon: Leaf },
-  { title: "Life Cycle Assessment", logoSrc: "/assets/certificates/life-cycle-assessment.svg", description: "Lifecycle impact assessment reference.", Icon: Leaf },
-  { title: "RoHS", logoSrc: "/assets/certificates/rohs.svg", description: "Restriction of hazardous substances compliance.", Icon: Leaf },
-  { title: "Seismic", logoSrc: "/assets/certificates/seismic.svg", description: "Seismic performance reference for resilient installations.", Icon: ShieldCheck },
-  { title: "UL", logoSrc: "/assets/certificates/ul.svg", description: "Safety and reliability testing reference.", Icon: BadgeCheck },
+  { title: "ROHS", logoSrc: "/assets/certificates/rohs.svg", description: "Restriction of hazardous substances compliance.", Icon: Leaf },
 ];
-
-const certificationGridPlaceholders = Array.from({ length: (11 - (productCertifications.length % 11)) % 11 });
 const customerPresenceMetrics = [
   {
     value: credentialProofPoints.find((point) => point.id === "workspace-customers")?.value ?? "250+",
@@ -387,52 +382,49 @@ function CertificationOverviewScene({ chapter }: { chapter: Chapter }) {
       <div className="pointer-events-none absolute inset-x-0 top-[8.6cqh] h-px bg-slate-200/80" />
 
       <section className="absolute inset-x-[1.55cqw] top-[9.65cqh] bottom-[7.05cqh] z-10">
-        <div className="absolute inset-x-0 top-0 bottom-[6.6cqh] grid grid-rows-[44.6cqh_32.3cqh] gap-[1.2cqh]">
+        <div className="absolute inset-x-0 top-0 bottom-[6.6cqh] grid grid-rows-[43.6cqh_34.2cqh] gap-[1.35cqh]">
           <motion.section animate={{ opacity: 1, y: 0 }} className="relative overflow-hidden" initial={false} transition={{ duration: 0.72, ease }}>
-            <div className="absolute left-[0.4cqw] top-[4cqh] z-20">
-              <h1 className="text-[clamp(2.75rem,4cqw,5.65rem)] font-bold uppercase leading-[0.98] tracking-normal text-black md:text-[2.5cqw]">
+            <div className="absolute left-[0.4cqw] top-[2.8cqh] z-20">
+              <h1 className="text-[clamp(3.2rem,4.8cqw,6.5rem)] font-bold uppercase leading-[0.98] tracking-normal text-black md:text-[3.25cqw]">
                 <span className="block">International</span>
                 <span className="block text-control-warm">Certifications</span>
               </h1>
-              <div className="mt-[1.65cqh] h-[2px] w-[3rem] bg-control-warm" />
-              <p className="mt-[1.75cqh] max-w-[37rem] text-justify text-[clamp(0.86rem,1.12cqw,1.38rem)] font-medium leading-[1.32] text-slate-900 md:text-[0.8cqw]">
+              <div className="mt-[2.05cqh] h-[2px] w-[4.35rem] bg-control-warm" />
+              <p className="mt-[2.15cqh] max-w-[38.5rem] text-[clamp(1.08rem,1.38cqw,1.66rem)] font-medium leading-[1.38] text-black md:text-[1.08cqw]">
                 Our products are tested and certified to meet globally recognized standards for safety, quality and environmental responsibility.
               </p>
 
-              <section className="mt-[2.35cqh] grid w-[38.8cqw] grid-cols-2 overflow-hidden rounded-[0.62rem] border border-white/70 bg-sky-50/25 px-[1cqw] py-[1.25cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.72),0_1rem_2.5rem_rgb(15_23_42/0.055)] backdrop-blur-[26px]">
+              <section className="mt-[2.35cqh] grid w-[37.8cqw] grid-cols-2 overflow-hidden rounded-[0.72rem] border border-slate-300/90 bg-white px-[1.25cqw] py-[1.4cqh] shadow-[0_0.75rem_1.8rem_rgb(15_23_42/0.055)]">
                 {certificationMetrics.map((item, index) => (
                   <CertificationMetric index={index} item={item} key={item.title} />
                 ))}
               </section>
             </div>
 
-            <div className="absolute right-[1.2cqw] top-[0.8cqh] h-[31cqh] w-[51cqw]">
-              <img alt="" className="absolute inset-0 h-full w-full object-contain object-center opacity-80 mix-blend-multiply" src="/assets/generated/international-certifications-map.png" />
+            <div className="absolute right-[2.3cqw] top-[0.2cqh] h-[34.4cqh] w-[49.7cqw]">
+              <img alt="" className="absolute inset-0 h-full w-full object-contain object-center opacity-75" src="/assets/generated/international-certifications-map-red.png" />
             </div>
 
-            <section className="absolute right-[8.2cqw] bottom-[3.4cqh] grid max-w-[36rem] grid-cols-[0.18rem_minmax(0,1fr)] gap-[1.25cqw]">
-              <span className="mt-[0.25cqh] h-[5.2cqh] bg-control-warm" />
+            <section className="absolute right-[13.1cqw] bottom-[1.2cqh] grid max-w-[37rem] grid-cols-[0.18rem_minmax(0,1fr)] gap-[1.25cqw]">
+              <span className="mt-[0.2cqh] h-[7.2cqh] bg-control-warm" />
               <span>
-                <h2 className="text-[clamp(0.9rem,1.15cqw,1.32rem)] font-semibold uppercase leading-tight text-control-text">Trusted Worldwide</h2>
-                <p className="mt-[0.55cqh] text-[clamp(0.66rem,0.86cqw,1rem)] font-medium leading-[1.32] text-control-text">
+                <h2 className="text-[clamp(1.05rem,1.4cqw,1.62rem)] font-semibold uppercase leading-tight text-black">Trusted Worldwide</h2>
+                <p className="mt-[0.8cqh] text-[clamp(0.9rem,1.16cqw,1.36rem)] font-medium leading-[1.34] text-black">
                   Our certified products are trusted in <span className="font-semibold text-control-warm">75+</span> countries across the globe.
                 </p>
               </span>
             </section>
           </motion.section>
 
-          <motion.section animate={{ opacity: 1, y: 0 }} className="overflow-hidden rounded-[0.62rem] border border-white/70 bg-sky-100/20 px-[0.8cqw] py-[1.5cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.72),0_1rem_2.5rem_rgb(15_23_42/0.06)] backdrop-blur-[28px]" initial={false} transition={{ duration: 0.72, delay: 0.12, ease }}>
-            <div className="flex items-center justify-center gap-[1.6cqw]">
+          <motion.section animate={{ opacity: 1, y: 0 }} className="overflow-hidden rounded-[0.78rem] border border-slate-300/90 bg-white px-[0.8cqw] py-[1.55cqh] shadow-[0_0.8rem_1.8rem_rgb(15_23_42/0.055)]" initial={false} transition={{ duration: 0.72, delay: 0.12, ease }}>
+            <div className="flex items-center justify-center gap-[1.75cqw]">
               <span className="h-[2px] w-[2rem] bg-control-warm" />
-              <h2 className="text-[clamp(0.9rem,1.15cqw,1.32rem)] font-semibold uppercase leading-tight text-control-text">Product Certifications</h2>
+              <h2 className="text-[clamp(1.05rem,1.36cqw,1.58rem)] font-semibold uppercase leading-tight text-black">Product Certifications</h2>
               <span className="h-[2px] w-[2rem] bg-control-warm" />
             </div>
-            <div className="mt-[1.45cqh] grid grid-cols-11 gap-[0.45cqw]">
+            <div className="mt-[2cqh] grid h-[27.1cqh] grid-cols-8 gap-[0.82cqw]">
               {productCertifications.map((item) => (
                 <ProductCertificationCard item={item} key={item.title} />
-              ))}
-              {certificationGridPlaceholders.map((_, index) => (
-                <span aria-hidden="true" className="invisible h-[23.4cqh]" key={`certificate-placeholder-${index}`} />
               ))}
             </div>
           </motion.section>
@@ -466,13 +458,13 @@ function CertificationOverviewScene({ chapter }: { chapter: Chapter }) {
 function CertificationMetric({ item, index }: { item: ManufacturingItem & { value: string }; index: number }) {
   const Icon = item.Icon;
   return (
-    <div className={`grid min-w-0 grid-cols-[4.3rem_minmax(0,1fr)] items-center gap-[0.95cqw] px-[0.8cqw] ${index ? "border-l border-slate-200/90" : ""}`}>
-      <span className="grid h-[4rem] w-[4rem] place-items-center rounded-full bg-control-warm/7 text-control-warm">
-        <Icon aria-hidden="true" size={40} strokeWidth={1.4} />
+    <div className={`grid min-w-0 grid-cols-[5.2rem_minmax(0,1fr)] items-center gap-[1cqw] px-[0.9cqw] ${index ? "border-l border-slate-300/90" : ""}`}>
+      <span className="grid h-[4.9rem] w-[4.9rem] place-items-center rounded-full border border-control-warm/22 bg-white text-control-warm">
+        <Icon aria-hidden="true" size={53} strokeWidth={1.35} />
       </span>
       <span className="min-w-0">
-        <strong className="block text-[clamp(1.28rem,1.75cqw,2.1rem)] font-semibold leading-none text-control-warm">{item.value}</strong>
-        <span className="mt-[0.42cqh] block text-[clamp(0.68rem,0.85cqw,1rem)] font-medium leading-[1.17] text-control-text">{item.title}</span>
+        <strong className="block text-[clamp(1.7rem,2.14cqw,2.55rem)] font-semibold leading-none text-control-warm">{item.value}</strong>
+        <span className="mt-[0.55cqh] block text-[clamp(0.86rem,1.08cqw,1.26rem)] font-medium leading-[1.18] text-black">{item.title}</span>
       </span>
     </div>
   );
@@ -481,15 +473,18 @@ function CertificationMetric({ item, index }: { item: ManufacturingItem & { valu
 function ProductCertificationCard({ item }: { item: ProductCertification }) {
   return (
     <article
-      className="grid h-[18.6cqh] min-w-0 grid-rows-[6.9rem_auto] justify-items-center rounded-[0.5rem] border border-white/60 bg-sky-50/25 px-[0.38cqw] py-[0.9cqh] text-center shadow-[inset_0_1px_0_rgb(255_255_255/0.64)] backdrop-blur-[18px]"
+      className="grid h-full min-w-0 grid-rows-[8.6cqh_auto_minmax(0,1fr)] justify-items-center rounded-[0.52rem] bg-white px-[0.66cqw] py-[1.3cqh] text-center shadow-[0_0.5rem_1.35rem_rgb(15_23_42/0.055)]"
       title={item.description}
     >
-      <div className="grid h-[6.6rem] w-full place-items-center px-[0.18rem] py-[0.18rem]">
-        <img alt={`${item.title} logo`} className="max-h-[5.65rem] max-w-full object-contain" src={item.logoSrc} />
+      <div className="grid h-full w-full place-items-center">
+        <img alt={`${item.title} logo`} className="max-h-[7.2cqh] max-w-full object-contain" src={item.logoSrc} />
       </div>
-      <h3 className="min-w-0 max-w-full self-start text-wrap text-[clamp(0.5rem,0.58cqw,0.68rem)] font-semibold uppercase leading-[1.14] text-control-text">
+      <h3 className="mt-[1.05cqh] min-w-0 max-w-full text-wrap text-[clamp(0.78rem,0.95cqw,1.1rem)] font-semibold uppercase leading-[1.14] text-black">
         {item.title}
       </h3>
+      <p className="mt-[1.05cqh] max-w-[10.4rem] text-[clamp(0.68rem,0.84cqw,0.98rem)] font-medium leading-[1.45] text-black">
+        {item.description}
+      </p>
     </article>
   );
 }

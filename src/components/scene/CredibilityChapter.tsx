@@ -180,8 +180,8 @@ export function CredibilityChapter({ chapter }: Props) {
       <div className="absolute right-[-10%] top-[-18%] h-[52%] w-[52%] rounded-full bg-control-warm/5 blur-3xl" />
       <div className="absolute bottom-[-18%] left-[18%] h-[44%] w-[42%] rounded-full bg-slate-300/20 blur-3xl" />
 
-      <section className="absolute scene-content-safe z-20 flex flex-col justify-center gap-[clamp(0.8rem,1.45vh,1.25rem)]">
-        <div className="grid items-center gap-[min(3.4vw,3.4rem)] lg:grid-cols-[minmax(0,0.78fr)_minmax(31rem,1fr)]">
+      <section className="absolute scene-content-safe z-20 flex flex-col justify-center gap-[clamp(0.8rem,1.45cqh,1.25rem)]">
+        <div className="grid items-center gap-[min(3.4cqw,3.4rem)] lg:grid-cols-[minmax(0,0.78fr)_minmax(31rem,1fr)]">
           <div className="min-w-0">
           <motion.p
             animate={{ opacity: 1, y: 0 }}
@@ -193,7 +193,7 @@ export function CredibilityChapter({ chapter }: Props) {
           </motion.p>
           <motion.h1
             animate={{ opacity: 1, y: 0 }}
-            className="mt-5 max-w-[14ch] text-balance text-[clamp(2.35rem,3.55vw,4.45rem)] font-semibold leading-[0.97] tracking-normal text-control-text"
+            className="mt-5 max-w-[14ch] text-balance text-[clamp(2.35rem,3.55cqw,4.45rem)] font-bold leading-[0.97] tracking-normal text-control-text"
             initial={false}
             transition={{ duration: motionDuration, delay: 0.08 }}
           >
@@ -201,7 +201,7 @@ export function CredibilityChapter({ chapter }: Props) {
           </motion.h1>
           <motion.p
             animate={{ opacity: 1, y: 0 }}
-            className="mt-5 max-w-[45rem] text-[clamp(1rem,1.05vw,1.18rem)] leading-[1.52] text-control-soft"
+            className="mt-5 max-w-[45rem] text-[clamp(1rem,1.05cqw,1.18rem)] leading-[1.52] text-control-soft"
             initial={false}
             transition={{ duration: motionDuration, delay: 0.16 }}
           >
@@ -334,7 +334,7 @@ function MetricRail({ points }: { points: CredentialProofPoint[] }) {
             {metricIcons[point.category] ?? <BadgeCheck aria-hidden="true" size={18} />}
             <span className="text-[10px] uppercase tracking-[0.22em] text-control-muted">p{point.source.page}</span>
           </div>
-          <p className="mt-2 text-[clamp(1.35rem,2vw,2.3rem)] font-semibold leading-none">{point.value}</p>
+          <p className="mt-2 text-[clamp(1.35rem,2cqw,2.3rem)] font-semibold leading-none">{point.value}</p>
           <p className="mt-2 text-[10px] uppercase tracking-[0.2em] text-control-soft">{point.label}</p>
           <p className="mt-2 line-clamp-2 text-xs leading-5 text-control-muted">{point.context}</p>
         </motion.div>
@@ -347,7 +347,7 @@ function CredibilityMetricGrid({ points }: { points: CredentialProofPoint[] }) {
   return (
     <motion.section
       animate={{ opacity: 1, y: 0 }}
-      className="grid grid-cols-4 gap-3 max-xl:grid-cols-2"
+      className="grid grid-cols-4 gap-3 [@container_stage_(max-width:1279px)]:grid-cols-2"
       initial={false}
       transition={{ duration: 0.5, delay: 0.24 }}
     >
@@ -359,10 +359,10 @@ function CredibilityMetricGrid({ points }: { points: CredentialProofPoint[] }) {
             className="min-h-[4.25rem] border border-slate-200/80 bg-white/72 px-4 py-3 shadow-[0_0.8rem_2rem_rgb(15_23_42/0.055)] backdrop-blur-xl"
             key={point.id}
           >
-            <p className="text-[clamp(1.3rem,1.55vw,2rem)] font-semibold leading-none text-control-text">
+            <p className="text-[clamp(1.3rem,1.55cqw,2rem)] font-semibold leading-none text-control-text">
               {display?.value ?? point.value}
             </p>
-            <p className="mt-2 text-[clamp(0.72rem,0.78vw,0.9rem)] font-semibold leading-snug text-control-text">
+            <p className="mt-2 text-[clamp(0.72rem,0.78cqw,0.9rem)] font-semibold leading-snug text-control-text">
               {display?.label ?? point.label}
             </p>
           </div>
@@ -430,7 +430,7 @@ function TurnoverChart({ reducedMotion }: { reducedMotion: boolean }) {
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-control-warm">
             Turnover
           </p>
-          <h2 className="mt-2 text-[clamp(1.32rem,1.55vw,1.95rem)] font-semibold leading-[0.98] text-control-text">
+          <h2 className="mt-2 text-[clamp(1.32rem,1.55cqw,1.95rem)] font-semibold leading-[0.98] text-control-text">
             A track record of sustained growth
           </h2>
         </div>

@@ -75,7 +75,7 @@ export function ProgressIndicator() {
 
   return (
     <header className={`pointer-events-none absolute inset-x-[var(--stage-content-x)] top-[var(--stage-safe-y)] z-30 transition-opacity duration-300 pws-nav-${navigationState} ${isDarkScene ? "pws-progress-on-dark" : ""}`}>
-      <div className="grid grid-cols-[minmax(9.5rem,0.24fr)_minmax(0,1fr)_minmax(9.5rem,0.24fr)] items-start gap-[1.2vw]">
+      <div className="grid grid-cols-[minmax(9.5rem,0.24fr)_minmax(0,1fr)_minmax(9.5rem,0.24fr)] items-start gap-[1.2cqw]">
         <div className="pointer-events-auto min-w-0">
           <OnePwsLogo compact lightOnDark={isDarkScene} />
         </div>

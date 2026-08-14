@@ -15,10 +15,10 @@ export function LoadingScreen() {
           transition={{ duration: 0.7 }}
         >
           <p className="pws-technical-label">OnePWS Private Limited</p>
-          <h1 className="mt-5 text-balance text-4xl font-bold tracking-[-0.01em] md:text-6xl">
+          <h1 className="mt-5 text-balance text-[clamp(1.9rem,5.2vw,3.75rem)] font-bold leading-[1.05] tracking-[-0.01em]">
             Control-room experience activating
           </h1>
-          <p className="mt-5 max-w-xl text-sm leading-6 text-[var(--pws-muted-dark)] md:text-base">
+          <p className="mt-5 max-w-xl text-[clamp(0.85rem,1.6vw,1rem)] leading-[1.6] text-[var(--pws-muted-dark)]">
             Initialising presentation modules, media references and narration controls.
           </p>
         </motion.div>

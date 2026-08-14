@@ -110,7 +110,7 @@ export function MainNavigation() {
                 ease: [0.22, 1, 0.36, 1],
               }}
             >
-              <div className="pws-navigator-panel mx-auto grid w-full max-w-[min(72rem,calc(100dvw-(var(--stage-safe-x)*2)))] grid-cols-[minmax(16rem,0.95fr)_auto_minmax(16rem,0.9fr)] items-center gap-4 px-4 py-3 max-lg:grid-cols-1">
+              <div className="pws-navigator-panel mx-auto grid w-full max-w-[min(72rem,calc(100cqw-(var(--stage-safe-x)*2)))] grid-cols-[minmax(16rem,0.95fr)_auto_minmax(16rem,0.9fr)] items-center gap-4 px-4 py-3 [@container_stage_(max-width:1023px)]:grid-cols-1">
                 <div className="min-w-0">
                   <JourneyTrace
                     model={model}
@@ -190,7 +190,7 @@ export function MainNavigation() {
                   <ModeToggle />
                 </div>
 
-                <div className="min-w-0 justify-self-stretch max-lg:hidden">
+                <div className="min-w-0 justify-self-stretch [@container_stage_(max-width:1023px)]:hidden">
                   {model.nextDestination ? (
                     <div className="pws-next-scene-card">
                       <div className="min-w-0">
