@@ -1,7 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ChevronRight, Clock, CornerUpLeft, MapPinned, Route, Search, X } from "lucide-react";
 import { useMemo, useState } from "react";
+import { PresentationViewport } from "../PresentationViewport";
 import { CustomerPathSelector } from "./CustomerPathSelector";
+import { SceneRenderer } from "../../experience/SceneRenderer";
 import { buildNavigationModel, chapterForDestination, destinationSearch, type NavigationDestination } from "../../navigation/navigationModel";
 import { usePresentation } from "../../state/PresentationProvider";
 
@@ -68,6 +70,18 @@ function ExperienceMap() {
         .map((item) => model.destinations.find((destination) => destination.chapterId === item.chapterId))
         .filter((destination): destination is NavigationDestination => Boolean(destination));
 
+  function previewGroup(groupId: string) {
+    const group = model.mapGroups.find((item) => item.id === groupId);
+    if (!group) {
+      return;
+    }
+
+    setActiveGroupId(group.id);
+    if (!group.chapterIds.includes(activeChapterId)) {
+      setActiveChapterId(group.chapterIds[0]);
+    }
+  }
+
   return (
     <div className="flex h-full flex-col">
       <header className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-6 [@media(max-width:1023px)]:grid-cols-1">
@@ -111,11 +125,11 @@ function ExperienceMap() {
                   className={`pws-map-node pws-map-node-flow ${group.id === activeGroupId ? "pws-map-node-active" : ""}`}
                   key={group.id}
                   onClick={() => {
-                    setActiveGroupId(group.id);
+                    previewGroup(group.id);
                     setLevel("zone");
                   }}
-                  onFocus={() => setActiveGroupId(group.id)}
-                  onMouseEnter={() => setActiveGroupId(group.id)}
+                  onFocus={() => previewGroup(group.id)}
+                  onMouseEnter={() => previewGroup(group.id)}
                   type="button"
                 >
                   <span className="block text-[11px] uppercase tracking-[0.2em] text-control-warm">{group.theme}</span>
@@ -150,6 +164,7 @@ function ExperienceMap() {
                         setLevel("destination");
                       }}
                       onFocus={() => setActiveChapterId(chapterId)}
+                      onMouseEnter={() => setActiveChapterId(chapterId)}
                       type="button"
                     >
                       <span className="text-lg font-semibold text-control-warm">{String(index + 1).padStart(2, "0")}</span>
@@ -202,7 +217,7 @@ function ExperienceMap() {
           ) : null}
         </div>
 
-        <aside className="min-h-0 overflow-hidden border-l border-control-warm/50 pl-5 [@media(max-width:1023px)]:border-l-0 [@media(max-width:1023px)]:border-t [@media(max-width:1023px)]:pl-0 [@media(max-width:1023px)]:pt-4">
+        <aside className="flex min-h-0 flex-col overflow-hidden border-l border-control-warm/50 pl-5 [@media(max-width:1023px)]:border-l-0 [@media(max-width:1023px)]:border-t [@media(max-width:1023px)]:pl-0 [@media(max-width:1023px)]:pt-4">
           <label className="grid gap-2 text-xs uppercase tracking-[0.18em] text-white/54">
             Presenter search
             <span className="grid grid-cols-[1rem_1fr] items-center gap-2 border border-white/12 bg-black/30 px-3 py-2">
@@ -225,6 +240,8 @@ function ExperienceMap() {
                   setActiveChapterId(destination.chapterId);
                   setLevel("destination");
                 }}
+                onFocus={() => setActiveChapterId(destination.chapterId)}
+                onMouseEnter={() => setActiveChapterId(destination.chapterId)}
                 type="button"
               >
                 {destination.shortTitle}
@@ -237,13 +254,32 @@ function ExperienceMap() {
             <h3 className="mt-3 text-xl font-semibold leading-tight">{activeGroup.title}</h3>
             <p className="mt-3 text-sm leading-6 text-white/62">{activeGroup.description}</p>
           </div>
-          <div className="mt-6">
+          {/* <div className="mt-6">
             <p className="pws-technical-label">Route state</p>
             <p className="mt-3 text-sm text-white/62">{model.routePosition + 1} of {model.route.length} · {Math.round(model.remainingDurationMs / 60_000)} min remaining</p>
-          </div>
+          </div> */}
+          <SlidePreview chapter={activeChapter} />
         </aside>
       </div>
     </div>
+  );
+}
+
+function SlidePreview({ chapter }: { chapter: ReturnType<typeof chapterForDestination> }) {
+  return (
+    <section aria-live="polite" className="mt-5 flex min-h-0 flex-1 flex-col">
+      <div className="mb-2 flex items-end justify-between gap-3">
+        <p className="pws-technical-label">Slide preview</p>
+        <p className="max-w-[68%] truncate text-right text-xs text-white/54">{chapter.title}</p>
+      </div>
+      <div className="relative min-h-0 flex-1 overflow-hidden  ">
+        <div className="pointer-events-none absolute inset-0 select-none">
+          <PresentationViewport presenterPreview>
+            <SceneRenderer chapter={chapter} presenterPreview />
+          </PresentationViewport>
+        </div>
+      </div>
+    </section>
   );
 }
 

@@ -132,7 +132,7 @@ export function RoomSoundsRightChapter({ chapter }: { chapter: Chapter }) {
             <h2 className="text-[clamp(1rem,1.18cqw,1.36rem)] font-semibold uppercase leading-tight text-control-text">
               Acoustically Optimized. Purposefully Designed.
             </h2>
-            <div className="mt-[3.38cqh] grid grid-cols-4 divide-x divide-slate-200/90">
+            <div className="mt-[1.38cqh] grid grid-cols-4 divide-x divide-slate-200/90">
               {acousticPrinciples.map((item) => (
                 <div className="grid grid-cols-[3.75rem_minmax(0,1fr)] items-start gap-[0.72cqw] px-[0.78cqw] first:pl-0 last:pr-0" key={item.title}>
                   <span className="grid size-14 place-items-center rounded-full border border-red-100 bg-white text-red-600">
@@ -182,17 +182,16 @@ export function RoomSoundsRightChapter({ chapter }: { chapter: Chapter }) {
           </div>
         </section>
 
-        <section className="overflow-hidden rounded-[0.46rem] border border-slate-200/86 bg-white px-[1.05cqw] pb-[0.75cqh] pt-[1.05cqh] shadow-[0_0.7rem_1.8rem_rgb(15_23_42/0.045)]">
+        <section className="overflow-hidden rounded-[0.46rem] border border-slate-200/86 bg-white px-[1.05cqw] pb-[0.75cqh] pt-[3.05cqh] shadow-[0_0.7rem_1.8rem_rgb(15_23_42/0.045)]">
           <h2 className="text-[clamp(0.98rem,1.12cqw,1.3rem)] font-semibold uppercase leading-tight text-control-text">
             Operator Benefit
           </h2>
           <div className="mt-[0.55cqh] h-[2px] w-[2.5rem] bg-control-warm" />
-          <div className="mt-[3.05cqh] grid grid-cols-4 gap-[0.6cqw]">
+          <div className="mt-[3.05cqh] grid grid-cols-2 gap-x-[2.6cqw] gap-y-[2.2cqh]">
             {operatorBenefits.map((item) => (
-              <div className="text-center" key={item.title}>
-                <item.Icon aria-hidden="true" className="mx-auto text-red-600" size={28} strokeWidth={1.55} />
-                <p className="mt-[0.52cqh] text-[clamp(0.58rem,0.66cqw,0.78rem)] font-semibold leading-tight text-control-text">{item.title}</p>
-                <p className="mt-[0.34cqh] text-[clamp(0.48rem,0.54cqw,0.64rem)] font-medium leading-[1.24] text-slate-700">{item.detail}</p>
+              <div className="flex min-w-0 items-center gap-[0.7cqw]" key={item.title}>
+                <item.Icon aria-hidden="true" className="shrink-0 text-red-600" size={28} strokeWidth={1.55} />
+                <p className="min-w-0 text-[clamp(0.58rem,0.66cqw,0.78rem)] font-semibold leading-tight text-control-text">{item.title}</p>
               </div>
             ))}
           </div>
