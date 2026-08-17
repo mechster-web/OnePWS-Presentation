@@ -259,8 +259,8 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
                 <div className={`grid grid-cols-[2.6rem_1fr] items-center gap-[0.65cqw] px-[0.8cqw] ${index > 0 ? "border-l border-slate-200" : ""}`} key={item.title}>
                   <item.Icon aria-hidden="true" color={item.accent} size={32} strokeWidth={1.65} />
                   <div>
-                    <p className="text-[clamp(0.8rem,0.68cqw,1rem)] font-semibold leading-[1.08] text-control-text">{item.title}</p>
-                    <p className="mt-[0.28cqh] text-[clamp(0.66rem,0.55cqw,0.8rem)] font-medium leading-[1.2] text-slate-600">{item.detail}</p>
+                    <p className="text-[clamp(0.8rem,0.78cqw,1.2rem)] font-semibold leading-[1.08] text-control-text">{item.title}</p>
+                    <p className="mt-[0.28cqh] text-[clamp(0.66rem,0.68cqw,0.8rem)] font-medium leading-[1.2] text-slate-600">{item.detail}</p>
                   </div>
                 </div>
               ))}

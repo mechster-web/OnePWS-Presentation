@@ -448,7 +448,7 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
 
           <motion.div
             animate={{ opacity: 1, y: 0 }}
-            className="mt-[3.8cqh] flex items-start gap-[0.9cqw] rounded-[0.8rem] border border-white/85 bg-white/76 p-[0.95cqw] shadow-[0_1.1rem_2.65rem_rgb(15_23_42/0.095)] backdrop-blur-xl"
+            className="mt-[3.8cqh] flex items-start gap-[0.9cqw] rounded-[0.8rem] border border-white/85 bg-white/76 p-[0.95cqw] shadow-[0_1.1rem_2.65rem_rgb(15_23_42/0.095)] "
             initial={state.reducedMotion ? false : { opacity: 0, y: 18, scale: 0.96 }}
             transition={{ duration: 0.72, delay: 0.42, ease: popEase }}
             whileHover={state.reducedMotion ? undefined : { y: -3, scale: 1.01, transition: { duration: 0.36, ease: precisionEase } }}
@@ -481,19 +481,15 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
             return (
               <motion.button
               aria-label={`Open ${item.name} ${item.title} details`}
-              className="group relative flex min-h-0 flex-col overflow-hidden rounded-[0.82rem] border border-white/90 bg-white/90 text-left shadow-[0_1rem_2.5rem_rgb(15_23_42/0.08)] ring-1 ring-slate-900/[0.045] will-change-transform backdrop-blur-xl transition outline-none focus-visible:ring-2 focus-visible:ring-control-warm/70"
+              className="group relative flex min-h-0 flex-col overflow-hidden rounded-[0.82rem] border border-white/90 bg-white/90 text-left "
               key={item.id}
               onClick={() => dispatch({ type: "GO_TO_CHAPTER", chapterId: `console-detail-${item.id}` })}
               style={{ borderBottom: `3px solid ${item.accent}` }}
               type="button"
               variants={{
-                hidden: { opacity: 0, y: 30, scale: 0.94, rotateX: 6, filter: "blur(10px)" },
                 show: {
                   opacity: 1,
                   y: 0,
-                  scale: 1,
-                  rotateX: 0,
-                  filter: "blur(0px)",
                   transition: { duration: revealDuration, ease: popEase },
                 },
               }}
@@ -502,7 +498,7 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
                   ? undefined
                   : {
                       y: -7,
-                      scale: 1.012,
+
                       boxShadow: "0 1.45rem 3rem rgb(15 23 42 / 0.14)",
                       transition: { duration: 0.42, ease: precisionEase },
                     }
@@ -587,7 +583,7 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-[9.45cqh] left-[2.75cqw] right-[2.75cqw] grid h-[8.6cqh] grid-cols-5 overflow-hidden rounded-[0.82rem] border border-white/85 bg-white/78 shadow-[0_1rem_2.65rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
+          className="absolute bottom-[9.45cqh] left-[1.75cqw] right-[1.75cqw] grid h-[8.6cqh] grid-cols-5 overflow-hidden rounded-[0.82rem] border border-white/85 bg-white/78 shadow-[0_1rem_2.65rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
           initial={state.reducedMotion ? false : { opacity: 0, y: 24, scale: 0.985 }}
           transition={{ duration: 0.82, delay: 0.68, ease: popEase }}
         >

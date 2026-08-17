@@ -129,12 +129,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
             initial={{ opacity: 0, scale: 0.98 }}
             transition={{ duration: 2.2, ease: processEase }}
           />
-          <motion.div
-            animate={{ opacity: [0, 0.55, 0.18], scaleX: 1 }}
-            className="pointer-events-none absolute left-[3.55cqw] top-[59.25cqh] h-px w-[77cqw] origin-left bg-[linear-gradient(90deg,transparent,rgb(213_29_42/0.6),rgb(47_101_184/0.18),transparent)]"
-            initial={{ opacity: 0, scaleX: 0 }}
-            transition={{ duration: 1.45, delay: 0.76, ease: processEase }}
-          />
+
         </>
       ) : null}
 
@@ -206,7 +201,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
 
         <motion.div
           animate={{ clipPath: "inset(0% 0% 0% 0%)", opacity: 1, x: 0 }}
-          className="absolute left-[34cqw] right-[3.55cqw] top-[12.6cqh] h-[43.2cqh] overflow-hidden rounded-[0.22rem] border border-slate-200 bg-slate-100 shadow-[0_1.3rem_3rem_rgb(15_23_42/0.12)]"
+          className="absolute left-[34cqw] right-[3.55cqw] top-[12.6cqh] h-[53.2cqh] overflow-hidden rounded-[0.22rem] border border-slate-200 bg-slate-100 shadow-[0_1.3rem_3rem_rgb(15_23_42/0.12)]"
           initial={state.reducedMotion ? false : { clipPath: "inset(0% 0% 0% 10%)", opacity: 0, x: 20 }}
           transition={{ duration: cinematicDuration, delay: 0.08, ease: processEase }}
         >
@@ -235,7 +230,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
             src="/assets/source-pdf/p31_059_2078x1168.jpg"
             transition={{ duration: 5.8, delay: 0.1, ease: processEase }}
           />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgb(6_11_18/0.66)_0%,rgb(6_11_18/0.28)_22%,transparent_50%)]" />
+          <div className=" inset-0 bg-[linear-gradient(90deg,rgb(6_11_18/0.66)_0%,rgb(6_11_18/0.28)_22%,transparent_50%)]" />
           {!state.reducedMotion ? (
             <>
               <motion.div

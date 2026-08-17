@@ -309,14 +309,14 @@ function IntelligentFeaturesReferenceStage({ chapter }: { chapter: Chapter }) {
   return (
     <article className="relative h-full w-full overflow-hidden bg-white text-control-text">
       <div className="absolute inset-0 bg-[linear-gradient(116deg,#ffffff_0%,#fbfcfd_58%,#eef4f7_100%)]" />
-      <div className="pointer-events-none absolute inset-x-0 top-[8.6cqh] h-px bg-slate-200/80" />
+      <div className="" />
       <motion.div
         animate={reducedMotion ? undefined : { opacity: [0.94, 1, 0.96], y: [0, -3, 0] }}
-        className="pointer-events-none absolute right-[16.6cqw] top-[7.45cqh] h-[20.6cqh] w-[42cqw] overflow-hidden"
+        className="pointer-events-none absolute left-[29cqw] top-[11.45cqh] h-[20.6cqh] w-[42cqw] overflow-hidden"
         initial={false}
         transition={{ duration: 4.8, ease: "easeInOut", repeat: Infinity }}
       >
-        <img alt="" className="h-full w-full object-contain object-center" src="/assets/source-pdf/p07_011_295x276.jpg" />
+        <img alt="" className="h-full w-full object-contain object-center" src="/assets/source-pdf/render.png" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_86%,rgb(15_23_42/0.12),transparent_40%)]" />
       </motion.div>
 
@@ -1076,7 +1076,7 @@ function FeatureCard({ feature, index, reducedMotion }: { feature: IntelligentFe
 function FeatureVisual({ feature, reducedMotion }: { feature: IntelligentFeatureCard; reducedMotion: boolean }) {
   if (feature.image) {
     return (
-      <div className="relative z-10 mt-auto h-[13.4cqh] shrink-0 overflow-hidden rounded-[0.58rem] border border-white/54 bg-[linear-gradient(135deg,#101820,#27313b)] shadow-[inset_0_1px_0_rgb(255_255_255/0.16),0_0.62rem_1.35rem_rgb(15_23_42/0.09)]">
+      <div className="relative z-10 h-[15.4cqh] shrink-0 overflow-hidden rounded-[0.58rem] border border-white/54 bg-[linear-gradient(135deg,#101820,#27313b)] shadow-[inset_0_1px_0_rgb(255_255_255/0.16),0_0.62rem_1.35rem_rgb(15_23_42/0.09)]">
         <img alt="" className="h-full w-full object-cover" src={feature.image} />
       </div>
     );

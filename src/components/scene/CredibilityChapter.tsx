@@ -155,6 +155,10 @@ const metricIcons: Partial<Record<CredentialProofPoint["category"], ReactNode>> 
   projects: <Landmark aria-hidden="true" size={18} />,
 };
 
+const glanceEyebrowClass = "text-[clamp(0.72rem,0.82cqw,0.94rem)] font-bold uppercase tracking-[0.24em] text-control-warm";
+const glanceHeadingClass =
+  "text-[clamp(2.85rem,3.45cqw,4.25rem)] font-bold leading-[1.04] tracking-normal text-control-text";
+
 export function CredibilityChapter({ chapter }: Props) {
   const { dispatch, state } = usePresentation();
   const { toggleFullscreen } = useFullscreen();
@@ -176,16 +180,16 @@ export function CredibilityChapter({ chapter }: Props) {
 
   return (
     <article className="relative h-full w-full overflow-hidden bg-white text-control-text">
-      <div className="absolute inset-0 bg-[linear-gradient(120deg,#ffffff_0%,#f7f9fb_52%,#eef2f6_100%)]" />
-      <div className="absolute right-[-10%] top-[-18%] h-[52%] w-[52%] rounded-full bg-control-warm/5 blur-3xl" />
-      <div className="absolute bottom-[-18%] left-[18%] h-[44%] w-[42%] rounded-full bg-slate-300/20 blur-3xl" />
+      <div className="absolute inset-0 bg-[linear-gradient(118deg,#ffffff_0%,#fbfbfb_56%,#eef3f7_100%)]" />
+      <div className="absolute right-0 top-0 h-[45%] w-[46%] bg-[radial-gradient(circle_at_80%_18%,rgb(207_31_43/0.055),transparent_48%)]" />
+      <div className="absolute bottom-0 left-[24%] h-[36%] w-[58%] bg-[radial-gradient(circle_at_48%_100%,rgb(209_218_229/0.36),transparent_60%)]" />
 
-      <section className="absolute scene-content-safe z-20 flex flex-col justify-center gap-[clamp(0.8rem,1.45cqh,1.25rem)]">
-        <div className="grid items-center gap-[min(3.4cqw,3.4rem)] lg:grid-cols-[minmax(0,0.78fr)_minmax(31rem,1fr)]">
-          <div className="min-w-0">
+      <section className="absolute scene-content-safe z-20 flex flex-col justify-start gap-[clamp(1rem,1.55cqh,1.45rem)] pt-[clamp(2rem,5.6cqh,4.2rem)]">
+        <div className="grid items-start gap-[min(3.2cqw,3.2rem)] lg:grid-cols-[minmax(0,0.78fr)_minmax(31rem,1.12fr)]">
+          <div className="min-w-0 pt-[1.9cqh]">
           <motion.p
             animate={{ opacity: 1, y: 0 }}
-            className="text-sm font-bold uppercase tracking-[0.18em] text-control-warm"
+            className={glanceEyebrowClass}
             initial={false}
             transition={{ duration: motionDuration }}
           >
@@ -193,7 +197,7 @@ export function CredibilityChapter({ chapter }: Props) {
           </motion.p>
           <motion.h1
             animate={{ opacity: 1, y: 0 }}
-            className="mt-5 max-w-[14ch] text-balance text-[clamp(2.35rem,3.55cqw,4.45rem)] font-bold leading-[0.97] tracking-normal text-control-text"
+            className={`mt-[2cqh] max-w-[14ch] text-balance ${glanceHeadingClass}`}
             initial={false}
             transition={{ duration: motionDuration, delay: 0.08 }}
           >
@@ -201,7 +205,7 @@ export function CredibilityChapter({ chapter }: Props) {
           </motion.h1>
           <motion.p
             animate={{ opacity: 1, y: 0 }}
-            className="mt-5 max-w-[45rem] text-[clamp(1rem,1.05cqw,1.18rem)] leading-[1.52] text-control-soft"
+            className="mt-[1.9cqh] max-w-[41rem] text-[clamp(0.98rem,1.02cqw,1.18rem)] font-normal leading-[1.52] text-slate-800"
             initial={false}
             transition={{ duration: motionDuration, delay: 0.16 }}
           >
@@ -347,7 +351,7 @@ function CredibilityMetricGrid({ points }: { points: CredentialProofPoint[] }) {
   return (
     <motion.section
       animate={{ opacity: 1, y: 0 }}
-      className="grid grid-cols-4 gap-3 [@container_stage_(max-width:1279px)]:grid-cols-2"
+      className="grid grid-cols-4 gap-[clamp(0.55rem,0.95cqw,1rem)] [@container_stage_(max-width:1279px)]:grid-cols-2"
       initial={false}
       transition={{ duration: 0.5, delay: 0.24 }}
     >
@@ -356,13 +360,13 @@ function CredibilityMetricGrid({ points }: { points: CredentialProofPoint[] }) {
 
         return (
           <div
-            className="min-h-[4.25rem] border border-slate-200/80 bg-white/72 px-4 py-3 shadow-[0_0.8rem_2rem_rgb(15_23_42/0.055)] backdrop-blur-xl"
+            className="min-h-[4.9rem] border border-slate-200/82 bg-white/78 px-[clamp(0.9rem,1.05cqw,1.25rem)] py-[clamp(0.7rem,0.86cqh,0.95rem)] shadow-[0_0.8rem_2rem_rgb(15_23_42/0.045)]"
             key={point.id}
           >
-            <p className="text-[clamp(1.3rem,1.55cqw,2rem)] font-semibold leading-none text-control-text">
+            <p className="text-[clamp(1.5rem,1.82cqw,2.2rem)] font-bold leading-none text-control-text">
               {display?.value ?? point.value}
             </p>
-            <p className="mt-2 text-[clamp(0.72rem,0.78cqw,0.9rem)] font-semibold leading-snug text-control-text">
+            <p className="mt-[0.62cqh] text-[clamp(0.74rem,0.78cqw,0.92rem)] font-semibold leading-snug text-control-text">
               {display?.label ?? point.label}
             </p>
           </div>
@@ -390,7 +394,7 @@ const primaryProofDisplay: Partial<Record<string, { label: string; value?: strin
   "workspace-certifications": { label: "Major certifications" },
   "workspace-customers": { label: "Customers served" },
   "onepws-countries": { label: "Countries reached" },
-  "onepws-sales": { label: "Annual turnover", value: "₹236 Cr." },
+  "onepws-sales": { label: "Annual turnover", value: "\u20B9236 Cr." },
   "onepws-patents-applied": { label: "Patent applications" },
   "design-build-solutions": { label: "Design-build interiors delivered" },
   "control-desk-solutions": { label: "Control-desk solutions delivered" },
@@ -423,25 +427,23 @@ function TurnoverChart({ reducedMotion }: { reducedMotion: boolean }) {
   const areaPath = `${trendPath} L ${chartPoints[chartPoints.length - 1].centerX},${baseline} L ${chartPoints[0].centerX},${baseline} Z`;
 
   return (
-    <section className="relative overflow-hidden border border-slate-200/80 bg-white/78 p-4 shadow-[0_1.4rem_3.5rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_86%_8%,rgb(207_31_43/0.07),transparent_30%),linear-gradient(135deg,rgb(255_255_255/0.9),rgb(240_244_248/0.46))]" />
-      <div className="relative flex items-start justify-between gap-6">
-        <div>
-          <p className="text-xs font-bold uppercase tracking-[0.22em] text-control-warm">
-            Turnover
+    <section className="relative overflow-hidden border border-slate-200/80 bg-white/82 p-[clamp(1rem,1.25cqw,1.45rem)] shadow-[0_1.25rem_3.2rem_rgb(15_23_42/0.075)]">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_88%_8%,rgb(207_31_43/0.045),transparent_32%),linear-gradient(135deg,rgb(255_255_255/0.94),rgb(244_247_250/0.54))]" />
+      <div className="relative">
+        <div className="flex items-baseline justify-between gap-6">
+          <p className={glanceEyebrowClass}>Turnover</p>
+          <p className="max-w-[14rem] text-right text-[clamp(0.62rem,0.66cqw,0.78rem)] font-normal leading-5 text-slate-600">
+            Turnover shown in INR crores
           </p>
-          <h2 className="mt-2 text-[clamp(1.32rem,1.55cqw,1.95rem)] font-semibold leading-[0.98] text-control-text">
-            A track record of sustained growth
-          </h2>
         </div>
-        <p className="max-w-[14rem] text-right text-[0.68rem] leading-5 text-control-muted">
-          Turnover shown in INR crores
-        </p>
+        <h2 className="mt-[1.05cqh] text-balance text-[clamp(1.34rem,1.66cqw,2rem)] font-bold leading-[1.16] tracking-normal text-slate-950">
+          A track record of sustained growth
+        </h2>
       </div>
 
       <svg
         aria-label="OnePWS turnover growth chart in INR crores"
-        className="relative mt-3 h-[15.25rem] w-full overflow-visible"
+        className="relative mt-[0.8cqh] h-[14.2rem] w-full overflow-visible"
         preserveAspectRatio="none"
         role="img"
         viewBox={`0 0 ${chartWidth} ${chartHeight}`}
@@ -508,7 +510,7 @@ function TurnoverChart({ reducedMotion }: { reducedMotion: boolean }) {
             <text
               fill="#11151b"
               fontSize="15"
-              fontWeight="600"
+              fontWeight="700"
               textAnchor="middle"
               x={point.centerX}
               y={point.y - 12}
@@ -519,7 +521,7 @@ function TurnoverChart({ reducedMotion }: { reducedMotion: boolean }) {
               fill="#4b5563"
               fontSize="12"
               fontWeight="700"
-              letterSpacing="0.8"
+              letterSpacing="1.2"
               textAnchor="middle"
               x={point.centerX}
               y={baseline + 34}
@@ -567,8 +569,8 @@ function TurnoverChart({ reducedMotion }: { reducedMotion: boolean }) {
         <text
           fill="#6b7280"
           fontSize="11"
-          fontWeight="600"
-          letterSpacing="4"
+          fontWeight="700"
+          letterSpacing="5"
           textAnchor="middle"
           x={(chartWidth + plot.left - plot.right) / 2}
           y={chartHeight - 6}

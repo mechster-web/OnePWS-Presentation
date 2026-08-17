@@ -198,11 +198,7 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
                 />
               ) : null}
               <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.10),rgba(255,255,255,0.04)_46%,rgba(15,23,42,0.32))]" />
-              <div className="absolute inset-x-0 bottom-0 flex items-center justify-center px-4 pb-4">
-                <h3 className="rounded-full border border-white/60 bg-white/55 px-5 py-2 text-center text-[clamp(0.9rem,1.02cqw,1.28rem)] font-semibold text-slate-950 shadow-[0_0.6rem_1.8rem_rgba(15,23,42,0.16)] backdrop-blur-xl">
-                  AI-Powered Operations Control Center
-                </h3>
-              </div>
+              <div className="absolute inset-x-0 bottom-0 flex items-center justify-center px-4 pb-4" />
               <motion.div
                 animate={state.reducedMotion ? { opacity: 0 } : { x: ["-110%", "112%"], opacity: [0, 0.72, 0] }}
                 className="pointer-events-none absolute inset-y-0 left-0 w-[28%] skew-x-[-14deg] bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.72),transparent)] blur-sm"

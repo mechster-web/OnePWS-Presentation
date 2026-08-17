@@ -390,39 +390,39 @@ function CertificationOverviewScene({ chapter }: { chapter: Chapter }) {
                 <span className="block text-control-warm">Certifications</span>
               </h1>
               <div className="mt-[2.05cqh] h-[2px] w-[4.35rem] bg-control-warm" />
-              <p className="mt-[2.15cqh] max-w-[38.5rem] text-[clamp(1.08rem,1.38cqw,1.66rem)] font-medium leading-[1.38] text-black md:text-[1.08cqw]">
+              <p className="mt-[2.15cqh] max-w-[38.5rem] text-[clamp(1.08rem,1.38cqw,1.66rem)] font-medium leading-[1.38] text-black md:text-[0.8cqw]">
                 Our products are tested and certified to meet globally recognized standards for safety, quality and environmental responsibility.
               </p>
 
-              <section className="mt-[2.35cqh] grid w-[37.8cqw] grid-cols-2 overflow-hidden rounded-[0.72rem] border border-slate-300/90 bg-white px-[1.25cqw] py-[1.4cqh] shadow-[0_0.75rem_1.8rem_rgb(15_23_42/0.055)]">
+              <section className="mt-[6.35cqh] grid w-[37.8cqw] grid-cols-2 overflow-hidden rounded-[0.72rem] border border-slate-300/90 bg-white px-[1.25cqw] py-[1.4cqh] shadow-[0_0.75rem_1.8rem_rgb(15_23_42/0.055)]">
                 {certificationMetrics.map((item, index) => (
                   <CertificationMetric index={index} item={item} key={item.title} />
                 ))}
               </section>
             </div>
 
-            <div className="absolute right-[2.3cqw] top-[0.2cqh] h-[34.4cqh] w-[49.7cqw]">
+            <div className="absolute right-[2.3cqw] top-[-1cqh] h-[34.4cqh] w-[49.7cqw]">
               <img alt="" className="absolute inset-0 h-full w-full object-contain object-center opacity-75" src="/assets/generated/international-certifications-map-red.png" />
             </div>
 
-            <section className="absolute right-[13.1cqw] bottom-[1.2cqh] grid max-w-[37rem] grid-cols-[0.18rem_minmax(0,1fr)] gap-[1.25cqw]">
+            <section className="absolute right-[32.1cqw] bottom-[5.7cqh] grid max-w-[37rem] grid-cols-[0.18rem_minmax(0,1fr)] gap-[1.25cqw]">
               <span className="mt-[0.2cqh] h-[7.2cqh] bg-control-warm" />
               <span>
                 <h2 className="text-[clamp(1.05rem,1.4cqw,1.62rem)] font-semibold uppercase leading-tight text-black">Trusted Worldwide</h2>
-                <p className="mt-[0.8cqh] text-[clamp(0.9rem,1.16cqw,1.36rem)] font-medium leading-[1.34] text-black">
+                <p className="mt-[0.8cqh] text-[clamp(0.9rem,0.8cqw,1.36rem)] font-medium leading-[1.34] text-black">
                   Our certified products are trusted in <span className="font-semibold text-control-warm">75+</span> countries across the globe.
                 </p>
               </span>
             </section>
           </motion.section>
 
-          <motion.section animate={{ opacity: 1, y: 0 }} className="overflow-hidden rounded-[0.78rem] border border-slate-300/90 bg-white px-[0.8cqw] py-[1.55cqh] shadow-[0_0.8rem_1.8rem_rgb(15_23_42/0.055)]" initial={false} transition={{ duration: 0.72, delay: 0.12, ease }}>
+          <motion.section animate={{ opacity: 1, y: 0 }} className="" initial={false} transition={{ duration: 0.72, delay: 0.12, ease }}>
             <div className="flex items-center justify-center gap-[1.75cqw]">
               <span className="h-[2px] w-[2rem] bg-control-warm" />
               <h2 className="text-[clamp(1.05rem,1.36cqw,1.58rem)] font-semibold uppercase leading-tight text-black">Product Certifications</h2>
               <span className="h-[2px] w-[2rem] bg-control-warm" />
             </div>
-            <div className="mt-[2cqh] grid h-[27.1cqh] grid-cols-8 gap-[0.82cqw]">
+            <div className="mt-[2cqh] bg-white grid h-[23.1cqh] grid-cols-8 gap-[0.82cqw]">
               {productCertifications.map((item) => (
                 <ProductCertificationCard item={item} key={item.title} />
               ))}
@@ -464,7 +464,7 @@ function CertificationMetric({ item, index }: { item: ManufacturingItem & { valu
       </span>
       <span className="min-w-0">
         <strong className="block text-[clamp(1.7rem,2.14cqw,2.55rem)] font-semibold leading-none text-control-warm">{item.value}</strong>
-        <span className="mt-[0.55cqh] block text-[clamp(0.86rem,1.08cqw,1.26rem)] font-medium leading-[1.18] text-black">{item.title}</span>
+        <span className="mt-[0.55cqh] block text-[clamp(0.86rem,0.8cqw,1.26rem)] font-medium leading-[1.18] text-black">{item.title}</span>
       </span>
     </div>
   );
@@ -509,20 +509,20 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
       <div className="pointer-events-none absolute left-[1.5cqw] top-[12cqh] h-[50cqh] w-[34cqw] opacity-[0.06] [background-image:linear-gradient(90deg,#94a3b8_1px,transparent_1px),linear-gradient(#94a3b8_1px,transparent_1px)] [background-size:34px_34px] [mask-image:linear-gradient(90deg,#000,transparent)]" />
 
       <section className="absolute inset-x-[1.55cqw] top-[9.65cqh] bottom-[7.05cqh] z-10">
-        <div className="absolute inset-x-0 top-0 bottom-[10.4cqh] grid grid-rows-[21.8cqh_37.2cqh_10.8cqh] gap-[1cqh]">
+        <div className="absolute inset-x-0 top-0 bottom-[10.4cqh] grid grid-rows-[20.5cqh_39cqh_11.2cqh] gap-[1.15cqh]">
           <motion.section
             animate={{ opacity: 1, y: 0 }}
-            className="grid grid-cols-[minmax(31rem,0.78fr)_minmax(0,1fr)] gap-[2cqw]"
+            className="grid grid-cols-[minmax(31rem,0.82fr)_minmax(0,1fr)] items-start gap-[2cqw]"
             initial={false}
             transition={{ duration: 0.72, ease }}
           >
-            <div className="min-w-0 pl-[0.4cqw] pt-[1.25cqh]">
-              <h1 className="text-[clamp(2.35rem,3.45cqw,4.85rem)] font-bold uppercase leading-[0.98] tracking-normal text-black md:text-[2.5cqw]">
+            <div className="min-w-0 pl-[0.4cqw] pt-[1.15cqh]">
+              <h1 className="text-[clamp(2.15rem,3.02cqw,4.15rem)] font-bold uppercase leading-[1.02] tracking-normal text-black md:text-[3.34cqw]">
                 <span className="block">Customers and</span>
                 <span className="block text-control-warm">Global Presence</span>
               </h1>
               <div className="mt-[1.15cqh] h-[2px] w-[3rem] bg-control-warm" />
-              <p className="mt-[1.15cqh] max-w-[47rem] text-[clamp(0.76rem,0.95cqw,1.1rem)] font-medium leading-[1.3] text-slate-900 md:text-[0.8cqw]">
+              <p className="mt-[1.15cqh] max-w-[50rem] text-[clamp(0.9rem,1.02cqw,1.18rem)] font-medium leading-[1.42] text-slate-900 md:text-[0.88cqw]">
                 Trusted across mission-critical environments, with customer references spanning public sector,
                 transport, energy, utilities, industrial and technology operations.
               </p>
@@ -541,19 +541,19 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
             initial={false}
             transition={{ duration: 0.72, delay: 0.08, ease }}
           >
-            <div className="min-h-0 overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/70 p-[0.9cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.6rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+            <div className="min-h-0 overflow-hidden rounded-[0.65rem] border border-slate-200/86 bg-white/76 p-[1cqw] shadow-[0_0.9rem_2.2rem_rgb(15_23_42/0.065)]">
               <div className="flex items-center justify-between">
                 <div>
-                  <h2 className="text-[clamp(0.92rem,1.08cqw,1.28rem)] font-semibold uppercase leading-tight text-control-text">
+                  <h2 className="text-[clamp(1rem,1.12cqw,1.32rem)] font-semibold uppercase leading-tight text-control-text">
                     Customer References by Sector
                   </h2>
                   <div className="mt-[0.7cqh] h-[2px] w-[2.6rem] bg-control-warm" />
                 </div>
-                <p className="rounded-full border border-slate-200 bg-white/75 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-slate-600">
+                <p className="rounded-full border border-slate-200 bg-white/82 px-3 py-1 text-[clamp(0.58rem,0.64cqw,0.74rem)] font-semibold uppercase tracking-[0.16em] text-slate-600">
                   {referencedCount} sourced names
                 </p>
               </div>
-              <div className="mt-[1cqh] grid grid-cols-3 gap-[0.65cqw]">
+              <div className="mt-[1.2cqh] grid grid-cols-3 gap-[0.8cqw]">
                 {customerSectorGroups.map((group) => (
                   <CustomerSectorCard group={group} key={group.title} />
                 ))}
@@ -561,33 +561,27 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
             </div>
 
             <div className="grid min-h-0 grid-rows-[1fr_auto] gap-[1.1cqh]">
-              <section className="overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/70 p-[0.95cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.6rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-                <h2 className="text-[clamp(0.92rem,1.05cqw,1.22rem)] font-semibold uppercase leading-tight text-control-text">
-                  Global Delivery Signal
-                </h2>
-                <div className="mt-[0.7cqh] h-[2px] w-[2.6rem] bg-control-warm" />
-                <div className="relative mt-[1.1cqh] h-[19.6cqh] overflow-hidden rounded-[0.8rem] border border-slate-200/80 bg-[linear-gradient(135deg,#f8fafc,#ffffff)]">
+              <section className="flex min-h-0 flex-col overflow-hidden rounded-[0.65rem] border border-slate-200/86 bg-white/76 shadow-[0_0.9rem_2.2rem_rgb(15_23_42/0.065)]">
+                <div className="px-[0.72cqw] pt-[1cqh]">
+                  <h2 className="text-[clamp(1rem,1.12cqw,1.3rem)] font-semibold uppercase leading-tight text-control-text">
+                    Global Delivery Signal
+                  </h2>
+                  <div className="mt-[0.6cqh] h-[2px] w-[2.6rem] bg-control-warm" />
+                </div>
+                <div className="relative mt-[0.35cqh] min-h-0 flex-1 overflow-hidden">
                   <img
                     alt="World map highlighting the markets OnePWS has delivered control rooms into."
-                    className="absolute inset-x-0 top-0 h-[74%] w-full object-contain object-center"
+                    className="absolute inset-0 h-full w-full scale-[1.04] object-contain object-[center_47%]"
                     draggable={false}
                     onError={(event) => { event.currentTarget.style.display = "none"; }}
-                    src="/assets/generated/customer-presence-world-map.png"
+                    src="/assets/generated/customer-presence-map.webp"
                   />
-                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[42%] bg-[linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,0.86)_58%,#ffffff)]" />
-                  <div className="absolute bottom-[1.3cqh] left-[1cqw] right-[1cqw] grid grid-cols-3 gap-[0.55cqw]">
-                    {["India", "Middle East", "International markets"].map((region) => (
-                      <div className="rounded-[0.55rem] bg-white/80 px-3 py-2 text-center text-[0.72rem] font-semibold text-slate-800 shadow-sm" key={region}>
-                        {region}
-                      </div>
-                    ))}
-                  </div>
                 </div>
               </section>
 
-              <section className="rounded-[0.9rem] border border-control-warm/15 bg-control-warm/6 px-[0.95cqw] py-[0.85cqh]">
-                <p className="text-[clamp(0.74rem,0.86cqw,0.98rem)] font-semibold leading-[1.28] text-slate-950">
-                  Presence proof is strongest when it is organized around the customer’s operating environment,
+              <section className="rounded-[0.65rem] border border-control-warm/18 bg-control-warm/6 px-[1cqw] py-[1cqh]">
+                <p className="text-[clamp(0.82rem,0.92cqw,1.05rem)] font-semibold leading-[1.32] text-slate-950">
+                  Presence proof is strongest when it is organized around the customer's operating environment,
                   not as a generic logo wall.
                 </p>
               </section>
@@ -596,18 +590,18 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
 
           <motion.section
             animate={{ opacity: 1, y: 0 }}
-            className="grid grid-cols-4 overflow-hidden rounded-[0.9rem] border border-slate-200/86 bg-white/75 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]"
+            className="grid grid-cols-4 overflow-hidden rounded-[0.65rem] border border-slate-200/86 bg-white/78 shadow-[0_0.9rem_2.2rem_rgb(15_23_42/0.065)]"
             initial={false}
             transition={{ duration: 0.72, delay: 0.14, ease }}
           >
             {customerPresenceProof.map((item, index) => (
-              <div className={`grid grid-cols-[2.6rem_minmax(0,1fr)] items-center gap-[0.75cqw] px-[1cqw] py-[1cqh] ${index ? "border-l border-slate-200/90" : ""}`} key={item.title}>
-                <span className="grid size-9 place-items-center rounded-full bg-control-warm/7 text-control-warm">
-                  <item.Icon aria-hidden="true" size={21} strokeWidth={1.6} />
+              <div className={`grid grid-cols-[3.35rem_minmax(0,1fr)] items-center gap-[0.9cqw] px-[1.05cqw] py-[1.1cqh] ${index ? "border-l border-slate-200/90" : ""}`} key={item.title}>
+                <span className="grid size-12 place-items-center rounded-full bg-control-warm/7 text-control-warm">
+                  <item.Icon aria-hidden="true" size={30} strokeWidth={1.6} />
                 </span>
                 <span>
-                  <strong className="block text-[clamp(0.62rem,0.72cqw,0.84rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
-                  <span className="mt-[0.25cqh] block text-[clamp(0.5rem,0.58cqw,0.68rem)] font-medium leading-[1.18] text-slate-700">{item.detail}</span>
+                  <strong className="block text-[clamp(1.2rem,0.8cqw,0.92rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
+                  <span className="mt-[0.32cqh] block text-[clamp(0.88rem,0.66cqw,0.76rem)] font-medium leading-[1.24] text-slate-700">{item.detail}</span>
                 </span>
               </div>
             ))}
@@ -643,28 +637,28 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
 
 function CustomerPresenceMetric({ item, index }: { item: { value: string; label: string; Icon: LucideIcon }; index: number }) {
   return (
-    <article className="grid min-w-0 grid-rows-[2.95rem_auto_minmax(0,1fr)] rounded-[0.85rem] border border-white/80 bg-white/70 px-[0.8cqw] py-[1cqh] text-center shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.4rem_rgb(15_23_42/0.08)] backdrop-blur-[24px]">
+    <article className="grid min-w-0 content-center rounded-[0.65rem] border border-white/85 bg-white/76 px-[0.85cqw] py-[1.2cqh] text-center shadow-[0_0.85rem_2rem_rgb(15_23_42/0.065)]">
       <div className="grid place-items-center">
-        <span className="grid size-10 place-items-center rounded-full bg-control-warm/7 text-control-warm">
-          <item.Icon aria-hidden="true" size={25} strokeWidth={1.55} />
+        <span className="grid size-11 place-items-center rounded-full bg-control-warm/7 text-control-warm">
+          <item.Icon aria-hidden="true" size={27} strokeWidth={1.55} />
         </span>
       </div>
-      <strong className="mt-[0.35cqh] block text-[clamp(1.35rem,1.82cqw,2.05rem)] font-semibold leading-none text-control-warm">{item.value}</strong>
-      <span className="mt-[0.5cqh] block text-[clamp(0.62rem,0.74cqw,0.86rem)] font-semibold leading-tight text-control-text">{item.label}</span>
+      <strong className="mt-[0.65cqh] block text-[clamp(1.5rem,1.86cqw,2.15rem)] font-semibold leading-none text-control-warm">{item.value}</strong>
+      <span className="mt-[0.65cqh] block text-[clamp(0.72rem,0.82cqw,0.96rem)] font-semibold leading-tight text-control-text">{item.label}</span>
     </article>
   );
 }
 
 function CustomerSectorCard({ group }: { group: { title: string; accent: string; Icon: LucideIcon; names: string[] } }) {
   return (
-    <article className="min-h-[14.3cqh] rounded-[0.75rem] border border-slate-200/86 bg-white/65 p-[0.68cqw] shadow-[0_0.75rem_1.7rem_rgb(15_23_42/0.055)]">
-      <div className="flex items-center gap-2">
-        <group.Icon aria-hidden="true" className={group.accent} size={22} strokeWidth={1.7} />
-        <h3 className="text-[clamp(0.56rem,0.66cqw,0.78rem)] font-semibold uppercase leading-tight text-control-text">{group.title}</h3>
+    <article className="min-h-[14.9cqh] rounded-[0.55rem] border border-slate-200/86 bg-white/72 p-[0.82cqw] shadow-[0_0.55rem_1.35rem_rgb(15_23_42/0.045)]">
+      <div className="flex items-center gap-2.5">
+        <group.Icon aria-hidden="true" className={group.accent} size={24} strokeWidth={1.7} />
+        <h3 className="text-[clamp(0.66rem,0.74cqw,0.88rem)] font-semibold uppercase leading-tight text-control-text">{group.title}</h3>
       </div>
-      <div className="mt-[0.72cqh] flex flex-wrap gap-[0.28cqw]">
+      <div className="mt-[0.9cqh] flex flex-wrap gap-[0.34cqw]">
         {group.names.map((name) => (
-          <span className="rounded-full border border-slate-200/90 bg-white/75 px-[0.42rem] py-[0.28rem] text-[clamp(0.42rem,0.49cqw,0.58rem)] font-bold leading-none text-slate-700" key={name}>
+          <span className="rounded-full border border-slate-200/90 bg-white/82 px-[0.5rem] py-[0.32rem] text-[clamp(0.8rem,0.56cqw,0.66rem)] font-semibold leading-none text-slate-700" key={name}>
             {name}
           </span>
         ))}
