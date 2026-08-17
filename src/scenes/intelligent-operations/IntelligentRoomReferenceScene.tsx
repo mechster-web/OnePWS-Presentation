@@ -58,6 +58,7 @@ import {
   UserCheck,
   Users,
   Video,
+  Wind,
   Zap,
   type LucideIcon,
 } from "lucide-react";
@@ -99,11 +100,11 @@ const experienceSteps: SimpleItem[] = [
 ];
 
 const outcomeItems: SimpleItem[] = [
-  { title: "Faster Start", description: "Access and preferences load before setup begins.", Icon: ShieldCheck },
-  { title: "Cleaner Setup", description: "Lighting, screens and comfort return to a known profile.", Icon: Target },
+  { title: "Faster Start", description: "No login delays. No distractions.", Icon: ShieldCheck },
+  { title: "Better Focus", description: "Your environment is ready to perform.", Icon: Target },
   { title: "Consistent Every Shift", description: "Every setting returns exactly where it belongs.", Icon: UserCheck },
   { title: "Secure by Design", description: "Biometric recognition keeps access safe.", Icon: LockKeyhole },
-  { title: "Ready Workspace", description: "The operator starts with the room already aligned.", Icon: Sparkles },
+  { title: "Higher Performance", description: "Comfort, ergonomics and information - already in sync.", Icon: BadgeCheck },
 ];
 
 const consoleModeItems: (SimpleItem & { color: string })[] = [
@@ -185,6 +186,13 @@ const intelligentExamples = [
   { title: "Operator Guidance", description: "SOP, checklist and previous similar events shown.", image: "/assets/source-pdf/p41_081_468x459.png" },
 ];
 
+const stateResponseOutcomes: SimpleItem[] = [
+  { title: "Critical information delivered instantly", description: "", Icon: Gauge, color: "text-green-500" },
+  { title: "Focused, relevant and actionable", description: "", Icon: ShieldCheck, color: "text-green-500" },
+  { title: "Faster response, better outcomes", description: "", Icon: Target, color: "text-green-500" },
+  { title: "Lower stress, higher situational awareness", description: "", Icon: Users, color: "text-green-500" },
+];
+
 const operationalStates: (SimpleItem & { color: string; active?: boolean })[] = [
   { title: "Normal", description: "Daily operations and monitoring", Icon: ShieldCheck, color: "text-blue-600" },
   { title: "Focused", description: "High attention required", Icon: Target, color: "text-blue-600" },
@@ -198,7 +206,7 @@ const roomResponseSystems: SimpleItem[] = [
   { title: "Displays & Video Wall", description: "Reorganize layouts. Show what matters most.", Icon: Grid2X2, color: "text-blue-600" },
   { title: "Consoles", description: "Adjust height, position and posture settings automatically.", Icon: SlidersHorizontal, color: "text-blue-500" },
   { title: "Acoustics", description: "Reduce distraction. Enhance speech clarity.", Icon: Radio, color: "text-violet-600" },
-  { title: "HVAC & Air Quality", description: "Move fresh-air and thermal setpoints into incident mode.", Icon: FastForward, color: "text-green-500" },
+  { title: "HVAC & Air Quality", description: "Increase fresh air circulation and optimize comfort.", Icon: Wind, color: "text-green-500" },
   { title: "Collaboration", description: "Enable rooms, audio, video and shared workspaces.", Icon: Users, color: "text-green-500" },
   { title: "Recording & Logging", description: "Start event recording and activity logs automatically.", Icon: Video, color: "text-amber-500" },
   { title: "Power & Infrastructure", description: "Ensure system redundancy and power stability.", Icon: ShieldCheck, color: "text-amber-500" },
@@ -214,12 +222,12 @@ const operationalHowSteps: SimpleItem[] = [
 ];
 
 const incidentModeExamples = [
-  { title: "Instant Lighting Change", description: "Reduces glare, improves contrast and operator focus.", image: "/assets/source-pdf/p23_053_1418x798.jpg" },
-  { title: "Displays Reconfigure", description: "Critical systems move to primary screens.", image: "/assets/source-pdf/p22_052_1421x800.jpg" },
-  { title: "Consoles Adjust", description: "Height, tilt and favorites load automatically.", image: "/assets/source-pdf/p20_050_1781x1016.jpg" },
-  { title: "Rooms Activated", description: "Bridge to expert teams and command centers.", image: "/assets/source-pdf/p21_051_1672x940.jpg" },
-  { title: "Recording Starts", description: "Audio, video and system logs capture automatically.", image: "/assets/source-pdf/p41_077_443x235.png" },
-  { title: "HVAC Boosts", description: "Fresh air increases, temperature optimized.", image: "/assets/source-pdf/p41_080_659x281.png" },
+  { title: "Instant Lighting Change", description: "Reduces glare, improves contrast and operator focus.", image: "/assets/generated/operational-state/incident-lighting-change.webp" },
+  { title: "Displays Reconfigure", description: "Critical systems move to primary screens.", image: "/assets/generated/operational-state/incident-displays-reconfigure.webp" },
+  { title: "Consoles Adjust", description: "Height, tilt and favorites load automatically.", image: "/assets/generated/operational-state/incident-consoles-adjust.webp" },
+  { title: "Rooms Activated", description: "Bridge to expert teams and command centers.", image: "/assets/generated/operational-state/incident-rooms-activated.webp" },
+  { title: "Recording Starts", description: "Audio, video and system logs capture automatically.", image: "/assets/generated/operational-state/incident-recording-starts.webp" },
+  { title: "HVAC Boosts", description: "Fresh air increases, temperature optimized.", image: "/assets/generated/operational-state/incident-hvac-boosts.webp" },
 ];
 
 const performanceEnvironmentCallouts: (SimpleItem & { color: string; className: string })[] = [
@@ -571,7 +579,7 @@ function RoomRecognizesYouScene({ chapter }: { chapter: Chapter }) {
       <div className="pointer-events-none absolute inset-x-0 top-[8.6cqh] h-px bg-slate-200/80" />
 
       <section className="absolute inset-x-[1.7cqw] top-[9.85cqh] bottom-[7.05cqh] z-10">
-        <div className="absolute inset-x-0 top-0 bottom-[15.15cqh] grid grid-cols-[minmax(17.5rem,0.43fr)_minmax(42rem,1.13fr)_minmax(18rem,0.44fr)] gap-[1.05cqw]">
+        <div className="absolute inset-x-0 top-0 bottom-[15.15cqh] grid grid-cols-[minmax(17.5rem,0.43fr)_minmax(42rem,1.13fr)_minmax(18rem,0.44fr)] grid-rows-[minmax(0,1fr)_16.2cqh] gap-x-[1.05cqw] gap-y-[1.25cqh]">
           <motion.aside animate={{ opacity: 1, y: 0 }} className="relative min-h-0" initial={false} transition={{ duration: 0.72, ease }}>
             <div className="absolute left-[0.2cqw] top-[2.4cqh]">
               <h1 className="text-[clamp(2.5rem,3.35cqw,4.7rem)] font-bold leading-[1.02] tracking-normal text-control-text md:text-[2.5cqw]">
@@ -595,41 +603,36 @@ function RoomRecognizesYouScene({ chapter }: { chapter: Chapter }) {
             </section>
           </motion.aside>
 
-          <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_16.2cqh] gap-[1.25cqh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
-            <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <img alt="" className="absolute inset-0 h-full w-full object-cover" src="/assets/source-pdf/p20_050_1781x1016.jpg" />
-              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgb(15_23_42/0.2)_0%,rgb(15_23_42/0.05)_35%,rgb(255_255_255/0.04)_100%)]" />
-              <RecognitionOverlay />
-            </section>
-
-            <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1cqw] py-[1.4cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <h2 className="text-[clamp(0.72rem,0.84cqw,0.98rem)] font-semibold uppercase tracking-normal text-control-text">Your Experience. Ready Before You Sit.</h2>
-              <div className="mt-[1.6cqh] grid grid-cols-[repeat(6,minmax(0,1fr))] items-start">
-                {experienceSteps.map((item, index) => (
-                  <ExperienceStep index={index} item={item} key={item.title} />
-                ))}
-              </div>
-            </section>
+          <motion.main animate={{ opacity: 1, y: 0 }} className="relative min-h-0 overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
+            <img alt="" className="absolute inset-0 h-full w-full object-cover" src="/assets/generated/room-recognizes-you-operator-welcome.png" />
+            <RecognitionOverlay />
           </motion.main>
 
-          <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_16.2cqh] gap-[1.25cqh]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
-            <section className="grid min-h-0 gap-[0.55cqh]">
-              {readinessItems.map((item) => (
-                <ReadinessCard item={item} key={item.title} />
-              ))}
-            </section>
-            <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.45cqw] py-[2.2cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-              <Quote aria-hidden="true" className="text-control-warm" size={38} strokeWidth={1.55} />
-              <p className="mt-[0.25cqh] max-w-[17rem] text-[clamp(0.82rem,0.95cqw,1.08rem)] font-medium leading-[1.34] text-slate-800">
-                The shift doesn't begin after login.
-              </p>
-              <p className="mt-[1cqh] max-w-[15rem] text-[clamp(0.9rem,1.05cqw,1.2rem)] font-semibold leading-[1.25] text-control-warm">
-                It begins the moment you enter.
-              </p>
-              <span className="pointer-events-none absolute bottom-0 right-0 h-[6.5rem] w-[6.5rem] opacity-10 [background-image:radial-gradient(circle,rgb(37_99_235/0.65)_1px,transparent_1px)] [background-size:7px_7px]" />
-            </section>
+          <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 gap-[0.55cqh]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
+            {readinessItems.map((item) => (
+              <ReadinessCard item={item} key={item.title} />
+            ))}
           </motion.aside>
 
+          <motion.section animate={{ opacity: 1, y: 0 }} className="relative col-span-2 overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1cqw] py-[1.4cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]" initial={false} transition={{ duration: 0.74, delay: 0.2, ease }}>
+            <h2 className="text-[clamp(0.72rem,0.84cqw,0.98rem)] font-semibold uppercase tracking-normal text-control-text">Your Experience. Ready Before You Sit.</h2>
+            <div className="mt-[1.6cqh] grid grid-cols-[repeat(6,minmax(0,1fr))] items-start">
+              {experienceSteps.map((item, index) => (
+                <ExperienceStep index={index} item={item} key={item.title} />
+              ))}
+            </div>
+          </motion.section>
+
+          <motion.section animate={{ opacity: 1, y: 0 }} className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.45cqw] py-[2.2cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]" initial={false} transition={{ duration: 0.74, delay: 0.24, ease }}>
+            <Quote aria-hidden="true" className="text-control-warm" size={38} strokeWidth={1.55} />
+            <p className="relative z-10 mt-[0.25cqh] max-w-[13rem] text-[clamp(0.82rem,0.95cqw,1.08rem)] font-medium leading-[1.34] text-slate-800">
+              The shift doesn't begin after login.
+            </p>
+            <p className="relative z-10 mt-[1cqh] max-w-[13rem] text-[clamp(0.9rem,1.05cqw,1.2rem)] font-semibold leading-[1.25] text-control-warm">
+              It begins the moment you enter.
+            </p>
+            <img alt="" className="pointer-events-none absolute bottom-[-0.3rem] right-[-0.4rem] w-[64%] object-contain opacity-80" src="/assets/brand/dotted-wave-pattern.webp" />
+          </motion.section>
         </div>
 
         <motion.section animate={{ opacity: 1, y: 0 }} className="absolute inset-x-0 bottom-[6.2cqh] h-[7.7cqh] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1cqw] py-[1.05cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]" initial={false} transition={{ duration: 0.72, delay: 0.18, ease }}>
@@ -984,7 +987,7 @@ function OperationalStateRoomRespondsScene({ chapter }: { chapter: Chapter }) {
         <div className="absolute inset-x-0 top-0 bottom-[6.6cqh] grid min-h-0 grid-cols-[minmax(12.5rem,0.27fr)_minmax(0,1fr)_minmax(13rem,0.29fr)] gap-[0.95cqw]">
           <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[auto_auto_minmax(0,1fr)] gap-[1cqh] overflow-hidden" initial={false} transition={{ duration: 0.72, ease }}>
             <div className="min-w-0 pt-[0.45cqh]">
-              <h1 className="text-[clamp(1.45rem,2.05cqw,2.75rem)] font-bold leading-[1.01] tracking-normal text-control-text md:text-[2cqw]">
+              <h1 className="text-[clamp(1.45rem,2.05cqw,2.75rem)] font-bold leading-[1.01] tracking-normal text-control-text md:text-[2.5cqw]">
                 <span className="block">One Operational</span>
                 <span className="block">State.</span>
                 <span className="block text-control-warm">The Entire</span>
@@ -992,24 +995,24 @@ function OperationalStateRoomRespondsScene({ chapter }: { chapter: Chapter }) {
               </h1>
               <div className="mt-[0.9cqh] h-[2px] w-[1.8rem] bg-control-warm" />
               <p className="mt-[1cqh] max-w-[15.4rem] text-[clamp(0.56rem,0.68cqw,0.78rem)] font-medium leading-[1.28] text-slate-800 md:text-[0.72cqw]">
-                One event can activate a predefined room state across displays, lighting, acoustics, access, HVAC and logging.
+                One command or one event changes the operational state - and the entire environment adapts instantly.
               </p>
             </div>
 
             <section className="grid min-w-0 grid-cols-[3.35rem_minmax(0,1fr)] items-center gap-[0.72cqw] rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.82cqw] py-[0.9cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <span className="grid h-[3rem] w-[3rem] place-items-center rounded-full border border-control-warm/22 bg-white/58 text-control-warm">
-                <SlidersHorizontal aria-hidden="true" size={26} strokeWidth={1.45} />
+                <Network aria-hidden="true" size={26} strokeWidth={1.45} />
               </span>
               <span className="min-w-0">
-                <strong className="block text-[clamp(0.54rem,0.64cqw,0.74rem)] font-semibold leading-tight text-control-text">One state. Many systems.</strong>
-                <span className="mt-0.5 block text-[clamp(0.5rem,0.58cqw,0.68rem)] font-semibold leading-tight text-control-warm">Coordinated without manual chasing.</span>
+                <strong className="block text-[clamp(0.54rem,0.64cqw,0.74rem)] font-semibold leading-tight text-control-text">Everything works as one.</strong>
+                <span className="mt-0.5 block text-[clamp(0.5rem,0.58cqw,0.68rem)] font-semibold leading-tight text-control-warm">Seamlessly. Instantly. Reliably.</span>
               </span>
             </section>
 
-            <section className="min-h-0 overflow-hidden rounded-[0.62rem] border border-slate-800/70 bg-slate-950 px-[0.85cqw] py-[0.9cqh] text-white shadow-[0_1rem_2.5rem_rgb(15_23_42/0.14)]">
+            <section className="grid min-h-0 grid-rows-[auto_auto_minmax(0,1fr)] overflow-hidden rounded-[0.62rem] border border-slate-800/70 bg-slate-950 px-[0.85cqw] py-[1.2cqh] text-white shadow-[0_1rem_2.5rem_rgb(15_23_42/0.14)]">
               <h2 className="text-[clamp(0.56rem,0.66cqw,0.78rem)] font-semibold uppercase leading-tight text-white">Intelligent Information Delivery</h2>
               <div className="mt-[0.65cqh] h-[2px] w-[1.7rem] bg-control-warm" />
-              <div className="mt-[0.7cqh] divide-y divide-slate-700/80">
+              <div className="mt-[2.7cqh] flex min-h-0 flex-col justify-between divide-y divide-slate-700/80">
                 {informationDeliveryItems.map((item) => (
                   <InfoDeliveryCell dark item={item} key={item.title} />
                 ))}
@@ -1017,7 +1020,7 @@ function OperationalStateRoomRespondsScene({ chapter }: { chapter: Chapter }) {
             </section>
           </motion.aside>
 
-          <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[7.6cqh_minmax(0,1fr)_13.8cqh_12.6cqh] gap-[0.85cqh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
+          <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[8.2cqh_minmax(0,1fr)_16.2cqh_20.2cqh] gap-[0.85cqh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
             <section className="grid grid-cols-5 overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               {operationalStates.map((item, index) => (
                 <OperationalStateChip index={index} item={item} key={item.title} />
@@ -1025,10 +1028,7 @@ function OperationalStateRoomRespondsScene({ chapter }: { chapter: Chapter }) {
             </section>
 
             <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-slate-950 shadow-[0_1rem_2.5rem_rgb(15_23_42/0.08)]">
-              <img alt="" className="absolute inset-0 h-full w-full object-cover" src="/assets/source-pdf/p23_053_1418x798.jpg" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_51%_25%,rgb(239_68_68/0.42),transparent_26%),linear-gradient(90deg,rgb(37_99_235/0.32),transparent_42%,rgb(249_115_22/0.28))]" />
-              <span className="absolute left-0 top-0 h-[3px] w-[36%] bg-blue-400/80 shadow-[0_0_1.6rem_rgb(59_130_246/0.8)]" />
-              <span className="absolute right-0 top-0 h-[3px] w-[42%] bg-orange-400/85 shadow-[0_0_1.6rem_rgb(249_115_22/0.8)]" />
+              <img alt="" className="absolute inset-0 h-full w-full object-cover" src="/assets/generated/operational-state/room-responds-hero.webp" />
             </section>
 
             <section className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/70 px-[0.8cqw] py-[0.78cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
@@ -1062,16 +1062,17 @@ function OperationalStateRoomRespondsScene({ chapter }: { chapter: Chapter }) {
             </div>
           </motion.main>
 
-          <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_minmax(0,1fr)_14.5cqh] gap-[0.85cqh]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
+          <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_minmax(0,1fr)_17cqh] gap-[0.85cqh]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
             <ComparisonPanel accent="text-control-warm" items={manualSearchItems} title="Before: Manual Search" />
-            <ComparisonPanel accent="text-green-500" items={proactiveDeliveryItems} title="After: Proactive Delivery" />
+            <ComparisonPanel accent="text-green-500" items={stateResponseOutcomes} title="After: Proactive Delivery" />
             <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1cqw] py-[1cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
               <Quote aria-hidden="true" className="text-control-warm" size={26} strokeWidth={1.55} />
-              <p className="mt-[0.05cqh] max-w-[12rem] text-[clamp(0.54rem,0.64cqw,0.76rem)] font-medium leading-[1.25] text-control-text">
-                The room changes state once.
+              <p className="relative z-10 mt-[0.35cqh] max-w-[12.5rem] text-[clamp(0.58rem,0.68cqw,0.8rem)] font-medium leading-[1.42] text-control-text">
+                One state change.
+                <span className="block">Every system. Every second.</span>
+                <span className="block">One purpose: <span className="font-semibold text-control-warm">Operational Excellence.</span></span>
               </p>
-              <p className="mt-[0.55cqh] text-[clamp(0.56rem,0.66cqw,0.78rem)] font-semibold leading-[1.18] text-control-text">Each connected layer follows the same operating condition.</p>
-              <span className="pointer-events-none absolute bottom-0 right-0 h-[5.5rem] w-[5.5rem] opacity-10 [background-image:radial-gradient(circle,rgb(239_68_68/0.65)_1px,transparent_1px)] [background-size:7px_7px]" />
+              <img alt="" className="pointer-events-none absolute bottom-[-0.3rem] right-[-0.4rem] w-[66%] object-contain opacity-55" src="/assets/brand/dotted-wave-pattern-warm.webp" />
             </section>
           </motion.aside>
         </div>
@@ -1922,25 +1923,10 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
 
 function RecognitionOverlay() {
   return (
-    <div className="absolute inset-0">
-      <div className="absolute left-[9%] top-[15%] h-[63%] w-[22%]">
-        <span className="absolute left-[38%] top-[2%] h-[16rem] w-[5.6rem] origin-top -skew-x-12 bg-cyan-400/22 blur-[1px]" />
-        <span className="absolute left-[42%] top-[12%] h-[8.3rem] w-[4.2rem] rounded-t-full bg-slate-950/82 shadow-[0_1.2rem_2.8rem_rgb(15_23_42/0.28)]" />
-        <span className="absolute left-[47%] top-[7%] h-[2.2rem] w-[2.2rem] rounded-full bg-slate-900" />
-        <span className="absolute left-[33%] top-[10%] h-[7.5rem] w-[7.5rem] border border-cyan-200/85" />
-        <span className="absolute left-[40%] top-[18%] h-[3rem] w-[3rem] rounded-full border border-cyan-200/75" />
-      </div>
-      <div className="absolute left-[25%] top-[34%] text-white drop-shadow-[0_0.5rem_1.4rem_rgb(15_23_42/0.38)]">
-        <p className="text-[clamp(0.92rem,1.1cqw,1.25rem)] font-semibold uppercase leading-none">Welcome</p>
-        <p className="mt-1 text-[clamp(1.45rem,1.85cqw,2.1rem)] font-semibold leading-none">ARJUN</p>
-        <p className="mt-2 text-[clamp(0.52rem,0.62cqw,0.72rem)] font-semibold uppercase tracking-normal">Identity Confirmed</p>
-        <span className="mt-2 inline-grid h-[1.65rem] w-[1.65rem] place-items-center rounded-full border border-emerald-300/70 bg-emerald-500/32 text-emerald-200">
-          <SquareCheckBig aria-hidden="true" size={18} />
-        </span>
-      </div>
-      <div className="absolute right-[4%] top-[10%] h-[64%] w-[14%] border border-dashed border-white/75" />
+    <div className="pointer-events-none absolute inset-0">
+      <div className="absolute right-[4%] top-[10%] h-[64%] w-[14%] border border-dashed border-white/70 drop-shadow-[0_0_0.35rem_rgb(15_23_42/0.45)]" />
       {["top-[20%]", "top-[33%]", "top-[47%]", "top-[61%]", "top-[75%]"].map((top, index) => (
-        <span className={`absolute right-[-2%] ${top} h-px w-[20%] border-t border-dashed border-white/75`} key={index} />
+        <span className={`absolute right-[-2%] ${top} h-px w-[20%] border-t border-dashed border-white/70 drop-shadow-[0_0_0.35rem_rgb(15_23_42/0.45)]`} key={index} />
       ))}
     </div>
   );
@@ -1959,7 +1945,7 @@ function MiniUnderstandingCell({ item, index }: { item: SimpleItem; index: numbe
 function InfoDeliveryCell({ dark = false, item }: { dark?: boolean; item: SimpleItem }) {
   const Icon = item.Icon;
   return (
-    <div className="grid grid-cols-[2rem_minmax(0,1fr)] items-center gap-[0.52cqw] py-[0.46cqh]">
+    <div className="grid grid-cols-[2rem_minmax(0,1fr)] items-center gap-[0.52cqw] py-[1.46cqh]">
       <Icon aria-hidden="true" className="text-control-warm" size={22} strokeWidth={1.55} />
       <span className="min-w-0">
         <strong className={`block text-[clamp(0.46rem,0.56cqw,0.66rem)] font-semibold leading-tight ${dark ? "text-white" : "text-control-text"}`}>{item.title}</strong>
@@ -1975,8 +1961,8 @@ function OperationalStateChip({ item, index }: { item: SimpleItem & { color: str
     <div className={`grid grid-cols-[2.75rem_minmax(0,1fr)] items-center gap-[0.5cqw] px-[0.7cqw] ${index ? "border-l border-slate-200/90" : ""} ${item.active ? "bg-control-warm/6 ring-1 ring-inset ring-control-warm/22" : ""}`}>
       <Icon aria-hidden="true" className={item.color} size={28} strokeWidth={1.45} />
       <span className="min-w-0">
-        <strong className={`block text-[clamp(0.48rem,0.58cqw,0.68rem)] font-semibold uppercase leading-tight ${item.color}`}>{item.title}</strong>
-        <span className="mt-0.5 block text-[clamp(0.41rem,0.49cqw,0.58rem)] font-medium leading-[1.08] text-slate-800">{item.description}</span>
+        <strong className={`block text-[clamp(0.99rem,0.58cqw,0.68rem)] font-semibold uppercase leading-tight ${item.color}`}>{item.title}</strong>
+        <span className="mt-0.5 block text-[clamp(0.81rem,0.49cqw,0.58rem)] font-medium leading-[1.08] text-slate-800">{item.description}</span>
       </span>
     </div>
   );
@@ -1986,11 +1972,11 @@ function RoomResponseSystem({ item, index }: { item: SimpleItem; index: number }
   const Icon = item.Icon;
   return (
     <div className={`grid min-h-0 min-w-0 place-items-center px-[0.42cqw] text-center ${index ? "border-l border-slate-200/90" : ""}`}>
-      <span className="mx-auto grid h-[1.45rem] w-[1.45rem] place-items-center">
-        <Icon aria-hidden="true" className={item.color ?? "text-control-warm"} size={22} strokeWidth={1.55} />
+      <span className="mx-auto grid h-[1.8rem] w-[1.8rem] place-items-center">
+        <Icon aria-hidden="true" className={item.color ?? "text-control-warm"} size={27} strokeWidth={1.55} />
       </span>
-      <h3 className="mt-[0.28cqh] text-[clamp(0.37rem,0.45cqw,0.54rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
-      <p className="mx-auto mt-[0.18cqh] max-w-[5.6rem] text-[clamp(0.31rem,0.37cqw,0.45rem)] font-medium leading-[1.04] text-slate-700">{item.description}</p>
+      <h3 className="mt-[0.4cqh] text-[clamp(0.70rem,0.54cqw,0.64rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
+      <p className="mx-auto mt-[0.32cqh] max-w-[6.4rem] text-[clamp(0.68rem,0.46cqw,0.55rem)] font-medium leading-[1.16] text-slate-700">{item.description}</p>
     </div>
   );
 }
@@ -1999,12 +1985,12 @@ function OperationalHowStep({ item, index }: { item: SimpleItem; index: number }
   const Icon = item.Icon;
   return (
     <div className="relative grid min-h-0 min-w-0 place-items-center px-[0.34cqw] text-center">
-      {index ? <span className="absolute left-[-0.24cqw] top-[0.76rem] text-[0.82rem] font-light text-control-text">→</span> : null}
-      <span className="mx-auto grid h-[1.45rem] w-[1.45rem] place-items-center">
-        <Icon aria-hidden="true" className={index === 1 ? "text-amber-500" : index === 3 ? "text-green-500" : "text-control-warm"} size={21} strokeWidth={1.55} />
+      {index ? <span className="absolute left-[-0.24cqw] top-[1.5rem] text-[1.05rem] font-light text-control-text">→</span> : null}
+      <span className="mx-auto grid h-[2.9rem] w-[2.9rem] place-items-center rounded-full border border-slate-200/90 bg-white/72 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_0.4rem_1rem_rgb(15_23_42/0.05)]">
+        <Icon aria-hidden="true" className={index === 1 ? "text-amber-500" : index === 3 ? "text-green-500" : index === 4 ? "text-blue-600" : "text-control-warm"} size={25} strokeWidth={1.5} />
       </span>
-      <h3 className="mt-[0.28cqh] text-[clamp(0.35rem,0.43cqw,0.52rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
-      <p className="mx-auto mt-[0.16cqh] max-w-[5rem] text-[clamp(0.3rem,0.36cqw,0.44rem)] font-medium leading-[1.04] text-slate-700">{item.description}</p>
+      <h3 className="mt-[0.4cqh] text-[clamp(0.70rem,0.52cqw,0.62rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
+      <p className="mx-auto mt-[0.3cqh] max-w-[6rem] text-[clamp(0.68rem,0.44cqw,0.52rem)] font-medium leading-[1.16] text-slate-700">{item.description}</p>
     </div>
   );
 }
@@ -2012,13 +1998,12 @@ function OperationalHowStep({ item, index }: { item: SimpleItem; index: number }
 function IncidentExampleFrame({ item, index }: { item: { title: string; description: string; image: string }; index: number }) {
   return (
     <article className="relative min-w-0">
-      {index ? <span className="absolute left-[-0.38cqw] top-[1.15rem] text-[0.9rem] font-light text-control-warm">›</span> : null}
-      <div className="relative h-[2.25rem] overflow-hidden rounded-[0.34rem] border border-slate-200 bg-slate-950">
-        <img alt="" className="absolute inset-0 h-full w-full object-cover opacity-90" src={item.image} />
-        <div className={index === 0 ? "absolute inset-0 bg-control-warm/24" : "absolute inset-0 bg-slate-950/8"} />
+      {index ? <span className="absolute left-[-0.38cqw] top-[2.5rem] text-[1rem] font-light text-control-warm">›</span> : null}
+      <div className="relative h-[5.9rem] overflow-hidden rounded-[0.34rem] border border-slate-200 bg-slate-950">
+        <img alt="" className="absolute inset-0 h-full w-full object-cover" src={item.image} />
       </div>
-      <h3 className="mt-[0.28cqh] text-[clamp(0.36rem,0.44cqw,0.52rem)] font-semibold leading-tight text-control-warm">{item.title}</h3>
-      <p className="mt-[0.1cqh] text-[clamp(0.31rem,0.36cqw,0.43rem)] font-medium leading-[1.02] text-slate-700">{item.description}</p>
+      <h3 className="mt-[0.5cqh] text-[clamp(0.70rem,0.44cqw,0.52rem)] font-semibold leading-tight text-control-warm">{item.title}</h3>
+      {/* <p className="mt-[0.26cqh] text-[clamp(0.33rem,0.4cqw,0.47rem)] font-medium leading-[1.14] text-slate-700">{item.description}</p> */}
     </article>
   );
 }
@@ -2524,16 +2509,16 @@ function InfoHowStep({ item, index }: { item: SimpleItem & { color: string }; in
 
 function ComparisonPanel({ accent, items, title }: { accent: string; items: SimpleItem[]; title: string }) {
   return (
-    <section className="overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.85cqw] py-[0.9cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-      <h2 className="text-[clamp(0.52rem,0.62cqw,0.74rem)] font-semibold uppercase leading-tight text-control-text">{title}</h2>
+    <section className="grid min-h-0 grid-rows-[auto_auto_minmax(0,1fr)] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[0.85cqw] py-[0.9cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+      <h2 className="text-[clamp(0.90rem,0.62cqw,0.74rem)] font-semibold uppercase leading-tight text-control-text">{title}</h2>
       <div className={`mt-[0.55cqh] h-[2px] w-[1.55rem] ${accent === "text-green-500" ? "bg-green-500" : "bg-control-warm"}`} />
-      <div className="mt-[0.55cqh] divide-y divide-slate-200/90">
+      <div className="mt-[0.55cqh] grid min-h-0 auto-rows-fr divide-y divide-slate-200/90">
         {items.map((item) => {
           const Icon = item.Icon;
           return (
-            <div className="grid grid-cols-[2rem_minmax(0,1fr)] items-center gap-[0.48cqw] py-[0.58cqh]" key={item.title}>
+            <div className="grid min-h-0 grid-cols-[2rem_minmax(0,1fr)] items-center gap-[0.48cqw] py-[0.58cqh]" key={item.title}>
               <Icon aria-hidden="true" className={item.color ?? accent} size={22} strokeWidth={1.55} />
-              <p className="text-[clamp(0.42rem,0.5cqw,0.6rem)] font-medium leading-[1.12] text-control-text">{item.title}</p>
+              <p className="text-[clamp(0.80rem,0.5cqw,0.6rem)] font-medium leading-[1.12] text-control-text">{item.title}</p>
             </div>
           );
         })}

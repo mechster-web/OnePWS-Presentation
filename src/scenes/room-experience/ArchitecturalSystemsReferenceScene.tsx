@@ -64,49 +64,49 @@ const systemCards: SystemCard[] = [
     title: "Lighting Systems",
     bullets: ["Tunable, circadian lighting", "Task & ambient lighting", "Emergency lighting", "Daylight integration"],
     Icon: Sun,
-    image: "/assets/source-pdf/p20_050_1781x1016.jpg",
+    image: "/assets/products/architectural-systems/control-room-lighting-systems.png",
     color: "bg-control-warm",
   },
   {
     title: "HVAC Systems",
     bullets: ["Precise temperature control", "Fresh air & ventilation", "Humidity management", "Energy efficient operation"],
     Icon: Wind,
-    image: "/assets/source-pdf/p31_059_2078x1168.jpg",
+    image: "/assets/products/architectural-systems/control-room-hvac-systems.png",
     color: "bg-emerald-500",
   },
   {
     title: "Acoustic Systems",
     bullets: ["Noise control & absorption", "Speech intelligibility", "Reverberation management", "Sound masking"],
     Icon: Volume2,
-    image: "/assets/source-pdf/p32_060_2002x1125.jpg",
+    image: "/assets/products/architectural-systems/control-room-acoustic-systems.png",
     color: "bg-violet-500",
   },
   {
     title: "Power Systems",
     bullets: ["Redundant power supply", "UPS & backup systems", "Power monitoring", "Surge protection"],
     Icon: Zap,
-    image: "/assets/source-pdf/p33_061_2088x1172.jpg",
+    image: "/assets/products/architectural-systems/control-room-power-systems.png",
     color: "bg-amber-500",
   },
   {
     title: "Structured Cabling",
     bullets: ["Organized cable pathways", "High-density infrastructure", "Easy access & maintenance", "Future-ready capacity"],
     Icon: Cable,
-    image: "/assets/source-pdf/p36_066_616x302.jpg",
+    image: "/assets/products/architectural-systems/control-room-cable-management-system.png",
     color: "bg-blue-700",
   },
   {
     title: "Security Systems",
     bullets: ["Access control", "CCTV surveillance", "Intrusion detection", "Incident management"],
     Icon: Cctv,
-    image: "/assets/source-pdf/p36_068_278x181.jpg",
+    image: "/assets/products/architectural-systems/control-room-security-systems.png",
     color: "bg-blue-800",
   },
   {
     title: "Fire & Safety Systems",
     bullets: ["Early detection", "Alarms & notification", "Gas suppression", "Life safety compliance"],
     Icon: Flame,
-    image: "/assets/source-pdf/p36_069_245x206.jpg",
+    image: "/assets/products/architectural-systems/control-room-fire-safety-systems.png",
     color: "bg-red-600",
   },
 ];
@@ -147,7 +147,13 @@ export function ArchitecturalSystemsReferenceScene({ chapter }: { chapter: Chapt
 
   return (
     <article className="relative h-full w-full overflow-hidden bg-white text-control-text">
-      <div className="absolute inset-0 bg-[linear-gradient(116deg,#ffffff_0%,#fbfcfd_54%,#eef4f7_100%)]" />
+      <img
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-[0.8]"
+        src="/assets/backgrounds/architectural-systems-bg-cover.jpeg"
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(116deg,rgb(255_255_255/0.76)_0%,rgb(251_252_253/0.68)_54%,rgb(238_244_247/0.72)_100%)]" />
       <div className="pointer-events-none absolute inset-x-0 top-[8.6cqh] h-px bg-slate-200/80" />
 
       <section className="relative z-10 flex h-full flex-col px-[1.7cqw] pb-[8.4cqh] pt-[9.85cqh]">
@@ -165,9 +171,9 @@ export function ArchitecturalSystemsReferenceScene({ chapter }: { chapter: Chapt
                 A control room is more than what you see. It's the integration of architecture, infrastructure and environment designed to enhance performance, safety and sustainability.
               </p>
             </div>
-            <div className="relative mt-[5.2cqh] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/76 px-[1.2cqw] py-[2.1cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+            <div className="relative mt-[5.2cqh] overflow-hidden rounded-[0.62rem] border border-white/80 bg-white/58 px-[1.2cqw] py-[2.1cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.96),0_1rem_2.5rem_rgb(15_23_42/0.1)] backdrop-blur-[24px] backdrop-saturate-150">
               <div className="grid grid-cols-[4.6rem_minmax(0,1fr)] items-center gap-[1cqw]">
-                <span className="grid h-[3.9rem] w-[3.9rem] place-items-center rounded-full border border-slate-200 bg-white/56 text-control-warm shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_0.8rem_1.8rem_rgb(15_23_42/0.08)]">
+                <span className="grid h-[3.9rem] w-[3.9rem] place-items-center rounded-full border border-white/85 bg-white/52 text-control-warm shadow-[inset_0_1px_0_rgb(255_255_255/0.96),0_0.8rem_1.8rem_rgb(15_23_42/0.1)] backdrop-blur-[16px]">
                   <Network aria-hidden="true" size={34} strokeWidth={1.55} />
                 </span>
                 <p className="text-[clamp(0.86rem,1cqw,1.16rem)] font-semibold leading-[1.45] text-control-text">
@@ -178,10 +184,10 @@ export function ArchitecturalSystemsReferenceScene({ chapter }: { chapter: Chapt
           </motion.aside>
 
           <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[30.5cqh_minmax(0,1fr)_10.5cqh] gap-[1.15cqh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
-            <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+            <section className="relative overflow-hidden rounded-[0.62rem] border border-white/80 bg-white/50 shadow-[inset_0_1px_0_rgb(255_255_255/0.96),0_1rem_2.5rem_rgb(15_23_42/0.1)] backdrop-blur-[24px] backdrop-saturate-150">
               <img alt="" className="absolute inset-x-0 top-0 h-[76%] w-full object-cover object-[center_58%]" src="/assets/products/design-build-control-room-wide.png" />
               <div className="absolute inset-x-0 top-0 h-[76%] bg-[linear-gradient(180deg,rgb(255_255_255/0.04)_0%,transparent_62%,rgb(255_255_255/0.12)_100%)]" />
-              <div className="absolute inset-x-0 bottom-0 grid h-[24%] grid-cols-6 items-center bg-white/88">
+              <div className="absolute inset-x-0 bottom-0 grid h-[24%] grid-cols-6 items-center border-t border-white/75 bg-white/62 backdrop-blur-[20px] backdrop-saturate-150">
                 {heroFeatures.map((feature, index) => (
                   <HeroFeature index={index} item={feature} key={feature.title} />
                 ))}
@@ -205,7 +211,7 @@ export function ArchitecturalSystemsReferenceScene({ chapter }: { chapter: Chapt
             <DetailPanel title="Built for People. Designed for Performance." items={peopleItems} />
           </motion.aside>
         </div>
-        <section className="relative mt-[0.8cqh] overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/72 px-[0.85cqw] py-[0.9cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+        <section className="relative mt-[0.8cqh] overflow-hidden rounded-[0.62rem] border border-white/80 bg-white/54 px-[0.85cqw] py-[0.9cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.96),0_1rem_2.5rem_rgb(15_23_42/0.1)] backdrop-blur-[24px] backdrop-saturate-150">
               <div className="grid h-full grid-cols-[6.8rem_repeat(6,minmax(0,1fr))] items-center">
                 <div className="pr-[0.9cqw]">
                   <h2 className="text-[clamp(0.68rem,0.78cqw,0.9rem)] font-semibold uppercase leading-tight text-control-text">Why It Matters</h2>
@@ -254,12 +260,12 @@ function HeroFeature({ item, index }: { item: Feature; index: number }) {
 function SystemCardView({ item }: { item: SystemCard }) {
   const Icon = item.Icon;
   return (
-    <article className="relative h-full min-w-0 overflow-hidden rounded-[0.5rem] border border-slate-200/86 bg-white/72 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_0.7rem_1.7rem_rgb(15_23_42/0.07)]">
-      <div className="relative h-[7.2cqh] overflow-hidden bg-slate-100">
+    <article className="relative h-full min-w-0 overflow-hidden rounded-[0.5rem] border border-white/80 bg-white/54 shadow-[inset_0_1px_0_rgb(255_255_255/0.96),0_0.7rem_1.7rem_rgb(15_23_42/0.1)] backdrop-blur-[20px] backdrop-saturate-150">
+      <div className="relative h-[10cqh] overflow-hidden bg-slate-100">
         <img alt="" className="absolute inset-0 h-full w-full object-cover" src={item.image} />
         <span className="absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,rgb(15_23_42/0.16)_100%)]" />
       </div>
-      <span className={`absolute left-[0.55rem] top-[5.65cqh] grid h-[2rem] w-[2rem] place-items-center rounded-full text-white shadow-[0_0.55rem_1.2rem_rgb(15_23_42/0.16)] ${item.color}`}>
+      <span className={`absolute left-[0.55rem] top-[8.65cqh] grid h-[2rem] w-[2rem] place-items-center rounded-full text-white shadow-[0_0.55rem_1.2rem_rgb(15_23_42/0.16)] ${item.color}`}>
         <Icon aria-hidden="true" size={18} strokeWidth={1.6} />
       </span>
       <div className="px-[0.62cqw] pb-[0.7cqh] pt-[1.35rem]">
@@ -276,7 +282,7 @@ function SystemCardView({ item }: { item: SystemCard }) {
 
 function DetailPanel({ title, intro, items }: { title: string; intro?: string; items: DetailItem[] }) {
   return (
-    <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/68 px-[1.05cqw] py-[1.35cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+    <section className="relative overflow-hidden rounded-[0.62rem] border border-white/80 bg-white/52 px-[1.05cqw] py-[1.35cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.96),0_1rem_2.5rem_rgb(15_23_42/0.1)] backdrop-blur-[24px] backdrop-saturate-150">
       <h2 className="text-[clamp(0.78rem,0.9cqw,1.04rem)] font-semibold uppercase tracking-normal text-control-text">{title}</h2>
       <div className="mt-[0.65cqh] h-[2px] w-[2rem] bg-control-warm" />
       {intro ? <p className="mt-[1cqh] text-[clamp(0.58rem,0.66cqw,0.76rem)] font-medium leading-[1.3] text-slate-800">{intro}</p> : null}
@@ -293,12 +299,12 @@ function DetailRow({ item, index }: { item: DetailItem; index: number }) {
   const Icon = item.Icon;
   return (
     <div className={`grid min-w-0 grid-cols-[2.85rem_minmax(0,1fr)] items-center gap-[0.65cqw] py-[0.55cqh] ${index ? "border-t border-slate-200/90" : ""}`}>
-      <span className={`grid h-[2.35rem] w-[2.35rem] place-items-center rounded-full border border-slate-200 bg-white/62 ${item.color ?? "text-control-warm"}`}>
+      <span className={`grid h-[2.35rem] w-[2.35rem] place-items-center rounded-full border border-white/85 bg-white/52 shadow-[inset_0_1px_0_rgb(255_255_255/0.96)] backdrop-blur-[14px] ${item.color ?? "text-control-warm"}`}>
         <Icon aria-hidden="true" size={21} strokeWidth={1.55} />
       </span>
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.56rem,0.64cqw,0.74rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
-        <span className="mt-0.5 block text-[clamp(0.48rem,0.55cqw,0.64rem)] font-medium leading-[1.2] text-slate-800">{item.description}</span>
+        <strong className="block text-[clamp(0.84rem,0.64cqw,0.74rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
+        <span className="mt-0.5 block text-[clamp(0.74rem,0.55cqw,0.64rem)] font-medium leading-[1.2] text-slate-800">{item.description}</span>
       </span>
     </div>
   );
@@ -310,8 +316,8 @@ function WhyCell({ item, index }: { item: DetailItem; index: number }) {
     <div className={`grid min-w-0 grid-cols-[2.25rem_minmax(0,1fr)] items-center gap-[0.5cqw] px-[0.68cqw] ${index ? "border-l border-slate-200/90" : ""}`}>
       <Icon aria-hidden="true" className={index === 0 ? "text-control-warm" : "text-control-text"} size={25} strokeWidth={1.55} />
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.54rem,0.61cqw,0.7rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
-        <span className="mt-0.5 block text-[clamp(0.44rem,0.5cqw,0.58rem)] font-medium leading-[1.14] text-slate-800">{item.description}</span>
+        <strong className="block text-[clamp(0.84rem,0.61cqw,0.7rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
+        <span className="mt-0.5 block text-[clamp(0.74rem,0.5cqw,0.58rem)] font-medium leading-[1.14] text-slate-800">{item.description}</span>
       </span>
     </div>
   );

@@ -469,9 +469,7 @@ function SightlineComfortReferenceStage({ chapter }: { chapter: Chapter }) {
                 <div className="mt-[1cqh] h-[2px] w-[2rem] bg-control-warm" />
               </div>
               <div className="absolute inset-x-0 top-[7.2cqh] bottom-[16.6cqh] overflow-hidden">
-                <img alt="" className="absolute inset-0 h-full w-full object-cover" src="/assets/source-pdf/p06_010_574x312.jpg" />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgb(255_255_255/0.1)_0%,rgb(255_255_255/0.04)_52%,rgb(15_23_42/0.16)_100%)]" />
-                <SightlineArcOverlay />
+                <img alt="" className="absolute inset-0 h-full w-full object-cover" src="/assets/products/ergonomic-views/sightline-view-zones.png" />
               </div>
               <div className="absolute inset-x-0 bottom-0 h-[16.6cqh] border-t border-slate-200/90 bg-white/72 px-[0.55cqw] py-[1.05cqh]">
                 <h3 className="text-center text-[clamp(0.74rem,0.86cqw,1rem)] font-semibold uppercase leading-none text-control-text">Recommended Guidelines (ISO 11064)</h3>
@@ -494,7 +492,9 @@ function SightlineComfortReferenceStage({ chapter }: { chapter: Chapter }) {
                 <h2 className="text-[clamp(0.92rem,1.08cqw,1.25rem)] font-semibold uppercase tracking-normal text-control-text">Optimal Reach Zones</h2>
                 <div className="mt-[1cqh] h-[2px] w-[2rem] bg-control-warm" />
                 <div className="mt-[0.45cqh] grid grid-cols-[minmax(0,1fr)_11.2rem] items-center gap-[0.65cqw]">
-                  <ReachZoneDiagram />
+                  <div className="relative mx-auto aspect-[1.34/1] w-full max-w-[17.6rem]">
+                    <img alt="" className="absolute inset-0 h-full w-full object-contain" src="/assets/products/ergonomic-views/reach-zone-side-profile.webp" />
+                  </div>
                   <div className="grid gap-[1.15cqh] text-[clamp(0.58rem,0.67cqw,0.78rem)] font-medium text-control-text">
                     <ReachLegend color="bg-emerald-500" title="Primary Reach Zone" value="350 - 600 mm" />
                     <ReachLegend color="bg-amber-400" title="Secondary Reach Zone" value="600 - 900 mm" />
@@ -598,27 +598,6 @@ function SightlineReasonRow({ item, index }: { item: SightlineReason; index: num
   );
 }
 
-function SightlineArcOverlay() {
-  return (
-    <div className="absolute inset-0 text-white">
-      <div className="absolute inset-x-[17%] top-[15%] h-[55%] rounded-t-full border-t-2 border-dashed border-white/88" />
-      <span className="absolute left-1/2 top-[8%] h-[78%] w-px -translate-x-1/2 bg-white/72" />
-      <span className="absolute left-[22%] top-[21%] h-px w-[28%] origin-right rotate-[31deg] border-t border-dashed border-white/88" />
-      <span className="absolute right-[22%] top-[21%] h-px w-[28%] origin-left rotate-[-31deg] border-t border-dashed border-white/88" />
-      <span className="absolute left-[25%] top-[23%] text-[clamp(0.82rem,1cqw,1.18rem)] font-semibold">-30°</span>
-      <span className="absolute left-1/2 top-[12%] -translate-x-1/2 text-[clamp(0.78rem,0.95cqw,1.1rem)] font-semibold">0°</span>
-      <span className="absolute right-[24%] top-[23%] text-[clamp(0.82rem,1cqw,1.18rem)] font-semibold">+30°</span>
-      <span className="absolute left-[18%] top-[52%] text-[clamp(0.82rem,1cqw,1.14rem)] font-semibold">-60°</span>
-      <span className="absolute right-[16%] top-[52%] text-[clamp(0.82rem,1cqw,1.14rem)] font-semibold">+60°</span>
-      <span className="absolute left-1/2 top-[34%] -translate-x-1/2 rounded-full bg-control-warm/16 px-5 py-2 text-center text-[clamp(0.82rem,0.98cqw,1.13rem)] font-semibold text-white backdrop-blur-sm">Optimal View Zone</span>
-      <span className="absolute left-[10%] top-[57%] text-[clamp(0.76rem,0.9cqw,1.05rem)] font-semibold leading-tight">Acceptable<br />View Zone</span>
-      <span className="absolute right-[10%] top-[57%] text-[clamp(0.76rem,0.9cqw,1.05rem)] font-semibold leading-tight">Acceptable<br />View Zone</span>
-      <span className="absolute left-[18%] top-[49%] h-px w-[22%] origin-right rotate-[-34deg] bg-control-warm" />
-      <span className="absolute right-[18%] top-[49%] h-px w-[22%] origin-left rotate-[34deg] bg-control-warm" />
-    </div>
-  );
-}
-
 function SightlineGuidelineCell({ item, index }: { item: SightlineGuideline; index: number }) {
   const Icon = item.Icon;
   return (
@@ -641,25 +620,6 @@ function ReachLegend({ color, title, value }: { color: string; title: string; va
         <strong className="block font-semibold leading-tight text-control-text">{title}</strong>
         <span className="mt-1 block text-slate-700">{value}</span>
       </span>
-    </div>
-  );
-}
-
-function ReachZoneDiagram() {
-  return (
-    <div className="relative mx-auto aspect-[1.34/1] w-full max-w-[17.6rem] overflow-hidden">
-      <div className="absolute inset-x-[2%] top-[4%] h-[92%] rounded-t-full bg-[conic-gradient(from_232deg_at_50%_95%,rgb(34_197_94/0.28)_0deg,rgb(34_197_94/0.28)_42deg,rgb(250_204_21/0.34)_42deg,rgb(250_204_21/0.34)_78deg,rgb(239_68_68/0.3)_78deg,rgb(239_68_68/0.3)_112deg,transparent_112deg,transparent_360deg)]" />
-      <div className="absolute inset-x-[14%] bottom-[5%] h-[64%] rounded-t-full border-[1.35rem] border-emerald-500/20 border-b-0" />
-      <div className="absolute inset-x-[7%] bottom-[3%] h-[79%] rounded-t-full border-[1.45rem] border-amber-400/27 border-b-0" />
-      <div className="absolute inset-x-0 bottom-0 h-[96%] rounded-t-full border-[1.5rem] border-red-400/24 border-b-0" />
-      <span className="absolute left-1/2 top-[6%] h-[92%] w-px -translate-x-1/2 bg-white/80" />
-      <span className="absolute bottom-[3%] left-1/2 h-[5.5rem] w-[4.2rem] -translate-x-1/2 rounded-t-full bg-slate-950/88 shadow-[0_0.8rem_2rem_rgb(15_23_42/0.25)]" />
-      <span className="absolute bottom-[23%] left-[27%] h-[4rem] w-[1.15rem] rotate-[-28deg] rounded-full bg-slate-900/70" />
-      <span className="absolute bottom-[23%] right-[27%] h-[4rem] w-[1.15rem] rotate-[28deg] rounded-full bg-slate-900/70" />
-      <span className="absolute bottom-[26%] left-[20%] h-[1.05rem] w-[1.05rem] rounded-full bg-slate-900/78" />
-      <span className="absolute bottom-[26%] right-[20%] h-[1.05rem] w-[1.05rem] rounded-full bg-slate-900/78" />
-      <span className="absolute bottom-[13%] left-1/2 h-[2.6rem] w-[2.6rem] -translate-x-1/2 rounded-full bg-slate-900" />
-      <span className="absolute inset-x-[4%] bottom-[2%] h-[1.2rem] rounded-[50%] bg-slate-400/32" />
     </div>
   );
 }
