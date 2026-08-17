@@ -258,11 +258,11 @@ const proactiveAdjustments: SimpleItem[] = [
 ];
 
 const operatorImpactItems: SimpleItem[] = [
-  { title: "Visual Comfort", description: "Lighting supports screen work without glare.", Icon: Target, color: "text-green-600" },
-  { title: "Lower Fatigue Load", description: "Posture and climate are managed across long shifts.", Icon: Users, color: "text-green-600" },
-  { title: "Maintained Alertness", description: "Room conditions stay inside defined thresholds.", Icon: Eye, color: "text-green-600" },
-  { title: "Well-being by Design", description: "Air, ergonomics and safety are treated as systems.", Icon: ShieldCheck, color: "text-green-600" },
-  { title: "Stable Conditions", description: "Operators work inside a controlled performance envelope.", Icon: TrendingUp, color: "text-green-600" },
+  { title: "Better Focus", description: "Fewer distractions. Higher concentration.", Icon: Target, color: "text-green-600" },
+  { title: "Less Fatigue", description: "Comfort that reduces physical and mental load.", Icon: Users, color: "text-green-600" },
+  { title: "Improved Alertness", description: "Environment tuned to maintain vigilance.", Icon: Eye, color: "text-green-600" },
+  { title: "Health & Well-being", description: "Cleaner air, better posture and a safer environment.", Icon: ShieldCheck, color: "text-green-600" },
+  { title: "Higher Performance", description: "Optimal conditions lead to better decisions.", Icon: TrendingUp, color: "text-green-600" },
 ];
 
 const personalizedProfiles = [
@@ -1119,18 +1119,18 @@ function RoomProtectsHumanPerformanceScene({ chapter }: { chapter: Chapter }) {
       <div className="pointer-events-none absolute inset-x-0 top-[8.6cqh] h-px bg-slate-200/80" />
 
       <section className="absolute inset-x-[1.55cqw] top-[9.65cqh] bottom-[7.05cqh] z-10">
-        <div className="absolute inset-x-0 top-0 bottom-[6.6cqh] grid min-h-0 grid-cols-[minmax(14rem,0.31fr)_minmax(0,1fr)_minmax(15rem,0.33fr)] gap-[1.05cqw]">
+        <div className="absolute inset-x-0 top-0 bottom-[6.6cqh] grid min-h-0 grid-cols-[minmax(14rem,0.3fr)_minmax(0,1fr)_minmax(15rem,0.32fr)] gap-[1.05cqw]">
           <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[auto_auto_minmax(0,1fr)] gap-[1.25cqh] overflow-hidden" initial={false} transition={{ duration: 0.72, ease }}>
             <div className="min-w-0 pt-[0.45cqh]">
-              <h1 className="text-[clamp(1.55rem,2.05cqw,2.9rem)] font-bold leading-[1.02] tracking-normal text-control-text md:text-[2.16cqw]">
+              <h1 className="text-[clamp(1.85rem,2.35cqw,3.25rem)] font-bold leading-[1.02] tracking-normal text-control-text md:text-[2.35cqw]">
                 <span className="block">The Room</span>
                 <span className="block text-control-warm">Protects</span>
                 <span className="block">Human</span>
                 <span className="block">Performance<span className="text-control-warm">.</span></span>
               </h1>
               <div className="mt-[0.95cqh] h-[2px] w-[2rem] bg-control-warm" />
-              <p className="mt-[1cqh] max-w-[16.2rem] text-[clamp(0.54rem,0.64cqw,0.76rem)] font-medium leading-[1.28] text-slate-800 md:text-[0.68cqw]">
-                Operator focus depends on measurable room conditions: air, light, noise, temperature, posture and visual load.
+              <p className="mt-[1cqh] max-w-[17.5rem] text-[clamp(0.64rem,0.74cqw,0.86rem)] font-medium leading-[1.38] text-slate-800 md:text-[0.74cqw]">
+                A high-performance operator needs the right environment to stay alert, focused and comfortable - every second, every shift.
               </p>
             </div>
 
@@ -1139,16 +1139,16 @@ function RoomProtectsHumanPerformanceScene({ chapter }: { chapter: Chapter }) {
                 <ShieldCheck aria-hidden="true" size={30} strokeWidth={1.35} />
               </span>
               <p className="min-w-0 text-[clamp(0.48rem,0.56cqw,0.66rem)] font-medium leading-[1.22] text-slate-800">
-                Environmental parameters are monitored as operational inputs.<br />
-                <span className="font-semibold text-control-warm">Comfort becomes controllable.</span>
+                The room continuously monitors and intelligently adjusts.<br />
+                <span className="font-semibold text-control-warm">Proactively protects.</span>
               </p>
             </section>
           </motion.aside>
 
           <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[minmax(0,1fr)_22cqh_14.4cqh] gap-[1cqh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
             <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-slate-950 shadow-[0_1rem_2.5rem_rgb(15_23_42/0.08)]">
-              <img alt="" className="absolute inset-0 h-full w-full object-cover" src="/assets/source-pdf/p20_050_1781x1016.jpg" />
-              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgb(15_23_42/0.4),rgb(15_23_42/0.02)_45%,rgb(15_23_42/0.22))]" />
+              <img alt="Operators working in an environmentally optimized global operations control room" className="absolute inset-0 h-full w-full object-cover object-center" src="/assets/generated/human-performance/human-performance-control-room.png" />
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgb(15_23_42/0.32),rgb(15_23_42/0.01)_48%,rgb(15_23_42/0.16))]" />
               <div className="absolute left-[5%] top-[8%] text-[clamp(0.8rem,0.95cqw,1.1rem)] font-semibold leading-[1.45] text-white drop-shadow-[0_0.5rem_1.2rem_rgb(15_23_42/0.5)]">
                 <p>Always Watching.</p>
                 <p>Always Adjusting.</p>
@@ -1192,7 +1192,7 @@ function RoomProtectsHumanPerformanceScene({ chapter }: { chapter: Chapter }) {
             </section>
 
             <QuotePanel emphasis="people protect operations." text="When the environment supports people," />
-            <QuotePanel Icon={Sparkles} emphasis="measurable." text="A protected environment makes performance" />
+            <QuotePanel Icon={Activity} emphasis="stronger." text="A smarter environment makes every operator" />
           </motion.aside>
         </div>
 
@@ -2011,11 +2011,11 @@ function IncidentExampleFrame({ item, index }: { item: { title: string; descript
 function PerformanceCallout({ item }: { item: SimpleItem & { color: string; className: string } }) {
   const Icon = item.Icon;
   return (
-    <div className={`absolute z-20 grid w-[12.25rem] grid-cols-[2.8rem_minmax(0,1fr)] items-center gap-[0.62rem] rounded-[0.5rem] border border-white/90 bg-white/92 px-[0.78rem] py-[0.72rem] shadow-[0_0.9rem_2rem_rgb(15_23_42/0.16)] backdrop-blur-[20px] ${item.className}`}>
-      <Icon aria-hidden="true" className={item.color} size={33} strokeWidth={1.5} />
+    <div className={`absolute z-20 grid w-[13.6rem] grid-cols-[3rem_minmax(0,1fr)] items-center gap-[0.7rem] rounded-[0.5rem] border border-slate-200 bg-white px-[0.88rem] py-[0.8rem] shadow-[0_0.9rem_2rem_rgb(15_23_42/0.18)] ${item.className}`}>
+      <Icon aria-hidden="true" className={item.color} size={35} strokeWidth={1.5} />
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.52rem,0.6cqw,0.68rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
-        <span className="mt-1 block text-[clamp(0.47rem,0.53cqw,0.6rem)] font-semibold leading-[1.24] text-slate-800">{item.description}</span>
+        <strong className="block text-[clamp(0.58rem,0.66cqw,0.76rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
+        <span className="mt-1 block text-[clamp(0.51rem,0.58cqw,0.67rem)] font-medium leading-[1.25] text-slate-700">{item.description}</span>
       </span>
     </div>
   );
@@ -2025,13 +2025,13 @@ function MetricCard({ item, index }: { item: (typeof performanceMetrics)[number]
   return (
     <article className="relative grid min-h-0 min-w-0 grid-rows-[auto_auto_auto_1fr_auto] overflow-hidden rounded-[0.45rem] border border-slate-200/86 bg-white/64 px-[0.5cqw] py-[0.55cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92)]">
       <div className="flex min-w-0 items-start justify-between gap-1.5">
-        <h3 className="text-[clamp(0.37rem,0.45cqw,0.54rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</h3>
-        <span className="shrink-0 text-[clamp(0.34rem,0.4cqw,0.48rem)] font-medium leading-tight text-slate-700">{item.unit}</span>
+        <h3 className="text-[clamp(0.44rem,0.52cqw,0.61rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</h3>
+        <span className="shrink-0 text-[clamp(0.4rem,0.46cqw,0.54rem)] font-medium leading-tight text-slate-700">{item.unit}</span>
       </div>
-      <p className={`mt-[0.28cqh] text-[clamp(0.78rem,0.96cqw,1.12rem)] font-semibold leading-none ${item.color}`}>{item.value}</p>
-      <p className={`mt-[0.16cqh] text-[clamp(0.36rem,0.44cqw,0.52rem)] font-semibold leading-tight ${item.status === "Good" ? "text-green-600" : "text-slate-700"}`}>{item.status}</p>
+      <p className={`mt-[0.28cqh] text-[clamp(0.9rem,1.06cqw,1.24rem)] font-semibold leading-none ${item.color}`}>{item.value}</p>
+      <p className={`mt-[0.16cqh] text-[clamp(0.42rem,0.5cqw,0.59rem)] font-semibold leading-tight ${item.status === "Good" ? "text-green-600" : "text-slate-700"}`}>{item.status}</p>
       <MiniSparkline color={item.color} index={index} />
-      <p className="mt-[0.14cqh] text-[clamp(0.31rem,0.38cqw,0.46rem)] font-medium leading-tight text-control-text">{item.target}</p>
+      <p className="mt-[0.14cqh] text-[clamp(0.38rem,0.44cqw,0.52rem)] font-medium leading-tight text-control-text">{item.target}</p>
     </article>
   );
 }
@@ -2075,8 +2075,8 @@ function AdjustmentCell({ item, index }: { item: SimpleItem; index: number }) {
         <Icon aria-hidden="true" className={item.color ?? "text-control-warm"} size={23} strokeWidth={1.55} />
       </span>
       <span className="min-w-0">
-        <strong className="block text-[clamp(0.36rem,0.44cqw,0.53rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
-        <span className="mt-0.5 block text-[clamp(0.31rem,0.37cqw,0.45rem)] font-medium leading-[1.05] text-slate-700">{item.description}</span>
+        <strong className="block text-[clamp(0.44rem,0.51cqw,0.6rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
+        <span className="mt-0.5 block text-[clamp(0.37rem,0.43cqw,0.51rem)] font-medium leading-[1.1] text-slate-700">{item.description}</span>
       </span>
     </div>
   );
