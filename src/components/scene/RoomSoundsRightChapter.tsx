@@ -148,8 +148,8 @@ export function RoomSoundsRightChapter({ chapter }: { chapter: Chapter }) {
           </section>
 
           <section className="flex min-h-0 flex-col bg-white">
-            <div className="min-h-0 flex-1 overflow-hidden bg-slate-100">
-              {roomAsset?.src ? <img alt="" className="h-full w-full object-cover object-center" draggable={false} src={roomAsset.src} /> : null}
+            <div className="min-h-0 flex-1 overflow-hidden bg-white">
+              <img alt="Acoustically treated control room with acoustic ceiling, wall panel, isolation and flooring callouts" className="h-full w-full object-contain object-center" draggable={false} src="/assets/generated/rooms/room-sounds-right-acoustic.png" />
             </div>
           </section>
         </main>

@@ -134,7 +134,7 @@ const projectCredentialSlides = [
     description:
       "An international industrial control-room reference delivered with careful operational continuity.",
     note: {
-      before: "Renovation of the complete control room",
+      before: "ReAItion of the complete control room",
       emphasis: "without taking shutdown.",
     },
   },

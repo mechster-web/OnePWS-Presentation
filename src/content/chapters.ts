@@ -829,14 +829,14 @@ export const chapters: Chapter[] = [
     id: "ai-silent-assistant",
     order: 18.9,
     title: "AI as the Silent Assistant",
-    eyebrow: "Nova AI Assistant",
-    headline: "Nova turns background signals into summaries, recommendations and routine automation.",
+    eyebrow: "AI AI Assistant",
+    headline: "AI turns background signals into summaries, recommendations and routine automation.",
     supportingMessage:
       "The AI layer is positioned as assistance: it observes context, explains patterns, recommends next steps and leaves authority with the operator.",
     durationMs: 45_000,
-    visualNote: "NOVA assistant surrounded by control-room intelligence capabilities and operator support outcomes.",
+    visualNote: "AI assistant surrounded by control-room intelligence capabilities and operator support outcomes.",
     presenterTalkingPoint:
-      "Position AI as quiet assistance, not replacement: operators stay in command while Nova reduces searching, workload and missed context.",
+      "Position AI as quiet assistance, not replacement: operators stay in command while AI reduces searching, workload and missed context.",
     technicalLayers: ["AI context layer", "Recommendation engine", "Workflow automation"],
     beats: [
       { id: "observe", label: "Observe", startsAtMs: 0, durationMs: 15_000, motionPreset: "scan" },
@@ -1034,7 +1034,7 @@ export const chapters: Chapter[] = [
     durationMs: 35_000,
     visualNote: "Project credentials reference slide 07.",
     presenterTalkingPoint:
-      "Position Shell-Brunei as international proof; retain the no-shutdown renovation claim exactly as supplied.",
+      "Position Shell-Brunei as international proof; retain the no-shutdown reAItion claim exactly as supplied.",
     technicalLayers: ["Shell-Brunei", "International reference", "Operational continuity"],
     beats: [
       { id: "project-07", label: "Shell", startsAtMs: 0, durationMs: 12_000, motionPreset: "projectWall" },

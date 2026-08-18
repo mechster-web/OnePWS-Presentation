@@ -44,7 +44,7 @@ Results:
 | Visual Design | 90 |
 | Storytelling | 88 |
 | Interaction | 88 |
-| Innovation | 89 |
+| InAItion | 89 |
 | Performance | 84 |
 | Accessibility | 86 |
 | Reliability | 89 |

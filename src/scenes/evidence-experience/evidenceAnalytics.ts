@@ -5,7 +5,7 @@ export type EvidenceEvent =
   | "capability_viewed"
   | "manufacturing_stage_opened"
   | "engineering_stage_opened"
-  | "innovation_viewed"
+  | "inAItion_viewed"
   | "quality_checkpoint_opened"
   | "certification_opened"
   | "standard_opened"

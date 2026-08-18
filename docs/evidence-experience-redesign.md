@@ -39,7 +39,7 @@ Only one layer is foregrounded at a time.
 - Company introduction: concise current-credential proof, no long history block.
 - Manufacturing: process/quality proof connected to repeatable delivery.
 - Engineering: requirement-to-handoff process.
-- R&D: supported only through patents-applied and innovation references; no fabricated prototypes.
+- R&D: supported only through patents-applied and inAItion references; no fabricated prototypes.
 - Quality: management-system and quality references, no zero-defect claim.
 - Certification: exact names visible where sourced; scope and validity gaps documented.
 - Standards: only sourced management-system and ergonomic references remain.

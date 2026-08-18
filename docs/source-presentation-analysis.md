@@ -79,7 +79,7 @@ Final brand direction: use **OnePWS Private Limited**. Use **Formerly Pyrotech W
 | 26 | RTGC Andhra Pradesh inauguration/meeting photo. | Retain if approved. |
 | 27 | ACPO Ahmedabad control-room photo. | Retain; verify spelling “ACPO” versus old “APCO.” |
 | 28 | ITMS Noida control-room photo. | Retain. |
-| 29 | Shell, Brunei: renovated complete control room without taking shutdown; photo collage. | Strong operational proof. Retain after client permission. |
+| 29 | Shell, Brunei: reAIted complete control room without taking shutdown; photo collage. | Strong operational proof. Retain after client permission. |
 | 30 | PWS Showroom section divider. | Remove as standalone page. |
 | 31 | Showroom/control-room photo. | Retain as experience-center visual. |
 | 32 | Showroom/control-room photo. | Retain as gallery. |
@@ -132,7 +132,7 @@ Final brand direction: use **OnePWS Private Limited**. Use **Formerly Pyrotech W
 - CII Design Excellence Award 2025.
 - International exhibition history/list.
 - Adani Khavda, Kutch project reference.
-- Shell Brunei shutdown-free renovation claim.
+- Shell Brunei shutdown-free reAItion claim.
 - Manufacturing machinery list and “100% in-house” claim.
 - Raw-material/vendor table.
 - Process improvement/audit topics.
@@ -172,7 +172,7 @@ Use “Formerly Pyrotech Workspace Solutions Pvt. Ltd.” only in company-histor
 - Old page 15 and current pages 25-26: RTGC Andhra Pradesh.
 - Old pages 13-14 and current page 27: Ahmedabad Police / ACPO or APCO Ahmedabad.
 - Old page 10 and current page 28: ITMS Noida.
-- Current page 29: Shell, Brunei renovation without shutdown.
+- Current page 29: Shell, Brunei reAItion without shutdown.
 - Old page 26: raised access floor visual.
 - Old page 28 and current pages 31-34: showroom/control-room experience visuals.
 
