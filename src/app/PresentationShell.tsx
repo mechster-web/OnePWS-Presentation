@@ -5,6 +5,7 @@ import { ContentValidationNotice } from "../components/ContentValidationNotice";
 import { PresentationViewport } from "../components/PresentationViewport";
 import { ExperienceDebugOverlay } from "../components/dev/ExperienceDebugOverlay";
 import { AudioManager } from "../components/media/AudioManager";
+import { BackgroundMusic } from "../components/media/BackgroundMusic";
 import { MainNavigation } from "../components/navigation/MainNavigation";
 import { ProgressIndicator } from "../components/navigation/ProgressIndicator";
 import { ChapterMapOverlay } from "../components/overlays/ChapterMapOverlay";
@@ -173,6 +174,7 @@ export function PresentationShell() {
       {isLogoFinale ? null : <MainNavigation />}
       {isLogoFinale ? null : <SelfGuidedAssist />}
       <AudioManager />
+      <BackgroundMusic />
       <ExperienceDebugOverlay director={director} />
       {state.blankScreenActive ? <BlankScreen /> : null}
     </PresentationViewport>

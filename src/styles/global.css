@@ -4077,3 +4077,27 @@ button:focus-visible {
 }
 
 
+
+/* Client ribbon. The track holds the list twice, so shifting it by half its
+   width lands on an identical frame and the loop never visibly jumps. */
+.pws-logo-ribbon-track {
+  animation-name: pws-logo-ribbon;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.pws-logo-ribbon:hover .pws-logo-ribbon-track {
+  animation-play-state: paused;
+}
+
+@keyframes pws-logo-ribbon {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pws-logo-ribbon-track {
+    animation: none;
+  }
+}

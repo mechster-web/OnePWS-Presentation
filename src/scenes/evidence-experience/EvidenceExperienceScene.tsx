@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { motion } from "framer-motion";
+import { ClientLogoRibbon } from "../../components/brand/ClientLogoRibbon";
 import {
   Award,
   BadgeCheck,
@@ -607,6 +608,16 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
             ))}
           </motion.section>
         </div>
+
+        <motion.section
+          animate={{ opacity: 1, y: 0 }}
+          className="absolute inset-x-0 bottom-[0.4cqh] h-[9cqh]"
+          initial={false}
+          transition={{ duration: 0.72, delay: 0.2, ease }}
+        >
+          <p className="text-[clamp(0.62rem,0.7cqw,0.82rem)] font-semibold uppercase tracking-[0.2em] text-control-muted">Trusted by</p>
+          <ClientLogoRibbon className="mt-[0.7cqh] h-[4.6cqh]" logoHeightClass="h-[3.9cqh]" />
+        </motion.section>
 
         <motion.div animate={{ opacity: 1, y: 0 }} className="pws-scene-control-dock absolute bottom-[0.1cqh] left-[0.1cqw] z-40 justify-start" initial={false} transition={{ duration: 0.62, delay: 0.42, ease }}>
           <button aria-label="Previous scene" className="pws-scene-control" onClick={() => dispatch({ type: "PREVIOUS_CHAPTER" })} title="Previous" type="button"><ChevronLeft aria-hidden="true" size={22} /></button>

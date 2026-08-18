@@ -166,7 +166,7 @@ export function OperatorChallengesChapter({ chapter }: Props) {
           <p className="text-[clamp(0.72rem,0.78cqw,0.9rem)] font-bold uppercase tracking-[0.22em] text-control-warm">
             {chapter.eyebrow}
           </p>
-          <h1 className="mt-[2cqh] max-w-[17ch] text-balance text-[clamp(2.48rem,3.48cqw,4.55rem)] font-bold leading-[0.95] tracking-normal text-control-text md:text-[3.5cqw]!">
+          <h1 className="mt-[2cqh] max-w-[17ch] text-balance text-[clamp(2.48rem,3.48cqw,4.55rem)] font-extrabold leading-[0.95] tracking-normal text-control-text md:text-[3.5cqw]!">
             {chapter.headline}
           </h1>
           <p className="mt-[1.65cqh] max-w-[41rem] text-[clamp(0.88rem,0.96cqw,1.08rem)] leading-[1.32] text-control-soft md:text-[0.8cqw]">

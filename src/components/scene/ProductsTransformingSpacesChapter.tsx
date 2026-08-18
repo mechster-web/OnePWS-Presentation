@@ -165,7 +165,7 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
       <section className="absolute inset-x-[1.65cqw] bottom-[9cqh] top-[11.8cqh] z-20">
         <div className="grid grid-cols-[minmax(0,1fr)_25cqw] items-start gap-[2cqw]">
           <motion.div animate={{ opacity: 1, y: 0 }} initial={state.reducedMotion ? false : { opacity: 0, y: 16 }} transition={{ duration, ease }}>
-            <h1 className="text-balance text-[clamp(2.15rem,3.05cqw,4rem)] font-bold leading-[0.98] tracking-normal text-control-text md:text-[3.5cqw]">
+            <h1 className="text-balance text-[clamp(2.15rem,3.05cqw,4rem)] font-extrabold leading-[0.98] tracking-normal text-control-text md:text-[3.5cqw]">
               Our Products. <span className="text-control-warm">Transforming Spaces.</span>
             </h1>
             <p className="mt-[1.2cqh] max-w-[72rem] text-[clamp(0.95rem,1.08cqw,1.3rem)] leading-[1.38] text-slate-700 md:text-[1cqw]">

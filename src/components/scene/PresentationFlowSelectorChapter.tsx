@@ -112,7 +112,7 @@ export function PresentationFlowSelectorChapter({ chapter }: { chapter: Chapter 
         <motion.aside animate={{ opacity: 1, x: 0 }} className="flex min-h-0 flex-col justify-between" initial={state.reducedMotion ? false : { opacity: 0, x: -18 }} transition={{ duration }}>
           <div>
             <p className="text-[0.86rem] font-semibold uppercase tracking-[0.28em] text-red-600">{chapter.eyebrow}</p>
-            <h1 className="mt-[2cqh] text-balance text-[clamp(3.1rem,4.6cqw,6rem)] font-bold leading-[1] tracking-normal text-slate-950 md:text-[4cqw]">
+            <h1 className="mt-[2cqh] text-balance text-[clamp(3.1rem,4.6cqw,6rem)] font-extrabold leading-[1] tracking-normal text-slate-950 md:text-[4cqw]">
               Choose <br /> the
               <span className="block text-red-600">Right<br /> flow.</span>
             </h1>
