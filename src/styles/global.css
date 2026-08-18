@@ -972,6 +972,21 @@ button:focus-visible {
   pointer-events: auto;
 }
 
+/* Mirrors the control dock on the other side of the footer strip, so slide
+   narration sits with the scene controls instead of inside the copy. */
+.pws-scene-narration-dock {
+  position: fixed !important;
+  right: clamp(1.25rem, 2.15cqw, 2.75rem) !important;
+  left: auto !important;
+  bottom: clamp(1.25rem, 2.15cqh, 2.5rem) !important;
+  top: auto !important;
+  z-index: 55 !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: auto;
+}
+
 .pws-fixed-scene-controller {
   position: fixed;
   left: clamp(1.25rem, 2.15cqw, 2.75rem);

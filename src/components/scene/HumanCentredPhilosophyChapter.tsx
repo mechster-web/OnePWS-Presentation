@@ -8,8 +8,6 @@ import {
   Headphones,
   Info,
   Map,
-  Pause,
-  Play,
   Quote,
   Sun,
   TrendingUp,
@@ -125,18 +123,11 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
 
   const segments = getSlideNarration(chapter.id);
   const narration = useGuidedNarration(segments);
-  const narrationPlaying = narration.isPlaying;
-
   // The chapter track and the walkthrough share the room, so only one speaks.
   const unlockNarrationAudio = useCallback(() => {
     dispatch({ type: "UNLOCK_AUDIO" });
     voiceover.stop();
   }, [dispatch, voiceover]);
-
-  const toggleNarration = useCallback(() => {
-    unlockNarrationAudio();
-    narration.toggle();
-  }, [narration, unlockNarrationAudio]);
 
   // The card selection follows the voice, so the section being explained is the
   // one highlighted on screen.
@@ -245,46 +236,8 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
               narration.isSpeaking("headline") ? "bg-control-warm/10 text-control-text" : "text-control-text"
             }`}
           >
-            {segments ? (
-              <button
-                aria-label={narrationPlaying ? "Pause the guided walkthrough" : "Play the guided walkthrough of this slide"}
-                aria-pressed={narrationPlaying}
-                className="group inline text-left transition-colors hover:text-control-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-control-warm/60"
-                onClick={toggleNarration}
-                title={narrationPlaying ? "Pause walkthrough" : "Play guided walkthrough"}
-                type="button"
-              >
-                Design the <span className="text-control-warm">Control Room</span> around the people who make the decisions.
-                <span
-                  aria-hidden="true"
-                  className={`relative ml-[0.5rem] inline-grid h-[clamp(2rem,2.4cqw,2.9rem)] w-[clamp(2rem,2.4cqw,2.9rem)] translate-y-[0.12em] place-items-center rounded-full border align-middle transition ${
-                    narrationPlaying
-                      ? "border-control-warm bg-control-warm text-white shadow-[0_0.6rem_1.5rem_rgb(207_31_43/0.28)]"
-                      : "border-control-warm/45 bg-white text-control-warm shadow-[0_0.5rem_1.2rem_rgb(15_23_42/0.08)] group-hover:border-control-warm"
-                  }`}
-                >
-                  {narrationPlaying ? (
-                    <Pause size={"52%"} strokeWidth={2.1} />
-                  ) : (
-                    <Play className="translate-x-[6%]" size={"52%"} strokeWidth={2.1} />
-                  )}
-                  {narrationPlaying && !state.reducedMotion ? (
-                    <motion.span
-                      animate={{ opacity: [0.5, 0], scale: [1, 1.55] }}
-                      className="absolute h-[clamp(2rem,2.4cqw,2.9rem)] w-[clamp(2rem,2.4cqw,2.9rem)] rounded-full border border-control-warm"
-                      initial={{ opacity: 0.5, scale: 1 }}
-                      transition={{ duration: 1.6, repeat: Infinity, ease: "easeOut" }}
-                    />
-                  ) : null}
-                </span>
-              </button>
-            ) : (
-              <>
-                Design the <span className="text-control-warm">Control Room</span> around the people who make the decisions.
-              </>
-            )}
+            Design the <span className="text-control-warm">Control Room</span> around the people who make the decisions.
           </h1>
-          <SlideNarrationBar className="mt-[0.7cqh]" narration={narration} onBeforePlay={unlockNarrationAudio} />
           <div className="mt-[0.9cqh] h-px w-8 bg-slate-300" />
           <p
             className={`mt-[0.75cqh] max-w-[28rem] rounded-[0.3rem] text-[clamp(0.78rem,0.84cqw,0.98rem)] leading-[1.36] transition-colors duration-500 md:text-[0.8cqw] ${
@@ -326,7 +279,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
             src="/assets/source-pdf/p31_059_2078x1168.jpg"
             transition={{ duration: 5.8, delay: 0.1, ease: processEase }}
           />
-          <div className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(90deg,rgb(6_11_18/0.92)_0%,rgb(6_11_18/0.74)_16%,rgb(6_11_18/0.34)_32%,transparent_52%)]" />
+          <div className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(90deg,rgb(6_11_18/0.94)_0%,rgb(6_11_18/0.9)_10%,rgb(6_11_18/0.78)_22%,rgb(6_11_18/0.58)_34%,rgb(6_11_18/0.36)_46%,rgb(6_11_18/0.18)_58%,rgb(6_11_18/0.07)_70%,transparent_82%)]" />
           {!state.reducedMotion ? (
             <>
               <motion.div
@@ -368,7 +321,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
           ) : null}
           <motion.div
             animate={{ opacity: 1, x: 0 }}
-            className="absolute left-0 top-0 z-20 h-full w-[min(17.5cqw,21rem)] bg-[linear-gradient(90deg,rgb(6_11_18/0.94)_0%,rgb(6_11_18/0.88)_58%,rgb(6_11_18/0.55)_86%,rgb(6_11_18/0.12)_100%)] px-[clamp(0.86rem,1cqw,1.25rem)] py-[2.2cqh] text-white"
+            className="absolute left-0 top-0 z-20 h-full w-[min(17.5cqw,21rem)] bg-[linear-gradient(90deg,rgb(6_11_18/0.9)_0%,rgb(6_11_18/0.82)_38%,rgb(6_11_18/0.62)_66%,rgb(6_11_18/0.32)_86%,transparent_100%)] px-[clamp(0.86rem,1cqw,1.25rem)] py-[2.2cqh] text-white"
             initial={state.reducedMotion ? false : { opacity: 0, x: -18 }}
             transition={{ duration: motionDuration, delay: 0.22, ease: processEase }}
           >
@@ -536,6 +489,15 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
               </p>
             </div>
           </div>
+        </motion.div>
+
+        <motion.div
+          animate={{ opacity: 1, y: 0 }}
+          className="pws-scene-narration-dock"
+          initial={state.reducedMotion ? false : { opacity: 0, y: 10 }}
+          transition={{ duration: motionDuration, delay: 0.7, ease: processEase }}
+        >
+          <SlideNarrationBar narration={narration} onBeforePlay={unlockNarrationAudio} />
         </motion.div>
 
         <motion.div

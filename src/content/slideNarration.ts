@@ -62,6 +62,12 @@ export const philosophyNarration: NarrationSegment[] = [
     text: "Use lighting, acoustics, space, and ergonomics to improve focus and performance.",
     file: philosophySegmentFile("environment"),
   },
+  {
+    id: "quote",
+    label: "The room adapts",
+    text: "The operator should never have to adapt to a poorly designed room. The room should adapt to the operator.",
+    file: philosophySegmentFile("quote"),
+  },
 ];
 
 export const slideNarrationSets: Record<string, NarrationSegment[]> = {

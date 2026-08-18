@@ -6,7 +6,7 @@
  * Run `npm run voiceover:durations` after adding or replacing audio.
  */
 export const narrationDurationMs: Record<string, number> = {
-  "human-centred-philosophy": 31321,
+  "human-centred-philosophy": 36937,
   "mission-critical-environments": 7602,
   "onepws-positioning": 14028,
 };
