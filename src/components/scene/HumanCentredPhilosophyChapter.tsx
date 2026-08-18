@@ -20,6 +20,7 @@ import { getVoiceover } from "../../content/voiceovers";
 import type { Chapter } from "../../data/contentTypes";
 import { useFullscreen } from "../../hooks/useFullscreen";
 import { useGuidedNarration } from "../../hooks/useGuidedNarration";
+import { useSlideBackgroundMusic } from "../../hooks/useSlideBackgroundMusic";
 import { SlideNarrationBar } from "../narration/SlideNarrationBar";
 import { usePresentation } from "../../state/PresentationProvider";
 import { useVoiceover } from "../../voiceover/VoiceoverProvider";
@@ -120,6 +121,9 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
   const chapterVoiceover = getVoiceover("chapter", chapter.id);
   const [selectedId, setSelectedId] = useState(adaptations[0].id);
   const selected = adaptations.find((item) => item.id === selectedId) ?? adaptations[0];
+
+  // Quiet bed under the slide, low enough to sit behind the narration.
+  useSlideBackgroundMusic("/assets/audio/en/background-music.mp3", { volume: 0.1 });
 
   const segments = getSlideNarration(chapter.id);
   const narration = useGuidedNarration(segments);
