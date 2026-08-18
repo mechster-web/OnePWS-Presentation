@@ -8,13 +8,15 @@ import {
   Headphones,
   Info,
   Map,
+  Pause,
+  Play,
   Quote,
   Sun,
   TrendingUp,
   UserRound,
   UsersRound,
 } from "lucide-react";
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { getVoiceover } from "../../content/voiceovers";
 import type { Chapter } from "../../data/contentTypes";
 import { useFullscreen } from "../../hooks/useFullscreen";
@@ -113,6 +115,43 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
   const chapterVoiceover = getVoiceover("chapter", chapter.id);
   const [selectedId, setSelectedId] = useState(adaptations[0].id);
   const selected = adaptations.find((item) => item.id === selectedId) ?? adaptations[0];
+  const narrationActive = Boolean(chapterVoiceover && voiceover.active?.id === chapterVoiceover.id);
+  const narrationPlaying = narrationActive && voiceover.status === "playing";
+  const narrationLoading = narrationActive && voiceover.status === "loading";
+
+  const toggleNarration = useCallback(() => {
+    if (!chapterVoiceover) {
+      return;
+    }
+
+    dispatch({ type: "UNLOCK_AUDIO" });
+
+    if (narrationPlaying) {
+      voiceover.pause();
+      return;
+    }
+
+    if (narrationActive && voiceover.status === "paused") {
+      voiceover.resume();
+      return;
+    }
+
+    voiceover.play(chapterVoiceover);
+  }, [chapterVoiceover, dispatch, narrationActive, narrationPlaying, voiceover]);
+
+  // Narration belongs to this slide, so it must not carry into the next one.
+  const voiceoverRef = useRef(voiceover);
+  voiceoverRef.current = voiceover;
+  useEffect(() => {
+    const voiceoverId = chapterVoiceover?.id;
+    return () => {
+      const current = voiceoverRef.current;
+      if (voiceoverId && current.active?.id === voiceoverId) {
+        current.stop();
+      }
+    };
+  }, [chapterVoiceover?.id]);
+
   const motionDuration = state.reducedMotion ? 0.01 : 0.72;
   const cinematicDuration = state.reducedMotion ? 0.01 : 1.18;
   const processEase = [0.16, 1, 0.3, 1] as const;
@@ -192,8 +231,50 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
             transition={{ duration: 0.62, delay: 0.18, ease: processEase }}
           />
           <h1 className="mt-[1.75cqh] max-w-[11.8ch] text-balance text-[clamp(2.18rem,2.72cqw,3.56rem)] font-bold leading-[1.02] tracking-normal text-control-text md:text-[3.5cqw]">
-            Design the <span className="text-control-warm">Control Room</span> around the people who make the decisions.
+            {chapterVoiceover ? (
+              <button
+                aria-label={narrationPlaying ? "Pause narration of this headline" : "Play narration of this headline"}
+                aria-pressed={narrationPlaying}
+                className="group inline text-left transition-colors hover:text-control-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-control-warm/60"
+                onClick={toggleNarration}
+                title={narrationPlaying ? "Pause narration" : "Listen to this line"}
+                type="button"
+              >
+                Design the <span className="text-control-warm">Control Room</span> around the people who make the decisions.
+                <span
+                  aria-hidden="true"
+                  className={`relative ml-[0.5rem] inline-grid h-[clamp(2rem,2.4cqw,2.9rem)] w-[clamp(2rem,2.4cqw,2.9rem)] translate-y-[0.12em] place-items-center rounded-full border align-middle transition ${
+                    narrationPlaying
+                      ? "border-control-warm bg-control-warm text-white shadow-[0_0.6rem_1.5rem_rgb(207_31_43/0.28)]"
+                      : "border-control-warm/45 bg-white text-control-warm shadow-[0_0.5rem_1.2rem_rgb(15_23_42/0.08)] group-hover:border-control-warm"
+                  }`}
+                >
+                  {narrationPlaying ? (
+                    <Pause size={"52%"} strokeWidth={2.1} />
+                  ) : (
+                    <Play className="translate-x-[6%]" size={"52%"} strokeWidth={2.1} />
+                  )}
+                  {narrationPlaying && !state.reducedMotion ? (
+                    <motion.span
+                      animate={{ opacity: [0.5, 0], scale: [1, 1.55] }}
+                      className="absolute h-[clamp(2rem,2.4cqw,2.9rem)] w-[clamp(2rem,2.4cqw,2.9rem)] rounded-full border border-control-warm"
+                      initial={{ opacity: 0.5, scale: 1 }}
+                      transition={{ duration: 1.6, repeat: Infinity, ease: "easeOut" }}
+                    />
+                  ) : null}
+                </span>
+              </button>
+            ) : (
+              <>
+                Design the <span className="text-control-warm">Control Room</span> around the people who make the decisions.
+              </>
+            )}
           </h1>
+          {chapterVoiceover ? (
+            <p className="mt-[0.85cqh] text-[clamp(0.6rem,0.68cqw,0.78rem)] font-semibold uppercase tracking-[0.14em] text-control-warm/85">
+              {narrationLoading ? "Loading narration..." : narrationPlaying ? "Narrating - tap to pause" : "Tap the headline to hear it"}
+            </p>
+          ) : null}
           <div className="mt-[1.35cqh] h-px w-8 bg-slate-300" />
           <p className="mt-[1.1cqh] max-w-[28rem] text-[clamp(0.78rem,0.84cqw,0.98rem)] leading-[1.36] text-control-soft md:text-[0.8cqw]">
             {chapter.supportingMessage}
