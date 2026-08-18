@@ -23,7 +23,7 @@ export const philosophyNarration: NarrationSegment[] = [
   {
     id: "headline",
     label: "People First",
-    text: "People First, Control Room Second.",
+    text: "People first, control room second. So the design of control rooms should be around the people who make the decisions.",
     file: philosophySegmentFile("headline"),
   },
   {
@@ -35,31 +35,31 @@ export const philosophyNarration: NarrationSegment[] = [
   {
     id: "operator",
     label: "Understand the User",
-    text: "Understand the User. Design around the people who actually operate the room.",
+    text: "Design around the people who actually operate the room.",
     file: philosophySegmentFile("operator"),
   },
   {
     id: "task",
     label: "Support the Work",
-    text: "Support the Work. Make every element help operators perform their tasks better.",
+    text: "Make every element help operators perform their tasks better.",
     file: philosophySegmentFile("task"),
   },
   {
     id: "information",
     label: "Simplify Information",
-    text: "Simplify Information. Present important information where it can be understood instantly.",
+    text: "Present important information where it can be understood instantly.",
     file: philosophySegmentFile("information"),
   },
   {
     id: "team",
     label: "Enable Teamwork",
-    text: "Enable Teamwork. Create a space that supports fast communication and collaboration.",
+    text: "Create a space that supports fast communication and collaboration.",
     file: philosophySegmentFile("team"),
   },
   {
     id: "environment",
     label: "Build the Right Environment",
-    text: "Build the Right Environment. Use lighting, acoustics, space, and ergonomics to improve focus and performance.",
+    text: "Use lighting, acoustics, space, and ergonomics to improve focus and performance.",
     file: philosophySegmentFile("environment"),
   },
 ];
