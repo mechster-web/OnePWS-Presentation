@@ -1,5 +1,6 @@
 import { enabledChapters } from "../content/chapters";
 import { getPrioritizedChapterSequence, type CustomerPathSelection } from "../content/customerPaths";
+import { narrationDurationFor } from "../content/narrationDurations";
 import { getVoiceover } from "../content/voiceovers";
 import {
   navigationConfig,
@@ -77,6 +78,24 @@ export type NavigationWarning = {
   message: string;
   chapterIds: ChapterId[];
 };
+
+/**
+ * Formats the countdown. Narration-timed chapters can leave well under a
+ * minute, where "0 min remaining" would read as finished.
+ */
+/** Clock form for a single narration length, e.g. 0:31. */
+export function formatClock(ms: number) {
+  const seconds = Math.max(0, Math.round(ms / 1000));
+  return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`;
+}
+
+export function formatRemaining(ms: number) {
+  const seconds = Math.max(0, Math.round(ms / 1000));
+  if (seconds >= 60) {
+    return `${Math.round(seconds / 60)} min remaining`;
+  }
+  return seconds > 0 ? `${seconds} sec remaining` : "Last slide";
+}
 
 export function buildNavigationModel(state: PresentationState): NavigationModel {
   const journey = resolveJourney(state);
@@ -194,7 +213,9 @@ function buildDestination(
     sceneType: chapter.sceneType,
     navigationType: chapter.chapterPurpose === "closing" ? "closing" : sectionBoundaries.includes(chapterId) ? "milestone" : optional ? "optional" : "main",
     order: index + 1,
-    duration: chapter.durationMs,
+    // Recorded narration is what the audience actually sits through, so it wins
+    // over the written estimate wherever a chapter has been voiced.
+    duration: narrationDurationFor(chapterId) ?? chapter.durationMs,
     optional,
     hidden: chapter.enabled === false,
     presenterOnly: false,

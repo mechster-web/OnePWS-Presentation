@@ -1,5 +1,6 @@
 import { useMemo } from "react";
-import { buildNavigationModel } from "../../navigation/navigationModel";
+import { narrationDurationFor } from "../../content/narrationDurations";
+import { buildNavigationModel, formatClock, formatRemaining } from "../../navigation/navigationModel";
 import { usePresentation } from "../../state/PresentationProvider";
 import { getChapter } from "../../state/selectors";
 import { OnePwsLogo } from "../brand/OnePwsLogo";
@@ -8,6 +9,9 @@ export function ProgressIndicator() {
   const { state } = usePresentation();
   const model = useMemo(() => buildNavigationModel(state), [state]);
   const chapter = getChapter(state.chapterId);
+  // Shown only where the slide is actually voiced, so the figure is measured
+  // audio rather than an estimate.
+  const slideNarrationMs = narrationDurationFor(state.chapterId);
   const displayShortTitle =
     chapter.id === "mission-control-definition"
       ? "Mission-Critical Insight"
@@ -93,7 +97,9 @@ export function ProgressIndicator() {
               {displayShortTitle}
             </p>
             <p className="mt-2 text-xs text-control-muted">
-              {Math.max(0, Math.round(model.remainingDurationMs / 60_000))} min remaining
+              {slideNarrationMs ? `${formatClock(slideNarrationMs)} narration` : null}
+              {slideNarrationMs ? <span className="px-1 text-control-line">|</span> : null}
+              {formatRemaining(model.remainingDurationMs)}
             </p>
           </div>
         )}

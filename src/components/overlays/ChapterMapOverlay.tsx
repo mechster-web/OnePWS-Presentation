@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { PresentationViewport } from "../PresentationViewport";
 import { CustomerPathSelector } from "./CustomerPathSelector";
 import { SceneRenderer } from "../../experience/SceneRenderer";
-import { buildNavigationModel, chapterForDestination, destinationSearch, type NavigationDestination } from "../../navigation/navigationModel";
+import { buildNavigationModel, chapterForDestination, destinationSearch, formatRemaining, type NavigationDestination } from "../../navigation/navigationModel";
 import { usePresentation } from "../../state/PresentationProvider";
 
 type MapLevel = "ecosystem" | "zone" | "destination";
@@ -256,7 +256,7 @@ function ExperienceMap() {
           </div>
           {/* <div className="mt-6">
             <p className="pws-technical-label">Route state</p>
-            <p className="mt-3 text-sm text-white/62">{model.routePosition + 1} of {model.route.length} · {Math.round(model.remainingDurationMs / 60_000)} min remaining</p>
+            <p className="mt-3 text-sm text-white/62">{model.routePosition + 1} of {model.route.length} · {formatRemaining(model.remainingDurationMs)}</p>
           </div> */}
           <SlidePreview chapter={activeChapter} />
         </aside>

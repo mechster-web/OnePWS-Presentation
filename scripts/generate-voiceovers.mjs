@@ -233,6 +233,9 @@ for (const chapter of selected) {
 }
 
 console.log(`\n${written} written, ${skipped} skipped.`);
+if (written > 0) {
+  console.log("Run `npm run voiceover:durations` so the remaining-time readout picks up the new audio.");
+}
 
 // esbuild keeps a worker alive; exiting explicitly avoids a noisy teardown on Windows.
 process.exit(0);
