@@ -233,7 +233,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
             transition={{ duration: 0.62, delay: 0.18, ease: processEase }}
           />
           <h1
-            className={`mt-[1.75cqh] max-w-[11.8ch] text-balance rounded-[0.3rem] text-[clamp(2.18rem,2.72cqw,3.56rem)] font-bold leading-[1.02] tracking-normal transition-colors duration-500 md:text-[3.5cqw] ${
+            className={`mt-[1.75cqh] max-w-[11.8ch] text-balance rounded-[0.3rem] text-[clamp(2.18rem,2.72cqw,3.56rem)] font-extrabold leading-[1.02] tracking-normal transition-colors duration-500 md:text-[3.5cqw] ${
               narration.activeId === "headline" ? "bg-control-warm/8 text-control-text" : "text-control-text"
             }`}
           >
