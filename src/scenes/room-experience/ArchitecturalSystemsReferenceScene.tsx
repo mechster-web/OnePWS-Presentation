@@ -197,7 +197,7 @@ export function ArchitecturalSystemsReferenceScene({ chapter }: { chapter: Chapt
             <section className="relative flex min-h-0 flex-col">
               <h2 className="text-[clamp(0.78rem,0.92cqw,1.06rem)] font-semibold uppercase tracking-normal text-control-text">Architecture & Infrastructure Systems</h2>
               <div className="mt-[0.8cqh] h-[2px] w-[2rem] bg-control-warm" />
-              <div className="mt-[4cqh] grid min-h-0 flex-1 grid-cols-7 items-start gap-[0.55cqw]">
+              <div className="mt-[4cqh] grid min-h-0 grid-cols-7 items-stretch gap-[0.55cqw]">
                 {systemCards.map((system) => (
                   <SystemCardView item={system} key={system.title} />
                 ))}
