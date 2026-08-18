@@ -37,9 +37,38 @@ export function useGuidedNarration(segments: NarrationSegment[] | null): GuidedN
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  /**
+   * Pausing or skipping rejects the pending play() promise. That rejection is
+   * normal, so it is matched against the request that is current now and
+   * ignored when it belongs to a superseded one.
+   */
+  const requestRef = useRef(0);
+  /** Set the moment a click lands, before play() has resolved. */
+  const intentRef = useRef<"playing" | "paused">("paused");
+
   const setIndex = useCallback((next: number) => {
     indexRef.current = next;
     setActiveIndex(next);
+  }, []);
+
+  const reportPlayFailure = useCallback((request: number, reason: unknown) => {
+    if (request !== requestRef.current) {
+      return;
+    }
+
+    const name = reason instanceof DOMException ? reason.name : "";
+    if (name === "AbortError") {
+      return;
+    }
+
+    intentRef.current = "paused";
+    setIsPlaying(false);
+    setIsLoading(false);
+    setError(
+      name === "NotAllowedError"
+        ? "Narration needs a tap first. Tap the headline again."
+        : "Narration could not play. Check that the audio files are in place.",
+    );
   }, []);
 
   const playIndex = useCallback(
@@ -61,19 +90,21 @@ export function useGuidedNarration(segments: NarrationSegment[] | null): GuidedN
       setIndex(next);
       setError(null);
       setIsLoading(true);
+      intentRef.current = "playing";
+      const request = ++requestRef.current;
       audio.src = list[next].file;
       audio.currentTime = 0;
       void audio
         .play()
         .then(() => {
+          if (request !== requestRef.current) {
+            return;
+          }
           setIsPlaying(true);
           setIsLoading(false);
+          setError(null);
         })
-        .catch(() => {
-          setIsPlaying(false);
-          setIsLoading(false);
-          setError("Narration could not start. Interact with the page and try again.");
-        });
+        .catch((reason) => reportPlayFailure(request, reason));
     },
     [setIndex],
   );
@@ -110,23 +141,40 @@ export function useGuidedNarration(segments: NarrationSegment[] | null): GuidedN
     }
 
     // Resume where the walkthrough was paused, otherwise start from the top.
-    if (indexRef.current >= 0 && audio.src && audio.currentTime > 0 && !audio.ended) {
+    if (indexRef.current >= 0 && audio.src && !audio.ended) {
+      intentRef.current = "playing";
+      const request = ++requestRef.current;
+      setError(null);
       void audio
         .play()
-        .then(() => setIsPlaying(true))
-        .catch(() => setError("Narration could not resume."));
+        .then(() => {
+          if (request !== requestRef.current) {
+            return;
+          }
+          setIsPlaying(true);
+          setIsLoading(false);
+          setError(null);
+        })
+        .catch((reason) => reportPlayFailure(request, reason));
       return;
     }
 
     playIndex(0);
-  }, [playIndex]);
+  }, [playIndex, reportPlayFailure]);
 
   const pause = useCallback(() => {
+    // Bumping the request first tells the pending play() rejection to stay quiet.
+    requestRef.current += 1;
+    intentRef.current = "paused";
     audioRef.current?.pause();
     setIsPlaying(false);
+    setIsLoading(false);
+    setError(null);
   }, []);
 
   const stop = useCallback(() => {
+    requestRef.current += 1;
+    intentRef.current = "paused";
     const audio = audioRef.current;
     if (audio) {
       audio.pause();
@@ -135,15 +183,18 @@ export function useGuidedNarration(segments: NarrationSegment[] | null): GuidedN
     setIndex(-1);
     setIsPlaying(false);
     setIsLoading(false);
+    setError(null);
   }, [setIndex]);
 
   const toggle = useCallback(() => {
-    if (isPlaying) {
+    // Reads the intent rather than the state: a second click that lands before
+    // play() has resolved should still pause, not start over.
+    if (intentRef.current === "playing") {
       pause();
       return;
     }
     play();
-  }, [isPlaying, pause, play]);
+  }, [pause, play]);
 
   const playSegment = useCallback(
     (id: string) => {
