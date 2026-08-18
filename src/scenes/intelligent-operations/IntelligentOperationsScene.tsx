@@ -100,7 +100,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "High-strength die-cast aluminium joints and brackets deliver superior rigidity, precision and ruggedness.",
     Icon: Box,
     visual: "joint",
-    image: "/assets/products/mechanical-strength/01-die-cast-structural-components-mechanical-strength.png",
+    image: "/assets/products/mechanical-strength/placeholder-image.png",
   },
   {
     id: "extruded-frame",
@@ -109,7 +109,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "Engineered aluminium profiles provide exceptional strength, light weight and dimensional accuracy.",
     Icon: Box,
     visual: "extrusion",
-    image: "/assets/products/mechanical-strength/02-heavy-duty-extruded-aluminum-frame.png",
+    image: "/assets/products/mechanical-strength/placeholder-image.png",
   },
   {
     id: "bolted-construction",
@@ -118,7 +118,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "Bolted assembly enables easy assembly, dismantling, upgrades and relocation.",
     Icon: Wrench,
     visual: "bolted",
-    image: "/assets/products/mechanical-strength/03-modular-bolted-construction-frame.png",
+    image: "/assets/products/mechanical-strength/placeholder-image.png",
   },
   {
     id: "load-bearing-chassis",
@@ -127,7 +127,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "Reinforced chassis and cross-members support heavy equipment, monitors and 24/7 loads.",
     Icon: Weight,
     visual: "chassis",
-    image: "/assets/products/mechanical-strength/04-high-load-bearing-structural-chassis.png",
+    image: "/assets/products/mechanical-strength/placeholder-image.png",
   },
   {
     id: "cable-management",
@@ -136,7 +136,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "Horizontal and vertical cable channels separate power, data and AV cables for safety and serviceability.",
     Icon: Cable,
     visual: "cable",
-    image: "/assets/products/mechanical-strength/05-integrated-structural-cable-management.png",
+    image: "/assets/products/mechanical-strength/placeholder-image.png",
   },
   {
     id: "access-panels",
@@ -145,7 +145,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "Quick-release panels allow fast access to power, data and electronics without tools.",
     Icon: Wrench,
     visual: "panel",
-    image: "/assets/products/mechanical-strength/06-tool-less-removable-access-panels.png",
+    image: "/assets/products/mechanical-strength/placeholder-image.png",
   },
   {
     id: "levelling-system",
@@ -154,7 +154,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "Heavy-duty levellers compensate for uneven floors and ensure stable console installation.",
     Icon: Settings,
     visual: "leveler",
-    image: "/assets/products/mechanical-strength/07-precision-adjustable-leveling-system.png",
+    image: "/assets/products/mechanical-strength/placeholder-image.png",
   },
   {
     id: "monitor-mounting",
@@ -163,7 +163,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "Dedicated support beams reduce vibration and prevent sag under multi-monitor loads.",
     Icon: Monitor,
     visual: "mount",
-    image: "/assets/products/mechanical-strength/08-reinforced-monitor-mount-structure.png",
+    image: "/assets/products/mechanical-strength/placeholder-image.png",
   },
   {
     id: "edge-protection",
@@ -172,7 +172,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "Aluminium and PU edge components protect high-contact areas while maintaining a clean finish.",
     Icon: ShieldCheck,
     visual: "edge",
-    image: "/assets/products/mechanical-strength/09-impact-resistant-adjustable-mount-base.png",
+    image: "/assets/products/mechanical-strength/placeholder-image.png",
   },
   {
     id: "replaceable-parts",
@@ -181,7 +181,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     description: "High-wear panels, trims, covers, worktops and brackets can be replaced individually.",
     Icon: Puzzle,
     visual: "parts",
-    image: "/assets/products/mechanical-strength/10-modular-control-room-workstation.png",
+    image: "/assets/products/mechanical-strength/placeholder-image.png",
   },
 ];
 
