@@ -183,7 +183,7 @@ export function ArchitecturalSystemsReferenceScene({ chapter }: { chapter: Chapt
             </div>
           </motion.aside>
 
-          <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[30.5cqh_minmax(0,1fr)_10.5cqh] gap-[1.15cqh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
+          <motion.main animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[30.5cqh_minmax(0,1fr)] gap-[1.15cqh]" initial={false} transition={{ duration: 0.74, delay: 0.08, ease }}>
             <section className="relative overflow-hidden rounded-[0.62rem] border border-white/80 bg-white/50 shadow-[inset_0_1px_0_rgb(255_255_255/0.96),0_1rem_2.5rem_rgb(15_23_42/0.1)] backdrop-blur-[24px] backdrop-saturate-150">
               <img alt="" className="absolute inset-x-0 top-0 h-[76%] w-full object-cover object-[center_58%]" src="/assets/products/design-build-control-room-wide.png" />
               <div className="absolute inset-x-0 top-0 h-[76%] bg-[linear-gradient(180deg,rgb(255_255_255/0.04)_0%,transparent_62%,rgb(255_255_255/0.12)_100%)]" />
@@ -197,7 +197,7 @@ export function ArchitecturalSystemsReferenceScene({ chapter }: { chapter: Chapt
             <section className="relative flex min-h-0 flex-col">
               <h2 className="text-[clamp(0.78rem,0.92cqw,1.06rem)] font-semibold uppercase tracking-normal text-control-text">Architecture & Infrastructure Systems</h2>
               <div className="mt-[0.8cqh] h-[2px] w-[2rem] bg-control-warm" />
-              <div className="mt-[1cqh] grid min-h-0 flex-1 grid-cols-7 gap-[0.55cqw]">
+              <div className="mt-[4cqh] grid min-h-0 flex-1 grid-cols-7 items-start gap-[0.55cqw]">
                 {systemCards.map((system) => (
                   <SystemCardView item={system} key={system.title} />
                 ))}
@@ -206,7 +206,7 @@ export function ArchitecturalSystemsReferenceScene({ chapter }: { chapter: Chapt
 
           </motion.main>
 
-          <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0  gap-[1.15cqh]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
+          <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)] gap-[1.15cqh]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
             <DetailPanel title="Environmental Intelligence" intro="Continuous monitoring and automatic adjustment create ideal environment for peak performance." items={environmentalItems} />
             <DetailPanel title="Built for People. Designed for Performance." items={peopleItems} />
           </motion.aside>
@@ -260,7 +260,7 @@ function HeroFeature({ item, index }: { item: Feature; index: number }) {
 function SystemCardView({ item }: { item: SystemCard }) {
   const Icon = item.Icon;
   return (
-    <article className="relative h-full min-w-0 overflow-hidden rounded-[0.5rem] border border-white/80 bg-white/54 shadow-[inset_0_1px_0_rgb(255_255_255/0.96),0_0.7rem_1.7rem_rgb(15_23_42/0.1)] backdrop-blur-[20px] backdrop-saturate-150">
+    <article className="relative min-w-0 overflow-hidden rounded-[0.5rem] border border-white/80 bg-white/54 shadow-[inset_0_1px_0_rgb(255_255_255/0.96),0_0.7rem_1.7rem_rgb(15_23_42/0.1)] backdrop-blur-[20px] backdrop-saturate-150">
       <div className="relative h-[10cqh] overflow-hidden bg-slate-100">
         <img alt="" className="absolute inset-0 h-full w-full object-cover" src={item.image} />
         <span className="absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,rgb(15_23_42/0.16)_100%)]" />
