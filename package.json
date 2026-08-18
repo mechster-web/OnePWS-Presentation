@@ -17,7 +17,9 @@
     "audit:visual": "node scripts/visual-audit.mjs",
     "audit:visual:shots": "node scripts/visual-audit.mjs --shots",
     "assets:upload": "node scripts/upload-assets-to-cloudinary.mjs",
-    "assets:upload:dry": "node scripts/upload-assets-to-cloudinary.mjs --dry-run"
+    "assets:upload:dry": "node scripts/upload-assets-to-cloudinary.mjs --dry-run",
+    "voiceover:voices": "node scripts/generate-voiceovers.mjs --voices",
+    "voiceover:generate": "node scripts/generate-voiceovers.mjs"
   },
   "build": {
     "appId": "com.onepws.controlroom.presentation",
