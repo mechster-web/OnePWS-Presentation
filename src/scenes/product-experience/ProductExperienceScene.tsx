@@ -788,7 +788,7 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
               <Expand aria-hidden="true" size={18} strokeWidth={1.85} />
               Full View
             </button>
-            {modelAvailable ? (
+            {modelAvailable === null ? null : modelAvailable ? (
               <model-viewer
                 alt={`${detail.name} ${detail.title} 3D model`}
                 camera-controls
@@ -802,7 +802,8 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
                 interaction-prompt="none"
                 max-camera-orbit="auto 86deg 180%"
                 min-camera-orbit="auto 42deg 70%"
-                poster={detail.image}
+                loading="eager"
+                reveal="auto"
                 shadow-intensity="0.9"
                 shadow-softness="0.88"
                 src={detail.modelPath}
@@ -1025,7 +1026,7 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
               className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[24%]"
               style={{ background: `linear-gradient(180deg, transparent, ${selectedColor.edge}18)` }}
             />
-            {modelAvailable ? (
+            {modelAvailable === null ? null : modelAvailable ? (
               <model-viewer
                 alt={`${detail.name} ${detail.title} enlarged 3D model`}
                 camera-controls
@@ -1040,7 +1041,8 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
                 key={`maximized-${detail.id}`}
                 max-camera-orbit="auto 86deg 132%"
                 min-camera-orbit="auto 42deg 38%"
-                poster={detail.image}
+                loading="eager"
+                reveal="auto"
                 shadow-intensity="1"
                 shadow-softness="0.92"
                 src={detail.modelPath}

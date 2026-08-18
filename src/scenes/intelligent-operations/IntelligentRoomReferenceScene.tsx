@@ -1921,7 +1921,7 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
                   {builtForChangeItems.map((item) => (
                     <div className="grid grid-cols-[1.35cqw_minmax(0,1fr)] items-center gap-[0.5cqw]" key={item}>
                       <CircleCheck aria-hidden="true" className="h-[0.95cqw] w-[0.95cqw] text-violet-600" strokeWidth={1.7} />
-                      <span className="text-[0.78cqw] font-medium leading-tight text-control-text">{item}</span>
+                      <span className="text-[0.6cqw] font-medium leading-tight text-control-text">{item}</span>
                     </div>
                   ))}
                 </div>

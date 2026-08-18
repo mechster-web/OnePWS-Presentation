@@ -194,10 +194,10 @@ export function ArchitecturalSystemsReferenceScene({ chapter }: { chapter: Chapt
               </div>
             </section>
 
-            <section className="relative flex min-h-0 flex-col">
+            <section className="relative mt-[2.2cqh] flex min-h-0 flex-col">
               <h2 className="text-[clamp(0.78rem,0.92cqw,1.06rem)] font-semibold uppercase tracking-normal text-control-text">Architecture & Infrastructure Systems</h2>
               <div className="mt-[0.8cqh] h-[2px] w-[2rem] bg-control-warm" />
-              <div className="mt-[4cqh] grid min-h-0 grid-cols-7 items-stretch gap-[0.55cqw]">
+              <div className="mt-[1.4cqh] grid min-h-0 grid-cols-7 items-stretch gap-[0.55cqw]">
                 {systemCards.map((system) => (
                   <SystemCardView item={system} key={system.title} />
                 ))}
@@ -206,7 +206,7 @@ export function ArchitecturalSystemsReferenceScene({ chapter }: { chapter: Chapt
 
           </motion.main>
 
-          <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)] gap-[1.15cqh]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
+          <motion.aside animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-rows-[30.5cqh_35.4cqh] content-start gap-[1.15cqh]" initial={false} transition={{ duration: 0.74, delay: 0.14, ease }}>
             <DetailPanel title="Environmental Intelligence" intro="Continuous monitoring and automatic adjustment create ideal environment for peak performance." items={environmentalItems} />
             <DetailPanel title="Built for People. Designed for Performance." items={peopleItems} />
           </motion.aside>
@@ -261,16 +261,16 @@ function SystemCardView({ item }: { item: SystemCard }) {
   const Icon = item.Icon;
   return (
     <article className="relative min-w-0 overflow-hidden rounded-[0.5rem] border border-white/80 bg-white/54 shadow-[inset_0_1px_0_rgb(255_255_255/0.96),0_0.7rem_1.7rem_rgb(15_23_42/0.1)] backdrop-blur-[20px] backdrop-saturate-150">
-      <div className="relative h-[10cqh] overflow-hidden bg-slate-100">
+      <div className="relative h-[11.2cqh] overflow-hidden bg-slate-100">
         <img alt="" className="absolute inset-0 h-full w-full object-cover" src={item.image} />
         <span className="absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,rgb(15_23_42/0.16)_100%)]" />
       </div>
-      <span className={`absolute left-[0.55rem] top-[8.65cqh] grid h-[2rem] w-[2rem] place-items-center rounded-full text-white shadow-[0_0.55rem_1.2rem_rgb(15_23_42/0.16)] ${item.color}`}>
+      <span className={`absolute left-[0.55rem] top-[9.85cqh] grid h-[2rem] w-[2rem] place-items-center rounded-full text-white shadow-[0_0.55rem_1.2rem_rgb(15_23_42/0.16)] ${item.color}`}>
         <Icon aria-hidden="true" size={18} strokeWidth={1.6} />
       </span>
       <div className="px-[0.62cqw] pb-[0.7cqh] pt-[1.35rem]">
         <h3 className="text-[clamp(0.6rem,0.67cqw,0.78rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
-        <ul className="mt-[0.58cqh] space-y-[0.89cqh] text-[clamp(0.7rem,0.53cqw,0.62rem)] font-medium leading-[1.22] text-slate-800">
+        <ul className="mt-[0.6cqh] space-y-[0.72cqh] text-[clamp(0.7rem,0.53cqw,0.62rem)] font-medium leading-[1.22] text-slate-800">
           {item.bullets.map((bullet) => (
             <li className="flex gap-1" key={bullet}><span aria-hidden="true">&bull;</span><span>{bullet}</span></li>
           ))}

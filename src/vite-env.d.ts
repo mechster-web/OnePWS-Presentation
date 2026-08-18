@@ -13,9 +13,11 @@ type ModelViewerAttributes = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTML
   exposure?: string;
   "field-of-view"?: string;
   "interaction-prompt"?: string;
+  loading?: "auto" | "lazy" | "eager";
   "max-camera-orbit"?: string;
   "min-camera-orbit"?: string;
   poster?: string;
+  reveal?: "auto" | "manual";
   "shadow-intensity"?: string;
   "shadow-softness"?: string;
   src?: string;

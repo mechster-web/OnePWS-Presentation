@@ -467,7 +467,7 @@ function MechanicalStrengthConsoleStage({ chapter }: { chapter: Chapter }) {
       <div className="pointer-events-none absolute inset-x-0 top-[8.6cqh] h-px bg-slate-200/80" />
       <motion.div
         animate={reducedMotion ? undefined : { opacity: [0.92, 1, 0.94], y: [0, -4, 0] }}
-        className="pointer-events-none absolute left-[29cqw] top-[7.85cqh] h-[20.8cqh] w-[42cqw] overflow-hidden"
+        className="pointer-events-none absolute left-[32cqw] top-[10.85cqh] h-[20.8cqh] w-[42cqw] overflow-hidden"
         initial={false}
         transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut" }}
       >
