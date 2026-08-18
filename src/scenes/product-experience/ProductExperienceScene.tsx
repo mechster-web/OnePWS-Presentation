@@ -658,23 +658,23 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
   const [selectedColor, setSelectedColor] = useState(detail.colors[0]);
   const [selectedView, setSelectedView] = useState(detail.views[0]);
   const [activeHotspot, setActiveHotspot] = useState(detail.hotspots[0]);
-  const [modelAvailable, setModelAvailable] = useState<boolean | null>(null);
+  const [modelAvailable, setModelAvailable] = useState(true);
   const [viewerMaximized, setViewerMaximized] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
-    setModelAvailable(null);
+    // Render the viewer straight away so the console never flashes a still
+    // photo or an empty frame; only fall back if the model is really missing.
+    setModelAvailable(true);
 
     fetch(detail.modelPath, { method: "HEAD" })
       .then((response) => {
-        if (!cancelled) {
-          setModelAvailable(response.ok);
+        if (!cancelled && !response.ok) {
+          setModelAvailable(false);
         }
       })
       .catch(() => {
-        if (!cancelled) {
-          setModelAvailable(false);
-        }
+        /* keep the viewer mounted - model-viewer reports its own load failure */
       });
 
     return () => {
@@ -788,7 +788,7 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
               <Expand aria-hidden="true" size={18} strokeWidth={1.85} />
               Full View
             </button>
-            {modelAvailable === null ? null : modelAvailable ? (
+            {modelAvailable ? (
               <model-viewer
                 alt={`${detail.name} ${detail.title} 3D model`}
                 camera-controls
@@ -1026,7 +1026,7 @@ function ConsoleDetailStage({ chapter, detail }: { chapter: Chapter; detail: Con
               className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[24%]"
               style={{ background: `linear-gradient(180deg, transparent, ${selectedColor.edge}18)` }}
             />
-            {modelAvailable === null ? null : modelAvailable ? (
+            {modelAvailable ? (
               <model-viewer
                 alt={`${detail.name} ${detail.title} enlarged 3D model`}
                 camera-controls

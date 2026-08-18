@@ -8,6 +8,7 @@ import {
   Headphones,
   Info,
   Map,
+  Quote,
   Sun,
   TrendingUp,
   UserRound,
@@ -230,7 +231,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
             src="/assets/source-pdf/p31_059_2078x1168.jpg"
             transition={{ duration: 5.8, delay: 0.1, ease: processEase }}
           />
-          <div className=" inset-0 bg-[linear-gradient(90deg,rgb(6_11_18/0.66)_0%,rgb(6_11_18/0.28)_22%,transparent_50%)]" />
+          <div className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(90deg,rgb(6_11_18/0.92)_0%,rgb(6_11_18/0.74)_16%,rgb(6_11_18/0.34)_32%,transparent_52%)]" />
           {!state.reducedMotion ? (
             <>
               <motion.div
@@ -272,7 +273,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
           ) : null}
           <motion.div
             animate={{ opacity: 1, x: 0 }}
-            className="absolute left-0 top-0 h-full w-[min(15.4cqw,18.5rem)] bg-[#10151d]/96 px-[clamp(0.86rem,1cqw,1.25rem)] py-[2.2cqh] text-white shadow-[1rem_0_2rem_rgb(0_0_0/0.16)]"
+            className="absolute left-0 top-0 z-20 h-full w-[min(17.5cqw,21rem)] bg-[linear-gradient(90deg,rgb(6_11_18/0.94)_0%,rgb(6_11_18/0.88)_58%,rgb(6_11_18/0.55)_86%,rgb(6_11_18/0.12)_100%)] px-[clamp(0.86rem,1cqw,1.25rem)] py-[2.2cqh] text-white"
             initial={state.reducedMotion ? false : { opacity: 0, x: -18 }}
             transition={{ duration: motionDuration, delay: 0.22, ease: processEase }}
           >
@@ -294,10 +295,10 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
                     <principle.Icon aria-hidden="true" className="text-control-warm" size={32} strokeWidth={1.75} />
                   </motion.div>
                   <div>
-                    <p className="text-[clamp(0.68rem,0.75cqw,0.88rem)] font-semibold uppercase leading-tight text-white">
+                    <p className="text-[clamp(0.84rem,0.96cqw,1.14rem)] font-semibold uppercase leading-tight text-white">
                       {principle.label}
                     </p>
-                    <p className="mt-[0.22cqh] max-w-[9.2rem] text-[clamp(0.62rem,0.72cqw,0.84rem)] leading-[1.28] text-white/84">
+                    <p className="mt-[0.32cqh] max-w-[11.4rem] text-[clamp(0.74rem,0.86cqw,1.02rem)] leading-[1.3] text-white/90">
                       {principle.detail}
                     </p>
                   </div>
@@ -414,7 +415,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
           ) : null}
           <div className="grid h-full max-w-[54rem] grid-cols-[4.5rem_1fr] items-center">
             <div className="flex h-full items-center justify-center text-control-warm">
-              <span className="text-[clamp(2.25rem,3.1cqw,3.8rem)] font-semibold leading-none">&ldquo;</span>
+              <Quote aria-hidden="true" className="text-control-warm" size={34} strokeWidth={1.55} />
             </div>
             <div className="border-l border-slate-200 pl-[1.2cqw]">
               <p className="text-[clamp(0.78rem,0.88cqw,1rem)] font-medium leading-[1.28] text-control-text">

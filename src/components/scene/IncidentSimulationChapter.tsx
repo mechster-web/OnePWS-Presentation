@@ -13,6 +13,7 @@ import {
   Lightbulb,
   Map,
   MonitorCheck,
+  Quote,
   Settings,
   ShieldCheck,
   SlidersHorizontal,
@@ -173,9 +174,7 @@ export function IncidentSimulationChapter({ chapter }: { chapter: Chapter }) {
 
           <section className={`grid min-h-[14cqh] grid-cols-[minmax(0,1fr)_minmax(13rem,0.34fr)] ${cardShell}`}>
             <div className="flex items-center gap-[1.05cqw] px-[1.45cqw] py-[1.3cqh]">
-              <span aria-hidden="true" className="shrink-0 self-start pt-[1.1cqh] text-[clamp(2.6rem,3.2cqw,4rem)] font-bold leading-[0.55] text-red-600">
-                &ldquo;
-              </span>
+              <Quote aria-hidden="true" className="shrink-0 self-start text-control-warm" size={38} strokeWidth={1.55} />
               <div>
                 <p className="text-[clamp(0.76rem,0.9cqw,1.04rem)] font-medium leading-[1.45] text-slate-900">
                   Technology should never slow you down.
