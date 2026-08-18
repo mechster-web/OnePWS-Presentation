@@ -35,6 +35,8 @@ const ALL = args.includes("--all");
 const FORCE = args.includes("--force");
 const DRY_RUN = args.includes("--dry-run");
 const VOICE_ARG = valueOf("--voice");
+/** Segment mode narrates one slide beat per file so the scene can highlight along. */
+const SEGMENTS = args.includes("--segments");
 
 function loadEnv() {
   const envPath = path.join(ROOT, ".env");
@@ -126,6 +128,28 @@ async function loadVoiceovers() {
   return module.voiceovers.filter((voiceover) => voiceover.scope === "chapter");
 }
 
+/**
+ * Slide narration is split into one file per highlighted section, so the scene
+ * can follow the audio without needing word-level timings.
+ */
+async function loadSegments() {
+  const bundle = await esbuild.build({
+    entryPoints: ["src/content/slideNarration.ts"],
+    absWorkingDir: ROOT,
+    bundle: true,
+    format: "esm",
+    platform: "node",
+    write: false,
+    logLevel: "silent",
+  });
+
+  const encoded = Buffer.from(bundle.outputFiles[0].text).toString("base64");
+  const module = await import("data:text/javascript;base64," + encoded);
+  return Object.entries(module.slideNarrationSets).flatMap(([chapterId, segments]) =>
+    segments.map((segment) => ({ ...segment, chapterId })),
+  );
+}
+
 async function synthesise(voiceId, text) {
   const response = await api(`/text-to-speech/${voiceId}`, {
     method: "POST",
@@ -149,8 +173,8 @@ if (LIST_VOICES) {
   process.exit(0);
 }
 
-if (!ONLY && !ALL) {
-  console.log("Nothing selected. Use --only <chapter-id>, --all, or --voices.");
+if (!ONLY && !ALL && !SEGMENTS) {
+  console.log("Nothing selected. Use --only <chapter-id>, --all, --segments, or --voices.");
   process.exit(0);
 }
 
@@ -159,8 +183,17 @@ if (!voiceId) {
   throw new Error('No voice selected. Run --voices, then set ELEVENLABS_VOICE_ID in .env or pass --voice "<name>".');
 }
 
-const chapters = await loadVoiceovers();
-const selected = ONLY ? chapters.filter((chapter) => chapter.ownerId === ONLY) : chapters;
+const chapters = SEGMENTS
+  ? (await loadSegments()).map((segment) => ({
+      ownerId: `${segment.chapterId}/${segment.id}`,
+      plannedFile: segment.file,
+      fallbackText: segment.text,
+      chapterId: segment.chapterId,
+    }))
+  : await loadVoiceovers();
+const selected = ONLY
+  ? chapters.filter((chapter) => chapter.ownerId === ONLY || chapter.chapterId === ONLY)
+  : chapters;
 if (!selected.length) {
   throw new Error(`No chapter narration matches "${ONLY}".`);
 }

@@ -17,9 +17,11 @@ import {
   UsersRound,
 } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { getSlideNarration } from "../../content/slideNarration";
 import { getVoiceover } from "../../content/voiceovers";
 import type { Chapter } from "../../data/contentTypes";
 import { useFullscreen } from "../../hooks/useFullscreen";
+import { useGuidedNarration } from "../../hooks/useGuidedNarration";
 import { usePresentation } from "../../state/PresentationProvider";
 import { useVoiceover } from "../../voiceover/VoiceoverProvider";
 
@@ -115,33 +117,32 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
   const chapterVoiceover = getVoiceover("chapter", chapter.id);
   const [selectedId, setSelectedId] = useState(adaptations[0].id);
   const selected = adaptations.find((item) => item.id === selectedId) ?? adaptations[0];
-  const narrationActive = Boolean(chapterVoiceover && voiceover.active?.id === chapterVoiceover.id);
-  const narrationPlaying = narrationActive && voiceover.status === "playing";
-  const narrationLoading = narrationActive && voiceover.status === "loading";
+
+  const segments = getSlideNarration(chapter.id);
+  const narration = useGuidedNarration(segments);
+  const narrationPlaying = narration.isPlaying;
+  const narrationLoading = narration.isLoading;
 
   const toggleNarration = useCallback(() => {
-    if (!chapterVoiceover) {
-      return;
-    }
-
     dispatch({ type: "UNLOCK_AUDIO" });
+    // The chapter track and the walkthrough share the room, so only one speaks.
+    voiceover.stop();
+    narration.toggle();
+  }, [dispatch, narration, voiceover]);
 
-    if (narrationPlaying) {
-      voiceover.pause();
-      return;
+  // The card selection follows the voice, so the section being explained is the
+  // one highlighted on screen.
+  useEffect(() => {
+    if (narration.activeId && adaptations.some((item) => item.id === narration.activeId)) {
+      setSelectedId(narration.activeId);
     }
-
-    if (narrationActive && voiceover.status === "paused") {
-      voiceover.resume();
-      return;
-    }
-
-    voiceover.play(chapterVoiceover);
-  }, [chapterVoiceover, dispatch, narrationActive, narrationPlaying, voiceover]);
+  }, [narration.activeId]);
 
   // Narration belongs to this slide, so it must not carry into the next one.
   const voiceoverRef = useRef(voiceover);
   voiceoverRef.current = voiceover;
+  const narrationRef = useRef(narration);
+  narrationRef.current = narration;
   useEffect(() => {
     const voiceoverId = chapterVoiceover?.id;
     return () => {
@@ -149,6 +150,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
       if (voiceoverId && current.active?.id === voiceoverId) {
         current.stop();
       }
+      narrationRef.current.stop();
     };
   }, [chapterVoiceover?.id]);
 
@@ -230,14 +232,18 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
             initial={state.reducedMotion ? false : { scaleX: 0 }}
             transition={{ duration: 0.62, delay: 0.18, ease: processEase }}
           />
-          <h1 className="mt-[1.75cqh] max-w-[11.8ch] text-balance text-[clamp(2.18rem,2.72cqw,3.56rem)] font-bold leading-[1.02] tracking-normal text-control-text md:text-[3.5cqw]">
-            {chapterVoiceover ? (
+          <h1
+            className={`mt-[1.75cqh] max-w-[11.8ch] text-balance rounded-[0.3rem] text-[clamp(2.18rem,2.72cqw,3.56rem)] font-bold leading-[1.02] tracking-normal transition-colors duration-500 md:text-[3.5cqw] ${
+              narration.activeId === "headline" ? "bg-control-warm/8 text-control-text" : "text-control-text"
+            }`}
+          >
+            {segments ? (
               <button
-                aria-label={narrationPlaying ? "Pause narration of this headline" : "Play narration of this headline"}
+                aria-label={narrationPlaying ? "Pause the guided walkthrough" : "Play the guided walkthrough of this slide"}
                 aria-pressed={narrationPlaying}
                 className="group inline text-left transition-colors hover:text-control-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-control-warm/60"
                 onClick={toggleNarration}
-                title={narrationPlaying ? "Pause narration" : "Listen to this line"}
+                title={narrationPlaying ? "Pause walkthrough" : "Play guided walkthrough"}
                 type="button"
               >
                 Design the <span className="text-control-warm">Control Room</span> around the people who make the decisions.
@@ -270,13 +276,23 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
               </>
             )}
           </h1>
-          {chapterVoiceover ? (
+          {segments ? (
             <p className="mt-[0.85cqh] text-[clamp(0.6rem,0.68cqw,0.78rem)] font-semibold uppercase tracking-[0.14em] text-control-warm/85">
-              {narrationLoading ? "Loading narration..." : narrationPlaying ? "Narrating - tap to pause" : "Tap the headline to hear it"}
+              {narration.error
+                ? narration.error
+                : narrationLoading
+                  ? "Loading narration..."
+                  : narration.hasStarted
+                    ? `${narration.activeIndex + 1} / ${narration.total} - ${narration.activeSegment?.label ?? ""}${narrationPlaying ? "" : " (paused)"}`
+                    : "Tap the headline for the guided walkthrough"}
             </p>
           ) : null}
           <div className="mt-[1.35cqh] h-px w-8 bg-slate-300" />
-          <p className="mt-[1.1cqh] max-w-[28rem] text-[clamp(0.78rem,0.84cqw,0.98rem)] leading-[1.36] text-control-soft md:text-[0.8cqw]">
+          <p
+            className={`mt-[1.1cqh] max-w-[28rem] rounded-[0.3rem] text-[clamp(0.78rem,0.84cqw,0.98rem)] leading-[1.36] transition-colors duration-500 md:text-[0.8cqw] ${
+              narration.activeId === "subheading" ? "bg-control-warm/8 text-control-text" : "text-control-soft"
+            }`}
+          >
             {chapter.supportingMessage}
           </p>
         </motion.div>
@@ -409,9 +425,11 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
             ) : null}
             {adaptations.map((item, index) => {
               const isSelected = item.id === selected.id;
+              const isSpeaking = narration.activeId === item.id;
               return (
                 <motion.button
                   animate={{ opacity: 1, y: 0 }}
+                  aria-current={isSpeaking ? "true" : undefined}
                   aria-pressed={isSelected}
                   className={`relative grid grid-cols-[3rem_1fr] items-center gap-[0.82rem] overflow-hidden border-r border-slate-200 px-[1.05cqw] text-left last:border-r-0 transition-colors ${
                     isSelected ? "bg-white" : "bg-white/46 hover:bg-white/74"
@@ -419,7 +437,13 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
                   initial={state.reducedMotion ? false : { opacity: 0, y: 10 }}
                   key={item.id}
                   onClick={() => setSelectedId(item.id)}
-                  style={isSelected ? { boxShadow: `inset 4px 0 0 ${item.accent}` } : undefined}
+                  style={
+                    isSpeaking
+                      ? { boxShadow: `inset 4px 0 0 ${item.accent}, 0 0 0 2px ${item.accent}, 0 1rem 2.2rem rgb(15 23 42 / 0.12)` }
+                      : isSelected
+                        ? { boxShadow: `inset 4px 0 0 ${item.accent}` }
+                        : undefined
+                  }
                   transition={{ duration: motionDuration, delay: 0.34 + index * 0.05, ease: processEase }}
                   type="button"
                   whileHover={state.reducedMotion ? undefined : { y: -2 }}

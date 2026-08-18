@@ -19,7 +19,8 @@
     "assets:upload": "node scripts/upload-assets-to-cloudinary.mjs",
     "assets:upload:dry": "node scripts/upload-assets-to-cloudinary.mjs --dry-run",
     "voiceover:voices": "node scripts/generate-voiceovers.mjs --voices",
-    "voiceover:generate": "node scripts/generate-voiceovers.mjs"
+    "voiceover:generate": "node scripts/generate-voiceovers.mjs",
+    "voiceover:segments": "node scripts/generate-voiceovers.mjs --segments"
   },
   "build": {
     "appId": "com.onepws.controlroom.presentation",
