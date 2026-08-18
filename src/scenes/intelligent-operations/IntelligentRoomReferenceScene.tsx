@@ -1870,7 +1870,7 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
                     alt="Software-defined control room with a curved video wall and reconfigurable operator consoles."
                     className="absolute inset-0 h-full w-full object-cover object-center"
                     draggable={false}
-                    src="/assets/products/control-room.png"
+                    src="/assets/generated/rooms/software-defined-control-room.png"
                   />
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgb(255_255_255/0.10),rgb(255_255_255/0.02)_55%,rgb(255_255_255/0.14))]" />
                 </div>
