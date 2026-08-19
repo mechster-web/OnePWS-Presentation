@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import {
   BarChart3,
-  CheckCircle2,
   ChevronLeft,
   ChevronRight,
   Clock3,
@@ -19,7 +18,6 @@ import {
   Thermometer,
   type LucideIcon,
 } from "lucide-react";
-import { getAsset } from "../../content/assetManifest";
 import { getVoiceover } from "../../content/voiceovers";
 import type { Chapter } from "../../data/contentTypes";
 import { useFullscreen } from "../../hooks/useFullscreen";
@@ -42,6 +40,15 @@ type PerformanceItem = {
   label: string;
   detail: string;
   Icon: LucideIcon;
+};
+
+type RoomHotspot = {
+  title: string;
+  detail: string;
+  Icon: LucideIcon;
+  x: string;
+  y: string;
+  align?: "left" | "right";
 };
 
 const durabilityPrinciples: SimpleItem[] = [
@@ -90,13 +97,19 @@ const longTermBenefits: SimpleItem[] = [
   { title: "Sustainable Choice", detail: "Quality materials that reduce waste and last longer.", Icon: Leaf },
 ];
 
+const roomHotspots: RoomHotspot[] = [
+  { title: "Rigid Ceiling Grid", detail: "Stable overhead structure for long service life.", Icon: Layers3, x: "50%", y: "14%" },
+  { title: "Impact-Resistant Walls", detail: "Durable panels protect high-traffic operations.", Icon: PanelTop, x: "16%", y: "45%" },
+  { title: "Heavy-Duty Console Zone", detail: "Designed around equipment load and daily use.", Icon: Gauge, x: "69%", y: "57%", align: "right" },
+  { title: "Wear-Resistant Flooring", detail: "Reliable floor surface for rolling chairs and uptime.", Icon: ShieldCheck, x: "36%", y: "77%" },
+];
+
 export function RoomEngineeredToLastChapter({ chapter }: { chapter: Chapter }) {
   const { dispatch } = usePresentation();
   const { toggleFullscreen } = useFullscreen();
   const voiceover = useVoiceover();
   const chapterVoiceover = getVoiceover("chapter", chapter.id);
   const ease = [0.16, 1, 0.3, 1] as const;
-  const roomAsset = getAsset("ambient-control-room");
 
   return (
     <article className="grid h-full w-full grid-rows-[minmax(0,1fr)_auto_auto] gap-[28px] overflow-hidden bg-[linear-gradient(116deg,#ffffff_0%,#fbfcfd_62%,#fff1f3_100%)] px-[1.55cqw] pb-[1.2cqh] pt-[8.9cqh] text-control-text">
@@ -149,8 +162,11 @@ export function RoomEngineeredToLastChapter({ chapter }: { chapter: Chapter }) {
           </section>
 
           <section className="flex min-h-0 flex-col bg-white">
-            <div className="min-h-0 flex-1 overflow-hidden bg-white">
-              <img alt="Structurally engineered control room with high-impact wall, rigid ceiling, joint integrity and heavy-duty flooring callouts" className="h-full w-full object-contain object-center" draggable={false} src="/assets/generated/rooms/room-engineered-to-last-structure.png" />
+            <div className="relative min-h-0 flex-1 overflow-hidden bg-white">
+              <img alt="Structurally engineered control room with high-impact wall, rigid ceiling, joint integrity and heavy-duty flooring callouts" className="h-full w-full object-cover object-center" draggable={false} src="/assets/generated/rooms/room-engineered-to-last-structure.png" />
+              {roomHotspots.map((hotspot) => (
+                <RoomHotspotMarker hotspot={hotspot} key={hotspot.title} />
+              ))}
             </div>
           </section>
         </main>
@@ -225,6 +241,50 @@ export function RoomEngineeredToLastChapter({ chapter }: { chapter: Chapter }) {
         </div>
       </motion.div>
     </article>
+  );
+}
+
+function RoomHotspotMarker({ hotspot }: { hotspot: RoomHotspot }) {
+  return (
+    <div className="absolute z-10" style={{ left: hotspot.x, top: hotspot.y }}>
+      <motion.span
+        animate={{
+          boxShadow: [
+            "0 0 0 0.38rem rgb(220 38 38 / 0.16), 0 0 0 0 rgb(220 38 38 / 0.32)",
+            "0 0 0 0.62rem rgb(220 38 38 / 0.08), 0 0 1.4rem 0.18rem rgb(220 38 38 / 0.44)",
+            "0 0 0 0.38rem rgb(220 38 38 / 0.16), 0 0 0 0 rgb(220 38 38 / 0.32)",
+          ],
+          opacity: [0.86, 1, 0.86],
+        }}
+        className="absolute left-0 top-0 size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-red-600"
+        transition={{ duration: 1.8, ease: "easeInOut", repeat: Infinity }}
+      />
+      <motion.article
+        animate={{
+          boxShadow: [
+            "0 0.75rem 1.8rem rgb(15 23 42 / 0.18), 0 0 0 0 rgb(220 38 38 / 0)",
+            "0 0.9rem 2.2rem rgb(15 23 42 / 0.18), 0 0 1.2rem 0.1rem rgb(220 38 38 / 0.28)",
+            "0 0.75rem 1.8rem rgb(15 23 42 / 0.18), 0 0 0 0 rgb(220 38 38 / 0)",
+          ],
+          opacity: [0.94, 1, 0.94],
+        }}
+        className={[
+          "absolute top-0 w-[min(13.2rem,20cqw)] rounded-[0.42rem] border border-white/70 bg-white/95 p-[0.48rem] text-slate-950 backdrop-blur-md",
+          "left-[1.05rem] -translate-y-1/2",
+        ].join(" ")}
+        transition={{ duration: 2.15, ease: "easeInOut", repeat: Infinity }}
+      >
+        <div className="flex items-start gap-2">
+          <span className="grid size-8 shrink-0 place-items-center rounded-full border border-red-100 bg-white text-red-600">
+            <hotspot.Icon aria-hidden="true" size={18} strokeWidth={1.7} />
+          </span>
+          <span className="min-w-0">
+            <strong className="block text-[clamp(0.56rem,0.66cqw,0.78rem)] font-semibold leading-tight">{hotspot.title}</strong>
+            <span className="mt-[0.18rem] block text-[clamp(0.48rem,0.56cqw,0.66rem)] font-medium leading-[1.22] text-slate-700">{hotspot.detail}</span>
+          </span>
+        </div>
+      </motion.article>
+    </div>
   );
 }
 

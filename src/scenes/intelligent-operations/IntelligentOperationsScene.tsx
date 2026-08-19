@@ -893,7 +893,7 @@ function IncidentResponseReferenceStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="relative grid min-h-0 grid-rows-[0.68fr_0.98fr_0.5fr] gap-[1.25cqh]"
+          className="relative grid min-h-0 grid-rows-[minmax(0,0.68fr)_minmax(0,0.98fr)_8.2cqh] gap-[1.25cqh] pb-[6.35cqh]"
           initial={false}
           transition={{ duration: 0.74, delay: 0.08, ease }}
         >
@@ -910,24 +910,24 @@ function IncidentResponseReferenceStage({ chapter }: { chapter: Chapter }) {
           <section className="relative overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.25cqw] py-[2cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
             <h2 className="text-[clamp(0.98rem,1.15cqw,1.34rem)] font-semibold leading-none text-control-text">Built for Critical Moments</h2>
             <div className="mt-[1cqh] h-[2px] w-[1.9rem] bg-control-warm" />
-            <div className="mt-[2cqh] grid h-[calc(100%-3.4rem)] grid-cols-3 grid-rows-2">
+            <div className="mt-[2cqh] grid h-[calc(100%-3.4rem)] grid-cols-3 grid-rows-2 items-center">
               {criticalMomentItems.map((item, index) => (
                 <CriticalMomentCell item={item} index={index} key={item.title} />
               ))}
             </div>
           </section>
 
-          <section className="relative flex items-center overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.45cqw] py-[1.35cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
-            <div className="relative z-10 flex max-w-[33rem] items-start gap-[0.9cqw]">
-              <Quote aria-hidden="true" className="mt-[0.15rem] shrink-0 fill-control-warm text-control-warm" size={36} strokeWidth={1.2} />
+          <section className="relative flex min-h-0 items-center overflow-hidden rounded-[0.62rem] border border-slate-200/86 bg-white/62 px-[1.25cqw] py-[0.85cqh] shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_1rem_2.5rem_rgb(15_23_42/0.08)] backdrop-blur-[26px]">
+            <div className="relative z-10 flex max-w-[34rem] items-start gap-[0.85cqw]">
+              <Quote aria-hidden="true" className="mt-[0.1rem] shrink-0 fill-control-warm text-control-warm" size={31} strokeWidth={1.2} />
               <div>
-                <p className="text-[clamp(0.78rem,0.9cqw,1rem)] font-medium leading-[1.45] text-slate-800">Technology should never slow you down.</p>
-                <p className="mt-1.5 text-[clamp(0.78rem,0.9cqw,1rem)] font-semibold leading-tight text-control-warm">Our environment makes you faster, sharper and stronger.</p>
+                <p className="text-[clamp(0.68rem,0.8cqw,0.92rem)] font-medium leading-[1.3] text-slate-800">Technology should never slow you down.</p>
+                <p className="mt-1 text-[clamp(0.68rem,0.8cqw,0.92rem)] font-semibold leading-tight text-control-warm">Our environment makes you faster, sharper and stronger.</p>
               </div>
             </div>
             <img
               alt="Speedometer illustration representing response speed under pressure."
-              className="pointer-events-none absolute bottom-[0.4rem] right-[1cqw] h-[8.6rem] w-auto max-w-[14rem] object-contain opacity-85"
+              className="pointer-events-none absolute bottom-[-0.4rem] right-[0.8cqw] h-[6.2rem] w-auto max-w-[11rem] object-contain opacity-85"
               draggable={false}
               src="/assets/products/incident-response-speed.png"
             />
