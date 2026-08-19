@@ -1829,9 +1829,9 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
       <section className="absolute inset-x-[1.55cqw] top-[9.65cqh] bottom-[7.05cqh] z-10">
         <div className="absolute inset-x-0 top-0 bottom-[6.6cqh] grid grid-cols-[0.40fr_1fr_0.38fr] grid-rows-[minmax(0,1fr)_17.6cqh_14.4cqh] gap-[0.95cqh_1.05cqw]">
           <motion.aside animate={{ opacity: 1, y: 0 }} className="flex min-h-0 flex-col pl-[0.2cqw] pt-[0.5cqh]" initial={false} transition={{ duration: 0.72, ease }}>
-            <h1 className="text-[2.1cqw] font-bold leading-[1.08] tracking-normal text-control-text">
+            <h1 className="text-[3cqw] font-bold leading-[1.08] tracking-normal text-control-text">
               <span className="block">The</span>
-              <span className="block whitespace-nowrap text-red-600">Software-Defined</span>
+              <span className="block whitespace-nowrap text-red-600">Software Defined</span>
               <span className="block">Control Room<span className="text-control-warm">.</span></span>
             </h1>
             <div className="mt-[1.35cqh] h-[2px] w-[1.67cqw] bg-control-warm" />
@@ -1908,7 +1908,7 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
               </div>
             </section>
 
-            <div className="col-span-3 row-start-3 grid min-h-0 grid-cols-[minmax(0,0.44fr)_minmax(0,0.56fr)_minmax(0,0.27fr)] gap-[1cqw]">
+            <div className="col-span-3 row-start-3 grid min-h-0 grid-cols-[minmax(0,0.49fr)_minmax(0,1fr)_minmax(0,0.38fr)] gap-[1.05cqw]">
               <section className={`grid min-h-0 grid-rows-[auto_minmax(0,1fr)] px-[0.9cqw] py-[1.15cqh] ${CARD}`}>
                 <h2 className="text-[0.9cqw] font-semibold uppercase leading-tight tracking-[0.02em] text-control-text">Deploy Anywhere</h2>
                 <div className="grid min-h-0 grid-cols-5 items-center">
