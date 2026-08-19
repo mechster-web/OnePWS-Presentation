@@ -227,7 +227,7 @@ export function DesignBuildReferenceScene({ chapter }: { chapter: Chapter }) {
               </div>
             </section>
 
-            <section className="relative min-h-0 overflow-hidden px-[1.05cqw] py-[0.94cqh]">
+            <section className="relative min-h-0 overflow-hidden px-[1.05cqw] py-[0.94cqh] border-slate-200/90 bg-white">
               <h2 className="text-[clamp(0.9rem,1.02cqw,1.16rem)] font-bold uppercase tracking-normal text-control-text">What This Means for You</h2>
               <div className="mt-[0.7cqh] h-[2px] w-[2.1rem] bg-control-warm" />
               <div className="mt-[1.2cqh] grid min-h-0 grid-cols-[repeat(4,minmax(0,1fr))_minmax(15.5rem,0.9fr)] items-center gap-[1cqw]">

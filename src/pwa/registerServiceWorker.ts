@@ -1,5 +1,13 @@
 export function registerServiceWorker() {
-  if (!("serviceWorker" in navigator) || import.meta.env.DEV) {
+  if (!("serviceWorker" in navigator)) {
+    return;
+  }
+
+  if (import.meta.env.DEV) {
+    void clearPwaCaches().then(async () => {
+      const registrations = await navigator.serviceWorker.getRegistrations();
+      await Promise.all(registrations.map((registration) => registration.unregister()));
+    });
     return;
   }
 

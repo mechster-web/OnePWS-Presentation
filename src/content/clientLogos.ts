@@ -8,8 +8,6 @@ export const clientLogos = [
   "/assets/client-logos/client-01.png",
   "/assets/client-logos/client-02.png",
   "/assets/client-logos/client-03.png",
-  "/assets/client-logos/client-04.png",
-  "/assets/client-logos/client-05.png",
   "/assets/client-logos/client-06.png",
   "/assets/client-logos/client-07.png",
   "/assets/client-logos/client-08.png",
@@ -85,8 +83,6 @@ export const clientLogos = [
   "/assets/client-logos/client-78.png",
   "/assets/client-logos/client-79.png",
   "/assets/client-logos/client-80.png",
-  "/assets/client-logos/client-81.png",
-  "/assets/client-logos/client-82.png",
   "/assets/client-logos/client-83.png",
   "/assets/client-logos/client-84.png",
 ];

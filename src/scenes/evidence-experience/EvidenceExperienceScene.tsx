@@ -117,7 +117,7 @@ const customerPresenceMetrics = [
     Icon: Users,
   },
   {
-    value: credentialProofPoints.find((point) => point.id === "onepws-countries")?.value ?? "35+",
+    value: credentialProofPoints.find((point) => point.id === "onepws-countries")?.value ?? "40+",
     label: "Countries served by OnePWS",
     Icon: Globe2,
   },
@@ -175,7 +175,7 @@ const customerSectorGroups = [
 const customerPresenceProof = [
   { title: "Sector breadth", detail: "Referenced names span energy, transport, defense, utilities, industrial and technology environments.", Icon: Map },
   { title: "Critical-room relevance", detail: "Proof is organized around mission-critical operating contexts, not generic logo volume.", Icon: ShieldCheck },
-  { title: "Global delivery signal", detail: "35+ countries served, with project and customer references across India and international markets.", Icon: Globe2 },
+  { title: "Global delivery signal", detail: "40+ countries served, with project and customer references across India and international markets.", Icon: Globe2 },
   { title: "Customer-safe posture", detail: "Use references as presence examples; final logo usage can be approved separately.", Icon: BadgeCheck },
 ];
 
@@ -517,7 +517,7 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
             initial={false}
             transition={{ duration: 0.72, ease }}
           >
-            <div className="min-w-0 pl-[0.4cqw] pt-[1.15cqh]">
+            <div className="min-w-0  pt-[1.15cqh]">
               <h1 className="text-[clamp(2.15rem,3.02cqw,4.15rem)] font-bold uppercase leading-[1.02] tracking-normal text-black md:text-[3.34cqw]">
                 <span className="block">Customers and</span>
                 <span className="block text-control-warm">Global Presence</span>
@@ -542,7 +542,7 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
             initial={false}
             transition={{ duration: 0.72, delay: 0.08, ease }}
           >
-            <div className="min-h-0 overflow-hidden rounded-[0.65rem] border border-slate-200/86 bg-white/76 p-[1cqw] shadow-[0_0.9rem_2.2rem_rgb(15_23_42/0.065)]">
+            <div className="min-w-0 rounded-[0.65rem]    py-[1.3cqh] ">
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-[clamp(1rem,1.12cqw,1.32rem)] font-semibold uppercase leading-tight text-control-text">
@@ -591,7 +591,7 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
 
           <motion.section
             animate={{ opacity: 1, y: 0 }}
-            className="grid grid-cols-4 overflow-hidden rounded-[0.65rem] border border-slate-200/86 bg-white/78 shadow-[0_0.9rem_2.2rem_rgb(15_23_42/0.065)]"
+            className="grid grid-cols-4 overflow-hidden rounded-[0.65rem] border border-slate-200/86 bg-white/90 shadow-[0_0.9rem_2.2rem_rgb(15_23_42/0.065)]"
             initial={false}
             transition={{ duration: 0.72, delay: 0.14, ease }}
           >
@@ -611,11 +611,11 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
 
         <motion.section
           animate={{ opacity: 1, y: 0 }}
-          className="absolute inset-x-0 bottom-[0.4cqh] h-[9cqh]"
+          className="absolute inset-x-0 bottom-[0.4cqh] h-[9cqh] p-4 bg-white shadow-[0_0.9rem_2.2rem_rgb(15_23_42/0.065)] rounded-xl"
           initial={false}
           transition={{ duration: 0.72, delay: 0.2, ease }}
         >
-          <p className="text-[clamp(0.62rem,0.7cqw,0.82rem)] font-semibold uppercase tracking-[0.2em] text-control-muted">Trusted by</p>
+          
           <ClientLogoRibbon className="mt-[0.7cqh] h-[4.6cqh]" logoHeightClass="h-[3.9cqh]" />
         </motion.section>
 

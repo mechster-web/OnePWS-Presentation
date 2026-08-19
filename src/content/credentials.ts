@@ -125,7 +125,7 @@ export const credentialProofPoints: CredentialProofPoint[] = [
   {
     id: "onepws-countries",
     label: "Countries served",
-    value: "35+",
+    value: "40+",
     context: "Countries served globally by OnePWS.",
     category: "countries",
     source: { document: deck, page: 4, note: "Current OnePWS credentials." },
